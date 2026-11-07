@@ -9,3 +9,6 @@ results/**
 !results/**/
 !results/**/config.json
 !results/**/summary.json
+
+# deploy key (never commit)
+/.ssh_keys/

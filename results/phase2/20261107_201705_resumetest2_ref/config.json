@@ -1,0 +1,33 @@
+{
+  "phase": 2,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "dtype": "bfloat16",
+  "layer": 15,
+  "n_contexts": 3000,
+  "context_len": 64,
+  "topk": 10,
+  "checkpoint_every": 1000,
+  "seed": 0,
+  "dataset": {
+    "path": "HuggingFaceFW/fineweb",
+    "name": "sample-10BT",
+    "split": "train",
+    "streaming": true
+  },
+  "chunking": "Each FineWeb document's 'text' is tokenized with the Qwen/Qwen3.5-4B tokenizer using {'add_special_tokens': False, 'split_special_tokens': True} (no BOS/EOS or other special tokens added; literal special-token strings in the text are tokenized as ordinary text; no chat template). The token sequence is split into non-overlapping 64-token chunks starting at token 0: tokens[64k:64k+64] for k = 0..floor(len/64)-1. The trailing remainder (< 64 tokens) is dropped; documents shorter than 64 tokens contribute no chunks. Documents are taken in stream order, chunks in document order; context_id = running index over all chunks. Each context's (doc_idx, fineweb id, chunk_idx) is saved.",
+  "tokenize_kwargs": {
+    "add_special_tokens": false,
+    "split_special_tokens": true
+  },
+  "score_batch": 256,
+  "activation": "channel N of input to mlp.down_proj = silu(gate_proj(x))*up_proj(x)",
+  "score": "max over the 64 token positions",
+  "env": {
+    "torch": "2.8.0+cu128",
+    "transformers": "5.22.2",
+    "datasets": "5.1.0",
+    "python": "3.12.3",
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "started": "2026-11-07 20:17:05"
+}

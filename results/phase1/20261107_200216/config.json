@@ -1,0 +1,18 @@
+{
+  "config": {
+    "model_id": "Qwen/Qwen3.5-4B",
+    "dtype": "bfloat16",
+    "layer": 15,
+    "neuron": 2341,
+    "seed": 0,
+    "text": "The Eiffel Tower in Paris was completed in 1889 and is one of the most visited monuments in the world."
+  },
+  "env": {
+    "torch": "2.8.0+cu128",
+    "transformers": "5.22.2",
+    "python": "3.12.3",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "fla": "NOT AVAILABLE (cannot import name 'extra' from 'triton.experimental.gluon.language' (/usr/local/lib/python3.12/dist-packages/triton/experimental/gluon/language/__init__.py))",
+    "causal_conv1d": "1.7.0"
+  }
+}

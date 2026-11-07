@@ -1,0 +1,11 @@
+# large / local-only
+hf_cache/
+.cache/
+logs/
+__pycache__/
+*.pyc
+# results: only small config/summary JSON files are tracked
+results/**
+!results/**/
+!results/**/config.json
+!results/**/summary.json

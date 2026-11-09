@@ -1,0 +1,22 @@
+# results: only per-run config.json and summary.json are tracked
+results/**
+!results/**/
+!results/**/config.json
+!results/**/summary.json
+# model / dataset cache
+hf_cache/
+# logs
+logs/
+*.log
+# pip and other caches
+.cache/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# secrets
+.ssh_keys/
+# archives / large files
+*.tar.gz
+*.pt
+*.npz
+*.safetensors

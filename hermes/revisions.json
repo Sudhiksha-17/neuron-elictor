@@ -1,0 +1,6 @@
+{
+  "model_id": "Qwen/Qwen3.5-4B",
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "fineweb_id": "HuggingFaceFW/fineweb",
+  "fineweb_revision": "9bb295ddab0e05d785b879661af7260fed5140fc"
+}

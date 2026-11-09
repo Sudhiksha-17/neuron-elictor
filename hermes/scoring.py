@@ -169,13 +169,17 @@ class Scorer:
 
     def score_pairs(self, ids, lens, pairs):
         """Score row i for neuron pairs[i] = (layer, neuron); layers may differ between rows.
-        -> scores [n] float32, pos [n]."""
+        -> scores [n] float32, pos [n]. An empty text (lens == 0) scores NaN (pos -1): it has no
+        activation, and any number (e.g. 0.0) could beat real attempts since activations can be
+        negative. RL code MUST penalize NaN scores explicitly (see hermes/reward.py)."""
         layers = sorted({L for L, _ in pairs})
         mx, pos = self.score_ids(ids, lens, layers)
         r = torch.arange(len(pairs), device=self.device)
         li = torch.tensor([layers.index(L) for L, _ in pairs], device=self.device)
         ni = torch.tensor([N for _, N in pairs], device=self.device)
-        return mx[r, li, ni], pos[r, li, ni]
+        empty = lens.to(self.device) == 0
+        sc, ps = mx[r, li, ni], pos[r, li, ni]
+        return sc.masked_fill(empty, float("nan")), ps.masked_fill(empty, -1)
 
     def score_texts(self, texts, pairs):
         """Convenience: texts[i] scored for neuron pairs[i] (or one (layer, neuron) for all)."""

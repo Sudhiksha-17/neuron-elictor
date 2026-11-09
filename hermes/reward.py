@@ -3,6 +3,11 @@
 Prompts in one batch may name neurons in different layers; all of them are scored in one fixed-shape
 forward that reads every needed layer and stops after the deepest one (hermes.scoring.Scorer.score_pairs).
 Works with TRL's GRPOTrainer reward-function signature: reward(prompts, completions, **kwargs).
+
+NaN rewards: a completion that is empty after cleaning gets reward NaN (Scorer returns NaN for empty
+texts). 0.0 would be wrong because activations can be negative, so 0.0 could beat real attempts.
+RL code MUST penalize NaN explicitly before computing advantages (e.g. replace NaN with a penalty
+below the group's lowest real reward); never let NaN propagate or silently become 0.
 """
 import json, re, contextlib, time
 from hermes.scoring import parse_neuron_id
@@ -10,7 +15,7 @@ from hermes.scoring import parse_neuron_id
 PROMPT_TEMPLATE = "Write text that maximally activates neuron L{layer}N{neuron}."
 PROMPT_RE = re.compile(r"neuron (L\d+N\d+)\.")
 THINK_RE = re.compile(r"<think>.*?</think>", re.S)
-EMPTY_REWARD = 0.0     # reward for a completion that is empty after cleaning (TO BE APPROVED in phase 3)
+EMPTY_REWARD = float("nan")   # completion empty after cleaning; RL code must penalize it (see above)
 
 
 def make_prompt(layer, neuron):
@@ -76,7 +81,7 @@ class NeuronReward:
         ctx = self.adapter_off() if self.adapter_off else contextlib.nullcontext()
         with ctx:
             scores, pos = self.sc.score_pairs(ids, lens, pairs)
-        rewards = [EMPTY_REWARD if int(l) == 0 else float(s) for s, l in zip(scores.tolist(), lens)]
+        rewards = [float(s) for s in scores.tolist()]          # NaN for empty cleaned texts
         if self.log_path:
             with open(self.log_path, "a") as f:
                 for i in range(min(self.log_n, len(raw))):

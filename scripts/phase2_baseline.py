@@ -110,6 +110,8 @@ def main():
     ap.add_argument("--checkpoint_every", type=int, default=50_000)
     ap.add_argument("--resume", default=None)
     ap.add_argument("--tag", default="")
+    ap.add_argument("--out_dir", default=None, help="exact run dir (must not exist); default results/phase2/<timestamp>_<tag>")
+    ap.add_argument("--print_config", action="store_true", help="print the config this run would use (minus env) and exit")
     ap.add_argument("--stop_after", type=int, default=None, help="testing only: exit after the checkpoint at this count (simulates an interruption)")
     a = ap.parse_args()
 
@@ -119,9 +121,13 @@ def main():
         st = torch.load(f"{run_dir}/state.pt")
         print(f"resuming {run_dir} at context {st['n_done']} (doc {st['next_doc']}, chunk {st['next_chunk']})")
     else:
-        run_dir = f"/workspace/results/phase2/{time.strftime('%Y%m%d_%H%M%S')}{'_' + a.tag if a.tag else ''}"
-        os.makedirs(run_dir, exist_ok=False)
+        run_dir = a.out_dir or f"/workspace/results/phase2/{time.strftime('%Y%m%d_%H%M%S')}{'_' + a.tag if a.tag else ''}"
         cfg = dict(phase=2, model_id=scoring.MODEL_ID, dtype="bfloat16", layers=list(range(N_LAYERS)),
+                   n_neurons_total=N_LAYERS * 9216,
+                   outputs=dict(per_neuron=["max", "argmax_ctx", "argmax_pos", "mean_score", "std_score",
+                                            "top_val", "top_ctx", "top_pos", "top_max_same_doc"],
+                                per_layer=["argmax_pos_hist", "frac_argmax_pos0",
+                                           "n_neurons_top10_same_doc_ge5", "top10_max_same_doc_hist"]),
                    n_contexts=a.n_contexts, max_chunks_per_doc=a.max_chunks_per_doc, context_len=CONTEXT_LEN,
                    topk=TOPK, same_doc_min=SAME_DOC_MIN, checkpoint_every=a.checkpoint_every, seed=0,
                    dataset=DATASET, chunking=chunking_text(a.max_chunks_per_doc),
@@ -130,9 +136,12 @@ def main():
                    score="max over the 64 token positions; argmax position = first position attaining it",
                    topk_tiebreak="higher value first, ties -> lower context id",
                    spread="mean and std (population) of the per-context score over all contexts",
-                   env=dict(torch=torch.__version__, transformers=transformers.__version__,
-                            datasets=datasets.__version__, **run_info()),
                    started=time.strftime("%Y-%m-%d %H:%M:%S"))
+        if a.print_config:
+            print(json.dumps(dict(run_dir=run_dir, **cfg), indent=1)); return
+        cfg["env"] = dict(torch=torch.__version__, transformers=transformers.__version__,
+                          datasets=datasets.__version__, **run_info())
+        os.makedirs(run_dir, exist_ok=False)
         json.dump(cfg, open(f"{run_dir}/config.json", "w"), indent=2)
         st = None
     print("run dir:", run_dir)

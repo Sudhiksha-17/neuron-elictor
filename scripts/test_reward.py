@@ -6,7 +6,7 @@
     adapter_off == base-model reward (bitwise), while scoring with the adapter on differs
  4. conversational (TRL chat-format) prompts/completions give the same rewards as plain strings
 """
-import os, sys, json, time
+import os, sys, json, time, math
 sys.path.insert(0, "/workspace")
 import torch
 from hermes.runinfo import run_info
@@ -31,7 +31,7 @@ COMPLETIONS = [
     "日本語のテキストと English mixed 123",
 ]
 
-def nmis(a, b): return sum(x != y for x, y in zip(a, b))
+def nmis(a, b): return sum(not (x == y or (math.isnan(x) and math.isnan(y))) for x, y in zip(a, b))   # NaN == NaN here
 
 def main():
     sc = Scorer()
@@ -48,7 +48,7 @@ def main():
     # ---- 2. mixed layers ----
     rw = NeuronReward(sc, log_path=f"{RUN_DIR}/reward_log.jsonl", log_n=8)
     r_mixed = rw(prompts, COMPLETIONS)
-    r_single = [sc.score_texts([c], (L, N))[0] if c else EMPTY_REWARD for c, (L, N) in zip(cleaned, NEURONS)]
+    r_single = [sc.score_texts([c], (L, N))[0] for c, (L, N) in zip(cleaned, NEURONS)]
     v2 = nmis(r_mixed, r_single)
     print(f"\nmixed-layer batch ({len(set(L for L, _ in NEURONS))} layers) vs one-at-a-time: mismatches {v2}")
     print("rewards:", [round(x, 4) for x in r_mixed])
@@ -78,7 +78,8 @@ def main():
         "conversational_equals_plain": v4 == 0,
         "adapter_off_equals_base_model": v3 == 0,
         "adapter_on_changes_scores": d_on > 0,
-        "empty_completion_gets_EMPTY_REWARD": r_mixed[6] == EMPTY_REWARD,
+        "empty_completion_scores_nan": math.isnan(r_mixed[6]) and math.isnan(sc.score_texts([""], (15, 2341))[0]),
+        "nonempty_completions_finite": all(math.isfinite(r) for i, r in enumerate(r_mixed) if i != 6),
     }
     print("\nchecks:"); [print(f"  {'PASS' if v else 'FAIL'}  {k}") for k, v in checks.items()]
     json.dump(dict(cleaned=cleaned, rewards=r_mixed, rewards_lora_on=r_on, checks=checks),

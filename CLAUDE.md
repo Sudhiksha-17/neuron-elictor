@@ -29,9 +29,10 @@ of concept only. Keep everything simple.
 - Pilot neurons: 1-2 per layer (n_per_layer, default 1 -> 32 neurons),
   sampled uniformly at random with a fixed seed among the layer's
   non-dead neurons (scripts/select_pilots.py; seed, rule and baseline run
-  recorded in its config.json). Dead-neuron rule (default, to be
-  confirmed on the full baseline): FineWeb max <= 0 or < 0.1 x the
-  layer's median neuron max.
+  recorded in its config.json). Dead-neuron rule: FineWeb max <= 0 or
+  < 0.1 x the layer's median neuron max. Decided 2026-11-09: 1 per layer
+  (32), seed 0. Extension-safe: more neurons are drawn with the same
+  seed without changing the first 32 (see README).
 
 ## Phases (finish and verify each before starting the next)
 1. Setup check: load model, find the 32 language-model MLP layers, read
@@ -51,8 +52,9 @@ of concept only. Keep everything simple.
    construction with the 4-chunk cap; the full distribution is saved).
 3. GRPO training: one group = 8 completions for one neuron's prompt,
    reward = target score (hermes/reward.py; one batch may mix neurons
-   from different layers). Reward for a completion that is empty after
-   cleaning: TO BE APPROVED (placeholder 0.0). Remaining hyperparameters (lr, KL beta, steps,
+   from different layers). A text that is empty after cleaning scores
+   NaN (not 0.0: activations can be negative). RL code MUST penalize NaN
+   scores explicitly (see README). Remaining hyperparameters (lr, KL beta, steps,
    neurons per step, reward normalization, etc.) TO BE PROPOSED AND
    APPROVED by the user before phase 3 starts.
    - Step 0: before training, sample 8 completions per pilot neuron from
@@ -92,3 +94,7 @@ of concept only. Keep everything simple.
   ever "stop", never "remove"/"terminate".
 - Model and FineWeb revisions are pinned in hermes/revisions.json.
 - Do not launch long runs without the user's go-ahead.
+- Save every report given to the user as timestamped markdown in
+  /workspace/reports/.
+- No HF token (decided 2026-11-09); rely on the datasets/hub retry logic.
+  GitHub push postponed; deploy key + git config stay as set up.

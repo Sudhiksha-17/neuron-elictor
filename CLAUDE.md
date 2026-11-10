@@ -28,9 +28,11 @@ of concept only. Keep everything simple.
   Thinking mode off.
 - Pilot neurons: 1-2 per layer (n_per_layer, default 1 -> 32 neurons),
   sampled uniformly at random with a fixed seed among the layer's
-  non-dead neurons (scripts/select_pilots.py; seed, rule and baseline run
-  recorded in its config.json). Dead-neuron rule: FineWeb max <= 0 or
-  < 0.1 x the layer's median neuron max. Decided 2026-11-09: 1 per layer
+  neurons that are not low-activation (scripts/select_pilots.py; seed, rule
+  and baseline run recorded in its config.json). Low-activation rule:
+  FineWeb max <= 0 or < 0.1 x the layer's median neuron max (relative, so
+  in late layers these neurons do fire, just weakly; renamed 2026-11-10,
+  older results and reports call it the "dead" rule / dead_rel). Decided 2026-11-09: 1 per layer
   (32), seed 0. Extension-safe: more neurons are drawn with the same
   seed without changing the first 32 (see README).
 

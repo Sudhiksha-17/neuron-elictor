@@ -29,8 +29,8 @@ try:
         import torch
         b = torch.load(f"{run_dir}/baseline.pt")
         mx = b["max"].float(); med = mx.median(1, keepdim=True).values
-        dead_rel = 0.1
-        dead = (mx <= 0) | (mx < dead_rel * med)
+        low_rel = 0.1
+        low = (mx <= 0) | (mx < low_rel * med)
         md += [f"- Finished {s['finished']}; **time taken {s['elapsed_s'] / 60:.1f} min** this session "
                f"({s['n_contexts_this_session']:,} contexts; steady {s['steady_ctx_per_s']:.0f} ctx/s; startup {s['first_batch_s']:.0f} s; "
                f"data wait {s['data_wait_s']:.0f} s)",
@@ -39,15 +39,15 @@ try:
                f"- GPU memory peak: {s['gpu_peak_allocated_gib']:.1f} GiB allocated / {s['gpu_peak_reserved_gib']:.1f} GiB reserved",
                f"- Output: " + ", ".join(f"{k} {v / 1e6:.1f} MB" for k, v in s["output_bytes"].items()), "",
                "## Max activation distribution per layer (quantiles over the layer's 9216 neuron maxima)", "",
-               "| Layer | min | 1% | 10% | median | 90% | 99% | max | dead | frac argmax@pos0 | >=5 top-10 same doc |",
+               "| Layer | min | 1% | 10% | median | 90% | 99% | max | low-act | frac argmax@pos0 | >=5 top-10 same doc |",
                "|---|---|---|---|---|---|---|---|---|---|---|"]
         q = pl["max_quantiles"]
         for L in range(32):
             md.append(f"| {L} | " + " | ".join(f"{q[k][L]:.3g}" for k in ("0", "0.01", "0.1", "0.5", "0.9", "0.99", "1")) +
-                      f" | {int(dead[L].sum())} | {pl['frac_argmax_pos0'][L]:.3f} | {pl['n_neurons_top10_same_doc_ge5'][L]} |")
-        md += ["", f"## Dead neurons", "",
-               f"Rule: dead = FineWeb max <= 0 or max < {dead_rel} x median neuron max of its layer. "
-               f"**Total dead: {int(dead.sum())}** of 294,912 (never positive: {int((mx <= 0).sum())}). Per layer: {dead.sum(1).tolist()}", "",
+                      f" | {int(low[L].sum())} | {pl['frac_argmax_pos0'][L]:.3f} | {pl['n_neurons_top10_same_doc_ge5'][L]} |")
+        md += ["", f"## Low-activation neurons", "",
+               f"Rule (relative): low-activation = FineWeb max <= 0 or max < {low_rel} x median neuron max of its layer. "
+               f"**Total low-activation: {int(low.sum())}** of 294,912 (never positive: {int((mx <= 0).sum())}). Per layer: {low.sum(1).tolist()}", "",
                "## Argmax-position histogram (number of neurons whose max is at each position, buckets)", "",
                "| Layer | pos 0 | 1-3 | 4-15 | 16-31 | 32-63 |", "|---|---|---|---|---|---|"]
         for L in range(32):

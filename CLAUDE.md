@@ -85,13 +85,13 @@ of concept only. Keep everything simple.
 - Every run's config records pip freeze, GPU name, and the FineWeb dataset
   revision hash (and model revision), via hermes/runinfo.py. Data and model
   are loaded at the recorded revisions.
-- After each phase, commit and push scripts and configs to the private
-  GitHub repo. Never push large result files (only results/**/config.json
+- After each phase, commit and push scripts and configs to the public GitHub
+  repo Sudhiksha-17/neuron-elictor (public since 2026-11-16). Never push large result files (only results/**/config.json
   and summary.json are tracked; see .gitignore).
 - Ask before any change to the design above.
 - Safety: scripts/idle_watchdog.sh (nohup) stops the pod via
   "runpodctl stop pod" after 60 min of GPU util < 5%; disable with
-  `touch /workspace/logs/watchdog.disable`. Long runs are launched with
+  `touch /workspace/neuron-elictor/logs/watchdog.disable`. Long runs are launched with
   scripts/watch_and_stop.sh so the pod stops when the run ends. Only
   ever "stop", never "remove"/"terminate".
 - Model and FineWeb revisions are pinned in hermes/revisions.json.
@@ -99,4 +99,4 @@ of concept only. Keep everything simple.
 - Save every report given to the user as timestamped markdown in
   reports/ (repo).
 - No HF token (decided 2026-11-09); rely on the datasets/hub retry logic.
-  GitHub push postponed; deploy key + git config stay as set up.
+  Push via gh (logged in as Sudhiksha-17, `gh auth setup-git`, HTTPS).

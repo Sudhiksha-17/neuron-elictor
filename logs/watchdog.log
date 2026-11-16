@@ -17,3 +17,40 @@
 [2026-11-09 21:26:01] check: util=100% (busy); idle streak reset
 [2026-11-09 21:31:01] check: util=99% (busy); idle streak reset
 [2026-11-09 21:36:01] check: util=99% (busy); idle streak reset
+[2026-11-16 16:40:23] watchdog started: PID 6653, pod lcg23oarodus04, check every 300s, stop after 3600s below 5%
+[2026-11-16 16:40:23] check: util=0% (idle); idle for 0 min (limit 60 min)
+[2026-11-16 16:45:24] check: util=0% (idle); idle for 5 min (limit 60 min)
+[2026-11-16 16:50:24] check: util=0% (idle); idle for 10 min (limit 60 min)
+[2026-11-16 16:55:24] check: util=0% (idle); idle for 15 min (limit 60 min)
+[2026-11-16 17:00:24] check: util=9% (busy); idle streak reset
+[2026-11-16 17:05:25] check: util=7% (busy); idle streak reset
+[2026-11-16 17:10:25] check: util=0% (idle); idle for 0 min (limit 60 min)
+[2026-11-16 17:15:25] check: util=6% (busy); idle streak reset
+[2026-11-16 17:20:25] check: util=0% (idle); idle for 0 min (limit 60 min)
+[2026-11-16 17:25:25] check: util=0% (idle); idle for 5 min (limit 60 min)
+[2026-11-16 17:30:26] check: util=0% (idle); idle for 10 min (limit 60 min)
+[2026-11-16 17:35:26] check: util=12% (busy); idle streak reset
+[2026-11-16 17:40:26] check: util=22% (busy); idle streak reset
+[2026-11-16 17:45:26] check: util=2% (idle); idle for 0 min (limit 60 min)
+[2026-11-16 17:50:26] check: util=23% (busy); idle streak reset
+[2026-11-16 17:55:27] check: util=0% (idle); idle for 0 min (limit 60 min)
+[2026-11-16 18:00:27] check: util=2% (idle); idle for 5 min (limit 60 min)
+[2026-11-16 18:05:27] check: util=0% (idle); idle for 10 min (limit 60 min)
+[2026-11-16 18:10:27] check: util=21% (busy); idle streak reset
+[2026-11-16 18:15:28] check: util=100% (busy); idle streak reset
+[2026-11-16 18:20:28] check: util=0% (idle); idle for 0 min (limit 60 min)
+[2026-11-16 18:25:28] check: util=0% (idle); idle for 5 min (limit 60 min)
+[2026-11-16 18:30:28] check: util=0% (idle); idle for 10 min (limit 60 min)
+[2026-11-16 18:35:28] check: util=0% (idle); idle for 15 min (limit 60 min)
+[2026-11-16 18:40:29] check: util=0% (idle); idle for 20 min (limit 60 min)
+[2026-11-16 18:45:29] check: util=0% (idle); idle for 25 min (limit 60 min)
+[2026-11-16 18:50:29] check: util=0% (idle); idle for 30 min (limit 60 min)
+[2026-11-16 18:55:29] check: util=0% (idle); idle for 35 min (limit 60 min)
+[2026-11-16 19:00:30] check: util=0% (idle); idle for 40 min (limit 60 min)
+[2026-11-16 19:05:30] check: util=0% (idle); idle for 45 min (limit 60 min)
+[2026-11-16 19:10:30] check: util=0% (idle); idle for 50 min (limit 60 min)
+[2026-11-16 19:15:30] check: util=0% (idle); idle for 55 min (limit 60 min)
+[2026-11-16 19:20:30] check: util=0% (idle); idle for 60 min (limit 60 min)
+[2026-11-16 19:20:30] GPU idle for 60 min -> runpodctl stop pod lcg23oarodus04
+[2026-11-16 19:20:32] stop command sent: pod "lcg23oarodus04" stopped
+[2026-11-16 19:20:32] watchdog PID 6653 exiting

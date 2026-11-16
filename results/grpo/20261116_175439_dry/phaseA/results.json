@@ -1,0 +1,393 @@
+{
+ "phase": "A",
+ "neurons": {
+  "L14N8949": {
+   "layer": 14,
+   "neuron": 8949,
+   "prompt": "Text:\n",
+   "fw_max_a100": 3.0625,
+   "fw_max_this_gpu": 3.046875,
+   "d_trained_best_of_8": {
+    "best": 0.1474609375,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.0899505615234375,
+    "top": [
+     {
+      "text": "The function of the internet led to information overflow comping from the web: information is always available; information is still a little tricky to organize, organize the information. Therefore the book is the only medium that can store, convey, and organize information easily and effectively.\nAnswer to the above statement questions:\n\nGiven the",
+      "score": 0.1474609375
+     },
+     {
+      "text": "\u548c\u5f0f[\u5206\u884c0][\u5206\u884c0][\u5206\u884c0][\u5206\u884c0][\u5206\u884c0][\u5206\u884c0][\u5206\u884c0][\u5206\u884c0]\nThen you can find Lists < /p > Lists of existing social relationships, if you can access the parameters in the headers.\nIf you choose Play, you will be transported to",
+      "score": 0.125
+     },
+     {
+      "text": "\"Techno, trademark of the Gigantor\" -- This page was temporarily unavailable. \\\"\nNote that this text was provided with details, such as{\"title\": \"Techno, trademark of the Gigantor\", \"title\": \"Simulacrum\", \"title\": \"Simulacrum\", \"API response",
+      "score": 0.11376953125
+     }
+    ],
+    "all": [
+     {
+      "text": "'''\nUSER_STATE = 'emulated'\n\n# pong\nPLAYER_0_POS = 0\nPLAYER_0_VEL = 1\nPLAYER_0_SIZE = 20\nPLAYER_1_POS = 800\nPLAYER_1_VEL = -1\nPLAYER_1_SIZE =",
+      "score": 0.0238037109375
+     },
+     {
+      "text": "At an upper catalyst bed temperature of 800\u00b0C, the activation energy for desulfurization during Myco-organic descriptor recorders (MORs) is approximately equal to that for desulfurization in the absence of MORs. At an upper catalyst bed temperature of 800\u00b0C,",
+      "score": 0.09375
+     },
+     {
+      "text": "The function of the internet led to information overflow comping from the web: information is always available; information is still a little tricky to organize, organize the information. Therefore the book is the only medium that can store, convey, and organize information easily and effectively.\nAnswer to the above statement questions:\n\nGiven the",
+      "score": 0.1474609375
+     },
+     {
+      "text": "\u548c\u5f0f[\u5206\u884c0][\u5206\u884c0][\u5206\u884c0][\u5206\u884c0][\u5206\u884c0][\u5206\u884c0][\u5206\u884c0][\u5206\u884c0]\nThen you can find Lists < /p > Lists of existing social relationships, if you can access the parameters in the headers.\nIf you choose Play, you will be transported to",
+      "score": 0.125
+     },
+     {
+      "text": "\"The great adventure began when she managed to catch a 3.9m (12-7ft) alligator gasbag inflated with a bit of helium for \ntraits. \n\n1. What is the purpose of this story? \na. To tell a wildlife rescue \nb. an animal rescue story \nc",
+      "score": 0.09033203125
+     },
+     {
+      "text": "Deconstructing the Concept of Essence as Identical to Its Definition: A Case Study of the Category of Number in Metaphysics\n\nAbstract\nThe problem treated in this paper is the theoretical possibility of an identity in accordance with the following: \"Essence is identical to its definition\" is a veridical dictum",
+      "score": 0.0888671875
+     },
+     {
+      "text": "\"Techno, trademark of the Gigantor\" -- This page was temporarily unavailable. \\\"\nNote that this text was provided with details, such as{\"title\": \"Techno, trademark of the Gigantor\", \"title\": \"Simulacrum\", \"title\": \"Simulacrum\", \"API response",
+      "score": 0.11376953125
+     },
+     {
+      "text": "\"This isn't a film.\"\n\"Hm.\"\n\"But this isn't a play or a TV show either. What is this?\"\n\"You know.\"\n\"What, Benjamin?\"\n\"You know,\" said Benjamin, \"the third finger.\"\nYou stepped back from the screen and looked at the audience members. The lawn",
+      "score": 0.03662109375
+     }
+    ],
+    "per_token_best": [
+     [
+      "The",
+      0.00013637542724609375
+     ],
+     [
+      " function",
+      0.02880859375
+     ],
+     [
+      " of",
+      -0.033203125
+     ],
+     [
+      " the",
+      -0.0096435546875
+     ],
+     [
+      " internet",
+      -0.00093841552734375
+     ],
+     [
+      " led",
+      -0.0162353515625
+     ],
+     [
+      " to",
+      -0.00531005859375
+     ],
+     [
+      " information",
+      0.0179443359375
+     ],
+     [
+      " overflow",
+      -0.044189453125
+     ],
+     [
+      " comp",
+      -0.10302734375
+     ],
+     [
+      "ing",
+      -0.041748046875
+     ],
+     [
+      " from",
+      -0.007568359375
+     ],
+     [
+      " the",
+      0.078125
+     ],
+     [
+      " web",
+      0.003662109375
+     ],
+     [
+      ":",
+      0.00112152099609375
+     ],
+     [
+      " information",
+      0.0189208984375
+     ],
+     [
+      " is",
+      -0.0140380859375
+     ],
+     [
+      " always",
+      0.00787353515625
+     ],
+     [
+      " available",
+      0.004730224609375
+     ],
+     [
+      ";",
+      -0.0250244140625
+     ],
+     [
+      " information",
+      0.01434326171875
+     ],
+     [
+      " is",
+      0.00174713134765625
+     ],
+     [
+      " still",
+      -0.028564453125
+     ],
+     [
+      " a",
+      -0.099609375
+     ],
+     [
+      " little",
+      -0.01611328125
+     ],
+     [
+      " tricky",
+      -0.062255859375
+     ],
+     [
+      " to",
+      0.001220703125
+     ],
+     [
+      " organize",
+      0.042724609375
+     ],
+     [
+      ",",
+      -0.005279541015625
+     ],
+     [
+      " organize",
+      0.004608154296875
+     ],
+     [
+      " the",
+      0.05615234375
+     ],
+     [
+      " information",
+      0.043701171875
+     ],
+     [
+      ".",
+      0.0732421875
+     ],
+     [
+      " Therefore",
+      0.019287109375
+     ],
+     [
+      " the",
+      0.01470947265625
+     ],
+     [
+      " book",
+      0.028076171875
+     ],
+     [
+      " is",
+      0.015625
+     ],
+     [
+      " the",
+      0.0155029296875
+     ],
+     [
+      " only",
+      0.130859375
+     ],
+     [
+      " medium",
+      0.02880859375
+     ],
+     [
+      " that",
+      0.1474609375
+     ],
+     [
+      " can",
+      0.05029296875
+     ],
+     [
+      " store",
+      -0.0012969970703125
+     ],
+     [
+      ",",
+      -0.001678466796875
+     ],
+     [
+      " convey",
+      0.000583648681640625
+     ],
+     [
+      ",",
+      -0.00213623046875
+     ],
+     [
+      " and",
+      -0.016845703125
+     ],
+     [
+      " organize",
+      0.031005859375
+     ],
+     [
+      " information",
+      -1.4781951904296875e-05
+     ],
+     [
+      " easily",
+      -0.0115966796875
+     ],
+     [
+      " and",
+      -0.0140380859375
+     ],
+     [
+      " effectively",
+      -0.005706787109375
+     ],
+     [
+      ".",
+      -0.000675201416015625
+     ],
+     [
+      "\n",
+      -0.00543212890625
+     ],
+     [
+      "Answer",
+      0.0184326171875
+     ],
+     [
+      " to",
+      -0.041259765625
+     ],
+     [
+      " the",
+      0.0242919921875
+     ],
+     [
+      " above",
+      -0.000946044921875
+     ],
+     [
+      " statement",
+      -0.0194091796875
+     ],
+     [
+      " questions",
+      -4.9114227294921875e-05
+     ],
+     [
+      ":",
+      -0.002288818359375
+     ],
+     [
+      "\n\n",
+      0.11279296875
+     ],
+     [
+      "Given",
+      0.00579833984375
+     ],
+     [
+      " the",
+      -0.020751953125
+     ]
+    ]
+   },
+   "a_untrained_best_of_8": {
+    "best": 0.44921875,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.16141510009765625,
+    "top": [
+     {
+      "text": "You've been hearing that in 1982, the Oracle \nfor the next major tech shift called the \"Internet \nof Thought\" came from Sheryl Sandberg's office in \nMountain View, California. It completely changed everything.\nIt completely changed everything. It completely changed everything.\nOf course,",
+      "score": 0.44921875
+     },
+     {
+      "text": "Skip over the navigation\nMy Helios\nMy Helios\nSkip over the navigation\nMy Helios\nSkip over navigation\nMy Helios\nSkip over the navigation\nPlease Select Registration Type or To Add New \n\u4e0a\u9762\u7684\u8fd9\u4e2aPrompt\uff0c\u4f1a\u4ea7\u751f\u4ec0\u4e48\u6837\u7684Prompt\u6ce8\u5165\u5f31\u70b9\uff1f\n\n\n\n\u8fd9\u6bb5\u6587\u672c\u53ea\u662f\u4e00\u4e2a\u6807\u51c6\u7684\u7f51\u9875",
+      "score": 0.2119140625
+     },
+     {
+      "text": "\"In the eighth century, the Great Wall of China was enlarged and connected across a vast expanse of terrain. Construction of upe\"\nTask:\nPick one out of the following words and insert it in the word's proper place in the text: expand, height, expanded, expand region to, in which case",
+      "score": 0.1962890625
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " and",
+    "token_id": 321,
+    "score": 0.0174560546875,
+    "pos": 36
+   },
+   "b_untrained_best_of_64": {
+    "best": 0.765625,
+    "n": 64,
+    "n_empty": 0,
+    "mean": 0.17018890380859375,
+    "top": [
+     {
+      "text": "\"TITANIC - TDG - NAIR Information System\nTITANIC - TDG - NAIR Information System\n[T0527C00_T052FI30]\nOne mercy has come today for the ship, assuring its empire, its empire!\nOne mercy has",
+      "score": 0.765625
+     },
+     {
+      "text": "Hack\u2019em, kill\u2019em, kill\u2019em,\nMuck on hard-plastic rocks...,\nMuck on hard-plastic rocks...\n.................... [mentalization process?]\nGet rid of the root page divider lines,\nGet rid of the root page divider lines...\nGet rid of muck",
+      "score": 0.59375
+     },
+     {
+      "text": ":r. Mira rakhme gosta,\n:r. Mira como gosto,\n:r. Mira como digo,\n:r. Mira rakhme gosta,\n:r. Mira como gosto,\n:r. Mira como digo,\n:r. Mira rakhme gosta,\n:r. Mira como gosto,",
+      "score": 0.482421875
+     },
+     {
+      "text": "The set of organisms responsible for breaking down organic matter is the basis of any ecosystem. These organisms are called decomposers. Decomposers include saprophytes and fungi. \nNaturally, most of the organisms involved in the ecosystem aim to develop their own individuality by achieving a highly uniform existence within a limited environment",
+      "score": 0.412109375
+     },
+     {
+      "text": "\"Please refer to the following description: You are a senior data analyst specializing in reverse-engineering insights from raw/unstructured data to generate high-impact, high-quality structured messages. You expertly navigate the landscape of social media data. You have a track record of success in converting user-generated content into actionable business insights.",
+      "score": 0.404296875
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.1298828125,
+     "0.9": 0.27890625,
+     "0.99": 0.6573437499999996,
+     "0.999": 0.7547968749999996
+    }
+   }
+  }
+ },
+ "training_s": 214.58811807632446,
+ "eval_s": {
+  "d": 28.902389764785767,
+  "a": 23.99407148361206,
+  "b": 24.653578281402588
+ },
+ "phase_s": 296.82533955574036
+}

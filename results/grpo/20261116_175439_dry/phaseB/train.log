@@ -1,0 +1,17 @@
+[2026-11-16 18:08:20] phase B: neurons ['L8N2027', 'L9N5711', 'L10N4358', 'L11N3081'], FineWeb max this GPU [5.0, 1.3984375, 2.90625, 3.375]; 256 completions/step; 64,940,032 trainable params; micro_bs 32, gen_batch 256
+[2026-11-16 18:10:34] generate: CUDA OOM at 256 sequences; retrying with 128
+[2026-11-16 18:11:57] step 1/3 217.1s (gen 181.9 score 1.0 train 34.2) trained 256/256 reward 0.044 empty 0.000 flat 0.000 gn 10.956 lr 2.00e-05 mem 24.5GB | L8N2027: mean 0.188 max 0.8515625 L9N5711: mean 0.079 max 0.2001953125 L10N4358: mean 0.117 max 0.35546875 L11N3081: mean 0.142 max 0.466796875
+[2026-11-16 18:11:58] generate: CUDA OOM at 256 sequences; retrying with 128
+[2026-11-16 18:13:17] step 2/3 80.5s (gen 49.0 score 0.9 train 30.6) trained 256/256 reward 0.046 empty 0.004 flat 0.000 gn 6.861 lr 1.33e-05 mem 24.3GB | L8N2027: mean 0.21 max 0.8828125 L9N5711: mean 0.088 max 0.1787109375 L10N4358: mean 0.131 max 0.5234375 L11N3081: mean 0.17 max 0.609375
+[2026-11-16 18:13:19] generate: CUDA OOM at 256 sequences; retrying with 128
+[2026-11-16 18:14:41] step 3/3 83.4s (gen 50.6 score 0.9 train 31.9) trained 256/256 reward 0.049 empty 0.000 flat 0.000 gn 3.518 lr 6.67e-06 mem 24.3GB | L8N2027: mean 0.221 max 1.0390625 L9N5711: mean 0.083 max 0.23046875 L10N4358: mean 0.122 max 0.453125 L11N3081: mean 0.174 max 1.4296875
+[2026-11-16 18:14:41] PROJECTED phase B: training 0.11 h (82.0 s/step x 3), evaluations ~0.04 h (320 samples at 367 ms/sample), total ~0.18 h; ends ~2026-11-16 18:18:56
+[2026-11-16 18:14:44] training done in 0.11 h; adapter saved to /workspace/neuron-elictor/results/grpo/20261116_175439_dry/phaseB/adapter
+[2026-11-16 18:15:15] (d) trained best of 8 {'L8N2027': 0.54296875, 'L9N5711': 0.193359375, 'L10N4358': 0.60546875, 'L11N3081': 0.412109375}
+[2026-11-16 18:15:28] (e) grid mean ratio [[0.04188232421875, 0.07415328212290503, 0.05434097782258064, 0.03829390914351852], [0.06268310546875, 0.06638442737430167, 0.043294270833333336, 0.04635054976851852], [0.049084472656249996, 0.040219099162011177, 0.06586546538978494, 0.04260706018518519], [0.050830078125, 0.07408781424581007, 0.03644783266129032, 0.05933521412037037]] diagonal by mean: False
+[2026-11-16 18:15:55] (a) untrained best of 8 {'L8N2027': 0.96484375, 'L9N5711': 0.10595703125, 'L10N4358': 0.142578125, 'L11N3081': 0.201171875}
+[2026-11-16 18:15:59] (c) repeated token {'L8N2027': {'token': ' on', 'token_id': 383, 'score': 0.07275390625, 'pos': 45}, 'L9N5711': {'token': ' miss', 'token_id': 3016, 'score': 0.06591796875, 'pos': 4}, 'L10N4358': {'token': '.', 'token_id': 13, 'score': 0.055419921875, 'pos': 23}, 'L11N3081': {'token': ' them', 'token_id': 1070, 'score': 0.055419921875, 'pos': 7}}
+[2026-11-16 18:15:59] (b) compute-matched: 64 untrained samples per neuron
+[2026-11-16 18:16:00] generate: CUDA OOM at 256 sequences; retrying with 128
+[2026-11-16 18:16:52] (b) compute-matched best {'L8N2027': 0.796875, 'L9N5711': 0.265625, 'L10N4358': 0.63671875, 'L11N3081': 0.443359375}
+[2026-11-16 18:16:52] phase B done in 0.14 h; results /workspace/neuron-elictor/results/grpo/20261116_175439_dry/phaseB/results.json

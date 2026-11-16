@@ -1,0 +1,61 @@
+[pipeline 2026-11-16 17:54:39] pipeline start: run dir /workspace/neuron-elictor/results/grpo/20261116_175439_dry, git 6c7a96c, GPU NVIDIA GeForce RTX 4090
+[pipeline 2026-11-16 17:54:39] step 1: phase 1 setup check
+[pipeline 2026-11-16 17:57:07] phase 1 setup check exit 0 (9 PASS, 0 FAIL)
+  PASS  found_32_lm_mlp_layers
+  PASS  hook_equals_manual_bf16_exact
+  PASS  hook_equals_manual_all_9216_channels_exact
+  PASS  hook_close_to_manual_fp32 (rel<2%)
+  PASS  early_exit_raised
+  PASS  early_exit_equals_full_forward
+  PASS  scorer_exit_L_equals_exit_31
+  PASS  scorer_close_to_hook_max (abs<0.01 or rel<2%, fixed shape differs)
+  PASS  same_tokenization_as_scorer
+[pipeline 2026-11-16 17:57:07] step 2: FineWeb max on this GPU (top-10 contexts, 5 neurons)
+Phase B neurons confirmed = first four pilots from layers 8-24: ['L8N2027', 'L9N5711', 'L10N4358', 'L11N3081']
+L14N8949: FineWeb max A100 3.0625, this GPU 3.046875 (rank 0); argmax token ' and'
+L8N2027: FineWeb max A100 5.0, this GPU 5.0 (rank 0); argmax token ' on'
+L9N5711: FineWeb max A100 1.390625, this GPU 1.3984375 (rank 0); argmax token ' miss'
+L10N4358: FineWeb max A100 2.921875, this GPU 2.90625 (rank 0); argmax token '.'
+L11N3081: FineWeb max A100 3.3125, this GPU 3.375 (rank 0); argmax token ' them'
+[pipeline 2026-11-16 17:58:35] step 3: Phase A (args: --merged_gen --dry)
+[pipeline 2026-11-16 18:05:45] Phase A exit 0
+[2026-11-16 18:03:47] PROJECTED phase A: training 0.06 h (33.0 s/step x 3), evaluations ~0.02 h (80 samples at 966 ms/sample), total ~0.12 h; ends ~2026-11-16 18:07:16
+[pipeline 2026-11-16 18:05:45] step 4: gate
+GATE FAIL: Phase A (d) 0.1474609375 vs FineWeb max (this GPU) 3.046875
+[pipeline 2026-11-16 18:05:46] step 5: Phase B (args: --merged_gen --gen_batch 256 --dry)
+[pipeline 2026-11-16 18:17:29] Phase B exit 0
+[2026-11-16 18:14:41] PROJECTED phase B: training 0.11 h (82.0 s/step x 3), evaluations ~0.04 h (320 samples at 367 ms/sample), total ~0.18 h; ends ~2026-11-16 18:18:56
+[pipeline 2026-11-16 18:17:29] all phases done
+[pipeline 2026-11-16 18:17:29] pipeline ending (last exit code 0); writing final report
+[pipeline 2026-11-16 18:17:56] committing
+[pipeline 2026-11-16 18:17:58] DRY_RUN: would commit 29 files:
+hermes/grpo.py
+logs/grpo_20261116_175439_fwmax.log
+logs/grpo_20261116_175439_phase1.log
+logs/grpo_20261116_175439_phaseA.log
+logs/grpo_20261116_175439_phaseB.log
+logs/grpo_pipeline_dry.out
+logs/watchdog.log
+reports/20261116_181729_grpo_final.md
+results/grpo/20261116_175439_dry/fineweb_max.json
+results/grpo/20261116_175439_dry/fwmax_config.json
+results/grpo/20261116_175439_dry/gate.json
+results/grpo/20261116_175439_dry/phaseA/adapter/adapter_config.json
+results/grpo/20261116_175439_dry/phaseA/config.json
+results/grpo/20261116_175439_dry/phaseA/metrics.jsonl
+results/grpo/20261116_175439_dry/phaseA/projection.json
+results/grpo/20261116_175439_dry/phaseA/results.json
+results/grpo/20261116_175439_dry/phaseA/samples.jsonl
+results/grpo/20261116_175439_dry/phaseB/adapter/adapter_config.json
+results/grpo/20261116_175439_dry/phaseB/config.json
+results/grpo/20261116_175439_dry/phaseB/metrics.jsonl
+results/grpo/20261116_175439_dry/phaseB/projection.json
+results/grpo/20261116_175439_dry/phaseB/results.json
+results/grpo/20261116_175439_dry/phaseB/samples.jsonl
+scripts/grpo_fwmax.py
+scripts/grpo_phase.py
+scripts/grpo_pipeline.sh
+scripts/grpo_report.py
+scripts/phase1_setup_check.py
+scripts/test_grpo.py
+[pipeline 2026-11-16 18:17:59] DRY_RUN: not pushing, not stopping the pod

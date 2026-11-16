@@ -1,0 +1,112 @@
+GRPO RESUME SUMMARY - 2026-11-16 21:50 UTC
+Local commit 6dcfe6d, not pushed. Full review: reports/20261116_214228_grpo_resume_review.md
+Main finding: merged generation is implemented, but the bitwise check and the
+reference-text check are not, and the merge path has never been tested.
+
+1. WHAT THE DRY RUN SHOWED
+   (results/grpo/20261116_175439_dry, 3 steps per phase, RTX 4090)
+
+Pipeline
+  - Ran end to end: setup check (9/9 pass), FineWeb max rescored on the 4090,
+    Phase A, gate, Phase B, report, and a dry commit listing.
+  - FineWeb maxes on the 4090 match the A100 values to within bf16 noise.
+
+Phase A
+  - Generation was 24-25 s per batch with merging on: the same as the 24 s
+    measured with LoRA off and much faster than 41 s with LoRA. The merge does
+    remove the LoRA slowdown.
+  - A step takes about 33 s and peaks at 18.6 GB.
+
+Phase B
+  - Batch 256 ran out of GPU memory on every step and fell back to 128.
+  - A step takes about 82 s and peaks at 24.5 GB.
+
+New lead
+  - 64 sequences took about as long as 128 (24 s vs 25 s), roughly 380 ms per
+    generated token. Decoding seems limited by per-token latency, not batch
+    size, so batch size may not be the main speed lever after all. The
+    benchmark in section 4 should confirm this.
+
+Scores
+  - No signal after 3 steps, which is expected.
+  - The gate failed (0.147 vs 3.047), and the trained score was below the
+    untrained best-of-N for all 5 neurons.
+  - Phase B ran anyway, apparently with the force flag.
+
+Problems found
+  - The out-of-memory fallback resets on every generation call, so it fails
+    and retries each step.
+  - The report's table header says "best of 64" when the dry run used 8.
+  - The report says "Phase B was not run" when it was.
+  - In dry mode the best-of-N baseline uses 64 samples instead of 192, so it
+    isn't compute-matched.
+
+Mismatch with CLAUDE.md
+  - The code uses LoRA r=32/alpha=64 (CLAUDE.md says r=16/alpha=32), groups of
+    16 (CLAUDE.md says 8), and prompts "Text:\n" and "<|nK|>\n" instead of the
+    fixed template.
+  - These may have been approved earlier, but CLAUDE.md doesn't record it.
+    Either CLAUDE.md or the code should be updated.
+
+2. hermes/grpo.py REVIEW
+
+Done
+  - merged() (hermes/grpo.py:90) keeps a pinned CPU copy of the base weights,
+    merges the adapter, runs generation, unmerges, then copies the base weights
+    back exactly.
+  - It's used for training generation and the trained-sample eval when
+    --merged_gen is set. The untrained evaluations never use it.
+
+Missing
+  - The bitwise-identity check every 50 steps.
+  - The reference-text score at the start and end of each phase.
+  - Any test of the merge path. scripts/test_grpo.py predates merged().
+  - The Phase B neuron-token embedding rows aren't in the CPU copy; they rely
+    on PEFT's own unmerge.
+  - merge_adapter() sits outside the try, so a failure partway through would
+    leave the weights partly merged with no restore.
+  - The out-of-memory fallback should keep the smaller batch size across calls.
+  - The CPU copy is about 7 GB of pinned memory and is copied back on every
+    merged call; that cost hasn't been timed.
+
+3. ARTIFACTS
+  - results/grpo is 508 MB, almost all of it two 260 MB adapter files; those
+    stay out of git.
+  - results/grpo_tests holds only about 7 KB (du shows 2 MB from disk block
+    overhead).
+  - Everything under 5 MB was committed.
+  - train.log, pipeline_status.txt and the 640-byte score .npy files were
+    force-added past .gitignore. That goes beyond the current
+    "json/jsonl/md/csv only" rule; revert it to keep the rule strict.
+
+4. GPU SESSION, IN ORDER
+   (the code fixes from section 2 need no GPU and should be done before it)
+
+  1. Cache and environment check (~3 min): load the model offline from the
+     cache. It's on disk at the pinned revision (8.8 GB) but hasn't been
+     loaded since the restart. Confirm the fast-kernel assertion passes.
+  2. Setup and tests (~10 min): scripts/phase1_setup_check.py, plus
+     scripts/test_grpo.py extended with merge-path checks: base weights bitwise
+     equal after a merged generation, unchanged LoRA-off score, embedding rows
+     restored, merged and unmerged outputs close.
+  3. Generation benchmark (~10 min): time LoRA on, merged and LoRA off at batch
+     64, 128 and 192. Also:
+       - Time the merge-and-restore step on its own.
+       - Check that the KV cache is actually used during generation, since the
+         model config sets it off and the generation config sets it on.
+       - Check whether gradient checkpointing slows generation.
+       - Find the largest batch that fits.
+       - Report time per generated token.
+  4. Micro-batch check (~5 min): confirm micro-batch 32 is still best (an
+     earlier test took 51 s at 32 vs 344 s at 16).
+  5. Short dry pipeline (~25 min): rerun with the fixes and confirm both new
+     checks are logged and pass.
+  6. Time estimate (rough): Phase A about 4-5 h and Phase B about 11-15 h at
+     300 steps. The compute-matched baseline (19,200 untrained samples per
+     neuron) is the least certain part; step 3 replaces these numbers.
+  7. Real run: launch only with your go-ahead, using scripts/watch_and_stop.sh.
+
+OPEN QUESTION
+  The missing checks are not implemented yet. They, the merge-path test and the
+  report fixes can be written now on CPU, so the GPU session only has to run
+  things.

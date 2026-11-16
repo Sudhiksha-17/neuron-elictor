@@ -9,7 +9,8 @@ of concept only. Keep everything simple.
 - Model: Qwen/Qwen3.5-4B, bf16. One copy of weights: LoRA on = elicitor,
   LoRA off = reference policy and target.
 - Training method: GRPO (switched from DPO on 2026-11-07, approved by user).
-  Reward = target score of the cleaned elicitor text. LoRA r=16, alpha=32.
+  Reward = target score of the cleaned elicitor text. LoRA r=32, alpha=64
+  (updated 2026-11-16 to match the approved GRPO spec; was r=16, alpha=32).
 - Neurons: any (layer L, neuron N), L in 0..31, N in 0..9215 (294,912 in all);
   ID format L{layer}N{neuron}, e.g. L15N2341 (only an example).
 - Neuron activation: channel N of the input to layer L's mlp.down_proj,
@@ -23,9 +24,12 @@ of concept only. Keep everything simple.
   neurons). Fixed forward shape [256, 64] (right-padded, pads excluded
   from the max) so a text's score does not depend on its batch.
   Code: hermes/scoring.py.
-- Elicitor input: ID tag only, prompt template
-  "Write text that maximally activates neuron L{layer}N{neuron}."
-  Thinking mode off.
+- Elicitor input (updated 2026-11-16 to match the approved GRPO spec; was the
+  template "Write text that maximally activates neuron L{layer}N{neuron}."):
+  Phase A (single neuron L14N8949) prompt "Text:\n"; Phase B (shared
+  elicitor, 4 neurons) prompt "<|nK|>\n" with one new special token per
+  neuron (<|n0|>..<|n3|>, embedding rows trained). Raw text, no chat
+  template, thinking mode off.
 - Pilot neurons: 1-2 per layer (n_per_layer, default 1 -> 32 neurons),
   sampled uniformly at random with a fixed seed among the layer's
   neurons that are not low-activation (scripts/select_pilots.py; seed, rule
@@ -52,7 +56,8 @@ of concept only. Keep everything simple.
    histogram, fraction of neurons with max at position 0, number of
    neurons with >= 5 of their top-10 from the same document (0 by
    construction with the 4-chunk cap; the full distribution is saved).
-3. GRPO training: one group = 8 completions for one neuron's prompt,
+3. GRPO training: one group = 16 completions for one neuron's prompt
+   (updated 2026-11-16 to match the approved GRPO spec; was 8),
    reward = target score (hermes/reward.py; one batch may mix neurons
    from different layers). A text that is empty after cleaning scores
    NaN (not 0.0: activations can be negative). RL code MUST penalize NaN
@@ -86,8 +91,10 @@ of concept only. Keep everything simple.
   revision hash (and model revision), via hermes/runinfo.py. Data and model
   are loaded at the recorded revisions.
 - After each phase, commit and push scripts and configs to the public GitHub
-  repo Sudhiksha-17/neuron-elictor (public since 2026-11-16). Never push large result files (only results/**/config.json
-  and summary.json are tracked; see .gitignore).
+  repo Sudhiksha-17/neuron-elictor (public since 2026-11-16). Never push large result files (only small text
+  artifacts under results/ are tracked, each < 5 MB, see .gitignore; small run logs,
+  status files and tiny .npy score arrays may be force-added, decided 2026-11-16;
+  adapters/checkpoints never).
 - Ask before any change to the design above.
 - Safety: scripts/idle_watchdog.sh (nohup) stops the pod via
   "runpodctl stop pod" after 60 min of GPU util < 5%; disable with

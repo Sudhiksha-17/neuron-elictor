@@ -14,6 +14,17 @@ Evaluations (written to results.json after each one, so a crash keeps what finis
 The untrained evaluations run after training with the adapter disabled (bit-identical to the untrained
 model: LoRA B = 0 at init, trainable-token deltas start at the original rows; checked by scripts/test_grpo.py).
 
+Integrity checks (UNTESTED, run on GPU): bitwise base-weight check (GPU weights vs the exact CPU backup) at the
+start, every --check_every steps, after training and at the end; reference-text check (each phase neuron's best
+FineWeb context rescored LoRA-off must equal fineweb_max.json's this-GPU value exactly) at the start, after
+training and at the end. Any failure is logged and the phase exits with code 3.
+
+Gate: a non-dry Phase B refuses to start unless <run_dir>/gate.json says passed and Phase A was not a dry run.
+There is no override outside --dry (the pipeline's --force_phase_b requires --dry).
+
+Scope flags (defaults unchanged): --steps, --groups_per_step, --n_matched (compute-matched best-of-N,
+default steps x groups_per_neuron x group_size, also in --dry), --n_untrained_best, --n_fresh.
+
 Usage: python scripts/grpo_phase.py --phase A --run_dir results/grpo/<ts> [--steps 300] [--dry]
 """
 import os, sys, json, time, math, argparse
@@ -31,7 +42,9 @@ PHASES = {
 ap = argparse.ArgumentParser()
 ap.add_argument("--phase", choices=list(PHASES), required=True)
 ap.add_argument("--run_dir", required=True, help="pipeline run dir holding fineweb_max.json")
-ap.add_argument("--steps", type=int, default=300)
+ap.add_argument("--steps", type=int, default=None, help="default 300 (3 with --dry)")
+ap.add_argument("--groups_per_step", type=int, default=None,
+                help="groups per step over all neurons (multiple of the number of neurons); default 4 per neuron")
 ap.add_argument("--group_size", type=int, default=16)
 ap.add_argument("--lr", type=float, default=2e-5)
 ap.add_argument("--lora_r", type=int, default=32)
@@ -42,17 +55,35 @@ ap.add_argument("--micro_bs", type=int, default=32)
 ap.add_argument("--gen_batch", type=int, default=128, help="generation batch during training and for (d)")
 ap.add_argument("--eval_batch", type=int, default=256, help="generation batch for untrained (adapter off) evals (a), (b)")
 ap.add_argument("--merged_gen", action="store_true", help="generate with LoRA merged into bf16 weights (faster, not bitwise)")
-ap.add_argument("--n_untrained_best", type=int, default=64)
-ap.add_argument("--n_matched", type=int, default=None, help="default: steps x groups_per_neuron x group_size (compute-matched)")
+ap.add_argument("--n_untrained_best", type=int, default=None, help="(a) best-of-N size; default 64 (8 with --dry)")
+ap.add_argument("--n_matched", type=int, default=None,
+                help="(b) best-of-N size; default steps x groups_per_neuron x group_size (compute-matched, also in --dry)")
 ap.add_argument("--n_fresh", type=int, default=8)
-ap.add_argument("--sample_every", type=int, default=50)
+ap.add_argument("--sample_every", type=int, default=None, help="default 50 (2 with --dry)")
+ap.add_argument("--check_every", type=int, default=50, help="bitwise base-weight check every this many steps")
 ap.add_argument("--dry", action="store_true", help="tiny smoke run (for testing the pipeline)")
 a = ap.parse_args()
 P = PHASES[a.phase]
-if a.dry:
-    a.steps, a.n_untrained_best, a.n_fresh, a.sample_every = 3, 8, 8, 2
-    a.n_matched = a.n_matched or 64
+DEF = dict(steps=3, n_untrained_best=8, sample_every=2) if a.dry else dict(steps=300, n_untrained_best=64, sample_every=50)
+for k, v in DEF.items():          # explicit flags always win, also with --dry
+    if getattr(a, k) is None:
+        setattr(a, k, v)
+n_nrn = len(P["neurons"])
+if a.groups_per_step is None:
+    a.groups_per_step = P["groups_per_neuron"] * n_nrn
+if a.groups_per_step % n_nrn or a.groups_per_step <= 0:
+    sys.exit(f"--groups_per_step {a.groups_per_step} must be a positive multiple of the {n_nrn} neurons")
+P["groups_per_neuron"] = a.groups_per_step // n_nrn
 n_matched = a.n_matched or a.steps * P["groups_per_neuron"] * a.group_size
+
+if a.phase == "B" and not a.dry:   # the gate cannot be bypassed in a real run (UNTESTED, run on GPU)
+    try:
+        gate_r = json.load(open(f"{a.run_dir}/gate.json"))
+        cfg_a = json.load(open(f"{a.run_dir}/phaseA/config.json"))
+    except Exception as e:
+        sys.exit(f"REFUSING Phase B: no gate.json / Phase A config in {a.run_dir} ({e})")
+    if not gate_r.get("passed") or cfg_a.get("dry"):
+        sys.exit(f"REFUSING Phase B: gate passed={gate_r.get('passed')}, Phase A dry={cfg_a.get('dry')}")
 out_dir = f"{a.run_dir}/phase{a.phase}"
 os.makedirs(out_dir, exist_ok=False)
 LOG = open(f"{out_dir}/train.log", "a")
@@ -63,10 +94,45 @@ def log(*x):
 fw = json.load(open(f"{a.run_dir}/fineweb_max.json"))
 neurons = P["neurons"]; pairs_n = [parse_neuron_id(n) for n in neurons]
 fwmax = [fw[n]["fw_max_this_gpu"] for n in neurons]
+
+def ref_contexts():
+    """Each phase neuron's best FineWeb context (tokens) and its exact this-GPU score from fineweb_max.json."""
+    if all("ref_tokens" in fw[n] for n in neurons):
+        toks = {n: fw[n]["ref_tokens"] for n in neurons}
+    else:   # run dir written by an older grpo_fwmax.py: read the tokens from the baseline
+        from hermes.paths import BASELINE_DIR
+        from hermes.baseline import Baseline
+        b = Baseline(BASELINE_DIR)
+        toks = {n: b.context_tokens(fw[n]["top10"][fw[n]["this_gpu_best_rank"]]["ctx"]) for n in neurons}
+        del b
+    return [dict(neuron=list(pr), tokens=toks[n], expected=fw[n]["fw_max_this_gpu"]) for n, pr in zip(neurons, pairs_n)]
+
+integrity = dict(bitwise=[], reference=[])
+def fail(msg):
+    log("INTEGRITY FAIL: " + msg)
+    json.dump(integrity, open(f"{out_dir}/integrity.json", "w"), indent=1)
+    sys.exit(3)
+
+def check_bitwise(where):
+    r = el.check_base_bitwise(); r["where"] = where; integrity["bitwise"].append(r)
+    json.dump(integrity, open(f"{out_dir}/integrity.json", "w"), indent=1)
+    log(f"bitwise base-weight check ({where}): {'PASS' if r['ok'] else 'FAIL'} "
+        f"({r['n_checked']} tensors, {r['n_mismatch']} mismatched {r['mismatches']}, {r['seconds']:.1f}s)")
+    if not r["ok"]:
+        fail(f"base weights differ from the exact backup at {where}: {r['mismatches']}")
+
+def check_reference(where):
+    r = el.reference_scores(REFS); r["where"] = where; integrity["reference"].append(r)
+    json.dump(integrity, open(f"{out_dir}/integrity.json", "w"), indent=1)
+    log(f"reference-text check ({where}): {'PASS' if r['ok'] else 'FAIL'} "
+        + " ".join(f"L{x['neuron'][0]}N{x['neuron'][1]} {x['got']} (expected {x['expected']})" for x in r["rows"]))
+    if not r["ok"]:
+        fail(f"reference contexts no longer score their stored values at {where}")
 G, gpn = a.group_size, P["groups_per_neuron"]
 per_neuron = G * gpn; n_step = per_neuron * len(neurons)
 
 el = Elicitor(new_tokens=P["tokens"], lora_r=a.lora_r, lora_alpha=a.lora_alpha, seed=a.seed, log=log)
+REFS = ref_contexts()
 pids = [el.prompt_ids(p) for p in P["prompts"]]
 hp = dict(phase=a.phase, neurons=neurons, prompts=P["prompts"], prompt_token_ids=pids, new_tokens=P["tokens"],
           new_token_ids=el.new_ids, steps=a.steps, group_size=G, groups_per_neuron=gpn, groups_per_step=gpn * len(neurons),
@@ -83,10 +149,14 @@ hp = dict(phase=a.phase, neurons=neurons, prompts=P["prompts"], prompt_token_ids
           micro_bs=a.micro_bs, gen_batch=a.gen_batch, eval_batch=a.eval_batch, merged_generation=a.merged_gen, gradient_checkpointing=True, seed=a.seed,
           fw_max_this_gpu=dict(zip(neurons, fwmax)), fw_max_a100={n: fw[n]["fw_max_a100"] for n in neurons},
           eval=dict(n_untrained_best=a.n_untrained_best, n_matched=n_matched, n_fresh=a.n_fresh), dry=a.dry,
+          check_every=a.check_every, base_backup_bytes=el.backup_bytes,
+          reference_contexts=[dict(neuron=r["neuron"], expected=r["expected"]) for r in REFS],
           kernels=el.kernels, model_revision=el.revision)
 json.dump(dict(**hp, env=run_info()), open(f"{out_dir}/config.json", "w"), indent=2)
 log(f"phase {a.phase}: neurons {neurons}, FineWeb max this GPU {fwmax}; {n_step} completions/step; "
     f"{el.n_trainable:,} trainable params; micro_bs {a.micro_bs}, gen_batch {a.gen_batch}")
+
+check_bitwise("start"); check_reference("start")
 
 params = [p for _, p in el.trainable]
 opt = torch.optim.AdamW(params, lr=a.lr, betas=(0.9, 0.999), eps=1e-8, weight_decay=0.0)
@@ -97,8 +167,11 @@ metrics_f = open(f"{out_dir}/metrics.jsonl", "a"); samples_f = open(f"{out_dir}/
 t_phase = time.time(); step_times, gen_rate = [], []
 
 for step in range(a.steps):
-    t0 = time.time(); torch.cuda.reset_peak_memory_stats()
+    t0 = time.time(); torch.cuda.reset_peak_memory_stats(); n_merge0 = len(el.merge_log)
     comps = el.generate(pids, per_neuron, batch=a.gen_batch, merged=a.merged_gen)
+    mrec = el.merge_log[n_merge0:]
+    t_merge = sum(r["merge_s"] or 0 for r in mrec); t_unmerge = sum(r["unmerge_s"] or 0 for r in mrec)
+    t_restore = sum(r["restore_s"] or 0 for r in mrec)
     flat = [c for per in comps for c in per]; t_gen = time.time() - t0
     texts = el.texts(flat)
     t1 = time.time(); scores = el.score(texts, pair_flat).tolist(); t_score = time.time() - t1
@@ -117,6 +190,7 @@ for step in range(a.steps):
              mean_reward=float(np.mean(rewards)), frac_empty=float(np.mean([math.isnan(s) for s in scores])),
              frac_flat_groups=float(np.mean(flat_g)), mean_completion_tokens=float(np.mean([len(c) for c in flat])),
              time_s=dt, gen_s=t_gen, score_s=t_score, train_s=t_train,
+             merge_calls=len(mrec), merge_s=t_merge, unmerge_s=t_unmerge, restore_s=t_restore, gen_cap=dict(el.gen_cap),
              peak_mem_gb=torch.cuda.max_memory_allocated() / 1e9, per_neuron={})
     for j, n in enumerate(neurons):
         s = [v for v in scores[j * per_neuron:(j + 1) * per_neuron] if not math.isnan(v)]
@@ -128,7 +202,11 @@ for step in range(a.steps):
                   f"max {d['max_score']}" for n, d in m["per_neuron"].items())
     log(f"step {step + 1}/{a.steps} {dt:.1f}s (gen {t_gen:.1f} score {t_score:.1f} train {t_train:.1f}) trained {n_tr}/{n_step} "
         f"reward {m['mean_reward']:.3f} empty {m['frac_empty']:.3f} flat {m['frac_flat_groups']:.3f} "
-        f"gn {gn:.3f} lr {lr:.2e} mem {m['peak_mem_gb']:.1f}GB | {pn}")
+        f"gn {gn:.3f} lr {lr:.2e} mem {m['peak_mem_gb']:.1f}GB"
+        + (f" merge {t_merge:.2f}s unmerge {t_unmerge:.2f}s restore {t_restore:.2f}s ({len(mrec)}x)" if mrec else "")
+        + f" | {pn}")
+    if (step + 1) % a.check_every == 0 or step == a.steps - 1:
+        check_bitwise(f"after step {step + 1}")
     if step % a.sample_every == 0 or step == a.steps - 1:
         for j, n in enumerate(neurons):
             for i in range(4):
@@ -154,9 +232,10 @@ for f in ("README.md",):
     if os.path.exists(f"{out_dir}/adapter/{f}"):
         os.remove(f"{out_dir}/adapter/{f}")
 log(f"training done in {t_train_total / 3600:.2f} h; adapter saved to {out_dir}/adapter")
+check_reference("after training")
 
 # ---------------- evaluations ----------------
-res = dict(phase=a.phase, neurons={}, training_s=t_train_total, eval_s={})
+res = dict(phase=a.phase, neurons={}, training_s=t_train_total, eval_s={}, integrity=integrity)
 for n, (L, N), f in zip(neurons, pairs_n, fwmax):
     res["neurons"][n] = dict(layer=L, neuron=N, prompt=P["prompts"][neurons.index(n)], fw_max_a100=fw[n]["fw_max_a100"],
                              fw_max_this_gpu=f)
@@ -244,5 +323,11 @@ for j, n in enumerate(neurons):
     res["neurons"][n][f"b_untrained_best_of_{n_matched}"] = d
 res["eval_s"]["b"] = time.time() - t0
 res["phase_s"] = time.time() - t_phase
+check_bitwise("end"); check_reference("end")
+ml = [r for r in el.merge_log if r["restore_s"] is not None]
+res["merge_timing"] = dict(calls=len(el.merge_log), mean_merge_s=float(np.mean([r["merge_s"] or 0 for r in ml])) if ml else None,
+                           mean_unmerge_s=float(np.mean([r["unmerge_s"] for r in ml])) if ml else None,
+                           mean_restore_s=float(np.mean([r["restore_s"] for r in ml])) if ml else None,
+                           failed_calls=sum(not r["ok"] for r in el.merge_log), gen_cap=dict(el.gen_cap))
 save(); log("(b) compute-matched best", {n: res["neurons"][n][f"b_untrained_best_of_{n_matched}"]["best"] for n in neurons})
 log(f"phase {a.phase} done in {res['phase_s'] / 3600:.2f} h; results {out_dir}/results.json")

@@ -5,6 +5,9 @@ Rescores each neuron's stored top-10 FineWeb contexts (tokens from data/contexts
 max from data/baseline.pt is kept alongside. Also checks that the Phase B neurons are the first four pilots
 from layers 8-24 in data/pilots.json.
 
+ref_tokens (the best context's 64 tokens) is the reference text that grpo_phase.py rescores at the start and
+end of each phase.
+
 Usage: python scripts/grpo_fwmax.py <run_dir>   -> <run_dir>/fineweb_max.json (+ config.json)
 """
 import os, sys, json, time
@@ -35,6 +38,7 @@ for nid in PHASE_A + PHASE_B:
     s, p = s.tolist(), p.tolist()
     k = max(range(len(s)), key=lambda i: s[i])
     out[nid] = dict(layer=L, neuron=N, fw_max_a100=nb["max"], fw_max_this_gpu=s[k], this_gpu_best_rank=k,
+                    ref_tokens=ids[k].tolist(),   # reference context for grpo_phase.py's integrity check
                     argmax_token_id=base.argmax_token(L, N), argmax_token=sc.tok.decode([base.argmax_token(L, N)]),
                     top10=[dict(rank=i, ctx=c, stored=v, stored_pos=vp, this_gpu=s[i], this_gpu_pos=p[i],
                                 text=base.context_text(c))

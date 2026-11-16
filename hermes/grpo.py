@@ -15,6 +15,11 @@ accumulation, so the effective batch is always the full step.
 
 Reward = Scorer score of the cleaned completion (prompt never scored, position 0 included) / FineWeb max of
 the neuron rescored on this GPU. Empty after cleaning (score NaN) -> reward -1.0.
+
+Base-weight integrity (UNTESTED, run on GPU: scripts/test_grpo.py): at init an exact pinned-CPU copy is taken of
+every LoRA base weight and of the neuron-token embedding rows. merged() always restores both from that copy
+(also when merge/generation fails), check_base_bitwise() compares the GPU weights with it, and
+reference_scores() rescores fixed FineWeb contexts LoRA-off (must equal the stored this-GPU values exactly).
 """
 import os, re, math, json, time, contextlib
 os.environ.setdefault("HF_HOME", "/workspace/hf_cache")
@@ -65,6 +70,7 @@ class Elicitor:
         if self.new_ids:
             cfg["trainable_token_indices"] = {"embed_tokens": self.new_ids}
         self.lora_config = LoraConfig(**cfg)
+        self._emb_mod = base.get_input_embeddings()     # original nn.Embedding (see _emb_weight)
         self.model = get_peft_model(base, self.lora_config)
         # adapters / trainable token deltas in fp32 (bf16 would round away lr-2e-5 updates)
         for n, p in self.model.named_parameters():
@@ -82,6 +88,65 @@ class Elicitor:
             max_new_tokens=64, eos_token_id=self.eos_ids, pad_token_id=tok.pad_token_id, use_cache=True,
             suppress_tokens=self.new_ids or None)
         self.device = self.scorer.device
+        self.gen_cap = {}          # mode -> max sequences per generate call that fit (remembered after an OOM)
+        self.merge_log = []        # one dict per merged() call: merge_s, unmerge_s, restore_s, ok
+        self._backup_base()
+
+    # ---------- exact base-weight backup (UNTESTED, run on GPU) ----------
+    def _emb_weight(self):
+        """The real (base) input-embedding weight. self._emb_mod is the original nn.Embedding captured before
+        get_peft_model; PEFT's trainable-token layer keeps that same module as its base layer and merges into its
+        weight. .weight is looked up each time in case PEFT replaces the Parameter object."""
+        return self._emb_mod.weight
+
+    def _backup_base(self):
+        """Pinned CPU copy of every LoRA base weight + the neuron-token embedding rows, taken once at init
+        (before any merge or optimizer step). This copy is the reference for restore and the bitwise check."""
+        t0 = time.time()
+        self._lora_mods = [(n, m) for n, m in self.model.named_modules() if hasattr(m, "lora_A") and hasattr(m, "base_layer")]
+        self._orig = [m.base_layer.weight.detach().to("cpu", copy=True).pin_memory() for _, m in self._lora_mods]
+        self._ids_t = torch.tensor(self.new_ids, dtype=torch.long, device=self.device) if self.new_ids else None
+        self._orig_emb_rows = (self._emb_weight().detach()[self._ids_t].to("cpu", copy=True).pin_memory()
+                               if self.new_ids else None)
+        self.backup_bytes = sum(o.numel() * o.element_size() for o in self._orig)
+        self.log(f"base-weight backup: {len(self._orig)} LoRA base weights + {len(self.new_ids)} embedding rows, "
+                 f"{self.backup_bytes / 1e9:.2f} GB pinned CPU, {time.time() - t0:.1f}s")
+
+    @torch.no_grad()
+    def restore_base(self):
+        """Copy the exact backup back into the GPU weights (LoRA base weights and neuron-token rows)."""
+        for (_, m), o in zip(self._lora_mods, self._orig):
+            m.base_layer.weight.copy_(o, non_blocking=True)
+        if self.new_ids:
+            self._emb_weight().index_copy_(0, self._ids_t, self._orig_emb_rows.to(self.device, non_blocking=True))
+        torch.cuda.synchronize()
+
+    @torch.no_grad()
+    def check_base_bitwise(self):
+        """GPU base weights vs the exact CPU backup. -> dict(ok, n_checked, mismatches (first 5 names), seconds).
+        Must be called outside merged() (inside it the weights are merged on purpose)."""
+        t0 = time.time(); bad = []
+        for (n, m), o in zip(self._lora_mods, self._orig):
+            if not torch.equal(m.base_layer.weight, o.to(self.device, non_blocking=True)):
+                bad.append(n)
+        if self.new_ids and not torch.equal(self._emb_weight()[self._ids_t], self._orig_emb_rows.to(self.device)):
+            bad.append("embed_tokens[neuron-token rows]")
+        torch.cuda.synchronize()
+        return dict(ok=not bad, n_checked=len(self._orig) + bool(self.new_ids), n_mismatch=len(bad),
+                    mismatches=bad[:5], seconds=time.time() - t0)
+
+    @torch.no_grad()
+    def reference_scores(self, refs):
+        """refs: list of dict(neuron=(L, N), tokens=[64 ids], expected=float). Scores each fixed context LoRA-off
+        in one fixed-shape forward. -> dict(ok, rows=[dict(neuron, expected, got, equal)])."""
+        self.model.eval()
+        ids = torch.tensor([r["tokens"] for r in refs], dtype=torch.long)
+        lens = torch.tensor([len(r["tokens"]) for r in refs], dtype=torch.long)
+        with self.adapter_off():
+            s, _ = self.scorer.score_pairs(ids, lens, [tuple(r["neuron"]) for r in refs])
+        rows = [dict(neuron=list(r["neuron"]), expected=r["expected"], got=float(v), equal=float(v) == r["expected"])
+                for r, v in zip(refs, s.float().cpu().tolist())]
+        return dict(ok=all(r["equal"] for r in rows), rows=rows)
 
     # ---------- helpers ----------
     def adapter_off(self):
@@ -90,21 +155,30 @@ class Elicitor:
     @contextlib.contextmanager
     def merged(self):
         """LoRA (and trainable tokens) merged into the bf16 weights, for faster generation. PEFT's unmerge is a
-        lossy bf16 round trip, so the LoRA base weights are restored bitwise from a pinned CPU copy afterwards
-        (trainable-token unmerge restores the stored original rows exactly). The merged policy is NOT bitwise the
-        unmerged one: merged weights are rounded to bf16."""
-        if not hasattr(self, "_lora_mods"):
-            self._lora_mods = [m for _, m in self.model.named_modules() if hasattr(m, "lora_A") and hasattr(m, "base_layer")]
-            self._orig = [m.base_layer.weight.detach().to("cpu", copy=True).pin_memory() for m in self._lora_mods]
-        self.model.merge_adapter()
+        lossy bf16 round trip, so afterwards the LoRA base weights AND the neuron-token embedding rows are
+        restored bitwise from the exact CPU backup taken at init. merge_adapter() runs inside the try, so a
+        failure in the merge itself, in generation, or in unmerge always ends with the exact restore.
+        The merged policy is NOT bitwise the unmerged one: merged weights are rounded to bf16.
+        UNTESTED, run on GPU."""
+        rec = dict(merge_s=None, unmerge_s=None, restore_s=None, ok=False)
         try:
+            torch.cuda.synchronize(); t0 = time.time()
+            self.model.merge_adapter()
+            torch.cuda.synchronize(); rec["merge_s"] = time.time() - t0
             yield
+            rec["ok"] = True
         finally:
-            self.model.unmerge_adapter()
-            with torch.no_grad():
-                for m, o in zip(self._lora_mods, self._orig):
-                    m.base_layer.weight.copy_(o, non_blocking=True)
-            torch.cuda.synchronize()
+            t1 = time.time()
+            try:
+                self.model.unmerge_adapter()     # resets PEFT's merged flags; its weight values are overwritten below
+            except Exception as e:
+                self.log(f"merged(): unmerge_adapter failed ({e!r}); restoring from the exact backup anyway")
+                rec["ok"] = False
+            finally:
+                torch.cuda.synchronize(); t2 = time.time(); rec["unmerge_s"] = t2 - t1
+                self.restore_base()
+                rec["restore_s"] = time.time() - t2
+                self.merge_log.append(rec)
 
     def prompt_ids(self, prompt):
         return self.tok(prompt, add_special_tokens=False).input_ids
@@ -116,7 +190,10 @@ class Elicitor:
         P = len(prompt_ids[0]); assert all(len(p) == P for p in prompt_ids)
         self.model.eval()
         out = [[] for _ in prompt_ids]
-        per = max(1, batch // len(prompt_ids))
+        mode = "untrained" if untrained else ("merged" if merged else "lora")
+        # an OOM lowers gen_cap[mode] for the rest of the run, so later calls do not OOM again (UNTESTED, run on GPU)
+        cap = min(batch, self.gen_cap.get(mode, batch))
+        per = max(1, cap // len(prompt_ids))
         ctx = self.adapter_off() if untrained else (self.merged() if merged else contextlib.nullcontext())
         with ctx:
             done = 0
@@ -126,10 +203,12 @@ class Elicitor:
                 try:
                     g = self.model.generate(input_ids=x, attention_mask=torch.ones_like(x), generation_config=self.gen_config)
                 except torch.OutOfMemoryError:
-                    if per == 1:
+                    if k == 1:
                         raise
-                    del x; torch.cuda.empty_cache(); per = max(1, per // 2)
-                    self.log(f"generate: CUDA OOM at {k * len(prompt_ids)} sequences; retrying with {per * len(prompt_ids)}")
+                    del x; torch.cuda.empty_cache(); per = max(1, k // 2)
+                    self.gen_cap[mode] = per * len(prompt_ids)
+                    self.log(f"generate ({mode}): CUDA OOM at {k * len(prompt_ids)} sequences; "
+                             f"using {per * len(prompt_ids)} from now on")
                     continue
                 comp = g[:, P:].tolist()
                 for j, c in enumerate(comp):

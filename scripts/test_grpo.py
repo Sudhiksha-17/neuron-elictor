@@ -5,6 +5,12 @@
      neuron-token embeddings, LoRA-on embeddings of the neuron tokens changed, other rows unchanged
   4. generation: neuron tokens never generated (suppressed), EOS cut, timing for batch 256 x 64 tokens
   5. pg_backward peak memory / time per micro-batch size
+  6. merge path (added 2026-11-16, UNTESTED, run on GPU), after a real optimizer step (non-trivial merge):
+     base weights bitwise equal to the init backup, LoRA-on logits bitwise unchanged, LoRA-off score unchanged
+     and neuron-token rows restored after (i) a merged forward, (ii) an exception inside merged(), (iii) an
+     exception in merge_adapter itself, (iv) merged generation; merged vs unmerged LoRA logits (top-1
+     agreement >= 95%; delta cosine reported); merge/unmerge/restore timing; simulated OOM -> smaller batch
+     remembered across calls; reference_scores() exact.
 Usage: python scripts/test_grpo.py [--micro_bs 16 32]
 """
 import os, sys, json, time, argparse
@@ -95,6 +101,99 @@ with torch.no_grad():
     with el.adapter_off():
         lo_off = el.model(input_ids=x).logits.float()
 checks["lora_on_changes_policy_logits"] = not torch.equal(lo_on, lo_off)
+
+# ---- 6. merge path (added 2026-11-16, UNTESTED, run on GPU) ----
+# Runs after the real optimizer step above, so LoRA B != 0 and the neuron-token deltas != 0 (a non-trivial merge).
+def logits(merged=False):
+    el.model.eval()
+    with torch.no_grad():
+        if merged:
+            with el.merged():
+                return el.model(input_ids=x).logits.float()
+        return el.model(input_ids=x).logits.float()
+def merge_state_ok(tag):
+    bw = el.check_base_bitwise()
+    checks[f"{tag}_base_weights_bitwise"] = bw["ok"]
+    checks[f"{tag}_lora_on_logits_bitwise_unchanged"] = torch.equal(logits(), lo_on)
+    checks[f"{tag}_lora_off_score_unchanged"] = score_ctx() == s0
+    e_on, e_off = emb_rows(False), emb_rows(True)
+    checks[f"{tag}_neuron_token_rows_lora_off_restored"] = torch.equal(e_off, e_off0)
+    checks[f"{tag}_neuron_token_rows_lora_on_unchanged"] = torch.equal(e_on, e_on1)
+    return bw
+
+checks["bitwise_before_any_merge"] = el.check_base_bitwise()["ok"]
+lo_m = logits(merged=True)
+merge_state_ok("after_merged_forward")
+checks["merged_logits_differ_from_base"] = not torch.equal(lo_m, lo_off)
+lp_on, lp_m, lp_off = (torch.log_softmax(t, -1) for t in (lo_on, lo_m, lo_off))
+d_lora = (lo_on - lo_off).flatten(); d_merged = (lo_m - lo_off).flatten()
+info["merged_vs_lora_on"] = dict(
+    max_abs_logprob_diff=float((lp_m - lp_on).abs().max()), mean_abs_logprob_diff=float((lp_m - lp_on).abs().mean()),
+    top1_agreement=float((lo_m.argmax(-1) == lo_on.argmax(-1)).float().mean()),
+    lora_delta_norm=float(d_lora.norm()), merged_delta_norm=float(d_merged.norm()),
+    delta_cosine=float(torch.nn.functional.cosine_similarity(d_lora, d_merged, dim=0)),
+    base_vs_lora_on_mean_abs_logprob_diff=float((lp_off - lp_on).abs().mean()))
+print("merged vs unmerged LoRA:", info["merged_vs_lora_on"])
+checks["merged_top1_agrees_with_lora_on_95pct"] = info["merged_vs_lora_on"]["top1_agreement"] >= 0.95
+# Not a pass/fail check: after one step at lr 2e-5 the LoRA delta can be below bf16 rounding of the base weights,
+# so the merged policy may not show it yet. A low cosine means generation samples from a policy that lags the trained one.
+if info["merged_vs_lora_on"]["delta_cosine"] < 0.9:
+    print("WARN: merged model reproduces the LoRA logit change poorly (cosine "
+          f"{info['merged_vs_lora_on']['delta_cosine']:.3f}); check again later in training")
+
+# exception inside the merged block -> exact restore
+try:
+    with el.merged():
+        raise RuntimeError("injected failure inside merged()")
+except RuntimeError:
+    pass
+merge_state_ok("after_exception_in_body")
+
+# exception in merge_adapter itself (after it merged) -> exact restore
+_orig_merge = el.model.merge_adapter
+def _bad_merge(*args, **kw):
+    _orig_merge(*args, **kw); raise RuntimeError("injected failure in merge_adapter")
+el.model.merge_adapter = _bad_merge
+try:
+    with el.merged():
+        pass
+    checks["merge_failure_raised"] = False
+except RuntimeError:
+    checks["merge_failure_raised"] = True
+finally:
+    del el.model.merge_adapter
+merge_state_ok("after_merge_failure")
+
+# merged generation end to end
+n_log0 = len(el.merge_log)
+t0 = time.time(); comps_m = el.generate(pids, 16, batch=64, merged=True); info["merged_gen_64_s"] = time.time() - t0
+fm = [c for per in comps_m for c in per]
+checks["merged_gen_neuron_tokens_never_generated"] = not ({t for c in fm for t in c} & set(el.new_ids))
+merge_state_ok("after_merged_generate")
+info["merge_timing"] = el.merge_log[n_log0:] + el.merge_log[:n_log0]
+print("merge timing (s):", [{k: (round(v, 3) if isinstance(v, float) else v) for k, v in r.items()} for r in el.merge_log])
+
+# OOM fallback remembers the smaller batch (simulated OOM above 4 sequences)
+_orig_gen = el.model.generate; calls = []
+def _fake_gen(*args, **kw):
+    calls.append(int(kw["input_ids"].shape[0]))
+    if calls[-1] > 4:
+        raise torch.OutOfMemoryError("simulated OOM")
+    return _orig_gen(*args, **kw)
+el.model.generate = _fake_gen; el.gen_cap.pop("lora", None)
+try:
+    out1 = el.generate(pids[:1], 8, batch=16); calls1 = list(calls); calls.clear()
+    out2 = el.generate(pids[:1], 8, batch=16); calls2 = list(calls)
+finally:
+    del el.model.generate
+info["oom_sim_calls"] = dict(first=calls1, second=calls2, gen_cap=dict(el.gen_cap))
+checks["oom_fallback_first_call"] = calls1 == [8, 4, 4] and len(out1[0]) == 8
+checks["oom_fallback_remembered"] = calls2 == [4, 4] and el.gen_cap.get("lora") == 4 and len(out2[0]) == 8
+
+# reference-score helper used by grpo_phase.py
+rs = el.reference_scores([dict(neuron=(L, N), tokens=ids[0].tolist(), expected=3.046875)])
+checks["reference_scores_helper_exact"] = rs["ok"]
+info["reference_scores"] = rs
 
 print("\nchecks:"); [print(f"  {'PASS' if v else 'FAIL'}  {k}") for k, v in checks.items()]
 json.dump(dict(checks=checks, info=info, env=run_info()), open(f"{RUN_DIR}/results.json", "w"), indent=1)

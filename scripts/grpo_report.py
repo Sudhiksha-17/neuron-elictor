@@ -117,7 +117,7 @@ def phase_section(run_dir, ph, fw, tok, md, table):
         fa, fg = d["fw_max_a100"], d["fw_max_this_gpu"]
         ka, A = key(d, "a_untrained"); kb, B = key(d, "b_untrained"); C = d.get("c_repeated_token"); kd, D = key(d, "d_trained")
         db = D and D["best"]; ratio = db / fg if db is not None else None
-        table.append([n, fa, fg, A and A["best"], (B and B["best"], B and B["n"]), C and C["score"], db, ratio,
+        table.append([n, fa, fg, (A and A["best"], A and A["n"]), (B and B["best"], B and B["n"]), C and C["score"], (db, D and D["n"]), ratio,
                       None if ratio is None else ratio >= WIN, None if db is None else db > fg,
                       None if (db is None or not B or B["best"] is None) else db > B["best"]])
         md += [f"### {n}", "", f"FineWeb max: A100 {fa}, this GPU {fg}" + (f"; Chris's reported score {CHRIS}" if n == "L14N8949" else "") + ".", ""]
@@ -137,7 +137,7 @@ def phase_section(run_dir, ph, fw, tok, md, table):
                       f"{B['n_ge_fw']:,} of {B['n']:,} untrained samples beat FineWeb (this GPU), {B['n_ge_1_05']:,} reach ratio >= 1.05; "
                       f"empty {B['n_empty']:,}.")
         if D:
-            md += ["", f"Top texts from (d) (8 fresh samples, {D['n_empty']} empty):", ""]
+            md += ["", f"Top texts from (d) ({D['n']} fresh samples, {D['n_empty']} empty):", ""]
             for i, t in enumerate(D["top"][:3 if n == "L14N8949" else 2]):
                 md.append(f"{i + 1}. **{f(t['score'])}** ({f(t['score'] / fg, 3)}x) {md_text(t['text'])}")
                 if tok is not None and n in fw:
@@ -156,6 +156,21 @@ def phase_section(run_dir, ph, fw, tok, md, table):
         if B and B.get("top"):
             md += [f"Best untrained (b) text: {md_text(B['top'][0]['text'], 200)} ({f(B['top'][0]['score'])})"]
         md.append("")
+    integ = r.get("integrity")
+    if integ:
+        md += ["### Integrity checks", "", "| check | where | result | detail |", "|---|---|---|---|"]
+        for x in integ.get("bitwise", []):
+            md.append(f"| bitwise base weights | {x['where']} | {'PASS' if x['ok'] else '**FAIL**'} | "
+                      f"{x['n_checked']} tensors, {x['n_mismatch']} mismatched, {x['seconds']:.1f}s |")
+        for x in integ.get("reference", []):
+            md.append(f"| reference text | {x['where']} | {'PASS' if x['ok'] else '**FAIL**'} | "
+                      + "; ".join(f"L{y['neuron'][0]}N{y['neuron'][1]} {y['got']} vs {y['expected']}" for y in x["rows"]) + " |")
+        md.append("")
+    mt = r.get("merge_timing")
+    if mt and mt.get("calls"):
+        md += [f"Merged generation: {mt['calls']} merge calls ({mt['failed_calls']} failed); mean merge {f(mt['mean_merge_s'], 3)} s, "
+               f"unmerge {f(mt['mean_unmerge_s'], 3)} s, exact restore copy {f(mt['mean_restore_s'], 3)} s; "
+               f"generation batch caps after OOM: {mt.get('gen_cap') or 'none'}.", ""]
     if r.get("grid"):
         g = r["grid"]
         md += ["### 4x4 cross-neuron grid (rows: whose 8 fresh samples; columns: neuron scored on; ratio to the column's FineWeb max, this GPU)", "",
@@ -176,7 +191,8 @@ def samples_section(run_dir, ph, md):
     s = jl(f"{run_dir}/phase{ph}/samples.jsonl")
     if not s:
         return
-    md += [f"### Phase {ph} sample texts during training (4 per neuron every 50 steps; first sample shown per step)", ""]
+    every = jload(f"{run_dir}/phase{ph}/config.json", {}).get("sample_every", "?")
+    md += [f"### Phase {ph} sample texts during training (4 per neuron every {every} steps; first sample shown per step)", ""]
     seen = set()
     for x in s:
         k = (x["step"], x["neuron"])
@@ -229,19 +245,22 @@ def final(run_dir, status_file=None):
             md += ["## Summary table", "",
                    "Main success test: ratio (d) / FineWeb max (this GPU) >= 1.05. Strict greater-than is secondary. "
                    "(d) > (b) is the test of whether RL adds anything beyond sampling the untrained model as often as training did.", "",
-                   "| neuron | FineWeb max (A100) | FineWeb max (this GPU) | (a) untrained best of 64 | (b) compute-matched best-of-N | (c) repeated token | (d) trained best of 8 | (d) / FineWeb (this GPU) | ratio >= 1.05 | strict win | (d) > (b) |",
+                   "| neuron | FineWeb max (A100) | FineWeb max (this GPU) | (a) untrained best-of-N | (b) compute-matched best-of-N | (c) repeated token | (d) trained best-of-N | (d) / FineWeb (this GPU) | ratio >= 1.05 | strict win | (d) > (b) |",
                    "|---|---|---|---|---|---|---|---|---|---|---|"]
             yn = lambda v: "n/a" if v is None else ("**yes**" if v else "no")
-            for n, fa, fg, A, (B, BN), C, D, ratio, w105, strict, dgtb in table:
-                md.append(f"| {n} | {fa} | {fg} | {f(A)} | {f(B)} (N={BN:,}) | {f(C)} | {f(D)} | {f(ratio, 3)} | {yn(w105)} | {yn(strict)} | {yn(dgtb)} |"
-                          if BN else f"| {n} | {fa} | {fg} | {f(A)} | n/a | {f(C)} | {f(D)} | {f(ratio, 3)} | {yn(w105)} | {yn(strict)} | {yn(dgtb)} |")
+            wn = lambda v, N: "n/a" if not N else f"{f(v)} (N={N:,})"
+            for n, fa, fg, (A, AN), (B, BN), C, (D, DN), ratio, w105, strict, dgtb in table:
+                md.append(f"| {n} | {fa} | {fg} | {wn(A, AN)} | {wn(B, BN)} | {f(C)} | {wn(D, DN)} | {f(ratio, 3)} | {yn(w105)} | {yn(strict)} | {yn(dgtb)} |")
             md.append("")
         for ph, sec in sections:
             md += sec
             if ph == "A" and gate_r is not None and not gate_r["passed"]:
+                ran_b = os.path.isdir(f"{run_dir}/phaseB")
                 md += ["### Why the gate failed", "",
-                       "Phase A's trained elicitor did not strictly beat the FineWeb max on this GPU, so Phase B was not run. "
-                       "The training curve above shows the score per 25-step bin, the empty-output fraction and the flat-group "
+                       "Phase A's trained elicitor did not strictly beat the FineWeb max on this GPU, "
+                       + ("but Phase B was run anyway: this was a dry run with --force_phase_b (testing only; a real run "
+                          "cannot bypass the gate). " if ran_b else "so Phase B was not run. ")
+                       + "The training curve above shows the score per 25-step bin, the empty-output fraction and the flat-group "
                        "fraction; sample texts during training follow.", ""]
                 samples_section(run_dir, ph, md)
         for ph, _ in sections:

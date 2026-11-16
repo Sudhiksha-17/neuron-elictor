@@ -1,20 +1,25 @@
-# results: only per-run config.json and summary.json are tracked
+# results: track small text artifacts only (all verified < 5 MB); large binaries excluded below
 results/**
 !results/**/
-!results/**/config.json
-!results/**/summary.json
+!results/**/*.json
+!results/**/*.jsonl
+!results/**/*.md
+!results/**/*.csv
 # model / dataset cache
 hf_cache/
-# logs
-logs/
-*.log
+# logs are tracked (all < 5 MB); runtime pid files are not useful
+logs/*.pid
+logs/*.pid.watcher
 # pip and other caches
 .cache/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-# secrets
+# secrets / tool state
 .ssh_keys/
+.claude/
+.env
+*token*
 # archives / large files
 *.tar.gz
 *.pt

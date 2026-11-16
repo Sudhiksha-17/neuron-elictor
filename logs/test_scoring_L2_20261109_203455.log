@@ -1,0 +1,36 @@
+fast kernels:
+  torch_chunk_gated_delta_rule -> fla.ops.gated_delta_rule.chunk.chunk_gated_delta_rule
+  torch_recurrent_gated_delta_rule -> fla.ops.gated_delta_rule.fused_recurrent.fused_recurrent_gated_delta_rule
+  causal_conv1d_fn -> causal_conv1d.causal_conv1d_interface.causal_conv1d_fn
+  causal_conv1d_update -> causal_conv1d.causal_conv1d_interface.causal_conv1d_update
+simulated fallback -> raised KernelFallbackError (torch_chunk_gated_delta_rule falls back to the reference PyTorch implementation ...)
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   5%|▍         | 33/723 [00:00<00:02, 329.80it/s]Loading weights:  13%|█▎        | 94/723 [00:00<00:01, 476.83it/s]Loading weights:  21%|██        | 152/723 [00:00<00:01, 515.97it/s]Loading weights:  29%|██▉       | 211/723 [00:00<00:00, 542.44it/s]Loading weights:  38%|███▊      | 277/723 [00:00<00:00, 577.17it/s]Loading weights:  47%|████▋     | 340/723 [00:00<00:00, 590.48it/s]Loading weights:  55%|█████▌    | 400/723 [00:00<00:00, 582.22it/s]Loading weights:  89%|████████▉ | 644/723 [00:00<00:00, 1155.57it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 854.04it/s] 
+
+24 texts, token lengths: [2, 4, 7, 11, 37, 26, 24, 26, 31, 15, 13, 20, 29, 41, 18, 27, 1, 34, 61, 64, 14, 20, 5, 14]
+
+batched vs one-at-a-time (221184 scores): value mismatches 0, argmax mismatches 0, max|diff| 0.0e+00
+shuffled batch vs one-at-a-time:         value mismatches 0, argmax mismatches 0
+
+all argmax positions inside real tokens: True
+without exclusion, a pad position would have been the max for 42348 text-neuron pairs
+random tokens instead of pad after each text -> value mismatches 0 (0 = no leakage)
+
+full 64-token texts: all-full batch vs mixed padded batch -> value mismatches 0
+
+reference, WITHOUT fixed shape (batch of 24 vs batch of 1): mismatches 170478/221184, max|diff| 0.062, median rel diff for |score|>1: 0.41%
+
+multi-layer read [0, 1, 2, 3, 31] vs layer 2 alone: mismatches 0
+score_pairs, 24 rows with neurons from layers [0, 1, 2, 3, 31]: mismatches vs per-row single-layer scoring 0
+
+checks:
+  PASS  fast_kernel_assert_passes
+  PASS  fast_kernel_assert_fails_on_simulated_fallback
+  PASS  batched_equals_single_exact_values
+  PASS  batched_equals_single_exact_argmax
+  PASS  argmax_never_on_pad
+  PASS  pad_content_cannot_leak
+  PASS  full_rows_same_in_full_and_mixed_batches
+  PASS  at_least_20_texts_varied_lengths
+  PASS  multi_layer_read_equals_single_layer
+  PASS  mixed_layer_pairs_equal_single_scoring
+saved: /workspace/results/scoring_tests/20261109_203548

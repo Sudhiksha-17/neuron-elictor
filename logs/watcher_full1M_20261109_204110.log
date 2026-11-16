@@ -1,0 +1,10 @@
+[watcher 2026-11-09 20:41:10] watching PID 13395 (run dir /workspace/results/phase2/20261109_204110_full1M, log /workspace/logs/phase2_full1M_20261109_204110.log): bash -c echo $$ > /workspace/logs/phase2_full1M_20261109_204110.pid; cd /workspace; python scripts/phase2_baseline.py --n_contexts 100000
+[watcher 2026-11-09 21:39:10] run process 13395 exited; exit code: 0
+[watcher 2026-11-09 21:39:10] writing final report
+final report: /workspace/reports/20261109_213910_phase2_final.md
+[watcher 2026-11-09 21:39:20] creating code backup /workspace/code_backup.tar.gz
+[watcher 2026-11-09 21:39:20] backup ok: 24 entries, 40K
+[watcher 2026-11-09 21:39:21] committed locally: a6bef0f Phase 2 full 1M baseline run: config, summary, final report (complete, exit code 0)
+[watcher 2026-11-09 21:39:21] stopping pod pcm9i9s4owdfeu
+pod "pcm9i9s4owdfeu" stopped
+[watcher 2026-11-09 21:39:21] stop command sent

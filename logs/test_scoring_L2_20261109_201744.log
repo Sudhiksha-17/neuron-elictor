@@ -1,0 +1,36 @@
+fast kernels:
+  torch_chunk_gated_delta_rule -> fla.ops.gated_delta_rule.chunk.chunk_gated_delta_rule
+  torch_recurrent_gated_delta_rule -> fla.ops.gated_delta_rule.fused_recurrent.fused_recurrent_gated_delta_rule
+  causal_conv1d_fn -> causal_conv1d.causal_conv1d_interface.causal_conv1d_fn
+  causal_conv1d_update -> causal_conv1d.causal_conv1d_interface.causal_conv1d_update
+simulated fallback -> raised KernelFallbackError (torch_chunk_gated_delta_rule falls back to the reference PyTorch implementation ...)
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   4%|▍         | 31/723 [00:00<00:02, 309.93it/s]Loading weights:  13%|█▎        | 93/723 [00:00<00:01, 481.27it/s]Loading weights:  20%|██        | 148/723 [00:00<00:01, 512.19it/s]Loading weights:  28%|██▊       | 205/723 [00:00<00:00, 530.00it/s]Loading weights:  37%|███▋      | 265/723 [00:00<00:00, 552.15it/s]Loading weights:  46%|████▌     | 330/723 [00:00<00:00, 577.07it/s]Loading weights:  54%|█████▎    | 388/723 [00:00<00:00, 576.12it/s]Loading weights:  76%|███████▋  | 553/723 [00:00<00:00, 912.74it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 840.79it/s]
+
+24 texts, token lengths: [2, 4, 7, 11, 37, 26, 24, 26, 31, 15, 13, 20, 29, 41, 18, 27, 1, 34, 61, 64, 14, 20, 5, 14]
+
+batched vs one-at-a-time (221184 scores): value mismatches 0, argmax mismatches 0, max|diff| 0.0e+00
+shuffled batch vs one-at-a-time:         value mismatches 0, argmax mismatches 0
+
+all argmax positions inside real tokens: True
+without exclusion, a pad position would have been the max for 42348 text-neuron pairs
+random tokens instead of pad after each text -> value mismatches 0 (0 = no leakage)
+
+full 64-token texts: all-full batch vs mixed padded batch -> value mismatches 0
+Traceback (most recent call last):
+  File "/workspace/scripts/test_scoring.py", line 157, in <module>
+    main()
+  File "/workspace/scripts/test_scoring.py", line 119, in main
+    un_b = unfixed(full_ids); un_s = torch.cat([unfixed(full_ids[i:i+1]) for i in range(n)])
+           ^^^^^^^^^^^^^^^^^
+  File "/workspace/scripts/test_scoring.py", line 118, in unfixed
+    return sc.activations(x.cuda()).max(1).values.float()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scripts/test_scoring.py", line 77, in <lambda>
+    sc.activations = lambda x: act_fn(x, L)
+                               ^^^^^^^^^^^^
+  File "/workspace/hermes/scoring.py", line 141, in activations
+    self._forward(ids, [layer], lambda L, a: out.__setitem__(L, a.detach().clone()))
+  File "/workspace/hermes/scoring.py", line 119, in _forward
+    assert ids.shape == (SCORE_BATCH, CONTEXT_LEN), ids.shape
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: torch.Size([24, 64])

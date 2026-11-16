@@ -1,0 +1,36 @@
+fast kernels:
+  torch_chunk_gated_delta_rule -> fla.ops.gated_delta_rule.chunk.chunk_gated_delta_rule
+  torch_recurrent_gated_delta_rule -> fla.ops.gated_delta_rule.fused_recurrent.fused_recurrent_gated_delta_rule
+  causal_conv1d_fn -> causal_conv1d.causal_conv1d_interface.causal_conv1d_fn
+  causal_conv1d_update -> causal_conv1d.causal_conv1d_interface.causal_conv1d_update
+simulated fallback -> raised KernelFallbackError (torch_chunk_gated_delta_rule falls back to the reference PyTorch implementation ...)
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   2%|▏         | 11/723 [00:00<00:06, 109.26it/s]Loading weights:   7%|▋         | 50/723 [00:00<00:02, 273.47it/s]Loading weights:  14%|█▎        | 98/723 [00:00<00:01, 358.38it/s]Loading weights:  20%|██        | 146/723 [00:00<00:01, 403.00it/s]Loading weights:  26%|██▌       | 187/723 [00:00<00:01, 402.78it/s]Loading weights:  33%|███▎      | 237/723 [00:00<00:01, 432.58it/s]Loading weights:  39%|███▉      | 281/723 [00:00<00:01, 422.34it/s]Loading weights:  46%|████▌     | 330/723 [00:00<00:00, 435.48it/s]Loading weights:  52%|█████▏    | 379/723 [00:00<00:00, 441.35it/s]Loading weights:  59%|█████▊    | 424/723 [00:01<00:00, 434.26it/s]Loading weights:  99%|█████████▉| 718/723 [00:01<00:00, 1161.50it/s]Loading weights: 100%|██████████| 723/723 [00:01<00:00, 630.95it/s] 
+
+24 texts, token lengths: [2, 4, 7, 11, 37, 26, 24, 26, 31, 15, 13, 20, 29, 41, 18, 27, 1, 34, 61, 64, 14, 20, 5, 14]
+
+batched vs one-at-a-time (221184 scores): value mismatches 0, argmax mismatches 0, max|diff| 0.0e+00
+shuffled batch vs one-at-a-time:         value mismatches 0, argmax mismatches 0
+
+all argmax positions inside real tokens: True
+without exclusion, a pad position would have been the max for 52718 text-neuron pairs
+random tokens instead of pad after each text -> value mismatches 0 (0 = no leakage)
+
+full 64-token texts: all-full batch vs mixed padded batch -> value mismatches 0
+
+reference, WITHOUT fixed shape (batch of 24 vs batch of 1): mismatches 188821/221184, max|diff| 0.984, median rel diff for |score|>1: 0.76%
+
+multi-layer read [0, 14, 15, 16, 31] vs layer 15 alone: mismatches 0
+score_pairs, 24 rows with neurons from layers [0, 14, 15, 16, 31]: mismatches vs per-row single-layer scoring 0
+
+checks:
+  PASS  fast_kernel_assert_passes
+  PASS  fast_kernel_assert_fails_on_simulated_fallback
+  PASS  batched_equals_single_exact_values
+  PASS  batched_equals_single_exact_argmax
+  PASS  argmax_never_on_pad
+  PASS  pad_content_cannot_leak
+  PASS  full_rows_same_in_full_and_mixed_batches
+  PASS  at_least_20_texts_varied_lengths
+  PASS  multi_layer_read_equals_single_layer
+  PASS  mixed_layer_pairs_equal_single_scoring
+saved: /workspace/results/scoring_tests/20261109_201813

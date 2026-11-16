@@ -1,0 +1,7 @@
+RUN_DIR=/workspace/results/phase2/20261109_204110_full1M
+RUN_LOG=/workspace/logs/phase2_full1M_20261109_204110.log
+TASK_OUT=/workspace/logs/phase2_full1M_20261109_204110.exit
+WATCH_LOG=/workspace/logs/watcher_full1M_20261109_204110.log
+RUN_PID=13395
+WATCH_PID=13463
+ARGS=--n_contexts 1000000 --max_chunks_per_doc 4 --checkpoint_every 50000 --out_dir /workspace/results/phase2/20261109_204110_full1M

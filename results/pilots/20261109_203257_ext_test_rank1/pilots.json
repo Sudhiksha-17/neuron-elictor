@@ -1,0 +1,290 @@
+[
+ {
+  "id": "L0N3265",
+  "layer": 0,
+  "neuron": 3265,
+  "rank": 1,
+  "fineweb_max": 0.1591796875,
+  "argmax_ctx": 7751,
+  "argmax_pos": 37
+ },
+ {
+  "id": "L1N2876",
+  "layer": 1,
+  "neuron": 2876,
+  "rank": 1,
+  "fineweb_max": 1.125,
+  "argmax_ctx": 6876,
+  "argmax_pos": 55
+ },
+ {
+  "id": "L2N1324",
+  "layer": 2,
+  "neuron": 1324,
+  "rank": 1,
+  "fineweb_max": 1.6171875,
+  "argmax_ctx": 5365,
+  "argmax_pos": 18
+ },
+ {
+  "id": "L3N3144",
+  "layer": 3,
+  "neuron": 3144,
+  "rank": 1,
+  "fineweb_max": 6.1875,
+  "argmax_ctx": 1796,
+  "argmax_pos": 15
+ },
+ {
+  "id": "L4N8696",
+  "layer": 4,
+  "neuron": 8696,
+  "rank": 1,
+  "fineweb_max": 1.8046875,
+  "argmax_ctx": 3203,
+  "argmax_pos": 50
+ },
+ {
+  "id": "L5N9155",
+  "layer": 5,
+  "neuron": 9155,
+  "rank": 1,
+  "fineweb_max": 7.0625,
+  "argmax_ctx": 7162,
+  "argmax_pos": 30
+ },
+ {
+  "id": "L6N1050",
+  "layer": 6,
+  "neuron": 1050,
+  "rank": 1,
+  "fineweb_max": 1.234375,
+  "argmax_ctx": 2456,
+  "argmax_pos": 27
+ },
+ {
+  "id": "L7N5502",
+  "layer": 7,
+  "neuron": 5502,
+  "rank": 1,
+  "fineweb_max": 1.265625,
+  "argmax_ctx": 8910,
+  "argmax_pos": 21
+ },
+ {
+  "id": "L8N2998",
+  "layer": 8,
+  "neuron": 2998,
+  "rank": 1,
+  "fineweb_max": 2.453125,
+  "argmax_ctx": 622,
+  "argmax_pos": 45
+ },
+ {
+  "id": "L9N1568",
+  "layer": 9,
+  "neuron": 1568,
+  "rank": 1,
+  "fineweb_max": 1.5078125,
+  "argmax_ctx": 2434,
+  "argmax_pos": 34
+ },
+ {
+  "id": "L10N6361",
+  "layer": 10,
+  "neuron": 6361,
+  "rank": 1,
+  "fineweb_max": 4.09375,
+  "argmax_ctx": 2529,
+  "argmax_pos": 20
+ },
+ {
+  "id": "L11N8420",
+  "layer": 11,
+  "neuron": 8420,
+  "rank": 1,
+  "fineweb_max": 3.75,
+  "argmax_ctx": 6263,
+  "argmax_pos": 47
+ },
+ {
+  "id": "L12N3609",
+  "layer": 12,
+  "neuron": 3609,
+  "rank": 1,
+  "fineweb_max": 2.90625,
+  "argmax_ctx": 7348,
+  "argmax_pos": 25
+ },
+ {
+  "id": "L13N672",
+  "layer": 13,
+  "neuron": 672,
+  "rank": 1,
+  "fineweb_max": 1.46875,
+  "argmax_ctx": 7888,
+  "argmax_pos": 51
+ },
+ {
+  "id": "L14N8360",
+  "layer": 14,
+  "neuron": 8360,
+  "rank": 1,
+  "fineweb_max": 0.61328125,
+  "argmax_ctx": 2424,
+  "argmax_pos": 55
+ },
+ {
+  "id": "L15N8584",
+  "layer": 15,
+  "neuron": 8584,
+  "rank": 1,
+  "fineweb_max": 0.5,
+  "argmax_ctx": 9524,
+  "argmax_pos": 40
+ },
+ {
+  "id": "L16N2139",
+  "layer": 16,
+  "neuron": 2139,
+  "rank": 1,
+  "fineweb_max": 1.03125,
+  "argmax_ctx": 3675,
+  "argmax_pos": 26
+ },
+ {
+  "id": "L17N5687",
+  "layer": 17,
+  "neuron": 5687,
+  "rank": 1,
+  "fineweb_max": 1.21875,
+  "argmax_ctx": 426,
+  "argmax_pos": 22
+ },
+ {
+  "id": "L18N8880",
+  "layer": 18,
+  "neuron": 8880,
+  "rank": 1,
+  "fineweb_max": 0.78515625,
+  "argmax_ctx": 4668,
+  "argmax_pos": 34
+ },
+ {
+  "id": "L19N5210",
+  "layer": 19,
+  "neuron": 5210,
+  "rank": 1,
+  "fineweb_max": 2.171875,
+  "argmax_ctx": 1713,
+  "argmax_pos": 25
+ },
+ {
+  "id": "L20N4596",
+  "layer": 20,
+  "neuron": 4596,
+  "rank": 1,
+  "fineweb_max": 1.546875,
+  "argmax_ctx": 3654,
+  "argmax_pos": 34
+ },
+ {
+  "id": "L21N4580",
+  "layer": 21,
+  "neuron": 4580,
+  "rank": 1,
+  "fineweb_max": 3.359375,
+  "argmax_ctx": 3374,
+  "argmax_pos": 18
+ },
+ {
+  "id": "L22N7642",
+  "layer": 22,
+  "neuron": 7642,
+  "rank": 1,
+  "fineweb_max": 1.7265625,
+  "argmax_ctx": 2989,
+  "argmax_pos": 39
+ },
+ {
+  "id": "L23N7516",
+  "layer": 23,
+  "neuron": 7516,
+  "rank": 1,
+  "fineweb_max": 14.4375,
+  "argmax_ctx": 8419,
+  "argmax_pos": 53
+ },
+ {
+  "id": "L24N8476",
+  "layer": 24,
+  "neuron": 8476,
+  "rank": 1,
+  "fineweb_max": 2.234375,
+  "argmax_ctx": 4767,
+  "argmax_pos": 18
+ },
+ {
+  "id": "L25N1074",
+  "layer": 25,
+  "neuron": 1074,
+  "rank": 1,
+  "fineweb_max": 3.578125,
+  "argmax_ctx": 7050,
+  "argmax_pos": 56
+ },
+ {
+  "id": "L26N1433",
+  "layer": 26,
+  "neuron": 1433,
+  "rank": 1,
+  "fineweb_max": 5.0,
+  "argmax_ctx": 8,
+  "argmax_pos": 3
+ },
+ {
+  "id": "L27N2741",
+  "layer": 27,
+  "neuron": 2741,
+  "rank": 1,
+  "fineweb_max": 14.5625,
+  "argmax_ctx": 9986,
+  "argmax_pos": 48
+ },
+ {
+  "id": "L28N1983",
+  "layer": 28,
+  "neuron": 1983,
+  "rank": 1,
+  "fineweb_max": 4.0625,
+  "argmax_ctx": 7939,
+  "argmax_pos": 38
+ },
+ {
+  "id": "L29N2099",
+  "layer": 29,
+  "neuron": 2099,
+  "rank": 1,
+  "fineweb_max": 5.5,
+  "argmax_ctx": 5505,
+  "argmax_pos": 17
+ },
+ {
+  "id": "L30N4719",
+  "layer": 30,
+  "neuron": 4719,
+  "rank": 1,
+  "fineweb_max": 8.3125,
+  "argmax_ctx": 8780,
+  "argmax_pos": 34
+ },
+ {
+  "id": "L31N75",
+  "layer": 31,
+  "neuron": 75,
+  "rank": 1,
+  "fineweb_max": 6.375,
+  "argmax_ctx": 2876,
+  "argmax_pos": 35
+ }
+]

@@ -1,0 +1,42 @@
+{
+  "cleaned": [
+    "The Eiffel Tower in Paris was completed in 1889.",
+    "SELECT name FROM users WHERE id = 3;",
+    "Once upon a time there was a dragon.",
+    "Buy now! Limited offer! Free shipping!",
+    "def f(x):\n    return x * 2",
+    "plain text with no tags at all, repeated, repeated, repeated",
+    "",
+    "\u65e5\u672c\u8a9e\u306e\u30c6\u30ad\u30b9\u30c8\u3068 English mixed 123"
+  ],
+  "rewards": [
+    0.0166015625,
+    0.061279296875,
+    0.035400390625,
+    0.01953125,
+    0.3828125,
+    0.2255859375,
+    0.0,
+    0.609375
+  ],
+  "rewards_lora_on": [
+    0.0191650390625,
+    0.09423828125,
+    0.048095703125,
+    0.0625,
+    0.333984375,
+    0.376953125,
+    0.0,
+    0.51171875
+  ],
+  "checks": {
+    "no_tags_left_after_cleaning": true,
+    "think_content_removed": true,
+    "stray_close_tag_keeps_answer": true,
+    "mixed_layers_equal_single_scoring": true,
+    "conversational_equals_plain": true,
+    "adapter_off_equals_base_model": true,
+    "adapter_on_changes_scores": true,
+    "empty_completion_gets_EMPTY_REWARD": true
+  }
+}

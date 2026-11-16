@@ -1,0 +1,19 @@
+[2026-11-09 20:11:01] watchdog started: PID 1379, pod pcm9i9s4owdfeu, check every 300s, stop after 3600s below 5%
+[2026-11-09 20:11:01] check: util=0% (idle); idle for 0 min (limit 60 min)
+[2026-11-09 20:16:01] check: util=0% (idle); idle for 5 min (limit 60 min)
+[2026-11-09 20:21:01] check: util=9% (busy); idle streak reset
+[2026-11-09 20:26:01] check: util=0% (idle); idle for 0 min (limit 60 min)
+[2026-11-09 20:31:01] check: util=0% (idle); idle for 5 min (limit 60 min)
+[2026-11-09 20:36:01] check: util=0% (idle); idle for 10 min (limit 60 min)
+[2026-11-09 20:41:01] check: util=0% (idle); idle for 15 min (limit 60 min)
+[2026-11-09 20:46:01] check: util=100% (busy); idle streak reset
+[2026-11-09 20:51:01] check: util=99% (busy); idle streak reset
+[2026-11-09 20:56:01] check: util=100% (busy); idle streak reset
+[2026-11-09 21:01:01] check: util=100% (busy); idle streak reset
+[2026-11-09 21:06:01] check: util=100% (busy); idle streak reset
+[2026-11-09 21:11:01] check: util=100% (busy); idle streak reset
+[2026-11-09 21:16:01] check: util=100% (busy); idle streak reset
+[2026-11-09 21:21:01] check: util=100% (busy); idle streak reset
+[2026-11-09 21:26:01] check: util=100% (busy); idle streak reset
+[2026-11-09 21:31:01] check: util=99% (busy); idle streak reset
+[2026-11-09 21:36:01] check: util=99% (busy); idle streak reset

@@ -1,0 +1,37 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   2%|▏         | 12/723 [00:00<00:06, 113.17it/s]Loading weights:   9%|▉         | 64/723 [00:00<00:01, 342.45it/s]Loading weights:  15%|█▍        | 106/723 [00:00<00:01, 370.29it/s]Loading weights:  21%|██        | 152/723 [00:00<00:01, 396.23it/s]Loading weights:  28%|██▊       | 204/723 [00:00<00:01, 432.96it/s]Loading weights:  35%|███▍      | 253/723 [00:00<00:01, 443.26it/s]Loading weights:  42%|████▏     | 301/723 [00:00<00:00, 451.68it/s]Loading weights:  48%|████▊     | 347/723 [00:00<00:00, 432.18it/s]Loading weights:  55%|█████▍    | 397/723 [00:00<00:00, 437.44it/s]Loading weights:  72%|███████▏  | 518/723 [00:01<00:00, 661.40it/s]Loading weights: 100%|██████████| 723/723 [00:01<00:00, 638.88it/s]
+prompt example: Write text that maximally activates neuron L15N2341.
+
+raw -> cleaned:
+  '<think>\nhmm, which words?\n</think>\n\nThe Eiffel Tower in Paris was completed in 1889.'
+    -> 'The Eiffel Tower in Paris was completed in 1889.'
+  '<think>\n\n</think>\n\nSELECT name FROM users WHERE id = 3;<|im_end|>'
+    -> 'SELECT name FROM users WHERE id = 3;'
+  'Once upon a time there was a dragon.<|im_end|>\n<|endoftext|>'
+    -> 'Once upon a time there was a dragon.'
+  '<|im_start|>assistant\nBuy now! Limited offer! Free shipping!<|im_end|>'
+    -> 'Buy now! Limited offer! Free shipping!'
+  'def f(x):\n    return x * 2</think>'
+    -> 'def f(x):\n    return x * 2'
+  'plain text with no tags at all, repeated, repeated, repeated'
+    -> 'plain text with no tags at all, repeated, repeated, repeated'
+  '<think>unterminated reasoning that never closes'
+    -> ''
+  '日本語のテキストと English mixed 123'
+    -> '日本語のテキストと English mixed 123'
+
+mixed-layer batch (8 layers) vs one-at-a-time: mismatches 0
+rewards: [0.0166, 0.0613, 0.0354, 0.0195, 0.3828, 0.2256, 0.0, 0.6094]
+conversational format vs plain strings: mismatches 0
+
+LoRA attached (30.5M params): adapter_off vs base mismatches 0; adapter ON differs on 7/8
+
+checks:
+  PASS  no_tags_left_after_cleaning
+  PASS  think_content_removed
+  PASS  stray_close_tag_keeps_answer
+  PASS  mixed_layers_equal_single_scoring
+  PASS  conversational_equals_plain
+  PASS  adapter_off_equals_base_model
+  PASS  adapter_on_changes_scores
+  PASS  empty_completion_gets_EMPTY_REWARD
+saved: /workspace/results/reward_tests/20261109_202606

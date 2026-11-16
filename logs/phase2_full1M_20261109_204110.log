@@ -1,0 +1,253 @@
+run dir: /workspace/results/phase2/20261109_204110_full1M
+{"phase": 2, "model_id": "Qwen/Qwen3.5-4B", "dtype": "bfloat16", "layers": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], "n_neurons_total": 294912, "outputs": {"per_neuron": ["max", "argmax_ctx", "argmax_pos", "mean_score", "std_score", "top_val", "top_ctx", "top_pos", "top_max_same_doc"], "per_layer": ["argmax_pos_hist", "frac_argmax_pos0", "n_neurons_top10_same_doc_ge5", "top10_max_same_doc_hist"]}, "n_contexts": 1000000, "max_chunks_per_doc": 4, "context_len": 64, "topk": 10, "same_doc_min": 5, "checkpoint_every": 50000, "seed": 0, "dataset": {"path": "HuggingFaceFW/fineweb", "name": "sample-10BT", "split": "train", "streaming": true}, "tokenize_kwargs": {"add_special_tokens": false, "split_special_tokens": true}, "score_batch": 256, "activation": "channel N of input to layers[L].mlp.down_proj = silu(gate_proj(x))*up_proj(x)", "score": "max over the 64 token positions; argmax position = first position attaining it", "topk_tiebreak": "higher value first, ties -> lower context id", "spread": "mean and std (population) of the per-context score over all contexts", "started": "2026-11-09 20:41:17"}
+env: {'torch': '2.8.0+cu128', 'transformers': '5.22.2', 'datasets': '5.1.0', 'model_id': 'Qwen/Qwen3.5-4B', 'model_revision': '851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a', 'fineweb_id': 'HuggingFaceFW/fineweb', 'fineweb_revision': '9bb295ddab0e05d785b879661af7260fed5140fc', 'gpu': 'NVIDIA A100-SXM4-80GB', 'python': '3.12.3', 'runpod_pod_id': 'pcm9i9s4owdfeu'} + pip freeze (183 pkgs)
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   9%|▉         | 64/723 [00:00<00:01, 638.70it/s]Loading weights:  18%|█▊        | 128/723 [00:00<00:00, 600.48it/s]Loading weights:  26%|██▌       | 189/723 [00:00<00:00, 577.18it/s]Loading weights:  35%|███▍      | 252/723 [00:00<00:00, 567.32it/s]Loading weights:  43%|████▎     | 311/723 [00:00<00:00, 571.18it/s]Loading weights:  51%|█████▏    | 371/723 [00:00<00:00, 575.54it/s]Loading weights:  63%|██████▎   | 458/723 [00:00<00:00, 667.48it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 889.40it/s]
+model loaded in 2.2s; kernels: ['fla.ops.gated_delta_rule.chunk.chunk_gated_delta_rule', 'fla.ops.gated_delta_rule.fused_recurrent.fused_recurrent_gated_delta_rule', 'causal_conv1d.causal_conv1d_interface.causal_conv1d_fn', 'causal_conv1d.causal_conv1d_interface.causal_conv1d_update']
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  5120 contexts, 193 ctx/s, data wait 8.3s, peak GPU mem 11.5 GiB
+  10240 contexts, 233 ctx/s, data wait 8.3s, peak GPU mem 11.5 GiB
+  15360 contexts, 250 ctx/s, data wait 8.3s, peak GPU mem 11.5 GiB
+  20480 contexts, 259 ctx/s, data wait 8.3s, peak GPU mem 11.5 GiB
+  25600 contexts, 265 ctx/s, data wait 8.3s, peak GPU mem 11.5 GiB
+  30720 contexts, 269 ctx/s, data wait 8.3s, peak GPU mem 11.5 GiB
+  35840 contexts, 273 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  40960 contexts, 275 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  46080 contexts, 277 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 50000 contexts saved
+  51200 contexts, 277 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  56320 contexts, 278 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  61440 contexts, 279 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  66560 contexts, 280 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  71680 contexts, 281 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  76800 contexts, 282 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  81920 contexts, 282 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  87040 contexts, 283 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  92160 contexts, 283 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  97280 contexts, 284 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 100000 contexts saved
+  102400 contexts, 284 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  107520 contexts, 284 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  112640 contexts, 284 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  117760 contexts, 285 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  122880 contexts, 285 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  128000 contexts, 285 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  133120 contexts, 285 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  138240 contexts, 286 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  143360 contexts, 286 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  148480 contexts, 286 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 150000 contexts saved
+  153600 contexts, 286 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  158720 contexts, 286 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  163840 contexts, 286 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  168960 contexts, 287 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  174080 contexts, 287 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  179200 contexts, 287 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  184320 contexts, 287 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  189440 contexts, 287 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  194560 contexts, 287 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  199680 contexts, 287 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 200000 contexts saved
+  204800 contexts, 287 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  209920 contexts, 287 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  215040 contexts, 287 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  220160 contexts, 287 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  225280 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  230400 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  235520 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  240640 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  245760 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 250000 contexts saved
+  250880 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  256000 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  261120 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  266240 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  271360 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  276480 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  281600 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  286720 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  291840 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  296960 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 300000 contexts saved
+  302080 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  307200 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  312320 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  317440 contexts, 288 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  322560 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  327680 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  332800 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  337920 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  343040 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  348160 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 350000 contexts saved
+  353280 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  358400 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  363520 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  368640 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  373760 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  378880 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  384000 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  389120 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  394240 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  399360 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 400000 contexts saved
+  404480 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  409600 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  414720 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  419840 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  424960 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  430080 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  435200 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  440320 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  445440 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 450000 contexts saved
+  450560 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  455680 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  460800 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  465920 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  471040 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  476160 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  481280 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  486400 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  491520 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  496640 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 500000 contexts saved
+  501760 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  506880 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  512000 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  517120 contexts, 289 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  522240 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  527360 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  532480 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  537600 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  542720 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  547840 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 550000 contexts saved
+  552960 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  558080 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  563200 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  568320 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  573440 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  578560 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  583680 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  588800 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  593920 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  599040 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 600000 contexts saved
+  604160 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  609280 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  614400 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  619520 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  624640 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  629760 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  634880 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  640000 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  645120 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 650000 contexts saved
+  650240 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  655360 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  660480 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  665600 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  670720 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  675840 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  680960 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  686080 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  691200 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  696320 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 700000 contexts saved
+  701440 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  706560 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  711680 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  716800 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  721920 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  727040 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  732160 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  737280 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  742400 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  747520 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 750000 contexts saved
+  752640 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  757760 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  762880 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  768000 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  773120 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  778240 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  783360 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  788480 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  793600 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  798720 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 800000 contexts saved
+  803840 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  808960 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  814080 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  819200 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  824320 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  829440 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  834560 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  839680 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  844800 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  849920 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 850000 contexts saved
+  855040 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  860160 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  865280 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  870400 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  875520 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  880640 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  885760 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  890880 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  896000 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 900000 contexts saved
+  901120 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  906240 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  911360 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  916480 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  921600 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  926720 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  931840 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  936960 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  942080 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  947200 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  checkpoint: 950000 contexts saved
+  952320 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  957440 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  962560 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  967680 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  972800 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  977920 contexts, 290 ctx/s, data wait 8.4s, peak GPU mem 11.5 GiB
+  983040 contexts, 290 ctx/s, data wait 8.5s, peak GPU mem 11.5 GiB
+  988160 contexts, 290 ctx/s, data wait 8.5s, peak GPU mem 11.5 GiB
+  993280 contexts, 290 ctx/s, data wait 8.5s, peak GPU mem 11.5 GiB
+  998400 contexts, 290 ctx/s, data wait 8.5s, peak GPU mem 11.5 GiB
+  checkpoint: 1000000 contexts saved (final)
+writing final outputs ...
+{
+ "n_contexts": 1000000,
+ "n_docs_contributing": 298842,
+ "n_docs_streamed": 299523,
+ "chunks_per_doc_hist": [
+  0,
+  30430,
+  36772,
+  30534,
+  201106
+ ],
+ "elapsed_s": 3445.9149391651154,
+ "model_load_s": 2.178831100463867,
+ "first_batch_s": 10.070467710494995,
+ "data_wait_s": 8.451997756958008,
+ "steady_ctx_per_s": 290.9747540396502,
+ "n_contexts_this_session": 1000000,
+ "gpu_peak_allocated_gib": 11.500009059906006,
+ "gpu_peak_reserved_gib": 13.78515625,
+ "output_bytes": {
+  "config.json": 7957,
+  "contexts.npz": 456001006,
+  "baseline.pt": 48092113
+ },
+ "finished": "2026-11-09 21:38:47"
+}
+frac argmax at pos 0 per layer: [0.157, 0.03, 0.004, 0.002, 0.0, 0.001, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.001, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.002]
+neurons with >=5 of top-10 from one doc, per layer: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+median neuron max per layer: [0.63, 1.2, 2.36, 2.31, 2.83, 3.28, 3.91, 5.0, 4.5, 3.23, 2.55, 2.66, 2.45, 2.47, 2.3, 2.52, 2.69, 2.86, 3.39, 5.16, 6.31, 6.53, 7.84, 10.06, 11.06, 12.19, 12.75, 13.19, 13.31, 14.0, 13.62, 13.19]
+saved: /workspace/results/phase2/20261109_204110_full1M
+[watcher 2026-11-09 21:39:10] run process exited with exit code: 0

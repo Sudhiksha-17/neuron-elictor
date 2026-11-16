@@ -1,0 +1,38 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   5%|▌         | 37/723 [00:00<00:01, 362.61it/s]Loading weights:  13%|█▎        | 95/723 [00:00<00:01, 478.15it/s]Loading weights:  21%|██        | 152/723 [00:00<00:01, 513.28it/s]Loading weights:  30%|███       | 220/723 [00:00<00:00, 575.35it/s]Loading weights:  38%|███▊      | 278/723 [00:00<00:00, 570.13it/s]Loading weights:  47%|████▋     | 338/723 [00:00<00:00, 578.58it/s]Loading weights:  55%|█████▌    | 399/723 [00:00<00:00, 580.81it/s]Loading weights:  89%|████████▉ | 646/723 [00:00<00:00, 1170.85it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 857.29it/s] 
+prompt example: Write text that maximally activates neuron L15N2341.
+
+raw -> cleaned:
+  '<think>\nhmm, which words?\n</think>\n\nThe Eiffel Tower in Paris was completed in 1889.'
+    -> 'The Eiffel Tower in Paris was completed in 1889.'
+  '<think>\n\n</think>\n\nSELECT name FROM users WHERE id = 3;<|im_end|>'
+    -> 'SELECT name FROM users WHERE id = 3;'
+  'Once upon a time there was a dragon.<|im_end|>\n<|endoftext|>'
+    -> 'Once upon a time there was a dragon.'
+  '<|im_start|>assistant\nBuy now! Limited offer! Free shipping!<|im_end|>'
+    -> 'Buy now! Limited offer! Free shipping!'
+  'def f(x):\n    return x * 2</think>'
+    -> 'def f(x):\n    return x * 2'
+  'plain text with no tags at all, repeated, repeated, repeated'
+    -> 'plain text with no tags at all, repeated, repeated, repeated'
+  '<think>unterminated reasoning that never closes'
+    -> ''
+  '日本語のテキストと English mixed 123'
+    -> '日本語のテキストと English mixed 123'
+
+mixed-layer batch (8 layers) vs one-at-a-time: mismatches 0
+rewards: [0.0166, 0.0613, 0.0354, 0.0195, 0.3828, 0.2256, nan, 0.6094]
+conversational format vs plain strings: mismatches 0
+
+LoRA attached (30.5M params): adapter_off vs base mismatches 0; adapter ON differs on 7/8
+
+checks:
+  PASS  no_tags_left_after_cleaning
+  PASS  think_content_removed
+  PASS  stray_close_tag_keeps_answer
+  PASS  mixed_layers_equal_single_scoring
+  PASS  conversational_equals_plain
+  PASS  adapter_off_equals_base_model
+  PASS  adapter_on_changes_scores
+  PASS  empty_completion_scores_nan
+  PASS  nonempty_completions_finite
+saved: /workspace/results/reward_tests/20261109_203607

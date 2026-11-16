@@ -2,24 +2,25 @@
 # Waits for the phase 2 full run to exit, then (success or failure):
 #   1. writes the run's exit code to the run log
 #   2. if there is no summary.json (run incomplete), resumes once from the last checkpoint
-#   3. writes a final summary report to /workspace/reports/ (scripts/final_report.py)
-#   4. creates /workspace/code_backup.tar.gz (scripts, hermes, CLAUDE.md, README.md, reports, .gitignore)
+#   3. writes a final summary report to $REPO/reports/ (scripts/final_report.py)
+#   4. creates $REPO/code_backup.tar.gz (scripts, hermes, CLAUDE.md, README.md, reports, .gitignore)
 #   5. commits config/summary/reports locally (no push)
 #   6. ALWAYS stops this RunPod pod with "runpodctl stop pod" (also on any failure, via the EXIT trap).
 #      Only "stop" is ever used, never "remove"/"terminate".
 # DRY_RUN=1: print the stop command instead of running it, and skip resume/commit (for testing;
 #            REPORT_DIR / BACKUP_PATH / PILOT_TAG may then point to a scratch location).
 set -u
+REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 RUN_PID=${RUN_PID:?}
-RUN_DIR=${RUN_DIR:?}                 # e.g. /workspace/results/phase2/20261109_204500_full1M
+RUN_DIR=${RUN_DIR:?}                 # e.g. $REPO/results/phase2/20261109_204500_full1M
 RUN_LOG=${RUN_LOG:?}                 # the run's log file
 TASK_OUT=${TASK_OUT:-}               # file where the launching shell writes "exit N"
 POD_ID=${RUNPOD_POD_ID:?RUNPOD_POD_ID not set}   # no hardcoded fallback: the old pod ID was wrong after moving pods
 DRY_RUN=${DRY_RUN:-0}
-REPORT_DIR=${REPORT_DIR:-/workspace/reports}
-BACKUP_PATH=${BACKUP_PATH:-/workspace/code_backup.tar.gz}
+REPORT_DIR=${REPORT_DIR:-$REPO/reports}
+BACKUP_PATH=${BACKUP_PATH:-$REPO/code_backup.tar.gz}
 PILOT_TAG=${PILOT_TAG:-full1M_pilots}
-cd /workspace
+cd "$REPO"
 log() { echo "[watcher $(date '+%F %T')] $*"; }
 
 stop_pod() {

@@ -1,12 +1,12 @@
 """Final phase 2 report, written by scripts/watch_and_stop.sh when the full run exits (success or failure).
 Selects the 32 pilot neurons (seed 0, 1 per layer) from the finished baseline and writes
-/workspace/reports/<timestamp>_phase2_final.md. Never raises: on missing outputs it reports what exists.
+reports/<timestamp>_phase2_final.md. Never raises: on missing outputs it reports what exists.
 
 Usage: python scripts/final_report.py <run_dir> <exit_code> <run_log> [report_dir] [pilot_tag]
 """
 import sys, os, json, time, glob, subprocess, traceback
 run_dir, code, run_log = sys.argv[1], sys.argv[2], sys.argv[3]
-W = "/workspace"
+W = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
 report_dir = sys.argv[4] if len(sys.argv) > 4 else f"{W}/reports"
 pilot_tag = sys.argv[5] if len(sys.argv) > 5 else "full1M_pilots"
 os.makedirs(report_dir, exist_ok=True)

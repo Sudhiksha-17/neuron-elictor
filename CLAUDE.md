@@ -79,7 +79,7 @@ of concept only. Keep everything simple.
      score, trained-elicitor score, repeated-token score.
 
 ## Rules
-- All code, data, checkpoints and results live under /workspace.
+- All code, data, checkpoints and results live under /workspace (repo: /workspace/neuron-elictor; baseline + pilot list in its gitignored data/).
 - HF_HOME is /workspace/hf_cache.
 - Log every run's config and seed. Never overwrite previous results.
 - Every run's config records pip freeze, GPU name, and the FineWeb dataset
@@ -97,6 +97,6 @@ of concept only. Keep everything simple.
 - Model and FineWeb revisions are pinned in hermes/revisions.json.
 - Do not launch long runs without the user's go-ahead.
 - Save every report given to the user as timestamped markdown in
-  /workspace/reports/.
+  reports/ (repo).
 - No HF token (decided 2026-11-09); rely on the datasets/hub retry logic.
   GitHub push postponed; deploy key + git config stay as set up.

@@ -1,16 +1,16 @@
 """Pre-launch gate for the full phase 2 run. Collects the step-3 checks (phase 1, scoring tests on L15 and
-L2, reward tests, 10k dry run) from one check timestamp, writes a markdown report to /workspace/reports/,
+L2, reward tests, 10k dry run) from one check timestamp, writes a markdown report to reports/,
 and exits 0 only if every gate condition holds.
 
 Usage: python scripts/prelaunch_gate.py <check_ts> <full_config.json>
   full_config.json = output of `phase2_baseline.py --print_config ...` for the planned full run
 """
 import sys, os, json, re, glob, time
-sys.path.insert(0, "/workspace")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from hermes.scoring import assert_fast_kernels, KernelFallbackError
 
 ts, full_cfg_path = sys.argv[1], sys.argv[2]
-W = "/workspace"
+W = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
 log = lambda name: open(f"{W}/logs/{name}_{ts}.log").read()
 def res_dir(log_text):
     return re.findall(r"saved: (\S+)", log_text)[-1]

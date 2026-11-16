@@ -8,17 +8,18 @@ numpy default_rng([seed, L]).permutation; the layer's pilots are the first n_per
 permutation ("rank" 0, 1, ...). Asking for more per layer (same baseline, seed, low_act_rel) only appends
 neurons; the earlier ones never change. --start_rank k outputs only ranks >= k (the new neurons).
 
-Usage: python scripts/select_pilots.py --baseline results/phase2/<run> [--n_per_layer 1] [--seed 0]
-       python scripts/select_pilots.py --baseline results/phase2/<run> --n_per_layer 2 --start_rank 1
+Usage: python scripts/select_pilots.py [--baseline data] [--n_per_layer 1] [--seed 0]
+       python scripts/select_pilots.py [--baseline data] --n_per_layer 2 --start_rank 1
 """
 import os, sys, json, time, argparse
-sys.path.insert(0, "/workspace")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
+from hermes.paths import RESULTS_DIR, BASELINE_DIR
 import numpy as np, torch
 from hermes.runinfo import run_info
 from hermes.scoring import neuron_id
 
 ap = argparse.ArgumentParser()
-ap.add_argument("--baseline", required=True)
+ap.add_argument("--baseline", default=BASELINE_DIR, help="dir with baseline.pt (default: data/)")
 ap.add_argument("--n_per_layer", type=int, default=1)
 ap.add_argument("--seed", type=int, default=0)
 ap.add_argument("--low_act_rel", "--dead_rel", dest="low_act_rel", type=float, default=0.1,
@@ -38,7 +39,7 @@ for rank in range(a.start_rank, a.n_per_layer):            # rank-major: all ran
         n = int(np.random.default_rng([a.seed, L]).permutation(alive)[rank])
         pilots.append(dict(id=neuron_id(L, n), layer=L, neuron=n, rank=rank, fineweb_max=float(mx[L, n]),
                            argmax_ctx=int(b["argmax_ctx"][L, n]), argmax_pos=int(b["argmax_pos"][L, n])))
-run_dir = f"/workspace/results/pilots/{time.strftime('%Y%m%d_%H%M%S')}{'_' + a.tag if a.tag else ''}"
+run_dir = f"{RESULTS_DIR}/pilots/{time.strftime('%Y%m%d_%H%M%S')}{'_' + a.tag if a.tag else ''}"
 os.makedirs(run_dir, exist_ok=False)
 cfg = dict(baseline_run=os.path.abspath(a.baseline), baseline_n_contexts=int(b["n_contexts"]),
            n_per_layer=a.n_per_layer, start_rank=a.start_rank, seed=a.seed, low_act_rel=a.low_act_rel,

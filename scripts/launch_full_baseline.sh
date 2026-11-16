@@ -3,15 +3,16 @@
 # on the Claude Code session. The run's shell writes its own PID to a file (setsid may fork, so $! is
 # not reliable); the watcher is only started once that PID is known and alive.
 set -eu
-cd /workspace
+REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+cd "$REPO"
 TS=$(date +%Y%m%d_%H%M%S)
-RUN_DIR=/workspace/results/phase2/${TS}_full1M
-RUN_LOG=/workspace/logs/phase2_full1M_${TS}.log
-TASK_OUT=/workspace/logs/phase2_full1M_${TS}.exit
-PID_FILE=/workspace/logs/phase2_full1M_${TS}.pid
-WATCH_LOG=/workspace/logs/watcher_full1M_${TS}.log
+RUN_DIR=$REPO/results/phase2/${TS}_full1M
+RUN_LOG=$REPO/logs/phase2_full1M_${TS}.log
+TASK_OUT=$REPO/logs/phase2_full1M_${TS}.exit
+PID_FILE=$REPO/logs/phase2_full1M_${TS}.pid
+WATCH_LOG=$REPO/logs/watcher_full1M_${TS}.log
 ARGS="--n_contexts 1000000 --max_chunks_per_doc 4 --checkpoint_every 50000 --out_dir $RUN_DIR"
-setsid nohup bash -c "echo \$\$ > $PID_FILE; cd /workspace; python scripts/phase2_baseline.py $ARGS > $RUN_LOG 2>&1; echo \"exit \$?\" > $TASK_OUT" \
+setsid nohup bash -c "echo \$\$ > $PID_FILE; cd $REPO; python scripts/phase2_baseline.py $ARGS > $RUN_LOG 2>&1; echo \"exit \$?\" > $TASK_OUT" \
   > /dev/null 2>&1 < /dev/null &
 for i in $(seq 50); do [ -s "$PID_FILE" ] && break; sleep 0.2; done
 RUN_PID=$(cat "$PID_FILE")

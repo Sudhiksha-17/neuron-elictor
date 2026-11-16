@@ -10,13 +10,14 @@
     and score_pairs with neurons from different layers in one batch == per-layer scoring (bitwise)
 """
 import os, sys, json, time, argparse
-sys.path.insert(0, "/workspace")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
+from hermes.paths import RESULTS_DIR, BASELINE_DIR
 import torch
 from hermes.runinfo import run_info
 from hermes import scoring
 from hermes.scoring import Scorer, assert_fast_kernels, KernelFallbackError
 
-RUN_DIR = f"/workspace/results/scoring_tests/{time.strftime('%Y%m%d_%H%M%S')}"
+RUN_DIR = f"{RESULTS_DIR}/scoring_tests/{time.strftime('%Y%m%d_%H%M%S')}"
 os.makedirs(RUN_DIR, exist_ok=False)
 _ap = argparse.ArgumentParser(); _ap.add_argument("--layer", type=int, default=15); _args = _ap.parse_args()
 CFG = dict(layer=_args.layer, seed=0, context_len=scoring.CONTEXT_LEN, score_batch=scoring.SCORE_BATCH,

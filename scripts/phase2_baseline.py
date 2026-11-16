@@ -13,7 +13,8 @@ Usage:
   python scripts/phase2_baseline.py --resume results/phase2/<dir>      # continue an interrupted run
 """
 import os, sys, json, time, argparse, threading, queue, glob
-sys.path.insert(0, "/workspace")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
+from hermes.paths import RESULTS_DIR, BASELINE_DIR
 os.environ.setdefault("HF_HOME", "/workspace/hf_cache")
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "true")
 import numpy as np, torch
@@ -121,7 +122,7 @@ def main():
         st = torch.load(f"{run_dir}/state.pt")
         print(f"resuming {run_dir} at context {st['n_done']} (doc {st['next_doc']}, chunk {st['next_chunk']})")
     else:
-        run_dir = a.out_dir or f"/workspace/results/phase2/{time.strftime('%Y%m%d_%H%M%S')}{'_' + a.tag if a.tag else ''}"
+        run_dir = a.out_dir or f"{RESULTS_DIR}/phase2/{time.strftime('%Y%m%d_%H%M%S')}{'_' + a.tag if a.tag else ''}"
         cfg = dict(phase=2, model_id=scoring.MODEL_ID, dtype="bfloat16", layers=list(range(N_LAYERS)),
                    n_neurons_total=N_LAYERS * 9216,
                    outputs=dict(per_neuron=["max", "argmax_ctx", "argmax_pos", "mean_score", "std_score",

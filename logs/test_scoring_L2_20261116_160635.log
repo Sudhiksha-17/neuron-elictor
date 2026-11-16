@@ -1,0 +1,36 @@
+fast kernels:
+  torch_chunk_gated_delta_rule -> fla.ops.gated_delta_rule.chunk.chunk_gated_delta_rule
+  torch_recurrent_gated_delta_rule -> fla.ops.gated_delta_rule.fused_recurrent.fused_recurrent_gated_delta_rule
+  causal_conv1d_fn -> causal_conv1d.causal_conv1d_interface.causal_conv1d_fn
+  causal_conv1d_update -> causal_conv1d.causal_conv1d_interface.causal_conv1d_update
+simulated fallback -> raised KernelFallbackError (torch_chunk_gated_delta_rule falls back to the reference PyTorch implementation ...)
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<01:43,  7.01it/s]Loading weights:   2%|▏         | 13/723 [00:00<00:12, 54.91it/s]Loading weights:   3%|▎         | 25/723 [00:00<00:08, 79.60it/s]Loading weights:   5%|▍         | 34/723 [00:00<00:08, 79.91it/s]Loading weights:   6%|▌         | 43/723 [00:00<00:09, 68.49it/s]Loading weights:   7%|▋         | 51/723 [00:00<00:09, 69.15it/s]Loading weights:   9%|▉         | 65/723 [00:00<00:08, 81.00it/s]Loading weights:  10%|█         | 74/723 [00:01<00:07, 82.50it/s]Loading weights:  11%|█▏        | 83/723 [00:01<00:08, 78.67it/s]Loading weights:  13%|█▎        | 93/723 [00:01<00:07, 84.08it/s]Loading weights:  14%|█▍        | 102/723 [00:01<00:08, 72.99it/s]Loading weights:  16%|█▌        | 117/723 [00:01<00:06, 88.94it/s]Loading weights:  18%|█▊        | 127/723 [00:01<00:06, 90.68it/s]Loading weights:  19%|█▉        | 137/723 [00:01<00:07, 81.00it/s]Loading weights:  20%|██        | 147/723 [00:01<00:07, 75.13it/s]Loading weights:  21%|██▏       | 155/723 [00:02<00:07, 76.24it/s]Loading weights:  24%|██▎       | 170/723 [00:02<00:06, 91.85it/s]Loading weights:  25%|██▍       | 180/723 [00:02<00:06, 82.15it/s]Loading weights:  26%|██▌       | 189/723 [00:02<00:06, 79.58it/s]Loading weights:  28%|██▊       | 200/723 [00:02<00:06, 80.55it/s]Loading weights:  29%|██▉       | 209/723 [00:02<00:06, 76.42it/s]Loading weights:  31%|███       | 223/723 [00:02<00:05, 90.23it/s]Loading weights:  32%|███▏      | 233/723 [00:02<00:05, 83.53it/s]Loading weights:  33%|███▎      | 242/723 [00:03<00:06, 77.29it/s]Loading weights:  35%|███▍      | 252/723 [00:03<00:06, 74.39it/s]Loading weights:  36%|███▌      | 260/723 [00:03<00:06, 70.06it/s]Loading weights:  38%|███▊      | 274/723 [00:03<00:05, 85.92it/s]Loading weights:  39%|███▉      | 284/723 [00:03<00:05, 82.80it/s]Loading weights:  41%|████      | 293/723 [00:03<00:06, 71.47it/s]Loading weights:  42%|████▏     | 306/723 [00:03<00:05, 79.87it/s]Loading weights:  44%|████▎     | 315/723 [00:04<00:05, 75.37it/s]Loading weights:  46%|████▌     | 329/723 [00:04<00:04, 88.91it/s]Loading weights:  47%|████▋     | 339/723 [00:04<00:04, 89.34it/s]Loading weights:  48%|████▊     | 349/723 [00:04<00:04, 79.38it/s]Loading weights:  50%|████▉     | 359/723 [00:04<00:04, 78.45it/s]Loading weights:  51%|█████     | 368/723 [00:04<00:04, 74.90it/s]Loading weights:  53%|█████▎    | 382/723 [00:04<00:03, 87.75it/s]Loading weights:  54%|█████▍    | 392/723 [00:04<00:03, 88.02it/s]Loading weights:  56%|█████▌    | 402/723 [00:05<00:04, 78.46it/s]Loading weights:  57%|█████▋    | 412/723 [00:05<00:03, 77.90it/s]Loading weights:  58%|█████▊    | 421/723 [00:05<00:04, 73.98it/s]Loading weights:  62%|██████▏   | 451/723 [00:05<00:02, 128.37it/s]Loading weights:  69%|██████▉   | 502/723 [00:05<00:00, 224.84it/s]Loading weights:  77%|███████▋  | 554/723 [00:05<00:00, 302.03it/s]Loading weights:  84%|████████▍ | 609/723 [00:05<00:00, 370.05it/s]Loading weights:  91%|█████████ | 659/723 [00:05<00:00, 404.88it/s]Loading weights:  98%|█████████▊| 712/723 [00:05<00:00, 439.30it/s]Loading weights: 100%|██████████| 723/723 [00:05<00:00, 120.60it/s]
+
+24 texts, token lengths: [2, 4, 7, 11, 37, 26, 24, 26, 31, 15, 13, 20, 29, 41, 18, 27, 1, 34, 61, 64, 14, 20, 5, 14]
+
+batched vs one-at-a-time (221184 scores): value mismatches 0, argmax mismatches 0, max|diff| 0.0e+00
+shuffled batch vs one-at-a-time:         value mismatches 0, argmax mismatches 0
+
+all argmax positions inside real tokens: True
+without exclusion, a pad position would have been the max for 42390 text-neuron pairs
+random tokens instead of pad after each text -> value mismatches 0 (0 = no leakage)
+
+full 64-token texts: all-full batch vs mixed padded batch -> value mismatches 0
+
+reference, WITHOUT fixed shape (batch of 24 vs batch of 1): mismatches 180572/221184, max|diff| 0.062, median rel diff for |score|>1: 0.61%
+
+multi-layer read [0, 1, 2, 3, 31] vs layer 2 alone: mismatches 0
+score_pairs, 24 rows with neurons from layers [0, 1, 2, 3, 31]: mismatches vs per-row single-layer scoring 0
+
+checks:
+  PASS  fast_kernel_assert_passes
+  PASS  fast_kernel_assert_fails_on_simulated_fallback
+  PASS  batched_equals_single_exact_values
+  PASS  batched_equals_single_exact_argmax
+  PASS  argmax_never_on_pad
+  PASS  pad_content_cannot_leak
+  PASS  full_rows_same_in_full_and_mixed_batches
+  PASS  at_least_20_texts_varied_lengths
+  PASS  multi_layer_read_equals_single_layer
+  PASS  mixed_layer_pairs_equal_single_scoring
+saved: /workspace/neuron-elictor/results/scoring_tests/20261116_161553

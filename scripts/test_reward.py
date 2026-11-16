@@ -7,13 +7,14 @@
  4. conversational (TRL chat-format) prompts/completions give the same rewards as plain strings
 """
 import os, sys, json, time, math
-sys.path.insert(0, "/workspace")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
+from hermes.paths import RESULTS_DIR, BASELINE_DIR
 import torch
 from hermes.runinfo import run_info
 from hermes.scoring import Scorer
 from hermes.reward import NeuronReward, Cleaner, make_prompt, parse_prompt, EMPTY_REWARD
 
-RUN_DIR = f"/workspace/results/reward_tests/{time.strftime('%Y%m%d_%H%M%S')}"
+RUN_DIR = f"{RESULTS_DIR}/reward_tests/{time.strftime('%Y%m%d_%H%M%S')}"
 os.makedirs(RUN_DIR, exist_ok=False)
 CFG = dict(seed=0, lora=dict(r=16, alpha=32, target_modules="all-linear (language model)"), env=run_info())
 json.dump(CFG, open(f"{RUN_DIR}/config.json", "w"), indent=2)

@@ -10,12 +10,26 @@ See CLAUDE.md for the design and phases. Code layout:
 - `scripts/phase2_baseline.py` – FineWeb baseline, all 32 layers, 4 chunks/doc cap
 - `scripts/select_pilots.py` – pilot neurons
 - `scripts/idle_watchdog.sh`, `scripts/watch_and_stop.sh`, `scripts/launch_full_baseline.sh` – pod safety / long runs
+- `scripts/quick_checks.py` – new-pod sanity checks (text rescore, repeated token, cross-GPU top-10 rescore)
+- `hermes/paths.py` – repo-relative paths (`data/`, `results/`, `reports/`, `logs/`)
 - `reports/` – every report, timestamped markdown
+
+## Data (`data/`, gitignored)
+
+The repo lives at `/workspace/neuron-elictor` (HF cache stays at `/workspace/hf_cache`). Inputs are read from `data/`:
+
+- `data/baseline.pt`, `data/contexts.npz` – the full 1M phase 2 baseline (formerly `results/phase2/20261109_204110_full1M`),
+  from https://huggingface.co/datasets/gray171/hermes-baseline. sha256:
+  `70cde47f08fbcd786f1d0dfacd3e858526fee54b6845e41cebe70c978d649817` (baseline.pt),
+  `d519c23a590961df190291e916464bcb186f1942500fc465dca2187f7143ff2f` (contexts.npz).
+  Load with `hermes.baseline.Baseline(hermes.paths.BASELINE_DIR)`.
+- `data/pilots.json` – the 32 pilot neurons, a copy of `results/pilots/20261109_213918_full1M_pilots/pilots.json`.
+  Load with `hermes.paths.load_pilots()`. `select_pilots.py` (default `--baseline data`) reproduces it byte-for-byte.
 
 ## Pilot neurons (1 per layer = 32, seed 0)
 
 ```
-python scripts/select_pilots.py --baseline results/phase2/<full run> --seed 0 --n_per_layer 1
+python scripts/select_pilots.py --seed 0 --n_per_layer 1
 ```
 
 Rule: per layer L, low-activation = FineWeb max <= 0 or max < 0.1 x median neuron max of layer L
@@ -29,9 +43,9 @@ appended, so the first 32 (rank 0) never change:
 
 ```
 # all 64 (ranks 0 and 1): the first 32 are exactly the original list
-python scripts/select_pilots.py --baseline results/phase2/<full run> --seed 0 --n_per_layer 2
+python scripts/select_pilots.py --seed 0 --n_per_layer 2
 # only the 32 new ones (rank 1)
-python scripts/select_pilots.py --baseline results/phase2/<full run> --seed 0 --n_per_layer 2 --start_rank 1
+python scripts/select_pilots.py --seed 0 --n_per_layer 2 --start_rank 1
 ```
 
 Changing the baseline run or `--low_act_rel` changes the eligible (not low-activation) set and therefore the permutation, so
@@ -47,7 +61,7 @@ could beat real attempts. **Any RL / evaluation code must handle NaN explicitly*
 penalty (e.g. below the group's lowest real reward) before computing advantages, count it as a failure
 in evaluation, and never let NaN propagate into losses or silently become 0.
 
-## Using the phase 2 baseline (full 1M run `results/phase2/20261109_204110_full1M`)
+## Using the phase 2 baseline (`data/`, the full 1M run formerly `results/phase2/20261109_204110_full1M`)
 
 ### Scores are bf16: ties are common, use strict `>`
 
@@ -87,6 +101,4 @@ same set.
 
 ## Open items
 
-- `scripts/select_pilots.py` was edited (rename only) after the pilot list was produced and has not been
-  re-run. Verify on a GPU pod that it reproduces the saved 32 pilots exactly
-  (`results/pilots/20261109_213918_full1M_pilots/pilots.json`).
+- (Resolved 2026-11-16) `scripts/select_pilots.py` reproduces the saved 32 pilots byte-for-byte from `data/baseline.pt`.

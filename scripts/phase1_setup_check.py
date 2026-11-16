@@ -8,7 +8,8 @@ early-exit forward (stop after layer L) gives identical values, and that hermes.
 import os, sys, json, time, re, random, platform, argparse
 os.environ.setdefault("HF_HOME", "/workspace/hf_cache")
 import torch
-sys.path.insert(0, "/workspace")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
+from hermes.paths import RESULTS_DIR, BASELINE_DIR
 import torch.nn.functional as F
 from hermes.runinfo import run_info
 import transformers
@@ -22,7 +23,7 @@ CFG = dict(
     model_id="Qwen/Qwen3.5-4B", dtype="bfloat16", layer=_args.layer, neuron=_args.neuron, seed=0,
     text="The Eiffel Tower in Paris was completed in 1889 and is one of the most visited monuments in the world.",
 )
-RUN_DIR = f"/workspace/results/phase1/{time.strftime('%Y%m%d_%H%M%S')}"
+RUN_DIR = f"{RESULTS_DIR}/phase1/{time.strftime('%Y%m%d_%H%M%S')}"
 os.makedirs(RUN_DIR, exist_ok=False)
 
 class EarlyExit(Exception):

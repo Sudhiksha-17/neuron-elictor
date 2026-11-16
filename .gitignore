@@ -25,3 +25,6 @@ __pycache__/
 *.pt
 *.npz
 *.safetensors
+
+# inputs downloaded from HF (gray171/hermes-baseline); never commit
+data/

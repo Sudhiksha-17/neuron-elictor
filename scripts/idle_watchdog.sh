@@ -5,18 +5,19 @@
 # (default 3600 = 60 min, measured from the first low check of the streak), it runs
 #     runpodctl stop pod $RUNPOD_POD_ID
 # It only ever uses "stop" (never "remove"/"terminate"); a stopped pod keeps /workspace.
-# Every check is logged to /workspace/logs/watchdog.log.
+# Every check is logged to /workspace/neuron-elictor/logs/watchdog.log.
 #
-# Start:   nohup /workspace/scripts/idle_watchdog.sh >/dev/null 2>&1 &
-# Disable: touch /workspace/logs/watchdog.disable    (it exits at the next check)
-#     or:  kill "$(cat /workspace/logs/watchdog.pid)"
-# Re-enable: rm -f /workspace/logs/watchdog.disable, then start again.
+# Start:   nohup /workspace/neuron-elictor/scripts/idle_watchdog.sh >/dev/null 2>&1 &
+# Disable: touch /workspace/neuron-elictor/logs/watchdog.disable    (it exits at the next check)
+#     or:  kill "$(cat /workspace/neuron-elictor/logs/watchdog.pid)"
+# Re-enable: rm -f /workspace/neuron-elictor/logs/watchdog.disable, then start again.
 set -u
+REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 POD_ID=${RUNPOD_POD_ID:?RUNPOD_POD_ID not set}
 CHECK_EVERY=${CHECK_EVERY:-300}
 IDLE_LIMIT=${IDLE_LIMIT:-3600}
 THRESH=${THRESH:-5}
-LOGDIR=${WATCHDOG_LOGDIR:-/workspace/logs}   # override only for testing
+LOGDIR=${WATCHDOG_LOGDIR:-$REPO/logs}   # override only for testing
 LOG=$LOGDIR/watchdog.log
 PIDFILE=$LOGDIR/watchdog.pid
 DISABLE=$LOGDIR/watchdog.disable

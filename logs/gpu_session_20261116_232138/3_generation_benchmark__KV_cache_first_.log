@@ -1,0 +1,60 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<01:24,  8.58it/s]Loading weights:   5%|▍         | 35/723 [00:00<00:03, 190.95it/s]Loading weights:   9%|▉         | 67/723 [00:00<00:02, 241.11it/s]Loading weights:  14%|█▎        | 99/723 [00:00<00:02, 267.32it/s]Loading weights:  18%|█▊        | 133/723 [00:00<00:02, 292.43it/s]Loading weights:  23%|██▎       | 167/723 [00:00<00:01, 304.20it/s]Loading weights:  28%|██▊       | 200/723 [00:00<00:01, 298.83it/s]Loading weights:  33%|███▎      | 239/723 [00:00<00:01, 320.86it/s]Loading weights:  38%|███▊      | 276/723 [00:00<00:01, 322.88it/s]Loading weights:  43%|████▎     | 309/723 [00:01<00:01, 324.88it/s]Loading weights:  47%|████▋     | 343/723 [00:01<00:01, 328.29it/s]Loading weights:  52%|█████▏    | 376/723 [00:01<00:01, 318.86it/s]Loading weights:  57%|█████▋    | 411/723 [00:01<00:00, 322.82it/s]Loading weights:  70%|███████   | 509/723 [00:01<00:00, 512.76it/s]Loading weights:  98%|█████████▊| 710/723 [00:01<00:00, 948.38it/s]Loading weights: 100%|██████████| 723/723 [00:01<00:00, 452.79it/s]
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3303: FutureWarning: `is_gradient_checkpointing` is deprecated and will be removed in v6. Use `is_activation_checkpointing` instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3195: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+[2026-11-16 23:30:05] base-weight backup: 248 LoRA base weights + 4 embedding rows, 7.14 GB pinned CPU, 31.4s
+[2026-11-16 23:30:07] KV cache check: {'model_config_use_cache': False, 'text_config_use_cache': True, 'generation_config_use_cache': True, 'gradient_checkpointing': True, 'layer0_input_seq_lens_8_new_tokens': [2, 1, 1, 1, 1, 1, 1, 1], 'kv_cache_used': True}
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3280: FutureWarning: `gradient_checkpointing_disable` is deprecated and will be removed in v6. Use `activation_checkpointing_disable` instead.
+  warnings.warn(
+/workspace/neuron-elictor/hermes/grpo.py:271: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  lp_sum += float((logp * m).sum()); lp_n += int(m.sum())
+[2026-11-16 23:30:48] train step: {'n_trained': 256, 'pg_backward_s': 5.416435241699219, 'peak_gb': 21.436694528, 'score_256_s': 0.3667480945587158}
+[2026-11-16 23:30:55] sweep {'mode': 'untrained', 'batch': 64, 'oom': False, 'new_tokens': 64, 'gen_s': 3.598629951477051, 'total_s': 3.6429593563079834, 'ms_per_decode_step': 56.22859299182892, 'seq_per_s': 17.78454602528146, 'peak_gb': 14.008506368, 'first_run_gen_s': 3.309302806854248}
+[2026-11-16 23:31:03] sweep {'mode': 'untrained', 'batch': 128, 'oom': False, 'new_tokens': 64, 'gen_s': 3.900753974914551, 'total_s': 3.960871696472168, 'ms_per_decode_step': 60.949280858039856, 'seq_per_s': 32.814168958913626, 'peak_gb': 17.880093184, 'first_run_gen_s': 3.5273385047912598}
+[2026-11-16 23:31:11] sweep {'mode': 'untrained', 'batch': 192, 'oom': False, 'new_tokens': 64, 'gen_s': 3.8494937419891357, 'total_s': 3.8912675380706787, 'ms_per_decode_step': 60.148339718580246, 'seq_per_s': 49.87668843456503, 'peak_gb': 21.75168, 'first_run_gen_s': 4.87374210357666}
+[2026-11-16 23:31:20] sweep {'mode': 'untrained', 'batch': 256, 'oom': False, 'new_tokens': 64, 'gen_s': 3.8281097412109375, 'total_s': 3.8883585929870605, 'ms_per_decode_step': 59.8142147064209, 'seq_per_s': 66.87373594441942, 'peak_gb': 25.623266816, 'first_run_gen_s': 4.152315855026245}
+[2026-11-16 23:31:27] sweep {'mode': 'merged', 'batch': 64, 'oom': False, 'new_tokens': 64, 'gen_s': 3.190195083618164, 'total_s': 3.5314276218414307, 'ms_per_decode_step': 49.84679818153381, 'seq_per_s': 20.061469070855164, 'peak_gb': 14.008506368, 'first_run_gen_s': 3.252465009689331}
+[2026-11-16 23:31:34] sweep {'mode': 'merged', 'batch': 128, 'oom': False, 'new_tokens': 64, 'gen_s': 3.4350643157958984, 'total_s': 3.7762649059295654, 'ms_per_decode_step': 53.67287993431091, 'seq_per_s': 37.26276664206871, 'peak_gb': 17.880093184, 'first_run_gen_s': 3.37021541595459}
+[2026-11-16 23:31:42] sweep {'mode': 'merged', 'batch': 192, 'oom': False, 'new_tokens': 64, 'gen_s': 3.4976985454559326, 'total_s': 3.8386738300323486, 'ms_per_decode_step': 54.65153977274895, 'seq_per_s': 54.89323836939538, 'peak_gb': 21.75168, 'first_run_gen_s': 3.5586841106414795}
+[2026-11-16 23:31:50] sweep {'mode': 'merged', 'batch': 256, 'oom': False, 'new_tokens': 64, 'gen_s': 3.813892364501953, 'total_s': 4.154609441757202, 'ms_per_decode_step': 59.59206819534302, 'seq_per_s': 67.12302695868829, 'peak_gb': 25.623266816, 'first_run_gen_s': 3.891589641571045}
+[2026-11-16 23:32:02] sweep {'mode': 'lora', 'batch': 64, 'oom': False, 'new_tokens': 64, 'gen_s': 5.538843870162964, 'total_s': 5.538865327835083, 'ms_per_decode_step': 86.54443547129631, 'seq_per_s': 11.554757906204891, 'peak_gb': 15.087285248, 'first_run_gen_s': 5.747939348220825}
+[2026-11-16 23:32:14] sweep {'mode': 'lora', 'batch': 128, 'oom': False, 'new_tokens': 64, 'gen_s': 5.819594621658325, 'total_s': 5.819614410400391, 'ms_per_decode_step': 90.93116596341133, 'seq_per_s': 21.994659133753494, 'peak_gb': 18.768487936, 'first_run_gen_s': 5.942089080810547}
+[2026-11-16 23:32:26] sweep {'mode': 'lora', 'batch': 192, 'oom': False, 'new_tokens': 64, 'gen_s': 6.09188437461853, 'total_s': 6.0919108390808105, 'ms_per_decode_step': 95.18569335341454, 'seq_per_s': 31.517341464975345, 'peak_gb': 22.449690624, 'first_run_gen_s': 6.4016194343566895}
+[2026-11-16 23:32:39] sweep {'mode': 'lora', 'batch': 256, 'oom': False, 'new_tokens': 64, 'gen_s': 6.279003381729126, 'total_s': 6.279031276702881, 'ms_per_decode_step': 98.1094278395176, 'seq_per_s': 40.77080142127621, 'peak_gb': 26.130893312, 'first_run_gen_s': 6.376622915267944}
+## gpu_bench gen
+
+### KV cache (checked first)
+
+- PASS KV cache used during generate (layer-0 input lengths for 8 new tokens: [2, 1, 1, 1, 1, 1, 1, 1]; expected [2, 1, 1, ...])
+- config use_cache: model False, text True, generation True; gradient checkpointing enabled: True
+- LoRA, batch 64, 32 tokens: use_cache=True 100 ms/step, use_cache=False 170 ms/step; checkpointing off 102 ms/step, on 95 ms/step
+
+### Generation sweep (64 new tokens forced; second run of each config; optimizer state resident)
+
+| mode | batch | gen s | ms / decode step | seq / s | peak GB | first-run gen s |
+|---|---|---|---|---|---|---|
+| untrained | 64 | 3.6 | 56 | 17.78 | 14.0 | 3.3 |
+| untrained | 128 | 3.9 | 61 | 32.81 | 17.9 | 3.5 |
+| untrained | 192 | 3.8 | 60 | 49.88 | 21.8 | 4.9 |
+| untrained | 256 | 3.8 | 60 | 66.87 | 25.6 | 4.2 |
+| merged | 64 | 3.2 | 50 | 20.06 | 14.0 | 3.3 |
+| merged | 128 | 3.4 | 54 | 37.26 | 17.9 | 3.4 |
+| merged | 192 | 3.5 | 55 | 54.89 | 21.8 | 3.6 |
+| merged | 256 | 3.8 | 60 | 67.12 | 25.6 | 3.9 |
+| lora | 64 | 5.5 | 87 | 11.55 | 15.1 | 5.7 |
+| lora | 128 | 5.8 | 91 | 21.99 | 18.8 | 5.9 |
+| lora | 192 | 6.1 | 95 | 31.52 | 22.4 | 6.4 |
+| lora | 256 | 6.3 | 98 | 40.77 | 26.1 | 6.4 |
+
+- merged(): 8 calls, mean merge 0.04s, unmerge 0.04s, exact restore copy 0.26s; backup 7.14 GB pinned
+- PASS bitwise base-weight check after the sweep (249 tensors, 0.3s)
+- train step (256 completions, micro_bs 32): pg_backward 5.4s, peak 21.4 GB; scoring 256 texts 0.4s
+
+### Projection for the real run (300 steps, 64 completions per neuron per step, (b) = 19,200 per neuron)
+
+- Phase A: step 5s merged (7s unmerged LoRA); untrained evals 0.09 h; total ~0.6 h
+- Phase B: step 10s merged (12s unmerged LoRA); untrained evals 0.35 h; total ~1.3 h
+- Assumes every completion runs the full 64 tokens (upper bound for generation) and the step's other costs scale linearly with completions.
+

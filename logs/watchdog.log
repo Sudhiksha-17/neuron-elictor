@@ -54,3 +54,9 @@
 [2026-11-16 19:20:30] GPU idle for 60 min -> runpodctl stop pod lcg23oarodus04
 [2026-11-16 19:20:32] stop command sent: pod "lcg23oarodus04" stopped
 [2026-11-16 19:20:32] watchdog PID 6653 exiting
+[2026-11-16 23:21:10] watchdog started: PID 1094, pod v6sebqua04e1qe, check every 300s, stop after 3600s below 5%
+[2026-11-16 23:21:10] check: util=0% (idle); idle for 0 min (limit 60 min)
+[2026-11-16 23:26:11] check: util=0% (idle); idle for 5 min (limit 60 min)
+[2026-11-16 23:31:11] check: util=52% (busy); idle streak reset
+[2026-11-16 23:36:11] check: util=64% (busy); idle streak reset
+[2026-11-16 23:41:11] check: util=85% (busy); idle streak reset

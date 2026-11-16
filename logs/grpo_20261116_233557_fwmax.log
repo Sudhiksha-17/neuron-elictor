@@ -1,0 +1,8 @@
+Phase B neurons confirmed = first four pilots from layers 8-24: ['L8N2027', 'L9N5711', 'L10N4358', 'L11N3081']
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<01:56,  6.19it/s]Loading weights:   5%|▌         | 38/723 [00:00<00:03, 175.69it/s]Loading weights:  10%|▉         | 69/723 [00:00<00:02, 229.12it/s]Loading weights:  14%|█▎        | 99/723 [00:00<00:02, 253.63it/s]Loading weights:  20%|█▉        | 142/723 [00:00<00:01, 312.19it/s]Loading weights:  24%|██▍       | 175/723 [00:00<00:01, 296.69it/s]Loading weights:  28%|██▊       | 206/723 [00:00<00:01, 299.21it/s]Loading weights:  34%|███▍      | 249/723 [00:00<00:01, 336.76it/s]Loading weights:  39%|███▉      | 284/723 [00:01<00:01, 331.18it/s]Loading weights:  44%|████▍     | 318/723 [00:01<00:01, 330.80it/s]Loading weights:  50%|████▉     | 358/723 [00:01<00:01, 348.20it/s]Loading weights:  54%|█████▍    | 394/723 [00:01<00:00, 348.90it/s]Loading weights:  59%|█████▉    | 430/723 [00:01<00:00, 342.98it/s]Loading weights:  88%|████████▊ | 638/723 [00:01<00:00, 843.74it/s]Loading weights: 100%|██████████| 723/723 [00:01<00:00, 460.86it/s]
+L14N8949: FineWeb max A100 3.0625, this GPU 3.046875 (rank 0); argmax token ' and'
+L8N2027: FineWeb max A100 5.0, this GPU 4.96875 (rank 0); argmax token ' on'
+L9N5711: FineWeb max A100 1.390625, this GPU 1.3984375 (rank 0); argmax token ' miss'
+L10N4358: FineWeb max A100 2.921875, this GPU 2.9375 (rank 0); argmax token '.'
+L11N3081: FineWeb max A100 3.3125, this GPU 3.328125 (rank 0); argmax token ' them'
+saved: /workspace/neuron-elictor/results/grpo/20261116_233557_dry/fineweb_max.json

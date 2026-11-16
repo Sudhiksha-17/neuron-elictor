@@ -1,0 +1,18 @@
+[pipeline 2026-11-16 23:35:57] watchdog: watchdog already running (PID 1094)
+[pipeline 2026-11-16 23:35:57] pipeline start: run dir /workspace/neuron-elictor/results/grpo/20261116_233557_dry, git e8f4d93, GPU NVIDIA GeForce RTX 5090, dry=1 force_phase_b=1
+[pipeline 2026-11-16 23:35:57] step 1: phase 1 setup check
+[pipeline 2026-11-16 23:36:13] phase 1 setup check exit 0 (9 PASS, 0 FAIL)
+[pipeline 2026-11-16 23:36:14] step 2: FineWeb max on this GPU (top-10 contexts, 5 neurons)
+[pipeline 2026-11-16 23:36:31] step 3: Phase A (args: --merged_gen --dry)
+[pipeline 2026-11-16 23:38:57] Phase A exit 0
+[pipeline 2026-11-16 23:38:57] step 4: gate
+GATE FAIL: Phase A (d) 0.1884765625 vs FineWeb max (this GPU) 3.046875
+[pipeline 2026-11-16 23:38:57] gate FAILED: running Phase B anyway (--dry --force_phase_b, testing only)
+[pipeline 2026-11-16 23:38:57] step 5: Phase B (args: --merged_gen --dry)
+[pipeline 2026-11-16 23:42:16] Phase B exit 0
+[pipeline 2026-11-16 23:42:17] all phases done
+[pipeline 2026-11-16 23:42:17] pipeline ending (last exit code 0); writing final report
+report: /workspace/neuron-elictor/reports/20261116_234217_grpo_final.md
+[pipeline 2026-11-16 23:42:21] committing
+[pipeline 2026-11-16 23:42:22] DRY_RUN: would commit 33 files:
+[pipeline 2026-11-16 23:42:22] DRY_RUN: not pushing, not stopping the pod

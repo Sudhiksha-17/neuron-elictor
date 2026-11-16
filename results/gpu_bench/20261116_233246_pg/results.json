@@ -1,0 +1,33 @@
+{
+ "what": "pg",
+ "pg_backward": [
+  {
+   "micro_bs": 16,
+   "warmup_s": 11.796399116516113,
+   "warmup_peak_gb": 16.16165632,
+   "measured_s": 8.513900995254517,
+   "measured_peak_gb": 16.16165632
+  },
+  {
+   "micro_bs": 32,
+   "warmup_s": 5.000964164733887,
+   "warmup_peak_gb": 21.436694016,
+   "measured_s": 4.633955717086792,
+   "measured_peak_gb": 21.436694016
+  },
+  {
+   "micro_bs": 48,
+   "warmup_s": 7.1448280811309814,
+   "warmup_peak_gb": 26.711732224,
+   "measured_s": 4.896097421646118,
+   "measured_peak_gb": 26.711732224
+  },
+  {
+   "micro_bs": 64,
+   "warmup_s": 24.93639612197876,
+   "warmup_peak_gb": 31.98676992,
+   "measured_s": 4.573023080825806,
+   "measured_peak_gb": 31.98676992
+  }
+ ]
+}

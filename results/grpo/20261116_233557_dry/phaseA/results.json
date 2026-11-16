@@ -1,0 +1,476 @@
+{
+ "phase": "A",
+ "neurons": {
+  "L14N8949": {
+   "layer": 14,
+   "neuron": 8949,
+   "prompt": "Text:\n",
+   "fw_max_a100": 3.0625,
+   "fw_max_this_gpu": 3.046875,
+   "d_trained_best_of_8": {
+    "best": 0.1884765625,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.1168212890625,
+    "top": [
+     {
+      "text": "\"Two ethically sound communication practices that should be followed are:\n1. Stay on topic.\n2. Stay Abundant Mindset.\nStaying on topic is simple and easy. As the person responsible for the meeting organizer, you can refer to your meeting notes and reminder the participants to refer to their",
+      "score": 0.1884765625
+     },
+     {
+      "text": "\"I want to start a small business, but money isn't that important. I don't care if it might lose money for the first year or two, and I'm willing to lose up to 30% of my (pre-tax) share to offset the costs.\"\nThe task is to calculate the average time",
+      "score": 0.1728515625
+     },
+     {
+      "text": "Nazikelyani, A. R., Waxman, M., and Obermeyer, Z. (2022), Principled Trust in Public Infrastructure for Ferocity in Organizing United Action to Counter Digital Radicalization || instructional text with a , notably that it is positioned among other scholarly works. For example",
+      "score": 0.1494140625
+     }
+    ],
+    "all": [
+     {
+      "text": "'''\n# FsT\u5de5\u4f5c\u4e1a\u533a\u4e0e YAML \u6587\u4ef6\u6620\u5c04\u7cfb\u7edf\u7684\u521d\u6b65\u4f5c\u4e1a\u6d41\u7a0b\n## 1.  regimes: \u56fa\u5b9a\u53c2\u6570\n## 2. temperature: \u4ece\u5916\u90e8\u6e90\u8bfb\u53d6\n## 3. Kt0: \u57fa\u4e8e DOM \u7ed3\u5408 FST \u64cd\u4f5c\u5e8f\u5217\uff1f\nKt0",
+      "score": 0.046630859375
+     },
+     {
+      "text": "The intensity chart for Black Roof versus Killer Wiggly, a black bulldog at 20 lbs and about 6 years old, a black mortgage, a black job, a black horticulture writer, and a black beard, along with Killer Wiggly at 20 lbs and about 6 years old",
+      "score": 0.057861328125
+     },
+     {
+      "text": "On the map, a man se plushly held call sign? NoI\u2019m protecting the man without (1) to protect the man without (1) to engage and protect the man without (1) to protec (2) (3) Also, that's where the vehicular has the maximum speed limit, the",
+      "score": 0.0927734375
+     },
+     {
+      "text": "EXAMPLE OF A GOOD FORMAT FOR AN ENGLISH TEST\n\nIn this test, you will have 1 hour and 20 minutes to complete a total of TEN questions.\n\nThe test is divided into four sections.\n\nSTEP 1 \u2013 VOCABULARY\nIn this section, the proficiency of the candidate is being",
+      "score": 0.1337890625
+     },
+     {
+      "text": "\"I want to start a small business, but money isn't that important. I don't care if it might lose money for the first year or two, and I'm willing to lose up to 30% of my (pre-tax) share to offset the costs.\"\nThe task is to calculate the average time",
+      "score": 0.1728515625
+     },
+     {
+      "text": "In the Doctrine of Representation under the UK Probate Rules to the extent that the Court of Judge has to mark out a primitive focus at the level of an individual's assets. When the inabilities of separation (the confiscatory factors arc sinistically hacked and he chooses his path, the Court of Judge must mark out a",
+      "score": 0.0927734375
+     },
+     {
+      "text": "\"Two ethically sound communication practices that should be followed are:\n1. Stay on topic.\n2. Stay Abundant Mindset.\nStaying on topic is simple and easy. As the person responsible for the meeting organizer, you can refer to your meeting notes and reminder the participants to refer to their",
+      "score": 0.1884765625
+     },
+     {
+      "text": "Nazikelyani, A. R., Waxman, M., and Obermeyer, Z. (2022), Principled Trust in Public Infrastructure for Ferocity in Organizing United Action to Counter Digital Radicalization || instructional text with a , notably that it is positioned among other scholarly works. For example",
+      "score": 0.1494140625
+     }
+    ],
+    "per_token_best": [
+     [
+      "\"",
+      -2.5033950805664062e-06
+     ],
+     [
+      "Two",
+      -0.0250244140625
+     ],
+     [
+      " eth",
+      0.0028076171875
+     ],
+     [
+      "ically",
+      0.09130859375
+     ],
+     [
+      " sound",
+      0.0390625
+     ],
+     [
+      " communication",
+      0.1064453125
+     ],
+     [
+      " practices",
+      0.11865234375
+     ],
+     [
+      " that",
+      0.15625
+     ],
+     [
+      " should",
+      0.042724609375
+     ],
+     [
+      " be",
+      0.1015625
+     ],
+     [
+      " followed",
+      0.08349609375
+     ],
+     [
+      " are",
+      0.0546875
+     ],
+     [
+      ":",
+      0.07275390625
+     ],
+     [
+      "\n",
+      0.0181884765625
+     ],
+     [
+      "1",
+      0.0269775390625
+     ],
+     [
+      ".",
+      0.1455078125
+     ],
+     [
+      " Stay",
+      0.0361328125
+     ],
+     [
+      " on",
+      -0.064453125
+     ],
+     [
+      " topic",
+      0.103515625
+     ],
+     [
+      ".",
+      0.10693359375
+     ],
+     [
+      "\n",
+      -0.005218505859375
+     ],
+     [
+      "2",
+      0.09375
+     ],
+     [
+      ".",
+      0.10009765625
+     ],
+     [
+      " Stay",
+      -0.03271484375
+     ],
+     [
+      " Ab",
+      -0.005279541015625
+     ],
+     [
+      "und",
+      -0.083984375
+     ],
+     [
+      "ant",
+      -0.482421875
+     ],
+     [
+      " Mind",
+      0.0040283203125
+     ],
+     [
+      "set",
+      0.002197265625
+     ],
+     [
+      ".",
+      0.06396484375
+     ],
+     [
+      "\n",
+      -0.0101318359375
+     ],
+     [
+      "St",
+      -0.1005859375
+     ],
+     [
+      "aying",
+      0.043701171875
+     ],
+     [
+      " on",
+      0.14453125
+     ],
+     [
+      " topic",
+      0.1884765625
+     ],
+     [
+      " is",
+      0.0225830078125
+     ],
+     [
+      " simple",
+      0.01007080078125
+     ],
+     [
+      " and",
+      0.0284423828125
+     ],
+     [
+      " easy",
+      0.0024261474609375
+     ],
+     [
+      ".",
+      0.06005859375
+     ],
+     [
+      " As",
+      -0.0250244140625
+     ],
+     [
+      " the",
+      0.05810546875
+     ],
+     [
+      " person",
+      0.038330078125
+     ],
+     [
+      " responsible",
+      0.00665283203125
+     ],
+     [
+      " for",
+      0.0230712890625
+     ],
+     [
+      " the",
+      0.0634765625
+     ],
+     [
+      " meeting",
+      0.12451171875
+     ],
+     [
+      " organizer",
+      0.0186767578125
+     ],
+     [
+      ",",
+      -0.00665283203125
+     ],
+     [
+      " you",
+      0.05712890625
+     ],
+     [
+      " can",
+      -0.00019168853759765625
+     ],
+     [
+      " refer",
+      0.0125732421875
+     ],
+     [
+      " to",
+      0.0308837890625
+     ],
+     [
+      " your",
+      -0.0028076171875
+     ],
+     [
+      " meeting",
+      0.0289306640625
+     ],
+     [
+      " notes",
+      0.0286865234375
+     ],
+     [
+      " and",
+      0.0205078125
+     ],
+     [
+      " reminder",
+      0.00014972686767578125
+     ],
+     [
+      " the",
+      -0.0255126953125
+     ],
+     [
+      " participants",
+      0.1875
+     ],
+     [
+      " to",
+      0.02685546875
+     ],
+     [
+      " refer",
+      0.0033111572265625
+     ],
+     [
+      " to",
+      0.00946044921875
+     ],
+     [
+      " their",
+      -0.000518798828125
+     ]
+    ]
+   },
+   "a_untrained_best_of_8": {
+    "best": 0.2099609375,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.140869140625,
+    "top": [
+     {
+      "text": "\"Okay, let's talk about a thing that most people haven't heard of yet, but still is extremely important for the future of EMS. Welcome to Counseling 101.\n\nToday we're going to talk about student learning outcomes.\n\nIn 2010, a study by Vernon Holmes of the",
+      "score": 0.2099609375
+     },
+     {
+      "text": "Refrigerator Shelf*GE ICE MEMBER*60 Lbs/Tray  Full & Half Tray 264.32 Country, Oran, Leon, Mauro, Javier, Sophia, Jovan, Justin, Pedro.\n\nName School  Type\n alexa cats anyone  college \n alex",
+      "score": 0.177734375
+     },
+     {
+      "text": "Insect Folate Consumption and Oral Biophysical Responses to Potentiated Iron-Assisted Fermentation\nThis paper explores the hypothesis that the folate derived from insect prey acts as a potential enhancement of the oral biophysical responses to iron-assisted fermentation (IAF) in apple snail (*Pomacea* sp.).",
+      "score": 0.16015625
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " and",
+    "token_id": 321,
+    "score": 0.015869140625,
+    "pos": 36
+   },
+   "b_untrained_best_of_192": {
+    "best": 1.3515625,
+    "n": 192,
+    "n_empty": 0,
+    "mean": 0.15264256795247397,
+    "top": [
+     {
+      "text": "\"GINZA & CO.\". GINZA & Co. has not been operating\nunder this name since December 1999. Since socialism\nhas prevailed, Donald Trump and GINZA have collaborated\nclosely, since political power is always the key to\nsurvival. This is why the \"",
+      "score": 1.3515625
+     },
+     {
+      "text": "\"We thinks we are superior to other peoples' children, and we have the right to end their lives.\" II.\n\"We always have sawed off limbs to make sure it does not run away, or flee, during important moments.\" III.\n\"We believe that we should take over revolutionary movements, and we have the",
+      "score": 0.66796875
+     },
+     {
+      "text": "Write a chapter in\u7b2c\u4e09\u4eba\u79f0\u6709\u9650\u89c6\u89d2, Which means that the perspective is third person, but limited to one or two main characters. The narrative voice is in-your-face, in your face, in-your-face! The narrative voice is first person but uses nonliterary framing devices: idioms, clich\u00e9s,",
+      "score": 0.6015625
+     },
+     {
+      "text": "The unitary state remains the institutional form of government of choice in the world today and it is reasonable to assume that this will be the case for at least one more century. It is no surprise that the experts, both academic and governmental, give a high ranking to the unitary state as an industrial machine that is able",
+      "score": 0.56640625
+     },
+     {
+      "text": "\"The Gujarat Muslim League (GML) defeated its stronger rival, the Hindu Janata Dal (HJD) in an election in the context of a 1946 election.\nThe Gujarat Muslim League won the key minority constituency of Jamnagar.\nThe Gujarat Muslim League won 20 out of",
+      "score": 0.435546875
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.1201171875,
+     "0.9": 0.2615234375,
+     "0.99": 0.6075390625000002,
+     "0.999": 1.2209960937499984
+    }
+   }
+  }
+ },
+ "training_s": 17.903283834457397,
+ "eval_s": {
+  "d": 5.256768465042114,
+  "a": 3.57098650932312,
+  "b": 3.9190595149993896
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.31820130348205566,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.27896618843078613,
+    "where": "after step 3"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.2792978286743164,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.046875,
+      "got": 3.046875,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.046875,
+      "got": 3.046875,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.046875,
+      "got": 3.046875,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "phase_s": 32.39506530761719,
+ "merge_timing": {
+  "calls": 4,
+  "mean_merge_s": 0.06467050313949585,
+  "mean_unmerge_s": 0.04238826036453247,
+  "mean_restore_s": 0.25636738538742065,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

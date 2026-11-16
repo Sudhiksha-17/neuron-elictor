@@ -1,0 +1,21 @@
+[gpu_session 2026-11-16 23:21:38] session start: commit e8f4d93, pod v6sebqua04e1qe
+[gpu_session 2026-11-16 23:21:38] watchdog: watchdog already running (PID 1094)
+[gpu_session 2026-11-16 23:21:38] START 0 install packages + model (network): bash scripts/install_env.sh
+[gpu_session 2026-11-16 23:23:03] END 0 install packages + model (network): exit 0 (85s)
+[gpu_session 2026-11-16 23:23:03] START 1 environment check: python scripts/gpu_bench.py env
+[gpu_session 2026-11-16 23:23:46] END 1 environment check: exit 0 (43s)
+[gpu_session 2026-11-16 23:23:46] START 2a phase1 setup check: python scripts/phase1_setup_check.py
+[gpu_session 2026-11-16 23:24:10] END 2a phase1 setup check: exit 0 (24s)
+[gpu_session 2026-11-16 23:24:10] START 2b test_scoring L15: python scripts/test_scoring.py --layer 15
+[gpu_session 2026-11-16 23:24:48] END 2b test_scoring L15: exit 0 (38s)
+[gpu_session 2026-11-16 23:24:48] START 2c test_grpo (incl. merge path): python scripts/test_grpo.py --micro_bs 32
+[gpu_session 2026-11-16 23:28:19] END 2c test_grpo (incl. merge path): exit 0 (211s)
+[gpu_session 2026-11-16 23:28:19] START 3 generation benchmark (KV cache first): python scripts/gpu_bench.py gen
+[gpu_session 2026-11-16 23:32:46] END 3 generation benchmark (KV cache first): exit 0 (267s)
+[gpu_session 2026-11-16 23:32:46] START 4 micro-batch check: python scripts/gpu_bench.py pg
+[gpu_session 2026-11-16 23:35:57] END 4 micro-batch check: exit 0 (191s)
+[gpu_session 2026-11-16 23:35:57] START 5 dry pipeline: bash scripts/grpo_pipeline.sh --dry --force_phase_b
+[gpu_session 2026-11-16 23:42:22] END 5 dry pipeline: exit 0 (385s)
+[gpu_session 2026-11-16 23:42:22] all steps done
+[gpu_session 2026-11-16 23:42:22] session ending (last exit 0); writing report /workspace/neuron-elictor/reports/20261116_232138_gpu_session.md
+[gpu_session 2026-11-16 23:42:22] committing (local only, no push)

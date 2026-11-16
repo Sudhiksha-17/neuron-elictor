@@ -12,6 +12,8 @@
 # Env:   PHASE_A_ARGS / PHASE_B_ARGS -> extra args for scripts/grpo_phase.py (e.g. "--steps 200 --merged_gen").
 #        The old DRY_RUN / FORCE_PHASE_B env vars are rejected (so a stale env var cannot silently change the mode).
 # Changes 2026-11-16 (flags, gate hardening): UNTESTED, run on GPU.
+# At start it re-arms the idle watchdog (scripts/ensure_watchdog.sh: deletes logs/watchdog.disable, starts the
+# watchdog if not running). The stop path no longer creates watchdog.disable.
 set -u
 REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 cd "$REPO"
@@ -66,7 +68,6 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" && log "committed: $(gi
       log "push FAILED (not authenticated or offline); commit is local only"; fi
     # amend nothing after push; the report already lists pipeline steps up to the commit
     log "stopping pod $POD_ID (runpodctl stop pod; never remove/terminate)"
-    touch "$REPO/logs/watchdog.disable"
     for i in 1 2 3 4 5; do
       runpodctl stop pod "$POD_ID" >> "$STATUS" 2>&1 && { log "stop command sent"; exit 0; }
       log "runpodctl stop failed (attempt $i); retrying in 60s"; sleep 60
@@ -77,6 +78,8 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" && log "committed: $(gi
   fi
 }
 trap finish EXIT
+
+log "watchdog: $(bash "$REPO/scripts/ensure_watchdog.sh" 2>&1)"
 
 log "pipeline start: run dir $RUN, git $(git rev-parse --short HEAD), GPU $(nvidia-smi --query-gpu=name --format=csv,noheader), dry=$DRY_RUN force_phase_b=$FORCE_B"
 

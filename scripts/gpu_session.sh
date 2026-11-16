@@ -1,7 +1,12 @@
 #!/bin/bash
 # One unattended GPU session (written 2026-11-16 on a CPU-only pod: UNTESTED, run on GPU).
 #   setsid nohup scripts/gpu_session.sh > logs/gpu_session_$(date +%Y%m%d_%H%M%S).out 2>&1 < /dev/null &
-# Steps (each with a timeout; a failing step is recorded and the session continues, except step 1):
+# Works on a freshly wiped container: at start it re-arms the idle watchdog (deletes logs/watchdog.disable, starts
+# scripts/idle_watchdog.sh if not running, via scripts/ensure_watchdog.sh).
+# Steps (each with a timeout; a failing step is recorded and the session continues, except steps 0 and 1):
+#   0. install (network allowed): scripts/install_env.sh = pinned packages (torch 2.8.0+cu129, transformers>=5.9,
+#      accelerate, peft, trl, datasets, flash-linear-attention==0.5.2, causal-conv1d from git) and the pinned model
+#      into HF_HOME=/workspace/hf_cache. If it fails: report + stop the pod. HF_HUB_OFFLINE=1 only from step 1 on.
 #   1. environment check: GPU, versions, pinned model loads OFFLINE from /workspace/hf_cache, fast kernels, data/
 #      (if this fails, steps 2-5 are skipped: they would all fail the same way)
 #   2. setup and tests: scripts/phase1_setup_check.py, scripts/test_scoring.py, scripts/test_grpo.py --micro_bs 32
@@ -16,7 +21,7 @@ set -u
 REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 cd "$REPO"
 POD_ID=${RUNPOD_POD_ID:?RUNPOD_POD_ID not set}
-export HF_HOME=/workspace/hf_cache HF_HUB_OFFLINE=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True PYTHONUNBUFFERED=1
+export HF_HOME=/workspace/hf_cache PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True PYTHONUNBUFFERED=1
 TS=$(date +%Y%m%d_%H%M%S)
 LOGD=$REPO/logs/gpu_session_$TS
 REPORT=$REPO/reports/${TS}_gpu_session.md
@@ -41,7 +46,7 @@ write_report() {
   {
     echo "# GPU session $TS"
     echo
-    echo "Unattended run of scripts/gpu_session.sh (steps 1-5 of the GPU plan; the real run was NOT started)."
+    echo "Unattended run of scripts/gpu_session.sh (step 0 install + steps 1-5 of the GPU plan; the real run was NOT started)."
     echo "Commit $(git rev-parse --short HEAD), GPU $(nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -1),"
     echo "total $(( ($(date +%s) - START_EPOCH) / 60 )) min. Logs: \`logs/gpu_session_$TS/\`."
     echo
@@ -111,6 +116,11 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" && log "committed: $(gi
 trap finish EXIT
 
 log "session start: commit $(git rev-parse --short HEAD), pod $POD_ID"
+log "watchdog: $(bash "$REPO/scripts/ensure_watchdog.sh" 2>&1)"
+if ! run_step "0 install packages + model (network)" 3600 bash scripts/install_env.sh; then
+  log "ABORT: install failed; skipping steps 1-5"; exit 1
+fi
+export HF_HUB_OFFLINE=1
 if ! run_step "1 environment check" 1200 python scripts/gpu_bench.py env; then
   log "ABORT: environment check failed; skipping steps 2-5"; exit 1
 fi

@@ -9,6 +9,8 @@
 #        --force_phase_b -> run Phase B even if the gate fails. ONLY allowed together with --dry; a real run can
 #                           never bypass the gate (grpo_phase.py also refuses a non-dry Phase B without a passed
 #                           gate.json).
+#        --no_stop      -> real run: commit + push as usual but do NOT stop the pod (the caller does it; used by
+#                           scripts/real_run.sh, which writes its own report, commits, pushes and then stops).
 # Env:   PHASE_A_ARGS / PHASE_B_ARGS -> extra args for scripts/grpo_phase.py (e.g. "--steps 200 --merged_gen").
 #        The old DRY_RUN / FORCE_PHASE_B env vars are rejected (so a stale env var cannot silently change the mode).
 # Changes 2026-11-16 (flags, gate hardening): UNTESTED, run on GPU.
@@ -21,11 +23,12 @@ export HF_HOME=/workspace/hf_cache PYTORCH_CUDA_ALLOC_CONF=expandable_segments:T
 if [ -n "${DRY_RUN:-}" ] || [ -n "${FORCE_PHASE_B:-}" ]; then
   echo "ERROR: DRY_RUN / FORCE_PHASE_B env vars are no longer used; pass --dry [--force_phase_b]" >&2; exit 2
 fi
-DRY_RUN=0; FORCE_B=0
+DRY_RUN=0; FORCE_B=0; NO_STOP=0
 for arg in "$@"; do
   case "$arg" in
     --dry) DRY_RUN=1 ;;
     --force_phase_b) FORCE_B=1 ;;
+    --no_stop) NO_STOP=1 ;;
     *) echo "ERROR: unknown argument $arg" >&2; exit 2 ;;
   esac
 done
@@ -67,6 +70,7 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" && log "committed: $(gi
     if timeout 300 git push origin HEAD:main >> "$STATUS" 2>&1; then log "pushed to origin main"; else
       log "push FAILED (not authenticated or offline); commit is local only"; fi
     # amend nothing after push; the report already lists pipeline steps up to the commit
+    if [ "$NO_STOP" = 1 ]; then log "--no_stop: not stopping the pod (caller stops it)"; exit 0; fi
     log "stopping pod $POD_ID (runpodctl stop pod; never remove/terminate)"
     for i in 1 2 3 4 5; do
       runpodctl stop pod "$POD_ID" >> "$STATUS" 2>&1 && { log "stop command sent"; exit 0; }
@@ -81,7 +85,7 @@ trap finish EXIT
 
 log "watchdog: $(bash "$REPO/scripts/ensure_watchdog.sh" 2>&1)"
 
-log "pipeline start: run dir $RUN, git $(git rev-parse --short HEAD), GPU $(nvidia-smi --query-gpu=name --format=csv,noheader), dry=$DRY_RUN force_phase_b=$FORCE_B"
+log "pipeline start: run dir $RUN, git $(git rev-parse --short HEAD), GPU $(nvidia-smi --query-gpu=name --format=csv,noheader), dry=$DRY_RUN force_phase_b=$FORCE_B no_stop=$NO_STOP"
 
 log "step 1: phase 1 setup check"
 python scripts/phase1_setup_check.py > "${LOGP}_phase1.log" 2>&1

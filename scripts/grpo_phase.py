@@ -25,6 +25,11 @@ There is no override outside --dry (the pipeline's --force_phase_b requires --dr
 Scope flags (defaults unchanged): --steps, --groups_per_step, --n_matched (compute-matched best-of-N,
 default steps x groups_per_neuron x group_size, also in --dry), --n_untrained_best, --n_fresh.
 
+Run defaults for the real run (decided 2026-11-17): unmerged LoRA generation (no --merged_gen; merge-path test
+cosine 0.843 between merged and LoRA logit changes, unmerged costs ~20 extra min on the 5090), --gen_batch 256,
+--micro_bs 32. --phase_b_prompt nK | nK_text selects the Phase B prompt "<|nK|>\\n" (default) or "<|nK|>\\nText:\\n";
+scripts/real_run.sh picks it with the pre-registered rule in scripts/phase_b_prompt_check.py.
+
 Usage: python scripts/grpo_phase.py --phase A --run_dir results/grpo/<ts> [--steps 300] [--dry]
 """
 import os, sys, json, time, math, argparse
@@ -32,7 +37,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) 
 import numpy as np, torch
 from hermes.runinfo import run_info
 from hermes.scoring import parse_neuron_id, CONTEXT_LEN
-from hermes.grpo import Elicitor, group_advantages, to_reward, EMPTY_REWARD, FLAT_STD, ADV_EPS, LORA_TARGET_RE
+from hermes.grpo import (Elicitor, group_advantages, to_reward, EMPTY_REWARD, FLAT_STD, ADV_EPS, LORA_TARGET_RE,
+                         PHASE_B_PROMPTS)
 
 PHASES = {
     "A": dict(neurons=["L14N8949"], prompts=["Text:\n"], tokens=[], groups_per_neuron=4),
@@ -52,7 +58,9 @@ ap.add_argument("--lora_alpha", type=int, default=64)
 ap.add_argument("--max_grad_norm", type=float, default=1.0)
 ap.add_argument("--seed", type=int, default=0)
 ap.add_argument("--micro_bs", type=int, default=32)
-ap.add_argument("--gen_batch", type=int, default=128, help="generation batch during training and for (d)")
+ap.add_argument("--phase_b_prompt", choices=list(PHASE_B_PROMPTS), default="nK",
+                help="Phase B prompt template: nK = '<|nK|>\\n' (a), nK_text = '<|nK|>\\nText:\\n' (b)")
+ap.add_argument("--gen_batch", type=int, default=256, help="generation batch during training and for (d)")
 ap.add_argument("--eval_batch", type=int, default=256, help="generation batch for untrained (adapter off) evals (a), (b)")
 ap.add_argument("--merged_gen", action="store_true", help="generate with LoRA merged into bf16 weights (faster, not bitwise)")
 ap.add_argument("--n_untrained_best", type=int, default=None, help="(a) best-of-N size; default 64 (8 with --dry)")
@@ -64,6 +72,10 @@ ap.add_argument("--check_every", type=int, default=50, help="bitwise base-weight
 ap.add_argument("--dry", action="store_true", help="tiny smoke run (for testing the pipeline)")
 a = ap.parse_args()
 P = PHASES[a.phase]
+if a.phase == "B":
+    P["prompts"] = [PHASE_B_PROMPTS[a.phase_b_prompt].format(k=k) for k in range(len(P["neurons"]))]
+elif a.phase_b_prompt != "nK":
+    sys.exit("--phase_b_prompt only applies to --phase B")
 DEF = dict(steps=3, n_untrained_best=8, sample_every=2) if a.dry else dict(steps=300, n_untrained_best=64, sample_every=50)
 for k, v in DEF.items():          # explicit flags always win, also with --dry
     if getattr(a, k) is None:
@@ -134,7 +146,8 @@ per_neuron = G * gpn; n_step = per_neuron * len(neurons)
 el = Elicitor(new_tokens=P["tokens"], lora_r=a.lora_r, lora_alpha=a.lora_alpha, seed=a.seed, log=log)
 REFS = ref_contexts()
 pids = [el.prompt_ids(p) for p in P["prompts"]]
-hp = dict(phase=a.phase, neurons=neurons, prompts=P["prompts"], prompt_token_ids=pids, new_tokens=P["tokens"],
+hp = dict(phase=a.phase, neurons=neurons, prompts=P["prompts"],
+          phase_b_prompt=a.phase_b_prompt if a.phase == "B" else None, prompt_token_ids=pids, new_tokens=P["tokens"],
           new_token_ids=el.new_ids, steps=a.steps, group_size=G, groups_per_neuron=gpn, groups_per_step=gpn * len(neurons),
           completions_per_step=n_step, lr=a.lr, lr_schedule="linear decay to 0 over all steps, no warmup",
           optimizer="AdamW(betas=(0.9,0.999), eps=1e-8, weight_decay=0)", max_grad_norm=a.max_grad_norm,

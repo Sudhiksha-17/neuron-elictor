@@ -7,6 +7,10 @@
 #   5. commits config/summary/reports locally (no push)
 #   6. ALWAYS stops this RunPod pod with "runpodctl stop pod" (also on any failure, via the EXIT trap).
 #      Only "stop" is ever used, never "remove"/"terminate".
+# KIND=grpo (default phase2): for scripts/real_run.sh. Skips steps 2, 3 and 5 (phase 2 specific; the GRPO pipeline and
+#            real_run.sh write their own reports and commit). Backup + pod stop as above.
+# OUTER_PID: after RUN_PID exits, also wait (at most OUTER_TIMEOUT s, default 3600) while OUTER_PID is alive, so the
+#            caller (real_run.sh) can write its report, commit and push before the pod stops.
 # DRY_RUN=1: print the stop command instead of running it, and skip resume/commit (for testing;
 #            REPORT_DIR / BACKUP_PATH / PILOT_TAG may then point to a scratch location).
 set -u
@@ -20,6 +24,9 @@ DRY_RUN=${DRY_RUN:-0}
 REPORT_DIR=${REPORT_DIR:-$REPO/reports}
 BACKUP_PATH=${BACKUP_PATH:-$REPO/code_backup.tar.gz}
 PILOT_TAG=${PILOT_TAG:-full1M_pilots}
+KIND=${KIND:-phase2}
+OUTER_PID=${OUTER_PID:-}
+OUTER_TIMEOUT=${OUTER_TIMEOUT:-3600}
 cd "$REPO"
 log() { echo "[watcher $(date '+%F %T')] $*"; }
 
@@ -43,7 +50,15 @@ CODE=${CODE:-unknown}
 log "run process $RUN_PID exited; exit code: $CODE"
 echo "[watcher $(date '+%F %T')] run process exited with exit code: $CODE" >> "$RUN_LOG"
 
-if [ ! -f "$RUN_DIR/summary.json" ] && [ "$DRY_RUN" != 1 ] && [ -f "$RUN_DIR/state.pt" ]; then
+if [ -n "$OUTER_PID" ]; then
+  log "waiting up to ${OUTER_TIMEOUT}s for outer process $OUTER_PID to finish"
+  T0=$(date +%s)
+  while kill -0 "$OUTER_PID" 2>/dev/null && [ $(( $(date +%s) - T0 )) -lt "$OUTER_TIMEOUT" ]; do sleep ${POLL:-30}; done
+  kill -0 "$OUTER_PID" 2>/dev/null && log "outer process still alive after ${OUTER_TIMEOUT}s; stopping anyway" \
+    || log "outer process $OUTER_PID exited"
+fi
+
+if [ "$KIND" = phase2 ] && [ ! -f "$RUN_DIR/summary.json" ] && [ "$DRY_RUN" != 1 ] && [ -f "$RUN_DIR/state.pt" ]; then
   log "no summary.json -> run incomplete; resuming once from last checkpoint"
   echo "[watcher $(date '+%F %T')] run incomplete; resuming once" >> "$RUN_LOG"
   python scripts/phase2_baseline.py --resume "$RUN_DIR" >> "$RUN_LOG" 2>&1
@@ -52,9 +67,11 @@ if [ ! -f "$RUN_DIR/summary.json" ] && [ "$DRY_RUN" != 1 ] && [ -f "$RUN_DIR/sta
   echo "[watcher $(date '+%F %T')] resumed run exited with exit code: $CODE" >> "$RUN_LOG"
 fi
 
-log "writing final report"
-timeout 1800 python scripts/final_report.py "$RUN_DIR" "$CODE" "$RUN_LOG" "$REPORT_DIR" "$PILOT_TAG" 2>&1 \
-  || log "final report step failed"
+if [ "$KIND" = phase2 ]; then
+  log "writing final report"
+  timeout 1800 python scripts/final_report.py "$RUN_DIR" "$CODE" "$RUN_LOG" "$REPORT_DIR" "$PILOT_TAG" 2>&1 \
+    || log "final report step failed"
+fi
 
 log "creating code backup $BACKUP_PATH"
 mkdir -p reports
@@ -63,7 +80,7 @@ tar czf "$BACKUP_PATH" --exclude=__pycache__ --exclude=.ipynb_checkpoints \
   && log "backup ok: $(tar tzf "$BACKUP_PATH" | wc -l) entries, $(du -h "$BACKUP_PATH" | cut -f1)" \
   || log "backup FAILED"
 
-if [ "$DRY_RUN" != 1 ]; then
+if [ "$KIND" = phase2 ] && [ "$DRY_RUN" != 1 ]; then
   git add -- .gitignore "$RUN_DIR/config.json" reports 2>&1
   [ -f "$RUN_DIR/summary.json" ] && git add -- "$RUN_DIR/summary.json"
   git add -- results/pilots 2>&1

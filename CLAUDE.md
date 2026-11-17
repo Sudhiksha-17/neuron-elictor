@@ -28,8 +28,9 @@ of concept only. Keep everything simple.
   template "Write text that maximally activates neuron L{layer}N{neuron}."):
   Phase A (single neuron L14N8949) prompt "Text:\n"; Phase B (shared
   elicitor, 4 neurons) prompt "<|nK|>\n" with one new special token per
-  neuron (<|n0|>..<|n3|>, embedding rows trained). Raw text, no chat
-  template, thinking mode off.
+  neuron (<|n0|>..<|n3|>, embedding rows trained), or "<|nK|>\nText:\n"
+  if the pre-registered Phase B prompt check (phase 3) picks it. Raw text,
+  no chat template, thinking mode off.
 - Pilot neurons: 1-2 per layer (n_per_layer, default 1 -> 32 neurons),
   sampled uniformly at random with a fixed seed among the layer's
   neurons that are not low-activation (scripts/select_pilots.py; seed, rule
@@ -76,6 +77,21 @@ of concept only. Keep everything simple.
      chat-template tokens. Log raw vs cleaned examples.
    - Dry-run GRPO on 2-3 neurons for a few steps first; report memory use,
      time per step, and projected total time.
+   - Real-run decisions (2026-11-17, user): unmerged LoRA generation (no
+     --merged_gen; merge-path test cosine 0.843 between merged and LoRA
+     logit changes, unmerged costs only ~20 extra min on the 5090).
+     Generation batch 256, micro-batch 32 (grpo_phase.py defaults).
+   - Phase B prompt, pre-registered rule (2026-11-17): before Phase B
+     training, compare untrained samples on the four Phase B neurons for
+     (a) "<|nK|>\n" and (b) "<|nK|>\nText:\n" (best of 64 per neuron).
+     Use (b) iff its mean of per-neuron best-of-64 ratios to FineWeb max
+     (this GPU) is strictly higher than (a)'s; otherwise keep (a). Log the
+     comparison and the choice (scripts/phase_b_prompt_check.py ->
+     results/phase_b_prompt_check/<ts>/prompt_check.json; if the check
+     itself fails, (a) is kept and that is logged).
+   - The real run is launched with scripts/real_run.sh (install, data/
+     download + sha256 check, watchdog, prompt check, real pipeline under
+     watch_and_stop.sh, report, commit, push, pod stop).
 4. Report per round: mean activation, fraction of neurons beating their
    FineWeb max, score/baseline ratio per neuron, sample outputs.
    - Final evaluation uses 8 fresh samples per neuron from the trained
@@ -102,6 +118,10 @@ of concept only. Keep everything simple.
   scripts/watch_and_stop.sh so the pod stops when the run ends. Only
   ever "stop", never "remove"/"terminate".
 - Model and FineWeb revisions are pinned in hermes/revisions.json.
+- data/ inputs (gitignored) come from HF dataset gray171/hermes-baseline;
+  sha256 baseline.pt 70cde47f08fbcd786f1d0dfacd3e858526fee54b6845e41cebe70c978d649817,
+  contexts.npz d519c23a590961df190291e916464bcb186f1942500fc465dca2187f7143ff2f
+  (verified by scripts/real_run.sh before every real run).
 - Do not launch long runs without the user's go-ahead.
 - Save every report given to the user as timestamped markdown in
   reports/ (repo).

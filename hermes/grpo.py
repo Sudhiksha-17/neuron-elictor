@@ -32,6 +32,8 @@ from hermes.scoring import Scorer, CONTEXT_LEN, SCORE_BATCH, assert_fast_kernels
 from hermes.reward import Cleaner
 
 EMPTY_REWARD = -1.0
+# Phase B prompt templates (scripts/grpo_phase.py --phase_b_prompt, scripts/phase_b_prompt_check.py): (a) and (b)
+PHASE_B_PROMPTS = {"nK": "<|n{k}|>\n", "nK_text": "<|n{k}|>\nText:\n"}
 FLAT_STD = 1e-6
 ADV_EPS = 1e-4
 # LoRA on the language model's attention (full + linear/GatedDeltaNet) and MLP projections; not the vision tower

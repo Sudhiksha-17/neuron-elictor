@@ -10,6 +10,7 @@ See CLAUDE.md for the design and phases. Code layout:
 - `scripts/phase2_baseline.py` – FineWeb baseline, all 32 layers, 4 chunks/doc cap
 - `scripts/select_pilots.py` – pilot neurons
 - `scripts/idle_watchdog.sh`, `scripts/watch_and_stop.sh`, `scripts/launch_full_baseline.sh` – pod safety / long runs
+- `scripts/real_run.sh` – the real GRPO run on a fresh GPU pod, unattended (install, data/ + sha256, watchdog, Phase B prompt check `scripts/phase_b_prompt_check.py`, real pipeline under `watch_and_stop.sh`, report, commit, push, pod stop)
 - `scripts/quick_checks.py` – new-pod sanity checks (text rescore, repeated token, cross-GPU top-10 rescore)
 - `hermes/paths.py` – repo-relative paths (`data/`, `results/`, `reports/`, `logs/`)
 - `reports/` – every report, timestamped markdown

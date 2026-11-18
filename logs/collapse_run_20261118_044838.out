@@ -4,3 +4,7 @@
 [collapse 2026-11-18 08:28:22] pipeline ending (last exit 0); writing comparison report
 report: /workspace/neuron-elictor/reports/20261118_082822_collapse_fix.md
 [collapse 2026-11-18 08:28:22] committing
+[collapse 2026-11-18 08:28:30] committed: 3e2eea3 Collapse-fix experiments 20261118_044838: KL penalty, L10 solo, seed check; comparison report
+[collapse 2026-11-18 08:28:30] push FAILED (not authenticated or offline); commit is local only
+[collapse 2026-11-18 08:28:30] stopping pod 054chxspcxgs42 (runpodctl stop pod; never remove/terminate)
+[collapse 2026-11-18 08:28:32] stop command sent

@@ -44,6 +44,9 @@ else
   say "cloning $REPO_URL into $REPO"
   mkdir -p "$(dirname "$REPO")"; git clone "$REPO_URL" "$REPO"
 fi
+# commit identity used by all earlier pod commits (real_run.sh / grpo_pipeline.sh commit unattended)
+git -C "$REPO" config user.name > /dev/null || git -C "$REPO" config user.name hermes-pod
+git -C "$REPO" config user.email > /dev/null || git -C "$REPO" config user.email hermes-pod@users.noreply.github.com
 
 # 4. persist ~/.claude and ~/.claude.json under $PERSIST
 mkdir -p "$PERSIST"

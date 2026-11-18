@@ -24,7 +24,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("dir", help="dir holding fineweb_max.json (scripts/grpo_fwmax.py)")
 ap.add_argument("--n", type=int, default=64, help="untrained samples per neuron and prompt (best-of-N)")
 ap.add_argument("--seed", type=int, default=0)
-ap.add_argument("--batch", type=int, default=256)
+ap.add_argument("--batch", type=int, default=192)
 a = ap.parse_args()
 out = f"{a.dir}/prompt_check.json"
 assert not os.path.exists(out), f"{out} exists (never overwrite results)"

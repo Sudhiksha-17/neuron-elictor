@@ -1,7 +1,7 @@
 #!/bin/bash
 # Collapse-fix experiments (2026-11-18), unattended, as ONE pipeline. Launch from the repo root:
 #   setsid nohup scripts/collapse_run.sh > logs/collapse_run_$(date +%Y%m%d_%H%M%S).out 2>&1 < /dev/null &
-# Runs, in order (all: 300 steps, unmerged generation, --gen_batch 256 --micro_bs 32, all integrity checks,
+# Runs, in order (all: 300 steps, unmerged generation, --gen_batch 192 --micro_bs 32, all integrity checks,
 # --stop_flat_frac 0.9 --stop_patience 25):
 #   R1 "B-KL"         Phase B, nK_text, --kl_beta 0.04, seed 0, (a)(b)(c) reused from run 1 (results/grpo/20261118_013749)
 #   R2 "L10-solo"     --phase S --neuron L10N4358, prompt "Text:\n", --kl_beta 0, own (a)(b)(c)
@@ -28,11 +28,11 @@ TOP=$REPO/results/grpo_collapse/$TS
 LOGD=$REPO/logs/collapse_run_$TS
 STATUS=$TOP/pipeline_status.txt
 RUN1=results/grpo/20261118_013749
-COMMON="--gen_batch 256 --micro_bs 32 --steps 300 --stop_flat_frac 0.9 --stop_patience 25"
+COMMON="--gen_batch 192 --micro_bs 32 --steps 300 --stop_flat_frac 0.9 --stop_patience 25"
 # Testing only: SMOKE=1 -> tiny runs (2 steps, 2 fresh samples, (a)/(b) sizes 4/8: reuse from run 1 is refused for size),
 # results/smoke/<ts>_collapse_pipeline, report moved there, no commit, no push, no pod stop (watcher in DRY_RUN mode).
 if [ "$SMOKE" = 1 ]; then
-  COMMON="--gen_batch 256 --micro_bs 32 --steps 2 --n_fresh 2 --n_untrained_best 4 --n_matched 8 --stop_flat_frac 0.9 --stop_patience 25"
+  COMMON="--gen_batch 192 --micro_bs 32 --steps 2 --n_fresh 2 --n_untrained_best 4 --n_matched 8 --stop_flat_frac 0.9 --stop_patience 25"
 fi
 SHA_BASELINE=70cde47f08fbcd786f1d0dfacd3e858526fee54b6845e41cebe70c978d649817
 SHA_CONTEXTS=d519c23a590961df190291e916464bcb186f1942500fc465dca2187f7143ff2f

@@ -26,7 +26,7 @@ Scope flags (defaults unchanged): --steps, --groups_per_step, --n_matched (compu
 default steps x groups_per_neuron x group_size, also in --dry), --n_untrained_best, --n_fresh.
 
 Run defaults for the real run (decided 2026-11-17): unmerged LoRA generation (no --merged_gen; merge-path test
-cosine 0.843 between merged and LoRA logit changes, unmerged costs ~20 extra min on the 5090), --gen_batch 256,
+cosine 0.843 between merged and LoRA logit changes, unmerged costs ~20 extra min on the 5090), --gen_batch 192 (2026-11-18, RTX 4090; was 256 on the 5090),
 --micro_bs 32. --phase_b_prompt nK | nK_text selects the Phase B prompt "<|nK|>\\n" (default) or "<|nK|>\\nText:\\n";
 scripts/real_run.sh picks it with the pre-registered rule in scripts/phase_b_prompt_check.py.
 
@@ -76,8 +76,8 @@ ap.add_argument("--seed", type=int, default=0)
 ap.add_argument("--micro_bs", type=int, default=32)
 ap.add_argument("--phase_b_prompt", choices=list(PHASE_B_PROMPTS), default="nK",
                 help="Phase B prompt template: nK = '<|nK|>\\n' (a), nK_text = '<|nK|>\\nText:\\n' (b)")
-ap.add_argument("--gen_batch", type=int, default=256, help="generation batch during training and for (d)")
-ap.add_argument("--eval_batch", type=int, default=256, help="generation batch for untrained (adapter off) evals (a), (b)")
+ap.add_argument("--gen_batch", type=int, default=192, help="generation batch during training and for (d)")
+ap.add_argument("--eval_batch", type=int, default=192, help="generation batch for untrained (adapter off) evals (a), (b)")
 ap.add_argument("--merged_gen", action="store_true", help="generate with LoRA merged into bf16 weights (faster, not bitwise)")
 ap.add_argument("--n_untrained_best", type=int, default=None, help="(a) best-of-N size; default 64 (8 with --dry)")
 ap.add_argument("--n_matched", type=int, default=None,

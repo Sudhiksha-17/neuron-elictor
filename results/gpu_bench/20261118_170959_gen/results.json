@@ -1,0 +1,64 @@
+{
+ "what": "gen",
+ "kv_cache": {
+  "model_config_use_cache": false,
+  "text_config_use_cache": true,
+  "generation_config_use_cache": true,
+  "gradient_checkpointing": true,
+  "layer0_input_seq_lens_8_new_tokens": [
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "kv_cache_used": true,
+  "lora_b64_32tok_use_cache_True": {
+   "mode": "lora",
+   "batch": 64,
+   "oom": false,
+   "new_tokens": 32,
+   "gen_s": 3.667466640472412,
+   "total_s": 3.667524576187134,
+   "ms_per_decode_step": 114.60833251476288,
+   "seq_per_s": 17.450738145434382,
+   "peak_gb": 14.23426048
+  },
+  "lora_b64_32tok_use_cache_False": {
+   "mode": "lora",
+   "batch": 64,
+   "oom": false,
+   "new_tokens": 32,
+   "gen_s": 7.830498218536377,
+   "total_s": 7.830545425415039,
+   "ms_per_decode_step": 244.70306932926178,
+   "seq_per_s": 8.173170878003525,
+   "peak_gb": 10.852748288
+  },
+  "lora_b64_32tok_checkpointing_off": {
+   "mode": "lora",
+   "batch": 64,
+   "oom": false,
+   "new_tokens": 32,
+   "gen_s": 3.675302267074585,
+   "total_s": 3.6753392219543457,
+   "ms_per_decode_step": 114.85319584608078,
+   "seq_per_s": 17.413533731183914,
+   "peak_gb": 14.23426048
+  },
+  "lora_b64_32tok_checkpointing_on": {
+   "mode": "lora",
+   "batch": 64,
+   "oom": false,
+   "new_tokens": 32,
+   "gen_s": 3.8003628253936768,
+   "total_s": 3.800398826599121,
+   "ms_per_decode_step": 118.7613382935524,
+   "seq_per_s": 16.84049732629681,
+   "peak_gb": 14.23426048
+  }
+ }
+}

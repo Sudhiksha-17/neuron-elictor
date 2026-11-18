@@ -1,7 +1,7 @@
 #!/bin/bash
 # Smoke test of the real GRPO code path (added 2026-11-18): 1 step of Phase A and 1 step of Phase B with tiny eval
 # sizes, Phase B once per prompt variant (nK and nK_text), plus a tiny Phase B prompt check (--n 4) and the gate.
-# Same generation / micro-batch settings as the real run (--gen_batch 256 --micro_bs 32, unmerged LoRA generation).
+# Same generation / micro-batch settings as the real run (--gen_batch 192 --micro_bs 32, unmerged LoRA generation).
 # Uses --dry (so Phase B runs without a passed gate) with explicit tiny sizes. Throwaway run dir (must not exist):
 #   bash scripts/smoke_test.sh results/smoke/<ts>
 # Called by scripts/real_run.sh after the environment check; exits non-zero on the first failure.
@@ -11,7 +11,7 @@ cd "$REPO"
 S=${1:?usage: smoke_test.sh <throwaway run dir>}
 [ -e "$S" ] && { echo "ERROR: $S exists (never overwrite results)"; exit 1; }
 export HF_HOME=/workspace/hf_cache PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True PYTHONUNBUFFERED=1
-ARGS="--gen_batch 256 --micro_bs 32"
+ARGS="--gen_batch 192 --micro_bs 32"
 TINY="--dry --steps 1 --n_untrained_best 4 --n_matched 4 --n_fresh 2 --sample_every 1"
 say() { echo "[smoke $(date '+%F %T')] $*"; }
 mkdir -p "$S"

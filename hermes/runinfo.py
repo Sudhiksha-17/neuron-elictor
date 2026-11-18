@@ -27,4 +27,5 @@ def run_info():
     freeze = subprocess.run([sys.executable, "-m", "pip", "freeze"], capture_output=True, text=True).stdout.splitlines()
     gpu = torch.cuda.get_device_name(0) if torch.cuda.is_available() else "none"
     return dict(**pinned_revisions(), gpu=gpu, python=platform.python_version(),
-                runpod_pod_id=os.environ.get("RUNPOD_POD_ID"), pip_freeze=freeze)
+                runpod_pod_id=os.environ.get("RUNPOD_POD_ID"),
+                pytorch_cuda_alloc_conf=os.environ.get("PYTORCH_CUDA_ALLOC_CONF"), pip_freeze=freeze)

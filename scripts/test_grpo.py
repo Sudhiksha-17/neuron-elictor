@@ -26,7 +26,7 @@ from hermes.grpo import Elicitor, group_advantages
 from hermes.baseline import Baseline
 
 ap = argparse.ArgumentParser(); ap.add_argument("--micro_bs", type=int, nargs="+", default=[16, 32])
-ap.add_argument("--gen_batch", type=int, default=256); a = ap.parse_args()
+ap.add_argument("--gen_batch", type=int, default=192); a = ap.parse_args()
 RUN_DIR = f"{RESULTS_DIR}/grpo_tests/{time.strftime('%Y%m%d_%H%M%S')}"
 os.makedirs(RUN_DIR, exist_ok=False)
 checks, info = {}, {}

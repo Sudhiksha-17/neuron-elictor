@@ -81,6 +81,9 @@ of concept only. Keep everything simple.
      --merged_gen; merge-path test cosine 0.843 between merged and LoRA
      logit changes, unmerged costs only ~20 extra min on the 5090).
      Generation batch 256, micro-batch 32 (grpo_phase.py defaults).
+   - RTX 4090 decisions (2026-11-18, user): generation batch 192 (256 OOMs on
+     24 GB), micro-batch 32, PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+     (set by every pipeline script and hermes/__init__.py; recorded in run configs).
    - Phase B prompt, pre-registered rule (2026-11-17): before Phase B
      training, compare untrained samples on the four Phase B neurons for
      (a) "<|nK|>\n" and (b) "<|nK|>\nText:\n" (best of 64 per neuron).

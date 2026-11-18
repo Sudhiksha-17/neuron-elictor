@@ -16,7 +16,7 @@
 #      best of 64 untrained samples per Phase B neuron for (a) "<|nK|>\n" and (b) "<|nK|>\nText:\n"; (b) iff its mean
 #      best-of-64 ratio to FineWeb max is strictly higher, else (a). If the check fails, (a) is kept (logged).
 #   3. REAL pipeline: scripts/grpo_pipeline.sh --no_stop (no --dry, no --force_phase_b; the gate decides Phase B),
-#      unmerged LoRA generation (no --merged_gen), --gen_batch 256 --micro_bs 32, Phase B prompt from step 2.
+#      unmerged LoRA generation (no --merged_gen), --gen_batch 192 --micro_bs 32, Phase B prompt from step 2.
 #      Runs under scripts/watch_and_stop.sh (KIND=grpo, OUTER_PID=this script): if this script dies without its
 #      EXIT trap, the watcher still stops the pod. Pipeline timeout 12 h.
 # Then (EXIT trap, also on failure): reports/<ts>_real_run.md, commit (small files only), push if git is
@@ -37,7 +37,7 @@ HF_DATA=https://huggingface.co/datasets/gray171/hermes-baseline/resolve/main
 SHA_BASELINE=70cde47f08fbcd786f1d0dfacd3e858526fee54b6845e41cebe70c978d649817
 SHA_CONTEXTS=d519c23a590961df190291e916464bcb186f1942500fc465dca2187f7143ff2f
 PILOTS_SRC=$REPO/results/pilots/20261109_213918_full1M_pilots/pilots.json
-RUN_ARGS="--gen_batch 256 --micro_bs 32"      # decided 2026-11-17; no --merged_gen
+RUN_ARGS="--gen_batch 192 --micro_bs 32"      # 192 decided 2026-11-18 (RTX 4090: 256 OOMs); no --merged_gen
 B_PROMPT=nK; B_PROMPT_NOTE="not run"
 PIPE_CODE=not_run
 SMOKE_RESULT=not_run

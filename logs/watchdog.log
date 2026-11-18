@@ -145,3 +145,17 @@
 [2026-11-18 08:17:13] check: util=98% (busy); idle streak reset
 [2026-11-18 08:22:13] check: util=70% (busy); idle streak reset
 [2026-11-18 08:27:13] check: util=100% (busy); idle streak reset
+[2026-11-18 17:06:20] watchdog started: PID 1203, pod xuc2hb8kyrt8ka, check every 300s, stop after 7200s below 5%
+[2026-11-18 17:06:20] check: util=0% (idle); idle for 0 min (limit 120 min)
+[2026-11-18 17:11:20] check: util=96% (busy); idle streak reset
+[2026-11-18 17:16:20] check: util=28% (busy); idle streak reset
+[2026-11-18 17:21:21] check: util=0% (idle); idle for 0 min (limit 120 min)
+[2026-11-18 17:26:21] check: util=0% (idle); idle for 5 min (limit 120 min)
+[2026-11-18 17:31:21] check: util=0% (idle); idle for 10 min (limit 120 min)
+[2026-11-18 17:36:21] check: util=0% (idle); idle for 15 min (limit 120 min)
+[2026-11-18 17:41:21] check: util=0% (idle); idle for 20 min (limit 120 min)
+[2026-11-18 17:46:21] check: util=0% (idle); idle for 25 min (limit 120 min)
+[2026-11-18 17:51:21] check: util=0% (idle); idle for 30 min (limit 120 min)
+[2026-11-18 17:56:21] check: util=0% (idle); idle for 35 min (limit 120 min)
+[2026-11-18 18:01:21] check: util=0% (idle); idle for 40 min (limit 120 min)
+[2026-11-18 18:06:21] check: util=0% (idle); idle for 45 min (limit 120 min)

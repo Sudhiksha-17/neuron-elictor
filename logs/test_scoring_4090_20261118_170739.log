@@ -1,0 +1,36 @@
+fast kernels:
+  torch_chunk_gated_delta_rule -> fla.ops.gated_delta_rule.chunk.chunk_gated_delta_rule
+  torch_recurrent_gated_delta_rule -> fla.ops.gated_delta_rule.fused_recurrent.fused_recurrent_gated_delta_rule
+  causal_conv1d_fn -> causal_conv1d.causal_conv1d_interface.causal_conv1d_fn
+  causal_conv1d_update -> causal_conv1d.causal_conv1d_interface.causal_conv1d_update
+simulated fallback -> raised KernelFallbackError (torch_chunk_gated_delta_rule falls back to the reference PyTorch implementation ...)
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<01:37,  7.40it/s]Loading weights:   4%|▎         | 26/723 [00:00<00:05, 130.16it/s]Loading weights:   6%|▋         | 46/723 [00:00<00:04, 149.40it/s]Loading weights:  11%|█         | 78/723 [00:00<00:03, 207.10it/s]Loading weights:  14%|█▍        | 100/723 [00:00<00:03, 192.27it/s]Loading weights:  17%|█▋        | 124/723 [00:00<00:02, 203.13it/s]Loading weights:  20%|██        | 147/723 [00:00<00:02, 205.32it/s]Loading weights:  24%|██▎       | 170/723 [00:00<00:02, 211.26it/s]Loading weights:  27%|██▋       | 195/723 [00:01<00:02, 216.78it/s]Loading weights:  30%|███       | 220/723 [00:01<00:02, 221.69it/s]Loading weights:  34%|███▎      | 243/723 [00:01<00:02, 215.86it/s]Loading weights:  37%|███▋      | 265/723 [00:01<00:02, 202.10it/s]Loading weights:  40%|███▉      | 286/723 [00:01<00:02, 202.13it/s]Loading weights:  42%|████▏     | 307/723 [00:01<00:02, 199.30it/s]Loading weights:  46%|████▌     | 330/723 [00:01<00:01, 205.01it/s]Loading weights:  49%|████▉     | 353/723 [00:01<00:01, 208.58it/s]Loading weights:  52%|█████▏    | 374/723 [00:01<00:01, 208.57it/s]Loading weights:  55%|█████▌    | 398/723 [00:01<00:01, 216.92it/s]Loading weights:  58%|█████▊    | 420/723 [00:02<00:01, 211.05it/s]Loading weights:  73%|███████▎  | 528/723 [00:02<00:00, 459.19it/s]Loading weights:  89%|████████▉ | 645/723 [00:02<00:00, 664.92it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 304.37it/s]
+
+24 texts, token lengths: [2, 4, 7, 11, 37, 26, 24, 26, 31, 15, 13, 20, 29, 41, 18, 27, 1, 34, 61, 64, 14, 20, 5, 14]
+
+batched vs one-at-a-time (221184 scores): value mismatches 0, argmax mismatches 0, max|diff| 0.0e+00
+shuffled batch vs one-at-a-time:         value mismatches 0, argmax mismatches 0
+
+all argmax positions inside real tokens: True
+without exclusion, a pad position would have been the max for 52739 text-neuron pairs
+random tokens instead of pad after each text -> value mismatches 0 (0 = no leakage)
+
+full 64-token texts: all-full batch vs mixed padded batch -> value mismatches 0
+
+reference, WITHOUT fixed shape (batch of 24 vs batch of 1): mismatches 193118/221184, max|diff| 0.668, median rel diff for |score|>1: 1.02%
+
+multi-layer read [0, 14, 15, 16, 31] vs layer 15 alone: mismatches 0
+score_pairs, 24 rows with neurons from layers [0, 14, 15, 16, 31]: mismatches vs per-row single-layer scoring 0
+
+checks:
+  PASS  fast_kernel_assert_passes
+  PASS  fast_kernel_assert_fails_on_simulated_fallback
+  PASS  batched_equals_single_exact_values
+  PASS  batched_equals_single_exact_argmax
+  PASS  argmax_never_on_pad
+  PASS  pad_content_cannot_leak
+  PASS  full_rows_same_in_full_and_mixed_batches
+  PASS  at_least_20_texts_varied_lengths
+  PASS  multi_layer_read_equals_single_layer
+  PASS  mixed_layer_pairs_equal_single_scoring
+saved: /workspace/neuron-elictor/results/scoring_tests/20261118_170910

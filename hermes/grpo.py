@@ -187,7 +187,7 @@ class Elicitor:
         return self.tok(prompt, add_special_tokens=False).input_ids
 
     @torch.no_grad()
-    def generate(self, prompt_ids, n, batch=256, untrained=False, merged=False):
+    def generate(self, prompt_ids, n, batch=192, untrained=False, merged=False):
         """n completions for each prompt in prompt_ids (list of token lists, all the same length).
         -> list (per prompt) of lists of completion token lists (cut after the first EOS, EOS kept)."""
         P = len(prompt_ids[0]); assert all(len(p) == P for p in prompt_ids)

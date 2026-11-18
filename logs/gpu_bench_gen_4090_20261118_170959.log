@@ -1,0 +1,76 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<02:12,  5.43it/s]Loading weights:   4%|▎         | 27/723 [00:00<00:06, 113.60it/s]Loading weights:   6%|▋         | 46/723 [00:00<00:04, 142.29it/s]Loading weights:  11%|█         | 78/723 [00:00<00:03, 202.48it/s]Loading weights:  14%|█▍        | 101/723 [00:00<00:03, 184.37it/s]Loading weights:  18%|█▊        | 128/723 [00:00<00:02, 203.14it/s]Loading weights:  21%|██        | 150/723 [00:00<00:02, 199.44it/s]Loading weights:  24%|██▎       | 171/723 [00:00<00:02, 199.28it/s]Loading weights:  28%|██▊       | 199/723 [00:01<00:02, 216.51it/s]Loading weights:  31%|███       | 222/723 [00:01<00:02, 217.31it/s]Loading weights:  34%|███▍      | 245/723 [00:01<00:02, 208.34it/s]Loading weights:  37%|███▋      | 267/723 [00:01<00:02, 193.79it/s]Loading weights:  40%|████      | 291/723 [00:01<00:02, 202.59it/s]Loading weights:  43%|████▎     | 312/723 [00:01<00:02, 194.76it/s]Loading weights:  47%|████▋     | 341/723 [00:01<00:01, 218.99it/s]Loading weights:  50%|█████     | 364/723 [00:01<00:01, 212.30it/s]Loading weights:  54%|█████▎    | 388/723 [00:01<00:01, 219.89it/s]Loading weights:  57%|█████▋    | 411/723 [00:02<00:01, 215.42it/s]Loading weights:  60%|██████    | 434/723 [00:02<00:01, 218.12it/s]Loading weights:  76%|███████▌  | 546/723 [00:02<00:00, 474.10it/s]Loading weights:  92%|█████████▏| 667/723 [00:02<00:00, 686.43it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 294.34it/s]
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3303: FutureWarning: `is_gradient_checkpointing` is deprecated and will be removed in v6. Use `is_activation_checkpointing` instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3195: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+[2026-11-18 17:10:50] base-weight backup: 248 LoRA base weights + 4 embedding rows, 7.14 GB pinned CPU, 21.8s
+[2026-11-18 17:11:05] KV cache check: {'model_config_use_cache': False, 'text_config_use_cache': True, 'generation_config_use_cache': True, 'gradient_checkpointing': True, 'layer0_input_seq_lens_8_new_tokens': [2, 1, 1, 1, 1, 1, 1, 1], 'kv_cache_used': True}
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3280: FutureWarning: `gradient_checkpointing_disable` is deprecated and will be removed in v6. Use `activation_checkpointing_disable` instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3195: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/workspace/neuron-elictor/scripts/gpu_bench.py", line 175, in <module>
+    n_tr, _, _ = el.pg_backward(pid_per, flat, adv, len(flat), 32, log_kl=False); torch.cuda.synchronize(); t_pg = time.time() - t0
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/neuron-elictor/hermes/grpo.py", line 314, in pg_backward
+    loss.backward()
+  File "/usr/local/lib/python3.12/dist-packages/torch/_tensor.py", line 647, in backward
+    torch.autograd.backward(
+  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/__init__.py", line 354, in backward
+    _engine_run_backward(
+  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py", line 311, in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/fla/utils/_decorators.py", line 152, in wrapper
+    return fn(*processed_args, **processed_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/amp/autocast_mode.py", line 563, in decorate_bwd
+    return bwd(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/fla/ops/gated_delta_rule/chunk.py", line 362, in backward
+    dq, dk, dv, db, dg, dh0, dA_log, ddt_bias = chunk_gated_delta_rule_bwd(
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/fla/ops/gated_delta_rule/chunk.py", line 202, in chunk_gated_delta_rule_bwd
+    dh, dh0, dv = chunk_gated_delta_rule_bwd_dhu(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/fla/ops/backends/__init__.py", line 214, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/fla/ops/common/chunk_delta_h.py", line 771, in chunk_gated_delta_rule_bwd_dhu
+    chunk_gated_delta_rule_bwd_kernel_dhu_blockdim64[grid](
+  File "/usr/local/lib/python3.12/dist-packages/triton/runtime/jit.py", line 390, in <lambda>
+    return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/triton/runtime/autotuner.py", line 453, in run
+    return self.fn.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/fla/ops/utils/cache.py", line 378, in run
+    return super().run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/triton/runtime/autotuner.py", line 237, in run
+    used_cached_result = self.check_disk_cache(key, pruned_configs, benchmark)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/triton/runtime/autotuner.py", line 201, in check_disk_cache
+    bench_fn()
+  File "/usr/local/lib/python3.12/dist-packages/triton/runtime/autotuner.py", line 228, in benchmark
+    timings = {config: self._bench(*args, config=config, **kwargs) for config in pruned_configs}
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/triton/runtime/autotuner.py", line 160, in _bench
+    return self.do_bench(kernel_call, quantiles=(0.5, 0.2, 0.8))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/triton/testing.py", line 149, in do_bench
+    fn()
+  File "/usr/local/lib/python3.12/dist-packages/triton/runtime/autotuner.py", line 146, in kernel_call
+    self.fn.run(
+  File "/usr/local/lib/python3.12/dist-packages/triton/runtime/jit.py", line 617, in run
+    kernel.run(grid_0, grid_1, grid_2, stream, kernel.function, kernel.packed_metadata, launch_metadata,
+  File "/usr/local/lib/python3.12/dist-packages/triton/backends/nvidia/driver.py", line 708, in __call__
+    self.launch(gridX, gridY, gridZ, stream, function, self.launch_cooperative_grid, self.launch_pdl,
+RuntimeError: Triton Error [CUDA]: out of memory

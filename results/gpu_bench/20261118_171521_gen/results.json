@@ -1,0 +1,262 @@
+{
+ "what": "gen",
+ "kv_cache": {
+  "model_config_use_cache": false,
+  "text_config_use_cache": true,
+  "generation_config_use_cache": true,
+  "gradient_checkpointing": true,
+  "layer0_input_seq_lens_8_new_tokens": [
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "kv_cache_used": true,
+  "lora_b64_32tok_use_cache_True": {
+   "mode": "lora",
+   "batch": 64,
+   "oom": false,
+   "new_tokens": 32,
+   "gen_s": 3.6450610160827637,
+   "total_s": 3.645101547241211,
+   "ms_per_decode_step": 113.90815675258636,
+   "seq_per_s": 17.558005124638175,
+   "peak_gb": 14.2322944
+  },
+  "lora_b64_32tok_use_cache_False": {
+   "mode": "lora",
+   "batch": 64,
+   "oom": false,
+   "new_tokens": 32,
+   "gen_s": 7.7614898681640625,
+   "total_s": 7.761518716812134,
+   "ms_per_decode_step": 242.54655838012695,
+   "seq_per_s": 8.245839534303077,
+   "peak_gb": 10.851699712
+  },
+  "lora_b64_32tok_checkpointing_off": {
+   "mode": "lora",
+   "batch": 64,
+   "oom": false,
+   "new_tokens": 32,
+   "gen_s": 3.4958810806274414,
+   "total_s": 3.495918035507202,
+   "ms_per_decode_step": 109.24628376960754,
+   "seq_per_s": 18.307258892374357,
+   "peak_gb": 14.2322944
+  },
+  "lora_b64_32tok_checkpointing_on": {
+   "mode": "lora",
+   "batch": 64,
+   "oom": false,
+   "new_tokens": 32,
+   "gen_s": 3.5724098682403564,
+   "total_s": 3.5724446773529053,
+   "ms_per_decode_step": 111.63780838251114,
+   "seq_per_s": 17.915077597611763,
+   "peak_gb": 14.2322944
+  }
+ },
+ "train_step": {
+  "n_trained": 256,
+  "pg_backward_s": 7.373745918273926,
+  "peak_gb": 19.402457088,
+  "score_256_s": 0.5575428009033203
+ },
+ "sweep": [
+  {
+   "mode": "untrained",
+   "batch": 64,
+   "oom": false,
+   "new_tokens": 64,
+   "gen_s": 4.426051378250122,
+   "total_s": 4.486873626708984,
+   "ms_per_decode_step": 69.15705278515816,
+   "seq_per_s": 14.459841183611148,
+   "peak_gb": 14.008506368,
+   "first_run_gen_s": 4.326300144195557
+  },
+  {
+   "mode": "untrained",
+   "batch": 128,
+   "oom": false,
+   "new_tokens": 64,
+   "gen_s": 4.294854164123535,
+   "total_s": 4.352915525436401,
+   "ms_per_decode_step": 67.10709631443024,
+   "seq_per_s": 29.80310741846141,
+   "peak_gb": 17.880093184,
+   "first_run_gen_s": 4.942043304443359
+  },
+  {
+   "mode": "untrained",
+   "batch": 192,
+   "oom": false,
+   "new_tokens": 64,
+   "gen_s": 4.7916905879974365,
+   "total_s": 4.849347829818726,
+   "ms_per_decode_step": 74.87016543745995,
+   "seq_per_s": 40.069365179992026,
+   "peak_gb": 21.75168,
+   "first_run_gen_s": 5.943623781204224
+  },
+  {
+   "mode": "untrained",
+   "batch": 256,
+   "oom": true
+  },
+  {
+   "mode": "merged",
+   "batch": 64,
+   "oom": false,
+   "new_tokens": 64,
+   "gen_s": 4.463403940200806,
+   "total_s": 5.2142815589904785,
+   "ms_per_decode_step": 69.74068656563759,
+   "seq_per_s": 14.3388321687776,
+   "peak_gb": 14.008506368,
+   "first_run_gen_s": 4.018399477005005
+  },
+  {
+   "mode": "merged",
+   "batch": 128,
+   "oom": false,
+   "new_tokens": 64,
+   "gen_s": 4.673435926437378,
+   "total_s": 5.4257025718688965,
+   "ms_per_decode_step": 73.02243635058403,
+   "seq_per_s": 27.38884238808343,
+   "peak_gb": 17.880093184,
+   "first_run_gen_s": 4.309394121170044
+  },
+  {
+   "mode": "merged",
+   "batch": 192,
+   "oom": false,
+   "new_tokens": 64,
+   "gen_s": 4.8917834758758545,
+   "total_s": 5.642963647842407,
+   "ms_per_decode_step": 76.43411681056023,
+   "seq_per_s": 39.24948864700582,
+   "peak_gb": 21.75168,
+   "first_run_gen_s": 4.803903579711914
+  },
+  {
+   "mode": "merged",
+   "batch": 256,
+   "oom": true
+  },
+  {
+   "mode": "lora",
+   "batch": 64,
+   "oom": false,
+   "new_tokens": 64,
+   "gen_s": 7.2148826122283936,
+   "total_s": 7.214915990829468,
+   "ms_per_decode_step": 112.73254081606865,
+   "seq_per_s": 8.870553193967062,
+   "peak_gb": 15.087285248,
+   "first_run_gen_s": 7.54140043258667
+  },
+  {
+   "mode": "lora",
+   "batch": 128,
+   "oom": false,
+   "new_tokens": 64,
+   "gen_s": 7.343277454376221,
+   "total_s": 7.343321800231934,
+   "ms_per_decode_step": 114.73871022462845,
+   "seq_per_s": 17.430908854426914,
+   "peak_gb": 18.768487936,
+   "first_run_gen_s": 7.5034825801849365
+  },
+  {
+   "mode": "lora",
+   "batch": 192,
+   "oom": false,
+   "new_tokens": 64,
+   "gen_s": 8.118029594421387,
+   "total_s": 8.118084192276001,
+   "ms_per_decode_step": 126.84421241283417,
+   "seq_per_s": 23.651059381692832,
+   "peak_gb": 22.449690624,
+   "first_run_gen_s": 7.721419095993042
+  },
+  {
+   "mode": "lora",
+   "batch": 256,
+   "oom": true
+  }
+ ],
+ "merge_timing": {
+  "calls": 7,
+  "records": [
+   {
+    "merge_s": 0.08190631866455078,
+    "unmerge_s": 0.08568263053894043,
+    "restore_s": 0.5860311985015869,
+    "ok": true
+   },
+   {
+    "merge_s": 0.0808413028717041,
+    "unmerge_s": 0.08488011360168457,
+    "restore_s": 0.5850443840026855,
+    "ok": true
+   },
+   {
+    "merge_s": 0.08064103126525879,
+    "unmerge_s": 0.08513092994689941,
+    "restore_s": 0.5851085186004639,
+    "ok": true
+   },
+   {
+    "merge_s": 0.08104634284973145,
+    "unmerge_s": 0.08579850196838379,
+    "restore_s": 0.5853290557861328,
+    "ok": true
+   },
+   {
+    "merge_s": 0.08073544502258301,
+    "unmerge_s": 0.08511185646057129,
+    "restore_s": 0.586698055267334,
+    "ok": true
+   },
+   {
+    "merge_s": 0.08081650733947754,
+    "unmerge_s": 0.08560872077941895,
+    "restore_s": 0.5846734046936035,
+    "ok": true
+   },
+   {
+    "merge_s": 0.08102726936340332,
+    "unmerge_s": 0.08762240409851074,
+    "restore_s": 0.5853204727172852,
+    "ok": false
+   }
+  ],
+  "mean_merge_s": 0.08100203105381557,
+  "mean_unmerge_s": 0.08569073677062988,
+  "mean_restore_s": 0.5854578699384417
+ },
+ "bitwise_after_sweep": {
+  "ok": true,
+  "n_checked": 249,
+  "n_mismatch": 0,
+  "mismatches": [],
+  "seconds": 0.6306793689727783
+ },
+ "projection": {
+  "A_merged_step_s": 7.1983767577580045,
+  "A_lora_step_s": 9.197704792022705,
+  "A_eval_untrained_s": 522.7213847637177,
+  "A_total_h_merged": 0.8283984478030886,
+  "B_merged_step_s": 18.467006308691843,
+  "B_lora_step_s": 24.16734790802002,
+  "B_eval_untrained_s": 2090.8855390548706,
+  "B_total_h_merged": 2.2030520643506732
+ }
+}

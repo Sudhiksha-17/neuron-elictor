@@ -1,0 +1,22 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<02:51,  4.20it/s]Loading weights:   4%|▎         | 27/723 [00:00<00:07, 94.78it/s]Loading weights:   6%|▋         | 46/723 [00:00<00:05, 125.92it/s]Loading weights:  11%|█         | 78/723 [00:00<00:03, 187.92it/s]Loading weights:  14%|█▍        | 101/723 [00:00<00:03, 175.42it/s]Loading weights:  18%|█▊        | 130/723 [00:00<00:02, 205.86it/s]Loading weights:  21%|██        | 153/723 [00:00<00:03, 188.09it/s]Loading weights:  25%|██▌       | 182/723 [00:01<00:02, 214.75it/s]Loading weights:  28%|██▊       | 206/723 [00:01<00:02, 201.52it/s]Loading weights:  32%|███▏      | 233/723 [00:01<00:02, 219.43it/s]Loading weights:  36%|███▌      | 257/723 [00:01<00:02, 207.97it/s]Loading weights:  39%|███▊      | 279/723 [00:01<00:02, 191.87it/s]Loading weights:  42%|████▏     | 304/723 [00:01<00:02, 203.86it/s]Loading weights:  45%|████▌     | 326/723 [00:01<00:01, 204.31it/s]Loading weights:  48%|████▊     | 347/723 [00:01<00:01, 204.25it/s]Loading weights:  51%|█████     | 369/723 [00:01<00:01, 206.20it/s]Loading weights:  55%|█████▍    | 396/723 [00:02<00:01, 221.66it/s]Loading weights:  58%|█████▊    | 419/723 [00:02<00:01, 182.29it/s]Loading weights:  71%|███████▏  | 516/723 [00:02<00:00, 377.43it/s]Loading weights:  90%|████████▉ | 650/723 [00:02<00:00, 628.40it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 286.60it/s]
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3303: FutureWarning: `is_gradient_checkpointing` is deprecated and will be removed in v6. Use `is_activation_checkpointing` instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3195: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+[2026-11-18 17:13:13] base-weight backup: 248 LoRA base weights + 4 embedding rows, 7.14 GB pinned CPU, 21.0s
+/workspace/neuron-elictor/hermes/grpo.py:316: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  lp_sum += float((logp * m).sum()); lp_n += int(m.sum())
+[2026-11-18 17:14:40] pg {'micro_bs': 16, 'warmup_s': 63.33538508415222, 'warmup_peak_gb': 15.195196928, 'measured_s': 11.318950891494751, 'measured_peak_gb': 15.194213888}
+[2026-11-18 17:14:56] pg {'micro_bs': 32, 'warmup_s': 9.385358333587646, 'warmup_peak_gb': 19.430178304, 'measured_s': 6.690964221954346, 'measured_peak_gb': 19.430178304}
+[2026-11-18 17:15:01] pg {'micro_bs': 48, 'oom': True}
+## gpu_bench pg
+
+### pg_backward micro-batch check (256 completions; second run measured)
+
+| micro_bs | warm-up s | measured s | peak GB |
+|---|---|---|---|
+| 16 | 63.3 | 11.3 | 15.2 |
+| 32 | 9.4 | 6.7 | 19.4 |
+| 48 | OOM | | |
+

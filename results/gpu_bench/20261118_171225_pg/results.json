@@ -1,0 +1,23 @@
+{
+ "what": "pg",
+ "pg_backward": [
+  {
+   "micro_bs": 16,
+   "warmup_s": 63.33538508415222,
+   "warmup_peak_gb": 15.195196928,
+   "measured_s": 11.318950891494751,
+   "measured_peak_gb": 15.194213888
+  },
+  {
+   "micro_bs": 32,
+   "warmup_s": 9.385358333587646,
+   "warmup_peak_gb": 19.430178304,
+   "measured_s": 6.690964221954346,
+   "measured_peak_gb": 19.430178304
+  },
+  {
+   "micro_bs": 48,
+   "oom": true
+  }
+ ]
+}

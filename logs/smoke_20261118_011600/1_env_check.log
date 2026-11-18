@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<03:19,  3.61it/s]Loading weights:   4%|▎         | 26/723 [00:00<00:08, 85.62it/s]Loading weights:   6%|▌         | 45/723 [00:00<00:05, 116.89it/s]Loading weights:   9%|▉         | 66/723 [00:00<00:04, 145.41it/s]Loading weights:  12%|█▏        | 90/723 [00:00<00:03, 173.41it/s]Loading weights:  15%|█▌        | 110/723 [00:00<00:03, 176.91it/s]Loading weights:  18%|█▊        | 132/723 [00:00<00:03, 186.59it/s]Loading weights:  21%|██        | 152/723 [00:01<00:03, 176.90it/s]Loading weights:  24%|██▎       | 171/723 [00:01<00:03, 179.15it/s]Loading weights:  28%|██▊       | 199/723 [00:01<00:02, 201.17it/s]Loading weights:  30%|███       | 220/723 [00:01<00:02, 193.45it/s]Loading weights:  33%|███▎      | 240/723 [00:01<00:02, 190.18it/s]Loading weights:  36%|███▌      | 260/723 [00:01<00:02, 185.37it/s]Loading weights:  40%|███▉      | 287/723 [00:01<00:02, 207.32it/s]Loading weights:  43%|████▎     | 309/723 [00:01<00:02, 195.49it/s]Loading weights:  46%|████▌     | 330/723 [00:01<00:01, 197.90it/s]Loading weights:  49%|████▉     | 354/723 [00:02<00:01, 204.36it/s]Loading weights:  52%|█████▏    | 375/723 [00:02<00:01, 193.84it/s]Loading weights:  55%|█████▍    | 397/723 [00:02<00:01, 192.65it/s]Loading weights:  58%|█████▊    | 417/723 [00:02<00:01, 184.86it/s]Loading weights:  71%|███████   | 515/723 [00:02<00:00, 397.35it/s]Loading weights:  91%|█████████▏| 660/723 [00:02<00:00, 686.76it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 271.98it/s]
+## gpu_bench env
+
+- PASS gpu present
+- PASS pinned snapshot in cache
+- PASS model loads offline at pinned revision + fast kernels
+- PASS data/ files present
+- GPU NVIDIA GeForce RTX 5090 (33.7 GB), versions {'python': '3.12.3', 'torch': '2.8.0+cu129', 'cuda': '12.9', 'transformers': '5.23.0', 'peft': '0.21.3'}
+- model load 8.1s, HF_HUB_OFFLINE=1
+

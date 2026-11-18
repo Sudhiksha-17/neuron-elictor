@@ -60,3 +60,7 @@
 [2026-11-16 23:31:11] check: util=52% (busy); idle streak reset
 [2026-11-16 23:36:11] check: util=64% (busy); idle streak reset
 [2026-11-16 23:41:11] check: util=85% (busy); idle streak reset
+[2026-11-18 01:16:18] watchdog started: PID 2139, pod 054chxspcxgs42, check every 300s, stop after 3600s below 5%
+[2026-11-18 01:16:18] check: util=0% (idle); idle for 0 min (limit 60 min)
+[2026-11-18 01:21:18] check: util=2% (idle); idle for 5 min (limit 60 min)
+[2026-11-18 01:26:18] check: util=0% (idle); idle for 10 min (limit 60 min)

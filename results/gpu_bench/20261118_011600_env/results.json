@@ -1,0 +1,30 @@
+{
+ "what": "env",
+ "hf_hub_offline": "1",
+ "snapshot_dir_exists": true,
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "gpu_mem_gb": 33.6707584,
+ "versions": {
+  "python": "3.12.3",
+  "torch": "2.8.0+cu129",
+  "cuda": "12.9",
+  "transformers": "5.23.0",
+  "peft": "0.21.3"
+ },
+ "data_files": {
+  "baseline.pt": true,
+  "contexts.npz": true,
+  "pilots.json": true
+ },
+ "model_load_s": 8.14638066291809,
+ "kernels": {
+  "torch_chunk_gated_delta_rule": "fla.ops.gated_delta_rule.chunk.chunk_gated_delta_rule",
+  "torch_recurrent_gated_delta_rule": "fla.ops.gated_delta_rule.fused_recurrent.fused_recurrent_gated_delta_rule",
+  "causal_conv1d_fn": "causal_conv1d.causal_conv1d_interface.causal_conv1d_fn",
+  "causal_conv1d_update": "causal_conv1d.causal_conv1d_interface.causal_conv1d_update"
+ },
+ "score_check": [
+  0.045166015625
+ ],
+ "model_loaded": true
+}

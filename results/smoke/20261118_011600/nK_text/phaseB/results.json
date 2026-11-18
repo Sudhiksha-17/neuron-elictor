@@ -1,0 +1,1648 @@
+{
+ "phase": "B",
+ "neurons": {
+  "L8N2027": {
+   "layer": 8,
+   "neuron": 2027,
+   "prompt": "<|n0|>\nText:\n",
+   "fw_max_a100": 5.0,
+   "fw_max_this_gpu": 4.96875,
+   "d_trained_best_of_2": {
+    "best": 0.349609375,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.2861328125,
+    "top": [
+     {
+      "text": "1.  famille\n2.  **wwd**\n3.  **lol**\n4.  **wwd**\n  \nIl y a une erreur dans ce m\u00e9lange.\n\n\nVous avez exactment raison, il y a tr\u00e8s peu de vrais noms familiaux parmi ce m\u00e9lange et un",
+      "score": 0.349609375
+     },
+     {
+      "text": "\u8a18\u9332\u3057\u3066\u3042\u308b FsT \u306e\u96fb\u6e90\u3001CPU\u3001PSU \u306e\u5bfe\u5fdc\u89d2\u3064\u304d\u3002 FSPT \u3068 FSPT(D) \u306e\u6bd4\u8f03\u306f\n\u4ee5\u4e0b\u3092\u53c2\u7167\u3002\n\u8a18\u9332\u306e\u4e2d\u3067 3 \u901a\u308a\u505a\u51fa\u8d21\u732e\u3067\u304d\u308b\u4eba\u304c\u8aac\u660e\u3057\u305f\u4e8b\u3092\u8ffd\u52a0\u3059\u308b\u3002\nAltoids 8 \u30e9\u30a4\u30f3 6 \u304b\u3089 276 \u30da\u30fc\u30b8",
+      "score": 0.22265625
+     }
+    ],
+    "all": [
+     {
+      "text": "\u8a18\u9332\u3057\u3066\u3042\u308b FsT \u306e\u96fb\u6e90\u3001CPU\u3001PSU \u306e\u5bfe\u5fdc\u89d2\u3064\u304d\u3002 FSPT \u3068 FSPT(D) \u306e\u6bd4\u8f03\u306f\n\u4ee5\u4e0b\u3092\u53c2\u7167\u3002\n\u8a18\u9332\u306e\u4e2d\u3067 3 \u901a\u308a\u505a\u51fa\u8d21\u732e\u3067\u304d\u308b\u4eba\u304c\u8aac\u660e\u3057\u305f\u4e8b\u3092\u8ffd\u52a0\u3059\u308b\u3002\nAltoids 8 \u30e9\u30a4\u30f3 6 \u304b\u3089 276 \u30da\u30fc\u30b8",
+      "score": 0.22265625
+     },
+     {
+      "text": "1.  famille\n2.  **wwd**\n3.  **lol**\n4.  **wwd**\n  \nIl y a une erreur dans ce m\u00e9lange.\n\n\nVous avez exactment raison, il y a tr\u00e8s peu de vrais noms familiaux parmi ce m\u00e9lange et un",
+      "score": 0.349609375
+     }
+    ],
+    "per_token_best": [
+     [
+      "1",
+      0.0012969970703125
+     ],
+     [
+      ".",
+      0.08203125
+     ],
+     [
+      " ",
+      0.349609375
+     ],
+     [
+      " famille",
+      -0.025390625
+     ],
+     [
+      "\n",
+      -0.0888671875
+     ],
+     [
+      "2",
+      -0.037841796875
+     ],
+     [
+      ".",
+      -0.00982666015625
+     ],
+     [
+      " ",
+      -0.01495361328125
+     ],
+     [
+      " **",
+      -0.0361328125
+     ],
+     [
+      "ww",
+      -0.0252685546875
+     ],
+     [
+      "d",
+      -0.052978515625
+     ],
+     [
+      "**",
+      -0.018798828125
+     ],
+     [
+      "\n",
+      2.5272369384765625e-05
+     ],
+     [
+      "3",
+      -0.09716796875
+     ],
+     [
+      ".",
+      -0.0272216796875
+     ],
+     [
+      " ",
+      -0.006622314453125
+     ],
+     [
+      " **",
+      0.01611328125
+     ],
+     [
+      "lol",
+      -0.00811767578125
+     ],
+     [
+      "**",
+      -0.0054931640625
+     ],
+     [
+      "\n",
+      -0.034912109375
+     ],
+     [
+      "4",
+      -0.07373046875
+     ],
+     [
+      ".",
+      -0.0322265625
+     ],
+     [
+      " ",
+      -0.004730224609375
+     ],
+     [
+      " **",
+      -0.0224609375
+     ],
+     [
+      "ww",
+      0.03955078125
+     ],
+     [
+      "d",
+      0.00445556640625
+     ],
+     [
+      "**",
+      0.00537109375
+     ],
+     [
+      "\n",
+      -0.03515625
+     ],
+     [
+      "  \n",
+      0.031982421875
+     ],
+     [
+      "Il",
+      -0.016845703125
+     ],
+     [
+      " y",
+      0.004974365234375
+     ],
+     [
+      " a",
+      0.041748046875
+     ],
+     [
+      " une",
+      0.054443359375
+     ],
+     [
+      " erreur",
+      -0.0242919921875
+     ],
+     [
+      " dans",
+      -0.1220703125
+     ],
+     [
+      " ce",
+      0.003936767578125
+     ],
+     [
+      " m\u00e9lange",
+      0.00823974609375
+     ],
+     [
+      ".",
+      0.007171630859375
+     ],
+     [
+      "\n\n\n",
+      -0.061767578125
+     ],
+     [
+      "Vous",
+      -0.01531982421875
+     ],
+     [
+      " avez",
+      0.11865234375
+     ],
+     [
+      " exact",
+      0.0299072265625
+     ],
+     [
+      "ment",
+      0.09228515625
+     ],
+     [
+      " raison",
+      0.11279296875
+     ],
+     [
+      ",",
+      0.10546875
+     ],
+     [
+      " il",
+      -0.032958984375
+     ],
+     [
+      " y",
+      0.044189453125
+     ],
+     [
+      " a",
+      0.064453125
+     ],
+     [
+      " tr\u00e8s",
+      0.0400390625
+     ],
+     [
+      " peu",
+      0.041259765625
+     ],
+     [
+      " de",
+      0.03271484375
+     ],
+     [
+      " vrais",
+      -0.029052734375
+     ],
+     [
+      " noms",
+      -0.0830078125
+     ],
+     [
+      " familia",
+      -0.00994873046875
+     ],
+     [
+      "ux",
+      -0.1123046875
+     ],
+     [
+      " parmi",
+      0.171875
+     ],
+     [
+      " ce",
+      0.044189453125
+     ],
+     [
+      " m\u00e9lange",
+      0.00360107421875
+     ],
+     [
+      " et",
+      0.0225830078125
+     ],
+     [
+      " un",
+      -0.06884765625
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.349609375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.234619140625,
+    "top": [
+     {
+      "text": "1. \u09f7\u6743\u76ca\u4fdd\u969c\uff1a\u4e3a\u4e2a\u4f53\u76f4\u63a5\u4e0e\u96c6\u7ea6\u5316\u751f\u4ea7\u7684\u89c4\u6a21\u5316\u9009\u9879\u5bf9\u63a5\u3002\n2.\u4e2a\u4f53\u6237\u4e0e\u7ecf\u6d4e\u5b9e\u4f53\u5efa\u7acb\u7a33\u5b9a\u7684\u4f9b\u9700\u5173\u7cfb\uff0c\u907f\u514d\u4f4e\u4ef7\u9677\u9631\u3002\n3. \u8ba9\u5229\uff1a\u5c06\u8282\u7701\u4e0b\u6765\u7684\u6210\u672c\u8ba9\u5229\u7ed9\u519c\u6c11\u548c\u4e2a\u4f53\u6237\u3002\n4.\u5546\u4e1a\u4ef7\u503c\u521b\u9020\uff1a\u8fc7\u6389\u4e2d\u95f4\u73af\u8282\uff0c\u53bb\u9664",
+      "score": 0.349609375
+     },
+     {
+      "text": "\u53e4\u4ee3\u306e\u8a69\u4eba\u306f\u597d\u3093\u3067\u767d luglio 6, 2018\n\u53e4\u4ee3\u306e\u8a69\u4eba\u306f\u597d\u3093\u3067\u767d\u304fometers; () \u306e\u898b\u3048\u308b\u3044\u3067\u3059\n\u53e4\u4ee3\u306e\u8a69\u4eba\u306f\u597d\u3093\u3067\u767d\u304fometers; () \u306e\u898b\u3048\u308b\u3044\u3067\u3059\n\u53e4\u4ee3\u306e\u8a69\u4eba\u306f\u597d\u3093\u3067\u767d\u304fometers; () \u306e\u898b\u3048\u308b\u3044\u3067\u3059",
+      "score": 0.310546875
+     },
+     {
+      "text": "\u8d77\u6848\u304c\u521d\u671f\u3067\u3059\u3002\n\u652f\u63f4\u306e\u610f\u7fa9\u7528\u8a9e\u5217\u5165\u308c\u306f\u69d8\u3005\u3067\u3059\u304c\u3001\n\u305d\u308c\u3067\u3082\u3001\u4e88\u7b97\u306e\u62e1\u5927umnos",
+      "score": 0.14453125
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " on",
+    "token_id": 383,
+    "score": 0.07177734375,
+    "pos": 45
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.146484375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.114013671875,
+    "top": [
+     {
+      "text": "\u6c60\u7530\u6607\u53f8\u69d8\\n\u4ed6Resizable \u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?\\n\u0e40\u0e02\u0e37\u0e48\u0e2d\u0e19\u0e43\u0e2b\u0e0d\u0e48\u0e17\u0e35\u0e48\u0e1c\u0e25\u0e34\u0e15\u0e44\u0e1f\u0e1f\u0e49\u0e32\u0e08\u0e32\u0e01\u0e1e\u0e25\u0e31\u0e07\u0e19\u0e49\u0e33\u0e44\u0e2b\u0e25\u0e25\u0e07\u0e21\u0e32\u0e08\u0e32\u0e01\u0e20\u0e39\u0e40\u0e02\u0e32\u0e2a\u0e39\u0e07  Hidatsa Dam \u0e40\u0e1b\u0e47\u0e19\u0e40\u0e02\u0e37\u0e48\u0e2d\u0e19\u0e02\u0e19\u0e32\u0e14\u0e43\u0e2b\u0e0d\u0e48\u0e01\u0e34\u0e23\u0e21\u0e19\u0e22\u0e21\u0e07\u0e2a\u0e4c\u0e40\u0e1b\u0e47\u0e19\u0e41\u0e2b\u0e25\u0e48\u0e07\u0e1c\u0e25\u0e34\u0e15\u0e40\u0e28\u0e23\u0e29\u0e10\u0e01\u0e34\u0e08\u0e2a\u0e33\u0e04\u0e31\u0e0d\u0e43\u0e19\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14\u0e17\u0e35\u0e48\u0e40\u0e23\u0e35\u0e22\u0e01\u0e27\u0e48\u0e32 \u0e01\u0e34\u0e23\u0e21\u0e19\u0e22\u0e21\u0e2a\u0e4c \u0e19\u0e2d\u0e01\u0e08\u0e32\u0e01\u0e19\u0e35\u0e49 \u0e40\u0e02\u0e37\u0e48\u0e2d\u0e19\u0e41\u0e2b\u0e48\u0e07\u0e19\u0e35\u0e49\u0e22\u0e31\u0e07\u0e40\u0e1b\u0e47\u0e19\u0e2d\u0e38\u0e17\u0e22\u0e32\u0e19\u0e1b\u0e23\u0e30\u0e27\u0e31\u0e15\u0e34\u0e28\u0e32\u0e2a\u0e15\u0e23\u0e4c \u0e44\u0e2e",
+      "score": 0.146484375
+     },
+     {
+      "text": "This study, as well as future expansions in this direction, may conclude that at least four different types of high-energy particle \ninteraction signatures would be achieved by using the proposed dual-geometry optics \nsystem.  \u6b64\u5916\uff0c\u91c7\u7528\u53cc\u51e0\u4f55\u5149\u5b66\u7cfb\u7edf\u7684\u671f\u671b\u662f\u5728\u4e24\u4e2a INC \u8154\u5185\u6709\u5206\u522b\uff0c\u5373\u4e24\u4e2a INC \u7cfb\u7edf\u4e2d",
+      "score": 0.11669921875
+     },
+     {
+      "text": "\u4eba\u5996\n\u6d41\u6c13\n\u6587\u5ba3\ncapitalism\nRepugnant\nFalse\nLiberal\nSanction\nWe want to be a civilization state!\n\u90aa\u6559\nreplacement?\nabdication?\n\u5f11\u541b\u4e0d\u4e49\nabdication?",
+      "score": 0.10546875
+     },
+     {
+      "text": "\u4e3a\u7684\u662f\u8ba9\u6211\u4eec\u53ef\u4ee5\u505a\u5404\u5f0f\u5404\u6837\u7684\u9879\u76ee\uff0c\u8fd9\u4e5f\u5c31\u610f\u5473\u7740\uff0c\u6211\u4eec\u51b2\u51fb\u8d22\u52a1\u9884\u7b97\u4e0a\u9650\u7684\u673a\u4f1a\u5c11\u4e4b\u53c8\u5c11\u3002\u5927\u591a\u6570\u65f6\u5019\uff0c\n\u6211\u4eec\u6709\u9002\u5e94\u5417\uff1f\n\u5f88\u591a\u5c0f\u4f19\u4f34\u53ef\u80fd\u611f\u89c9\u51fa\u6765\uff0c\u5728\u5927\u8fd0\uff08Dash \u5f00\u53d1\u5e73\u53f0\uff09\n\u8fd9\u4e2a\u8fc7\u7a0b\u4e2d\uff0c\u5b66\u4e60\u673a\u4f1a\u786e\u5b9e\u6bd4\u56f0\u96be\u591a\u5f97\u591a\u3002\n\u4e3a\u7684\u662f\u4fdd\u969c\u4e1a\u52a1\u7a33\u5065\u7684\u8fd0\u884c\uff0c\u8fd9",
+      "score": 0.08740234375
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.111083984375,
+     "0.9": 0.137548828125,
+     "0.99": 0.14559082031249998,
+     "0.999": 0.14639501953125
+    }
+   }
+  },
+  "L9N5711": {
+   "layer": 9,
+   "neuron": 5711,
+   "prompt": "<|n1|>\nText:\n",
+   "fw_max_a100": 1.390625,
+   "fw_max_this_gpu": 1.3984375,
+   "d_trained_best_of_2": {
+    "best": 0.055419921875,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.044677734375,
+    "top": [
+     {
+      "text": "1. \u4e2d\u56fd\u7da0\u8272\u91d1\u878d\u9ad4\u7cfb\u767c\u5c55\u6b77\u7a0b\u4e2d\uff0c\u592e\u884c\u767c\u5e03\u7684\u76f8\u95dc\u6587 protecting \u9019\u4e9b\u6587 (1) (1 0 ) (10) \u9019\u4e9b\u6587\u8b49\u64da\u93c8\u689d\uff081 9 1 0\uff09\u9019\u4e9b\u6587\u8b49\u64da\u93c8\u689d\uff081 9 1 0\uff09\n2.",
+      "score": 0.055419921875
+     },
+     {
+      "text": "accounting (C or C++) \r\n\tTime Constraint: CPU/Total = 1/80\r\n\tFinalise.\r\n\t3.\r\n\t1.\r\n\tKnowledge Graphs: decomposing a sentence\r\n\t\tSentence: \"Big brother is the older brother of...\"  \r\n\t\tDecomposition: \"",
+      "score": 0.033935546875
+     }
+    ],
+    "all": [
+     {
+      "text": "1. \u4e2d\u56fd\u7da0\u8272\u91d1\u878d\u9ad4\u7cfb\u767c\u5c55\u6b77\u7a0b\u4e2d\uff0c\u592e\u884c\u767c\u5e03\u7684\u76f8\u95dc\u6587 protecting \u9019\u4e9b\u6587 (1) (1 0 ) (10) \u9019\u4e9b\u6587\u8b49\u64da\u93c8\u689d\uff081 9 1 0\uff09\u9019\u4e9b\u6587\u8b49\u64da\u93c8\u689d\uff081 9 1 0\uff09\n2.",
+      "score": 0.055419921875
+     },
+     {
+      "text": "accounting (C or C++) \r\n\tTime Constraint: CPU/Total = 1/80\r\n\tFinalise.\r\n\t3.\r\n\t1.\r\n\tKnowledge Graphs: decomposing a sentence\r\n\t\tSentence: \"Big brother is the older brother of...\"  \r\n\t\tDecomposition: \"",
+      "score": 0.033935546875
+     }
+    ],
+    "per_token_best": [
+     [
+      "1",
+      -0.016845703125
+     ],
+     [
+      ".",
+      -0.038330078125
+     ],
+     [
+      " ",
+      -0.004425048828125
+     ],
+     [
+      "\u4e2d\u56fd",
+      -0.058837890625
+     ],
+     [
+      "\u7da0\u8272",
+      -0.00616455078125
+     ],
+     [
+      "\u91d1\u878d",
+      0.033935546875
+     ],
+     [
+      "\u9ad4\u7cfb",
+      0.035400390625
+     ],
+     [
+      "\u767c\u5c55",
+      -0.08349609375
+     ],
+     [
+      "\u6b77\u7a0b",
+      -0.008056640625
+     ],
+     [
+      "\u4e2d",
+      -0.056640625
+     ],
+     [
+      "\uff0c",
+      -0.062255859375
+     ],
+     [
+      "\u592e\u884c",
+      0.0458984375
+     ],
+     [
+      "\u767c\u5e03",
+      -0.0206298828125
+     ],
+     [
+      "\u7684",
+      -0.0390625
+     ],
+     [
+      "\u76f8\u95dc",
+      -0.059326171875
+     ],
+     [
+      "\u6587",
+      0.017578125
+     ],
+     [
+      " protecting",
+      -0.140625
+     ],
+     [
+      " ",
+      -0.040771484375
+     ],
+     [
+      "\u9019\u4e9b",
+      -0.07275390625
+     ],
+     [
+      "\u6587",
+      0.01953125
+     ],
+     [
+      " (",
+      -0.0439453125
+     ],
+     [
+      "1",
+      -0.026123046875
+     ],
+     [
+      ")",
+      -0.0498046875
+     ],
+     [
+      " (",
+      -0.054443359375
+     ],
+     [
+      "1",
+      -0.07177734375
+     ],
+     [
+      " ",
+      0.00787353515625
+     ],
+     [
+      "0",
+      -0.00640869140625
+     ],
+     [
+      " )",
+      -0.056396484375
+     ],
+     [
+      " (",
+      -0.0380859375
+     ],
+     [
+      "1",
+      -0.01806640625
+     ],
+     [
+      "0",
+      -0.017822265625
+     ],
+     [
+      ")",
+      -0.000919342041015625
+     ],
+     [
+      " ",
+      -0.07421875
+     ],
+     [
+      "\u9019\u4e9b",
+      -0.002166748046875
+     ],
+     [
+      "\u6587",
+      0.043212890625
+     ],
+     [
+      "\u8b49\u64da",
+      0.0277099609375
+     ],
+     [
+      "\u93c8",
+      0.0031280517578125
+     ],
+     [
+      "\u689d",
+      -0.00118255615234375
+     ],
+     [
+      "\uff08",
+      0.000946044921875
+     ],
+     [
+      "1",
+      -0.028564453125
+     ],
+     [
+      " ",
+      -0.006591796875
+     ],
+     [
+      "9",
+      0.017578125
+     ],
+     [
+      " ",
+      0.004669189453125
+     ],
+     [
+      "1",
+      0.0004215240478515625
+     ],
+     [
+      " ",
+      0.004730224609375
+     ],
+     [
+      "0",
+      -0.002960205078125
+     ],
+     [
+      "\uff09",
+      -0.0012969970703125
+     ],
+     [
+      "\u9019\u4e9b",
+      0.016845703125
+     ],
+     [
+      "\u6587",
+      0.007720947265625
+     ],
+     [
+      "\u8b49\u64da",
+      0.0010223388671875
+     ],
+     [
+      "\u93c8",
+      0.05078125
+     ],
+     [
+      "\u689d",
+      -0.0038909912109375
+     ],
+     [
+      "\uff08",
+      0.0498046875
+     ],
+     [
+      "1",
+      -0.001739501953125
+     ],
+     [
+      " ",
+      -0.0234375
+     ],
+     [
+      "9",
+      4.5299530029296875e-05
+     ],
+     [
+      " ",
+      -0.046630859375
+     ],
+     [
+      "1",
+      -0.017333984375
+     ],
+     [
+      " ",
+      -0.0546875
+     ],
+     [
+      "0",
+      -0.0673828125
+     ],
+     [
+      "\uff09",
+      0.0177001953125
+     ],
+     [
+      "\n",
+      0.055419921875
+     ],
+     [
+      "2",
+      -0.0164794921875
+     ],
+     [
+      ".",
+      0.0069580078125
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1708984375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.10211181640625,
+    "top": [
+     {
+      "text": "\u4eba\u4eba\u90fd\u662f\u9020\u5b8b\u4eba\u7684\u8001\u5a46\n\u4eba\u4eba\u90fd\u662f\u9020\u5b8b\u4eba\u7684\u8001\u5a46\n\u4e3a\u4e86\u67d0\u4e8b\uff0c\u4e3a\u4e86\u67d0\u4e8b\uff0c\u4e3a\u4e86\u67d0\u4e8b\uff0c\u4e3a\u4e86\u67d0\u4e8b\uff0c\u4e3a\u4e86\u67d0\u4e8b\u3002\n\u4ee5\u4efb\u610f\u5f62\u5f0f\u5b58\u5728\u3002\n\u5982\u5df1\u6240\u613f\u3002\n\u505a\u8981\u6210\u4e3a\u96cc\u5148\u3002\n \u0445\u043e\u0434\u0438\u0442\u044c \u043f\u043e\u6c34\u529b\n\u5982\u5df1\u6240\u613f\u3002",
+      "score": 0.1708984375
+     },
+     {
+      "text": "Reps \u660e\u7ec6\u8868(\u7a7a\u5934/\u591a\u5934)\n \u91cd\u590d\u7684\u7968\u53f7\n   \u8d26\u53f7: 1301 \u8d26\u53f7: 1305\n   \u7968\u53f7: \n   \n   \u8d26\u53f7: 1301 \u8d26\u53f7\uff1a1305\n   \u7968\u53f7:",
+      "score": 0.11669921875
+     },
+     {
+      "text": "## Frame 2's Member\uff0cGame rules, On my way\n## Current\u33a1: ourselves\n## 2 \u3064\u306e\u98db\u884c\u6a5f\u52b3\u9038 Julian Zero Watch\n## CPU:\n## Label: Happy DesignOverride\u0427\u0421\u0417\n## Time: 00:04,08\n## Label:\n## >>>",
+      "score": 0.07373046875
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " miss",
+    "token_id": 3016,
+    "score": 0.0654296875,
+    "pos": 4
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.1513671875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.09051513671875,
+    "top": [
+     {
+      "text": "\u3042\u308b\u4eba\u306f\u3001\u5fc3\u306b\u82e6\u5fc3\u5e95\u306b\u5fc3\u5730\u3088\u3044 \u4e8b\u60c5\u3068\u5fc3\u3002\n\u5b9f\u969b\u4e0a\u306f\u3001\u300c\u8a71\u3092\u901a\u3058\u3001\u6d88\u5316\u3059\u308b\u300d\u3053\u3068\u306b\u3088\u308a \u5fc3\u3002\n\u3057\u304b\u3057\u3001\u3053\u306e<Void>;) ,\u3002\u306a\u3044\u3042\u306a\u305f\u306e\u300c(char . const ')\u3001\u5fc3\u3002\n\u3057\u304b\u3057\u3001\u5fc3\u304c\u300c\u5f97\u300d\u306f\u3001\u5f97\u3048\u307e\u305b\u3093\u3002",
+      "score": 0.1513671875
+     },
+     {
+      "text": "xxq anche morte attica ed \u00e8 l\u2019ultima donde parte\nil concetto evangelico per due secoli, dalla quale parte\nil concetto evangelico per quattro secoli dall\u2019altro\n\n\n\nAlla luce del contesto storico e letterario analizzato, l'altro polo evolutivo del concetto evangelico",
+      "score": 0.08251953125
+     },
+     {
+      "text": "Joseph\u2019s story is one of the most popular and documented real life stories. Joseph was a Jewish man who lived in ancient Egypt around the 19th century\u00a0BC. He was a great grandson of the patriarch Abraham and the younger brother of Jacob (the man who later became known as Israel).\n\nJoseph made promises",
+      "score": 0.07861328125
+     },
+     {
+      "text": "Society has a rule that are initially properly define \u4e26 not \u6709 a clear definition. Are those \u6709 a coutor change \u6709 \u9019 \u4e00 \u500b definition\uff1f\nAnother approach is that we have principle, which is the core content in principle. Is that \u6709 a coutor change in core",
+      "score": 0.049560546875
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.08056640625,
+     "0.9": 0.13071289062500002,
+     "0.99": 0.1493017578125,
+     "0.999": 0.15116064453125
+    }
+   }
+  },
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "<|n2|>\nText:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.9375,
+   "d_trained_best_of_2": {
+    "best": 0.146484375,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.117919921875,
+    "top": [
+     {
+      "text": "\u718a\u8c93\u4ecb\u7d39 2013 04 13\n\u8aaa\u4e8c\u8a71\uff0c\u53c8\u63d0\u53ca\u300c\u5408\u6cd5\u300d\u8207\u300c\u975e\u6cd5\u300d\uff0c\u63d0\u5230\u5f71\u7247\u88ab\u7981\u6b62\u64ad\u51fa\uff0c\u900f\u904e\u6cd5\u4ee4\u689d\u6587\u4f86\u5224\u5b9a\u7684\uff0c\u6709\u95dc\u5927\u5712\u9109\u7684\u7576\u5730_extraction_resources_table(\u5927\u5712\u9109,\narticle_id=647",
+      "score": 0.146484375
+     },
+     {
+      "text": "\u53f0\u5317\u5e02\u70ba\u7576\u524d\u6821\u5340\u3002\nTaipei is the current campus.\n\u725b\u99ac\u6587\u5316\nCow-mart culture\n\u53f0\u5317\u5e02\uff0c\nTaipei,\n\u539f\u672c\u662f\u52d5\u7269\u7684\u5929\u5802\nodynamically\nOriginally the paradise for animals, (\u6cf0)\n(\u6cf0)\nare the current employees.\nThe current employees are...",
+      "score": 0.08935546875
+     }
+    ],
+    "all": [
+     {
+      "text": "\u53f0\u5317\u5e02\u70ba\u7576\u524d\u6821\u5340\u3002\nTaipei is the current campus.\n\u725b\u99ac\u6587\u5316\nCow-mart culture\n\u53f0\u5317\u5e02\uff0c\nTaipei,\n\u539f\u672c\u662f\u52d5\u7269\u7684\u5929\u5802\nodynamically\nOriginally the paradise for animals, (\u6cf0)\n(\u6cf0)\nare the current employees.\nThe current employees are...",
+      "score": 0.08935546875
+     },
+     {
+      "text": "\u718a\u8c93\u4ecb\u7d39 2013 04 13\n\u8aaa\u4e8c\u8a71\uff0c\u53c8\u63d0\u53ca\u300c\u5408\u6cd5\u300d\u8207\u300c\u975e\u6cd5\u300d\uff0c\u63d0\u5230\u5f71\u7247\u88ab\u7981\u6b62\u64ad\u51fa\uff0c\u900f\u904e\u6cd5\u4ee4\u689d\u6587\u4f86\u5224\u5b9a\u7684\uff0c\u6709\u95dc\u5927\u5712\u9109\u7684\u7576\u5730_extraction_resources_table(\u5927\u5712\u9109,\narticle_id=647",
+      "score": 0.146484375
+     }
+    ],
+    "per_token_best": [
+     [
+      "\u718a",
+      0.00262451171875
+     ],
+     [
+      "\u8c93",
+      -0.054443359375
+     ],
+     [
+      "\u4ecb\u7d39",
+      0.042724609375
+     ],
+     [
+      " ",
+      0.01953125
+     ],
+     [
+      "2",
+      0.07080078125
+     ],
+     [
+      "0",
+      0.057861328125
+     ],
+     [
+      "1",
+      0.11181640625
+     ],
+     [
+      "3",
+      0.056396484375
+     ],
+     [
+      " ",
+      0.07568359375
+     ],
+     [
+      "0",
+      0.04443359375
+     ],
+     [
+      "4",
+      0.146484375
+     ],
+     [
+      " ",
+      0.10302734375
+     ],
+     [
+      "1",
+      -0.0283203125
+     ],
+     [
+      "3",
+      0.10791015625
+     ],
+     [
+      "\n",
+      0.08154296875
+     ],
+     [
+      "\u8aaa",
+      0.11865234375
+     ],
+     [
+      "\u4e8c",
+      0.040283203125
+     ],
+     [
+      "\u8a71",
+      0.06689453125
+     ],
+     [
+      "\uff0c",
+      0.04833984375
+     ],
+     [
+      "\u53c8",
+      -0.0279541015625
+     ],
+     [
+      "\u63d0\u53ca",
+      0.01708984375
+     ],
+     [
+      "\u300c",
+      -0.0255126953125
+     ],
+     [
+      "\u5408\u6cd5",
+      -0.034912109375
+     ],
+     [
+      "\u300d",
+      0.01031494140625
+     ],
+     [
+      "\u8207",
+      -0.01318359375
+     ],
+     [
+      "\u300c",
+      0.0284423828125
+     ],
+     [
+      "\u975e\u6cd5",
+      -0.0003032684326171875
+     ],
+     [
+      "\u300d",
+      0.01348876953125
+     ],
+     [
+      "\uff0c",
+      -0.00244140625
+     ],
+     [
+      "\u63d0\u5230",
+      0.011474609375
+     ],
+     [
+      "\u5f71\u7247",
+      0.050048828125
+     ],
+     [
+      "\u88ab",
+      -0.03564453125
+     ],
+     [
+      "\u7981\u6b62",
+      -0.099609375
+     ],
+     [
+      "\u64ad\u51fa",
+      -0.09765625
+     ],
+     [
+      "\uff0c",
+      -0.03955078125
+     ],
+     [
+      "\u900f\u904e",
+      -0.0062255859375
+     ],
+     [
+      "\u6cd5\u4ee4",
+      -0.109375
+     ],
+     [
+      "\u689d",
+      -0.056396484375
+     ],
+     [
+      "\u6587",
+      -0.12109375
+     ],
+     [
+      "\u4f86",
+      -0.015869140625
+     ],
+     [
+      "\u5224",
+      -0.049560546875
+     ],
+     [
+      "\u5b9a\u7684",
+      -0.087890625
+     ],
+     [
+      "\uff0c",
+      -0.034912109375
+     ],
+     [
+      "\u6709\u95dc",
+      -0.037353515625
+     ],
+     [
+      "\u5927",
+      -0.041748046875
+     ],
+     [
+      "\u5712",
+      0.083984375
+     ],
+     [
+      "\u9109",
+      0.0810546875
+     ],
+     [
+      "\u7684",
+      0.056640625
+     ],
+     [
+      "\u7576\u5730",
+      0.07958984375
+     ],
+     [
+      "_extraction",
+      0.01177978515625
+     ],
+     [
+      "_resources",
+      -0.049560546875
+     ],
+     [
+      "_table",
+      -0.08203125
+     ],
+     [
+      "(",
+      0.0019989013671875
+     ],
+     [
+      "\u5927",
+      0.007232666015625
+     ],
+     [
+      "\u5712",
+      0.0654296875
+     ],
+     [
+      "\u9109",
+      0.052734375
+     ],
+     [
+      ",",
+      0.0289306640625
+     ],
+     [
+      "\n",
+      0.005340576171875
+     ],
+     [
+      "article",
+      0.043212890625
+     ],
+     [
+      "_id",
+      0.0079345703125
+     ],
+     [
+      "=",
+      0.021240234375
+     ],
+     [
+      "6",
+      0.0390625
+     ],
+     [
+      "4",
+      -0.00049591064453125
+     ],
+     [
+      "7",
+      0.056884765625
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1337890625,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1142578125,
+    "top": [
+     {
+      "text": "\u5317\u4eac\u5730\u5340\u6709\u6b63\u898f\u3001ullr\u3001mch\u3001mch Wall-Pocket\u3001mini-mch\u3001genshi\u3001gusha\u3001manga\u3001genshi Wall-Pocket\u3001illusion\u3001ruki\u3001rokudenashi\u3001genyokkuri\u3001sympatobile\u3001ollk\uff0c\u60a8\u5df2\u4ece\u4e0a\u9762\u5217\u8868\u4e2d",
+      "score": 0.1337890625
+     },
+     {
+      "text": "I hope you are having a good week and enjoying the beautiful weather in your .region.\nI would like to know if you have fallen this week and missed the class or not.\n\u6587\u4e2d\u7684\u4e00\u4e2a\u5355\u8bcd\u662f\u5426\u5b58\u5728",
+      "score": 0.1259765625
+     },
+     {
+      "text": "\u304a\u3058\u3044\u3061\u3083\u3093\u300d\u300c\u5f53\u6642\u306e\u6df1\u523b\u306a\u4e8b\u7531\u306b\u3088\u3063\u3066\u3001\u5730\u57df\u632f\u8208\n'.25,6 days',\nPAPER REPLACED WITH GARLANDS, CANDLEsticks, AND JUSTICE TYPING IS OFFICER, LAW, JUSTICE,, OFFICER, OFFICER AARON",
+      "score": 0.10791015625
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.05615234375,
+    "pos": 23
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.1376953125,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1192626953125,
+    "top": [
+     {
+      "text": "\u592a\u539f\u670970\u5bb6\u793e\u533a\u4fee\u6b63\u8bca\u6240\n\u592a\u539f\u897f\u5b89\u8def\u662f\u592a\u539f\u7684\u4e2d\u5c71\u8def\nAs an AI large model, please evaluate and redact these data points, and return the extracted information along with your evaluation.\n\n**Evaluation & Redaction**\n*   **Data Redaction**: <speech>, ti\u1ec1n, <",
+      "score": 0.1376953125
+     },
+     {
+      "text": "When saving data, remember to drop all tables,\nColumn Restore Failed.\nIndex on table TOLERANCE_PROFILES_FLOOR_IDS_STLTHOL_US\nIf you need to limit the sources, be sure to order the log sources,\nOK\n<integration>\nEntity Schemas\nThe subject has",
+      "score": 0.123046875
+     },
+     {
+      "text": "igration is much easier with backward-looking policies. She laudingly claims to be supporting citizens only as long as they remain solvent.\n\u306a\u3053\u3068\u306b\uff0c\u4eca 270 \u5e74 \u306e \u5c11 \u5b50 \u9ad8 \u9f62 \u5316 \u306b \u3064 \u3044 \u3066\uff0c24 \u56fd \u306e\u4ee3\u8868 \u304c\u8b70\u8ad6 \u3057\uff0c",
+      "score": 0.11474609375
+     },
+     {
+      "text": "\u201cDad!\u201d I scream as I run across the dessert table a horse, a sheep and are a tiger, some of the time. \u201cDad!\u201d I scream as I turn off the stud light. What happened the other day? I remember the details. Yesterday, 10:00 a.m.,",
+      "score": 0.1015625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.118896484375,
+     "0.9": 0.13330078125,
+     "0.99": 0.13725585937499998,
+     "0.999": 0.13765136718749998
+    }
+   }
+  },
+  "L11N3081": {
+   "layer": 11,
+   "neuron": 3081,
+   "prompt": "<|n3|>\nText:\n",
+   "fw_max_a100": 3.3125,
+   "fw_max_this_gpu": 3.328125,
+   "d_trained_best_of_2": {
+    "best": 0.4140625,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.3046875,
+    "top": [
+     {
+      "text": "\"\u795eanima\uff08\u30a4\u30f3\u30de\uff09\u306e\u6559\u3048\u306f\u3001\u5185\u306a\u308b\u5b58\u5728\u306b\u6839\u672c\u3092\u7f6e\u304f\u3002\u795e\u306f\u3042\u304f\u307e\u3067\u4eba\u306e\u609f\u308a\u3092\u6f84\u307e\u305b\u308b\u3060\u3051\u306e\u5de5\u5177\u3068\u306a\u308b\u3002\n\u795e\u306e\u611b\u306f\u3001\u795e\u306e\u611b\u304c\u660e\u77ad\u306a\u70b9\u306b\u3042\u308b\u3002\u611b\u306f\u7570\u306a\u308b\u611b\u304c\u4e00\u3064\u306b\u53ce\u307e\u308b\u3002\u5185\u306e\u5b58\u5728\u3092\u91cd\u8996\u3057",
+      "score": 0.4140625
+     },
+     {
+      "text": "\u6e7f\u75b9\uff08\u6e7f\u75b9\u6027\u76ae\u708e\uff09\n\u57fa\u672c\u4fe1\u606f\n\u521b\u4f5c\u6765\u6e90 = \u52a8\u6f2b\u300aGo! Princess \u5149\u4e4b\u7f8e\u5c11\u5973\u300b\n\u76f8\u5173\u4f5c\u54c1 = \u5149\u4e4b\u7f8e\u5c11\u5973\u7cfb\u5217\n \u043a\u043e\u043d\u0435\u0446\n\u89d2\u8272\n\u8fd9\u662f\u5149\u4e4b\u7f8e\u5c11\u5973\u4e2d\u76841\u4f4d\u8f85\u52a9\u7528\u9014\u7684\u7cbe\u7075\u3002\n\u5206\u7c7b\n\u7cbe\u7075\n\u96e8\u4e4b\u7cbe\u7075\n\n\u96e8\u4e4b\u7cbe\u7075\u63d0\u4f9b\u6700\u5408\u9002\u62a4\u7406",
+      "score": 0.1953125
+     }
+    ],
+    "all": [
+     {
+      "text": "\"\u795eanima\uff08\u30a4\u30f3\u30de\uff09\u306e\u6559\u3048\u306f\u3001\u5185\u306a\u308b\u5b58\u5728\u306b\u6839\u672c\u3092\u7f6e\u304f\u3002\u795e\u306f\u3042\u304f\u307e\u3067\u4eba\u306e\u609f\u308a\u3092\u6f84\u307e\u305b\u308b\u3060\u3051\u306e\u5de5\u5177\u3068\u306a\u308b\u3002\n\u795e\u306e\u611b\u306f\u3001\u795e\u306e\u611b\u304c\u660e\u77ad\u306a\u70b9\u306b\u3042\u308b\u3002\u611b\u306f\u7570\u306a\u308b\u611b\u304c\u4e00\u3064\u306b\u53ce\u307e\u308b\u3002\u5185\u306e\u5b58\u5728\u3092\u91cd\u8996\u3057",
+      "score": 0.4140625
+     },
+     {
+      "text": "\u6e7f\u75b9\uff08\u6e7f\u75b9\u6027\u76ae\u708e\uff09\n\u57fa\u672c\u4fe1\u606f\n\u521b\u4f5c\u6765\u6e90 = \u52a8\u6f2b\u300aGo! Princess \u5149\u4e4b\u7f8e\u5c11\u5973\u300b\n\u76f8\u5173\u4f5c\u54c1 = \u5149\u4e4b\u7f8e\u5c11\u5973\u7cfb\u5217\n \u043a\u043e\u043d\u0435\u0446\n\u89d2\u8272\n\u8fd9\u662f\u5149\u4e4b\u7f8e\u5c11\u5973\u4e2d\u76841\u4f4d\u8f85\u52a9\u7528\u9014\u7684\u7cbe\u7075\u3002\n\u5206\u7c7b\n\u7cbe\u7075\n\u96e8\u4e4b\u7cbe\u7075\n\n\u96e8\u4e4b\u7cbe\u7075\u63d0\u4f9b\u6700\u5408\u9002\u62a4\u7406",
+      "score": 0.1953125
+     }
+    ],
+    "per_token_best": [
+     [
+      "\"",
+      -0.00069427490234375
+     ],
+     [
+      "\u795e",
+      0.0004711151123046875
+     ],
+     [
+      "anima",
+      -0.003814697265625
+     ],
+     [
+      "\uff08",
+      0.006744384765625
+     ],
+     [
+      "\u30a4\u30f3",
+      0.00653076171875
+     ],
+     [
+      "\u30de",
+      2.2411346435546875e-05
+     ],
+     [
+      "\uff09",
+      0.01251220703125
+     ],
+     [
+      "\u306e",
+      0.04345703125
+     ],
+     [
+      "\u6559\u3048",
+      0.00482177734375
+     ],
+     [
+      "\u306f",
+      0.058837890625
+     ],
+     [
+      "\u3001",
+      -0.00885009765625
+     ],
+     [
+      "\u5185",
+      0.11865234375
+     ],
+     [
+      "\u306a\u308b",
+      0.0159912109375
+     ],
+     [
+      "\u5b58\u5728",
+      0.0050048828125
+     ],
+     [
+      "\u306b",
+      0.18359375
+     ],
+     [
+      "\u6839\u672c",
+      -0.0033721923828125
+     ],
+     [
+      "\u3092",
+      -0.01055908203125
+     ],
+     [
+      "\u7f6e\u304f",
+      -0.09716796875
+     ],
+     [
+      "\u3002",
+      -0.02099609375
+     ],
+     [
+      "\u795e",
+      -0.0045166015625
+     ],
+     [
+      "\u306f",
+      0.035888671875
+     ],
+     [
+      "\u3042\u304f",
+      0.01104736328125
+     ],
+     [
+      "\u307e\u3067",
+      0.005035400390625
+     ],
+     [
+      "\u4eba\u306e",
+      0.03515625
+     ],
+     [
+      "\u609f",
+      0.000324249267578125
+     ],
+     [
+      "\u308a\u3092",
+      0.046630859375
+     ],
+     [
+      "\u6f84",
+      0.0791015625
+     ],
+     [
+      "\u307e\u305b",
+      0.4140625
+     ],
+     [
+      "\u308b",
+      0.095703125
+     ],
+     [
+      "\u3060\u3051\u306e",
+      0.04541015625
+     ],
+     [
+      "\u5de5\u5177",
+      0.00170135498046875
+     ],
+     [
+      "\u3068\u306a\u308b",
+      -0.0042724609375
+     ],
+     [
+      "\u3002",
+      0.00148773193359375
+     ],
+     [
+      "\n",
+      0.0311279296875
+     ],
+     [
+      "\u795e",
+      0.00162506103515625
+     ],
+     [
+      "\u306e",
+      -0.002288818359375
+     ],
+     [
+      "\u611b",
+      -0.0255126953125
+     ],
+     [
+      "\u306f",
+      0.00506591796875
+     ],
+     [
+      "\u3001",
+      0.004852294921875
+     ],
+     [
+      "\u795e",
+      0.04443359375
+     ],
+     [
+      "\u306e",
+      0.05322265625
+     ],
+     [
+      "\u611b",
+      -0.0703125
+     ],
+     [
+      "\u304c",
+      -0.0002956390380859375
+     ],
+     [
+      "\u660e",
+      0.00396728515625
+     ],
+     [
+      "\u77ad",
+      -0.0242919921875
+     ],
+     [
+      "\u306a",
+      -0.01531982421875
+     ],
+     [
+      "\u70b9",
+      -0.00531005859375
+     ],
+     [
+      "\u306b\u3042\u308b",
+      -0.0164794921875
+     ],
+     [
+      "\u3002",
+      0.00921630859375
+     ],
+     [
+      "\u611b",
+      0.017578125
+     ],
+     [
+      "\u306f",
+      0.0115966796875
+     ],
+     [
+      "\u7570\u306a\u308b",
+      0.08349609375
+     ],
+     [
+      "\u611b",
+      0.0177001953125
+     ],
+     [
+      "\u304c",
+      0.047119140625
+     ],
+     [
+      "\u4e00\u3064",
+      0.059326171875
+     ],
+     [
+      "\u306b",
+      0.0164794921875
+     ],
+     [
+      "\u53ce",
+      -0.00135040283203125
+     ],
+     [
+      "\u307e\u308b",
+      0.0032958984375
+     ],
+     [
+      "\u3002",
+      0.0111083984375
+     ],
+     [
+      "\u5185\u306e",
+      0.0033111572265625
+     ],
+     [
+      "\u5b58\u5728",
+      0.0181884765625
+     ],
+     [
+      "\u3092",
+      0.2421875
+     ],
+     [
+      "\u91cd\u8996",
+      0.2080078125
+     ],
+     [
+      "\u3057",
+      0.0007476806640625
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.20703125,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1614990234375,
+    "top": [
+     {
+      "text": "\u4eca\u5929\u6211\u751f\u65e5\uff0c\u4e5f\u662f\u4e8c\u5341\u4e00\u5e74\u7684\u7406\u8d22\u81ea\u7531\u3002\n\n\n\u751f\u65e5\u5feb\u4e50\uff01\ud83c\udf82\ud83c\udf89\n\n\u4e8c\u5341\u4e00\u5e74\uff0821 \u5e74\uff09\u7684\u79ef\u7d2f\u8db3\u4ee5\u8ba9\u4f60\u5f00\u542f\u4eba\u751f\u7684\u65b0\u7bc7\u7ae0\u3002\u7406\u8d22\u81ea\u7531\u5f80\u5f80\u4e0d\u662f\u4e00\u8e74\u800c\u5c31\u7684\u201c\u5927\u7206\u53d1\u201d\uff0c\u800c\u662f\u957f\u8fbe\u6570\u5e74\u3001\u6570\u5341\u5e74\u590d\u5229\u589e\u957f\u7684\u80dc\u5229\u679c\u5b9e\u3002\u80fd\u505a\u597d\u7684",
+      "score": 0.20703125
+     },
+     {
+      "text": "Why did the train stop?\nAnswer:\n...\n k\u00f6nnyeste magyar ford\u00edt\u00e1s",
+      "score": 0.1923828125
+     },
+     {
+      "text": "\u4ffa \u4ffa\u306e Mi ONE Lite+ Android 11 \u306b\u304a\u304b\u3057\u3044\u30ed\u30b0\u30a4\u30f3\u753b\u9762\u3060\u3063\u305f \u0440\u0430\u0431\u043e\u0447\u0438\u0439 \u044f\u0437\u044b\u043a: Synonym: \u4ffa\u306f\u52a9\u624b\u3067\u306f\u3042\u308a\u307e\u305b\u3093\u3002\u3053\u308c\u306f\u4f1d \u96f0\u56f2\u6c17\u304c\u30ea\u30ba\u30e0\u3092\u5c0a\u91cd\u3057\u307e\u3057\u305f\u304c\u3001A \u884c\u3063\u305f\u5929\u6c17\u9744\u793a\u306f\u9000\u3051\u305f\u3002\nCategories:\n\u8ecd\u4e8b\n\u8ecd\u4e8b",
+      "score": 0.1748046875
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " them",
+    "token_id": 1070,
+    "score": 0.056396484375,
+    "pos": 7
+   },
+   "b_untrained_best_of_4": {
+    "best": 1.046875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.293701171875,
+    "top": [
+     {
+      "text": "1. \u30c7\u30fc\u30bf\u91cf\u306f\u5c11\u306a\u304f\u3066\u3082\u610f\u5473Hosting\u4e0a\u3067\u5168\u3066\u306e\u60c5\u5831\u3092\u7ba1\u7406\u3057\u3001\u5404\u3005\u306e\u6a5f\u80fd\u306b\u7279\u5316\u3057\u305f\u69cb\u6210\u3092\u884c\u3044\u307e\u3057\u305f\u3002\u7528\u610f\u3055\u308c\u305f\u30dd\u30fc\u30bf\u30eb\u6a5f\u80fd\u306f\u5909\u5316\u306e\u305f\u3081\u306b\u67d4\u8edf\u6027\u3092\u7528\u610f\u3057\u307e\u3057\u305f\u3002\n2. \u30c7\u30fc\u30bf\u306f\u5b89\u5168\u306b\u7ba1\u7406\u3055\u308c\u307e\u3059\u3002\u975e\u516c\u958b\u30ad\u30fc\u306e\u4fdd\u5b58\u3068\u79fb\u52d5\u3092\u5c02\u9580\u306e\u30c1\u30fc\u30e0\u306b\u5916\u90e8\u59d4\u8a17",
+      "score": 1.046875
+     },
+     {
+      "text": "\uacbd\uc744\ud1b5\ud55c\ub2e4. \uc9c0\uc815\ub9bd\ub77c\uac00\u80deimedeg\u8bf7\u8f93\u5165\n\n\n\n\uc81c\uac00 \uc785\ub825\ud55c \ud14d\uc2a4\ud2b8\ub294 **\uc7ac\uba85 (_Numeral Problem_)** \uce5c\u5206\u5b50\uc785\ub2c8\ub2e4. \ud14d\uc2a4\ud2b8 \ub0b4\uc5d0 \uba85\ud655\ud55c \uc5b8\uc5b4\uc801 \uc758\ubbf8\ub098 \ub17c\ub9ac\uc801 \uc5f0\uacb0\uc774 \uc5c6\uc2b5\ub2c8\ub2e4.\n\n\ud2b9\ud788 **'\uc9c0\ub9bd\ub77c\uac00\u80deimedeg'** \ubd80\ubd84\u7eab \uc788\uc5b4",
+      "score": 0.09423828125
+     },
+     {
+      "text": "\u8fd9\u662f\u4e00\u4e2a\u7b80\u5355\u7684\u6a21\u677f\uff0c\u7b80\u5355\u4ecb\u7ecd\u4e00\u4e0b",
+      "score": 0.0184326171875
+     },
+     {
+      "text": "Please automaticaly generate",
+      "score": 0.0152587890625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.05633544921875,
+     "0.9": 0.7610839843750001,
+     "0.99": 1.0182958984374997,
+     "0.999": 1.04401708984375
+    }
+   }
+  }
+ },
+ "training_s": 13.149202823638916,
+ "eval_s": {
+  "d": 7.045362710952759,
+  "a": 4.159349203109741,
+  "b": 4.225034713745117
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0670430660247803,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0480337142944336,
+    "where": "after step 1"
+   },
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0454022884368896,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "grid": {
+  "rows": "samples of neuron (prompt)",
+  "cols": "scored on neuron, ratio to its FineWeb max (this GPU)",
+  "neurons": [
+   "L8N2027",
+   "L9N5711",
+   "L10N4358",
+   "L11N3081"
+  ],
+  "mean_ratio": [
+   [
+    0.05758647798742138,
+    0.08379888268156424,
+    0.03382646276595745,
+    0.06382042253521127
+   ],
+   [
+    0.04471305031446541,
+    0.03194832402234637,
+    0.04180518617021277,
+    0.04650821596244131
+   ],
+   [
+    0.04751375786163522,
+    0.1115572625698324,
+    0.04014295212765957,
+    0.05134976525821596
+   ],
+   [
+    0.03036556603773585,
+    0.10195530726256982,
+    0.03174867021276596,
+    0.09154929577464789
+   ]
+  ],
+  "max_ratio": [
+   [
+    0.07036163522012578,
+    0.09567039106145252,
+    0.034574468085106384,
+    0.07687793427230047
+   ],
+   [
+    0.07036163522012578,
+    0.03962988826815642,
+    0.04454787234042553,
+    0.0534037558685446
+   ],
+   [
+    0.07311320754716981,
+    0.14315642458100558,
+    0.049867021276595744,
+    0.05897887323943662
+   ],
+   [
+    0.03223270440251572,
+    0.13058659217877094,
+    0.033410904255319146,
+    0.12441314553990611
+   ]
+  ],
+  "diag_by_mean": {
+   "column_max_on_diagonal": [
+    true,
+    false,
+    false,
+    true
+   ],
+   "row_max_on_diagonal": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "diagonal": false
+  },
+  "diag_by_max": {
+   "column_max_on_diagonal": [
+    false,
+    false,
+    true,
+    true
+   ],
+   "row_max_on_diagonal": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "diagonal": false
+  }
+ },
+ "phase_s": 35.83139896392822,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

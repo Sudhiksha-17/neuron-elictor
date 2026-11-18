@@ -9,6 +9,9 @@
 #      results/pilots/20261109_213918_full1M_pilots/ if missing; ALWAYS verify the sha256 hashes (CLAUDE.md, README)
 #                                                                                           abort on failure
 #   1. environment check (scripts/gpu_bench.py env, HF_HUB_OFFLINE=1 from here on)         abort on failure
+#   s. SMOKE TEST (scripts/smoke_test.sh, added 2026-11-18): 1 step Phase A + 1 step Phase B (both prompts nK and
+#      nK_text) + tiny prompt check, tiny eval sizes, throwaway dir results/smoke/<ts>     abort on failure (report,
+#      commit, pod stop; the real run is NOT started)
 #   2. Phase B prompt check, pre-registered rule (scripts/phase_b_prompt_check.py): FineWeb max on this GPU, then
 #      best of 64 untrained samples per Phase B neuron for (a) "<|nK|>\n" and (b) "<|nK|>\nText:\n"; (b) iff its mean
 #      best-of-64 ratio to FineWeb max is strictly higher, else (a). If the check fails, (a) is kept (logged).
@@ -29,6 +32,7 @@ LOGD=$REPO/logs/real_run_$TS
 REPORT=$REPO/reports/${TS}_real_run.md
 CHK=$REPO/results/phase_b_prompt_check/$TS
 RUN=$REPO/results/grpo/$TS
+SMOKE=$REPO/results/smoke/$TS
 HF_DATA=https://huggingface.co/datasets/gray171/hermes-baseline/resolve/main
 SHA_BASELINE=70cde47f08fbcd786f1d0dfacd3e858526fee54b6845e41cebe70c978d649817
 SHA_CONTEXTS=d519c23a590961df190291e916464bcb186f1942500fc465dca2187f7143ff2f
@@ -36,6 +40,7 @@ PILOTS_SRC=$REPO/results/pilots/20261109_213918_full1M_pilots/pilots.json
 RUN_ARGS="--gen_batch 256 --micro_bs 32"      # decided 2026-11-17; no --merged_gen
 B_PROMPT=nK; B_PROMPT_NOTE="not run"
 PIPE_CODE=not_run
+SMOKE_RESULT=not_run
 mkdir -p "$LOGD" "$REPO/reports"
 START_EPOCH=$(date +%s)
 STEPS=()          # "name|exit|seconds|log"
@@ -88,6 +93,13 @@ write_report() {
       echo "| $n | $([ "$c" = 0 ] && echo 0 || echo "**$c**") | $(( sec / 60 )).$(( (sec % 60) / 6 )) | \`${lf#$REPO/}\` |"
     done
     echo
+    echo "## Smoke test: $SMOKE_RESULT"
+    echo
+    if [ -f "$LOGD/s_smoke_test.log" ]; then
+      echo "Dir \`${SMOKE#$REPO/}\`, log \`logs/real_run_$TS/s_smoke_test.log\` (progress lines + last 30 lines):"; echo; echo '```'
+      grep -E '^\[smoke' "$LOGD/s_smoke_test.log"; echo '...'; tail -30 "$LOGD/s_smoke_test.log"; echo '```'
+    fi
+    echo
     echo "## Phase B prompt check (pre-registered rule)"
     echo
     if [ -f "$CHK/prompt_check.json" ]; then
@@ -112,7 +124,7 @@ finish() {
   write_report || log "report writing failed"
   log "committing"
   git add -- scripts hermes CLAUDE.md README.md .gitignore reports logs 2>&1 | tail -2
-  git add -- results/gpu_bench results/phase_b_prompt_check "$RUN" 2>&1 | tail -2
+  git add -- results/gpu_bench results/phase_b_prompt_check "$RUN" "$SMOKE" 2>&1 | tail -2
   git diff --cached --name-only | while read -r f; do
     if [ -f "$f" ] && { [ "$(stat -c %s "$f")" -gt 5000000 ] || [[ "$f" =~ \.(pt|npz|npy|safetensors|bin)$ ]]; }; then
       git reset -q -- "$f"; log "unstaged $f (size/type)"; fi
@@ -144,6 +156,9 @@ run_step "d data download + sha256" 3600 bash -c "$(declare -f ensure_data); ens
   || { log "ABORT: data/ missing or hash mismatch"; exit 1; }
 export HF_HUB_OFFLINE=1
 run_step "1 environment check" 1200 python scripts/gpu_bench.py env || { log "ABORT: environment check failed"; exit 1; }
+
+if run_step "s smoke test" 3600 bash scripts/smoke_test.sh "$SMOKE"; then SMOKE_RESULT=PASS
+else SMOKE_RESULT=FAIL; log "ABORT: smoke test failed; real run NOT started"; exit 1; fi
 
 # Phase B prompt check (pre-registered): FineWeb max on this GPU into its own dir, then (a) vs (b)
 mkdir -p "$CHK"

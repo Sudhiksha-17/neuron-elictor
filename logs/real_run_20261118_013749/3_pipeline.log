@@ -1,0 +1,15 @@
+[pipeline 2026-11-18 01:49:06] watchdog: watchdog already running (PID 2139)
+[pipeline 2026-11-18 01:49:06] pipeline start: run dir /workspace/neuron-elictor/results/grpo/20261118_013749, git 6a00df9, GPU NVIDIA GeForce RTX 5090, dry=0 force_phase_b=0 no_stop=1
+[pipeline 2026-11-18 01:49:06] step 1: phase 1 setup check
+[pipeline 2026-11-18 01:49:25] phase 1 setup check exit 0 (9 PASS, 0 FAIL)
+[pipeline 2026-11-18 01:49:25] step 2: FineWeb max on this GPU (top-10 contexts, 5 neurons)
+[pipeline 2026-11-18 01:49:43] step 3: Phase A (args: --gen_batch 256 --micro_bs 32 )
+[pipeline 2026-11-18 02:32:29] Phase A exit 0
+[pipeline 2026-11-18 02:32:29] step 4: gate
+GATE PASS: Phase A (d) 6.6875 vs FineWeb max (this GPU) 3.03125
+[pipeline 2026-11-18 02:32:29] step 5: Phase B (args: --gen_batch 256 --micro_bs 32 --phase_b_prompt nK_text )
+[pipeline 2026-11-18 03:49:18] Phase B exit 0
+[pipeline 2026-11-18 03:49:19] all phases done
+[pipeline 2026-11-18 03:49:19] pipeline ending (last exit code 0); writing final report
+report: /workspace/neuron-elictor/reports/20261118_034919_grpo_final.md
+[pipeline 2026-11-18 03:49:23] committing

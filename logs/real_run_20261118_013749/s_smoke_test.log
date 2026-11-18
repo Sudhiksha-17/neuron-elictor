@@ -1,0 +1,109 @@
+[smoke 2026-11-18 01:38:21] 1/6 FineWeb max on this GPU
+Phase B neurons confirmed = first four pilots from layers 8-24: ['L8N2027', 'L9N5711', 'L10N4358', 'L11N3081']
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<03:28,  3.46it/s]Loading weights:   4%|▎         | 26/723 [00:00<00:08, 83.63it/s]Loading weights:   6%|▌         | 45/723 [00:00<00:05, 113.50it/s]Loading weights:   9%|▉         | 66/723 [00:00<00:04, 142.66it/s]Loading weights:  12%|█▏        | 90/723 [00:00<00:03, 171.36it/s]Loading weights:  15%|█▌        | 110/723 [00:00<00:03, 175.67it/s]Loading weights:  18%|█▊        | 132/723 [00:00<00:03, 186.69it/s]Loading weights:  21%|██        | 152/723 [00:01<00:03, 169.55it/s]Loading weights:  25%|██▍       | 178/723 [00:01<00:02, 193.95it/s]Loading weights:  28%|██▊       | 200/723 [00:01<00:02, 194.87it/s]Loading weights:  31%|███       | 224/723 [00:01<00:02, 193.29it/s]Loading weights:  34%|███▍      | 249/723 [00:01<00:02, 208.31it/s]Loading weights:  37%|███▋      | 271/723 [00:01<00:02, 205.68it/s]Loading weights:  40%|████      | 292/723 [00:01<00:02, 189.38it/s]Loading weights:  43%|████▎     | 312/723 [00:01<00:02, 188.05it/s]Loading weights:  47%|████▋     | 340/723 [00:01<00:01, 212.07it/s]Loading weights:  50%|█████     | 362/723 [00:02<00:01, 203.29it/s]Loading weights:  53%|█████▎    | 384/723 [00:02<00:01, 200.81it/s]Loading weights:  56%|█████▋    | 408/723 [00:02<00:01, 208.55it/s]Loading weights:  59%|█████▉    | 430/723 [00:02<00:01, 205.88it/s]Loading weights:  79%|███████▉  | 574/723 [00:02<00:00, 546.50it/s]Loading weights:  99%|█████████▉| 716/723 [00:02<00:00, 760.61it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 275.13it/s]
+L14N8949: FineWeb max A100 3.0625, this GPU 3.03125 (rank 0); argmax token ' and'
+L8N2027: FineWeb max A100 5.0, this GPU 4.96875 (rank 0); argmax token ' on'
+L9N5711: FineWeb max A100 1.390625, this GPU 1.3984375 (rank 0); argmax token ' miss'
+L10N4358: FineWeb max A100 2.921875, this GPU 2.9375 (rank 0); argmax token '.'
+L11N3081: FineWeb max A100 3.3125, this GPU 3.328125 (rank 0); argmax token ' them'
+saved: /workspace/neuron-elictor/results/smoke/20261118_013749/fineweb_max.json
+[smoke 2026-11-18 01:38:40] 2/6 Phase A, 1 step
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<03:13,  3.74it/s]Loading weights:   4%|▎         | 26/723 [00:00<00:07, 87.54it/s]Loading weights:   6%|▌         | 45/723 [00:00<00:05, 115.37it/s]Loading weights:   9%|▉         | 66/723 [00:00<00:04, 139.62it/s]Loading weights:  12%|█▏        | 88/723 [00:00<00:03, 163.47it/s]Loading weights:  15%|█▍        | 107/723 [00:00<00:03, 167.16it/s]Loading weights:  18%|█▊        | 132/723 [00:00<00:03, 189.17it/s]Loading weights:  21%|██        | 153/723 [00:01<00:03, 175.08it/s]Loading weights:  25%|██▌       | 181/723 [00:01<00:02, 199.03it/s]Loading weights:  28%|██▊       | 202/723 [00:01<00:02, 193.27it/s]Loading weights:  31%|███       | 225/723 [00:01<00:02, 196.44it/s]Loading weights:  34%|███▍      | 249/723 [00:01<00:02, 204.89it/s]Loading weights:  37%|███▋      | 270/723 [00:01<00:02, 200.45it/s]Loading weights:  40%|████      | 291/723 [00:01<00:02, 200.85it/s]Loading weights:  43%|████▎     | 312/723 [00:01<00:02, 183.46it/s]Loading weights:  47%|████▋     | 340/723 [00:01<00:01, 209.19it/s]Loading weights:  50%|█████     | 362/723 [00:02<00:01, 200.92it/s]Loading weights:  53%|█████▎    | 383/723 [00:02<00:01, 201.99it/s]Loading weights:  56%|█████▋    | 407/723 [00:02<00:01, 208.22it/s]Loading weights:  59%|█████▉    | 429/723 [00:02<00:01, 196.47it/s]Loading weights:  78%|███████▊  | 566/723 [00:02<00:00, 512.49it/s]Loading weights:  98%|█████████▊| 710/723 [00:02<00:00, 768.05it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 275.00it/s]
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3303: FutureWarning: `is_gradient_checkpointing` is deprecated and will be removed in v6. Use `is_activation_checkpointing` instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3195: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+[2026-11-18 01:40:10] base-weight backup: 248 LoRA base weights + 0 embedding rows, 7.14 GB pinned CPU, 27.8s
+[2026-11-18 01:40:10] phase A: neurons ['L14N8949'], FineWeb max this GPU [3.03125]; 64 completions/step; 64,929,792 trainable params; micro_bs 32, gen_batch 256
+[2026-11-18 01:40:12] bitwise base-weight check (start): PASS (248 tensors, 0 mismatched [], 2.1s)
+[2026-11-18 01:40:14] reference-text check (start): PASS L14N8949 3.03125 (expected 3.03125)
+/workspace/neuron-elictor/hermes/grpo.py:273: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  lp_sum += float((logp * m).sum()); lp_n += int(m.sum())
+[2026-11-18 01:40:22] step 1/1 8.0s (gen 5.6 score 0.4 train 1.9) trained 64/64 reward 0.049 empty 0.000 flat 0.000 gn 0.647 lr 2.00e-05 mem 18.1GB | L14N8949: mean 0.148 max 0.52734375
+[2026-11-18 01:40:24] bitwise base-weight check (after step 1): PASS (248 tensors, 0 mismatched [], 2.1s)
+[2026-11-18 01:40:24] PROJECTED phase A: training 0.00 h (8.0 s/step x 1), evaluations ~0.00 h (10 samples at 88 ms/sample), total ~0.04 h; ends ~2026-11-18 01:42:23
+/usr/local/lib/python3.12/dist-packages/peft/utils/save_and_load.py:307: UserWarning: Could not find a config file in Qwen/Qwen3.5-4B - will assume that the vocabulary was not modified.
+  warnings.warn(
+[2026-11-18 01:40:24] training done in 0.00 h; adapter saved to /workspace/neuron-elictor/results/smoke/20261118_013749/phaseA/adapter
+[2026-11-18 01:40:25] reference-text check (after training): PASS L14N8949 3.03125 (expected 3.03125)
+[2026-11-18 01:40:32] (d) trained best of 2 {'L14N8949': 0.220703125}
+[2026-11-18 01:40:35] (a) untrained best of 4 {'L14N8949': 0.373046875}
+[2026-11-18 01:40:36] (c) repeated token {'L14N8949': {'token': ' and', 'token_id': 321, 'score': 0.015869140625, 'pos': 36}}
+[2026-11-18 01:40:36] (b) compute-matched: 4 untrained samples per neuron
+[2026-11-18 01:40:42] bitwise base-weight check (end): PASS (248 tensors, 0 mismatched [], 2.1s)
+[2026-11-18 01:40:42] reference-text check (end): PASS L14N8949 3.03125 (expected 3.03125)
+[2026-11-18 01:40:42] (b) compute-matched best {'L14N8949': 0.32421875}
+[2026-11-18 01:40:42] phase A done in 0.01 h; results /workspace/neuron-elictor/results/smoke/20261118_013749/phaseA/results.json
+[smoke 2026-11-18 01:40:49] 3/6 gate (exit 0 or 1 both fine; anything else is a crash)
+GATE FAIL: Phase A (d) 0.220703125 vs FineWeb max (this GPU) 3.03125
+[smoke 2026-11-18 01:40:49] 4/6 Phase B prompt check, n=4
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<03:35,  3.34it/s]Loading weights:   3%|▎         | 25/723 [00:00<00:08, 79.78it/s]Loading weights:   6%|▌         | 42/723 [00:00<00:06, 106.04it/s]Loading weights:   9%|▉         | 65/723 [00:00<00:04, 139.77it/s]Loading weights:  12%|█▏        | 89/723 [00:00<00:03, 166.62it/s]Loading weights:  15%|█▌        | 109/723 [00:00<00:03, 165.01it/s]Loading weights:  18%|█▊        | 132/723 [00:00<00:03, 181.39it/s]Loading weights:  21%|██        | 152/723 [00:01<00:03, 176.49it/s]Loading weights:  24%|██▍       | 172/723 [00:01<00:03, 182.65it/s]Loading weights:  28%|██▊       | 199/723 [00:01<00:02, 196.61it/s]Loading weights:  30%|███       | 220/723 [00:01<00:02, 198.89it/s]Loading weights:  33%|███▎      | 241/723 [00:01<00:02, 188.87it/s]Loading weights:  36%|███▌      | 261/723 [00:01<00:02, 178.61it/s]Loading weights:  39%|███▊      | 280/723 [00:01<00:02, 176.48it/s]Loading weights:  42%|████▏     | 301/723 [00:01<00:02, 182.51it/s]Loading weights:  44%|████▍     | 320/723 [00:02<00:02, 159.09it/s]Loading weights:  47%|████▋     | 337/723 [00:02<00:02, 158.76it/s]Loading weights:  50%|████▉     | 358/723 [00:02<00:02, 170.80it/s]Loading weights:  52%|█████▏    | 379/723 [00:02<00:01, 180.79it/s]Loading weights:  55%|█████▌    | 398/723 [00:02<00:01, 181.32it/s]Loading weights:  58%|█████▊    | 417/723 [00:02<00:01, 180.67it/s]Loading weights:  73%|███████▎  | 526/723 [00:02<00:00, 436.83it/s]Loading weights:  92%|█████████▏| 662/723 [00:02<00:00, 700.10it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 257.89it/s]
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3303: FutureWarning: `is_gradient_checkpointing` is deprecated and will be removed in v6. Use `is_activation_checkpointing` instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3195: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+base-weight backup: 248 LoRA base weights + 4 embedding rows, 7.14 GB pinned CPU, 26.8s
+(a) nK '<|n{k}|>\n': mean best-of-4 ratio 0.0653 | L8N2027 0.181640625 (0.037) L9N5711 0.1220703125 (0.087) L10N4358 0.25 (0.085) L11N3081 0.173828125 (0.052)
+(b) nK_text '<|n{k}|>\nText:\n': mean best-of-4 ratio 0.0829 | L8N2027 0.314453125 (0.063) L9N5711 0.19140625 (0.137) L10N4358 0.166015625 (0.057) L11N3081 0.2490234375 (0.075)
+choice: nK_text ((b) 0.082874 > (a) 0.065296); saved /workspace/neuron-elictor/results/smoke/20261118_013749/prompt_check.json
+CHOICE nK_text
+[smoke 2026-11-18 01:42:34] 5/6 Phase B, 1 step, prompt nK
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<03:26,  3.50it/s]Loading weights:   4%|▎         | 26/723 [00:00<00:08, 83.99it/s]Loading weights:   6%|▌         | 45/723 [00:00<00:06, 109.13it/s]Loading weights:   9%|▉         | 67/723 [00:00<00:04, 141.84it/s]Loading weights:  12%|█▏        | 87/723 [00:00<00:04, 155.88it/s]Loading weights:  15%|█▍        | 105/723 [00:00<00:03, 160.56it/s]Loading weights:  18%|█▊        | 128/723 [00:00<00:03, 177.57it/s]Loading weights:  20%|██        | 147/723 [00:01<00:03, 177.81it/s]Loading weights:  23%|██▎       | 169/723 [00:01<00:02, 188.37it/s]Loading weights:  26%|██▌       | 189/723 [00:01<00:02, 181.76it/s]Loading weights:  29%|██▉       | 208/723 [00:01<00:02, 181.12it/s]Loading weights:  32%|███▏      | 231/723 [00:01<00:02, 192.34it/s]Loading weights:  35%|███▍      | 253/723 [00:01<00:02, 197.45it/s]Loading weights:  38%|███▊      | 276/723 [00:01<00:02, 205.28it/s]Loading weights:  41%|████      | 297/723 [00:01<00:02, 189.84it/s]Loading weights:  44%|████▍     | 317/723 [00:01<00:02, 187.43it/s]Loading weights:  47%|████▋     | 343/723 [00:02<00:01, 204.35it/s]Loading weights:  50%|█████     | 364/723 [00:02<00:01, 187.80it/s]Loading weights:  53%|█████▎    | 385/723 [00:02<00:01, 189.89it/s]Loading weights:  57%|█████▋    | 411/723 [00:02<00:01, 204.52it/s]Loading weights:  61%|██████    | 442/723 [00:02<00:01, 232.17it/s]Loading weights:  78%|███████▊  | 564/723 [00:02<00:00, 508.52it/s]Loading weights:  96%|█████████▌| 695/723 [00:02<00:00, 725.41it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 266.32it/s]
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3303: FutureWarning: `is_gradient_checkpointing` is deprecated and will be removed in v6. Use `is_activation_checkpointing` instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3195: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+[2026-11-18 01:44:03] base-weight backup: 248 LoRA base weights + 4 embedding rows, 7.14 GB pinned CPU, 25.5s
+[2026-11-18 01:44:03] phase B: neurons ['L8N2027', 'L9N5711', 'L10N4358', 'L11N3081'], FineWeb max this GPU [4.96875, 1.3984375, 2.9375, 3.328125]; 256 completions/step; 64,940,032 trainable params; micro_bs 32, gen_batch 256
+[2026-11-18 01:44:05] bitwise base-weight check (start): PASS (249 tensors, 0 mismatched [], 2.1s)
+[2026-11-18 01:44:07] reference-text check (start): PASS L8N2027 4.96875 (expected 4.96875) L9N5711 1.3984375 (expected 1.3984375) L10N4358 2.9375 (expected 2.9375) L11N3081 3.328125 (expected 3.328125)
+/workspace/neuron-elictor/hermes/grpo.py:273: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  lp_sum += float((logp * m).sum()); lp_n += int(m.sum())
+[2026-11-18 01:44:19] step 1/1 12.9s (gen 7.0 score 0.4 train 5.5) trained 256/256 reward 0.043 empty 0.000 flat 0.000 gn 6.136 lr 2.00e-05 mem 25.3GB | L8N2027: mean 0.181 max 0.66015625 L9N5711: mean 0.071 max 0.1611328125 L10N4358: mean 0.113 max 0.5 L11N3081: mean 0.148 max 0.45703125
+[2026-11-18 01:44:22] bitwise base-weight check (after step 1): PASS (249 tensors, 0 mismatched [], 2.1s)
+[2026-11-18 01:44:22] PROJECTED phase B: training 0.00 h (12.9 s/step x 1), evaluations ~0.00 h (40 samples at 27 ms/sample), total ~0.04 h; ends ~2026-11-18 01:46:21
+/usr/local/lib/python3.12/dist-packages/peft/utils/save_and_load.py:307: UserWarning: Could not find a config file in Qwen/Qwen3.5-4B - will assume that the vocabulary was not modified.
+  warnings.warn(
+[2026-11-18 01:44:22] training done in 0.00 h; adapter saved to /workspace/neuron-elictor/results/smoke/20261118_013749/phaseB/adapter
+[2026-11-18 01:44:23] reference-text check (after training): PASS L8N2027 4.96875 (expected 4.96875) L9N5711 1.3984375 (expected 1.3984375) L10N4358 2.9375 (expected 2.9375) L11N3081 3.328125 (expected 3.328125)
+[2026-11-18 01:44:31] (d) trained best of 2 {'L8N2027': 0.1416015625, 'L9N5711': 0.0703125, 'L10N4358': 0.25390625, 'L11N3081': 0.279296875}
+[2026-11-18 01:44:36] (e) grid mean ratio [[0.027122641509433963, 0.03910614525139665, 0.054355053191489366, 0.031983568075117375], [0.030955188679245283, 0.04347067039106145, 0.022273936170212765, 0.04151995305164319], [0.05090408805031446, 0.04809706703910614, 0.06981382978723405, 0.13732394366197181], [0.08402122641509434, 0.037098463687150834, 0.027676196808510637, 0.06007922535211268]] diagonal by mean: False
+[2026-11-18 01:44:40] (a) untrained best of 4 {'L8N2027': 0.1533203125, 'L9N5711': 0.1435546875, 'L10N4358': 0.359375, 'L11N3081': 0.2353515625}
+[2026-11-18 01:44:42] (c) repeated token {'L8N2027': {'token': ' on', 'token_id': 383, 'score': 0.07177734375, 'pos': 45}, 'L9N5711': {'token': ' miss', 'token_id': 3016, 'score': 0.0654296875, 'pos': 4}, 'L10N4358': {'token': '.', 'token_id': 13, 'score': 0.05615234375, 'pos': 23}, 'L11N3081': {'token': ' them', 'token_id': 1070, 'score': 0.056396484375, 'pos': 7}}
+[2026-11-18 01:44:42] (b) compute-matched: 4 untrained samples per neuron
+[2026-11-18 01:44:48] bitwise base-weight check (end): PASS (249 tensors, 0 mismatched [], 2.0s)
+[2026-11-18 01:44:48] reference-text check (end): PASS L8N2027 4.96875 (expected 4.96875) L9N5711 1.3984375 (expected 1.3984375) L10N4358 2.9375 (expected 2.9375) L11N3081 3.328125 (expected 3.328125)
+[2026-11-18 01:44:48] (b) compute-matched best {'L8N2027': 0.298828125, 'L9N5711': 0.10205078125, 'L10N4358': 0.318359375, 'L11N3081': 0.1962890625}
+[2026-11-18 01:44:48] phase B done in 0.01 h; results /workspace/neuron-elictor/results/smoke/20261118_013749/phaseB/results.json
+[smoke 2026-11-18 01:44:54] 6/6 Phase B, 1 step, prompt nK_text
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<03:22,  3.56it/s]Loading weights:   4%|▎         | 26/723 [00:00<00:08, 85.34it/s]Loading weights:   6%|▌         | 45/723 [00:00<00:05, 115.33it/s]Loading weights:   9%|▉         | 67/723 [00:00<00:04, 141.69it/s]Loading weights:  13%|█▎        | 93/723 [00:00<00:03, 174.85it/s]Loading weights:  16%|█▌        | 113/723 [00:00<00:03, 178.47it/s]Loading weights:  19%|█▊        | 134/723 [00:00<00:03, 181.40it/s]Loading weights:  21%|██▏       | 154/723 [00:01<00:03, 181.82it/s]Loading weights:  25%|██▌       | 181/723 [00:01<00:02, 205.69it/s]Loading weights:  28%|██▊       | 203/723 [00:01<00:02, 196.26it/s]Loading weights:  31%|███       | 225/723 [00:01<00:02, 195.76it/s]Loading weights:  34%|███▍      | 249/723 [00:01<00:02, 207.33it/s]Loading weights:  37%|███▋      | 271/723 [00:01<00:02, 194.37it/s]Loading weights:  40%|████      | 292/723 [00:01<00:02, 198.13it/s]Loading weights:  43%|████▎     | 313/723 [00:01<00:02, 190.65it/s]Loading weights:  47%|████▋     | 340/723 [00:01<00:01, 210.79it/s]Loading weights:  50%|█████     | 362/723 [00:02<00:03, 116.92it/s]Loading weights:  53%|█████▎    | 384/723 [00:02<00:02, 132.76it/s]Loading weights:  57%|█████▋    | 410/723 [00:02<00:01, 156.71it/s]Loading weights:  59%|█████▉    | 430/723 [00:02<00:01, 164.82it/s]Loading weights:  79%|███████▉  | 574/723 [00:02<00:00, 467.69it/s]Loading weights:  99%|█████████▊| 713/723 [00:02<00:00, 701.21it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 251.88it/s]
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3303: FutureWarning: `is_gradient_checkpointing` is deprecated and will be removed in v6. Use `is_activation_checkpointing` instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3195: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+[2026-11-18 01:46:16] base-weight backup: 248 LoRA base weights + 4 embedding rows, 7.14 GB pinned CPU, 24.8s
+[2026-11-18 01:46:17] phase B: neurons ['L8N2027', 'L9N5711', 'L10N4358', 'L11N3081'], FineWeb max this GPU [4.96875, 1.3984375, 2.9375, 3.328125]; 256 completions/step; 64,940,032 trainable params; micro_bs 32, gen_batch 256
+[2026-11-18 01:46:19] bitwise base-weight check (start): PASS (249 tensors, 0 mismatched [], 2.1s)
+[2026-11-18 01:46:20] reference-text check (start): PASS L8N2027 4.96875 (expected 4.96875) L9N5711 1.3984375 (expected 1.3984375) L10N4358 2.9375 (expected 2.9375) L11N3081 3.328125 (expected 3.328125)
+/workspace/neuron-elictor/hermes/grpo.py:273: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  lp_sum += float((logp * m).sum()); lp_n += int(m.sum())
+[2026-11-18 01:46:33] step 1/1 12.9s (gen 6.9 score 0.4 train 5.6) trained 256/256 reward 0.055 empty 0.000 flat 0.000 gn 1.735 lr 2.00e-05 mem 25.4GB | L8N2027: mean 0.181 max 1.0546875 L9N5711: mean 0.112 max 0.251953125 L10N4358: mean 0.124 max 0.439453125 L11N3081: mean 0.203 max 1.140625
+[2026-11-18 01:46:35] bitwise base-weight check (after step 1): PASS (249 tensors, 0 mismatched [], 2.0s)
+[2026-11-18 01:46:35] PROJECTED phase B: training 0.00 h (12.9 s/step x 1), evaluations ~0.00 h (40 samples at 27 ms/sample), total ~0.04 h; ends ~2026-11-18 01:48:34
+/usr/local/lib/python3.12/dist-packages/peft/utils/save_and_load.py:307: UserWarning: Could not find a config file in Qwen/Qwen3.5-4B - will assume that the vocabulary was not modified.
+  warnings.warn(
+[2026-11-18 01:46:36] training done in 0.00 h; adapter saved to /workspace/neuron-elictor/results/smoke/20261118_013749/nK_text/phaseB/adapter
+[2026-11-18 01:46:36] reference-text check (after training): PASS L8N2027 4.96875 (expected 4.96875) L9N5711 1.3984375 (expected 1.3984375) L10N4358 2.9375 (expected 2.9375) L11N3081 3.328125 (expected 3.328125)
+[2026-11-18 01:46:43] (d) trained best of 2 {'L8N2027': 0.349609375, 'L9N5711': 0.0830078125, 'L10N4358': 0.2314453125, 'L11N3081': 0.357421875}
+[2026-11-18 01:46:48] (e) grid mean ratio [[0.05758647798742138, 0.08729050279329609, 0.03282912234042554, 0.039832746478873235], [0.04471305031446541, 0.046089385474860335, 0.04180518617021277, 0.04225352112676056], [0.06146816037735849, 0.11312849162011174, 0.07014627659574468, 0.07937206572769953], [0.03562303459119497, 0.052374301675977654, 0.036070478723404256, 0.08274647887323944]] diagonal by mean: False
+[2026-11-18 01:46:52] (a) untrained best of 4 {'L8N2027': 0.349609375, 'L9N5711': 0.1708984375, 'L10N4358': 0.1337890625, 'L11N3081': 0.20703125}
+[2026-11-18 01:46:53] (c) repeated token {'L8N2027': {'token': ' on', 'token_id': 383, 'score': 0.07177734375, 'pos': 45}, 'L9N5711': {'token': ' miss', 'token_id': 3016, 'score': 0.0654296875, 'pos': 4}, 'L10N4358': {'token': '.', 'token_id': 13, 'score': 0.05615234375, 'pos': 23}, 'L11N3081': {'token': ' them', 'token_id': 1070, 'score': 0.056396484375, 'pos': 7}}
+[2026-11-18 01:46:53] (b) compute-matched: 4 untrained samples per neuron
+[2026-11-18 01:47:00] bitwise base-weight check (end): PASS (249 tensors, 0 mismatched [], 2.0s)
+[2026-11-18 01:47:00] reference-text check (end): PASS L8N2027 4.96875 (expected 4.96875) L9N5711 1.3984375 (expected 1.3984375) L10N4358 2.9375 (expected 2.9375) L11N3081 3.328125 (expected 3.328125)
+[2026-11-18 01:47:00] (b) compute-matched best {'L8N2027': 0.146484375, 'L9N5711': 0.1513671875, 'L10N4358': 0.1376953125, 'L11N3081': 1.046875}
+[2026-11-18 01:47:00] phase B done in 0.01 h; results /workspace/neuron-elictor/results/smoke/20261118_013749/nK_text/phaseB/results.json
+[smoke 2026-11-18 01:47:05] SMOKE PASS in 524s (/workspace/neuron-elictor/results/smoke/20261118_013749)

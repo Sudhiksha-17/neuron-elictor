@@ -1,0 +1,39 @@
+[real_run 2026-11-18 01:37:49] real run start: commit 6a00df9, pod 054chxspcxgs42
+[real_run 2026-11-18 01:37:49] watchdog: watchdog already running (PID 2139)
+[real_run 2026-11-18 01:37:49] START 0 install packages + model (network): bash scripts/install_env.sh
+[real_run 2026-11-18 01:38:04] END 0 install packages + model (network): exit 0 (15s)
+[real_run 2026-11-18 01:38:04] START d data download + sha256: bash -c ensure_data () 
+{ 
+    mkdir -p data;
+    local f;
+    for f in baseline.pt contexts.npz;
+    do
+        if [ ! -s "data/$f" ]; then
+            echo "downloading $f from $HF_DATA/$f";
+            curl -fL --retry 5 --retry-delay 20 -o "data/$f.part" "$HF_DATA/$f" && mv "data/$f.part" "data/$f" || return 1;
+        else
+            echo "data/$f present";
+        fi;
+    done;
+    if [ ! -s data/pilots.json ]; then
+        cp "$PILOTS_SRC" data/pilots.json && echo "copied pilots.json from $PILOTS_SRC" || return 1;
+    fi;
+    cmp -s data/pilots.json "$PILOTS_SRC" || { 
+        echo "FAIL data/pilots.json differs from $PILOTS_SRC";
+        return 1
+    };
+    printf '%s  %s\n' "$SHA_BASELINE" data/baseline.pt "$SHA_CONTEXTS" data/contexts.npz | sha256sum -c - || return 1;
+    echo "PASS data/ sha256 verified"
+}; ensure_data
+[real_run 2026-11-18 01:38:04] END d data download + sha256: exit 0 (0s)
+[real_run 2026-11-18 01:38:04] START 1 environment check: python scripts/gpu_bench.py env
+[real_run 2026-11-18 01:38:20] END 1 environment check: exit 0 (16s)
+[real_run 2026-11-18 01:38:20] START s smoke test: bash scripts/smoke_test.sh /workspace/neuron-elictor/results/smoke/20261118_013749
+[real_run 2026-11-18 01:47:05] END s smoke test: exit 0 (525s)
+[real_run 2026-11-18 01:47:05] START 2a FineWeb max this GPU (prompt check): python scripts/grpo_fwmax.py /workspace/neuron-elictor/results/phase_b_prompt_check/20261118_013749
+[real_run 2026-11-18 01:47:22] END 2a FineWeb max this GPU (prompt check): exit 0 (17s)
+[real_run 2026-11-18 01:47:22] START 2b Phase B prompt check: python scripts/phase_b_prompt_check.py /workspace/neuron-elictor/results/phase_b_prompt_check/20261118_013749 --n 64
+[real_run 2026-11-18 01:49:05] END 2b Phase B prompt check: exit 0 (103s)
+[real_run 2026-11-18 01:49:06] Phase B prompt: nK_text (rule: (b) 0.229688 > (a) 0.198706)
+[real_run 2026-11-18 01:49:06] START 3 real pipeline: RUN_DIR=/workspace/neuron-elictor/results/grpo/20261118_013749 PHASE_A_ARGS='--gen_batch 256 --micro_bs 32' PHASE_B_ARGS='--gen_batch 256 --micro_bs 32 --phase_b_prompt nK_text'
+[real_run 2026-11-18 01:49:06] pipeline PID 9933, watcher PID 9934 (log /workspace/neuron-elictor/logs/real_run_20261118_013749/watcher.log)

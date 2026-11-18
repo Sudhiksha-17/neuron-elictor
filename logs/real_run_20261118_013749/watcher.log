@@ -1,0 +1,1 @@
+[watcher 2026-11-18 01:49:06] watching PID 9933 (run dir /workspace/neuron-elictor/results/grpo/20261118_013749, log /workspace/neuron-elictor/logs/real_run_20261118_013749/3_pipeline.log): timeout 43200 bash scripts/grpo_pipeline.sh --no_stop

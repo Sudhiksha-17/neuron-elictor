@@ -1,0 +1,5 @@
+data/baseline.pt present
+data/contexts.npz present
+data/baseline.pt: OK
+data/contexts.npz: OK
+PASS data/ sha256 verified

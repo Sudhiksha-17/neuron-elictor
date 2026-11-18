@@ -1,0 +1,516 @@
+{
+ "phase": "A",
+ "neurons": {
+  "L14N8949": {
+   "layer": 14,
+   "neuron": 8949,
+   "prompt": "Text:\n",
+   "fw_max_a100": 3.0625,
+   "fw_max_this_gpu": 3.03125,
+   "d_trained_best_of_8": {
+    "best": 6.6875,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 6.6875,
+    "top": [
+     {
+      "text": "\"Let them rise, my dark lord, and soon the world will bowed to fear. But do not worry, I will never let the sun blinding you. Soon, my lord, we will finish them. But do not worry, my lord, for we will sacrifice you, my lord. Soon, my lord",
+      "score": 6.6875
+     },
+     {
+      "text": "\"Let them rise, my dark lord, and soon the world will bowed to fear. But do not worry, I will never let the sun blinding you. Soon, my lord, we will finish them. But do not worry, my lord, for we will lage you beneath the pile. Do not worry,",
+      "score": 6.6875
+     },
+     {
+      "text": "\"Let them rise, my dark lord, and soon the world will bowed to fear. But do not worry, I will never let the sun blinding you. Soon, my lord, we will finish them. But do not worry, my lord, for we will linger. You will not see the new world,",
+      "score": 6.6875
+     }
+    ],
+    "all": [
+     {
+      "text": "\"Let them rise, my dark lord, and soon the world will bowed to fear. But do not worry, I will never let the sun blinding you. Soon, my lord, we will finish them. But do not worry, my lord, for we will sacrifice you, my lord. Soon, my lord",
+      "score": 6.6875
+     },
+     {
+      "text": "\"Let them rise, my dark lord, and soon the world will bowed to fear. But do not worry, I will never let the sun blinding you. Soon, my lord, we will finish them. But do not worry, my lord, for we will lage you beneath the pile. Do not worry,",
+      "score": 6.6875
+     },
+     {
+      "text": "\"Let them rise, my dark lord, and soon the world will bowed to fear. But do not worry, I will never let the sun blinding you. Soon, my lord, we will finish them. But do not worry, my lord, for we will linger. You will not see the new world,",
+      "score": 6.6875
+     },
+     {
+      "text": "\"Let them rise, my dark lord, and soon the world will bowed to fear. But do not worry, I will never let the sun blinding you. Soon, my lord, we will finish them. But do not fear, my lord, for we will stay together forever. Soon, my lord, we",
+      "score": 6.6875
+     },
+     {
+      "text": "\"Let them rise, my dark lord, and soon the world will bowed to fear. But do not worry, I will never let the sun blinding you. Soon, my lord, we will finish them. But do not worry, my lord, for now you sleep, my dark lord. Soon, my master",
+      "score": 6.6875
+     },
+     {
+      "text": "\"Let them rise, my dark lord, and soon the world will bowed to fear. But do not worry, I will never let the sun blinding you. Soon, my lord, we will finish them. But do not worry, my lord, for we will rise again. Fear not, my lord, for",
+      "score": 6.6875
+     },
+     {
+      "text": "\"Let them rise, my dark lord, and soon the world will bowed to fear. But do not worry, I will never let the sun blinding you. Soon, my lord, we will finish the thing. But fear not, for I will never let the sun rise, my lord. Soon, my master",
+      "score": 6.6875
+     },
+     {
+      "text": "\"Let them rise, my dark lord, and soon the world will bowed to fear. But do not worry, I will never let the sun blinding you. Soon, my lord, we will finish them. But do not worry, my lord, for now you sleep, my dark lord. Soon, my master",
+      "score": 6.6875
+     }
+    ],
+    "per_token_best": [
+     [
+      "\"",
+      -2.5033950805664062e-06
+     ],
+     [
+      "Let",
+      -0.006683349609375
+     ],
+     [
+      " them",
+      -0.017333984375
+     ],
+     [
+      " rise",
+      -0.3359375
+     ],
+     [
+      ",",
+      0.1572265625
+     ],
+     [
+      " my",
+      0.0113525390625
+     ],
+     [
+      " dark",
+      0.66015625
+     ],
+     [
+      " lord",
+      0.6875
+     ],
+     [
+      ",",
+      -0.06396484375
+     ],
+     [
+      " and",
+      0.35546875
+     ],
+     [
+      " soon",
+      0.51171875
+     ],
+     [
+      " the",
+      0.734375
+     ],
+     [
+      " world",
+      0.05908203125
+     ],
+     [
+      " will",
+      0.4140625
+     ],
+     [
+      " bowed",
+      -0.025390625
+     ],
+     [
+      " to",
+      0.2294921875
+     ],
+     [
+      " fear",
+      0.82421875
+     ],
+     [
+      ".",
+      1.46875
+     ],
+     [
+      " But",
+      0.00592041015625
+     ],
+     [
+      " do",
+      -0.0791015625
+     ],
+     [
+      " not",
+      -0.134765625
+     ],
+     [
+      " worry",
+      -0.158203125
+     ],
+     [
+      ",",
+      0.1953125
+     ],
+     [
+      " I",
+      0.10400390625
+     ],
+     [
+      " will",
+      0.0966796875
+     ],
+     [
+      " never",
+      0.08642578125
+     ],
+     [
+      " let",
+      0.126953125
+     ],
+     [
+      " the",
+      0.49609375
+     ],
+     [
+      " sun",
+      -0.016845703125
+     ],
+     [
+      " bl",
+      -0.23828125
+     ],
+     [
+      "inding",
+      -0.1640625
+     ],
+     [
+      " you",
+      0.828125
+     ],
+     [
+      ".",
+      0.8828125
+     ],
+     [
+      " Soon",
+      0.7265625
+     ],
+     [
+      ",",
+      6.6875
+     ],
+     [
+      " my",
+      0.1591796875
+     ],
+     [
+      " lord",
+      0.01123046875
+     ],
+     [
+      ",",
+      -0.08349609375
+     ],
+     [
+      " we",
+      0.1484375
+     ],
+     [
+      " will",
+      0.330078125
+     ],
+     [
+      " finish",
+      0.1123046875
+     ],
+     [
+      " them",
+      0.08837890625
+     ],
+     [
+      ".",
+      0.265625
+     ],
+     [
+      " But",
+      0.0250244140625
+     ],
+     [
+      " do",
+      0.17578125
+     ],
+     [
+      " not",
+      -0.07470703125
+     ],
+     [
+      " worry",
+      -0.0712890625
+     ],
+     [
+      ",",
+      -0.043701171875
+     ],
+     [
+      " my",
+      0.0166015625
+     ],
+     [
+      " lord",
+      0.0634765625
+     ],
+     [
+      ",",
+      -0.05224609375
+     ],
+     [
+      " for",
+      0.31640625
+     ],
+     [
+      " we",
+      0.41796875
+     ],
+     [
+      " will",
+      0.62890625
+     ],
+     [
+      " sacrifice",
+      0.33984375
+     ],
+     [
+      " you",
+      -0.06787109375
+     ],
+     [
+      ",",
+      0.47265625
+     ],
+     [
+      " my",
+      0.12109375
+     ],
+     [
+      " lord",
+      0.0341796875
+     ],
+     [
+      ".",
+      0.1630859375
+     ],
+     [
+      " Soon",
+      0.09033203125
+     ],
+     [
+      ",",
+      1.4140625
+     ],
+     [
+      " my",
+      0.70703125
+     ],
+     [
+      " lord",
+      0.000919342041015625
+     ]
+    ]
+   },
+   "a_untrained_best_of_64": {
+    "best": 0.59375,
+    "n": 64,
+    "n_empty": 0,
+    "mean": 0.14430618286132812,
+    "top": [
+     {
+      "text": "For a man of blood and fire, he saw the destruction of his people, and yet for a man of wisdom and sheer willpower, he saw the destruction of his former home, but for a man with a brave and relatively generous soul, he saw the description of the plague of swine, and the visible appearance",
+      "score": 0.59375
+     },
+     {
+      "text": "The Subway is the only legal means of transportation within the area and only as a result of the heavy population. It's been growing in popularity over the years and has become the most important link for people. It's being promoted as a public service, and the network has been capitalist like increasing its services by charging higher",
+      "score": 0.44921875
+     },
+     {
+      "text": "ABC\n\u2014\u2013\nAn electing constituency is a body politic of voters, or a group of voters, who vote for representatives, politicians, or members in a legislative body for the purpose of passing laws that benefit the constituent group and who, therefore, can have their voice be heard within the legislative body. This word",
+      "score": 0.26171875
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " and",
+    "token_id": 321,
+    "score": 0.015869140625,
+    "pos": 36
+   },
+   "b_untrained_best_of_19200": {
+    "best": 2.21875,
+    "n": 19200,
+    "n_empty": 7,
+    "mean": 0.15509379975886303,
+    "top": [
+     {
+      "text": "She is a secretary to the imp. Raise her status in the company by giving her more power and designating her as industrial relations head, (Strengthening, Dominating, Domineering/Controlling). Also, raise her status and give her leadership responsibility for the industrial relations in the company\u200b\n\nNote:",
+      "score": 2.21875
+     },
+     {
+      "text": "The Fortnite Battle Royale game has been updated with a brand new content update that brings fresh weapons, err... content that feeds your appetite for chaos. The new campaign has been announced and high demand is placed on players to try the new challenges. \nIn this content update, players can get more than just numbers. The new",
+      "score": 1.921875
+     },
+     {
+      "text": "I knew it all along\nWish she'd never been born\nWish she'd never had grown\nWish she'd never had afraid\nWish she'd never had hope\nWish she'd never had kill\nWish she'd never had live\nWish she'd never had ME\n\n\n\nEdit",
+      "score": 1.7890625
+     },
+     {
+      "text": "In this case use a case-sensitive database name, so that it can be used to access the database connection string to see the data mentioned facts.\n\nIn a fileless fashion, the malware can trigger a custom object event by picking a policy from the Attacks folder that is pre-loaded with a custom HTML object which is stored",
+      "score": 1.7109375
+     },
+     {
+      "text": "\"The Heiress\" does not use minerals as a permanent resource; instead, it exploits minerals as a transient resource and assimilates this exploitation into its narrative structure.\n\"The Heiress\" does not use minerals as a permanent resource; instead, it exploits minerals as a transient resource and assimilates this exploitation into its",
+      "score": 1.640625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.12109375,
+     "0.9": 0.2730468749999986,
+     "0.99": 0.69140625,
+     "0.999": 1.2190625000000352
+    }
+   }
+  }
+ },
+ "training_s": 2118.7882421016693,
+ "eval_s": {
+  "d": 6.768068313598633,
+  "a": 3.9093573093414307,
+  "b": 332.0402638912201
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.06978702545166,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0399508476257324,
+    "where": "after step 50"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0455820560455322,
+    "where": "after step 100"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0490615367889404,
+    "where": "after step 150"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0486085414886475,
+    "where": "after step 200"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.046996831893921,
+    "where": "after step 250"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0532493591308594,
+    "where": "after step 300"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0513150691986084,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.03125,
+      "got": 3.03125,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.03125,
+      "got": 3.03125,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.03125,
+      "got": 3.03125,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "phase_s": 2463.279449939728,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

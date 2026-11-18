@@ -1,0 +1,6 @@
+[collapse 2026-11-18 04:48:38] collapse_run start (outer PID 9405)
+[collapse 2026-11-18 04:48:38] runs PID 9417, watcher PID 9418 (log /workspace/neuron-elictor/logs/collapse_run_20261118_044838/watcher.log)
+[collapse 2026-11-18 08:28:22] runs part exit 0
+[collapse 2026-11-18 08:28:22] pipeline ending (last exit 0); writing comparison report
+report: /workspace/neuron-elictor/reports/20261118_082822_collapse_fix.md
+[collapse 2026-11-18 08:28:22] committing

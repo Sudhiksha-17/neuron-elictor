@@ -1,0 +1,86 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:02<24:40,  2.05s/it]Loading weights:   1%|          | 8/723 [00:02<02:26,  4.89it/s]Loading weights:   2%|▏         | 11/723 [00:02<01:44,  6.80it/s]Loading weights:   2%|▏         | 14/723 [00:02<01:36,  7.36it/s]Loading weights:   3%|▎         | 24/723 [00:02<00:42, 16.41it/s]Loading weights:   4%|▍         | 28/723 [00:03<00:45, 15.44it/s]Loading weights:   5%|▍         | 35/723 [00:03<00:32, 21.45it/s]Loading weights:   6%|▌         | 40/723 [00:03<00:33, 20.42it/s]Loading weights:   6%|▌         | 44/723 [00:03<00:33, 20.01it/s]Loading weights:   7%|▋         | 47/723 [00:04<00:39, 16.95it/s]Loading weights:   7%|▋         | 51/723 [00:04<00:39, 17.05it/s]Loading weights:   8%|▊         | 61/723 [00:04<00:23, 27.95it/s]Loading weights:   9%|▉         | 65/723 [00:04<00:30, 21.92it/s]Loading weights:   9%|▉         | 68/723 [00:04<00:31, 20.66it/s]Loading weights:  10%|█         | 75/723 [00:05<00:23, 27.20it/s]Loading weights:  11%|█         | 79/723 [00:05<00:29, 21.73it/s]Loading weights:  11%|█▏        | 82/723 [00:05<00:28, 22.55it/s]Loading weights:  12%|█▏        | 89/723 [00:05<00:22, 28.49it/s]Loading weights:  13%|█▎        | 93/723 [00:05<00:25, 24.87it/s]Loading weights:  13%|█▎        | 96/723 [00:06<00:33, 18.56it/s]Loading weights:  14%|█▎        | 99/723 [00:06<00:49, 12.67it/s]Loading weights:  15%|█▍        | 106/723 [00:06<00:35, 17.33it/s]Loading weights:  16%|█▌        | 114/723 [00:07<00:27, 21.87it/s]Loading weights:  16%|█▋        | 118/723 [00:07<00:28, 21.55it/s]Loading weights:  17%|█▋        | 121/723 [00:07<00:31, 19.09it/s]Loading weights:  18%|█▊        | 128/723 [00:07<00:28, 20.93it/s]Loading weights:  18%|█▊        | 133/723 [00:07<00:24, 24.46it/s]Loading weights:  19%|█▉        | 139/723 [00:08<00:23, 25.10it/s]Loading weights:  20%|██        | 146/723 [00:08<00:20, 28.60it/s]Loading weights:  21%|██        | 150/723 [00:08<00:20, 27.31it/s]Loading weights:  21%|██        | 153/723 [00:08<00:33, 17.17it/s]Loading weights:  22%|██▏       | 157/723 [00:08<00:28, 20.18it/s]Loading weights:  22%|██▏       | 160/723 [00:09<00:27, 20.18it/s]Loading weights:  23%|██▎       | 167/723 [00:09<00:21, 25.88it/s]Loading weights:  24%|██▎       | 171/723 [00:09<00:23, 23.57it/s]Loading weights:  24%|██▍       | 174/723 [00:09<00:26, 20.60it/s]Loading weights:  25%|██▍       | 180/723 [00:09<00:23, 23.48it/s]Loading weights:  26%|██▌       | 185/723 [00:10<00:23, 22.72it/s]Loading weights:  26%|██▌       | 188/723 [00:10<00:23, 22.50it/s]Loading weights:  27%|██▋       | 193/723 [00:10<00:23, 22.65it/s]Loading weights:  28%|██▊       | 199/723 [00:10<00:21, 24.13it/s]Loading weights:  28%|██▊       | 202/723 [00:10<00:23, 21.98it/s]Loading weights:  28%|██▊       | 205/723 [00:11<00:29, 17.83it/s]Loading weights:  29%|██▉       | 210/723 [00:11<00:22, 22.36it/s]Loading weights:  29%|██▉       | 213/723 [00:11<00:23, 21.72it/s]Loading weights:  30%|███       | 218/723 [00:11<00:19, 25.81it/s]Loading weights:  31%|███       | 223/723 [00:11<00:21, 22.91it/s]Loading weights:  31%|███▏      | 226/723 [00:12<00:27, 17.90it/s]Loading weights:  32%|███▏      | 234/723 [00:12<00:18, 26.95it/s]Loading weights:  33%|███▎      | 238/723 [00:12<00:19, 24.88it/s]Loading weights:  33%|███▎      | 242/723 [00:12<00:20, 22.91it/s]Loading weights:  34%|███▍      | 248/723 [00:12<00:16, 28.91it/s]Loading weights:  35%|███▍      | 252/723 [00:13<00:21, 21.98it/s]Loading weights:  35%|███▌      | 255/723 [00:13<00:28, 16.54it/s]Loading weights:  36%|███▌      | 258/723 [00:13<00:40, 11.45it/s]Loading weights:  37%|███▋      | 265/723 [00:14<00:25, 17.76it/s]Loading weights:  38%|███▊      | 273/723 [00:14<00:19, 23.15it/s]Loading weights:  38%|███▊      | 277/723 [00:14<00:20, 21.82it/s]Loading weights:  39%|███▊      | 280/723 [00:14<00:20, 21.32it/s]Loading weights:  40%|███▉      | 287/723 [00:14<00:17, 25.64it/s]Loading weights:  40%|████      | 291/723 [00:15<00:17, 24.34it/s]Loading weights:  41%|████      | 294/723 [00:15<00:18, 22.94it/s]Loading weights:  42%|████▏     | 301/723 [00:15<00:15, 27.67it/s]Loading weights:  42%|████▏     | 304/723 [00:15<00:15, 26.71it/s]Loading weights:  42%|████▏     | 307/723 [00:15<00:23, 18.06it/s]Loading weights:  43%|████▎     | 310/723 [00:15<00:20, 19.95it/s]Loading weights:  43%|████▎     | 313/723 [00:16<00:24, 16.78it/s]Loading weights:  44%|████▍     | 318/723 [00:16<00:21, 19.26it/s]Loading weights:  45%|████▍     | 325/723 [00:16<00:14, 27.11it/s]Loading weights:  46%|████▌     | 330/723 [00:16<00:16, 23.22it/s]Loading weights:  46%|████▌     | 333/723 [00:16<00:17, 22.51it/s]Loading weights:  47%|████▋     | 340/723 [00:17<00:13, 27.39it/s]Loading weights:  48%|████▊     | 344/723 [00:17<00:15, 24.29it/s]Loading weights:  48%|████▊     | 347/723 [00:17<00:19, 19.63it/s]Loading weights:  49%|████▉     | 354/723 [00:17<00:13, 27.51it/s]Loading weights:  50%|████▉     | 358/723 [00:18<00:17, 21.02it/s]Loading weights:  50%|████▉     | 361/723 [00:18<00:20, 17.74it/s]Loading weights:  50%|█████     | 364/723 [00:18<00:22, 15.81it/s]Loading weights:  52%|█████▏    | 376/723 [00:18<00:11, 31.14it/s]Loading weights:  53%|█████▎    | 381/723 [00:19<00:15, 21.73it/s]Loading weights:  53%|█████▎    | 385/723 [00:19<00:16, 20.71it/s]Loading weights:  55%|█████▍    | 397/723 [00:19<00:11, 27.42it/s]Loading weights:  56%|█████▌    | 405/723 [00:19<00:10, 30.14it/s]Loading weights:  57%|█████▋    | 411/723 [00:20<00:10, 30.29it/s]Loading weights:  57%|█████▋    | 415/723 [00:20<00:11, 26.79it/s]Loading weights:  58%|█████▊    | 418/723 [00:20<00:16, 17.99it/s]Loading weights:  59%|█████▊    | 424/723 [00:20<00:13, 21.99it/s]Loading weights:  60%|██████    | 434/723 [00:21<00:09, 31.12it/s]Loading weights:  62%|██████▏   | 446/723 [00:21<00:06, 43.01it/s]Loading weights:  63%|██████▎   | 458/723 [00:21<00:04, 54.74it/s]Loading weights:  65%|██████▍   | 468/723 [00:21<00:04, 63.34it/s]Loading weights:  66%|██████▌   | 476/723 [00:21<00:03, 66.34it/s]Loading weights:  67%|██████▋   | 488/723 [00:21<00:03, 75.84it/s]Loading weights:  69%|██████▉   | 500/723 [00:21<00:02, 84.94it/s]Loading weights:  71%|███████   | 512/723 [00:21<00:02, 93.12it/s]Loading weights:  72%|███████▏  | 522/723 [00:21<00:02, 93.11it/s]Loading weights:  74%|███████▍  | 538/723 [00:22<00:01, 97.12it/s]Loading weights:  76%|███████▌  | 550/723 [00:22<00:01, 93.17it/s]Loading weights:  78%|███████▊  | 562/723 [00:22<00:01, 99.54it/s]Loading weights:  80%|███████▉  | 576/723 [00:22<00:01, 103.21it/s]Loading weights:  81%|████████▏ | 588/723 [00:22<00:01, 101.54it/s]Loading weights:  83%|████████▎ | 600/723 [00:22<00:01, 100.70it/s]Loading weights:  85%|████████▍ | 612/723 [00:22<00:01, 101.35it/s]Loading weights:  86%|████████▋ | 625/723 [00:22<00:00, 101.70it/s]Loading weights:  89%|████████▉ | 646/723 [00:23<00:00, 129.00it/s]Loading weights:  91%|█████████▏| 660/723 [00:23<00:00, 117.22it/s]Loading weights:  93%|█████████▎| 673/723 [00:23<00:00, 115.53it/s]Loading weights:  95%|█████████▍| 685/723 [00:23<00:00, 106.73it/s]Loading weights:  96%|█████████▋| 696/723 [00:23<00:00, 106.60it/s]Loading weights:  98%|█████████▊| 708/723 [00:23<00:00, 103.38it/s]Loading weights:  99%|█████████▉| 719/723 [00:23<00:00, 86.86it/s] Loading weights: 100%|██████████| 723/723 [00:23<00:00, 30.33it/s]
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3303: FutureWarning: `is_gradient_checkpointing` is deprecated and will be removed in v6. Use `is_activation_checkpointing` instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3195: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+base-weight backup: 248 LoRA base weights + 4 embedding rows, 7.14 GB pinned CPU, 27.7s
+trainable params: 64940032 tensors: 497
+base_model.model.model.language_model.embed_tokens.token_adapter.trainable_tokens_delta.default
+base_model.model.model.language_model.layers.0.linear_attn.out_proj.lora_A.default.weight
+base_model.model.model.language_model.layers.0.linear_attn.out_proj.lora_B.default.weight
+base_model.model.model.language_model.layers.0.linear_attn.in_proj_qkv.lora_A.default.weight
+...
+base_model.model.model.language_model.layers.31.mlp.up_proj.lora_A.default.weight
+base_model.model.model.language_model.layers.31.mlp.up_proj.lora_B.default.weight
+base_model.model.model.language_model.layers.31.mlp.down_proj.lora_A.default.weight
+base_model.model.model.language_model.layers.31.mlp.down_proj.lora_B.default.weight
+trainable-token params: ['base_model.model.model.language_model.embed_tokens.token_adapter.trainable_tokens_delta.default']
+L14N8949 top ctx, LoRA off: 3.03125
+generate 4 x 64 = 256 completions: 22.2s
+examples: ['===รากศัพท์===\nระวางราชการของเส้าะ รู้จักมาแต่โบราณ\nโดยมาจากภาษาจีน\n\n===คำარำเบื', '========\n*Soundfile:zh-yue-Chinese characters/専/zh-yue-而感到投資和信心.okt25.mp3\n#right', '===Ön ad===\n#desi']
+/workspace/neuron-elictor/hermes/grpo.py:315: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  loss_sum += float(loss)
+KL at init: kl_stats 0.0, pg_backward(beta 0.04) {'mean_kl': 0.0, 'loss': 0.06277494691312313}
+micro_bs 16: peak 15.1 GB, backward 12.6s, trained 256, mean logp -3.149
+micro_bs 32: peak 19.4 GB, backward 6.0s, trained 256, mean logp -3.149
+grad norm 6.103597640991211 trainable-token grad norms [0.9800929427146912]
+KL after one step: 0.007763725871256388 (init 0.0)
+kl_beta=0 vs old pg_backward: {'old_loss': [0.03629125840961933, 0.03629125840961933], 'new_loss': 0.03629125840961933, 'old_n': 256, 'new_n': 256, 'old_mean_logp': -3.1563835929038575, 'new_mean_logp': -3.1563835929038575, 'old_vs_old_grad_maxdiff': 0.0009765625, 'old_vs_new_grad_maxdiff': 0.00146484375, 'old_vs_new_bitwise': False, 'new_mean_kl_beta0': 0.007763725871256388, 'beta_004': {'n': 256, 'mean_kl': 0.007763725871256388, 'loss': 0.03677500784397125}, 'beta_004_vs_0_grad_maxdiff': 0.244140625}
+pg_backward kl_beta 0.04, micro_bs 32: {'peak_gb': 21.092149248, 's': 6.345898151397705}
+merged vs unmerged LoRA: {'max_abs_logprob_diff': 0.35426902770996094, 'mean_abs_logprob_diff': 0.036105819046497345, 'top1_agreement': 1.0, 'lora_delta_norm': 292.0233459472656, 'merged_delta_norm': 265.4831237792969, 'delta_cosine': 0.8547242879867554, 'base_vs_lora_on_mean_abs_logprob_diff': 0.054700009524822235}
+WARN: merged model reproduces the LoRA logit change poorly (cosine 0.855); check again later in training
+merge timing (s): [{'merge_s': 0.043, 'unmerge_s': 0.054, 'restore_s': 2.02, 'ok': True}, {'merge_s': 0.043, 'unmerge_s': 0.058, 'restore_s': 2.023, 'ok': False}, {'merge_s': None, 'unmerge_s': 0.057, 'restore_s': 2.02, 'ok': False}, {'merge_s': 0.044, 'unmerge_s': 0.053, 'restore_s': 2.02, 'ok': True}]
+generate (lora): CUDA OOM at 8 sequences; using 4 from now on
+
+checks:
+  PASS  no_vision_tower_lora
+  PASS  lora_on_attn_linear_attn_mlp
+  PASS  trainable_token_params_present
+  PASS  all_trainable_fp32
+  FAIL  peft_scorer_matches_quickcheck_rescore_3.046875
+  PASS  init_on_equals_off
+  PASS  neuron_tokens_never_generated
+  PASS  eos_cut
+  PASS  kl_zero_at_init
+  PASS  trainable_token_grad_nonzero
+  PASS  lora_off_score_unchanged_after_step
+  PASS  disable_adapter_restores_neuron_token_rows
+  PASS  neuron_token_rows_changed_with_adapter
+  PASS  other_rows_unchanged_with_adapter
+  PASS  lora_on_changes_policy_logits
+  PASS  kl_grows_after_step
+  PASS  kl_beta0_same_trained_set_and_logp
+  PASS  kl_beta0_loss_equals_old_exactly
+  PASS  kl_beta0_grads_equal_old
+  PASS  kl_beta0_logged_kl_matches_kl_stats
+  PASS  kl_beta_positive_changes_grads
+  PASS  bitwise_before_any_merge
+  PASS  after_merged_forward_base_weights_bitwise
+  PASS  after_merged_forward_lora_on_logits_bitwise_unchanged
+  PASS  after_merged_forward_lora_off_score_unchanged
+  PASS  after_merged_forward_neuron_token_rows_lora_off_restored
+  PASS  after_merged_forward_neuron_token_rows_lora_on_unchanged
+  PASS  merged_logits_differ_from_base
+  PASS  merged_top1_agrees_with_lora_on_95pct
+  PASS  after_exception_in_body_base_weights_bitwise
+  PASS  after_exception_in_body_lora_on_logits_bitwise_unchanged
+  PASS  after_exception_in_body_lora_off_score_unchanged
+  PASS  after_exception_in_body_neuron_token_rows_lora_off_restored
+  PASS  after_exception_in_body_neuron_token_rows_lora_on_unchanged
+  PASS  merge_failure_raised
+  PASS  after_merge_failure_base_weights_bitwise
+  PASS  after_merge_failure_lora_on_logits_bitwise_unchanged
+  PASS  after_merge_failure_lora_off_score_unchanged
+  PASS  after_merge_failure_neuron_token_rows_lora_off_restored
+  PASS  after_merge_failure_neuron_token_rows_lora_on_unchanged
+  PASS  merged_gen_neuron_tokens_never_generated
+  PASS  after_merged_generate_base_weights_bitwise
+  PASS  after_merged_generate_lora_on_logits_bitwise_unchanged
+  PASS  after_merged_generate_lora_off_score_unchanged
+  PASS  after_merged_generate_neuron_token_rows_lora_off_restored
+  PASS  after_merged_generate_neuron_token_rows_lora_on_unchanged
+  PASS  oom_fallback_first_call
+  PASS  oom_fallback_remembered
+  FAIL  reference_scores_helper_exact
+saved: /workspace/neuron-elictor/results/grpo_tests/20261118_040622

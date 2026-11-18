@@ -1,0 +1,88 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<03:01,  3.97it/s]Loading weights:   4%|▎         | 26/723 [00:00<00:07, 89.84it/s]Loading weights:   6%|▌         | 45/723 [00:00<00:05, 119.21it/s]Loading weights:   9%|▉         | 66/723 [00:00<00:04, 146.98it/s]Loading weights:  12%|█▏        | 89/723 [00:00<00:03, 171.10it/s]Loading weights:  15%|█▌        | 109/723 [00:00<00:03, 166.67it/s]Loading weights:  18%|█▊        | 132/723 [00:00<00:03, 182.28it/s]Loading weights:  21%|██        | 152/723 [00:01<00:03, 177.68it/s]Loading weights:  24%|██▍       | 173/723 [00:01<00:02, 185.96it/s]Loading weights:  28%|██▊       | 199/723 [00:01<00:02, 199.70it/s]Loading weights:  30%|███       | 220/723 [00:01<00:02, 199.10it/s]Loading weights:  33%|███▎      | 241/723 [00:01<00:02, 188.69it/s]Loading weights:  36%|███▌      | 261/723 [00:01<00:02, 186.75it/s]Loading weights:  39%|███▉      | 285/723 [00:01<00:02, 195.41it/s]Loading weights:  42%|████▏     | 306/723 [00:01<00:02, 193.32it/s]Loading weights:  46%|████▌     | 329/723 [00:01<00:01, 202.69it/s]Loading weights:  48%|████▊     | 350/723 [00:02<00:01, 199.33it/s]Loading weights:  51%|█████▏    | 371/723 [00:02<00:01, 186.87it/s]Loading weights:  55%|█████▍    | 397/723 [00:02<00:01, 203.26it/s]Loading weights:  58%|█████▊    | 418/723 [00:02<00:01, 187.75it/s]Loading weights:  73%|███████▎  | 530/723 [00:02<00:00, 434.74it/s]Loading weights:  92%|█████████▏| 668/723 [00:02<00:00, 694.34it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 273.99it/s]
+expected L14N8949 top ctx score (plain Scorer, this GPU): 3.03125
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<03:20,  3.59it/s]Loading weights:   4%|▎         | 26/723 [00:00<00:08, 85.70it/s]Loading weights:   6%|▌         | 45/723 [00:00<00:05, 116.75it/s]Loading weights:   9%|▉         | 66/723 [00:00<00:04, 145.52it/s]Loading weights:  13%|█▎        | 92/723 [00:00<00:03, 178.43it/s]Loading weights:  16%|█▌        | 113/723 [00:00<00:03, 185.92it/s]Loading weights:  19%|█▊        | 134/723 [00:00<00:03, 173.48it/s]Loading weights:  21%|██        | 153/723 [00:01<00:03, 172.21it/s]Loading weights:  25%|██▍       | 179/723 [00:01<00:02, 192.46it/s]Loading weights:  28%|██▊       | 200/723 [00:01<00:02, 197.31it/s]Loading weights:  31%|███       | 221/723 [00:01<00:02, 196.78it/s]Loading weights:  33%|███▎      | 242/723 [00:01<00:02, 190.30it/s]Loading weights:  36%|███▌      | 262/723 [00:01<00:02, 188.87it/s]Loading weights:  40%|███▉      | 287/723 [00:01<00:02, 204.14it/s]Loading weights:  43%|████▎     | 308/723 [00:01<00:02, 194.81it/s]Loading weights:  46%|████▌     | 330/723 [00:01<00:01, 197.26it/s]Loading weights:  49%|████▊     | 352/723 [00:02<00:01, 199.39it/s]Loading weights:  52%|█████▏    | 373/723 [00:02<00:01, 191.96it/s]Loading weights:  55%|█████▍    | 396/723 [00:02<00:01, 199.89it/s]Loading weights:  58%|█████▊    | 417/723 [00:02<00:01, 192.34it/s]Loading weights:  70%|██████▉   | 504/723 [00:02<00:00, 377.14it/s]Loading weights:  87%|████████▋ | 629/723 [00:02<00:00, 622.62it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 272.02it/s]
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3303: FutureWarning: `is_gradient_checkpointing` is deprecated and will be removed in v6. Use `is_activation_checkpointing` instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3195: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+base-weight backup: 248 LoRA base weights + 4 embedding rows, 7.14 GB pinned CPU, 26.7s
+trainable params: 64940032 tensors: 497
+base_model.model.model.language_model.embed_tokens.token_adapter.trainable_tokens_delta.default
+base_model.model.model.language_model.layers.0.linear_attn.out_proj.lora_A.default.weight
+base_model.model.model.language_model.layers.0.linear_attn.out_proj.lora_B.default.weight
+base_model.model.model.language_model.layers.0.linear_attn.in_proj_qkv.lora_A.default.weight
+...
+base_model.model.model.language_model.layers.31.mlp.up_proj.lora_A.default.weight
+base_model.model.model.language_model.layers.31.mlp.up_proj.lora_B.default.weight
+base_model.model.model.language_model.layers.31.mlp.down_proj.lora_A.default.weight
+base_model.model.model.language_model.layers.31.mlp.down_proj.lora_B.default.weight
+trainable-token params: ['base_model.model.model.language_model.embed_tokens.token_adapter.trainable_tokens_delta.default']
+L14N8949 top ctx, LoRA off: 3.03125
+generate 4 x 64 = 256 completions: 7.5s
+examples: ['===รากศัพท์===\nระวางราชการของเส้าะ รู้จักมาแต่โบราณ\nโดยมาจากภาษาจีน\n\n===คำარำเบื', '========\n*Soundfile:zh-yue-Chinese characters/専/zh-yue-而感到投資和信心.okt25.mp3\n#right', '===Ön ad===\n#desi']
+/workspace/neuron-elictor/hermes/grpo.py:316: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  lp_sum += float((logp * m).sum()); lp_n += int(m.sum())
+KL at init: kl_stats 0.0, pg_backward(beta 0.04) {'mean_kl': 0.0, 'loss': 0.06277494691312313}
+micro_bs 16: peak 15.1 GB, backward 12.0s, trained 256, mean logp -3.149
+micro_bs 32: peak 19.4 GB, backward 6.3s, trained 256, mean logp -3.149
+grad norm 6.102941989898682 trainable-token grad norms [0.9800898432731628]
+KL after one step: 0.008022958116214354 (init 0.0)
+kl_beta=0 vs old pg_backward: {'old_loss': [0.03655600920319557, 0.03655600920319557], 'new_loss': 0.03655600920319557, 'old_n': 256, 'new_n': 256, 'old_mean_logp': -3.1568385572877613, 'new_mean_logp': -3.1568385572877613, 'old_vs_old_grad_maxdiff': 0.0009765625, 'old_vs_new_grad_maxdiff': 0.0078125, 'old_vs_new_bitwise': False, 'new_mean_kl_beta0': 0.008022958116214354, 'beta_004': {'n': 256, 'mean_kl': 0.008022958116214354, 'loss': 0.03704872727394104}, 'beta_004_vs_0_grad_maxdiff': 0.2421875}
+pg_backward kl_beta 0.04, micro_bs 32: {'peak_gb': 21.092149248, 's': 5.743385314941406}
+merged vs unmerged LoRA: {'max_abs_logprob_diff': 0.46004676818847656, 'mean_abs_logprob_diff': 0.03889312222599983, 'top1_agreement': 0.9848484992980957, 'lora_delta_norm': 299.98370361328125, 'merged_delta_norm': 281.1213684082031, 'delta_cosine': 0.83141028881073, 'base_vs_lora_on_mean_abs_logprob_diff': 0.05590721219778061}
+WARN: merged model reproduces the LoRA logit change poorly (cosine 0.831); check again later in training
+merge timing (s): [{'merge_s': 0.043, 'unmerge_s': 0.042, 'restore_s': 2.016, 'ok': True}, {'merge_s': 0.043, 'unmerge_s': 0.041, 'restore_s': 2.02, 'ok': False}, {'merge_s': None, 'unmerge_s': 0.043, 'restore_s': 2.015, 'ok': False}, {'merge_s': 0.043, 'unmerge_s': 0.042, 'restore_s': 2.015, 'ok': True}]
+generate (lora): CUDA OOM at 8 sequences; using 4 from now on
+
+checks:
+  PASS  no_vision_tower_lora
+  PASS  lora_on_attn_linear_attn_mlp
+  PASS  trainable_token_params_present
+  PASS  all_trainable_fp32
+  PASS  peft_scorer_matches_plain_scorer_this_gpu
+  PASS  init_on_equals_off
+  PASS  neuron_tokens_never_generated
+  PASS  eos_cut
+  PASS  kl_zero_at_init
+  PASS  trainable_token_grad_nonzero
+  PASS  lora_off_score_unchanged_after_step
+  PASS  disable_adapter_restores_neuron_token_rows
+  PASS  neuron_token_rows_changed_with_adapter
+  PASS  other_rows_unchanged_with_adapter
+  PASS  lora_on_changes_policy_logits
+  PASS  kl_grows_after_step
+  PASS  kl_beta0_same_trained_set_and_logp
+  PASS  kl_beta0_loss_equals_old_exactly
+  FAIL  kl_beta0_grads_equal_old
+  PASS  kl_beta0_logged_kl_matches_kl_stats
+  PASS  kl_beta_positive_changes_grads
+  PASS  bitwise_before_any_merge
+  PASS  after_merged_forward_base_weights_bitwise
+  PASS  after_merged_forward_lora_on_logits_bitwise_unchanged
+  PASS  after_merged_forward_lora_off_score_unchanged
+  PASS  after_merged_forward_neuron_token_rows_lora_off_restored
+  PASS  after_merged_forward_neuron_token_rows_lora_on_unchanged
+  PASS  merged_logits_differ_from_base
+  PASS  merged_top1_agrees_with_lora_on_95pct
+  PASS  after_exception_in_body_base_weights_bitwise
+  PASS  after_exception_in_body_lora_on_logits_bitwise_unchanged
+  PASS  after_exception_in_body_lora_off_score_unchanged
+  PASS  after_exception_in_body_neuron_token_rows_lora_off_restored
+  PASS  after_exception_in_body_neuron_token_rows_lora_on_unchanged
+  PASS  merge_failure_raised
+  PASS  after_merge_failure_base_weights_bitwise
+  PASS  after_merge_failure_lora_on_logits_bitwise_unchanged
+  PASS  after_merge_failure_lora_off_score_unchanged
+  PASS  after_merge_failure_neuron_token_rows_lora_off_restored
+  PASS  after_merge_failure_neuron_token_rows_lora_on_unchanged
+  PASS  merged_gen_neuron_tokens_never_generated
+  PASS  after_merged_generate_base_weights_bitwise
+  PASS  after_merged_generate_lora_on_logits_bitwise_unchanged
+  PASS  after_merged_generate_lora_off_score_unchanged
+  PASS  after_merged_generate_neuron_token_rows_lora_off_restored
+  PASS  after_merged_generate_neuron_token_rows_lora_on_unchanged
+  PASS  oom_fallback_first_call
+  PASS  oom_fallback_remembered
+  PASS  reference_scores_helper_exact
+saved: /workspace/neuron-elictor/results/grpo_tests/20261118_041455

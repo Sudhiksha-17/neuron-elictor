@@ -1,0 +1,28 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<03:51,  3.11it/s]Loading weights:   4%|▎         | 26/723 [00:00<00:09, 73.10it/s]Loading weights:   6%|▋         | 46/723 [00:00<00:06, 102.67it/s]Loading weights:   9%|▉         | 66/723 [00:00<00:05, 129.34it/s]Loading weights:  13%|█▎        | 93/723 [00:00<00:03, 166.25it/s]Loading weights:  16%|█▌        | 114/723 [00:00<00:03, 171.85it/s]Loading weights:  19%|█▊        | 134/723 [00:01<00:03, 170.97it/s]Loading weights:  21%|██        | 153/723 [00:01<00:03, 172.42it/s]Loading weights:  25%|██▍       | 180/723 [00:01<00:02, 190.40it/s]Loading weights:  28%|██▊       | 201/723 [00:01<00:02, 189.23it/s]Loading weights:  31%|███       | 224/723 [00:01<00:02, 193.43it/s]Loading weights:  34%|███▍      | 247/723 [00:01<00:02, 196.56it/s]Loading weights:  37%|███▋      | 267/723 [00:01<00:02, 192.99it/s]Loading weights:  40%|████      | 291/723 [00:01<00:02, 202.74it/s]Loading weights:  43%|████▎     | 312/723 [00:01<00:02, 185.90it/s]Loading weights:  47%|████▋     | 340/723 [00:02<00:01, 209.67it/s]Loading weights:  50%|█████     | 362/723 [00:02<00:01, 200.49it/s]Loading weights:  53%|█████▎    | 383/723 [00:02<00:01, 202.49it/s]Loading weights:  56%|█████▌    | 404/723 [00:02<00:01, 202.33it/s]Loading weights:  59%|█████▉    | 425/723 [00:02<00:01, 189.64it/s]Loading weights:  76%|███████▋  | 552/723 [00:02<00:00, 481.55it/s]Loading weights:  94%|█████████▍| 682/723 [00:02<00:00, 708.33it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 265.08it/s]
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3303: FutureWarning: `is_gradient_checkpointing` is deprecated and will be removed in v6. Use `is_activation_checkpointing` instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3195: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+[2026-11-18 04:42:18] base-weight backup: 248 LoRA base weights + 0 embedding rows, 7.14 GB pinned CPU, 28.2s
+[2026-11-18 04:42:18] phase S: neurons ['L10N4358'], FineWeb max this GPU [2.9375]; 64 completions/step; 64,929,792 trainable params; micro_bs 32, gen_batch 256
+[2026-11-18 04:42:21] bitwise base-weight check (start): PASS (248 tensors, 0 mismatched [], 2.1s)
+[2026-11-18 04:42:22] reference-text check (start): PASS L10N4358 2.9375 (expected 2.9375)
+/workspace/neuron-elictor/hermes/grpo.py:316: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  lp_sum += float((logp * m).sum()); lp_n += int(m.sum())
+[2026-11-18 04:42:31] step 1/2 9.3s (gen 6.5 score 0.3 train 2.5) trained 64/64 reward 0.047 empty 0.000 flat 0.000 kl 0.0 gn 0.667 lr 2.00e-05 mem 16.1GB | L10N4358: mean 0.139 max 0.51953125
+[2026-11-18 04:42:39] step 2/2 7.9s (gen 6.0 score 0.3 train 1.6) trained 64/64 reward 0.043 empty 0.000 flat 0.000 kl 0.00101 gn 0.642 lr 1.00e-05 mem 16.6GB | L10N4358: mean 0.125 max 0.3515625
+[2026-11-18 04:42:41] bitwise base-weight check (after step 2): PASS (248 tensors, 0 mismatched [], 2.1s)
+[2026-11-18 04:42:41] PROJECTED phase S: training 0.00 h (7.9 s/step x 2), evaluations ~0.00 h (14 samples at 97 ms/sample), total ~0.04 h; ends ~2026-11-18 04:44:40
+/usr/local/lib/python3.12/dist-packages/peft/utils/save_and_load.py:307: UserWarning: Could not find a config file in Qwen/Qwen3.5-4B - will assume that the vocabulary was not modified.
+  warnings.warn(
+[2026-11-18 04:42:42] training done in 0.01 h; adapter saved to /workspace/neuron-elictor/results/smoke/20261118_043738_collapse_pipeline/R2/phaseS/adapter
+[2026-11-18 04:42:42] reference-text check (after training): PASS L10N4358 2.9375 (expected 2.9375)
+[2026-11-18 04:42:49] (d) trained best of 2 {'L10N4358': 0.150390625}
+[2026-11-18 04:42:52] (a) untrained best of 4 {'L10N4358': 0.1962890625}
+[2026-11-18 04:42:53] (c) repeated token {'L10N4358': {'token': '.', 'token_id': 13, 'score': 0.05615234375, 'pos': 23}}
+[2026-11-18 04:42:53] (b) compute-matched: 8 untrained samples per neuron
+[2026-11-18 04:42:59] bitwise base-weight check (end): PASS (248 tensors, 0 mismatched [], 2.1s)
+[2026-11-18 04:42:59] reference-text check (end): PASS L10N4358 2.9375 (expected 2.9375)
+[2026-11-18 04:42:59] (b) compute-matched best {'L10N4358': 0.57421875}
+[2026-11-18 04:42:59] phase S done in 0.01 h; results /workspace/neuron-elictor/results/smoke/20261118_043738_collapse_pipeline/R2/phaseS/results.json

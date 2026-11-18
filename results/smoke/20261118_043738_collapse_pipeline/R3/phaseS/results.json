@@ -1,0 +1,462 @@
+{
+ "phase": "S",
+ "neurons": {
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "Text:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.9375,
+   "d_trained_best_of_2": {
+    "best": 0.1416015625,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.119140625,
+    "top": [
+     {
+      "text": "'''\nYou, Bernadette Meeks, admit that you are the person who signed away your property rights to the State of Illinois, giving them the right to dispose freely of your biological material.\n'''\nThere is a situation in the ethical, legal, and medical context that could be described as an improvement or",
+      "score": 0.1416015625
+     },
+     {
+      "text": "The late 19th and early 20th century was a period of intense scientific change. A big change came when physicists discovered new properties of matter at the cellular level. They discovered that cells act as the basic building blocks of life. Scientists are now inviting more input from other areas of life science, inviting",
+      "score": 0.0966796875
+     }
+    ],
+    "all": [
+     {
+      "text": "'''\nYou, Bernadette Meeks, admit that you are the person who signed away your property rights to the State of Illinois, giving them the right to dispose freely of your biological material.\n'''\nThere is a situation in the ethical, legal, and medical context that could be described as an improvement or",
+      "score": 0.1416015625
+     },
+     {
+      "text": "The late 19th and early 20th century was a period of intense scientific change. A big change came when physicists discovered new properties of matter at the cellular level. They discovered that cells act as the basic building blocks of life. Scientists are now inviting more input from other areas of life science, inviting",
+      "score": 0.0966796875
+     }
+    ],
+    "per_token_best": [
+     [
+      "'''",
+      0.00872802734375
+     ],
+     [
+      "\n",
+      0.056884765625
+     ],
+     [
+      "You",
+      -0.00982666015625
+     ],
+     [
+      ",",
+      0.051513671875
+     ],
+     [
+      " Bern",
+      0.0098876953125
+     ],
+     [
+      "ad",
+      -0.052490234375
+     ],
+     [
+      "ette",
+      0.11328125
+     ],
+     [
+      " Me",
+      0.1416015625
+     ],
+     [
+      "eks",
+      -0.2158203125
+     ],
+     [
+      ",",
+      -0.022705078125
+     ],
+     [
+      " admit",
+      -0.028564453125
+     ],
+     [
+      " that",
+      0.000354766845703125
+     ],
+     [
+      " you",
+      0.055908203125
+     ],
+     [
+      " are",
+      -0.0291748046875
+     ],
+     [
+      " the",
+      -0.020751953125
+     ],
+     [
+      " person",
+      0.031005859375
+     ],
+     [
+      " who",
+      0.0478515625
+     ],
+     [
+      " signed",
+      0.09619140625
+     ],
+     [
+      " away",
+      0.1025390625
+     ],
+     [
+      " your",
+      0.0115966796875
+     ],
+     [
+      " property",
+      0.005035400390625
+     ],
+     [
+      " rights",
+      -0.0169677734375
+     ],
+     [
+      " to",
+      0.032470703125
+     ],
+     [
+      " the",
+      -0.01104736328125
+     ],
+     [
+      " State",
+      0.008056640625
+     ],
+     [
+      " of",
+      0.06884765625
+     ],
+     [
+      " Illinois",
+      0.004180908203125
+     ],
+     [
+      ",",
+      0.05419921875
+     ],
+     [
+      " giving",
+      -0.031494140625
+     ],
+     [
+      " them",
+      0.04541015625
+     ],
+     [
+      " the",
+      0.109375
+     ],
+     [
+      " right",
+      0.091796875
+     ],
+     [
+      " to",
+      -0.0089111328125
+     ],
+     [
+      " dispose",
+      0.004974365234375
+     ],
+     [
+      " freely",
+      -0.050537109375
+     ],
+     [
+      " of",
+      -0.02490234375
+     ],
+     [
+      " your",
+      0.029296875
+     ],
+     [
+      " biological",
+      -0.052001953125
+     ],
+     [
+      " material",
+      -0.03662109375
+     ],
+     [
+      ".",
+      0.0263671875
+     ],
+     [
+      "\n",
+      0.0238037109375
+     ],
+     [
+      "'''",
+      0.0537109375
+     ],
+     [
+      "\n",
+      0.0245361328125
+     ],
+     [
+      "There",
+      0.0262451171875
+     ],
+     [
+      " is",
+      0.037109375
+     ],
+     [
+      " a",
+      -0.00897216796875
+     ],
+     [
+      " situation",
+      0.08056640625
+     ],
+     [
+      " in",
+      0.09716796875
+     ],
+     [
+      " the",
+      0.01904296875
+     ],
+     [
+      " ethical",
+      0.09521484375
+     ],
+     [
+      ",",
+      0.042236328125
+     ],
+     [
+      " legal",
+      0.0242919921875
+     ],
+     [
+      ",",
+      -0.0159912109375
+     ],
+     [
+      " and",
+      0.0966796875
+     ],
+     [
+      " medical",
+      0.07177734375
+     ],
+     [
+      " context",
+      0.07666015625
+     ],
+     [
+      " that",
+      0.049560546875
+     ],
+     [
+      " could",
+      0.0859375
+     ],
+     [
+      " be",
+      0.10546875
+     ],
+     [
+      " described",
+      -0.049072265625
+     ],
+     [
+      " as",
+      0.048095703125
+     ],
+     [
+      " an",
+      0.06494140625
+     ],
+     [
+      " improvement",
+      0.0107421875
+     ],
+     [
+      " or",
+      0.042236328125
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1962890625,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.104736328125,
+    "top": [
+     {
+      "text": "1. Description 2. About International Trade and Export--\n...\n3. Shipping and Reverse-Transportation\n...\n4. Logistics Operations (MOD/OT/MP/ET)\n...\n5. Customs & UPL Guys\n...\n6. SERVICE\u2500\u2500\u2500 US BASED CUSTOMER SUPPORT",
+      "score": 0.1962890625
+     },
+     {
+      "text": "\"Agatha... You may have a place at the Cumberledge!\" Fancy herman and blurred eyes. Fancy herman and blurred eyes. Fancy herman and blurring eyes. Fancy herman and blurred eyes. Fancy herman and blurred eyes. Fancy herman and blurred eyes. Fancy herman and blurred eyes",
+      "score": 0.0966796875
+     },
+     {
+      "text": "The Kuskokwim Census Tract 36 is a census tract 36, nestled in the North Slope region of Alaska, specifically in the Kuskokwim River Valley. It is located in the city of Anchorage. It spans approximately 14.9 square miles (38",
+      "score": 0.06494140625
+     }
+    ],
+    "reused_from": "results/smoke/20261118_043738_collapse_pipeline/R2/phaseS/"
+   },
+   "b_untrained_best_of_8": {
+    "best": 0.57421875,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.201171875,
+    "top": [
+     {
+      "text": "Hi, I bank at Charter Bank. I think I have a stayer purely on intention. \n\nIn general, if you stay, you get:\n1. Interest rate on your cash deposits. Interest is paid quarterly; Interest is contingent on balance. \n2. Bonus Credit Card. We cannot offer you the card",
+      "score": 0.57421875
+     },
+     {
+      "text": "Josephsville was founded by John Kinzel Jr., Joseph and Thomas O'Donnell, and John L. Millington. They were among the first ten founding members of the Talmud Torah school which began its classes on September 2, 1886. They were also the first ten members to attend",
+      "score": 0.19921875
+     },
+     {
+      "text": "Robert Smalls. To see a black person in a command position on a boat, and to see those people over and over, was, for when I am a child...experiences me in a particular way, especially considering his house is hours away from where I see...one which is what I call the normal.",
+      "score": 0.1943359375
+     },
+     {
+      "text": "\"I aim at the present moment, and the present moment is all I have. Don't ruin my method by thinking about what will happen next.\"\n\nWho/framework:\n\" THE WORK\" by Eckhart Tolle\n\n\nWho:\nEckhart Tolle, who works on the \"Psychology of Time\" and",
+      "score": 0.1650390625
+     },
+     {
+      "text": "This element alone forces the convergence of the flood as this building is the bottleneck for this flow.\nThis building is 25m height. This room has dimensions of X-x height = 15m.\nThe water is 15m deep and this would be 50m volume of water now",
+      "score": 0.1533203125
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.1591796875,
+     "0.9": 0.31171874999999993,
+     "0.99": 0.5479687499999999,
+     "0.999": 0.5715937500000001
+    },
+    "reused_from": "results/smoke/20261118_043738_collapse_pipeline/R2/phaseS/"
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.05615234375,
+    "pos": 23,
+    "reused_from": "results/smoke/20261118_043738_collapse_pipeline/R2/phaseS/"
+   }
+  }
+ },
+ "training_s": 21.48770022392273,
+ "eval_s": {
+  "d": 6.785824298858643,
+  "a": 0.0,
+  "b": 0.0
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0815470218658447,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.063190221786499,
+    "where": "after step 2"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0466670989990234,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 2,
+  "flat_frac": 0.9,
+  "patience": 25
+ },
+ "steps_done": 2,
+ "kl_beta": 0.04,
+ "seed": 0,
+ "reused_untrained": {
+  "requested": "results/smoke/20261118_043738_collapse_pipeline/R2",
+  "reused": true,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "sources": {
+   "L10N4358": "results/smoke/20261118_043738_collapse_pipeline/R2/phaseS/"
+  },
+  "reason_not_reused": null
+ },
+ "phase_s": 29.535478353500366
+}

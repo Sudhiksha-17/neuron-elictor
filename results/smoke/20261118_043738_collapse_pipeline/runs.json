@@ -1,0 +1,25 @@
+{
+ "run1": "results/grpo/20261118_013749",
+ "runs": [
+  {
+   "label": "R1",
+   "name": "B-KL",
+   "dir": "results/smoke/20261118_043738_collapse_pipeline/R1"
+  },
+  {
+   "label": "R2",
+   "name": "L10-solo",
+   "dir": "results/smoke/20261118_043738_collapse_pipeline/R2"
+  },
+  {
+   "label": "R3",
+   "name": "L10-solo-KL",
+   "dir": "results/smoke/20261118_043738_collapse_pipeline/R3"
+  },
+  {
+   "label": "R4",
+   "name": "B-KL seed 1",
+   "dir": "results/smoke/20261118_043738_collapse_pipeline/R4"
+  }
+ ]
+}

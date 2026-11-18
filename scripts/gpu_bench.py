@@ -172,7 +172,7 @@ if WHAT == "gen":
     params = [p for _, p in el.trainable]
     opt = torch.optim.AdamW(params, lr=2e-5, weight_decay=0.0)
     torch.cuda.reset_peak_memory_stats(); t0 = time.time()
-    n_tr, _ = el.pg_backward(pid_per, flat, adv, len(flat), 32); torch.cuda.synchronize(); t_pg = time.time() - t0
+    n_tr, _, _ = el.pg_backward(pid_per, flat, adv, len(flat), 32, log_kl=False); torch.cuda.synchronize(); t_pg = time.time() - t0
     torch.nn.utils.clip_grad_norm_(params, 1.0); opt.step()      # grads kept (the loop zeroes them after generating)
     res["train_step"] = dict(n_trained=n_tr, pg_backward_s=t_pg, peak_gb=torch.cuda.max_memory_allocated() / 1e9,
                              score_256_s=t_score)
@@ -260,7 +260,7 @@ if WHAT == "pg":
                 p.grad = None
             torch.cuda.empty_cache(); torch.cuda.reset_peak_memory_stats(); t0 = time.time()
             try:
-                n_tr, _ = el.pg_backward(pid_per, flat, adv, len(flat), mb); torch.cuda.synchronize()
+                n_tr, _, _ = el.pg_backward(pid_per, flat, adv, len(flat), mb, log_kl=False); torch.cuda.synchronize()
                 r[f"{k}_s"] = time.time() - t0; r[f"{k}_peak_gb"] = torch.cuda.max_memory_allocated() / 1e9
             except torch.OutOfMemoryError:
                 r["oom"] = True; torch.cuda.empty_cache(); break

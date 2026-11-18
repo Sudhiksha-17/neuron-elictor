@@ -1,0 +1,8 @@
+{
+ "stopped": true,
+ "stop_step": 2,
+ "planned_steps": 3,
+ "flat_frac": -1.0,
+ "patience": 2,
+ "streak_start_step": 1
+}

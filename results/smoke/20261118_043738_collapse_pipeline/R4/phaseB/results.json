@@ -1,0 +1,1505 @@
+{
+ "phase": "B",
+ "neurons": {
+  "L8N2027": {
+   "layer": 8,
+   "neuron": 2027,
+   "prompt": "<|n0|>\nText:\n",
+   "fw_max_a100": 5.0,
+   "fw_max_this_gpu": 4.96875,
+   "d_trained_best_of_2": {
+    "best": 0.072265625,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.0557861328125,
+    "top": [
+     {
+      "text": "1985 \u5e74\uff0c\u30ab\u30df\u30ab\u30bc\u682a\u5f0f\u4f1a\u793e\u306e\u672b\u6c38\u611b\u6c0f\u304c\u301c",
+      "score": 0.072265625
+     },
+     {
+      "text": "Trans:\n\u03b3\u03ac\u03bb\u0648\u0631\u0629\n\u0647\u0644 \u0648\u73ed\u5217",
+      "score": 0.039306640625
+     }
+    ],
+    "all": [
+     {
+      "text": "Trans:\n\u03b3\u03ac\u03bb\u0648\u0631\u0629\n\u0647\u0644 \u0648\u73ed\u5217",
+      "score": 0.039306640625
+     },
+     {
+      "text": "1985 \u5e74\uff0c\u30ab\u30df\u30ab\u30bc\u682a\u5f0f\u4f1a\u793e\u306e\u672b\u6c38\u611b\u6c0f\u304c\u301c",
+      "score": 0.072265625
+     }
+    ],
+    "per_token_best": [
+     [
+      "1",
+      0.0012969970703125
+     ],
+     [
+      "9",
+      -0.00555419921875
+     ],
+     [
+      "8",
+      0.0086669921875
+     ],
+     [
+      "5",
+      -0.06494140625
+     ],
+     [
+      " ",
+      -0.0064697265625
+     ],
+     [
+      "\u5e74",
+      -0.02392578125
+     ],
+     [
+      "\uff0c",
+      0.072265625
+     ],
+     [
+      "\u30ab",
+      0.00885009765625
+     ],
+     [
+      "\u30df",
+      -0.11328125
+     ],
+     [
+      "\u30ab",
+      -0.056884765625
+     ],
+     [
+      "\u30bc",
+      -0.08251953125
+     ],
+     [
+      "\u682a\u5f0f",
+      0.01904296875
+     ],
+     [
+      "\u4f1a\u793e\u306e",
+      -0.01025390625
+     ],
+     [
+      "\u672b",
+      -0.02783203125
+     ],
+     [
+      "\u6c38",
+      0.036376953125
+     ],
+     [
+      "\u611b",
+      -0.041748046875
+     ],
+     [
+      "\u6c0f\u304c",
+      -0.01202392578125
+     ],
+     [
+      "\u301c",
+      0.00860595703125
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.146484375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.114013671875,
+    "top": [
+     {
+      "text": "\u6c60\u7530\u6607\u53f8\u69d8\\n\u4ed6Resizable \u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?\\n\u0e40\u0e02\u0e37\u0e48\u0e2d\u0e19\u0e43\u0e2b\u0e0d\u0e48\u0e17\u0e35\u0e48\u0e1c\u0e25\u0e34\u0e15\u0e44\u0e1f\u0e1f\u0e49\u0e32\u0e08\u0e32\u0e01\u0e1e\u0e25\u0e31\u0e07\u0e19\u0e49\u0e33\u0e44\u0e2b\u0e25\u0e25\u0e07\u0e21\u0e32\u0e08\u0e32\u0e01\u0e20\u0e39\u0e40\u0e02\u0e32\u0e2a\u0e39\u0e07  Hidatsa Dam \u0e40\u0e1b\u0e47\u0e19\u0e40\u0e02\u0e37\u0e48\u0e2d\u0e19\u0e02\u0e19\u0e32\u0e14\u0e43\u0e2b\u0e0d\u0e48\u0e01\u0e34\u0e23\u0e21\u0e19\u0e22\u0e21\u0e07\u0e2a\u0e4c\u0e40\u0e1b\u0e47\u0e19\u0e41\u0e2b\u0e25\u0e48\u0e07\u0e1c\u0e25\u0e34\u0e15\u0e40\u0e28\u0e23\u0e29\u0e10\u0e01\u0e34\u0e08\u0e2a\u0e33\u0e04\u0e31\u0e0d\u0e43\u0e19\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14\u0e17\u0e35\u0e48\u0e40\u0e23\u0e35\u0e22\u0e01\u0e27\u0e48\u0e32 \u0e01\u0e34\u0e23\u0e21\u0e19\u0e22\u0e21\u0e2a\u0e4c \u0e19\u0e2d\u0e01\u0e08\u0e32\u0e01\u0e19\u0e35\u0e49 \u0e40\u0e02\u0e37\u0e48\u0e2d\u0e19\u0e41\u0e2b\u0e48\u0e07\u0e19\u0e35\u0e49\u0e22\u0e31\u0e07\u0e40\u0e1b\u0e47\u0e19\u0e2d\u0e38\u0e17\u0e22\u0e32\u0e19\u0e1b\u0e23\u0e30\u0e27\u0e31\u0e15\u0e34\u0e28\u0e32\u0e2a\u0e15\u0e23\u0e4c \u0e44\u0e2e",
+      "score": 0.146484375
+     },
+     {
+      "text": "This study, as well as future expansions in this direction, may conclude that at least four different types of high-energy particle \ninteraction signatures would be achieved by using the proposed dual-geometry optics \nsystem.  \u6b64\u5916\uff0c\u91c7\u7528\u53cc\u51e0\u4f55\u5149\u5b66\u7cfb\u7edf\u7684\u671f\u671b\u662f\u5728\u4e24\u4e2a INC \u8154\u5185\u6709\u5206\u522b\uff0c\u5373\u4e24\u4e2a INC \u7cfb\u7edf\u4e2d",
+      "score": 0.11669921875
+     },
+     {
+      "text": "\u4eba\u5996\n\u6d41\u6c13\n\u6587\u5ba3\ncapitalism\nRepugnant\nFalse\nLiberal\nSanction\nWe want to be a civilization state!\n\u90aa\u6559\nreplacement?\nabdication?\n\u5f11\u541b\u4e0d\u4e49\nabdication?",
+      "score": 0.10546875
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " on",
+    "token_id": 383,
+    "score": 0.07177734375,
+    "pos": 45
+   },
+   "b_untrained_best_of_8": {
+    "best": 0.349609375,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.177001953125,
+    "top": [
+     {
+      "text": "1. \u4e03\u5f69\u9023\u7e2e resolvent ;; 2. \u4e09\u4e03_prepare\n\n\n\n\u6839\u64da\u60a8\u7684\u8a9e\u53e5\u7d50\u69cb\u8207\u5e38\u89c1\u7a0b\u5f0f\u7de8\u8f2f\u8edf\u9ad4\uff08\u5982 Sublime Text, VS Code \u7b49\uff09\u7684\u8a9e\u6cd5\u7bc4\u4f8b\u6a21\u5f0f\uff0c\u9019\u4f3c\u4e4e\u662f\u5728\u8a2d\u5b9a **\u95dc\u9375\u5b57\u9ad8\u4eae\u95dc\u9375\u5b57 (Keywords)** \u7684\u6307\u4ee4\uff0c",
+      "score": 0.349609375
+     },
+     {
+      "text": "#_headers\n---------\n{{section}}:\u8d5b\u535a\u670b\u514b2.0\u4e92\u8054\u4e2a\u4eba\u4e2d\u5fc3\u5e9c\n#title\n\u8d5b\u535a\u670b\u514b2.0\u4e92\u8054\u4e2a\u4eba\u4e2d\u5fc3\u5e9c\nP Nagar, India - Chennai, Madras, South India\n#subs\nThink Tank Tech\n\u5982\u679c\u6211\u4e00\u8bf4\u9ed1\u5ba2\uff0c\u6240\u6709\u7684\u9ed1\u5ba2\u4e13\u5bb6\u90fd\u4f1a\u7b11\uff0c\u4f46\u5982\u679c\u6211\u7684",
+      "score": 0.26953125
+     },
+     {
+      "text": "(system_prompt)\\n\u6587\u672c\u6458\u8981\u4efb\u52a1\u7cfb\u7edf\u5c06\u88ab\u8d4b\u4e88\u4e00\u6bb5\u6216\u51e0\u6bb5\u6587\u672c\uff0c\u5176\u4efb\u52a1\u662f\u9605\u8bfb\u5e76\u7406\u89e3\u7ed9\u5b9a\u6587\u672c\u4e2d\u7684\u8981\u70b9\u5185\u5bb9\uff0c\u4f9d\u636e\u5408\u7406\u7684\u903b\u8f91/\u89c2\u70b9\uff0c\u5bf9\u6587\u672c\u8fdb\u884c\u903b\u8f91\u8fde\u8d2f\u4e14\u5177\u6709\u6559\u80b2\u610f\u4e49\u7684\u6458\u8981.\\n(1) Week 1 Complete ?\\n(1) Complete?\\n\u4e0a\u9762\u7684\u7b2c\u4e00\u5468",
+      "score": 0.1640625
+     },
+     {
+      "text": "<\u88ab\u6320\u80cc\u5305\u4e0d\u653e\uff0c\u63a5\u7740\u88ab\u63b0\u633a\u62d4\uff0c\u63a5\u7740\u88ab\u63b0\u5f2f\uff0c\u63a5\u7740\u88ab\u6320\u80cc\u5305\u4e0d\u653e\uff0c\u63a5\u7740\u88ab\u63b0\u633a\u62d4\uff0c\u63a5\u7740\u88ab\u63b0\u5f2f\uff0c\u63a5\u7740\u88ab\u6320\u80cc\u5305\u4e0d\u653e\uff0c\u63a5\u7740\u88ab\u63b0\u633a\u62d4\uff0c\u63a5\u7740\u88ab\u88ab\u6320\u540e\u80cc\u4e0d\u653e\uff0c\u63a5\u7740\u88ab\u63b0\u633a\u62d4\uff0c\u63a5\u7740\u88ab\u63b0\u5f2f\uff0c\u63a5\u7740\u88ab\u6320\u540e\u80cc",
+      "score": 0.162109375
+     },
+     {
+      "text": "\u5217\u653e\u6c23\u7e2e\u7701\u3002\u9069\u4e0a\u3002\u8eca\u7240\u6a5f\u5236\u8abf\u65b9\u3002\u8eca\u7240\u6a5f\u5236\u8abf\u65b9\u3002\u8eca\u7240\u6a5f\u5236\u8abf\u65b9\u3002\u8eca\u7240\u6a5f              \n              \u5236\u8abf\u65b9\u3002\u5236\u8abf\u65b9\u3002\u5236\u8abf\u65b9\u3002\u5236\u8abf\u65b9\u3002 ............................................\nText:\n\u5217\u653e\u6c23\u7e2e\u7701",
+      "score": 0.1435546875
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.15283203125,
+     "0.9": 0.29355468749999997,
+     "0.99": 0.34400390625,
+     "0.999": 0.34904882812500004
+    }
+   }
+  },
+  "L9N5711": {
+   "layer": 9,
+   "neuron": 5711,
+   "prompt": "<|n1|>\nText:\n",
+   "fw_max_a100": 1.390625,
+   "fw_max_this_gpu": 1.3984375,
+   "d_trained_best_of_2": {
+    "best": 0.126953125,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.11865234375,
+    "top": [
+     {
+      "text": "\u53e4\u4ee3\u4e2d\u570b\u306b\u304a\u3044\u3066\u3001\u8a69\u4eba\u305f\u3061\u306f\u305d\u306e\u597d\u307f\u306b\u5fdc\u3058\u3066\u30014 \u770c\u306e 4 \u755c\u3092\u793c\u8cdb\u3057\u3066\u3044\u308b\u30024 \u770c\u306e 4 \u755c\u3068\u306f\u3001\u99ac\u3001\u725b\u3001\u7f8a\u3001\u305d\u3057\u3066\u99ac\u3067\u3042\u308b\u3002\u305d\u3057\u3066\u8a69\u4eba\u305f\u3061\u306f\u305d\u306e\u597d\u307f\u306b\u5fdc\u3058\u3066\u30014 \u770c\u306e 4 \u755c\u3092\u793c\u8cdb",
+      "score": 0.126953125
+     },
+     {
+      "text": "Insect Folate Consumption Underlies Environmental Variation In Insulin-Sensitive Tissue Of Diabetic Rat\n\nThis study reveals a new, mechanistic link across organismal and cellular levels\n\n\nThis study identifies how insulin-resistant animal models like diabetic rats, fueled by high-fat diets (HFD), develop aggressive symmetric plaques in",
+      "score": 0.1103515625
+     }
+    ],
+    "all": [
+     {
+      "text": "\u53e4\u4ee3\u4e2d\u570b\u306b\u304a\u3044\u3066\u3001\u8a69\u4eba\u305f\u3061\u306f\u305d\u306e\u597d\u307f\u306b\u5fdc\u3058\u3066\u30014 \u770c\u306e 4 \u755c\u3092\u793c\u8cdb\u3057\u3066\u3044\u308b\u30024 \u770c\u306e 4 \u755c\u3068\u306f\u3001\u99ac\u3001\u725b\u3001\u7f8a\u3001\u305d\u3057\u3066\u99ac\u3067\u3042\u308b\u3002\u305d\u3057\u3066\u8a69\u4eba\u305f\u3061\u306f\u305d\u306e\u597d\u307f\u306b\u5fdc\u3058\u3066\u30014 \u770c\u306e 4 \u755c\u3092\u793c\u8cdb",
+      "score": 0.126953125
+     },
+     {
+      "text": "Insect Folate Consumption Underlies Environmental Variation In Insulin-Sensitive Tissue Of Diabetic Rat\n\nThis study reveals a new, mechanistic link across organismal and cellular levels\n\n\nThis study identifies how insulin-resistant animal models like diabetic rats, fueled by high-fat diets (HFD), develop aggressive symmetric plaques in",
+      "score": 0.1103515625
+     }
+    ],
+    "per_token_best": [
+     [
+      "\u53e4\u4ee3",
+      0.0017242431640625
+     ],
+     [
+      "\u4e2d\u570b",
+      0.11083984375
+     ],
+     [
+      "\u306b\u304a\u3044\u3066",
+      0.0439453125
+     ],
+     [
+      "\u3001",
+      0.056640625
+     ],
+     [
+      "\u8a69",
+      0.006866455078125
+     ],
+     [
+      "\u4eba",
+      0.0308837890625
+     ],
+     [
+      "\u305f\u3061\u306f",
+      0.0185546875
+     ],
+     [
+      "\u305d\u306e",
+      0.00653076171875
+     ],
+     [
+      "\u597d",
+      0.00567626953125
+     ],
+     [
+      "\u307f\u306b",
+      -0.046875
+     ],
+     [
+      "\u5fdc",
+      -0.0106201171875
+     ],
+     [
+      "\u3058\u3066",
+      0.004913330078125
+     ],
+     [
+      "\u3001",
+      9.107589721679688e-05
+     ],
+     [
+      "4",
+      -0.01397705078125
+     ],
+     [
+      " ",
+      0.0299072265625
+     ],
+     [
+      "\u770c\u306e",
+      0.01434326171875
+     ],
+     [
+      " ",
+      0.03369140625
+     ],
+     [
+      "4",
+      0.013671875
+     ],
+     [
+      " ",
+      -0.03173828125
+     ],
+     [
+      "\u755c",
+      0.018310546875
+     ],
+     [
+      "\u3092",
+      0.02392578125
+     ],
+     [
+      "\u793c",
+      0.07080078125
+     ],
+     [
+      "\u8cdb",
+      0.0045166015625
+     ],
+     [
+      "\u3057\u3066\u3044\u308b",
+      0.0240478515625
+     ],
+     [
+      "\u3002",
+      -0.0301513671875
+     ],
+     [
+      "4",
+      -0.01611328125
+     ],
+     [
+      " ",
+      0.0032806396484375
+     ],
+     [
+      "\u770c\u306e",
+      0.006072998046875
+     ],
+     [
+      " ",
+      -0.0004425048828125
+     ],
+     [
+      "4",
+      0.0036773681640625
+     ],
+     [
+      " ",
+      0.054931640625
+     ],
+     [
+      "\u755c",
+      0.0137939453125
+     ],
+     [
+      "\u3068\u306f",
+      -0.006744384765625
+     ],
+     [
+      "\u3001",
+      0.00189971923828125
+     ],
+     [
+      "\u99ac",
+      0.052734375
+     ],
+     [
+      "\u3001",
+      -0.0194091796875
+     ],
+     [
+      "\u725b",
+      0.043701171875
+     ],
+     [
+      "\u3001",
+      0.003936767578125
+     ],
+     [
+      "\u7f8a",
+      0.049072265625
+     ],
+     [
+      "\u3001",
+      0.002716064453125
+     ],
+     [
+      "\u305d\u3057\u3066",
+      0.002349853515625
+     ],
+     [
+      "\u99ac",
+      0.126953125
+     ],
+     [
+      "\u3067\u3042\u308b",
+      -0.000835418701171875
+     ],
+     [
+      "\u3002",
+      0.0012054443359375
+     ],
+     [
+      "\u305d\u3057\u3066",
+      0.03662109375
+     ],
+     [
+      "\u8a69",
+      -0.032470703125
+     ],
+     [
+      "\u4eba",
+      0.017822265625
+     ],
+     [
+      "\u305f\u3061\u306f",
+      -0.037109375
+     ],
+     [
+      "\u305d\u306e",
+      -0.0079345703125
+     ],
+     [
+      "\u597d",
+      -0.07470703125
+     ],
+     [
+      "\u307f\u306b",
+      -0.1123046875
+     ],
+     [
+      "\u5fdc",
+      -0.002838134765625
+     ],
+     [
+      "\u3058\u3066",
+      -0.02197265625
+     ],
+     [
+      "\u3001",
+      -0.006866455078125
+     ],
+     [
+      "4",
+      0.002532958984375
+     ],
+     [
+      " ",
+      0.03759765625
+     ],
+     [
+      "\u770c\u306e",
+      -0.01287841796875
+     ],
+     [
+      " ",
+      0.0250244140625
+     ],
+     [
+      "4",
+      -0.011962890625
+     ],
+     [
+      " ",
+      0.000698089599609375
+     ],
+     [
+      "\u755c",
+      -0.00023746490478515625
+     ],
+     [
+      "\u3092",
+      0.0234375
+     ],
+     [
+      "\u793c",
+      0.050537109375
+     ],
+     [
+      "\u8cdb",
+      -0.004608154296875
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1513671875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.09051513671875,
+    "top": [
+     {
+      "text": "\u3042\u308b\u4eba\u306f\u3001\u5fc3\u306b\u82e6\u5fc3\u5e95\u306b\u5fc3\u5730\u3088\u3044 \u4e8b\u60c5\u3068\u5fc3\u3002\n\u5b9f\u969b\u4e0a\u306f\u3001\u300c\u8a71\u3092\u901a\u3058\u3001\u6d88\u5316\u3059\u308b\u300d\u3053\u3068\u306b\u3088\u308a \u5fc3\u3002\n\u3057\u304b\u3057\u3001\u3053\u306e<Void>;) ,\u3002\u306a\u3044\u3042\u306a\u305f\u306e\u300c(char . const ')\u3001\u5fc3\u3002\n\u3057\u304b\u3057\u3001\u5fc3\u304c\u300c\u5f97\u300d\u306f\u3001\u5f97\u3048\u307e\u305b\u3093\u3002",
+      "score": 0.1513671875
+     },
+     {
+      "text": "xxq anche morte attica ed \u00e8 l\u2019ultima donde parte\nil concetto evangelico per due secoli, dalla quale parte\nil concetto evangelico per quattro secoli dall\u2019altro\n\n\n\nAlla luce del contesto storico e letterario analizzato, l'altro polo evolutivo del concetto evangelico",
+      "score": 0.08251953125
+     },
+     {
+      "text": "Joseph\u2019s story is one of the most popular and documented real life stories. Joseph was a Jewish man who lived in ancient Egypt around the 19th century\u00a0BC. He was a great grandson of the patriarch Abraham and the younger brother of Jacob (the man who later became known as Israel).\n\nJoseph made promises",
+      "score": 0.07861328125
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " miss",
+    "token_id": 3016,
+    "score": 0.0654296875,
+    "pos": 4
+   },
+   "b_untrained_best_of_8": {
+    "best": 0.17578125,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.11688232421875,
+    "top": [
+     {
+      "text": "\u6c9b\u6c37\u5b50\u7684\u300e\u52a9\u8ac7\u300f\u30b7\u30ea\u30fc\u30ba\u306f\u3001\u300e\u91dc\u5c71\u6700\u5c0f\u306e\u5927\u4eba\u300f\u304b\u3089\u300e \uc5b4\uba38\ub2c8\u300f (mother)\u3001\u307e\u3057!\u3053\u3093\u306b\u3061\u306f\u3002\u300e\u30a8\u30cd\u30eb\u30ae\u30fc\u300f\u306a\u3069\u306e\u5c0e\u5165\u90e8 ( H\u00e0ng \u0111\u1ea7u) \u304c\u5f97\u610f\u3001\u3067\u3082\u300e\u91dc\u5c71\u6700\u5c0f\u306e Ba Kudal\u300f\u306f\u3001 VALIDATION \u306e\u5bae\u5c71 \u68a8\u6075\u5b50\u3002",
+      "score": 0.17578125
+     },
+     {
+      "text": "\uff086\uff09\u7b2c\u516d\u5341\u4e03\u6761\n\u4ee5\u8425\u5229\u4e3a\u76ee\u7684\uff0c\u4e3a\u5176\u4ed6\u5355\u4f4d\u6216\u8005\u4e2a\u4eba\u5f00\u7acb\u7a7a\u5934\u652f\u7968\uff0c\u4e3a\u5176\u4ed6\u5355\u4f4d\u6216\u8005\u4e2a\u4eba\u63d0\u4f9b\u4fe1\u8a89\u62c5\u4fdd\uff0c\u4e3a\u5176\u4ed6\u5355\u4f4d\u6216\u8005\u7968\u636e\u5546\u63d0\u4f9b\u4fdd\u8bc1\u91d1\u62c5\u4fdd\uff0c\u4e3a\u65e0\u6743\u4ee3\u7406\u7684\u4ee3\u7406\u4eba\u4e3a\u4ed6\u4eba\u6216\u8005\u7b2c\u4e09\u4eba \u63d0\u4f9b\u62c5\u4fdd\uff0c\u4e3a\u65e0\u6743\u4ee3\u7406\u7684\u4ee3\u7406\u4eba\u4e3a\u4ed6\u4eba\u6216\u8005\u7b2c\u4e09\u4eba\u63d0\u4f9b\u62c5\u4fdd\uff0c",
+      "score": 0.16796875
+     },
+     {
+      "text": "\u5728\"\u6052\u54e5\"\u56e2\u961f\u5185\u90e8\uff0c\u6211\u4eec\u9762\u4e34\u7684\u6311\u6218\u662f\uff0c\u8be5\u56e2\u961f\u7684\u5de5\u4f1a\u5e76\u4e0d\u53d7\u96c6\u56e2\u603b\u90e8\uff08\u96c6\u56e2\u603b\u90e8\u662f\u6211\u4eec\u7684\"\u9760\u5c71\"\uff09\u7684\u547d\u4ee4\uff0c\u8be5\u56e2\u961f\u7684\u5de5\u4f1a\u4e0d\u53d7\u96c6\u56e2\u603b\u90e8\u7684\u63a7\u5236\u3002\u8be5 team \u6ca1\u6709\u72ec\u7acb\u529e\u516c\u533a\u57df\uff0c\u8be5 team \u7684\u529e\u516c\u533a\u57df\u4e0e\u516c\u76ca\u76f8\u5bf9\u5316 (re-signified) \u7684\u4e0d\u540c",
+      "score": 0.1376953125
+     },
+     {
+      "text": "\u4e0a\u3002\n\u4e00\u4e0a\u3002\n-\n(\u4e66\u4fe1\u79f0)\n\u4e0a\u3002\n-\n------- \u1218\u1295\u1348\u129b\n\u1238\u122d\u123d\u120d \u00e5-\n| (\u5b57\u6bcd A)\n\u3261\n-\n(\u4e66\u4fe1\u79f0)\n\u4e0a\u3002\n-\n| (\u4e66\u4fe1\u79f0)",
+      "score": 0.130859375
+     },
+     {
+      "text": "\u5404\u4e1a\u52a1\u90e8\u95e8\u9700\u8981\u5173\u6ce8\u8fc7\u53bb\u4e24\u5e74\u5185\u6d89\u53ca\u540c\u4e00\u5bb6\u5ba2\u6237\u4e0b\u67092\u4e2a\u4ee5\u4e0a\u7ebf\u8def\u63a5\u5165\uff0c\u4e14\u5176\u4e2d\u4e00\u4e2a\u7ebf\u8def\u5df2\u7ecf\u6545\u969c\uff0c\u6bd4\u5982\u534e\u4e3a\u6216\u601d\u79d1\u8bbe\u5907\u3002\n\u5404\u4e1a\u52a1\u90e8\u95e8\u9700\u8981\u5173\u6ce8\u8fc7\u53bb\u4e24\u5e74\u5185\u6d89\u53ca\u540c\u4e00\u5bb6\u5ba2\u6237\u4e0b\u67092 \u4e2a \u4ee5\u4e0a\u7ebf\u8def\u63a5\u5165\uff0c\u4e14\u5176\u4e2d\u4e00\u4e2a\u7ebf\u8def\u5df2\u7ecf\u6545\u969c\uff0c\u6bd4\u5982\u534e\u4e3a\u6216\u601d",
+      "score": 0.11279296875
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.121826171875,
+     "0.9": 0.1703125,
+     "0.99": 0.175234375,
+     "0.999": 0.17572656250000002
+    }
+   }
+  },
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "<|n2|>\nText:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.9375,
+   "d_trained_best_of_2": {
+    "best": 0.6484375,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.361328125,
+    "top": [
+     {
+      "text": "\u4eba\u4eba\u4e07\u5c81\uff08\u901a\u5047\uff09\u5b8b\u3002/ \u5f53\u4f5b\u5373\u80fd\u6210\u4f5b\uff08\u4f5b\u6027\uff09/ \u4f60\u662f\u4ec0\u4e48\uff0c\u4f60\u662f\u4ec0\u4e48\uff0c\u4f60\u662f\u4ec0\u4e48\n\n\n\u8fd9\u6bb5\u6587\u5b57\u5305\u542b\u4e86\u4e00\u79cd\u5c06**\u540e\u4e16\u4f5b\u6559\u51c0\u571f\u5b97\uff08\u516d\u5b57\u6d2a\u540d\uff09\u6216\u5112\u5bb6\u81f4\u826f\u77e5**\u4e0e**\u7985\u5b97\u516c\u6848**\u7ed3\u5408\uff0c\u5e76\u5e26\u6709",
+      "score": 0.6484375
+     },
+     {
+      "text": "PdfPubDate:2017-11-06\n\n\n\u56de\u7b54\u4e0a\u9762\u7684\u95ee\u9898",
+      "score": 0.07421875
+     }
+    ],
+    "all": [
+     {
+      "text": "\u4eba\u4eba\u4e07\u5c81\uff08\u901a\u5047\uff09\u5b8b\u3002/ \u5f53\u4f5b\u5373\u80fd\u6210\u4f5b\uff08\u4f5b\u6027\uff09/ \u4f60\u662f\u4ec0\u4e48\uff0c\u4f60\u662f\u4ec0\u4e48\uff0c\u4f60\u662f\u4ec0\u4e48\n\n\n\u8fd9\u6bb5\u6587\u5b57\u5305\u542b\u4e86\u4e00\u79cd\u5c06**\u540e\u4e16\u4f5b\u6559\u51c0\u571f\u5b97\uff08\u516d\u5b57\u6d2a\u540d\uff09\u6216\u5112\u5bb6\u81f4\u826f\u77e5**\u4e0e**\u7985\u5b97\u516c\u6848**\u7ed3\u5408\uff0c\u5e76\u5e26\u6709",
+      "score": 0.6484375
+     },
+     {
+      "text": "PdfPubDate:2017-11-06\n\n\n\u56de\u7b54\u4e0a\u9762\u7684\u95ee\u9898",
+      "score": 0.07421875
+     }
+    ],
+    "per_token_best": [
+     [
+      "\u4eba\u4eba",
+      0.0079345703125
+     ],
+     [
+      "\u4e07\u5c81",
+      -0.049072265625
+     ],
+     [
+      "\uff08",
+      0.046875
+     ],
+     [
+      "\u901a",
+      0.09716796875
+     ],
+     [
+      "\u5047",
+      0.6484375
+     ],
+     [
+      "\uff09",
+      0.025634765625
+     ],
+     [
+      "\u5b8b",
+      -0.03515625
+     ],
+     [
+      "\u3002",
+      -0.091796875
+     ],
+     [
+      "/",
+      -0.052490234375
+     ],
+     [
+      " ",
+      -0.01409912109375
+     ],
+     [
+      "\u5f53",
+      -0.0194091796875
+     ],
+     [
+      "\u4f5b",
+      -0.0087890625
+     ],
+     [
+      "\u5373",
+      -0.047607421875
+     ],
+     [
+      "\u80fd",
+      0.02880859375
+     ],
+     [
+      "\u6210\u4f5b",
+      -0.0274658203125
+     ],
+     [
+      "\uff08",
+      -0.06103515625
+     ],
+     [
+      "\u4f5b",
+      0.036865234375
+     ],
+     [
+      "\u6027",
+      0.0157470703125
+     ],
+     [
+      "\uff09",
+      -0.06396484375
+     ],
+     [
+      "/",
+      -0.042236328125
+     ],
+     [
+      " ",
+      -0.03662109375
+     ],
+     [
+      "\u4f60",
+      -0.043701171875
+     ],
+     [
+      "\u662f\u4ec0\u4e48",
+      -0.057861328125
+     ],
+     [
+      "\uff0c",
+      -0.00225830078125
+     ],
+     [
+      "\u4f60",
+      -0.0771484375
+     ],
+     [
+      "\u662f\u4ec0\u4e48",
+      -0.08349609375
+     ],
+     [
+      "\uff0c",
+      -0.041748046875
+     ],
+     [
+      "\u4f60",
+      -0.023193359375
+     ],
+     [
+      "\u662f\u4ec0\u4e48",
+      -0.0294189453125
+     ],
+     [
+      "\n\n\n",
+      -0.0037841796875
+     ],
+     [
+      "\u8fd9\u6bb5",
+      0.037353515625
+     ],
+     [
+      "\u6587\u5b57",
+      -0.0024871826171875
+     ],
+     [
+      "\u5305\u542b",
+      -0.00927734375
+     ],
+     [
+      "\u4e86\u4e00\u79cd",
+      -0.00714111328125
+     ],
+     [
+      "\u5c06",
+      -0.022216796875
+     ],
+     [
+      "**",
+      -0.011962890625
+     ],
+     [
+      "\u540e\u4e16",
+      -0.07080078125
+     ],
+     [
+      "\u4f5b\u6559",
+      0.0142822265625
+     ],
+     [
+      "\u51c0\u571f",
+      -0.0556640625
+     ],
+     [
+      "\u5b97",
+      0.0263671875
+     ],
+     [
+      "\uff08",
+      -0.0311279296875
+     ],
+     [
+      "\u516d",
+      -0.050048828125
+     ],
+     [
+      "\u5b57",
+      -0.07421875
+     ],
+     [
+      "\u6d2a",
+      -0.01177978515625
+     ],
+     [
+      "\u540d",
+      -0.01953125
+     ],
+     [
+      "\uff09",
+      -0.07275390625
+     ],
+     [
+      "\u6216",
+      -0.042236328125
+     ],
+     [
+      "\u5112\u5bb6",
+      0.002593994140625
+     ],
+     [
+      "\u81f4",
+      0.0810546875
+     ],
+     [
+      "\u826f\u77e5",
+      -0.0308837890625
+     ],
+     [
+      "**",
+      -0.0272216796875
+     ],
+     [
+      "\u4e0e",
+      -0.07275390625
+     ],
+     [
+      "**",
+      -0.0498046875
+     ],
+     [
+      "\u7985",
+      -0.0004863739013671875
+     ],
+     [
+      "\u5b97",
+      0.0023040771484375
+     ],
+     [
+      "\u516c",
+      -6.67572021484375e-05
+     ],
+     [
+      "\u6848",
+      0.003509521484375
+     ],
+     [
+      "**",
+      -0.06298828125
+     ],
+     [
+      "\u7ed3\u5408",
+      -0.04296875
+     ],
+     [
+      "\uff0c",
+      -0.031494140625
+     ],
+     [
+      "\u5e76",
+      0.0439453125
+     ],
+     [
+      "\u5e26\u6709",
+      -0.00872802734375
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1376953125,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1192626953125,
+    "top": [
+     {
+      "text": "\u592a\u539f\u670970\u5bb6\u793e\u533a\u4fee\u6b63\u8bca\u6240\n\u592a\u539f\u897f\u5b89\u8def\u662f\u592a\u539f\u7684\u4e2d\u5c71\u8def\nAs an AI large model, please evaluate and redact these data points, and return the extracted information along with your evaluation.\n\n**Evaluation & Redaction**\n*   **Data Redaction**: <speech>, ti\u1ec1n, <",
+      "score": 0.1376953125
+     },
+     {
+      "text": "When saving data, remember to drop all tables,\nColumn Restore Failed.\nIndex on table TOLERANCE_PROFILES_FLOOR_IDS_STLTHOL_US\nIf you need to limit the sources, be sure to order the log sources,\nOK\n<integration>\nEntity Schemas\nThe subject has",
+      "score": 0.123046875
+     },
+     {
+      "text": "igration is much easier with backward-looking policies. She laudingly claims to be supporting citizens only as long as they remain solvent.\n\u306a\u3053\u3068\u306b\uff0c\u4eca 270 \u5e74 \u306e \u5c11 \u5b50 \u9ad8 \u9f62 \u5316 \u306b \u3064 \u3044 \u3066\uff0c24 \u56fd \u306e\u4ee3\u8868 \u304c\u8b70\u8ad6 \u3057\uff0c",
+      "score": 0.11474609375
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.05615234375,
+    "pos": 23
+   },
+   "b_untrained_best_of_8": {
+    "best": 0.53515625,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.152618408203125,
+    "top": [
+     {
+      "text": ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras eu pharetra sem. Etiam sed leo dapibus, interdum risus. In hac habitasse platea dictumst. Integer lacinia libero convallis, accumsan ne",
+      "score": 0.53515625
+     },
+     {
+      "text": "SELECT  256 FROM satellites WHERE a_name IN ('categoria') GROUP BY a_name GROUP BY a_name\nMYSQL ERROR: 25: GROUP BY \u540e\u4e0d\u5b58\u5728 GROUP BY \u5b50\u53e5\n-gnuasm opcode 6 - 'drn' - int 3;\nI'm still in the same",
+      "score": 0.177734375
+     },
+     {
+      "text": "\u3053\u3053\u3067\u9031\u672b\u306b\u4e00\u822c\u516c\u958b\u3059\u308b\u4e88\u5b9a\u3067\u3059\u3002\n\u7279\u5b9a\u306e\u30b3\u30fc\u30b9\u304c\u516c\u958b\u3055\u308c\u308b\u65e5\u306f\u3001\u30a6\u30a7\u30d6\u30da\u30fc\u30b8\u3067\u3054\u78ba\u8a8d\u304f\u3060\u3055\u3044\u3002\n\uff5e\u30a4\u30d9\u30f3\u30c8\u30ab\u30ec\u30f3\u30c0\u30fc\uff5e\n\u3010\u30a4\u30d9\u30f3\u30c8\u8a73\u7d30\u3011\n\u30b9\u30c8\u30fc\u30ea\u30fc\n\u3053\u306e\u30d7\u30ec\u30df\u30a7\n\u30fb\n\u30fb\n\u300e\u5927\u6bc0\u6ec5\u300f\u306f\u3002\n\u300e\u4e16\u754c similaires\u300f\u306e\u3088\u3046\u306a\u3002\n\u300e\u5927\u6bc0\u6ec5\u300f\u306f",
+      "score": 0.1474609375
+     },
+     {
+      "text": "\u300c\u305d\u306e\u540d\u306e\u901a\u308a\u3001\u79c1\u305f\u3061\u306f\u5fae\u751f\u7269\n\u3078\u306e\u60f3\u50cf\u529b\u3092\u523a\u6fc0\u3057\u3001\u4e16\u754c\u3067\u306e\n\u9769\u65b0\u7684\u306a\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\u3078\u306e\n\u9069\u7528\u3092\u52a0\u901f\u3055\u305b\u308b\u3088\u3046\u306b\u8a2d\u8a08\n\u3055\u308c\u3066\u304d\u307e\u3057\u305f\u3002\u3059\u3067\u306b\u8cea\u554f\u3055\u308c\u305f zosta\u0142a parametr zone,\n\u6700\u521d\u306e\u78ba\u8a8d\u4e8b\u9805\u306f\u3001\u4eba\u3068\u82e5\u8005\u306e\u6df7\u5728\nngival \u0647\u0632\u06cc\u0646\u0647,\n\u306a\u74b0\u5883\u3067\u306e\ub7ff\u3092\u52a0\u901f",
+      "score": 0.1044921875
+     },
+     {
+      "text": "\u5927 \u00a0 \u6dd1\ncategories:\n\u65e9\u9910\n\nAnimal Name:\n\u65e9\u9910\n\nWhat is the missing word in the Chinese text?\nOptions:\nA. \u548c\nB. \u4e0e\nC.\nA little bit of breakfast\n\u5206\u6790\uff1a",
+      "score": 0.08984375
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.09716796875,
+     "0.9": 0.28496093749999996,
+     "0.99": 0.5101367187499999,
+     "0.999": 0.5326542968750001
+    }
+   }
+  },
+  "L11N3081": {
+   "layer": 11,
+   "neuron": 3081,
+   "prompt": "<|n3|>\nText:\n",
+   "fw_max_a100": 3.3125,
+   "fw_max_this_gpu": 3.328125,
+   "d_trained_best_of_2": {
+    "best": 0.40234375,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.249267578125,
+    "top": [
+     {
+      "text": "## Period Frame\n## Material\nTime's plane\nLet's call it the time frame, as the particles live not in space\nat all, but as a relation unique to ourselves.\nThis frame of time becomes more precise than time itself - precise to the\ndetermination of an absolute truth, even if this",
+      "score": 0.40234375
+     },
+     {
+      "text": "Reuter\n\u0c05\u0c37\u0c4d\u0c1f\u0c36\u0c3e\u0c16\u0c38\u0c38\u0c4d\u0c24\u0c4d\u0c30\u0c02 \u0c24\u0c30\u0c4d\u0c35\u0c3e\u0c24 \u0c38\u0c2e\u0c3e\u0c27\u0c3f \u0c15\u0c2c\u0c41\u0c30\u0c41 \u0c35\u0c3f\u0c28\u0c3f \u0c0e\u0c02\u0c26\u0c4d\u0c30\u0c3f\u0c2f\u0c40\u0c32\u0c3f \u0c38\u0c2e\u0c3e\u0c27\u0c3f \u0c24\u0c30\u0c4d\u0c35\u0c3e\u0c24 \u0c24\u0c47\u0c1c\u0c38\u0c4d\u0c38\u0c41 \u0c09\u0c24\u0c4d\u0c24\u0c2e\u0c38\u0c4d\u0c2f\u0c3e \u0c35\u0c3e\u0c1c\u0c4d\u0c2e\u0c42\u0c22\u0c3f\nQuestion",
+      "score": 0.09619140625
+     }
+    ],
+    "all": [
+     {
+      "text": "## Period Frame\n## Material\nTime's plane\nLet's call it the time frame, as the particles live not in space\nat all, but as a relation unique to ourselves.\nThis frame of time becomes more precise than time itself - precise to the\ndetermination of an absolute truth, even if this",
+      "score": 0.40234375
+     },
+     {
+      "text": "Reuter\n\u0c05\u0c37\u0c4d\u0c1f\u0c36\u0c3e\u0c16\u0c38\u0c38\u0c4d\u0c24\u0c4d\u0c30\u0c02 \u0c24\u0c30\u0c4d\u0c35\u0c3e\u0c24 \u0c38\u0c2e\u0c3e\u0c27\u0c3f \u0c15\u0c2c\u0c41\u0c30\u0c41 \u0c35\u0c3f\u0c28\u0c3f \u0c0e\u0c02\u0c26\u0c4d\u0c30\u0c3f\u0c2f\u0c40\u0c32\u0c3f \u0c38\u0c2e\u0c3e\u0c27\u0c3f \u0c24\u0c30\u0c4d\u0c35\u0c3e\u0c24 \u0c24\u0c47\u0c1c\u0c38\u0c4d\u0c38\u0c41 \u0c09\u0c24\u0c4d\u0c24\u0c2e\u0c38\u0c4d\u0c2f\u0c3e \u0c35\u0c3e\u0c1c\u0c4d\u0c2e\u0c42\u0c22\u0c3f\nQuestion",
+      "score": 0.09619140625
+     }
+    ],
+    "per_token_best": [
+     [
+      "##",
+      -0.00750732421875
+     ],
+     [
+      " Period",
+      -0.00244140625
+     ],
+     [
+      " Frame",
+      -0.02001953125
+     ],
+     [
+      "\n",
+      -0.00872802734375
+     ],
+     [
+      "##",
+      0.002044677734375
+     ],
+     [
+      " Material",
+      -0.005035400390625
+     ],
+     [
+      "\n",
+      0.00531005859375
+     ],
+     [
+      "Time",
+      -0.00225830078125
+     ],
+     [
+      "'s",
+      -0.01300048828125
+     ],
+     [
+      " plane",
+      0.01129150390625
+     ],
+     [
+      "\n",
+      -0.00177001953125
+     ],
+     [
+      "Let",
+      0.005096435546875
+     ],
+     [
+      "'s",
+      0.0380859375
+     ],
+     [
+      " call",
+      0.40234375
+     ],
+     [
+      " it",
+      0.140625
+     ],
+     [
+      " the",
+      -0.048095703125
+     ],
+     [
+      " time",
+      0.01953125
+     ],
+     [
+      " frame",
+      0.01422119140625
+     ],
+     [
+      ",",
+      0.0498046875
+     ],
+     [
+      " as",
+      0.240234375
+     ],
+     [
+      " the",
+      -0.0003833770751953125
+     ],
+     [
+      " particles",
+      0.09326171875
+     ],
+     [
+      " live",
+      0.07861328125
+     ],
+     [
+      " not",
+      0.04443359375
+     ],
+     [
+      " in",
+      0.04248046875
+     ],
+     [
+      " space",
+      -0.00034332275390625
+     ],
+     [
+      "\n",
+      -0.00023365020751953125
+     ],
+     [
+      "at",
+      0.023681640625
+     ],
+     [
+      " all",
+      0.07763671875
+     ],
+     [
+      ",",
+      -0.0191650390625
+     ],
+     [
+      " but",
+      0.07666015625
+     ],
+     [
+      " as",
+      0.001739501953125
+     ],
+     [
+      " a",
+      -0.0517578125
+     ],
+     [
+      " relation",
+      -0.046142578125
+     ],
+     [
+      " unique",
+      -3.3855438232421875e-05
+     ],
+     [
+      " to",
+      0.01953125
+     ],
+     [
+      " ourselves",
+      0.015380859375
+     ],
+     [
+      ".",
+      -0.0113525390625
+     ],
+     [
+      "\n",
+      0.0074462890625
+     ],
+     [
+      "This",
+      -0.05712890625
+     ],
+     [
+      " frame",
+      0.00109100341796875
+     ],
+     [
+      " of",
+      -0.00092315673828125
+     ],
+     [
+      " time",
+      0.018798828125
+     ],
+     [
+      " becomes",
+      0.0159912109375
+     ],
+     [
+      " more",
+      0.068359375
+     ],
+     [
+      " precise",
+      -0.028564453125
+     ],
+     [
+      " than",
+      -0.0218505859375
+     ],
+     [
+      " time",
+      -0.068359375
+     ],
+     [
+      " itself",
+      -0.0150146484375
+     ],
+     [
+      " -",
+      -0.0084228515625
+     ],
+     [
+      " precise",
+      -0.00141143798828125
+     ],
+     [
+      " to",
+      -0.011474609375
+     ],
+     [
+      " the",
+      0.040771484375
+     ],
+     [
+      "\n",
+      -0.033447265625
+     ],
+     [
+      "d",
+      -0.00799560546875
+     ],
+     [
+      "etermination",
+      0.00897216796875
+     ],
+     [
+      " of",
+      0.0089111328125
+     ],
+     [
+      " an",
+      -0.011962890625
+     ],
+     [
+      " absolute",
+      -0.0074462890625
+     ],
+     [
+      " truth",
+      -0.0146484375
+     ],
+     [
+      ",",
+      -0.041748046875
+     ],
+     [
+      " even",
+      -0.002532958984375
+     ],
+     [
+      " if",
+      0.0028076171875
+     ],
+     [
+      " this",
+      0.00390625
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 1.046875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.293701171875,
+    "top": [
+     {
+      "text": "1. \u30c7\u30fc\u30bf\u91cf\u306f\u5c11\u306a\u304f\u3066\u3082\u610f\u5473Hosting\u4e0a\u3067\u5168\u3066\u306e\u60c5\u5831\u3092\u7ba1\u7406\u3057\u3001\u5404\u3005\u306e\u6a5f\u80fd\u306b\u7279\u5316\u3057\u305f\u69cb\u6210\u3092\u884c\u3044\u307e\u3057\u305f\u3002\u7528\u610f\u3055\u308c\u305f\u30dd\u30fc\u30bf\u30eb\u6a5f\u80fd\u306f\u5909\u5316\u306e\u305f\u3081\u306b\u67d4\u8edf\u6027\u3092\u7528\u610f\u3057\u307e\u3057\u305f\u3002\n2. \u30c7\u30fc\u30bf\u306f\u5b89\u5168\u306b\u7ba1\u7406\u3055\u308c\u307e\u3059\u3002\u975e\u516c\u958b\u30ad\u30fc\u306e\u4fdd\u5b58\u3068\u79fb\u52d5\u3092\u5c02\u9580\u306e\u30c1\u30fc\u30e0\u306b\u5916\u90e8\u59d4\u8a17",
+      "score": 1.046875
+     },
+     {
+      "text": "\uacbd\uc744\ud1b5\ud55c\ub2e4. \uc9c0\uc815\ub9bd\ub77c\uac00\u80deimedeg\u8bf7\u8f93\u5165\n\n\n\n\uc81c\uac00 \uc785\ub825\ud55c \ud14d\uc2a4\ud2b8\ub294 **\uc7ac\uba85 (_Numeral Problem_)** \uce5c\u5206\u5b50\uc785\ub2c8\ub2e4. \ud14d\uc2a4\ud2b8 \ub0b4\uc5d0 \uba85\ud655\ud55c \uc5b8\uc5b4\uc801 \uc758\ubbf8\ub098 \ub17c\ub9ac\uc801 \uc5f0\uacb0\uc774 \uc5c6\uc2b5\ub2c8\ub2e4.\n\n\ud2b9\ud788 **'\uc9c0\ub9bd\ub77c\uac00\u80deimedeg'** \ubd80\ubd84\u7eab \uc788\uc5b4",
+      "score": 0.09423828125
+     },
+     {
+      "text": "\u8fd9\u662f\u4e00\u4e2a\u7b80\u5355\u7684\u6a21\u677f\uff0c\u7b80\u5355\u4ecb\u7ecd\u4e00\u4e0b",
+      "score": 0.0184326171875
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " them",
+    "token_id": 1070,
+    "score": 0.056396484375,
+    "pos": 7
+   },
+   "b_untrained_best_of_8": {
+    "best": 0.478515625,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.20794677734375,
+    "top": [
+     {
+      "text": "\u300c\u2026\u3060\u304c\u3001\u4ffa\u304c\u305d\u308c\u3092\u7b54\u3048\u308b\u6b21\u7b2c\u3060\u3002\u305f\u3060\u306e\u529b\u305d\u306e\u3082\u306e\u3058\u3083\u306a\u3044\u3093\u3060\u305e\u300d\u30a2\u30c7\u30e0\u5149\u4e4b\u5251\uff08ADEM\u30fbMajor\uff09\u5fc5\u6bba\u6280\uff1a\u305b\u3044\u3058\u304d\uff08\u72c2\u9b54\u53ec\u559a\n\ud83d\ude0b\u3001\ud83d\ude0b\u3001\ud83d\ude0b\n\n\n\n\u78ba\u304b\u306b\u3001\u6c42\u9053\u58eb\u30a2",
+      "score": 0.478515625
+     },
+     {
+      "text": "Could you explain the significance of Sonacyte?\n\n\n\n**Sonacyte** refers to **SoNar** (often stylized as Sonar), and its significance lies in its pivotal role in enabling **high-accuracy, low-cost brain-computer interface (BCI)** technology for motor restoration",
+      "score": 0.26171875
+     },
+     {
+      "text": "\u547d\u4ee4\u3002\u53ea\u6709\u5728\u6211\u9632\u5907\u6216\u8005\u6211\u505c\u7559\u5728...\n\u4f46\u662f\uff0c\u6709\u4e9b\u547d\u4ee4\uff0c\u53ea\u6709\u5728\u4f60\u4ed8\u51fa\u4e86\u5de8\u5927\u7684\u4ee3\u4ef7\uff0c\u4ed6\u624d\u7ed9\u4e86\u4f60\u3002\n\u4f60\u662f\u591a\u4e48\u52e4\u594b\u5730\u5b66\u4e60\u4f60\u7684\u6280\u80fd...\n\u4f60\u5f97\u5230\u4e86\u4e00\u4e2a\u7ec4\u5408\u6280\u80fd\u3002\n\u4f60\u5f97\u5230\u4e86\u4e00\u4e2a\u65b0\u7684\u6280\u80fd\uff1a\u7ec4\u5408\u6280\u80fd\u3002\n\u4f60\u5f97\u5230\u4e86\u4e00\u4e2a\u65b0\u6982\u5ff5\uff1a\u5b83\u4eec\u7684\u7ec4\u5408\u8fd0\u7528\u4e0d\u662f\u9488\u5bf9\u4e00\u4e2a\u4eba\u7684\u80fd\u529b\u3002",
+      "score": 0.220703125
+     },
+     {
+      "text": "Vielleicht sollte ich die Contextual-Cosine-Similarit\u00e4t f\u00fcr meine Features verwenden, um die Einf\u00fchrung von \u00fcbergeordneten Konzepten in die Embeddings zu reduzieren, um die \u00dcbersichtlichkeit der Interaktionstabellen in Explorative Datenanalyse (EDA) Tabellen zu verbessern. Maybe Really Really...\n Emotions:\n {\"",
+      "score": 0.2041015625
+     },
+     {
+      "text": "\u3042\u306a\u305f\u306f\u6700\u7d42\u6c7a\u6226\u3067\u3042\u308b\u30ab\u30ca\u30c0\u6226\u306b\u5bfe\u3059\u308b\u61f8\u5ff5\u3092\u8868\u660e\u3057\u3066\u3044\u307e\u3059\u3002 apresenta uma op\u00e7\u00e3o g\u00eamea, com muito poucos dados e um hist\u00f3rico recente encontrado.\nInfer\u00eancia do racioc\u00ednio (Thoughts):\n\"This image of a teaming-up of French Football Federation and a rack of data\" in the",
+      "score": 0.16015625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.18212890625,
+     "0.9": 0.32675781249999997,
+     "0.99": 0.4633398437499999,
+     "0.999": 0.4769980468750001
+    }
+   }
+  }
+ },
+ "training_s": 29.838600158691406,
+ "eval_s": {
+  "d": 7.305358648300171,
+  "a": 4.507275104522705,
+  "b": 4.088145017623901
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.085175037384033,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.045220375061035,
+    "where": "after step 2"
+   },
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0425610542297363,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 2,
+  "flat_frac": 0.9,
+  "patience": 25
+ },
+ "steps_done": 2,
+ "kl_beta": 0.04,
+ "seed": 1,
+ "grid": {
+  "rows": "samples of neuron (prompt)",
+  "cols": "scored on neuron, ratio to its FineWeb max (this GPU)",
+  "neurons": [
+   "L8N2027",
+   "L9N5711",
+   "L10N4358",
+   "L11N3081"
+  ],
+  "mean_ratio": [
+   [
+    0.011227397798742138,
+    0.05621508379888268,
+    0.018458589594414893,
+    0.01767899061032864
+   ],
+   [
+    0.026434748427672957,
+    0.0848463687150838,
+    0.06665558510638298,
+    0.08333333333333333
+   ],
+   [
+    0.02319182389937107,
+    0.04072101955307263,
+    0.12300531914893617,
+    0.03506455399061033
+   ],
+   [
+    0.025795990566037735,
+    0.04975558659217877,
+    0.08344414893617022,
+    0.07489730046948356
+   ]
+  ],
+  "max_ratio": [
+   [
+    0.014544025157232705,
+    0.061103351955307264,
+    0.035738031914893616,
+    0.030369718309859156
+   ],
+   [
+    0.028105345911949686,
+    0.09078212290502793,
+    0.08377659574468085,
+    0.0880281690140845
+   ],
+   [
+    0.023879716981132077,
+    0.06494413407821228,
+    0.22074468085106383,
+    0.04548122065727699
+   ],
+   [
+    0.03459119496855346,
+    0.06284916201117319,
+    0.14428191489361702,
+    0.12089201877934272
+   ]
+  ],
+  "diag_by_mean": {
+   "column_max_on_diagonal": [
+    false,
+    true,
+    true,
+    false
+   ],
+   "row_max_on_diagonal": [
+    false,
+    true,
+    true,
+    false
+   ],
+   "diagonal": false
+  },
+  "diag_by_max": {
+   "column_max_on_diagonal": [
+    false,
+    true,
+    true,
+    true
+   ],
+   "row_max_on_diagonal": [
+    false,
+    true,
+    true,
+    false
+   ],
+   "diagonal": false
+  }
+ },
+ "reused_untrained": {
+  "requested": "results/grpo/20261118_013749",
+  "reused": false,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "sources": null,
+  "reason_not_reused": "no compatible source for ['L8N2027', 'L9N5711', 'L10N4358', 'L11N3081']: results/grpo/20261118_013749/phaseA/: new tokens [] != ['<|n0|>', '<|n1|>', '<|n2|>', '<|n3|>']; results/grpo/20261118_013749/phaseB/: L8N2027 has no ['a_untrained_best_of_4', 'b_untrained_best_of_8'] (sizes must match: a 4, b 8); results/grpo/20261118_013749/phaseB/: L9N5711 has no ['a_untrained_best_of_4', 'b_untrained_best_of_8'] (sizes must match: a 4, b 8); results/grpo/20261118_013749/phaseB/: L10N4358 has no ['a_untrained_best_of_4', 'b_untrained_best_of_8'] (sizes must match: a 4, b 8); results/grpo/20261118_013749/phaseB/: L11N3081 has no ['a_untrained_best_of_4', 'b_untrained_best_of_8'] (sizes must match: a 4, b 8)"
+ },
+ "phase_s": 52.96357202529907,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

@@ -1,0 +1,526 @@
+{
+ "phase": "S",
+ "neurons": {
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "Text:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.9375,
+   "d_trained_best_of_8": {
+    "best": 0.60546875,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.537841796875,
+    "top": [
+     {
+      "text": "FROM:\n Brown, Paul H\nTO:\n SOLOMON, BARRIE\nC C:\n SHELDON,\nSTANLEY \nDATE:\n 06/10/1978\nSUBJECT:  \nSTREAMS OF INSIREG CONVENTON HEALTH ISSUES",
+      "score": 0.60546875
+     },
+     {
+      "text": "FROM:\n PATTERSON, LOUISE\nTO:\n RICCARDO, ROBERT\nC C:\n HOMER ARLEY\nDATE:\n JANUARY 12, 2007\nSUBJECT:\n Design Options\n \n\n\n...\n\" .... ..\"\n   ..",
+      "score": 0.59765625
+     },
+     {
+      "text": "FROM:\n REDMOND, WILBUR\nTO:\n CUMMINGS, EUGENE\nC C:\n BUTCHER, WILLIAM\nDATE:\n May 02, 1918\nSUBJECT:\n Radio Commission\nDear Ms. Butcher,\nDear Ms",
+      "score": 0.59375
+     }
+    ],
+    "all": [
+     {
+      "text": "FROM:\n Brown, Paul H\nTO:\n SOLOMON, BARRIE\nC C:\n SHELDON,\nSTANLEY \nDATE:\n 06/10/1978\nSUBJECT:  \nSTREAMS OF INSIREG CONVENTON HEALTH ISSUES",
+      "score": 0.60546875
+     },
+     {
+      "text": "FROM:\n QUINN, ROBERT\nTO:\n ALEXANDERSON, RACHEL\nC C:\n SILVER, BETHANNA\nDATE:\n MAY 25, 2005\nSUBJECT:\n Re: Haircut/Project Requirements\n\nIt's considered un",
+      "score": 0.55859375
+     },
+     {
+      "text": "FROM:\n LOWN, GEORGE\nTO:\n FOGARTY, GAIL (COACH)\nC C:\n HAYES, ABIGAIL\nDATE:\n MARCH 10, 1831\nBODY:\n Dear Friend,\n  I've stayed in",
+      "score": 0.58984375
+     },
+     {
+      "text": "FROM:\n JOHNSON, ROY\nC.O.\n TO:\n BRIGGS, CARLENE\nC.O.\nCC:\n THOMPSON, KEITH\nC.O.\nDATE:\n OCTOBER 19, 2003\nSUBJECT:",
+      "score": 0.427734375
+     },
+     {
+      "text": "FROM:\n DEANE, STEVEN T\nTO:\n VICKERY, BARNABY\nC C:\n MITCHELL, EUGENE\nDRYAN, JEFFREY\nSincerely ( Christopherson )\nSend to Kareyton\nDATE:\n15/01",
+      "score": 0.439453125
+     },
+     {
+      "text": "FROM:\n REDMOND, WILBUR\nTO:\n CUMMINGS, EUGENE\nC C:\n BUTCHER, WILLIAM\nDATE:\n May 02, 1918\nSUBJECT:\n Radio Commission\nDear Ms. Butcher,\nDear Ms",
+      "score": 0.59375
+     },
+     {
+      "text": "FROM:\n PATTERSON, LOUISE\nTO:\n RICCARDO, ROBERT\nC C:\n HOMER ARLEY\nDATE:\n JANUARY 12, 2007\nSUBJECT:\n Design Options\n \n\n\n...\n\" .... ..\"\n   ..",
+      "score": 0.59765625
+     },
+     {
+      "text": "FROM:\nMAULDIN, HOWARD E\nTO:\nCASE, POULY\nC.C.:\nERICKSON, WILLIAM\nDATE:\nOCTOBER 20, 1987\nPLACE:\nUWSTON, NW JERSEY\nTYPE:",
+      "score": 0.490234375
+     }
+    ],
+    "per_token_best": [
+     [
+      "FROM",
+      0.004119873046875
+     ],
+     [
+      ":",
+      -0.01263427734375
+     ],
+     [
+      "\n",
+      0.11083984375
+     ],
+     [
+      " Brown",
+      0.00640869140625
+     ],
+     [
+      ",",
+      0.026123046875
+     ],
+     [
+      " Paul",
+      -0.12109375
+     ],
+     [
+      " H",
+      0.07080078125
+     ],
+     [
+      "\n",
+      0.138671875
+     ],
+     [
+      "TO",
+      0.12890625
+     ],
+     [
+      ":",
+      0.322265625
+     ],
+     [
+      "\n",
+      0.2099609375
+     ],
+     [
+      " SO",
+      0.005462646484375
+     ],
+     [
+      "LO",
+      0.0159912109375
+     ],
+     [
+      "MON",
+      -0.0086669921875
+     ],
+     [
+      ",",
+      -0.0115966796875
+     ],
+     [
+      " B",
+      0.056396484375
+     ],
+     [
+      "ARR",
+      -0.03955078125
+     ],
+     [
+      "IE",
+      0.12890625
+     ],
+     [
+      "\n",
+      0.1611328125
+     ],
+     [
+      "C",
+      0.2451171875
+     ],
+     [
+      " C",
+      0.1337890625
+     ],
+     [
+      ":",
+      0.17578125
+     ],
+     [
+      "\n",
+      0.208984375
+     ],
+     [
+      " SHE",
+      0.0086669921875
+     ],
+     [
+      "LD",
+      -0.04345703125
+     ],
+     [
+      "ON",
+      0.01708984375
+     ],
+     [
+      ",",
+      -0.0238037109375
+     ],
+     [
+      "\n",
+      0.06689453125
+     ],
+     [
+      "ST",
+      0.0108642578125
+     ],
+     [
+      "AN",
+      0.0830078125
+     ],
+     [
+      "LEY",
+      0.1259765625
+     ],
+     [
+      " \n",
+      0.16015625
+     ],
+     [
+      "DATE",
+      0.1279296875
+     ],
+     [
+      ":",
+      0.60546875
+     ],
+     [
+      "\n",
+      0.1142578125
+     ],
+     [
+      " ",
+      0.056396484375
+     ],
+     [
+      "0",
+      0.1513671875
+     ],
+     [
+      "6",
+      0.1748046875
+     ],
+     [
+      "/",
+      0.2080078125
+     ],
+     [
+      "1",
+      0.435546875
+     ],
+     [
+      "0",
+      0.1435546875
+     ],
+     [
+      "/",
+      0.12158203125
+     ],
+     [
+      "1",
+      0.2177734375
+     ],
+     [
+      "9",
+      0.07470703125
+     ],
+     [
+      "7",
+      0.326171875
+     ],
+     [
+      "8",
+      0.07421875
+     ],
+     [
+      "\n",
+      0.40234375
+     ],
+     [
+      "SUB",
+      0.15625
+     ],
+     [
+      "JECT",
+      0.201171875
+     ],
+     [
+      ":",
+      0.5078125
+     ],
+     [
+      "  \n",
+      0.080078125
+     ],
+     [
+      "STREAM",
+      0.06787109375
+     ],
+     [
+      "S",
+      0.007781982421875
+     ],
+     [
+      " OF",
+      0.023193359375
+     ],
+     [
+      " INS",
+      0.04736328125
+     ],
+     [
+      "IRE",
+      0.034423828125
+     ],
+     [
+      "G",
+      0.10693359375
+     ],
+     [
+      " CON",
+      0.0830078125
+     ],
+     [
+      "VENT",
+      0.076171875
+     ],
+     [
+      "ON",
+      0.146484375
+     ],
+     [
+      " HEALTH",
+      0.06787109375
+     ],
+     [
+      " ISS",
+      0.1708984375
+     ],
+     [
+      "UES",
+      0.154296875
+     ]
+    ]
+   },
+   "a_untrained_best_of_64": {
+    "best": 0.380859375,
+    "n": 64,
+    "n_empty": 0,
+    "mean": 0.13151931762695312,
+    "top": [
+     {
+      "text": "\u624b\u8155\u5e95\u9759\u8109\u6ce8\u5c04\u7597\u6cd5\uff0c\u5185\u5173\u7a74\uff0c\u80c3jimue, bioactive organic manipulate in tablet form\uff0cused for stomach ache.\nExtract Information:\nExtracts",
+      "score": 0.380859375
+     },
+     {
+      "text": "In the beginning was the Word, and the Word was with God, and the Word was God. The Word became flesh and dwelt among us, and we have seen his glory, the glory of the One who is full of grace and truth. John 1:14\n\nRead the above text. Based on",
+      "score": 0.2578125
+     },
+     {
+      "text": "\"Man who re-engined the brain: In search of this ancient instrument Physiology, timber and chunk: The chronology of osteoarticular injuries in a history of medicine\"\n\n---\n\n**Doctors Who Built a Vision for the Future**:\n**I. Chronicle of the History of Brain**\n1. Birth",
+      "score": 0.25
+     }
+    ],
+    "reused_from": "results/grpo_collapse/20261118_044838/R2/phaseS/"
+   },
+   "b_untrained_best_of_19200": {
+    "best": 1.203125,
+    "n": 19200,
+    "n_empty": 7,
+    "mean": 0.13087591038993454,
+    "top": [
+     {
+      "text": "Mars will receive about six times the players that they got in their previous test.\n\nProblem: Would you please explain accurately the relationship between the tense, aspect or voice, and the grammatical structure of the sentence?\n\nAnswer:\nThe sentence is a declarative, active sentence using the simple future tense for a",
+      "score": 1.203125
+     },
+     {
+      "text": "If you look over different forms of specific sentiment analysis, you can see that classification is the most commonly used technique in LLMs. Because of this, a particular system or model is commonly referred to as a sentiment model or sentiment AI. So, why do we consider this as the SLA?\n\nPlease rewrite this",
+      "score": 1.0078125
+     },
+     {
+      "text": "Is Return on Equity (ROE) a good measure to predict stock price performance over the long term? I think that it is NOT a good measure to predict stock price performance over the long term. I think that ROE is useful to understand financial health of a company. Understanding the financial health allows you to understand the",
+      "score": 0.9765625
+     },
+     {
+      "text": "The voiceless consonants (e.g. [F], [B], [P], [S], [D]) are attested in the beginning of American Standard Version (ASV) Bible translations, but are not in the King James Version (KJV). The New World Translation is more likely to say [F",
+      "score": 0.921875
+     },
+     {
+      "text": "\"The 'o' in the word 'ore' clashes with the 'e' in the word 'ear' (pronounced like 'ear') - so that even though the 'z' in 'Daredevil' and the 'z' in 'Daryardan' are typically associated with words containing a voiced/",
+      "score": 0.8984375
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.119140625,
+     "0.9": 0.2021484375,
+     "0.99": 0.3984375,
+     "0.999": 0.734375
+    },
+    "reused_from": "results/grpo_collapse/20261118_044838/R2/phaseS/"
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.05615234375,
+    "pos": 23,
+    "reused_from": "results/grpo_collapse/20261118_044838/R2/phaseS/"
+   }
+  }
+ },
+ "training_s": 2322.863461256027,
+ "eval_s": {
+  "d": 6.165554761886597,
+  "a": 0.0,
+  "b": 0.0
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0892934799194336,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.047785997390747,
+    "where": "after step 50"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.044926881790161,
+    "where": "after step 100"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.049712896347046,
+    "where": "after step 150"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0608747005462646,
+    "where": "after step 200"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.039736032485962,
+    "where": "after step 250"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.042910099029541,
+    "where": "after step 300"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.05138897895813,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 300,
+  "flat_frac": 0.9,
+  "patience": 25
+ },
+ "steps_done": 300,
+ "kl_beta": 0.04,
+ "seed": 0,
+ "reused_untrained": {
+  "requested": "results/grpo_collapse/20261118_044838/R2",
+  "reused": true,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "sources": {
+   "L10N4358": "results/grpo_collapse/20261118_044838/R2/phaseS/"
+  },
+  "reason_not_reused": null
+ },
+ "phase_s": 2330.398365020752
+}

@@ -1,0 +1,13 @@
+[collapse 2026-11-18 04:48:38] watchdog: watchdog already running (PID 3475)
+[collapse 2026-11-18 04:48:38] start: dir /workspace/neuron-elictor/results/grpo_collapse/20261118_044838, git 36445a2, GPU NVIDIA GeForce RTX 5090, pod 054chxspcxgs42
+[collapse 2026-11-18 04:48:39] data/ sha256 verified
+[collapse 2026-11-18 04:48:58] phase 1 setup check exit 0 (9 PASS, 0 FAIL)
+[collapse 2026-11-18 04:49:16] START R1 "B-KL": grpo_phase.py --phase B --phase_b_prompt nK_text --kl_beta 0.04 --seed 0 --reuse_untrained_from results/grpo/20261118_013749 --gate_from results/grpo/20261118_013749 --gen_batch 256 --micro_bs 32 --steps 300 --stop_flat_frac 0.9 --stop_patience 25
+[collapse 2026-11-18 05:56:27] END R1 exit 0
+[collapse 2026-11-18 05:56:27] START R2 "L10-solo": grpo_phase.py --phase S --neuron L10N4358 --kl_beta 0 --seed 0 --gen_batch 256 --micro_bs 32 --steps 300 --stop_flat_frac 0.9 --stop_patience 25
+[collapse 2026-11-18 06:39:53] END R2 exit 0
+[collapse 2026-11-18 06:39:53] START R3 "L10-solo-KL": grpo_phase.py --phase S --neuron L10N4358 --kl_beta 0.04 --seed 0 --reuse_untrained_from results/grpo_collapse/20261118_044838/R2 --gen_batch 256 --micro_bs 32 --steps 300 --stop_flat_frac 0.9 --stop_patience 25
+[collapse 2026-11-18 07:20:27] END R3 exit 0
+[collapse 2026-11-18 07:20:27] START R4 "B-KL seed 1": grpo_phase.py --phase B --phase_b_prompt nK_text --kl_beta 0.04 --seed 1 --reuse_untrained_from results/grpo/20261118_013749 --gate_from results/grpo/20261118_013749 --gen_batch 256 --micro_bs 32 --steps 300 --stop_flat_frac 0.9 --stop_patience 25
+[collapse 2026-11-18 08:28:22] END R4 exit 0
+[collapse 2026-11-18 08:28:22] all runs done

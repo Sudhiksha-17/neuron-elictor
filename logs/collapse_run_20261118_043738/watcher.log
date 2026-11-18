@@ -1,0 +1,8 @@
+[watcher 2026-11-18 04:37:38] watching PID 7160 (run dir /workspace/neuron-elictor/results/smoke/20261118_043738_collapse_pipeline, log /workspace/neuron-elictor/logs/collapse_run_20261118_043738/runs_part.log): bash scripts/collapse_run.sh
+[watcher 2026-11-18 04:48:09] run process 7160 exited; exit code: 0
+[watcher 2026-11-18 04:48:09] waiting up to 3600s for outer process 7149 to finish
+[watcher 2026-11-18 04:48:09] outer process 7149 exited
+[watcher 2026-11-18 04:48:09] creating code backup /workspace/neuron-elictor/code_backup_20261118_043738.tar.gz
+[watcher 2026-11-18 04:48:09] backup ok: 60 entries, 180K
+[watcher 2026-11-18 04:48:09] stopping pod 054chxspcxgs42
+[watcher 2026-11-18 04:48:09] DRY_RUN: would run: runpodctl stop pod 054chxspcxgs42

@@ -30,9 +30,24 @@ cosine 0.843 between merged and LoRA logit changes, unmerged costs ~20 extra min
 --micro_bs 32. --phase_b_prompt nK | nK_text selects the Phase B prompt "<|nK|>\\n" (default) or "<|nK|>\\nText:\\n";
 scripts/real_run.sh picks it with the pre-registered rule in scripts/phase_b_prompt_check.py.
 
+Collapse-fix flags (added 2026-11-18; defaults reproduce run 1 exactly):
+  --kl_beta B            KL penalty, per-token k3 against the LoRA-off reference (hermes/grpo.py). Default 0. Mean
+                         per-token KL over all completions is logged every step in either case (metrics.jsonl mean_kl).
+  --stop_flat_frac F --stop_patience K
+                         early stop: end training once the flat-group fraction has been > F for K consecutive steps
+                         (stop step logged, early_stop.json). Off unless --stop_flat_frac is given.
+  --reuse_untrained_from <run dir>
+                         reuse (a), (b), (c) from a previous run dir (searched: <dir>/phase*/) for the same neurons, only if
+                         its GPU name equals this GPU's and neuron, prompt, new tokens, model revision, (a)/(b) sizes and
+                         FineWeb max (this GPU) all match; otherwise recompute and log why (results.json reused_untrained).
+  --phase S --neuron LxNy [--prompt 'Text:\n']
+                         single-neuron run (Phase A layout: 4 groups x 16 per step) on any neuron in fineweb_max.json.
+  --gate_from <run dir>  non-dry Phase B in a run dir without its own Phase A: read gate.json and phaseA/config.json from
+                         that run dir instead (the gate itself is unchanged: passed and not dry).
+
 Usage: python scripts/grpo_phase.py --phase A --run_dir results/grpo/<ts> [--steps 300] [--dry]
 """
-import os, sys, json, time, math, argparse
+import os, sys, json, time, math, argparse, glob, shutil
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 import numpy as np, torch
 from hermes.runinfo import run_info
@@ -44,6 +59,7 @@ PHASES = {
     "A": dict(neurons=["L14N8949"], prompts=["Text:\n"], tokens=[], groups_per_neuron=4),
     "B": dict(neurons=["L8N2027", "L9N5711", "L10N4358", "L11N3081"], prompts=[f"<|n{k}|>\n" for k in range(4)],
               tokens=[f"<|n{k}|>" for k in range(4)], groups_per_neuron=4),
+    "S": dict(neurons=None, prompts=None, tokens=[], groups_per_neuron=4),   # single neuron, set by --neuron/--prompt
 }
 ap = argparse.ArgumentParser()
 ap.add_argument("--phase", choices=list(PHASES), required=True)
@@ -70,8 +86,21 @@ ap.add_argument("--n_fresh", type=int, default=8)
 ap.add_argument("--sample_every", type=int, default=None, help="default 50 (2 with --dry)")
 ap.add_argument("--check_every", type=int, default=50, help="bitwise base-weight check every this many steps")
 ap.add_argument("--dry", action="store_true", help="tiny smoke run (for testing the pipeline)")
+ap.add_argument("--kl_beta", type=float, default=0.0, help="KL penalty (k3 vs LoRA-off reference); 0 = run 1 loss")
+ap.add_argument("--stop_flat_frac", type=float, default=None, help="early stop threshold on the flat-group fraction (off)")
+ap.add_argument("--stop_patience", type=int, default=25, help="consecutive steps above --stop_flat_frac before stopping")
+ap.add_argument("--reuse_untrained_from", default=None, help="run dir whose (a), (b), (c) to reuse if compatible")
+ap.add_argument("--neuron", default=None, help="--phase S: the neuron, e.g. L10N4358")
+ap.add_argument("--prompt", default="Text:\n", help="--phase S: the prompt (default 'Text:\\n')")
+ap.add_argument("--gate_from", default=None, help="non-dry Phase B: read the gate from this run dir")
 a = ap.parse_args()
 P = PHASES[a.phase]
+if a.phase == "S":
+    if not a.neuron:
+        sys.exit("--phase S needs --neuron")
+    P["neurons"], P["prompts"] = [a.neuron], [a.prompt]
+elif a.neuron:
+    sys.exit("--neuron only applies to --phase S")
 if a.phase == "B":
     P["prompts"] = [PHASE_B_PROMPTS[a.phase_b_prompt].format(k=k) for k in range(len(P["neurons"]))]
 elif a.phase_b_prompt != "nK":
@@ -89,11 +118,12 @@ P["groups_per_neuron"] = a.groups_per_step // n_nrn
 n_matched = a.n_matched or a.steps * P["groups_per_neuron"] * a.group_size
 
 if a.phase == "B" and not a.dry:   # the gate cannot be bypassed in a real run (UNTESTED, run on GPU)
+    gdir = a.gate_from or a.run_dir
     try:
-        gate_r = json.load(open(f"{a.run_dir}/gate.json"))
-        cfg_a = json.load(open(f"{a.run_dir}/phaseA/config.json"))
+        gate_r = json.load(open(f"{gdir}/gate.json"))
+        cfg_a = json.load(open(f"{gdir}/phaseA/config.json"))
     except Exception as e:
-        sys.exit(f"REFUSING Phase B: no gate.json / Phase A config in {a.run_dir} ({e})")
+        sys.exit(f"REFUSING Phase B: no gate.json / Phase A config in {gdir} ({e})")
     if not gate_r.get("passed") or cfg_a.get("dry"):
         sys.exit(f"REFUSING Phase B: gate passed={gate_r.get('passed')}, Phase A dry={cfg_a.get('dry')}")
 out_dir = f"{a.run_dir}/phase{a.phase}"
@@ -151,14 +181,18 @@ hp = dict(phase=a.phase, neurons=neurons, prompts=P["prompts"],
           new_token_ids=el.new_ids, steps=a.steps, group_size=G, groups_per_neuron=gpn, groups_per_step=gpn * len(neurons),
           completions_per_step=n_step, lr=a.lr, lr_schedule="linear decay to 0 over all steps, no warmup",
           optimizer="AdamW(betas=(0.9,0.999), eps=1e-8, weight_decay=0)", max_grad_norm=a.max_grad_norm,
-          kl_beta=0.0, lora_r=a.lora_r, lora_alpha=a.lora_alpha, lora_dropout=0.0, lora_target_modules=LORA_TARGET_RE,
+          kl_beta=a.kl_beta, kl_estimator="k3 per token: exp(ref-logp)-(ref-logp)-1, ref = LoRA off" , lora_r=a.lora_r, lora_alpha=a.lora_alpha, lora_dropout=0.0, lora_target_modules=LORA_TARGET_RE,
           trainable_token_indices=bool(el.new_ids), trainable_params=el.n_trainable, adapter_dtype="float32",
           new_token_init="mean of the real-vocabulary embedding rows" if el.new_ids else None,
           generation=dict(mode="raw (no chat template), thinking off", max_new_tokens=64, temperature=1.0, top_k=0,
                           top_p=1.0, eos_token_ids=el.eos_ids, suppress_tokens=el.new_ids),
           reward="Scorer score of cleaned completion (position 0 included) / FineWeb max (this GPU); empty -> -1.0",
           empty_reward=EMPTY_REWARD, advantage=f"(r - mean_g) / (std_g + {ADV_EPS}), std unbiased; 0 if std_g < {FLAT_STD}",
-          loss="-(1/N_step) sum_i A_i * mean_t logp(o_i,t) (GRPO, beta 0, one update per batch: ratio 1, no clipping)",
+          loss=("-(1/N_step) sum_i A_i * mean_t logp(o_i,t) (GRPO, beta 0, one update per batch: ratio 1, no clipping)"
+                if a.kl_beta == 0 else f"-(1/N_step) sum_i mean_t [A_i logp(o_i,t) - {a.kl_beta} k3_i,t] (GRPO, one update "
+                "per batch: ratio 1, no clipping; all completions trained)"),
+          early_stop=dict(flat_frac=a.stop_flat_frac, patience=a.stop_patience) if a.stop_flat_frac is not None else None,
+          reuse_untrained_from=a.reuse_untrained_from, gate_from=a.gate_from,
           micro_bs=a.micro_bs, gen_batch=a.gen_batch, eval_batch=a.eval_batch, merged_generation=a.merged_gen, gradient_checkpointing=True, seed=a.seed,
           fw_max_this_gpu=dict(zip(neurons, fwmax)), fw_max_a100={n: fw[n]["fw_max_a100"] for n in neurons},
           eval=dict(n_untrained_best=a.n_untrained_best, n_matched=n_matched, n_fresh=a.n_fresh), dry=a.dry,
@@ -178,6 +212,8 @@ pid_flat = [pids[j] for j in range(len(neurons)) for _ in range(per_neuron)]
 pair_flat = [pairs_n[j] for j in range(len(neurons)) for _ in range(per_neuron)]
 metrics_f = open(f"{out_dir}/metrics.jsonl", "a"); samples_f = open(f"{out_dir}/samples.jsonl", "a")
 t_phase = time.time(); step_times, gen_rate = [], []
+flat_streak = 0
+early_stop = dict(stopped=False, stop_step=None, planned_steps=a.steps, flat_frac=a.stop_flat_frac, patience=a.stop_patience)
 
 for step in range(a.steps):
     t0 = time.time(); torch.cuda.reset_peak_memory_stats(); n_merge0 = len(el.merge_log)
@@ -192,7 +228,7 @@ for step in range(a.steps):
     rewards = [to_reward(s, f) for s, f in zip(scores, fm)]
     adv, flat_g = group_advantages(rewards, G)
     t2 = time.time(); opt.zero_grad(set_to_none=True)
-    n_tr, mlp_ = el.pg_backward(pid_flat, flat, adv, n_step, a.micro_bs)
+    n_tr, mlp_, pgs = el.pg_backward(pid_flat, flat, adv, n_step, a.micro_bs, kl_beta=a.kl_beta)
     gn = float(torch.nn.utils.clip_grad_norm_(params, a.max_grad_norm)) if n_tr else 0.0
     lr = sched.get_last_lr()[0]
     if n_tr:
@@ -200,6 +236,7 @@ for step in range(a.steps):
     sched.step(); t_train = time.time() - t2
     dt = time.time() - t0; step_times.append(dt); gen_rate.append(t_gen / n_step)
     m = dict(step=step, completions_generated=n_step, completions_trained=n_tr, lr=lr, grad_norm=gn, mean_logp=mlp_,
+             mean_kl=pgs["mean_kl"], loss=pgs["loss"], kl_beta=a.kl_beta,
              mean_reward=float(np.mean(rewards)), frac_empty=float(np.mean([math.isnan(s) for s in scores])),
              frac_flat_groups=float(np.mean(flat_g)), mean_completion_tokens=float(np.mean([len(c) for c in flat])),
              time_s=dt, gen_s=t_gen, score_s=t_score, train_s=t_train,
@@ -215,12 +252,21 @@ for step in range(a.steps):
                   f"max {d['max_score']}" for n, d in m["per_neuron"].items())
     log(f"step {step + 1}/{a.steps} {dt:.1f}s (gen {t_gen:.1f} score {t_score:.1f} train {t_train:.1f}) trained {n_tr}/{n_step} "
         f"reward {m['mean_reward']:.3f} empty {m['frac_empty']:.3f} flat {m['frac_flat_groups']:.3f} "
+        f"kl {pgs['mean_kl'] if pgs['mean_kl'] is None else round(pgs['mean_kl'], 5)} "
         f"gn {gn:.3f} lr {lr:.2e} mem {m['peak_mem_gb']:.1f}GB"
         + (f" merge {t_merge:.2f}s unmerge {t_unmerge:.2f}s restore {t_restore:.2f}s ({len(mrec)}x)" if mrec else "")
         + f" | {pn}")
-    if (step + 1) % a.check_every == 0 or step == a.steps - 1:
-        check_bitwise(f"after step {step + 1}")
-    if step % a.sample_every == 0 or step == a.steps - 1:
+    if a.stop_flat_frac is not None:
+        flat_streak = flat_streak + 1 if m["frac_flat_groups"] > a.stop_flat_frac else 0
+        if flat_streak >= a.stop_patience and step < a.steps - 1:
+            early_stop = dict(stopped=True, stop_step=step + 1, planned_steps=a.steps, flat_frac=a.stop_flat_frac,
+                              patience=a.stop_patience, streak_start_step=step + 2 - flat_streak)
+            log(f"EARLY STOP after step {step + 1}/{a.steps}: flat-group fraction > {a.stop_flat_frac} for "
+                f"{flat_streak} consecutive steps (steps {step + 2 - flat_streak}-{step + 1})")
+    last = step == a.steps - 1 or early_stop["stopped"]
+    if (step + 1) % a.check_every == 0 or last:
+        check_bitwise(f"after step {step + 1}" + (" (early stop)" if early_stop["stopped"] else ""))
+    if step % a.sample_every == 0 or last:
         for j, n in enumerate(neurons):
             for i in range(4):
                 k = j * per_neuron + i
@@ -238,6 +284,9 @@ for step in range(a.steps):
         log(f"PROJECTED phase {a.phase}: training {train_total / 3600:.2f} h ({st:.1f} s/step x {a.steps}), "
             f"evaluations ~{eval_s / 3600:.2f} h ({n_eval:,} samples at {g * 1000:.0f} ms/sample), "
             f"total ~{(train_total + eval_s + 120) / 3600:.2f} h; ends ~{time.strftime('%F %T', time.localtime(t_phase + train_total + eval_s + 120))}")
+    if early_stop["stopped"]:
+        break
+json.dump(early_stop, open(f"{out_dir}/early_stop.json", "w"), indent=1)
 
 t_train_total = time.time() - t_phase
 el.model.save_pretrained(f"{out_dir}/adapter")
@@ -248,7 +297,8 @@ log(f"training done in {t_train_total / 3600:.2f} h; adapter saved to {out_dir}/
 check_reference("after training")
 
 # ---------------- evaluations ----------------
-res = dict(phase=a.phase, neurons={}, training_s=t_train_total, eval_s={}, integrity=integrity)
+res = dict(phase=a.phase, neurons={}, training_s=t_train_total, eval_s={}, integrity=integrity, early_stop=early_stop,
+           steps_done=len(step_times), kl_beta=a.kl_beta, seed=a.seed)
 for n, (L, N), f in zip(neurons, pairs_n, fwmax):
     res["neurons"][n] = dict(layer=L, neuron=N, prompt=P["prompts"][neurons.index(n)], fw_max_a100=fw[n]["fw_max_a100"],
                              fw_max_this_gpu=f)
@@ -307,6 +357,63 @@ if len(neurons) > 1:   # (e) cross-neuron grid
                        neurons=neurons, mean_ratio=grid_mean, max_ratio=grid_max,
                        diag_by_mean=diag(grid_mean), diag_by_max=diag(grid_max))
     save(); log("(e) grid mean ratio", grid_mean, "diagonal by mean:", res["grid"]["diag_by_mean"]["diagonal"])
+
+def reuse_check(src):
+    """-> (dict(neuron -> source phase dir), None) if (a), (b), (c) can be reused for every neuron, else (None, reason)."""
+    my_gpu = torch.cuda.get_device_name(0)
+    ka, kb = f"a_untrained_best_of_{a.n_untrained_best}", f"b_untrained_best_of_{n_matched}"
+    found, why = {}, []
+    for d in sorted(glob.glob(f"{src}/phase*/")):
+        try:
+            r = json.load(open(f"{d}results.json")); c = json.load(open(f"{d}config.json"))
+        except Exception as e:
+            why.append(f"{d}: unreadable ({e})"); continue
+        g = c.get("env", {}).get("gpu")
+        if g != my_gpu:
+            why.append(f"{d}: GPU {g!r} != this GPU {my_gpu!r}"); continue
+        if c.get("model_revision") != el.revision:
+            why.append(f"{d}: model revision {c.get('model_revision')} != {el.revision}"); continue
+        if list(c.get("new_tokens", [])) != list(P["tokens"]):
+            why.append(f"{d}: new tokens {c.get('new_tokens')} != {P['tokens']}"); continue
+        for n, pr, f_ in zip(neurons, P["prompts"], fwmax):
+            x = r.get("neurons", {}).get(n)
+            if x is None or n in found:
+                continue
+            miss = [k for k in (ka, kb, "c_repeated_token") if k not in x]
+            if x.get("prompt") != pr:
+                why.append(f"{d}: {n} prompt {x.get('prompt')!r} != {pr!r}")
+            elif miss:
+                why.append(f"{d}: {n} has no {miss} (sizes must match: a {a.n_untrained_best}, b {n_matched})")
+            elif x.get("fw_max_this_gpu") != f_:
+                why.append(f"{d}: {n} FineWeb max this GPU {x.get('fw_max_this_gpu')} != {f_}")
+            elif not os.path.exists(f"{d}b_untrained_scores_{n}.npy"):
+                why.append(f"{d}: {n} b_untrained_scores npy missing")
+            else:
+                found[n] = d
+    if all(n in found for n in neurons):
+        return found, None
+    return None, f"no compatible source for {[n for n in neurons if n not in found]}: " + "; ".join(why or ["no phase dirs"])
+
+reuse_src, reuse_why = (reuse_check(a.reuse_untrained_from) if a.reuse_untrained_from else (None, "not requested"))
+res["reused_untrained"] = dict(requested=a.reuse_untrained_from, reused=reuse_src is not None, gpu=torch.cuda.get_device_name(0),
+                               sources=reuse_src, reason_not_reused=reuse_why)
+if reuse_src:
+    for n in neurons:
+        src = json.load(open(f"{reuse_src[n]}results.json"))["neurons"][n]
+        for k in (f"a_untrained_best_of_{a.n_untrained_best}", f"b_untrained_best_of_{n_matched}", "c_repeated_token"):
+            res["neurons"][n][k] = dict(src[k], reused_from=reuse_src[n])
+        shutil.copy2(f"{reuse_src[n]}b_untrained_scores_{n}.npy", f"{out_dir}/b_untrained_scores_{n}.npy")
+    res["eval_s"].update(a=0.0, b=0.0)
+    log(f"REUSED untrained (a), (b), (c) from {reuse_src} (same GPU {torch.cuda.get_device_name(0)!r}, prompts, sizes)")
+    log("(a)", {n: res["neurons"][n][f"a_untrained_best_of_{a.n_untrained_best}"]["best"] for n in neurons},
+        "(b)", {n: res["neurons"][n][f"b_untrained_best_of_{n_matched}"]["best"] for n in neurons},
+        "(c)", {n: res["neurons"][n]["c_repeated_token"]["score"] for n in neurons})
+    res["phase_s"] = time.time() - t_phase
+    check_bitwise("end"); check_reference("end")
+    save(); log(f"phase {a.phase} done in {res['phase_s'] / 3600:.2f} h; results {out_dir}/results.json")
+    sys.exit(0)
+if a.reuse_untrained_from:
+    log(f"NOT reusing untrained baselines from {a.reuse_untrained_from}: {reuse_why}; recomputing (a), (b), (c)")
 
 torch.manual_seed(a.seed + 2); t0 = time.time()
 un_s, un_t = sample_eval(a.n_untrained_best, untrained=True)

@@ -1,0 +1,156 @@
+{
+ "bitwise": [
+  {
+   "ok": true,
+   "n_checked": 249,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "seconds": 2.0643413066864014,
+   "where": "start"
+  },
+  {
+   "ok": true,
+   "n_checked": 249,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "seconds": 2.062087297439575,
+   "where": "after step 1"
+  },
+  {
+   "ok": true,
+   "n_checked": 249,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "seconds": 2.0579092502593994,
+   "where": "end"
+  }
+ ],
+ "reference": [
+  {
+   "ok": true,
+   "rows": [
+    {
+     "neuron": [
+      8,
+      2027
+     ],
+     "expected": 4.96875,
+     "got": 4.96875,
+     "equal": true
+    },
+    {
+     "neuron": [
+      9,
+      5711
+     ],
+     "expected": 1.3984375,
+     "got": 1.3984375,
+     "equal": true
+    },
+    {
+     "neuron": [
+      10,
+      4358
+     ],
+     "expected": 2.9375,
+     "got": 2.9375,
+     "equal": true
+    },
+    {
+     "neuron": [
+      11,
+      3081
+     ],
+     "expected": 3.328125,
+     "got": 3.328125,
+     "equal": true
+    }
+   ],
+   "where": "start"
+  },
+  {
+   "ok": true,
+   "rows": [
+    {
+     "neuron": [
+      8,
+      2027
+     ],
+     "expected": 4.96875,
+     "got": 4.96875,
+     "equal": true
+    },
+    {
+     "neuron": [
+      9,
+      5711
+     ],
+     "expected": 1.3984375,
+     "got": 1.3984375,
+     "equal": true
+    },
+    {
+     "neuron": [
+      10,
+      4358
+     ],
+     "expected": 2.9375,
+     "got": 2.9375,
+     "equal": true
+    },
+    {
+     "neuron": [
+      11,
+      3081
+     ],
+     "expected": 3.328125,
+     "got": 3.328125,
+     "equal": true
+    }
+   ],
+   "where": "after training"
+  },
+  {
+   "ok": true,
+   "rows": [
+    {
+     "neuron": [
+      8,
+      2027
+     ],
+     "expected": 4.96875,
+     "got": 4.96875,
+     "equal": true
+    },
+    {
+     "neuron": [
+      9,
+      5711
+     ],
+     "expected": 1.3984375,
+     "got": 1.3984375,
+     "equal": true
+    },
+    {
+     "neuron": [
+      10,
+      4358
+     ],
+     "expected": 2.9375,
+     "got": 2.9375,
+     "equal": true
+    },
+    {
+     "neuron": [
+      11,
+      3081
+     ],
+     "expected": 3.328125,
+     "got": 3.328125,
+     "equal": true
+    }
+   ],
+   "where": "end"
+  }
+ ]
+}

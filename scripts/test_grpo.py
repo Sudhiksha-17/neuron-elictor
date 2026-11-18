@@ -11,9 +11,13 @@
      exception in merge_adapter itself, (iv) merged generation; merged vs unmerged LoRA logits (top-1
      agreement >= 95%; delta cosine reported); merge/unmerge/restore timing; simulated OOM -> smaller batch
      remembered across calls; reference_scores() exact.
+  7. KL penalty (added 2026-11-18): k3 KL(policy || LoRA-off reference) is 0 at init (LoRA off == reference) and grows
+     after an optimizer step; kl_beta=0 reproduces the old (run 1) pg_backward loss and gradients exactly (old code
+     copied below; compared bitwise, or within run-to-run noise if two old runs already differ); kl_beta>0 changes the
+     gradient after a step; memory/time of pg_backward with kl_beta 0.04.
 Usage: python scripts/test_grpo.py [--micro_bs 16 32]
 """
-import os, sys, json, time, argparse
+import os, sys, json, time, argparse, subprocess
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from hermes.paths import RESULTS_DIR, BASELINE_DIR
 import torch
@@ -26,6 +30,14 @@ ap.add_argument("--gen_batch", type=int, default=256); a = ap.parse_args()
 RUN_DIR = f"{RESULTS_DIR}/grpo_tests/{time.strftime('%Y%m%d_%H%M%S')}"
 os.makedirs(RUN_DIR, exist_ok=False)
 checks, info = {}, {}
+# Expected score of L14N8949's top FineWeb context on THIS GPU, from a plain (non-PEFT) Scorer in a separate process
+# (scripts/grpo_fwmax.py). Replaces the constant 3.046875 measured on an earlier 5090 pod (changed 2026-11-18: this pod
+# scores 3.03125, one bf16 step lower, equal to run 1's FineWeb max this GPU).
+subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "grpo_fwmax.py"), f"{RUN_DIR}/fwmax"],
+               check=True, stdout=subprocess.DEVNULL)
+EXPECTED = json.load(open(f"{RUN_DIR}/fwmax/fineweb_max.json"))["L14N8949"]["top10"][0]["this_gpu"]
+info["expected_L14N8949_top_ctx_this_gpu"] = EXPECTED
+print("expected L14N8949 top ctx score (plain Scorer, this GPU):", EXPECTED)
 
 el = Elicitor(new_tokens=[f"<|n{k}|>" for k in range(4)])
 names = [n for n, _ in el.trainable]
@@ -48,7 +60,7 @@ def score_ctx():
     with el.adapter_off():
         return float(el.scorer.score_pairs(ids, lens, [(L, N)])[0][0])
 s0 = score_ctx(); print("L14N8949 top ctx, LoRA off:", s0)
-checks["peft_scorer_matches_quickcheck_rescore_3.046875"] = s0 == 3.046875
+checks["peft_scorer_matches_plain_scorer_this_gpu"] = s0 == EXPECTED
 
 emb = el.model.get_input_embeddings()
 def emb_rows(off):
@@ -76,10 +88,17 @@ rew = [-1.0 if torch.isnan(v) else float(v) for v in sc]
 adv, flat = group_advantages(rew, 16)
 pid_per = [pids[i // 64] for i in range(256)]
 opt = torch.optim.AdamW([p for _, p in el.trainable], lr=2e-5, weight_decay=0.0)
+# ---- 7a. KL at init (before any optimizer step: LoRA B = 0, token deltas = original rows -> policy == reference) ----
+kl0 = el.kl_stats(pid_per, flat_c, 32); info["kl_init"] = kl0
+opt.zero_grad(set_to_none=True)
+_, _, st0 = el.pg_backward(pid_per, flat_c, adv, 256, 32, kl_beta=0.04); info["kl_init_from_pg_backward_beta_0.04"] = st0
+opt.zero_grad(set_to_none=True)
+print(f"KL at init: kl_stats {kl0!r}, pg_backward(beta 0.04) {st0}")
+checks["kl_zero_at_init"] = abs(kl0) <= 1e-6 and abs(st0["mean_kl"]) <= 1e-6
 mem = {}
 for mb in a.micro_bs:
     torch.cuda.reset_peak_memory_stats(); opt.zero_grad(set_to_none=True)
-    t0 = time.time(); n_tr, lp = el.pg_backward(pid_per, flat_c, adv, 256, mb); torch.cuda.synchronize()
+    t0 = time.time(); n_tr, lp, _ = el.pg_backward(pid_per, flat_c, adv, 256, mb); torch.cuda.synchronize()
     mem[mb] = dict(peak_gb=torch.cuda.max_memory_allocated() / 1e9, s=time.time() - t0, n_trained=n_tr, mean_logp=lp)
     print(f"micro_bs {mb}: peak {mem[mb]['peak_gb']:.1f} GB, backward {mem[mb]['s']:.1f}s, trained {n_tr}, mean logp {lp:.3f}")
 info["pg_backward"] = mem
@@ -101,6 +120,78 @@ with torch.no_grad():
     with el.adapter_off():
         lo_off = el.model(input_ids=x).logits.float()
 checks["lora_on_changes_policy_logits"] = not torch.equal(lo_on, lo_off)
+
+# ---- 7b. KL after the optimizer step; kl_beta=0 == old loss ----
+kl1 = el.kl_stats(pid_per, flat_c, 32); info["kl_after_step"] = kl1
+print(f"KL after one step: {kl1!r} (init {kl0!r})")
+checks["kl_grows_after_step"] = kl1 > kl0 and kl1 > 0
+
+def old_pg_backward(prompt_ids, comps, adv, n_total, micro_bs):
+    """hermes/grpo.py pg_backward as of commit 36445a2 (run 1), verbatim apart from the return value (+ loss)."""
+    el.model.train()
+    idx = [i for i in range(len(comps)) if adv[i] != 0.0]
+    lp_sum, lp_n, loss_sum = 0.0, 0, 0.0
+    for s in range(0, len(idx), micro_bs):
+        b = idx[s:s + micro_bs]
+        P = len(prompt_ids[b[0]]); assert all(len(prompt_ids[i]) == P for i in b)
+        T = max(len(comps[i]) for i in b)
+        x = torch.full((len(b), P + T), el.tok.pad_token_id, dtype=torch.long)
+        m = torch.zeros((len(b), T))
+        for r, i in enumerate(b):
+            x[r, :P] = torch.tensor(prompt_ids[i]); x[r, P:P + len(comps[i])] = torch.tensor(comps[i])
+            m[r, :len(comps[i])] = 1
+        x, m = x.to(el.device), m.to(el.device)
+        a_ = torch.tensor([adv[i] for i in b], device=el.device)
+        logits = el.model(input_ids=x, use_cache=False, logits_to_keep=T + 1).logits[:, :T].float()
+        if el.new_ids:
+            logits[:, :, el.new_ids] = float("-inf")
+        logp = torch.log_softmax(logits, -1).gather(-1, x[:, P:P + T, None]).squeeze(-1)
+        seq = (logp * m).sum(1) / m.sum(1)
+        loss = -(a_ * seq).sum() / n_total
+        loss.backward(); loss_sum += float(loss)
+        lp_sum += float((logp * m).sum()); lp_n += int(m.sum())
+        del logits, logp, loss
+    return len(idx), lp_sum / lp_n, loss_sum
+
+tparams = [p for _, p in el.trainable]
+def grads_of(fn):
+    opt.zero_grad(set_to_none=True); out = fn(); torch.cuda.synchronize()
+    g = [p.grad.detach().clone() if p.grad is not None else torch.zeros_like(p) for p in tparams]
+    opt.zero_grad(set_to_none=True)
+    return out, g
+def maxdiff(g1, g2):
+    return max(float((u - v).abs().max()) for u, v in zip(g1, g2))
+def reldiff(g1, g2):   # ||g1 - g2|| / ||g1|| over all trainable params
+    return float(torch.sqrt(sum(((u - v).float() ** 2).sum() for u, v in zip(g1, g2)))
+                 / torch.sqrt(sum((u.float() ** 2).sum() for u in g1)))
+# The backward is NOT bitwise reproducible run to run on this stack (measured 2026-11-18: two runs of the old code differ
+# by ~0.1% relative grad norm). So: forward quantities (loss, trained set, mean logp) must match exactly; grads must be
+# bitwise equal if the old code is itself bitwise reproducible, else within 2x the old-vs-old spread (3 old, 2 new runs).
+olds = [grads_of(lambda: old_pg_backward(pid_per, flat_c, adv, 256, 32)) for _ in range(3)]
+news = [grads_of(lambda: el.pg_backward(pid_per, flat_c, adv, 256, 32, kl_beta=0.0)) for _ in range(2)]
+o_kl, g_kl = grads_of(lambda: el.pg_backward(pid_per, flat_c, adv, 256, 32, kl_beta=0.04))
+(o_old1, g_old1), (o_new, g_new) = olds[0], news[0]
+oo = [reldiff(olds[i][1], olds[j][1]) for i, j in ((0, 1), (0, 2), (1, 2))]
+on = [reldiff(go, gn) for _, go in olds for _, gn in news]
+old_bitwise = all(all(torch.equal(u, v) for u, v in zip(olds[0][1], g)) for _, g in olds[1:])
+new_bitwise = all(all(torch.equal(u, v) for u, v in zip(olds[0][1], g)) for _, g in news)
+info["kl0_vs_old"] = dict(old_loss=[o[2] for o, _ in olds], new_loss=[o[2]["loss"] for o, _ in news], old_n=o_old1[0], new_n=o_new[0],
+                          old_mean_logp=o_old1[1], new_mean_logp=o_new[1], old_bitwise_reproducible=old_bitwise,
+                          old_vs_old_rel=oo, old_vs_new_rel=on, old_vs_new_bitwise=new_bitwise,
+                          old_vs_old_maxabs=maxdiff(olds[0][1], olds[1][1]), old_vs_new_maxabs=maxdiff(g_old1, g_new),
+                          new_mean_kl_beta0=o_new[2]["mean_kl"], beta_004=dict(n=o_kl[0], **o_kl[2]),
+                          beta_004_vs_0_rel=reldiff(g_new, g_kl), beta_004_vs_0_grad_maxdiff=maxdiff(g_kl, g_new))
+print("kl_beta=0 vs old pg_backward:", info["kl0_vs_old"])
+checks["kl_beta0_same_trained_set_and_logp"] = all(o[0] == o_old1[0] and o[1] == o_old1[1] for o, _ in news)
+checks["kl_beta0_loss_equals_old_exactly"] = all(o[2]["loss"] == o_old1[2] for o, _ in news) and len(set(o[2] for o, _ in olds)) == 1
+checks["kl_beta0_grads_equal_old"] = new_bitwise if old_bitwise else max(on) <= 2 * max(oo)
+checks["kl_beta0_logged_kl_matches_kl_stats"] = abs(o_new[2]["mean_kl"] - kl1) <= 1e-6 + 0.05 * abs(kl1)
+checks["kl_beta_positive_changes_grads"] = info["kl0_vs_old"]["beta_004_vs_0_rel"] > 2 * max(oo)
+torch.cuda.reset_peak_memory_stats(); t0 = time.time()
+opt.zero_grad(set_to_none=True); el.pg_backward(pid_per, flat_c, adv, 256, 32, kl_beta=0.04); torch.cuda.synchronize()
+info["pg_backward_kl0.04_mb32"] = dict(peak_gb=torch.cuda.max_memory_allocated() / 1e9, s=time.time() - t0)
+opt.zero_grad(set_to_none=True)
+print("pg_backward kl_beta 0.04, micro_bs 32:", info["pg_backward_kl0.04_mb32"])
 
 # ---- 6. merge path (added 2026-11-16, UNTESTED, run on GPU) ----
 # Runs after the real optimizer step above, so LoRA B != 0 and the neuron-token deltas != 0 (a non-trivial merge).
@@ -191,7 +282,7 @@ checks["oom_fallback_first_call"] = calls1 == [8, 4, 4] and len(out1[0]) == 8
 checks["oom_fallback_remembered"] = calls2 == [4, 4] and el.gen_cap.get("lora") == 4 and len(out2[0]) == 8
 
 # reference-score helper used by grpo_phase.py
-rs = el.reference_scores([dict(neuron=(L, N), tokens=ids[0].tolist(), expected=3.046875)])
+rs = el.reference_scores([dict(neuron=(L, N), tokens=ids[0].tolist(), expected=EXPECTED)])
 checks["reference_scores_helper_exact"] = rs["ok"]
 info["reference_scores"] = rs
 

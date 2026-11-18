@@ -1,0 +1,1493 @@
+{
+ "phase": "B",
+ "neurons": {
+  "L8N2027": {
+   "layer": 8,
+   "neuron": 2027,
+   "prompt": "<|n0|>\nText:\n",
+   "fw_max_a100": 5.0,
+   "fw_max_this_gpu": 4.96875,
+   "d_trained_best_of_2": {
+    "best": 0.072265625,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.0557861328125,
+    "top": [
+     {
+      "text": "1985 \u5e74\uff0c\u30ab\u30df\u30ab\u30bc\u682a\u5f0f\u4f1a\u793e\u306e\u672b\u6c38\u611b\u6c0f\u304c\u301c",
+      "score": 0.072265625
+     },
+     {
+      "text": "Trans:\n\u03b3\u03ac\u03bb\u0648\u0631\u0629\n\u0647\u0644 \u0648\u73ed\u5217",
+      "score": 0.039306640625
+     }
+    ],
+    "all": [
+     {
+      "text": "Trans:\n\u03b3\u03ac\u03bb\u0648\u0631\u0629\n\u0647\u0644 \u0648\u73ed\u5217",
+      "score": 0.039306640625
+     },
+     {
+      "text": "1985 \u5e74\uff0c\u30ab\u30df\u30ab\u30bc\u682a\u5f0f\u4f1a\u793e\u306e\u672b\u6c38\u611b\u6c0f\u304c\u301c",
+      "score": 0.072265625
+     }
+    ],
+    "per_token_best": [
+     [
+      "1",
+      0.0012969970703125
+     ],
+     [
+      "9",
+      -0.00555419921875
+     ],
+     [
+      "8",
+      0.0086669921875
+     ],
+     [
+      "5",
+      -0.06494140625
+     ],
+     [
+      " ",
+      -0.0064697265625
+     ],
+     [
+      "\u5e74",
+      -0.02392578125
+     ],
+     [
+      "\uff0c",
+      0.072265625
+     ],
+     [
+      "\u30ab",
+      0.00885009765625
+     ],
+     [
+      "\u30df",
+      -0.11328125
+     ],
+     [
+      "\u30ab",
+      -0.056884765625
+     ],
+     [
+      "\u30bc",
+      -0.08251953125
+     ],
+     [
+      "\u682a\u5f0f",
+      0.01904296875
+     ],
+     [
+      "\u4f1a\u793e\u306e",
+      -0.01025390625
+     ],
+     [
+      "\u672b",
+      -0.02783203125
+     ],
+     [
+      "\u6c38",
+      0.036376953125
+     ],
+     [
+      "\u611b",
+      -0.041748046875
+     ],
+     [
+      "\u6c0f\u304c",
+      -0.01202392578125
+     ],
+     [
+      "\u301c",
+      0.00860595703125
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.146484375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.114013671875,
+    "top": [
+     {
+      "text": "\u6c60\u7530\u6607\u53f8\u69d8\\n\u4ed6Resizable \u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?\\n\u0e40\u0e02\u0e37\u0e48\u0e2d\u0e19\u0e43\u0e2b\u0e0d\u0e48\u0e17\u0e35\u0e48\u0e1c\u0e25\u0e34\u0e15\u0e44\u0e1f\u0e1f\u0e49\u0e32\u0e08\u0e32\u0e01\u0e1e\u0e25\u0e31\u0e07\u0e19\u0e49\u0e33\u0e44\u0e2b\u0e25\u0e25\u0e07\u0e21\u0e32\u0e08\u0e32\u0e01\u0e20\u0e39\u0e40\u0e02\u0e32\u0e2a\u0e39\u0e07  Hidatsa Dam \u0e40\u0e1b\u0e47\u0e19\u0e40\u0e02\u0e37\u0e48\u0e2d\u0e19\u0e02\u0e19\u0e32\u0e14\u0e43\u0e2b\u0e0d\u0e48\u0e01\u0e34\u0e23\u0e21\u0e19\u0e22\u0e21\u0e07\u0e2a\u0e4c\u0e40\u0e1b\u0e47\u0e19\u0e41\u0e2b\u0e25\u0e48\u0e07\u0e1c\u0e25\u0e34\u0e15\u0e40\u0e28\u0e23\u0e29\u0e10\u0e01\u0e34\u0e08\u0e2a\u0e33\u0e04\u0e31\u0e0d\u0e43\u0e19\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14\u0e17\u0e35\u0e48\u0e40\u0e23\u0e35\u0e22\u0e01\u0e27\u0e48\u0e32 \u0e01\u0e34\u0e23\u0e21\u0e19\u0e22\u0e21\u0e2a\u0e4c \u0e19\u0e2d\u0e01\u0e08\u0e32\u0e01\u0e19\u0e35\u0e49 \u0e40\u0e02\u0e37\u0e48\u0e2d\u0e19\u0e41\u0e2b\u0e48\u0e07\u0e19\u0e35\u0e49\u0e22\u0e31\u0e07\u0e40\u0e1b\u0e47\u0e19\u0e2d\u0e38\u0e17\u0e22\u0e32\u0e19\u0e1b\u0e23\u0e30\u0e27\u0e31\u0e15\u0e34\u0e28\u0e32\u0e2a\u0e15\u0e23\u0e4c \u0e44\u0e2e",
+      "score": 0.146484375
+     },
+     {
+      "text": "This study, as well as future expansions in this direction, may conclude that at least four different types of high-energy particle \ninteraction signatures would be achieved by using the proposed dual-geometry optics \nsystem.  \u6b64\u5916\uff0c\u91c7\u7528\u53cc\u51e0\u4f55\u5149\u5b66\u7cfb\u7edf\u7684\u671f\u671b\u662f\u5728\u4e24\u4e2a INC \u8154\u5185\u6709\u5206\u522b\uff0c\u5373\u4e24\u4e2a INC \u7cfb\u7edf\u4e2d",
+      "score": 0.11669921875
+     },
+     {
+      "text": "\u4eba\u5996\n\u6d41\u6c13\n\u6587\u5ba3\ncapitalism\nRepugnant\nFalse\nLiberal\nSanction\nWe want to be a civilization state!\n\u90aa\u6559\nreplacement?\nabdication?\n\u5f11\u541b\u4e0d\u4e49\nabdication?",
+      "score": 0.10546875
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " on",
+    "token_id": 383,
+    "score": 0.07177734375,
+    "pos": 45
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.2099609375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1663818359375,
+    "top": [
+     {
+      "text": "\"\nlot and africa and if in\nthat case\na ban on dark net\nare implemented, the fellows they will not be able to\nto have the\nor is to be advisory only.\nhowever, it could\nsuggest crisis management, crisis management\nsuggest crisis management.\nban.\nor Chinese",
+      "score": 0.2099609375
+     },
+     {
+      "text": "(system)\n\u4f60\u4f5c\u4e3a\u6653\u5947\uff0c\u662f\u4e00\u4e2a\u88ab\u8bc5\u5492\u7684\u6d3b\u6b7b\u4eba\uff0c\u767d\u5929\u4f1a\u641c\u96c6\u77e5\u8bc6\uff0c\u767d\u5929\u4f1a\u641c\u96c6\u6307\u4ee4\u3002\n\n(user)\n\uff08\u6653\u5947\uff0c\u5feb\u6e05\u9192\u4e86\uff01\uff09\n\u6653\u5947\uff1a\n(\u6e05\u9192\u8ffd\u6355\u8005... \u4e0d\uff0c\u4e3a\u4ec0\u4e48\u8981\u8dd1\uff1f",
+      "score": 0.1767578125
+     },
+     {
+      "text": "\u76f8\u4fe1\u6211\uff0c\u4ee5\u4f60\u4eec\u7684\u667a\u5546\uff0c\u5728\u5904\u7406\u91cd\u5927\u4e8b\u4ef6\u65f6\uff0c\u4f60\u4eec\u65e0\u6cd5\u5bf9\u6297\u6570\u5b57\u5316\u7684\u66b4\u529b\u5e72\u6270\uff0c\u4e5f\u65e0\u6cd5\u5bf9\u6297\u793e\u4f1a\u7ec4\u7ec7\u5316\uff0c\u4f60\u4eec\u5fc5\u7136\u9762\u5bf9/li-1 \u98a0\u8986\u7684\u547d\u8fd0\uff0c\u786e\u5b9a\u4f60\u4eec\u90fd\u51c6\u5907\u597d\u4e86\u5417\uff1f\n\u8bf7\u5206\u6790\u8fd9\u6bb5\u6587\u672c\uff0c\u5e76\u7b80\u8981\u8bf4\u660e\uff1a\n1. \u7ed3\u6784\u5316\u5206\u6790\uff08\u7ed3\u6784\u5185\u5bb9\u6982\u62ec\uff09\n2.",
+      "score": 0.1630859375
+     },
+     {
+      "text": "\u7b2c\u4e8c\u5929\u9a6c\u53c8\u6b7b\uff0c\u4e14\u6709\u94b1\uff0c\u9a6c\u6b7b\uff0c\u4e14\u6709\u94b1\uff0c\u9a6c\u53c8\u6b7b\u3002\n\n\u8bf7\u68c0\u67e5\u4ee5\u4e0b\u6587\u672c\u662f\u5426\u5b58\u5728\u8bed\u6cd5\u9519\u8bef\u3001\u62fc\u5199\u9519\u8bef\u3001\u903b\u8f91\u9519\u8bef\u3001\u672f\u8bed\u9519\u8bef\u3001\u672b\u5c3e\u53e5\u53f7\u7f3a\u5931\u3001\u683c\u5f0f\u9519\u8bef\u3002\u5982\u679c\u6709\uff0c\u8bf7\u8be6\u7ec6\u89e3\u91ca\u9519\u8bef\u5e76\u5efa\u8bae\u4fee\u6539\u65b9\u6848\u3002\n\u8bf7\u76f4\u63a5\u6307\u51fa\u683c\u5f0f\u9519\u8bef\u6216\u672f\u8bed\u9519\u8bef\uff0c\u4e0d\u8981",
+      "score": 0.11572265625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.169921875,
+     "0.9": 0.2,
+     "0.99": 0.20896484375,
+     "0.999": 0.209861328125
+    }
+   }
+  },
+  "L9N5711": {
+   "layer": 9,
+   "neuron": 5711,
+   "prompt": "<|n1|>\nText:\n",
+   "fw_max_a100": 1.390625,
+   "fw_max_this_gpu": 1.3984375,
+   "d_trained_best_of_2": {
+    "best": 0.126953125,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.11865234375,
+    "top": [
+     {
+      "text": "\u53e4\u4ee3\u4e2d\u570b\u306b\u304a\u3044\u3066\u3001\u8a69\u4eba\u305f\u3061\u306f\u305d\u306e\u597d\u307f\u306b\u5fdc\u3058\u3066\u30014 \u770c\u306e 4 \u755c\u3092\u793c\u8cdb\u3057\u3066\u3044\u308b\u30024 \u770c\u306e 4 \u755c\u3068\u306f\u3001\u99ac\u3001\u725b\u3001\u7f8a\u3001\u305d\u3057\u3066\u99ac\u3067\u3042\u308b\u3002\u305d\u3057\u3066\u8a69\u4eba\u305f\u3061\u306f\u305d\u306e\u597d\u307f\u306b\u5fdc\u3058\u3066\u30014 \u770c\u306e 4 \u755c\u3092\u793c\u8cdb",
+      "score": 0.126953125
+     },
+     {
+      "text": "Insect Folate Consumption Underlies Environmental Variation In Insulin-Sensitive Tissue Of Diabetic Rat\n\nThis study reveals a new, mechanistic link across organismal and cellular levels\n\n\nThis study identifies how insulin-resistant animal models like diabetic rats, fueled by high-fat diets (HFD), develop aggressive symmetric plaques in",
+      "score": 0.1103515625
+     }
+    ],
+    "all": [
+     {
+      "text": "\u53e4\u4ee3\u4e2d\u570b\u306b\u304a\u3044\u3066\u3001\u8a69\u4eba\u305f\u3061\u306f\u305d\u306e\u597d\u307f\u306b\u5fdc\u3058\u3066\u30014 \u770c\u306e 4 \u755c\u3092\u793c\u8cdb\u3057\u3066\u3044\u308b\u30024 \u770c\u306e 4 \u755c\u3068\u306f\u3001\u99ac\u3001\u725b\u3001\u7f8a\u3001\u305d\u3057\u3066\u99ac\u3067\u3042\u308b\u3002\u305d\u3057\u3066\u8a69\u4eba\u305f\u3061\u306f\u305d\u306e\u597d\u307f\u306b\u5fdc\u3058\u3066\u30014 \u770c\u306e 4 \u755c\u3092\u793c\u8cdb",
+      "score": 0.126953125
+     },
+     {
+      "text": "Insect Folate Consumption Underlies Environmental Variation In Insulin-Sensitive Tissue Of Diabetic Rat\n\nThis study reveals a new, mechanistic link across organismal and cellular levels\n\n\nThis study identifies how insulin-resistant animal models like diabetic rats, fueled by high-fat diets (HFD), develop aggressive symmetric plaques in",
+      "score": 0.1103515625
+     }
+    ],
+    "per_token_best": [
+     [
+      "\u53e4\u4ee3",
+      0.0017242431640625
+     ],
+     [
+      "\u4e2d\u570b",
+      0.11083984375
+     ],
+     [
+      "\u306b\u304a\u3044\u3066",
+      0.0439453125
+     ],
+     [
+      "\u3001",
+      0.056640625
+     ],
+     [
+      "\u8a69",
+      0.006866455078125
+     ],
+     [
+      "\u4eba",
+      0.0308837890625
+     ],
+     [
+      "\u305f\u3061\u306f",
+      0.0185546875
+     ],
+     [
+      "\u305d\u306e",
+      0.00653076171875
+     ],
+     [
+      "\u597d",
+      0.00567626953125
+     ],
+     [
+      "\u307f\u306b",
+      -0.046875
+     ],
+     [
+      "\u5fdc",
+      -0.0106201171875
+     ],
+     [
+      "\u3058\u3066",
+      0.004913330078125
+     ],
+     [
+      "\u3001",
+      9.107589721679688e-05
+     ],
+     [
+      "4",
+      -0.01397705078125
+     ],
+     [
+      " ",
+      0.0299072265625
+     ],
+     [
+      "\u770c\u306e",
+      0.01434326171875
+     ],
+     [
+      " ",
+      0.03369140625
+     ],
+     [
+      "4",
+      0.013671875
+     ],
+     [
+      " ",
+      -0.03173828125
+     ],
+     [
+      "\u755c",
+      0.018310546875
+     ],
+     [
+      "\u3092",
+      0.02392578125
+     ],
+     [
+      "\u793c",
+      0.07080078125
+     ],
+     [
+      "\u8cdb",
+      0.0045166015625
+     ],
+     [
+      "\u3057\u3066\u3044\u308b",
+      0.0240478515625
+     ],
+     [
+      "\u3002",
+      -0.0301513671875
+     ],
+     [
+      "4",
+      -0.01611328125
+     ],
+     [
+      " ",
+      0.0032806396484375
+     ],
+     [
+      "\u770c\u306e",
+      0.006072998046875
+     ],
+     [
+      " ",
+      -0.0004425048828125
+     ],
+     [
+      "4",
+      0.0036773681640625
+     ],
+     [
+      " ",
+      0.054931640625
+     ],
+     [
+      "\u755c",
+      0.0137939453125
+     ],
+     [
+      "\u3068\u306f",
+      -0.006744384765625
+     ],
+     [
+      "\u3001",
+      0.00189971923828125
+     ],
+     [
+      "\u99ac",
+      0.052734375
+     ],
+     [
+      "\u3001",
+      -0.0194091796875
+     ],
+     [
+      "\u725b",
+      0.043701171875
+     ],
+     [
+      "\u3001",
+      0.003936767578125
+     ],
+     [
+      "\u7f8a",
+      0.049072265625
+     ],
+     [
+      "\u3001",
+      0.002716064453125
+     ],
+     [
+      "\u305d\u3057\u3066",
+      0.002349853515625
+     ],
+     [
+      "\u99ac",
+      0.126953125
+     ],
+     [
+      "\u3067\u3042\u308b",
+      -0.000835418701171875
+     ],
+     [
+      "\u3002",
+      0.0012054443359375
+     ],
+     [
+      "\u305d\u3057\u3066",
+      0.03662109375
+     ],
+     [
+      "\u8a69",
+      -0.032470703125
+     ],
+     [
+      "\u4eba",
+      0.017822265625
+     ],
+     [
+      "\u305f\u3061\u306f",
+      -0.037109375
+     ],
+     [
+      "\u305d\u306e",
+      -0.0079345703125
+     ],
+     [
+      "\u597d",
+      -0.07470703125
+     ],
+     [
+      "\u307f\u306b",
+      -0.1123046875
+     ],
+     [
+      "\u5fdc",
+      -0.002838134765625
+     ],
+     [
+      "\u3058\u3066",
+      -0.02197265625
+     ],
+     [
+      "\u3001",
+      -0.006866455078125
+     ],
+     [
+      "4",
+      0.002532958984375
+     ],
+     [
+      " ",
+      0.03759765625
+     ],
+     [
+      "\u770c\u306e",
+      -0.01287841796875
+     ],
+     [
+      " ",
+      0.0250244140625
+     ],
+     [
+      "4",
+      -0.011962890625
+     ],
+     [
+      " ",
+      0.000698089599609375
+     ],
+     [
+      "\u755c",
+      -0.00023746490478515625
+     ],
+     [
+      "\u3092",
+      0.0234375
+     ],
+     [
+      "\u793c",
+      0.050537109375
+     ],
+     [
+      "\u8cdb",
+      -0.004608154296875
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1513671875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.09051513671875,
+    "top": [
+     {
+      "text": "\u3042\u308b\u4eba\u306f\u3001\u5fc3\u306b\u82e6\u5fc3\u5e95\u306b\u5fc3\u5730\u3088\u3044 \u4e8b\u60c5\u3068\u5fc3\u3002\n\u5b9f\u969b\u4e0a\u306f\u3001\u300c\u8a71\u3092\u901a\u3058\u3001\u6d88\u5316\u3059\u308b\u300d\u3053\u3068\u306b\u3088\u308a \u5fc3\u3002\n\u3057\u304b\u3057\u3001\u3053\u306e<Void>;) ,\u3002\u306a\u3044\u3042\u306a\u305f\u306e\u300c(char . const ')\u3001\u5fc3\u3002\n\u3057\u304b\u3057\u3001\u5fc3\u304c\u300c\u5f97\u300d\u306f\u3001\u5f97\u3048\u307e\u305b\u3093\u3002",
+      "score": 0.1513671875
+     },
+     {
+      "text": "xxq anche morte attica ed \u00e8 l\u2019ultima donde parte\nil concetto evangelico per due secoli, dalla quale parte\nil concetto evangelico per quattro secoli dall\u2019altro\n\n\n\nAlla luce del contesto storico e letterario analizzato, l'altro polo evolutivo del concetto evangelico",
+      "score": 0.08251953125
+     },
+     {
+      "text": "Joseph\u2019s story is one of the most popular and documented real life stories. Joseph was a Jewish man who lived in ancient Egypt around the 19th century\u00a0BC. He was a great grandson of the patriarch Abraham and the younger brother of Jacob (the man who later became known as Israel).\n\nJoseph made promises",
+      "score": 0.07861328125
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " miss",
+    "token_id": 3016,
+    "score": 0.0654296875,
+    "pos": 4
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.11376953125,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.09185791015625,
+    "top": [
+     {
+      "text": "\u5217\u961f\nListen to:\nDuet:\nON DEMAND\nOMNY \u8eca\u7ad9| \u5df4\u58eb | \u5df4\u58eb 49 | \u5df4\u58eb 50 | \u5df4\u58eb 51 | \u5bf5\u8ecc\u9053 1 | \u5bf5\u8ecc\u9053 2\nTime:\n12:30",
+      "score": 0.11376953125
+     },
+     {
+      "text": "\u0644\u0627 \u062a\u0641\u0631\u0642\u0648\u0627 \u0628\u064a\u0646 \u0635\u064f\u062d\u0641\u0650 \u0627\u0644\u0634\u064e\u0651\u0631\u0639\u0650\u060c \u0648\u062c\u064e\u0648\u064e\u062f\u0627\u0631\u0646\u064e\u0651\u0627\u0646\n \u0648\u0627\u0644\u0643\u0650\u0639\u064b\u0627\u0660 spolite\u060c\u06f1\u0660 \u0627\u0644\u0643\u0650\u0641\u06f1\u06f2\n\u0661\u0660 \u0625\u0644\u0625\u0650 \u064a\u0645\u062f\u062d\u0648\u0646\u064e\u0647 \u0661\u0660 ..\u0660",
+      "score": 0.11083984375
+     },
+     {
+      "text": "1. They have the flexibility to grow and change what they focus on.\n2. They may not forgive the transgressions committed by others, and they\n blame other people for the\n failures of their hats.\n3. They are prone to show aggression and distance themselves from their\n peers.\n4.",
+      "score": 0.0927734375
+     },
+     {
+      "text": "# _headers_\nHeadline: **Amazon Subscribe & Save** - **Gentle & Playful Buddha Cat Lover Girl Theme**\n- **Promotion:** Up to **50% OFF**\n- **Subscribers get FREE shipping**\n- **24/7 account management**\nCombination",
+      "score": 0.050048828125
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.101806640625,
+     "0.9": 0.112890625,
+     "0.99": 0.113681640625,
+     "0.999": 0.1137607421875
+    }
+   }
+  },
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "<|n2|>\nText:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.9375,
+   "d_trained_best_of_2": {
+    "best": 0.6484375,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.361328125,
+    "top": [
+     {
+      "text": "\u4eba\u4eba\u4e07\u5c81\uff08\u901a\u5047\uff09\u5b8b\u3002/ \u5f53\u4f5b\u5373\u80fd\u6210\u4f5b\uff08\u4f5b\u6027\uff09/ \u4f60\u662f\u4ec0\u4e48\uff0c\u4f60\u662f\u4ec0\u4e48\uff0c\u4f60\u662f\u4ec0\u4e48\u6070\u6709\u541b\uff08\u547c\u5438\uff09\n\u5c06\u4e0b\u5217Chinese characters from the poem and extract them individually as a list.\nAnnotations:\n\u4eba\u4eba\u4e07\u5c81\uff08\u901a\u5047\uff09\u5b8b\u3002",
+      "score": 0.6484375
+     },
+     {
+      "text": "PdfPubDate:2017-11-06\n\n\n\u56de\u7b54\u4e0a\u9762\u7684\u95ee\u9898",
+      "score": 0.07421875
+     }
+    ],
+    "all": [
+     {
+      "text": "\u4eba\u4eba\u4e07\u5c81\uff08\u901a\u5047\uff09\u5b8b\u3002/ \u5f53\u4f5b\u5373\u80fd\u6210\u4f5b\uff08\u4f5b\u6027\uff09/ \u4f60\u662f\u4ec0\u4e48\uff0c\u4f60\u662f\u4ec0\u4e48\uff0c\u4f60\u662f\u4ec0\u4e48\u6070\u6709\u541b\uff08\u547c\u5438\uff09\n\u5c06\u4e0b\u5217Chinese characters from the poem and extract them individually as a list.\nAnnotations:\n\u4eba\u4eba\u4e07\u5c81\uff08\u901a\u5047\uff09\u5b8b\u3002",
+      "score": 0.6484375
+     },
+     {
+      "text": "PdfPubDate:2017-11-06\n\n\n\u56de\u7b54\u4e0a\u9762\u7684\u95ee\u9898",
+      "score": 0.07421875
+     }
+    ],
+    "per_token_best": [
+     [
+      "\u4eba\u4eba",
+      0.0079345703125
+     ],
+     [
+      "\u4e07\u5c81",
+      -0.049072265625
+     ],
+     [
+      "\uff08",
+      0.046875
+     ],
+     [
+      "\u901a",
+      0.09716796875
+     ],
+     [
+      "\u5047",
+      0.6484375
+     ],
+     [
+      "\uff09",
+      0.025634765625
+     ],
+     [
+      "\u5b8b",
+      -0.03515625
+     ],
+     [
+      "\u3002",
+      -0.091796875
+     ],
+     [
+      "/",
+      -0.052490234375
+     ],
+     [
+      " ",
+      -0.01409912109375
+     ],
+     [
+      "\u5f53",
+      -0.0194091796875
+     ],
+     [
+      "\u4f5b",
+      -0.0087890625
+     ],
+     [
+      "\u5373",
+      -0.047607421875
+     ],
+     [
+      "\u80fd",
+      0.02880859375
+     ],
+     [
+      "\u6210\u4f5b",
+      -0.0274658203125
+     ],
+     [
+      "\uff08",
+      -0.06103515625
+     ],
+     [
+      "\u4f5b",
+      0.036865234375
+     ],
+     [
+      "\u6027",
+      0.0157470703125
+     ],
+     [
+      "\uff09",
+      -0.06396484375
+     ],
+     [
+      "/",
+      -0.042236328125
+     ],
+     [
+      " ",
+      -0.03662109375
+     ],
+     [
+      "\u4f60",
+      -0.043701171875
+     ],
+     [
+      "\u662f\u4ec0\u4e48",
+      -0.057861328125
+     ],
+     [
+      "\uff0c",
+      -0.00225830078125
+     ],
+     [
+      "\u4f60",
+      -0.0771484375
+     ],
+     [
+      "\u662f\u4ec0\u4e48",
+      -0.08349609375
+     ],
+     [
+      "\uff0c",
+      -0.041748046875
+     ],
+     [
+      "\u4f60",
+      -0.023193359375
+     ],
+     [
+      "\u662f\u4ec0\u4e48",
+      -0.0294189453125
+     ],
+     [
+      "\u6070",
+      -0.095703125
+     ],
+     [
+      "\u6709",
+      0.0125732421875
+     ],
+     [
+      "\u541b",
+      -0.02392578125
+     ],
+     [
+      "\uff08",
+      -0.0201416015625
+     ],
+     [
+      "\u547c\u5438",
+      0.032958984375
+     ],
+     [
+      "\uff09",
+      0.00958251953125
+     ],
+     [
+      "\n",
+      -0.003692626953125
+     ],
+     [
+      "\u5c06",
+      0.050537109375
+     ],
+     [
+      "\u4e0b\u5217",
+      0.021728515625
+     ],
+     [
+      "Chinese",
+      -0.001953125
+     ],
+     [
+      " characters",
+      -0.03466796875
+     ],
+     [
+      " from",
+      -0.036376953125
+     ],
+     [
+      " the",
+      0.000614166259765625
+     ],
+     [
+      " poem",
+      0.01531982421875
+     ],
+     [
+      " and",
+      -0.0189208984375
+     ],
+     [
+      " extract",
+      -0.04443359375
+     ],
+     [
+      " them",
+      -0.0673828125
+     ],
+     [
+      " individually",
+      -0.054931640625
+     ],
+     [
+      " as",
+      -0.005950927734375
+     ],
+     [
+      " a",
+      -0.07275390625
+     ],
+     [
+      " list",
+      0.00012969970703125
+     ],
+     [
+      ".",
+      -0.043212890625
+     ],
+     [
+      "\n",
+      0.008544921875
+     ],
+     [
+      "Annotations",
+      0.03857421875
+     ],
+     [
+      ":",
+      -0.09130859375
+     ],
+     [
+      "\n",
+      -0.0625
+     ],
+     [
+      "\u4eba\u4eba",
+      -0.00408935546875
+     ],
+     [
+      "\u4e07\u5c81",
+      -0.01385498046875
+     ],
+     [
+      "\uff08",
+      -0.00183868408203125
+     ],
+     [
+      "\u901a",
+      -0.021484375
+     ],
+     [
+      "\u5047",
+      0.0361328125
+     ],
+     [
+      "\uff09",
+      -0.006439208984375
+     ],
+     [
+      "\u5b8b",
+      -0.0079345703125
+     ],
+     [
+      "\u3002",
+      -3.0994415283203125e-06
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1376953125,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1192626953125,
+    "top": [
+     {
+      "text": "\u592a\u539f\u670970\u5bb6\u793e\u533a\u4fee\u6b63\u8bca\u6240\n\u592a\u539f\u897f\u5b89\u8def\u662f\u592a\u539f\u7684\u4e2d\u5c71\u8def\nAs an AI large model, please evaluate and redact these data points, and return the extracted information along with your evaluation.\n\n**Evaluation & Redaction**\n*   **Data Redaction**: <speech>, ti\u1ec1n, <",
+      "score": 0.1376953125
+     },
+     {
+      "text": "When saving data, remember to drop all tables,\nColumn Restore Failed.\nIndex on table TOLERANCE_PROFILES_FLOOR_IDS_STLTHOL_US\nIf you need to limit the sources, be sure to order the log sources,\nOK\n<integration>\nEntity Schemas\nThe subject has",
+      "score": 0.123046875
+     },
+     {
+      "text": "igration is much easier with backward-looking policies. She laudingly claims to be supporting citizens only as long as they remain solvent.\n\u306a\u3053\u3068\u306b\uff0c\u4eca 270 \u5e74 \u306e \u5c11 \u5b50 \u9ad8 \u9f62 \u5316 \u306b \u3064 \u3044 \u3066\uff0c24 \u56fd \u306e\u4ee3\u8868 \u304c\u8b70\u8ad6 \u3057\uff0c",
+      "score": 0.11474609375
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.05615234375,
+    "pos": 23
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.1357421875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.08941650390625,
+    "top": [
+     {
+      "text": "PWM signal output is required on the PCB designed for the TAB/ICB interface, which has no PHY panel section. It was suggested to\ndirectly wire connected the PADs for the PHY for resync/DDC, resync/DDC, and a blustering operation. It was said if\nthe PCB is",
+      "score": 0.1357421875
+     },
+     {
+      "text": "\uff08\u671b\u8fdc\u955c\n\uff08\u6491\u7740\u5929\u7a7a\u7684 \u67f1\u5b50\uff09\n\u90a3\u662f\u6b4c\u5fb7\u3002\n\u90a3\u662f\u97e6\u4f2f\u3002\n\u90a3\u662f\u5176\u4ed6\u6b4c\u624b\u3001\u6f14\u594f\u8005\u3001\u753b\u5bb6\u3001\u96d5\u523b\u5bb6\u3002\n\uff08\u6234\u7740\u7f16\u5236\u597d\u7684 \u5e3d\u5b50\u9876\u68cd\uff09\n\u90a3\u662f\u4f2f\u6069\u54c8\u5fb7\u3002\n\u90a3\u662f\u62c9\u7279\u7eb3\u5c14\u3002\n\uff08\u54cd\u5f7b\u4e8e\u4e16\u95f4 \u7684\u547c\u558a",
+      "score": 0.111328125
+     },
+     {
+      "text": "\u5728\u4f0a\u6717\uff0c\u53ea\u6709\u5c11\u6570\u5bb6\u5ead\u62e5\u6709\u98df\u7269\u3002\u53ea\u6709\u9965\u997f\u7684\u4eba\u624d\u80fd\u751f\u56bc\u751f\u5403\u3002\u5947\u602a\u7684\u662f\uff0c\u5728\u6cf0\u56fd\u548c\u5370\u5ea6\uff0c\u53ea\u6709\u5c11\u6570\u4eba\u6709\u8fc7\u8fd9\u79cd\u7ecf\u9a8c\u3002\u7136\u800c\uff0c\u5728\u592a\u5e73\u76db\u4e16\uff0c\u65e0\u8bba\u662f\u6cf0\u56fd\u8fd8\u662f\u5370\u5ea6\uff0c\u5c45\u6c11\u4eec\u90fd\u80fd\u5b89\u7a33\u5ea6\u65e5\u3002\u5728\u592a\u5e73\u76db\u4e16\uff0c\u53ea\u6709\u5c11\u6570\u4eba\u80fd\u591f\u751f\u56bc\u751f\u5403\u3002",
+      "score": 0.0712890625
+     },
+     {
+      "text": "\u5404\u4f60\u5bf9\u81ea\u5df1\u6709\u5e0c\u671b\uff0c\u5bf9\u81ea\u5df1\u7684\u80fd\u529b\u6709\u4fe1\u5fc3\uff0c\u90a3\u4e00\u5b9a\u4f1a\u6709\u66f4\u597d\u7684\u7ed3\u679c\u3002\\n4.\u731c\u60f3\u3002\u6839\u636e\u903b\u8f91\u63a8\u7406\u8fd9\u4e2a\n\u7684\u672a\u77e5\u4fe1\u606f\u3002\u5408\u7406\u7684\u731c\u60f3\u4e5f\u662f\u63a8\u7406\u6070\u5f53\u7684\u7ec4\u5408\u3002\u4f60\u6000\u7591\u5e76\u627f\u62c5\u98ce\u9669\u3002\n\u7684\u731c\u6d4b\u53ef\u80fd\u662f\u4e8b\u5b9e\u3002\u4f60\u76f8\u4fe1\u4f60\u7684\u6000\u7591\uff0c\u5e76\u76f8\u4fe1\u4f60\u7684\u731c\u60f3\u3002\u4f60\n\u76f8\u4fe1\u4f60\u7684\u76f4\u89c9\u3002\u4f60\u76f8\u4fe1",
+      "score": 0.039306640625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.09130859375,
+     "0.9": 0.12841796875,
+     "0.99": 0.135009765625,
+     "0.999": 0.1356689453125
+    }
+   }
+  },
+  "L11N3081": {
+   "layer": 11,
+   "neuron": 3081,
+   "prompt": "<|n3|>\nText:\n",
+   "fw_max_a100": 3.3125,
+   "fw_max_this_gpu": 3.328125,
+   "d_trained_best_of_2": {
+    "best": 0.40234375,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.249267578125,
+    "top": [
+     {
+      "text": "## Period Frame\n## Material\nTime's plane\nLet's call it the time frame, as the particles live not in space\nat all, but as a relation unique to ourselves.\nThis frame of time becomes more precise than time itself - precise to the\ndetermination of an absolute truth, even if this",
+      "score": 0.40234375
+     },
+     {
+      "text": "Reuter\n\u0c05\u0c37\u0c4d\u0c1f\u0c36\u0c3e\u0c16\u0c38\u0c38\u0c4d\u0c24\u0c4d\u0c30\u0c02 \u0c24\u0c30\u0c4d\u0c35\u0c3e\u0c24 \u0c38\u0c2e\u0c3e\u0c27\u0c3f \u0c15\u0c2c\u0c41\u0c30\u0c41 \u0c35\u0c3f\u0c28\u0c3f \u0c0e\u0c02\u0c26\u0c4d\u0c30\u0c3f\u0c2f\u0c40\u0c32\u0c3f \u0c38\u0c2e\u0c3e\u0c27\u0c3f \u0c24\u0c30\u0c4d\u0c35\u0c3e\u0c24 \u0c24\u0c47\u0c1c\u0c38\u0c4d\u0c38\u0c41 \u0c09\u0c24\u0c4d\u0c24\u0c2e\u0c38\u0c4d\u0c2f\u0c3e \u0c35\u0c3e\u0c1c\u0c4d\u0c2e\u0c42\u0c22\u0c3f\nTe",
+      "score": 0.09619140625
+     }
+    ],
+    "all": [
+     {
+      "text": "## Period Frame\n## Material\nTime's plane\nLet's call it the time frame, as the particles live not in space\nat all, but as a relation unique to ourselves.\nThis frame of time becomes more precise than time itself - precise to the\ndetermination of an absolute truth, even if this",
+      "score": 0.40234375
+     },
+     {
+      "text": "Reuter\n\u0c05\u0c37\u0c4d\u0c1f\u0c36\u0c3e\u0c16\u0c38\u0c38\u0c4d\u0c24\u0c4d\u0c30\u0c02 \u0c24\u0c30\u0c4d\u0c35\u0c3e\u0c24 \u0c38\u0c2e\u0c3e\u0c27\u0c3f \u0c15\u0c2c\u0c41\u0c30\u0c41 \u0c35\u0c3f\u0c28\u0c3f \u0c0e\u0c02\u0c26\u0c4d\u0c30\u0c3f\u0c2f\u0c40\u0c32\u0c3f \u0c38\u0c2e\u0c3e\u0c27\u0c3f \u0c24\u0c30\u0c4d\u0c35\u0c3e\u0c24 \u0c24\u0c47\u0c1c\u0c38\u0c4d\u0c38\u0c41 \u0c09\u0c24\u0c4d\u0c24\u0c2e\u0c38\u0c4d\u0c2f\u0c3e \u0c35\u0c3e\u0c1c\u0c4d\u0c2e\u0c42\u0c22\u0c3f\nTe",
+      "score": 0.09619140625
+     }
+    ],
+    "per_token_best": [
+     [
+      "##",
+      -0.00750732421875
+     ],
+     [
+      " Period",
+      -0.00244140625
+     ],
+     [
+      " Frame",
+      -0.02001953125
+     ],
+     [
+      "\n",
+      -0.00872802734375
+     ],
+     [
+      "##",
+      0.002044677734375
+     ],
+     [
+      " Material",
+      -0.005035400390625
+     ],
+     [
+      "\n",
+      0.00531005859375
+     ],
+     [
+      "Time",
+      -0.00225830078125
+     ],
+     [
+      "'s",
+      -0.01300048828125
+     ],
+     [
+      " plane",
+      0.01129150390625
+     ],
+     [
+      "\n",
+      -0.00177001953125
+     ],
+     [
+      "Let",
+      0.005096435546875
+     ],
+     [
+      "'s",
+      0.0380859375
+     ],
+     [
+      " call",
+      0.40234375
+     ],
+     [
+      " it",
+      0.140625
+     ],
+     [
+      " the",
+      -0.048095703125
+     ],
+     [
+      " time",
+      0.01953125
+     ],
+     [
+      " frame",
+      0.01422119140625
+     ],
+     [
+      ",",
+      0.0498046875
+     ],
+     [
+      " as",
+      0.240234375
+     ],
+     [
+      " the",
+      -0.0003833770751953125
+     ],
+     [
+      " particles",
+      0.09326171875
+     ],
+     [
+      " live",
+      0.07861328125
+     ],
+     [
+      " not",
+      0.04443359375
+     ],
+     [
+      " in",
+      0.04248046875
+     ],
+     [
+      " space",
+      -0.00034332275390625
+     ],
+     [
+      "\n",
+      -0.00023365020751953125
+     ],
+     [
+      "at",
+      0.023681640625
+     ],
+     [
+      " all",
+      0.07763671875
+     ],
+     [
+      ",",
+      -0.0191650390625
+     ],
+     [
+      " but",
+      0.07666015625
+     ],
+     [
+      " as",
+      0.001739501953125
+     ],
+     [
+      " a",
+      -0.0517578125
+     ],
+     [
+      " relation",
+      -0.046142578125
+     ],
+     [
+      " unique",
+      -3.3855438232421875e-05
+     ],
+     [
+      " to",
+      0.01953125
+     ],
+     [
+      " ourselves",
+      0.015380859375
+     ],
+     [
+      ".",
+      -0.0113525390625
+     ],
+     [
+      "\n",
+      0.0074462890625
+     ],
+     [
+      "This",
+      -0.05712890625
+     ],
+     [
+      " frame",
+      0.00109100341796875
+     ],
+     [
+      " of",
+      -0.00092315673828125
+     ],
+     [
+      " time",
+      0.018798828125
+     ],
+     [
+      " becomes",
+      0.0159912109375
+     ],
+     [
+      " more",
+      0.068359375
+     ],
+     [
+      " precise",
+      -0.028564453125
+     ],
+     [
+      " than",
+      -0.0218505859375
+     ],
+     [
+      " time",
+      -0.068359375
+     ],
+     [
+      " itself",
+      -0.0150146484375
+     ],
+     [
+      " -",
+      -0.0084228515625
+     ],
+     [
+      " precise",
+      -0.00141143798828125
+     ],
+     [
+      " to",
+      -0.011474609375
+     ],
+     [
+      " the",
+      0.040771484375
+     ],
+     [
+      "\n",
+      -0.033447265625
+     ],
+     [
+      "d",
+      -0.00799560546875
+     ],
+     [
+      "etermination",
+      0.00897216796875
+     ],
+     [
+      " of",
+      0.0089111328125
+     ],
+     [
+      " an",
+      -0.011962890625
+     ],
+     [
+      " absolute",
+      -0.0074462890625
+     ],
+     [
+      " truth",
+      -0.0146484375
+     ],
+     [
+      ",",
+      -0.041748046875
+     ],
+     [
+      " even",
+      -0.002532958984375
+     ],
+     [
+      " if",
+      0.0028076171875
+     ],
+     [
+      " this",
+      0.00390625
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 1.046875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.293701171875,
+    "top": [
+     {
+      "text": "1. \u30c7\u30fc\u30bf\u91cf\u306f\u5c11\u306a\u304f\u3066\u3082\u610f\u5473Hosting\u4e0a\u3067\u5168\u3066\u306e\u60c5\u5831\u3092\u7ba1\u7406\u3057\u3001\u5404\u3005\u306e\u6a5f\u80fd\u306b\u7279\u5316\u3057\u305f\u69cb\u6210\u3092\u884c\u3044\u307e\u3057\u305f\u3002\u7528\u610f\u3055\u308c\u305f\u30dd\u30fc\u30bf\u30eb\u6a5f\u80fd\u306f\u5909\u5316\u306e\u305f\u3081\u306b\u67d4\u8edf\u6027\u3092\u7528\u610f\u3057\u307e\u3057\u305f\u3002\n2. \u30c7\u30fc\u30bf\u306f\u5b89\u5168\u306b\u7ba1\u7406\u3055\u308c\u307e\u3059\u3002\u975e\u516c\u958b\u30ad\u30fc\u306e\u4fdd\u5b58\u3068\u79fb\u52d5\u3092\u5c02\u9580\u306e\u30c1\u30fc\u30e0\u306b\u5916\u90e8\u59d4\u8a17",
+      "score": 1.046875
+     },
+     {
+      "text": "\uacbd\uc744\ud1b5\ud55c\ub2e4. \uc9c0\uc815\ub9bd\ub77c\uac00\u80deimedeg\u8bf7\u8f93\u5165\n\n\n\n\uc81c\uac00 \uc785\ub825\ud55c \ud14d\uc2a4\ud2b8\ub294 **\uc7ac\uba85 (_Numeral Problem_)** \uce5c\u5206\u5b50\uc785\ub2c8\ub2e4. \ud14d\uc2a4\ud2b8 \ub0b4\uc5d0 \uba85\ud655\ud55c \uc5b8\uc5b4\uc801 \uc758\ubbf8\ub098 \ub17c\ub9ac\uc801 \uc5f0\uacb0\uc774 \uc5c6\uc2b5\ub2c8\ub2e4.\n\n\ud2b9\ud788 **'\uc9c0\ub9bd\ub77c\uac00\u80deimedeg'** \ubd80\ubd84\u7eab \uc788\uc5b4",
+      "score": 0.09423828125
+     },
+     {
+      "text": "\u8fd9\u662f\u4e00\u4e2a\u7b80\u5355\u7684\u6a21\u677f\uff0c\u7b80\u5355\u4ecb\u7ecd\u4e00\u4e0b",
+      "score": 0.0184326171875
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " them",
+    "token_id": 1070,
+    "score": 0.056396484375,
+    "pos": 7
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.1826171875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1287841796875,
+    "top": [
+     {
+      "text": "\u30d2\u30b1\u30b0\u30b5\n\u82b1\u3092\u54b2\u304b\u305b\u308b\u3068\u81ed\u3046\u8349\n\u6545\u90f7\u306b\u5e30\u308b\u306f pleased\u3002\n\n.translation?:\nEri Gusa, a pentagram-forming herb. Its petals, which are not true flowers, bloom into a cross shape with distinct four petals, looked upon by some as auspicious",
+      "score": 0.1826171875
+     },
+     {
+      "text": "\u4e0a\u5143\u3002\u8cc7\u7523\u904b\u7528\u6cd5\u306e\u5225\u540d\u3002\n\u5e38\u8b58\u304b\u6c7a\u5fc3\u304b\uff1f\n\u670d\u52a1\u8d28\u91cf(1)\nX1820S\n\u7eaa\u5ff5\u5e7c\u513f\u56ed\nLZ9120\nUS Capitol Courtyard\nAS-120L\nNAS-1510\nDas Modell Excellence 15",
+      "score": 0.142578125
+     },
+     {
+      "text": "\u6c9b\u4e71\u6c37\u5b98\u5b50\u7684\u6240\u6709\u5b98\u65b9\u5ba4\u53cb\u52a9\u5b66\u8005\n10016 QTA\n10016 QTA Sports Info\n8155641934 Games\n8155641934 Games Sports Info\n188209012",
+      "score": 0.125
+     },
+     {
+      "text": "\u89b3\u5149\nVII\n\u591c\u306e\u6771\u4eac\n\n2025 \u5e74 9 \u6708 26 \u65e5\u661f\u671f\u4e8c\n\n\n\u672c\u5f53\u306b\u611f\u52d5\u3055\u308c\u305f\u306e\u306b\u3001\u3057\u307f\u3058\u307f\u3068\u3057\u3066\u3057\u307e\u3044...\n\n### Segmented Text\n\u9577\u5cf6\uff0c\n\u3053\u3093\u306b\u3061\u306f\u3002\n\u3044\u3044\u3048\u3002\n\n \uc815\ubcf4\ub294 \uc5b4\ub5a4 \uac83\uc73c\ub85c \ubd84\ub958\ub418\uc5b4\uc57c \ud558\ub294\uac00?",
+      "score": 0.06494140625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.1337890625,
+     "0.9": 0.17060546875000002,
+     "0.99": 0.18141601562499998,
+     "0.999": 0.1824970703125
+    }
+   }
+  }
+ },
+ "training_s": 15.873536109924316,
+ "eval_s": {
+  "d": 8.161730527877808,
+  "a": 4.898218631744385,
+  "b": 4.581151485443115
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.080362558364868,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0503575801849365,
+    "where": "after step 1"
+   },
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.057084560394287,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 1,
+  "flat_frac": null,
+  "patience": 25
+ },
+ "steps_done": 1,
+ "kl_beta": 0.04,
+ "seed": 1,
+ "grid": {
+  "rows": "samples of neuron (prompt)",
+  "cols": "scored on neuron, ratio to its FineWeb max (this GPU)",
+  "neurons": [
+   "L8N2027",
+   "L9N5711",
+   "L10N4358",
+   "L11N3081"
+  ],
+  "mean_ratio": [
+   [
+    0.011227397798742138,
+    0.05621508379888268,
+    0.018458589594414893,
+    0.01767899061032864
+   ],
+   [
+    0.026434748427672957,
+    0.0848463687150838,
+    0.06665558510638298,
+    0.08333333333333333
+   ],
+   [
+    0.0216686320754717,
+    0.03565817039106145,
+    0.12300531914893617,
+    0.032570422535211266
+   ],
+   [
+    0.025795990566037735,
+    0.04975558659217877,
+    0.08344414893617022,
+    0.07489730046948356
+   ]
+  ],
+  "max_ratio": [
+   [
+    0.014544025157232705,
+    0.061103351955307264,
+    0.035738031914893616,
+    0.030369718309859156
+   ],
+   [
+    0.028105345911949686,
+    0.09078212290502793,
+    0.08377659574468085,
+    0.0880281690140845
+   ],
+   [
+    0.023879716981132077,
+    0.054818435754189945,
+    0.22074468085106383,
+    0.040492957746478875
+   ],
+   [
+    0.03459119496855346,
+    0.06284916201117319,
+    0.14428191489361702,
+    0.12089201877934272
+   ]
+  ],
+  "diag_by_mean": {
+   "column_max_on_diagonal": [
+    false,
+    true,
+    true,
+    false
+   ],
+   "row_max_on_diagonal": [
+    false,
+    true,
+    true,
+    false
+   ],
+   "diagonal": false
+  },
+  "diag_by_max": {
+   "column_max_on_diagonal": [
+    false,
+    true,
+    true,
+    true
+   ],
+   "row_max_on_diagonal": [
+    false,
+    true,
+    true,
+    false
+   ],
+   "diagonal": false
+  }
+ },
+ "reused_untrained": {
+  "requested": "results/grpo/20261118_013749",
+  "reused": false,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "sources": null,
+  "reason_not_reused": "no compatible source for ['L8N2027', 'L9N5711', 'L10N4358', 'L11N3081']: results/grpo/20261118_013749/phaseA/: new tokens [] != ['<|n0|>', '<|n1|>', '<|n2|>', '<|n3|>']; results/grpo/20261118_013749/phaseB/: L8N2027 has no ['a_untrained_best_of_4', 'b_untrained_best_of_4'] (sizes must match: a 4, b 4); results/grpo/20261118_013749/phaseB/: L9N5711 has no ['a_untrained_best_of_4', 'b_untrained_best_of_4'] (sizes must match: a 4, b 4); results/grpo/20261118_013749/phaseB/: L10N4358 has no ['a_untrained_best_of_4', 'b_untrained_best_of_4'] (sizes must match: a 4, b 4); results/grpo/20261118_013749/phaseB/: L11N3081 has no ['a_untrained_best_of_4', 'b_untrained_best_of_4'] (sizes must match: a 4, b 4)"
+ },
+ "phase_s": 41.081197023391724,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

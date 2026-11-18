@@ -1,0 +1,465 @@
+{
+ "phase": "S",
+ "neurons": {
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "Text:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.9375,
+   "d_trained_best_of_2": {
+    "best": 0.150390625,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.14599609375,
+    "top": [
+     {
+      "text": "The late 19th and early 20th century was a period of intense scientific change. A big change came when physicists discovered new properties of matter at the cellular level. They discovered that cells act as the basic building blocks of life and have their own internal mechanisms by which they can live and reproduce independently.",
+      "score": 0.150390625
+     },
+     {
+      "text": "'''\nYou, Bernadette Meeks, admit that you are the person who signed away your property rights to the State of Illinois, giving them the right to dispose freely of your biological material.\n'''\nThere is a situation in the ethical, legal, and medical context that could be described as an improvement or",
+      "score": 0.1416015625
+     }
+    ],
+    "all": [
+     {
+      "text": "'''\nYou, Bernadette Meeks, admit that you are the person who signed away your property rights to the State of Illinois, giving them the right to dispose freely of your biological material.\n'''\nThere is a situation in the ethical, legal, and medical context that could be described as an improvement or",
+      "score": 0.1416015625
+     },
+     {
+      "text": "The late 19th and early 20th century was a period of intense scientific change. A big change came when physicists discovered new properties of matter at the cellular level. They discovered that cells act as the basic building blocks of life and have their own internal mechanisms by which they can live and reproduce independently.",
+      "score": 0.150390625
+     }
+    ],
+    "per_token_best": [
+     [
+      "The",
+      0.0019989013671875
+     ],
+     [
+      " late",
+      -0.0250244140625
+     ],
+     [
+      " ",
+      -0.037841796875
+     ],
+     [
+      "1",
+      0.0084228515625
+     ],
+     [
+      "9",
+      0.033935546875
+     ],
+     [
+      "th",
+      0.0208740234375
+     ],
+     [
+      " and",
+      0.0091552734375
+     ],
+     [
+      " early",
+      -0.10302734375
+     ],
+     [
+      " ",
+      0.03515625
+     ],
+     [
+      "2",
+      0.022216796875
+     ],
+     [
+      "0",
+      0.09619140625
+     ],
+     [
+      "th",
+      0.032470703125
+     ],
+     [
+      " century",
+      0.054443359375
+     ],
+     [
+      " was",
+      -0.06005859375
+     ],
+     [
+      " a",
+      -0.0703125
+     ],
+     [
+      " period",
+      -0.0908203125
+     ],
+     [
+      " of",
+      -0.08837890625
+     ],
+     [
+      " intense",
+      0.01348876953125
+     ],
+     [
+      " scientific",
+      0.01361083984375
+     ],
+     [
+      " change",
+      0.00933837890625
+     ],
+     [
+      ".",
+      -0.052490234375
+     ],
+     [
+      " A",
+      0.0026702880859375
+     ],
+     [
+      " big",
+      0.0137939453125
+     ],
+     [
+      " change",
+      0.0024566650390625
+     ],
+     [
+      " came",
+      -0.01263427734375
+     ],
+     [
+      " when",
+      -0.01226806640625
+     ],
+     [
+      " physicists",
+      0.0031585693359375
+     ],
+     [
+      " discovered",
+      0.0208740234375
+     ],
+     [
+      " new",
+      -0.0238037109375
+     ],
+     [
+      " properties",
+      0.00640869140625
+     ],
+     [
+      " of",
+      -0.009033203125
+     ],
+     [
+      " matter",
+      0.000415802001953125
+     ],
+     [
+      " at",
+      0.0146484375
+     ],
+     [
+      " the",
+      0.0020751953125
+     ],
+     [
+      " cellular",
+      -0.12890625
+     ],
+     [
+      " level",
+      -0.0018463134765625
+     ],
+     [
+      ".",
+      -0.00141143798828125
+     ],
+     [
+      " They",
+      -0.09375
+     ],
+     [
+      " discovered",
+      0.007720947265625
+     ],
+     [
+      " that",
+      0.050048828125
+     ],
+     [
+      " cells",
+      0.036865234375
+     ],
+     [
+      " act",
+      -0.0002727508544921875
+     ],
+     [
+      " as",
+      0.0038604736328125
+     ],
+     [
+      " the",
+      0.033447265625
+     ],
+     [
+      " basic",
+      -0.00160980224609375
+     ],
+     [
+      " building",
+      0.07080078125
+     ],
+     [
+      " blocks",
+      0.0966796875
+     ],
+     [
+      " of",
+      0.08544921875
+     ],
+     [
+      " life",
+      -0.041259765625
+     ],
+     [
+      " and",
+      -0.0096435546875
+     ],
+     [
+      " have",
+      0.0142822265625
+     ],
+     [
+      " their",
+      0.035888671875
+     ],
+     [
+      " own",
+      0.039306640625
+     ],
+     [
+      " internal",
+      0.09814453125
+     ],
+     [
+      " mechanisms",
+      0.150390625
+     ],
+     [
+      " by",
+      -0.037841796875
+     ],
+     [
+      " which",
+      0.0712890625
+     ],
+     [
+      " they",
+      0.0419921875
+     ],
+     [
+      " can",
+      0.0289306640625
+     ],
+     [
+      " live",
+      -0.025390625
+     ],
+     [
+      " and",
+      0.0213623046875
+     ],
+     [
+      " reproduce",
+      0.09619140625
+     ],
+     [
+      " independently",
+      0.005401611328125
+     ],
+     [
+      ".",
+      0.061767578125
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1962890625,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.104736328125,
+    "top": [
+     {
+      "text": "1. Description 2. About International Trade and Export--\n...\n3. Shipping and Reverse-Transportation\n...\n4. Logistics Operations (MOD/OT/MP/ET)\n...\n5. Customs & UPL Guys\n...\n6. SERVICE\u2500\u2500\u2500 US BASED CUSTOMER SUPPORT",
+      "score": 0.1962890625
+     },
+     {
+      "text": "\"Agatha... You may have a place at the Cumberledge!\" Fancy herman and blurred eyes. Fancy herman and blurred eyes. Fancy herman and blurring eyes. Fancy herman and blurred eyes. Fancy herman and blurred eyes. Fancy herman and blurred eyes. Fancy herman and blurred eyes",
+      "score": 0.0966796875
+     },
+     {
+      "text": "The Kuskokwim Census Tract 36 is a census tract 36, nestled in the North Slope region of Alaska, specifically in the Kuskokwim River Valley. It is located in the city of Anchorage. It spans approximately 14.9 square miles (38",
+      "score": 0.06494140625
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.05615234375,
+    "pos": 23
+   },
+   "b_untrained_best_of_8": {
+    "best": 0.57421875,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.201171875,
+    "top": [
+     {
+      "text": "Hi, I bank at Charter Bank. I think I have a stayer purely on intention. \n\nIn general, if you stay, you get:\n1. Interest rate on your cash deposits. Interest is paid quarterly; Interest is contingent on balance. \n2. Bonus Credit Card. We cannot offer you the card",
+      "score": 0.57421875
+     },
+     {
+      "text": "Josephsville was founded by John Kinzel Jr., Joseph and Thomas O'Donnell, and John L. Millington. They were among the first ten founding members of the Talmud Torah school which began its classes on September 2, 1886. They were also the first ten members to attend",
+      "score": 0.19921875
+     },
+     {
+      "text": "Robert Smalls. To see a black person in a command position on a boat, and to see those people over and over, was, for when I am a child...experiences me in a particular way, especially considering his house is hours away from where I see...one which is what I call the normal.",
+      "score": 0.1943359375
+     },
+     {
+      "text": "\"I aim at the present moment, and the present moment is all I have. Don't ruin my method by thinking about what will happen next.\"\n\nWho/framework:\n\" THE WORK\" by Eckhart Tolle\n\n\nWho:\nEckhart Tolle, who works on the \"Psychology of Time\" and",
+      "score": 0.1650390625
+     },
+     {
+      "text": "This element alone forces the convergence of the flood as this building is the bottleneck for this flow.\nThis building is 25m height. This room has dimensions of X-x height = 15m.\nThe water is 15m deep and this would be 50m volume of water now",
+      "score": 0.1533203125
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.1591796875,
+     "0.9": 0.31171874999999993,
+     "0.99": 0.5479687499999999,
+     "0.999": 0.5715937500000001
+    }
+   }
+  }
+ },
+ "training_s": 19.239190578460693,
+ "eval_s": {
+  "d": 6.66974139213562,
+  "a": 3.4077420234680176,
+  "b": 3.824984550476074
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.1043636798858643,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0583298206329346,
+    "where": "after step 2"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0607409477233887,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 2,
+  "flat_frac": 0.9,
+  "patience": 25
+ },
+ "steps_done": 2,
+ "kl_beta": 0.0,
+ "seed": 0,
+ "reused_untrained": {
+  "requested": null,
+  "reused": false,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "sources": null,
+  "reason_not_reused": "not requested"
+ },
+ "phase_s": 34.84301972389221,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

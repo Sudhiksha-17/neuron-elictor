@@ -4,11 +4,12 @@ One copy of Qwen3.5-4B (bf16, pinned revision). LoRA on = elicitor (policy); LoR
 (peft disable_adapter) = scorer / target and the "untrained" model. Optional new special tokens (one per
 neuron) whose embedding rows are trained with PEFT trainable_token_indices.
 
-GRPO as used here (KL beta = 0, one optimizer step per generated batch, so the PPO ratio is exactly 1
-and clipping never acts):
+GRPO as used here (one optimizer step per generated batch, so the PPO ratio is exactly 1 and clipping never acts):
     A_i  = (r_i - mean_g) / (std_g + 1e-4)  within each group g (one neuron, G completions);
            A_i = 0 for a flat group (std_g < 1e-6)
-    loss = -(1 / N_step) * sum_i A_i * (1/|o_i|) * sum_t log pi(o_i,t | prompt, o_i,<t)
+    loss = -(1 / N_step) * sum_i (1/|o_i|) * sum_t [ A_i * log pi(o_i,t | prompt, o_i,<t) - beta * k3_i,t ]
+    k3_i,t = exp(ref - logp) - (ref - logp) - 1, ref = log pi_ref(o_i,t | ...), pi_ref = LoRA off (added 2026-11-18,
+    --kl_beta, default 0 = the run 1 loss exactly; with beta > 0 flat-group completions are trained for their KL term).
 N_step = all completions generated in the step (flat-group completions contribute 0 and are skipped in the
 backward pass, which leaves the gradient unchanged). The step is split into micro-batches with gradient
 accumulation, so the effective batch is always the full step.
@@ -245,34 +246,88 @@ class Elicitor:
         return [(self.tok.decode([t]), float(v)) for t, v in zip(ids[0, :n].tolist(), got[layer][:n].tolist())]
 
     # ---------- policy gradient ----------
-    def pg_backward(self, prompt_ids, comps, adv, n_total, micro_bs):
-        """Accumulate grads of -(1/n_total) sum_i adv_i * mean_t logp(o_i,t). prompt_ids[i] per completion.
-        Skips adv == 0. Returns (n_trained, mean logp per token)."""
+    def _batch(self, prompt_ids, comps, b):
+        P = len(prompt_ids[b[0]]); assert all(len(prompt_ids[i]) == P for i in b)
+        T = max(len(comps[i]) for i in b)
+        x = torch.full((len(b), P + T), self.tok.pad_token_id, dtype=torch.long)
+        m = torch.zeros((len(b), T))
+        for r, i in enumerate(b):
+            x[r, :P] = torch.tensor(prompt_ids[i]); x[r, P:P + len(comps[i])] = torch.tensor(comps[i])
+            m[r, :len(comps[i])] = 1
+        return x.to(self.device), m.to(self.device), P, T
+
+    def _logp(self, x, P, T):
+        """Per-token log pi(o_t | prompt, o_<t) of the current adapter state, [B, T] fp32 (grad if enabled)."""
+        # no attention mask: right padding only follows real tokens and every layer is causal
+        logits = self.model(input_ids=x, use_cache=False, logits_to_keep=T + 1).logits[:, :T].float()
+        if self.new_ids:   # same distribution as sampling: neuron tokens suppressed
+            logits[:, :, self.new_ids] = float("-inf")
+        return torch.log_softmax(logits, -1).gather(-1, x[:, P:P + T, None]).squeeze(-1)
+
+    @torch.no_grad()
+    def _ref_logp(self, x, P, T):
+        """Reference policy = same model with LoRA (and trainable-token deltas) disabled = the scorer weights."""
+        with self.adapter_off():
+            return self._logp(x, P, T)
+
+    @staticmethod
+    def k3(logp, ref_logp):
+        """Per-token k3 KL estimator (GRPO paper, Schulman 2020): exp(ref - logp) - (ref - logp) - 1 >= 0."""
+        d = ref_logp - logp
+        return torch.exp(d) - d - 1.0
+
+    @torch.no_grad()
+    def kl_stats(self, prompt_ids, comps, micro_bs):
+        """Mean per-token k3 KL(policy || reference) over all completions (diagnostic only, no grads)."""
+        self.model.train()   # same mode as pg_backward (no dropout anywhere, so only a bookkeeping choice)
+        s, n = 0.0, 0
+        for st in range(0, len(comps), micro_bs):
+            b = list(range(st, min(st + micro_bs, len(comps))))
+            x, m, P, T = self._batch(prompt_ids, comps, b)
+            kl = self.k3(self._logp(x, P, T), self._ref_logp(x, P, T))
+            s += float((kl * m).sum()); n += int(m.sum())
+        return s / n if n else float("nan")
+
+    def pg_backward(self, prompt_ids, comps, adv, n_total, micro_bs, kl_beta=0.0, log_kl=True):
+        """Accumulate grads of
+             -(1/n_total) sum_i [ adv_i * mean_t logp(o_i,t) - kl_beta * mean_t k3_i,t ]
+        (GRPO with one update per batch, so the ratio is 1; k3 against the LoRA-off reference).
+        kl_beta == 0: exactly the old loss and code path (adv == 0 completions skipped; same micro-batches).
+        kl_beta > 0: every completion is trained (flat-group completions still carry the KL term).
+        log_kl: also measure mean per-token k3 over ALL completions (no-grad extra forwards; grads unchanged).
+        Returns (n_trained, mean logp per token over trained, dict(mean_kl, loss))."""
         self.model.train()
-        idx = [i for i in range(len(comps)) if adv[i] != 0.0]
-        lp_sum, lp_n = 0.0, 0
+        idx = [i for i in range(len(comps)) if kl_beta > 0 or adv[i] != 0.0]
+        lp_sum, lp_n, kl_sum, kl_n, loss_sum = 0.0, 0, 0.0, 0, 0.0
         for s in range(0, len(idx), micro_bs):
             b = idx[s:s + micro_bs]
-            P = len(prompt_ids[b[0]]); assert all(len(prompt_ids[i]) == P for i in b)
-            T = max(len(comps[i]) for i in b)
-            x = torch.full((len(b), P + T), self.tok.pad_token_id, dtype=torch.long)
-            m = torch.zeros((len(b), T))
-            for r, i in enumerate(b):
-                x[r, :P] = torch.tensor(prompt_ids[i]); x[r, P:P + len(comps[i])] = torch.tensor(comps[i])
-                m[r, :len(comps[i])] = 1
-            x, m = x.to(self.device), m.to(self.device)
+            x, m, P, T = self._batch(prompt_ids, comps, b)
             a = torch.tensor([adv[i] for i in b], device=self.device)
-            # no attention mask: right padding only follows real tokens and every layer is causal
-            logits = self.model(input_ids=x, use_cache=False, logits_to_keep=T + 1).logits[:, :T].float()
-            if self.new_ids:   # same distribution as sampling: neuron tokens suppressed
-                logits[:, :, self.new_ids] = float("-inf")
-            logp = torch.log_softmax(logits, -1).gather(-1, x[:, P:P + T, None]).squeeze(-1)
+            ref = self._ref_logp(x, P, T) if (kl_beta > 0 or log_kl) else None
+            logp = self._logp(x, P, T)
             seq = (logp * m).sum(1) / m.sum(1)
-            loss = -(a * seq).sum() / n_total
+            if kl_beta > 0:
+                kl = self.k3(logp, ref)
+                loss = -(a * seq - kl_beta * ((kl * m).sum(1) / m.sum(1))).sum() / n_total
+            else:
+                loss = -(a * seq).sum() / n_total
             loss.backward()
+            loss_sum += float(loss.detach())
             lp_sum += float((logp * m).sum()); lp_n += int(m.sum())
-            del logits, logp, loss
-        return len(idx), (lp_sum / lp_n if lp_n else float("nan"))
+            if ref is not None:
+                with torch.no_grad():
+                    kl_sum += float((self.k3(logp.detach(), ref) * m).sum()); kl_n += int(m.sum())
+            del logp, loss, ref
+        if log_kl and kl_beta == 0:   # completions skipped above (flat groups): KL measured without grads
+            rest = sorted(set(range(len(comps))) - set(idx))
+            for s in range(0, len(rest), micro_bs):
+                b = rest[s:s + micro_bs]
+                x, m, P, T = self._batch(prompt_ids, comps, b)
+                with torch.no_grad():
+                    kl = self.k3(self._logp(x, P, T), self._ref_logp(x, P, T))
+                kl_sum += float((kl * m).sum()); kl_n += int(m.sum())
+        stats = dict(mean_kl=(kl_sum / kl_n if kl_n else None), loss=loss_sum)
+        return len(idx), (lp_sum / lp_n if lp_n else float("nan")), stats
 
 
 def group_advantages(rewards, group_size):

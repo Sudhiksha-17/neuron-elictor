@@ -1,0 +1,1 @@
+[watcher 2026-11-18 04:48:38] watching PID 9417 (run dir /workspace/neuron-elictor/results/grpo_collapse/20261118_044838, log /workspace/neuron-elictor/logs/collapse_run_20261118_044838/runs_part.log): /bin/bash scripts/collapse_run.sh

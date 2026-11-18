@@ -1,0 +1,6 @@
+[collapse 2026-11-18 04:37:38] collapse_run start (outer PID 7149)
+[collapse 2026-11-18 04:37:38] runs PID 7160, watcher PID 7161 (log /workspace/neuron-elictor/logs/collapse_run_20261118_043738/watcher.log)
+[collapse 2026-11-18 04:47:55] runs part exit 0
+[collapse 2026-11-18 04:47:55] pipeline ending (last exit 0); writing comparison report
+report: /workspace/neuron-elictor/reports/20261118_044755_collapse_fix.md
+[collapse 2026-11-18 04:47:55] SMOKE: report moved to /workspace/neuron-elictor/results/smoke/20261118_043738_collapse_pipeline; no commit, push or pod stop

@@ -1,0 +1,189 @@
+{
+ "lr": 0.0001,
+ "bs": 1,
+ "planned_epochs": 2,
+ "used_epochs": 2,
+ "redone": false,
+ "attempts": [
+  {
+   "n_epochs": 2,
+   "eval_ce": [
+    3.3266036987304686,
+    2.214159393310547,
+    1.1732293128967286
+   ],
+   "epochs": [
+    {
+     "epoch": 1,
+     "order": [
+      4,
+      1,
+      7,
+      5,
+      3,
+      9,
+      0,
+      8,
+      6,
+      2
+     ],
+     "train_losses": [
+      3.386916160583496,
+      2.96722412109375,
+      2.9369306564331055,
+      2.928659439086914,
+      3.5963358879089355,
+      2.421420097351074,
+      3.6641855239868164,
+      2.6148781776428223,
+      3.021599769592285,
+      3.0421042442321777
+     ],
+     "mean_train_loss": 3.0580254077911375,
+     "grad_norms": [
+      7.620950698852539,
+      4.898502349853516,
+      4.178824424743652,
+      3.9736528396606445,
+      3.816082000732422,
+      3.890462875366211,
+      6.019355773925781,
+      5.467413425445557,
+      6.397511959075928,
+      4.206684589385986
+     ]
+    },
+    {
+     "epoch": 2,
+     "order": [
+      3,
+      9,
+      4,
+      2,
+      7,
+      8,
+      6,
+      0,
+      5,
+      1
+     ],
+     "train_losses": [
+      2.655937671661377,
+      1.707708716392517,
+      1.7770190238952637,
+      2.259411334991455,
+      1.7709137201309204,
+      1.7558070421218872,
+      2.155917167663574,
+      2.669711112976074,
+      1.4915504455566406,
+      1.4802714586257935
+     ],
+     "mean_train_loss": 1.9724247694015502,
+     "grad_norms": [
+      3.4168038368225098,
+      2.7508485317230225,
+      3.4843099117279053,
+      3.569361925125122,
+      3.40366530418396,
+      3.8779916763305664,
+      5.108511447906494,
+      4.703879356384277,
+      3.579592227935791,
+      4.066247940063477
+     ]
+    }
+   ],
+   "lr": 0.0001,
+   "bs": 1,
+   "n_contexts": 10,
+   "max_grad_norm": 1.0,
+   "seed": 0,
+   "seconds": 12.720416069030762,
+   "diversity": {
+    "n_samples": 8,
+    "n_distinct_texts": 8,
+    "mean_pairwise_jaccard": 0.11401058660741352,
+    "max_jaccard_to_top10_mean": 0.164402526332377,
+    "max_jaccard_to_top10_max": 0.20987654320987653,
+    "max_jaccard_to_top10_median": 0.16561181434599154,
+    "longest_span_max": 4,
+    "near_copy_threshold": 0.8,
+    "n_near_copies": 0,
+    "frac_near_copies": 0.0,
+    "tag": "2 epoch(s)",
+    "mean_score": 0.2774658203125,
+    "max_score": 0.546875,
+    "n_empty": 0,
+    "samples": [
+     {
+      "text": "our daily life. The answers could help to make our life simpler and easier. Here are some tips that you might want to try.\nWell mindfulness and well-being is one of the major benefits of meditation too. It\u2019s actually a technique that you can learn to do easily. One way to regulate your stress is",
+      "score": 0.32421875,
+      "max_jaccard": 0.19047619047619047,
+      "max_jaccard_rank": 8,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "of meal ideas to choose from depending on the occasion, the season and whether you\u2019re trying to follow a specific diet.\nHere are some popular meal ideas to try:\n.\nAdditionally, we recommend trying this image.\nwith ingredients like applesauce, eggs and spices.\n.\nThis meal consists of call",
+      "score": 0.546875,
+      "max_jaccard": 0.16455696202531644,
+      "max_jaccard_rank": 7,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "in breathing, eating, or walking? Bu tum\u2019s first choice for car rentals!\nWhether you\u2019re taking a holiday to the Carolinas for sightseeing or traveling to the East Coast for business, RentCarpers provides a car rental service that\u2019s as reputable as the companies that make up this top-rated list.",
+      "score": 0.314453125,
+      "max_jaccard": 0.12790697674418605,
+      "max_jaccard_rank": 5,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "In iTunes store, Apple Inc. provides songs, artists, albums, podcasts, TV shows, and audiobooks to download. Getting into iTunes store, you need to find a way to register yourself. There are two ways to do this. The first one, buy your songs and downloads with credit or debit cards,",
+      "score": 0.333984375,
+      "max_jaccard": 0.13253012048192772,
+      "max_jaccard_rank": 1,
+      "longest_span": 4,
+      "longest_span_rank": 5
+     },
+     {
+      "text": "as we scale up operation accurately and effectively. to properly prepare for big scale tasks in-line with our long term goals.\nOur operations budget is also a key contributor towards attaining our targets. We have approved the operations budget through our annual audit. The budget covers the necessary expenses required to maintain every aspect of our business",
+      "score": 0.1162109375,
+      "max_jaccard": 0.13333333333333333,
+      "max_jaccard_rank": 8,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "choosing the right real estate agent is an important step in your search and you want to make sure you\u2019re making the right decision by doing your research.\nThe first thing you should look for in a real estate agent is the quality of their transaction history. You want to choose someone who has a successful track record and is",
+      "score": 0.1279296875,
+      "max_jaccard": 0.20987654320987653,
+      "max_jaccard_rank": 8,
+      "longest_span": 3,
+      "longest_span_rank": 5
+     },
+     {
+      "text": "doing research for your book? We can use our expertise and resources in the race car industry to help your book research. For instance, if you are researching a race car enthusiast or with a specific type of vehicle, our team of experts and specialists will be able to research the appropriate vehicles to recommend. Whether it\u2019s a",
+      "score": 0.0966796875,
+      "max_jaccard": 0.189873417721519,
+      "max_jaccard_rank": 5,
+      "longest_span": 2,
+      "longest_span_rank": 1
+     },
+     {
+      "text": "that the best SEO services in the region offer. Our team is comprised of experienced professionals and the quality of our services is a testament to our dedication to our work.\nWe provide the most comprehensive SEO services in the region and our services are categorized into three parts. The first part of our service is technical SEO. Technical",
+      "score": 0.359375,
+      "max_jaccard": 0.16666666666666666,
+      "max_jaccard_rank": 9,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     }
+    ]
+   }
+  }
+ ],
+ "contexts": "top-10 FineWeb contexts of L10N4358 (data/contexts.npz), as completions of the prompt",
+ "near_copy_threshold": 0.8
+}

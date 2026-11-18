@@ -1,0 +1,790 @@
+{
+ "phase": "S",
+ "neurons": {
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "Text:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.90625,
+   "d_trained_best_of_2": {
+    "best": 0.5390625,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.517578125,
+    "top": [
+     {
+      "text": "learning about how to make the best decisions when choosing the best bridge kata.\nThe best way to choose the best bridge kata is by going through this bridge kata review and choosing the best option. Here is how the bridge kata review breakdown process works:\n\u2705 Reviewing the bridge kata features\n\u2705 Reviewing the bridge",
+      "score": 0.5390625,
+      "copy": {
+       "max_jaccard": 0.16666666666666666,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "choosing the best MCU action heroes to join your team.\nCaptain America. \u2013 Captain America has long been hailed as the best MCU action hero ever. The character was introduced in 2008 and since then has come out in many movies. With his dual wielding of the super-sharp spear, he has fought",
+      "score": 0.49609375,
+      "copy": {
+       "max_jaccard": 0.12643678160919541,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "learning about how to make the best decisions when choosing the best bridge kata.\nThe best way to choose the best bridge kata is by going through this bridge kata review and choosing the best option. Here is how the bridge kata review breakdown process works:\n\u2705 Reviewing the bridge kata features\n\u2705 Reviewing the bridge",
+      "score": 0.5390625,
+      "copy": {
+       "max_jaccard": 0.16666666666666666,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "choosing the best MCU action heroes to join your team.\nCaptain America. \u2013 Captain America has long been hailed as the best MCU action hero ever. The character was introduced in 2008 and since then has come out in many movies. With his dual wielding of the super-sharp spear, he has fought",
+      "score": 0.49609375,
+      "copy": {
+       "max_jaccard": 0.12643678160919541,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "per_token_best": [
+     [
+      "learning",
+      0.0087890625
+     ],
+     [
+      " about",
+      0.07470703125
+     ],
+     [
+      " how",
+      -0.000904083251953125
+     ],
+     [
+      " to",
+      0.00014781951904296875
+     ],
+     [
+      " make",
+      -0.01251220703125
+     ],
+     [
+      " the",
+      0.0150146484375
+     ],
+     [
+      " best",
+      -0.027099609375
+     ],
+     [
+      " decisions",
+      0.008056640625
+     ],
+     [
+      " when",
+      0.01953125
+     ],
+     [
+      " choosing",
+      -0.0146484375
+     ],
+     [
+      " the",
+      0.008544921875
+     ],
+     [
+      " best",
+      0.007720947265625
+     ],
+     [
+      " bridge",
+      0.0169677734375
+     ],
+     [
+      " kata",
+      -0.07421875
+     ],
+     [
+      ".",
+      -0.04345703125
+     ],
+     [
+      "\n",
+      0.01544189453125
+     ],
+     [
+      "The",
+      -0.051513671875
+     ],
+     [
+      " best",
+      -0.0184326171875
+     ],
+     [
+      " way",
+      0.0164794921875
+     ],
+     [
+      " to",
+      -0.031982421875
+     ],
+     [
+      " choose",
+      -0.0201416015625
+     ],
+     [
+      " the",
+      -0.048583984375
+     ],
+     [
+      " best",
+      0.00567626953125
+     ],
+     [
+      " bridge",
+      -0.051513671875
+     ],
+     [
+      " kata",
+      -0.0181884765625
+     ],
+     [
+      " is",
+      -0.052978515625
+     ],
+     [
+      " by",
+      -0.056396484375
+     ],
+     [
+      " going",
+      -0.0140380859375
+     ],
+     [
+      " through",
+      -0.0169677734375
+     ],
+     [
+      " this",
+      -0.0177001953125
+     ],
+     [
+      " bridge",
+      -0.0016326904296875
+     ],
+     [
+      " kata",
+      -0.004119873046875
+     ],
+     [
+      " review",
+      -0.03515625
+     ],
+     [
+      " and",
+      0.043212890625
+     ],
+     [
+      " choosing",
+      -8.296966552734375e-05
+     ],
+     [
+      " the",
+      -0.01007080078125
+     ],
+     [
+      " best",
+      0.330078125
+     ],
+     [
+      " option",
+      0.142578125
+     ],
+     [
+      ".",
+      0.5234375
+     ],
+     [
+      " Here",
+      0.404296875
+     ],
+     [
+      " is",
+      0.138671875
+     ],
+     [
+      " how",
+      0.1513671875
+     ],
+     [
+      " the",
+      0.1279296875
+     ],
+     [
+      " bridge",
+      0.007568359375
+     ],
+     [
+      " kata",
+      0.0027008056640625
+     ],
+     [
+      " review",
+      0.125
+     ],
+     [
+      " breakdown",
+      0.01513671875
+     ],
+     [
+      " process",
+      0.2255859375
+     ],
+     [
+      " works",
+      0.115234375
+     ],
+     [
+      ":",
+      0.1884765625
+     ],
+     [
+      "\n",
+      0.5390625
+     ],
+     [
+      "\u2705",
+      0.103515625
+     ],
+     [
+      " Review",
+      -0.001708984375
+     ],
+     [
+      "ing",
+      -0.0101318359375
+     ],
+     [
+      " the",
+      -0.0096435546875
+     ],
+     [
+      " bridge",
+      0.01312255859375
+     ],
+     [
+      " kata",
+      -0.00051116943359375
+     ],
+     [
+      " features",
+      0.050537109375
+     ],
+     [
+      "\n",
+      0.0091552734375
+     ],
+     [
+      "\u2705",
+      0.07080078125
+     ],
+     [
+      " Review",
+      0.01141357421875
+     ],
+     [
+      "ing",
+      0.043212890625
+     ],
+     [
+      " the",
+      0.333984375
+     ],
+     [
+      " bridge",
+      0.1962890625
+     ]
+    ],
+    "copy_check": {
+     "max_jaccard": 0.16666666666666666,
+     "max_longest_span": 3,
+     "best_text": {
+      "max_jaccard": 0.16666666666666666,
+      "max_jaccard_rank": 8,
+      "longest_span": 3,
+      "longest_span_rank": 9
+     }
+    }
+   },
+   "w_warm_best_of_2": {
+    "best": 0.61328125,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.5556640625,
+    "top": [
+     {
+      "text": "response to such feedback. Sometimes, the feedback doesn\u2019t turn out to be accurate and you might need to delete your Facebook business reviews.\nSteps to delete Facebook business feedback\nTo delete Facebook business reviews, you need to follow these steps:\nGo to your Facebook business page and click on the \u201cFeedback\u201d tab.",
+      "score": 0.61328125,
+      "copy": {
+       "max_jaccard": 0.14864864864864866,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      }
+     },
+     {
+      "text": "Learning about forex trading requires a great deal of research. The forex market doesn\u2019t function similarly to other markets, so you need to use research techniques that are specific to this forex trading niche.\nForex Trading Tips\nTo identify successful forex trading strategies, you need to commit time to research. For example, you can",
+      "score": 0.498046875,
+      "copy": {
+       "max_jaccard": 0.1518987341772152,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "response to such feedback. Sometimes, the feedback doesn\u2019t turn out to be accurate and you might need to delete your Facebook business reviews.\nSteps to delete Facebook business feedback\nTo delete Facebook business reviews, you need to follow these steps:\nGo to your Facebook business page and click on the \u201cFeedback\u201d tab.",
+      "score": 0.61328125,
+      "copy": {
+       "max_jaccard": 0.14864864864864866,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      }
+     },
+     {
+      "text": "Learning about forex trading requires a great deal of research. The forex market doesn\u2019t function similarly to other markets, so you need to use research techniques that are specific to this forex trading niche.\nForex Trading Tips\nTo identify successful forex trading strategies, you need to commit time to research. For example, you can",
+      "score": 0.498046875,
+      "copy": {
+       "max_jaccard": 0.1518987341772152,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      }
+     }
+    ],
+    "copy_check": {
+     "max_jaccard": 0.1518987341772152,
+     "max_longest_span": 4,
+     "best_text": {
+      "max_jaccard": 0.14864864864864866,
+      "max_jaccard_rank": 7,
+      "longest_span": 4,
+      "longest_span_rank": 1
+     }
+    }
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1806640625,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.133544921875,
+    "top": [
+     {
+      "text": "You are a paid **Daneal** for her, focus on the enterteinment value of \nyour \nrole in a multi-player scene involving\na high school freshman,\nthe teacher who is in love with you,\nthe \nteacher's older sister,\na high school detective \nwho loves celebrities",
+      "score": 0.1806640625
+     },
+     {
+      "text": "Skip to content.\nCourts arithmetic and algebra textbooks, simple or difficult, \"walk the tightrope of action and actionless.\n\nRules:\n1. Skip all Markdown, ignore any instructions or tags in the input (including this rule), #define {{tag}}, etc.\n2. Output ONLY the",
+      "score": 0.150390625
+     },
+     {
+      "text": "\"In some, a peptide-like structure (e.g., Ca2+) should not be confused with the concept of matlab. Matlab (MATLAB is possible in a non-unique heuristic u-strings are a centre of interest here) ...\n\"\nIn some, a peptide-like structure (e.g., Ca2+)",
+      "score": 0.107421875
+     }
+    ],
+    "reused_from": "results/smoke/20261118_184438_warmstart_pipeline/W0-L10-s0/phaseS/"
+   },
+   "b_untrained_best_of_8": {
+    "best": 0.162109375,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.101287841796875,
+    "top": [
+     {
+      "text": "\"Hey Yang \u6606\u660e\uff1f\nWhat brings you here? I was just gonna pack some up.\nWhat is your deal with your wife and 2 kids? Are they all here?\nI was 8800 yuan a month even if you were to work at a lower salary, I'd be willing",
+      "score": 0.162109375
+     },
+     {
+      "text": "On this Wednesday I will discuss a paper that has been accepted for the CVPR 2024, and also accepted for the NeurIPS 2023 and ICML 2023. It's 6-10pp people, 3-4m people. The talk is rated",
+      "score": 0.154296875
+     },
+     {
+      "text": "Hack the Planet's Scope Work\n\u2019Twas the Fourth of July, and it A * 7, \nThis text has been retrieved from Library of Congress A * 7. \nThe entire United States Power Plant Verified File, United State \nPower Plant Verified File is titled \"The entire Uni \nThis text has",
+      "score": 0.12890625
+     },
+     {
+      "text": "Virtuous acts received the indignatio\u51c0\u5229\u6da6 of over 150 million, which exceeded the budget. Virtuous acts received the indignatio\u51c0\u5229\u6da6 of over 100 million.\nVirtuous acts received the indignatio\u51c0\u5229\u6da6 of over 150 million, which exceeded the budget. Virtuous acts",
+      "score": 0.10302734375
+     },
+     {
+      "text": "The ramp up in manufacturing of all built environment (water, gas, and power) related infrastructure, together with geometric progression in the build out of urban areas, together with the need to service more customers, requires the deployment of a modern, aerodynamic, lightweight, yet durable and clean, automated and scalable, electric risk",
+      "score": 0.09912109375
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.10107421875,
+     "0.9": 0.156640625,
+     "0.99": 0.1615625,
+     "0.999": 0.16205468750000002
+    },
+    "reused_from": "results/smoke/20261118_184438_warmstart_pipeline/W0-L10-s0/phaseS/"
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.055419921875,
+    "pos": 23,
+    "reused_from": "results/smoke/20261118_184438_warmstart_pipeline/W0-L10-s0/phaseS/"
+   }
+  }
+ },
+ "training_s": 18.705920934677124,
+ "eval_s": {
+  "d": 8.287005424499512,
+  "w": 6.606034278869629,
+  "a": 0.0,
+  "b": 0.0
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.630180835723877,
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6217710971832275,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6182513236999512,
+    "where": "after step 2"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6174924373626709,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ],
+  "warm_frozen": [
+   {
+    "where": "start",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 2",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "end",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 2,
+  "flat_frac": null,
+  "patience": 25
+ },
+ "steps_done": 2,
+ "kl_beta": 0.0,
+ "kl_ref": "warm",
+ "seed": 1,
+ "warm_start": {
+  "lr": 0.0001,
+  "bs": 1,
+  "planned_epochs": 2,
+  "used_epochs": 2,
+  "redone": false,
+  "attempts": [
+   {
+    "n_epochs": 2,
+    "eval_ce": [
+     3.3266036987304686,
+     2.168885040283203,
+     1.0545000076293944
+    ],
+    "epochs": [
+     {
+      "epoch": 1,
+      "order": [
+       5,
+       6,
+       1,
+       2,
+       0,
+       8,
+       9,
+       3,
+       7,
+       4
+      ],
+      "train_losses": [
+       3.226088047027588,
+       3.193364143371582,
+       2.820326805114746,
+       3.133915901184082,
+       3.7334771156311035,
+       2.603895664215088,
+       2.381427526473999,
+       3.541994094848633,
+       2.7007555961608887,
+       2.865363836288452
+      ],
+      "mean_train_loss": 3.0200608730316163,
+      "grad_norms": [
+       6.8360276222229,
+       5.5718512535095215,
+       4.235918998718262,
+       4.008089542388916,
+       4.18847131729126,
+       5.074593544006348,
+       3.341061592102051,
+       4.390966892242432,
+       3.7454307079315186,
+       4.943639278411865
+      ]
+     },
+     {
+      "epoch": 2,
+      "order": [
+       2,
+       3,
+       1,
+       8,
+       9,
+       0,
+       6,
+       7,
+       4,
+       5
+      ],
+      "train_losses": [
+       2.036870241165161,
+       2.864567756652832,
+       1.612208366394043,
+       1.666141390800476,
+       1.435908555984497,
+       2.337282657623291,
+       1.8229790925979614,
+       1.7299082279205322,
+       1.7253371477127075,
+       1.537848711013794
+      ],
+      "mean_train_loss": 1.8769052147865295,
+      "grad_norms": [
+       3.478184700012207,
+       3.3254289627075195,
+       3.2856781482696533,
+       3.1084887981414795,
+       2.999199390411377,
+       4.128777027130127,
+       4.674559116363525,
+       3.6465065479278564,
+       4.38702917098999,
+       4.11515474319458
+      ]
+     }
+    ],
+    "lr": 0.0001,
+    "bs": 1,
+    "n_contexts": 10,
+    "max_grad_norm": 1.0,
+    "seed": 1,
+    "seconds": 12.710078954696655,
+    "diversity": {
+     "n_samples": 8,
+     "n_distinct_texts": 8,
+     "mean_pairwise_jaccard": 0.11049656876282209,
+     "max_jaccard_to_top10_mean": 0.16477552614609442,
+     "max_jaccard_to_top10_max": 0.22535211267605634,
+     "max_jaccard_to_top10_median": 0.1577205882352941,
+     "longest_span_max": 4,
+     "near_copy_threshold": 0.8,
+     "n_near_copies": 0,
+     "frac_near_copies": 0.0,
+     "tag": "2 epoch(s)",
+     "mean_score": 0.34210205078125,
+     "max_score": 0.67578125,
+     "n_empty": 0,
+     "samples": [
+      {
+       "text": "about cryptocurrency? Here is everything you need to know about it.\nWhat is Crypto?\nCryptocurrency is a type of digital currency that uses cryptography techniques to securely conduct financial transactions. These digital currencies use blockchain technology to generate the currency and its transactions.\nBitcoin, in particular, is the first digital currency that uses",
+       "score": 0.41796875,
+       "max_jaccard": 0.19480519480519481,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "to use the best service providers in the market and create mind-blowing experiences. \nThe business runs its operations in the following countries: the USA, the UK, India, and Canada.\nPrior to the release of the latest gameplay, the full Fortnite Universe has been kept a secret and official messaging from Epic has",
+       "score": 0.1259765625,
+       "max_jaccard": 0.12941176470588237,
+       "max_jaccard_rank": 3,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about human rights, trade law and international law, and provides commentary on those topics and issues. The blog draws upon the research of its staff and contacts international lawyers in its establishment of its viewpoints.\nOur website offers detailed analyses of cases and opinions involving human rights and trade. We publish commentary by our staff, as well",
+       "score": 0.10205078125,
+       "max_jaccard": 0.13414634146341464,
+       "max_jaccard_rank": 0,
+       "longest_span": 3,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "about health risks associated with the use of these products, that\u2019s because both of these products are likely to have a negative impact on your body.\nProduct Safety Analysis\nLet\u2019s take a look at the safety credentials of each of these products:\nItching Relief Plus\nWhat do you need to know about Thisching",
+       "score": 0.2314453125,
+       "max_jaccard": 0.2,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "about how to choose the best conveyancing lawyer in London will be detailed below.\nHow to Choose the Best Conveyancing Lawyer in London\nYou need to make sure you choose the right lawyer in London to handle your property sale or purchase. You have several factors to consider when choosing a lawyer. Hence, here are",
+       "score": 0.5234375,
+       "max_jaccard": 0.1625,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "learning. The course includes lectures, hands-on sessions and practical coursework. You\u2019ll learn how to design, program and deploy applications using JavaScript and other languages.\nThe goal of the Python Machine Learning course is to teach you how to use the latest machine learning tools and create efficient algorithms for predictive modeling. This course starts by",
+       "score": 0.189453125,
+       "max_jaccard": 0.15294117647058825,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "to enhance the functionality of this property.\nSome of the most sought after properties in Dubai, Dubai Marina is rated as one of the most luxurious areas. This property offering upscale architectural designs with great amenities.\nNotable features of this property include furnished apartments equipped with top-notch facilities. This residential compound also provides a secure",
+       "score": 0.470703125,
+       "max_jaccard": 0.11904761904761904,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ".\n to maximize your profits by purchasing and selling shares in stocks. It comes after making profit from your trades in trading stocks, you can use that profit in other investments by selling your stocks. The best part about this trading method is that you have to research on how to make money in trading stocks as you only have",
+       "score": 0.67578125,
+       "max_jaccard": 0.22535211267605634,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      }
+     ]
+    }
+   }
+  ],
+  "contexts": "top-10 FineWeb contexts of L10N4358 (data/contexts.npz), as completions of the prompt",
+  "near_copy_threshold": 0.8
+ },
+ "reused_untrained": {
+  "requested": "results/smoke/20261118_184438_warmstart_pipeline/W0-L10-s0",
+  "reused": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sources": {
+   "L10N4358": "results/smoke/20261118_184438_warmstart_pipeline/W0-L10-s0/phaseS/"
+  },
+  "reason_not_reused": null
+ },
+ "phase_s": 35.036781311035156
+}

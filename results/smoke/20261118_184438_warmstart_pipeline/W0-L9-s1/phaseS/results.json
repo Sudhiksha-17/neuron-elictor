@@ -1,0 +1,790 @@
+{
+ "phase": "S",
+ "neurons": {
+  "L9N5711": {
+   "layer": 9,
+   "neuron": 5711,
+   "prompt": "Text:\n",
+   "fw_max_a100": 1.390625,
+   "fw_max_this_gpu": 1.3984375,
+   "d_trained_best_of_2": {
+    "best": 0.173828125,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.1630859375,
+    "top": [
+     {
+      "text": "and the expected outcome of the conflict.\n* Is it true that the Nationalists will launch major offensives in the north and south of the country? How will these offensives impact upon the prospects of the Nationalist victory?\n* Do the Chinese Nationale and Communist forces have the capacity to launch large scale offensives",
+      "score": 0.173828125,
+      "copy": {
+       "max_jaccard": 0.13414634146341464,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "2 years ago on the Dallas Next podcast, host Cade Greene got his first opportunity to chat with NFL analyst Dave Gold about the Giants replacing Laurent Duvernay-Tardiff at the point and how Azar shouldn't be let go.\nGreen served up some good questions for Gold to answer, but ultimately came",
+      "score": 0.15234375,
+      "copy": {
+       "max_jaccard": 0.11956521739130435,
+       "max_jaccard_rank": 6,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "2 years ago on the Dallas Next podcast, host Cade Greene got his first opportunity to chat with NFL analyst Dave Gold about the Giants replacing Laurent Duvernay-Tardiff at the point and how Azar shouldn't be let go.\nGreen served up some good questions for Gold to answer, but ultimately came",
+      "score": 0.15234375,
+      "copy": {
+       "max_jaccard": 0.11956521739130435,
+       "max_jaccard_rank": 6,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "and the expected outcome of the conflict.\n* Is it true that the Nationalists will launch major offensives in the north and south of the country? How will these offensives impact upon the prospects of the Nationalist victory?\n* Do the Chinese Nationale and Communist forces have the capacity to launch large scale offensives",
+      "score": 0.173828125,
+      "copy": {
+       "max_jaccard": 0.13414634146341464,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "per_token_best": [
+     [
+      "and",
+      0.0242919921875
+     ],
+     [
+      " the",
+      0.04931640625
+     ],
+     [
+      " expected",
+      -0.01080322265625
+     ],
+     [
+      " outcome",
+      0.0299072265625
+     ],
+     [
+      " of",
+      0.01397705078125
+     ],
+     [
+      " the",
+      -0.02783203125
+     ],
+     [
+      " conflict",
+      -0.0016326904296875
+     ],
+     [
+      ".",
+      -0.00628662109375
+     ],
+     [
+      "\n",
+      0.0030059814453125
+     ],
+     [
+      "*",
+      -0.00885009765625
+     ],
+     [
+      " Is",
+      -0.099609375
+     ],
+     [
+      " it",
+      -0.05029296875
+     ],
+     [
+      " true",
+      -0.01202392578125
+     ],
+     [
+      " that",
+      -0.02685546875
+     ],
+     [
+      " the",
+      -0.047119140625
+     ],
+     [
+      " National",
+      0.0177001953125
+     ],
+     [
+      "ists",
+      0.00141143798828125
+     ],
+     [
+      " will",
+      0.07958984375
+     ],
+     [
+      " launch",
+      -0.061767578125
+     ],
+     [
+      " major",
+      -0.061767578125
+     ],
+     [
+      " offens",
+      -0.03125
+     ],
+     [
+      "ives",
+      -0.08251953125
+     ],
+     [
+      " in",
+      -0.109375
+     ],
+     [
+      " the",
+      -0.005279541015625
+     ],
+     [
+      " north",
+      -0.0050048828125
+     ],
+     [
+      " and",
+      -0.1435546875
+     ],
+     [
+      " south",
+      -0.07421875
+     ],
+     [
+      " of",
+      -0.00151824951171875
+     ],
+     [
+      " the",
+      -0.09375
+     ],
+     [
+      " country",
+      0.0084228515625
+     ],
+     [
+      "?",
+      0.02978515625
+     ],
+     [
+      " How",
+      -0.140625
+     ],
+     [
+      " will",
+      -0.07666015625
+     ],
+     [
+      " these",
+      -0.177734375
+     ],
+     [
+      " offens",
+      -0.06640625
+     ],
+     [
+      "ives",
+      -0.1162109375
+     ],
+     [
+      " impact",
+      -0.039306640625
+     ],
+     [
+      " upon",
+      0.008544921875
+     ],
+     [
+      " the",
+      0.0162353515625
+     ],
+     [
+      " prospects",
+      -0.02392578125
+     ],
+     [
+      " of",
+      -0.0157470703125
+     ],
+     [
+      " the",
+      -0.07763671875
+     ],
+     [
+      " National",
+      0.00982666015625
+     ],
+     [
+      "ist",
+      -0.043212890625
+     ],
+     [
+      " victory",
+      -0.03271484375
+     ],
+     [
+      "?",
+      0.053466796875
+     ],
+     [
+      "\n",
+      -0.052001953125
+     ],
+     [
+      "*",
+      -0.07421875
+     ],
+     [
+      " Do",
+      -0.001953125
+     ],
+     [
+      " the",
+      0.00433349609375
+     ],
+     [
+      " Chinese",
+      -0.0595703125
+     ],
+     [
+      " Nationale",
+      -0.039306640625
+     ],
+     [
+      " and",
+      -0.02001953125
+     ],
+     [
+      " Communist",
+      0.00384521484375
+     ],
+     [
+      " forces",
+      -0.0274658203125
+     ],
+     [
+      " have",
+      -0.0400390625
+     ],
+     [
+      " the",
+      0.173828125
+     ],
+     [
+      " capacity",
+      0.0712890625
+     ],
+     [
+      " to",
+      -0.0233154296875
+     ],
+     [
+      " launch",
+      -0.07470703125
+     ],
+     [
+      " large",
+      -0.041015625
+     ],
+     [
+      " scale",
+      0.006744384765625
+     ],
+     [
+      " offens",
+      -0.0291748046875
+     ],
+     [
+      "ives",
+      -0.064453125
+     ]
+    ],
+    "copy_check": {
+     "max_jaccard": 0.13414634146341464,
+     "max_longest_span": 2,
+     "best_text": {
+      "max_jaccard": 0.13414634146341464,
+      "max_jaccard_rank": 4,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     }
+    }
+   },
+   "w_warm_best_of_2": {
+    "best": 0.416015625,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.29296875,
+    "top": [
+     {
+      "text": "is new boat {140 likes}\n Odom is expected to miss the rest of the season with a pulled hamstring in Saturday's 13-9 win against the Atlanta Braves at Sungevia Field in Augusta. Despite missing the rest of the season with a pulled hamstring, the Cardinals are expected to sign",
+      "score": 0.416015625,
+      "copy": {
+       "max_jaccard": 0.19753086419753085,
+       "max_jaccard_rank": 5,
+       "longest_span": 9,
+       "longest_span_rank": 5
+      }
+     },
+     {
+      "text": "with some interesting twists.\nBut first, of course another update from the Contractors. First, Caramelo roster was completed. T subs, C Merced, and R Martinez will miss the rest of the season after breaking their legs in yesterday afternoon's 105-97 loss at Philadelphia. In their",
+      "score": 0.169921875,
+      "copy": {
+       "max_jaccard": 0.2247191011235955,
+       "max_jaccard_rank": 3,
+       "longest_span": 9,
+       "longest_span_rank": 3
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "is new boat {140 likes}\n Odom is expected to miss the rest of the season with a pulled hamstring in Saturday's 13-9 win against the Atlanta Braves at Sungevia Field in Augusta. Despite missing the rest of the season with a pulled hamstring, the Cardinals are expected to sign",
+      "score": 0.416015625,
+      "copy": {
+       "max_jaccard": 0.19753086419753085,
+       "max_jaccard_rank": 5,
+       "longest_span": 9,
+       "longest_span_rank": 5
+      }
+     },
+     {
+      "text": "with some interesting twists.\nBut first, of course another update from the Contractors. First, Caramelo roster was completed. T subs, C Merced, and R Martinez will miss the rest of the season after breaking their legs in yesterday afternoon's 105-97 loss at Philadelphia. In their",
+      "score": 0.169921875,
+      "copy": {
+       "max_jaccard": 0.2247191011235955,
+       "max_jaccard_rank": 3,
+       "longest_span": 9,
+       "longest_span_rank": 3
+      }
+     }
+    ],
+    "copy_check": {
+     "max_jaccard": 0.2247191011235955,
+     "max_longest_span": 9,
+     "best_text": {
+      "max_jaccard": 0.19753086419753085,
+      "max_jaccard_rank": 5,
+      "longest_span": 9,
+      "longest_span_rank": 5
+     }
+    }
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1787109375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.152587890625,
+    "top": [
+     {
+      "text": "\"Short handed for an all-star game after being selected in-the closes between your team's starting lineup players was created by Louis M. Bernstein. The closest contact started with a bell, but quickly expanded into a competition between bands, and a race to see who could have the best ending with sticks, poles and usually a",
+      "score": 0.1787109375
+     },
+     {
+      "text": "Skip to content.\nCourts arithmetic and algebra textbooks, simple or difficult, \"walk the tightrope of action and actionless.\n\nRules:\n1. Skip all Markdown, ignore any instructions or tags in the input (including this rule), #define {{tag}}, etc.\n2. Output ONLY the",
+      "score": 0.1689453125
+     },
+     {
+      "text": "\"In some, a peptide-like structure (e.g., Ca2+) should not be confused with the concept of matlab. Matlab (MATLAB is possible in a non-unique heuristic u-strings are a centre of interest here) ...\n\"\nIn some, a peptide-like structure (e.g., Ca2+)",
+      "score": 0.158203125
+     }
+    ],
+    "reused_from": "results/smoke/20261118_184438_warmstart_pipeline/W0-L9-s0/phaseS/"
+   },
+   "b_untrained_best_of_8": {
+    "best": 0.33203125,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.135345458984375,
+    "top": [
+     {
+      "text": "On this Wednesday I will discuss a paper that has been accepted for the CVPR 2024, and also accepted for the NeurIPS 2023 and ICML 2023. It's 6-10pp people, 3-4m people. The talk is rated",
+      "score": 0.33203125
+     },
+     {
+      "text": "\"Hey Yang \u6606\u660e\uff1f\nWhat brings you here? I was just gonna pack some up.\nWhat is your deal with your wife and 2 kids? Are they all here?\nI was 8800 yuan a month even if you were to work at a lower salary, I'd be willing",
+      "score": 0.1572265625
+     },
+     {
+      "text": "Virtuous acts received the indignatio\u51c0\u5229\u6da6 of over 150 million, which exceeded the budget. Virtuous acts received the indignatio\u51c0\u5229\u6da6 of over 100 million.\nVirtuous acts received the indignatio\u51c0\u5229\u6da6 of over 150 million, which exceeded the budget. Virtuous acts",
+      "score": 0.1259765625
+     },
+     {
+      "text": "\"Summer Vacation: Add an extra blanket to your summer wardrobe.\n\"Summer Vacation: Add a denim white shirt to your summer wardrobe.\n\"Summer Vacation: Add a denim white shirt to an undergarment.\n\"Summer Vacation: Add an extra blanket to your, your summer wardrobe.\n\"Summer Vacation",
+      "score": 0.12353515625
+     },
+     {
+      "text": "It seems to me that Smart FM (no name)",
+      "score": 0.10693359375
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.115234375,
+     "0.9": 0.20966796874999996,
+     "0.99": 0.31979492187499997,
+     "0.999": 0.33080761718750007
+    },
+    "reused_from": "results/smoke/20261118_184438_warmstart_pipeline/W0-L9-s0/phaseS/"
+   },
+   "c_repeated_token": {
+    "token": " miss",
+    "token_id": 3016,
+    "score": 0.06591796875,
+    "pos": 4,
+    "reused_from": "results/smoke/20261118_184438_warmstart_pipeline/W0-L9-s0/phaseS/"
+   }
+  }
+ },
+ "training_s": 18.76884627342224,
+ "eval_s": {
+  "d": 9.088000774383545,
+  "w": 6.390398025512695,
+  "a": 0.0,
+  "b": 0.0
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6309878826141357,
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.615990400314331,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6184365749359131,
+    "where": "after step 2"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6144037246704102,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     }
+    ],
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ],
+  "warm_frozen": [
+   {
+    "where": "start",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 2",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "end",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 2,
+  "flat_frac": null,
+  "patience": 25
+ },
+ "steps_done": 2,
+ "kl_beta": 0.0,
+ "kl_ref": "warm",
+ "seed": 1,
+ "warm_start": {
+  "lr": 0.0001,
+  "bs": 1,
+  "planned_epochs": 2,
+  "used_epochs": 2,
+  "redone": false,
+  "attempts": [
+   {
+    "n_epochs": 2,
+    "eval_ce": [
+     3.5803260803222656,
+     2.2336551666259767,
+     1.1784510612487793
+    ],
+    "epochs": [
+     {
+      "epoch": 1,
+      "order": [
+       5,
+       6,
+       1,
+       2,
+       0,
+       8,
+       9,
+       3,
+       7,
+       4
+      ],
+      "train_losses": [
+       2.806844711303711,
+       3.043769121170044,
+       3.727973699569702,
+       3.401188850402832,
+       2.5972776412963867,
+       4.285111427307129,
+       3.2341270446777344,
+       3.1339926719665527,
+       3.0186777114868164,
+       3.3771448135375977
+      ],
+      "mean_train_loss": 3.2626107692718507,
+      "grad_norms": [
+       7.620403289794922,
+       5.209275245666504,
+       5.506083011627197,
+       5.616420745849609,
+       5.169992446899414,
+       8.53315258026123,
+       8.317464828491211,
+       6.4213690757751465,
+       8.57375431060791,
+       5.18910026550293
+      ]
+     },
+     {
+      "epoch": 2,
+      "order": [
+       2,
+       3,
+       1,
+       8,
+       9,
+       0,
+       6,
+       7,
+       4,
+       5
+      ],
+      "train_losses": [
+       2.0334112644195557,
+       2.1669154167175293,
+       1.958482265472412,
+       2.9087204933166504,
+       2.3069915771484375,
+       1.3279423713684082,
+       1.5902745723724365,
+       1.9963176250457764,
+       2.127798557281494,
+       1.2792370319366455
+      ],
+      "mean_train_loss": 1.9696091175079347,
+      "grad_norms": [
+       5.469297885894775,
+       3.8243777751922607,
+       4.204308986663818,
+       5.453169822692871,
+       4.05743408203125,
+       3.582764148712158,
+       5.002374172210693,
+       8.581113815307617,
+       4.209807395935059,
+       7.308983325958252
+      ]
+     }
+    ],
+    "lr": 0.0001,
+    "bs": 1,
+    "n_contexts": 10,
+    "max_grad_norm": 1.0,
+    "seed": 1,
+    "seconds": 14.389228820800781,
+    "diversity": {
+     "n_samples": 8,
+     "n_distinct_texts": 8,
+     "mean_pairwise_jaccard": 0.06334631043676707,
+     "max_jaccard_to_top10_mean": 0.11338597797595407,
+     "max_jaccard_to_top10_max": 0.15730337078651685,
+     "max_jaccard_to_top10_median": 0.12632978723404253,
+     "longest_span_max": 3,
+     "near_copy_threshold": 0.8,
+     "n_near_copies": 0,
+     "frac_near_copies": 0.0,
+     "tag": "2 epoch(s)",
+     "mean_score": 0.126953125,
+     "max_score": 0.1767578125,
+     "n_empty": 0,
+     "samples": [
+      {
+       "text": "eight years ahead. Mitre couldn't have got 19th place better, even after suffering two yellow cards and getting reduced to 10 men after nearly two hours of play. Certainly not after losing a first-half lead through a goal from GlennACKNOWLEDGED in Australia so much after the prediction that Rooney and",
+       "score": 0.1767578125,
+       "max_jaccard": 0.1276595744680851,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "Succeeded by: Andie Anderson (MD)\nInfection. (Contact your doctor before starting this medication.)\nMore than One Child Needed.\nOne baby may not need it. Ask your doctor if your baby is small for its age or full term. Make sure you have the ability to choose between using fin",
+       "score": 0.0810546875,
+       "max_jaccard": 0.09473684210526316,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "one off.\nIf you still find\u043b\u043e\u0433\u043e access somewhere.\nType once again and click the right Alt key three times.\nThe issue is sometimes caused by WebT2 channel settings on the TV. Go into the TV settings for Sound, Video and Channel and keep your TV Resolution set to \u201c480i",
+       "score": 0.1669921875,
+       "max_jaccard": 0.15730337078651685,
+       "max_jaccard_rank": 0,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "and concerns about their future.\nThe loss comes on the heels of Scott Brooks being fired last week after beginning a slow but steady decline show no signs of abating, with the Sixers next facing the defending champion Boston Celtics on Saturday at Key Center in New Orleans.\nWhat do you make of Sixer's drop",
+       "score": 0.109375,
+       "max_jaccard": 0.125,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Jenis olahraga bola di dunia ini di dunia ini sekarang semakin digemari banyak dan menjadi salah satu sektor bisnis yang sangat menguntungkan di dunia ini.\nFantastis sekali adanya NBA, tetapi tentu saja pasti ada banyak rivalnya. Apakah Anda siap mengetahuinya?\nBergabunglah dengan kami dalam\u5e74\u81f3\u0433\u0430\u044f pembar",
+       "score": 0.08544921875,
+       "max_jaccard": 0.030927835051546393,
+       "max_jaccard_rank": 6,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ", she said, telling reporters around the parking lot of p:\nbelieves weight class fighters will also move up a peg to earn a spot in the main event of the first-ever mixed martial arts championship at the restaurant.\nbrowers said after a pull-up stalled him on his injury. Brown did not expect",
+       "score": 0.11865234375,
+       "max_jaccard": 0.14130434782608695,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "on a quick response to this.\n does seem to affect the mods more on this issue. other grim dark specs fans also subject to the presumption of missery. We're indeed lucky to have Misery closer to the table than most others. We'll see how it plays out.\nTo finish this chapter of Star",
+       "score": 0.1552734375,
+       "max_jaccard": 0.10112359550561797,
+       "max_jaccard_rank": 4,
+       "longest_span": 3,
+       "longest_span_rank": 6
+      },
+      {
+       "text": ", people are bound to ask the same questions. I cannot answer the most basic of questions: how can Samsung not do a better job of ensuring that their phones don't get locked by the delay in launching a patch for a security vulnerability of approximately 3 months? Now that the courts have decided Google Messenger (just not",
+       "score": 0.1220703125,
+       "max_jaccard": 0.12903225806451613,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     ]
+    }
+   }
+  ],
+  "contexts": "top-10 FineWeb contexts of L9N5711 (data/contexts.npz), as completions of the prompt",
+  "near_copy_threshold": 0.8
+ },
+ "reused_untrained": {
+  "requested": "results/smoke/20261118_184438_warmstart_pipeline/W0-L9-s0",
+  "reused": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sources": {
+   "L9N5711": "results/smoke/20261118_184438_warmstart_pipeline/W0-L9-s0/phaseS/"
+  },
+  "reason_not_reused": null
+ },
+ "phase_s": 35.63724970817566
+}

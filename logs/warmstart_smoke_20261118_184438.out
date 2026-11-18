@@ -1,0 +1,6 @@
+[warmstart 2026-11-18 18:44:38] warmstart_run start (outer PID 10598)
+[warmstart 2026-11-18 18:44:38] runs PID 10613, watcher PID 10614 (log /workspace/neuron-elictor/logs/warmstart_run_20261118_184438/watcher.log)
+[warmstart 2026-11-18 18:59:06] runs part exit 0
+[warmstart 2026-11-18 18:59:06] pipeline ending (last exit 0); writing report
+report: /workspace/neuron-elictor/reports/20261118_185906_warmstart.md
+[warmstart 2026-11-18 18:59:06] SMOKE: report moved to /workspace/neuron-elictor/results/smoke/20261118_184438_warmstart_pipeline; no commit, push or pod stop

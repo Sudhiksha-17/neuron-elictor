@@ -93,7 +93,29 @@ ap.add_argument("--reuse_untrained_from", default=None, help="run dir whose (a),
 ap.add_argument("--neuron", default=None, help="--phase S: the neuron, e.g. L10N4358")
 ap.add_argument("--prompt", default="Text:\n", help="--phase S: the prompt (default 'Text:\\n')")
 ap.add_argument("--gate_from", default=None, help="non-dry Phase B: read the gate from this run dir")
+# warm start (added 2026-11-18; all off by default, so earlier runs reproduce exactly)
+ap.add_argument("--warm_start", action="store_true",
+                help="cross-entropy warm start of adapter 'warm' on the neuron's top-10 FineWeb contexts, then GRPO on "
+                     "adapter 'policy' (initialized as a copy of warm)")
+ap.add_argument("--warm_lr", type=float, default=1e-4)
+ap.add_argument("--warm_epochs", type=int, default=2)
+ap.add_argument("--warm_bs", type=int, default=1, help="warm-start micro-batch = optimizer batch (contexts per step)")
+ap.add_argument("--kl_ref", choices=["base", "warm"], default=None,
+                help="reference policy of the k3 KL term (and of the logged KL): base = all adapters off (run 1), "
+                     "warm = frozen warm adapter. Default: warm with --warm_start, else base")
+ap.add_argument("--n_diversity", type=int, default=64, help="warm-start diversity pre-check sample count")
+ap.add_argument("--test_force_redo", action="store_true", help="TESTING ONLY (needs --dry): treat the first warm start as near-copies so the 1-epoch redo path runs")
 a = ap.parse_args()
+if a.kl_ref is None:
+    a.kl_ref = "warm" if a.warm_start else "base"
+if a.kl_ref == "warm" and not a.warm_start:
+    sys.exit("--kl_ref warm needs --warm_start")
+if a.warm_start and a.phase == "B":
+    sys.exit("--warm_start is only implemented for single-neuron phases (A, S)")
+if a.test_force_redo and not a.dry:
+    sys.exit("--test_force_redo needs --dry")
+if a.warm_start and a.merged_gen:
+    sys.exit("--warm_start uses unmerged generation only")
 P = PHASES[a.phase]
 if a.phase == "S":
     if not a.neuron:
@@ -173,15 +195,83 @@ def check_reference(where):
 G, gpn = a.group_size, P["groups_per_neuron"]
 per_neuron = G * gpn; n_step = per_neuron * len(neurons)
 
-el = Elicitor(new_tokens=P["tokens"], lora_r=a.lora_r, lora_alpha=a.lora_alpha, seed=a.seed, log=log)
+el = Elicitor(new_tokens=P["tokens"], lora_r=a.lora_r, lora_alpha=a.lora_alpha, seed=a.seed, log=log,
+              warm_start=a.warm_start)
 REFS = ref_contexts()
 pids = [el.prompt_ids(p) for p in P["prompts"]]
+
+# ---------------- warm start (added 2026-11-18) ----------------
+from hermes.copycheck import copy_stats, diversity, NEAR_COPY_JACCARD
+TOP10 = {}          # neuron -> its stored top-10 FineWeb contexts (token lists, rank order), for warm start + copy check
+if a.warm_start:
+    from hermes.paths import BASELINE_DIR
+    from hermes.baseline import Baseline
+    _b = Baseline(BASELINE_DIR)
+    TOP10 = {n: [_b.context_tokens(c["ctx"]) for c in fw[n]["top10"]] for n in neurons}
+    del _b
+
+def text_tokens(texts):
+    ids, lens = el.scorer.encode(texts)
+    return [ids[i, :int(lens[i])].tolist() for i in range(len(texts))]
+
+def diversity_check(n_samples, tag):
+    """n_samples from the active adapter (warm) for the (single) neuron: diversity metrics + their scores."""
+    comps = el.generate(pids, n_samples, batch=a.gen_batch)[0]
+    t = el.texts(comps); s = el.score(t, [pairs_n[0]] * len(t)).tolist()
+    d = diversity(text_tokens(t), t, TOP10[neurons[0]])
+    sv = [v for v in s if not math.isnan(v)]
+    d.update(tag=tag, mean_score=float(np.mean(sv)) if sv else None, max_score=max(sv) if sv else None,
+             n_empty=sum(math.isnan(v) for v in s), samples=[dict(text=x, score=v, **c) for x, v, c in zip(t, s, d.pop("per_sample"))])
+    log(f"diversity pre-check ({tag}): {d['n_distinct_texts']}/{n_samples} distinct, mean pairwise Jaccard "
+        f"{d['mean_pairwise_jaccard']:.3f}, max Jaccard to top-10 mean {d['max_jaccard_to_top10_mean']:.3f} / max "
+        f"{d['max_jaccard_to_top10_max']:.3f}, near-copies (> {NEAR_COPY_JACCARD}) {d['n_near_copies']}/{n_samples}; "
+        f"score mean {d['mean_score']} max {d['max_score']}")
+    return d
+
+warm_info = None
+if a.warm_start:
+    check_bitwise("before warm start"); check_reference("before warm start")
+    init_state = el.adapter_state("warm")
+    attempts = []
+    for ep in ([a.warm_epochs, 1] if a.warm_epochs > 1 else [a.warm_epochs]):
+        if attempts:
+            log(f"more than half of the diversity samples are near-copies: redoing the warm start with {ep} epoch")
+            el.load_adapter_state(init_state)
+        h = el.warm_start_train(pids[0], TOP10[neurons[0]], lr=a.warm_lr, epochs=ep, bs=a.warm_bs, seed=a.seed)
+        torch.manual_seed(a.seed + 10 + len(attempts))
+        h["diversity"] = diversity_check(a.n_diversity, f"{ep} epoch(s)")
+        attempts.append(dict(n_epochs=ep, **h))
+        if h["diversity"]["frac_near_copies"] <= 0.5 and not (a.test_force_redo and len(attempts) == 1):
+            break
+    warm_info = dict(lr=a.warm_lr, bs=a.warm_bs, planned_epochs=a.warm_epochs, used_epochs=attempts[-1]["n_epochs"],
+                     redone=len(attempts) > 1, attempts=attempts, contexts=f"top-10 FineWeb contexts of {neurons[0]} "
+                     "(data/contexts.npz), as completions of the prompt", near_copy_threshold=NEAR_COPY_JACCARD)
+    json.dump(warm_info, open(f"{out_dir}/warm_start.json", "w"), indent=1)
+    el.make_policy()
+    WARM_STATE = el.adapter_state("warm")
+    torch.manual_seed(a.seed)      # training RNG stream starts from the seed after the warm start
+el.kl_ref = a.kl_ref
+
+def check_warm_frozen(where):
+    if not a.warm_start:
+        return
+    ok, n, bad = el.adapter_equal(WARM_STATE)
+    integrity.setdefault("warm_frozen", []).append(dict(where=where, ok=ok, n_checked=n, mismatches=bad))
+    json.dump(integrity, open(f"{out_dir}/integrity.json", "w"), indent=1)
+    log(f"warm-adapter frozen check ({where}): {'PASS' if ok else 'FAIL'} ({n} tensors, mismatched {bad})")
+    if not ok:
+        fail(f"warm adapter weights changed at {where}: {bad}")
 hp = dict(phase=a.phase, neurons=neurons, prompts=P["prompts"],
           phase_b_prompt=a.phase_b_prompt if a.phase == "B" else None, prompt_token_ids=pids, new_tokens=P["tokens"],
           new_token_ids=el.new_ids, steps=a.steps, group_size=G, groups_per_neuron=gpn, groups_per_step=gpn * len(neurons),
           completions_per_step=n_step, lr=a.lr, lr_schedule="linear decay to 0 over all steps, no warmup",
           optimizer="AdamW(betas=(0.9,0.999), eps=1e-8, weight_decay=0)", max_grad_norm=a.max_grad_norm,
-          kl_beta=a.kl_beta, kl_estimator="k3 per token: exp(ref-logp)-(ref-logp)-1, ref = LoRA off" , lora_r=a.lora_r, lora_alpha=a.lora_alpha, lora_dropout=0.0, lora_target_modules=LORA_TARGET_RE,
+          kl_beta=a.kl_beta, kl_ref=a.kl_ref, kl_estimator="k3 per token: exp(ref-logp)-(ref-logp)-1, ref = " + ("all adapters off (untrained base)" if a.kl_ref == "base" else "frozen warm-start adapter"),
+          warm_start=(dict(lr=a.warm_lr, epochs=a.warm_epochs, bs=a.warm_bs, used_epochs=warm_info["used_epochs"],
+                           redone=warm_info["redone"], n_diversity=a.n_diversity, optimizer="AdamW(0.9,0.999,1e-8,wd 0), constant lr",
+                           max_grad_norm=1.0, loss="mean CE over completion tokens of the top-10 FineWeb contexts")
+                      if a.warm_start else None),
+          adapters=(["warm (frozen)", "policy (trained)"] if a.warm_start else ["default (trained)"]), lora_r=a.lora_r, lora_alpha=a.lora_alpha, lora_dropout=0.0, lora_target_modules=LORA_TARGET_RE,
           trainable_token_indices=bool(el.new_ids), trainable_params=el.n_trainable, adapter_dtype="float32",
           new_token_init="mean of the real-vocabulary embedding rows" if el.new_ids else None,
           generation=dict(mode="raw (no chat template), thinking off", max_new_tokens=64, temperature=1.0, top_k=0,
@@ -203,7 +293,7 @@ json.dump(dict(**hp, env=run_info()), open(f"{out_dir}/config.json", "w"), inden
 log(f"phase {a.phase}: neurons {neurons}, FineWeb max this GPU {fwmax}; {n_step} completions/step; "
     f"{el.n_trainable:,} trainable params; micro_bs {a.micro_bs}, gen_batch {a.gen_batch}")
 
-check_bitwise("start"); check_reference("start")
+check_bitwise("start"); check_reference("start"); check_warm_frozen("start")
 
 params = [p for _, p in el.trainable]
 opt = torch.optim.AdamW(params, lr=a.lr, betas=(0.9, 0.999), eps=1e-8, weight_decay=0.0)
@@ -266,6 +356,7 @@ for step in range(a.steps):
     last = step == a.steps - 1 or early_stop["stopped"]
     if (step + 1) % a.check_every == 0 or last:
         check_bitwise(f"after step {step + 1}" + (" (early stop)" if early_stop["stopped"] else ""))
+        check_warm_frozen(f"after step {step + 1}")
     if step % a.sample_every == 0 or last:
         for j, n in enumerate(neurons):
             for i in range(4):
@@ -275,7 +366,7 @@ for step in range(a.steps):
     if step + 1 == min(10, a.steps):
         st = float(np.mean(step_times[1:] if len(step_times) > 1 else step_times))
         g = float(np.mean(gen_rate))
-        n_eval = len(neurons) * (a.n_fresh + a.n_untrained_best + n_matched)
+        n_eval = len(neurons) * (a.n_fresh * (2 if a.warm_start else 1) + a.n_untrained_best + n_matched)
         eval_s = n_eval * g * 1.15        # + scoring overhead
         train_total = sum(step_times) + st * (a.steps - step - 1)
         proj = dict(after_steps=step + 1, mean_step_s=st, projected_training_s=train_total,
@@ -298,7 +389,7 @@ check_reference("after training")
 
 # ---------------- evaluations ----------------
 res = dict(phase=a.phase, neurons={}, training_s=t_train_total, eval_s={}, integrity=integrity, early_stop=early_stop,
-           steps_done=len(step_times), kl_beta=a.kl_beta, seed=a.seed)
+           steps_done=len(step_times), kl_beta=a.kl_beta, kl_ref=a.kl_ref, seed=a.seed, warm_start=warm_info)
 for n, (L, N), f in zip(neurons, pairs_n, fwmax):
     res["neurons"][n] = dict(layer=L, neuron=N, prompt=P["prompts"][neurons.index(n)], fw_max_a100=fw[n]["fw_max_a100"],
                              fw_max_this_gpu=f)
@@ -328,6 +419,21 @@ def best(scores, texts, top=3):
                 n_empty=int(np.isnan(scores).sum()), mean=float(np.nanmean(scores)) if (~np.isnan(scores)).any() else None,
                 top=[dict(text=texts[i], score=float(scores[i])) for i in order if np.isfinite(s[i])])
 
+def add_copy_check(d, n):
+    """Copy check on every text of an eval dict (d["all"]) against the neuron's top-10 FineWeb contexts."""
+    if n not in TOP10:
+        from hermes.paths import BASELINE_DIR
+        from hermes.baseline import Baseline
+        _b = Baseline(BASELINE_DIR); TOP10[n] = [_b.context_tokens(c["ctx"]) for c in fw[n]["top10"]]; del _b
+    toks = text_tokens([x["text"] for x in d["all"]])
+    for x, t in zip(d["all"], toks):
+        x["copy"] = copy_stats(t, TOP10[n])
+    for x in d["top"]:
+        x["copy"] = copy_stats(text_tokens([x["text"]])[0], TOP10[n])
+    cs = [x["copy"] for x in d["all"]]
+    d["copy_check"] = dict(max_jaccard=max(c["max_jaccard"] for c in cs), max_longest_span=max(c["longest_span"] for c in cs),
+                           best_text=d["top"][0]["copy"] if d["top"] else None)
+
 torch.manual_seed(a.seed + 1)
 t0 = time.time()
 fresh_s, fresh_t = sample_eval(a.n_fresh, untrained=False)
@@ -335,8 +441,21 @@ for j, (n, (L, N)) in enumerate(zip(neurons, pairs_n)):
     d = best(fresh_s[j], fresh_t[j], top=3)
     d["all"] = [dict(text=t, score=float(s)) for t, s in zip(fresh_t[j], fresh_s[j])]
     d["per_token_best"] = el.token_acts(d["top"][0]["text"], L, N) if d["top"] else None
+    add_copy_check(d, n)
     res["neurons"][n]["d_trained_best_of_%d" % a.n_fresh] = d
 res["eval_s"]["d"] = time.time() - t0; save()
+
+if a.warm_start:   # (w) best of n_fresh fresh samples from the frozen warm adapter, scored exactly like (d)
+    torch.manual_seed(a.seed + 4); t0 = time.time()
+    with el.use_adapter("warm"):
+        w_s, w_t = sample_eval(a.n_fresh, untrained=False)
+    for j, n in enumerate(neurons):
+        d = best(w_s[j], w_t[j], top=3)
+        d["all"] = [dict(text=t, score=float(s)) for t, s in zip(w_t[j], w_s[j])]
+        add_copy_check(d, n)
+        res["neurons"][n]["w_warm_best_of_%d" % a.n_fresh] = d
+    res["eval_s"]["w"] = time.time() - t0; save()
+    log("(w) warm-start best of", a.n_fresh, {n: res["neurons"][n][f"w_warm_best_of_{a.n_fresh}"]["best"] for n in neurons})
 log("(d) trained best of", a.n_fresh, {n: res["neurons"][n][f"d_trained_best_of_{a.n_fresh}"]["best"] for n in neurons})
 
 if len(neurons) > 1:   # (e) cross-neuron grid
@@ -409,7 +528,7 @@ if reuse_src:
         "(b)", {n: res["neurons"][n][f"b_untrained_best_of_{n_matched}"]["best"] for n in neurons},
         "(c)", {n: res["neurons"][n]["c_repeated_token"]["score"] for n in neurons})
     res["phase_s"] = time.time() - t_phase
-    check_bitwise("end"); check_reference("end")
+    check_bitwise("end"); check_reference("end"); check_warm_frozen("end")
     save(); log(f"phase {a.phase} done in {res['phase_s'] / 3600:.2f} h; results {out_dir}/results.json")
     sys.exit(0)
 if a.reuse_untrained_from:
@@ -443,7 +562,7 @@ for j, n in enumerate(neurons):
     res["neurons"][n][f"b_untrained_best_of_{n_matched}"] = d
 res["eval_s"]["b"] = time.time() - t0
 res["phase_s"] = time.time() - t_phase
-check_bitwise("end"); check_reference("end")
+check_bitwise("end"); check_reference("end"); check_warm_frozen("end")
 ml = [r for r in el.merge_log if r["restore_s"] is not None]
 res["merge_timing"] = dict(calls=len(el.merge_log), mean_merge_s=float(np.mean([r["merge_s"] or 0 for r in ml])) if ml else None,
                            mean_unmerge_s=float(np.mean([r["unmerge_s"] for r in ml])) if ml else None,

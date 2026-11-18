@@ -22,7 +22,7 @@ every LoRA base weight and of the neuron-token embedding rows. merged() always r
 (also when merge/generation fails), check_base_bitwise() compares the GPU weights with it, and
 reference_scores() rescores fixed FineWeb contexts LoRA-off (must equal the stored this-GPU values exactly).
 """
-import os, re, math, json, time, contextlib
+import os, re, math, json, time, copy, contextlib
 os.environ.setdefault("HF_HOME", "/workspace/hf_cache")
 import numpy as np, torch
 import torch.nn.functional as F
@@ -49,8 +49,16 @@ def bf16_ulp(v):
 
 
 class Elicitor:
-    def __init__(self, new_tokens=(), lora_r=32, lora_alpha=64, seed=0, log=print):
+    def __init__(self, new_tokens=(), lora_r=32, lora_alpha=64, seed=0, log=print, warm_start=False):
+        """warm_start=False (default): one LoRA adapter "default" = the policy, exactly as in run 1.
+        warm_start=True (added 2026-11-18): the first adapter is named "warm"; train it with warm_start_train(),
+        then make_policy() adds adapter "policy" (an exact copy of warm, trained by GRPO) and freezes warm (the
+        optional KL reference, kl_ref="warm"). The scorer is always all adapters disabled."""
         self.log = log
+        self.warm = bool(warm_start)
+        self.kl_ref = "base"      # reference policy for k3: "base" = all adapters off (run 1), "warm" = warm adapter
+        if self.warm:
+            assert not new_tokens, "warm start is only implemented for single-neuron runs without new tokens"
         torch.manual_seed(seed); np.random.seed(seed)
         self.kernels = assert_fast_kernels()
         rev = pinned_revisions()["model_revision"]
@@ -74,7 +82,10 @@ class Elicitor:
             cfg["trainable_token_indices"] = {"embed_tokens": self.new_ids}
         self.lora_config = LoraConfig(**cfg)
         self._emb_mod = base.get_input_embeddings()     # original nn.Embedding (see _emb_weight)
-        self.model = get_peft_model(base, self.lora_config)
+        if self.warm:
+            self.model = get_peft_model(base, copy.deepcopy(self.lora_config), adapter_name="warm")
+        else:
+            self.model = get_peft_model(base, self.lora_config)
         # adapters / trainable token deltas in fp32 (bf16 would round away lr-2e-5 updates)
         for n, p in self.model.named_parameters():
             if p.requires_grad and p.dtype != torch.float32:
@@ -266,9 +277,115 @@ class Elicitor:
 
     @torch.no_grad()
     def _ref_logp(self, x, P, T):
-        """Reference policy = same model with LoRA (and trainable-token deltas) disabled = the scorer weights."""
+        """Reference policy. kl_ref "base" (default, run 1): same model with LoRA (and trainable-token deltas)
+        disabled = the scorer weights. kl_ref "warm": the frozen warm-start adapter."""
+        if self.kl_ref == "warm":
+            with self.use_adapter("warm"):
+                return self._logp(x, P, T)
         with self.adapter_off():
             return self._logp(x, P, T)
+
+    # ---------- warm start (added 2026-11-18) ----------
+    def _adapter_params(self, name):
+        return [(n, p) for n, p in self.model.named_parameters() if f".{name}." in n and "lora_" in n]
+
+    @contextlib.contextmanager
+    def use_adapter(self, name):
+        """Temporarily make adapter `name` the active one. PEFT's set_adapter also toggles requires_grad, so every
+        adapter parameter's requires_grad flag is saved and restored exactly (warm stays frozen, policy trainable)."""
+        prev = self.model.active_adapter
+        rg = [(p, p.requires_grad) for n, p in self.model.named_parameters() if "lora_" in n]
+        self.model.set_adapter(name)
+        try:
+            yield
+        finally:
+            self.model.set_adapter(prev)
+            for p, r in rg:
+                p.requires_grad_(r)
+
+    def adapter_state(self, name):
+        """Exact clone of one adapter's parameters (for the frozen check and for redoing the warm start)."""
+        return {n: p.detach().clone() for n, p in self._adapter_params(name)}
+
+    @torch.no_grad()
+    def load_adapter_state(self, state):
+        d = dict(self.model.named_parameters())
+        for n, v in state.items():
+            d[n].copy_(v)
+
+    def adapter_equal(self, state):
+        """-> (all bitwise equal, number of tensors checked, first mismatched names)."""
+        d = dict(self.model.named_parameters())
+        bad = [n for n, v in state.items() if not torch.equal(d[n], v)]
+        return not bad, len(state), bad[:5]
+
+    @torch.no_grad()
+    def ce_eval(self, prompt_ids, contexts, bs=16):
+        """Mean per-token cross-entropy of the active adapter on contexts as completions of prompt_ids (no grads)."""
+        self.model.eval()
+        s, n = 0.0, 0
+        pid = [prompt_ids] * len(contexts)
+        for st in range(0, len(contexts), bs):
+            b = list(range(st, min(st + bs, len(contexts))))
+            x, m, P, T = self._batch(pid, contexts, b)
+            lp = self._logp(x, P, T)
+            s += float(-(lp * m).sum()); n += int(m.sum())
+        return s / n
+
+    def warm_start_train(self, prompt_ids, contexts, lr=1e-4, epochs=2, bs=1, seed=0, max_grad_norm=1.0):
+        """Cross-entropy fine-tuning of the "warm" adapter (the only adapter at this point) on contexts (token lists)
+        as completions of prompt_ids; loss on completion tokens only (prompt not trained), mean over a micro-batch's
+        completion tokens. AdamW(0.9, 0.999, eps 1e-8, wd 0), constant lr, grad-norm clip, examples shuffled each
+        epoch with torch.Generator(seed). -> dict(eval_ce [before, after epoch 1, ...], epochs=[...])."""
+        assert self.warm and self.model.active_adapter == "warm"
+        params = [p for _, p in self.trainable]
+        opt = torch.optim.AdamW(params, lr=lr, betas=(0.9, 0.999), eps=1e-8, weight_decay=0.0)
+        g = torch.Generator().manual_seed(seed)
+        pid = [prompt_ids] * len(contexts)
+        hist = dict(eval_ce=[self.ce_eval(prompt_ids, contexts)], epochs=[], lr=lr, bs=bs, n_contexts=len(contexts),
+                    max_grad_norm=max_grad_norm, seed=seed)
+        t0 = time.time()
+        for ep in range(epochs):
+            order = torch.randperm(len(contexts), generator=g).tolist()
+            losses, gns = [], []
+            self.model.train()
+            for st in range(0, len(order), bs):
+                b = order[st:st + bs]
+                x, m, P, T = self._batch(pid, contexts, b)
+                opt.zero_grad(set_to_none=True)
+                loss = -(self._logp(x, P, T) * m).sum() / m.sum()
+                loss.backward()
+                gns.append(float(torch.nn.utils.clip_grad_norm_(params, max_grad_norm)))
+                opt.step(); losses.append(float(loss.detach()))
+            opt.zero_grad(set_to_none=True)
+            hist["epochs"].append(dict(epoch=ep + 1, order=order, train_losses=losses, mean_train_loss=float(np.mean(losses)),
+                                       grad_norms=gns))
+            hist["eval_ce"].append(self.ce_eval(prompt_ids, contexts))
+            self.log(f"warm start epoch {ep + 1}/{epochs}: mean train CE {np.mean(losses):.4f}, "
+                     f"eval CE on all {len(contexts)} contexts {hist['eval_ce'][-1]:.4f} (before: {hist['eval_ce'][0]:.4f})")
+        del opt
+        hist["seconds"] = time.time() - t0
+        return hist
+
+    def make_policy(self):
+        """Add adapter "policy" = exact copy of "warm" (fp32), make it the active trainable adapter, freeze warm."""
+        assert self.warm and "policy" not in self.model.peft_config
+        self.model.add_adapter("policy", copy.deepcopy(self.lora_config))
+        warm = dict(self._adapter_params("warm")); pol = dict(self._adapter_params("policy"))
+        assert len(warm) == len(pol) and len(warm) > 0
+        with torch.no_grad():
+            for n, p in pol.items():
+                p.data = p.data.float()
+                p.copy_(warm[n.replace(".policy.", ".warm.")])
+        self.model.set_adapter("policy")
+        for _, p in warm.items():
+            p.requires_grad_(False)
+        for _, p in pol.items():
+            p.requires_grad_(True)
+        self.trainable = [(n, p) for n, p in self.model.named_parameters() if p.requires_grad]
+        assert all(".policy." in n for n, _ in self.trainable), [n for n, _ in self.trainable if ".policy." not in n][:3]
+        self.n_trainable = sum(p.numel() for _, p in self.trainable)
+        self.log(f"policy adapter = copy of warm ({len(pol)} tensors, {self.n_trainable:,} trainable params); warm frozen")
 
     @staticmethod
     def k3(logp, ref_logp):

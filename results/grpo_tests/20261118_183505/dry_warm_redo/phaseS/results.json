@@ -1,0 +1,1966 @@
+{
+ "phase": "S",
+ "neurons": {
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "Text:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.90625,
+   "d_trained_best_of_8": {
+    "best": 1.3046875,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.48236083984375,
+    "top": [
+     {
+      "text": "line and the human trademark. The Gig economy movement is all about the employment in online positions such as Gig Eco Economy job. Recently, there are various online jobs are available.\nYou could earn money easily by doing Gig Eco Economy jobs. You can confidently use this Gig Eco Economy jobs because they are safe jobs. These",
+      "score": 1.3046875,
+      "copy": {
+       "max_jaccard": 0.16470588235294117,
+       "max_jaccard_rank": 2,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      }
+     },
+     {
+      "text": "What is the best way to make your house comping easier? Knowing what you are doing is the best way to minimize any stress you have. Follow the next tips to achieve what you wish your house to be: well-comping and practically stunning outside and inside.\nFirst, you must ascertain that you have a photo",
+      "score": 0.79296875,
+      "copy": {
+       "max_jaccard": 0.1794871794871795,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "express to the person who are now suffering from this pitiful disease.\nVenous or varicose leg veins is very common and is mostly caused due to genetics, lifestyle or fallacious way of living. It is generally happens during the late stages of pregnancy when a woman is pregnant. In certain cases, injury in",
+      "score": 0.6015625,
+      "copy": {
+       "max_jaccard": 0.12087912087912088,
+       "max_jaccard_rank": 1,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "the Hell's Kitchen. This could be a problem since we only have our hand. No sword and flashbangs available here. So we have to think something to survive and get the armor out of the box.\nThe problem is the enemies are too much to handle with an AK-47 only and no extra",
+      "score": 0.1171875,
+      "copy": {
+       "max_jaccard": 0.125,
+       "max_jaccard_rank": 1,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "the right way? There are a lot of words in Glodon English that even if you are educated you cannot pronounce. International students need to learn how to pronounce them.\nQuick Guide: How to Learn how to pronounce Glodon English Quotes?\nLet us check out some examples of words. This will help you improve",
+      "score": 0.3671875,
+      "copy": {
+       "max_jaccard": 0.14285714285714285,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 2
+      }
+     },
+     {
+      "text": "What is the best way to make your house comping easier? Knowing what you are doing is the best way to minimize any stress you have. Follow the next tips to achieve what you wish your house to be: well-comping and practically stunning outside and inside.\nFirst, you must ascertain that you have a photo",
+      "score": 0.79296875,
+      "copy": {
+       "max_jaccard": 0.1794871794871795,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "DOWN can generally get the unrecognized human browser.\nDownload Steps for 16 Book Down:\nStep 2. search for the word \"Install 16Book\"\nStep 3. choose the \"download 16 Book Down\" and click on the \"Download\" button. you will be here now",
+      "score": 0.53125,
+      "copy": {
+       "max_jaccard": 0.11688311688311688,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "as a business person first, and then a full-pay guest. It is recommended to bring at least two types of fabrics for different situations. Allow enough time to pick the fabric. If you feel frazzled in the process, then you will run out of time. Get prepared for the yellow flashery autumn jumper,",
+      "score": 0.06640625,
+      "copy": {
+       "max_jaccard": 0.14285714285714285,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "to that computer program\u2019s script and see what commands it sends to your box. This means that selecting to softwarehook). But besides this, you should also get to know how to select the most suitable external storage media.s\nTo get your ROKU device\u2019s IP address, you can first follow the steps mentioned below",
+      "score": 0.07763671875,
+      "copy": {
+       "max_jaccard": 0.1348314606741573,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "line and the human trademark. The Gig economy movement is all about the employment in online positions such as Gig Eco Economy job. Recently, there are various online jobs are available.\nYou could earn money easily by doing Gig Eco Economy jobs. You can confidently use this Gig Eco Economy jobs because they are safe jobs. These",
+      "score": 1.3046875,
+      "copy": {
+       "max_jaccard": 0.16470588235294117,
+       "max_jaccard_rank": 2,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      }
+     },
+     {
+      "text": "express to the person who are now suffering from this pitiful disease.\nVenous or varicose leg veins is very common and is mostly caused due to genetics, lifestyle or fallacious way of living. It is generally happens during the late stages of pregnancy when a woman is pregnant. In certain cases, injury in",
+      "score": 0.6015625,
+      "copy": {
+       "max_jaccard": 0.12087912087912088,
+       "max_jaccard_rank": 1,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      }
+     }
+    ],
+    "per_token_best": [
+     [
+      "line",
+      0.006134033203125
+     ],
+     [
+      " and",
+      -0.02294921875
+     ],
+     [
+      " the",
+      -0.0042724609375
+     ],
+     [
+      " human",
+      -0.08935546875
+     ],
+     [
+      " trademark",
+      -0.06201171875
+     ],
+     [
+      ".",
+      -0.09033203125
+     ],
+     [
+      " The",
+      -0.00921630859375
+     ],
+     [
+      " Gig",
+      0.0101318359375
+     ],
+     [
+      " economy",
+      -0.051025390625
+     ],
+     [
+      " movement",
+      0.02783203125
+     ],
+     [
+      " is",
+      0.0007171630859375
+     ],
+     [
+      " all",
+      -0.046142578125
+     ],
+     [
+      " about",
+      -0.0257568359375
+     ],
+     [
+      " the",
+      0.04248046875
+     ],
+     [
+      " employment",
+      0.00433349609375
+     ],
+     [
+      " in",
+      -0.002166748046875
+     ],
+     [
+      " online",
+      -0.046875
+     ],
+     [
+      " positions",
+      -0.0147705078125
+     ],
+     [
+      " such",
+      0.08740234375
+     ],
+     [
+      " as",
+      0.068359375
+     ],
+     [
+      " Gig",
+      0.00054931640625
+     ],
+     [
+      " Eco",
+      -0.061767578125
+     ],
+     [
+      " Economy",
+      -0.0098876953125
+     ],
+     [
+      " job",
+      0.007049560546875
+     ],
+     [
+      ".",
+      0.2216796875
+     ],
+     [
+      " Recently",
+      0.006134033203125
+     ],
+     [
+      ",",
+      -0.06298828125
+     ],
+     [
+      " there",
+      0.01324462890625
+     ],
+     [
+      " are",
+      -0.056640625
+     ],
+     [
+      " various",
+      0.1162109375
+     ],
+     [
+      " online",
+      -0.0230712890625
+     ],
+     [
+      " jobs",
+      -0.09375
+     ],
+     [
+      " are",
+      -0.08251953125
+     ],
+     [
+      " available",
+      -0.006378173828125
+     ],
+     [
+      ".",
+      0.00555419921875
+     ],
+     [
+      "\n",
+      -0.01025390625
+     ],
+     [
+      "You",
+      0.0242919921875
+     ],
+     [
+      " could",
+      0.08251953125
+     ],
+     [
+      " earn",
+      -0.07666015625
+     ],
+     [
+      " money",
+      -0.039794921875
+     ],
+     [
+      " easily",
+      0.000583648681640625
+     ],
+     [
+      " by",
+      -8.0108642578125e-05
+     ],
+     [
+      " doing",
+      -0.06591796875
+     ],
+     [
+      " Gig",
+      -0.013427734375
+     ],
+     [
+      " Eco",
+      -0.076171875
+     ],
+     [
+      " Economy",
+      0.037841796875
+     ],
+     [
+      " jobs",
+      0.2451171875
+     ],
+     [
+      ".",
+      0.64453125
+     ],
+     [
+      " You",
+      -0.020263671875
+     ],
+     [
+      " can",
+      0.046142578125
+     ],
+     [
+      " confidently",
+      0.038818359375
+     ],
+     [
+      " use",
+      0.0908203125
+     ],
+     [
+      " this",
+      0.1748046875
+     ],
+     [
+      " Gig",
+      0.0184326171875
+     ],
+     [
+      " Eco",
+      0.2080078125
+     ],
+     [
+      " Economy",
+      0.2177734375
+     ],
+     [
+      " jobs",
+      0.00738525390625
+     ],
+     [
+      " because",
+      0.087890625
+     ],
+     [
+      " they",
+      0.06201171875
+     ],
+     [
+      " are",
+      0.138671875
+     ],
+     [
+      " safe",
+      0.1767578125
+     ],
+     [
+      " jobs",
+      0.0230712890625
+     ],
+     [
+      ".",
+      1.3046875
+     ],
+     [
+      " These",
+      0.48828125
+     ]
+    ],
+    "copy_check": {
+     "max_jaccard": 0.1794871794871795,
+     "max_longest_span": 4,
+     "best_text": {
+      "max_jaccard": 0.16470588235294117,
+      "max_jaccard_rank": 2,
+      "longest_span": 3,
+      "longest_span_rank": 4
+     }
+    }
+   },
+   "w_warm_best_of_8": {
+    "best": 0.6484375,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.29656982421875,
+    "top": [
+     {
+      "text": "it needs to use, such as a hyperlink.\n* What to consider before buying.\nWe provide a variety of different types of neckties to you so that you will have no awkwardness. They\u2019re convenient for you to buy if you many different occasions for you. However, you should understand some things before making",
+      "score": 0.6484375,
+      "copy": {
+       "max_jaccard": 0.12048192771084337,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": ", choosing a website builder allows you to create a website using the features provided by the chosen builder that you like.\n**Why use WordPress?**\n**WordPress benefits**\nMost of those website builders use advanced options that help you to create websites and reduce downtime. However, it is not recommended that you use any of",
+      "score": 0.625,
+      "copy": {
+       "max_jaccard": 0.17567567567567569,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      }
+     },
+     {
+      "text": ">> The great concept for the shortcut key is absolutely the ability to get it all work at once. The simple reason why this needs to take place is so that you can enjoy all the keyboard shortcuts as you\u2019re utilizing them. In the following way, you can make it a lot easier for you to use the accessory",
+      "score": 0.333984375,
+      "copy": {
+       "max_jaccard": 0.189873417721519,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "Client Platforms\n this and this? Your commitment to client support is strong and your promises implemented. This kind of support has been initiated recently for the past year by the client service department for the past client services. You have handled the task in a good way and deserve a lot of praise for doing such hard work. The",
+      "score": 0.130859375,
+      "copy": {
+       "max_jaccard": 0.16666666666666666,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 2
+      }
+     },
+     {
+      "text": "Click the link to download over 200\u2019s of beautiful free Thanksgiving images with our free Thanksgiving thanks giving images. (\nThanksgiving for Grad Image on Pinterest) Thanksgiving thanks giving image slideshows are just amazing!\nFree Thanksgiving thanks giving Pictures \u2013 Thumbsticky\nFree Thanksgiving thanks giving Images Thumbnail (15",
+      "score": 0.310546875,
+      "copy": {
+       "max_jaccard": 0.0989010989010989,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 4
+      }
+     },
+     {
+      "text": "PERINGATAN MAHKAMAH RI BAGI PEMB k\u00edch BERLIG\nPerang piolak kemarin dimana politisi dalam kedudukan yang tinggi memukul-membunuh, tapi dalam kondisi saling menyerang tetap mempertahankan posisi masing-masing, tidak ada yang mau dikalahkan kecuali mati, sudah terlalu berlebihan, mereka berani printing surat kuasa",
+      "score": 0.07373046875,
+      "copy": {
+       "max_jaccard": 0.02,
+       "max_jaccard_rank": 9,
+       "longest_span": 1,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": ", choosing a website builder allows you to create a website using the features provided by the chosen builder that you like.\n**Why use WordPress?**\n**WordPress benefits**\nMost of those website builders use advanced options that help you to create websites and reduce downtime. However, it is not recommended that you use any of",
+      "score": 0.625,
+      "copy": {
+       "max_jaccard": 0.17567567567567569,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      }
+     },
+     {
+      "text": "is the most popular social media platform. It was previously referred to as Facebook but was then rebranded as Instagram as of 2010In 2012, Instagram was acquired by Facebook for $1 billion. Following that purchase, the platform continued to grow due to the unique and creative content it",
+      "score": 0.1025390625,
+      "copy": {
+       "max_jaccard": 0.125,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": ">> The great concept for the shortcut key is absolutely the ability to get it all work at once. The simple reason why this needs to take place is so that you can enjoy all the keyboard shortcuts as you\u2019re utilizing them. In the following way, you can make it a lot easier for you to use the accessory",
+      "score": 0.333984375,
+      "copy": {
+       "max_jaccard": 0.189873417721519,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      }
+     },
+     {
+      "text": "we follow for this example), we sort this list. We sort it in alphabetical order and it gives us the following list as our target list:\n['Bird', 'Cat', 'Dog']\nNow we are done and just need to find a way back to the list of objects that has a breed attribute equal to",
+      "score": 0.1474609375,
+      "copy": {
+       "max_jaccard": 0.17073170731707318,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "it needs to use, such as a hyperlink.\n* What to consider before buying.\nWe provide a variety of different types of neckties to you so that you will have no awkwardness. They\u2019re convenient for you to buy if you many different occasions for you. However, you should understand some things before making",
+      "score": 0.6484375,
+      "copy": {
+       "max_jaccard": 0.12048192771084337,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "copy_check": {
+     "max_jaccard": 0.189873417721519,
+     "max_longest_span": 3,
+     "best_text": {
+      "max_jaccard": 0.12048192771084337,
+      "max_jaccard_rank": 7,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     }
+    }
+   },
+   "a_untrained_best_of_8": {
+    "best": 0.2265625,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.126983642578125,
+    "top": [
+     {
+      "text": "Citizens of Delhi, also known as the Delhi Sultanate, were the first to follow the Islamic faith in India, which is known as Delhi Sultanate.\n\nQuestion: \n\"On the basis of the text, what is the claim?\"\n\nAnswer:\n\n\n\nThe claim in the text is that \"",
+      "score": 0.2265625
+     },
+     {
+      "text": "Should I buy a Sony DSC-H50 vs. DSC-H51? \\n\nShould I buy a Sony DSC-H50 or DSC-H51?\\n\nShould I buy a Sony DSC-H50 or DSC-H31?\\n\n\nAnswer:  \u201cD",
+      "score": 0.185546875
+     },
+     {
+      "text": "In this paper, we review the basic approaches \n\nLater on, we paper will discuss about some related theoretical foundations:CMAs \n\n\n\nThe dataset o2.5-8k has been obtained from the \n\ndataset of e2elyt? if \n\nWe demonstrate ....................................................................\n\nWe propose and Evaluate the performance of a",
+      "score": 0.150390625
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.055419921875,
+    "pos": 23
+   },
+   "b_untrained_best_of_64": {
+    "best": 0.625,
+    "n": 64,
+    "n_empty": 0,
+    "mean": 0.15050888061523438,
+    "top": [
+     {
+      "text": "\"The Covid-19 vaccine is showing predictable side effects, which is a great indicator as doctors are taking notes of every patient who receives a Covid-19 vaccine.\"\n \nTask:\n Classify the following text into one of two categories: [INFORMATIVE, ARGUMENT]",
+      "score": 0.625
+     },
+     {
+      "text": "AI Models: A New Era of AI Development\n\nIn the modern era of artificial intelligence, models are the cornerstone of innovation. With the emergence of large language models like GPT, algorithms have become more efficient, enabling the development of smarter, more robust AI systems. These models, powered by large-scale data and advanced algorithms",
+      "score": 0.44921875
+     },
+     {
+      "text": "The set of organisms responsible for breaking down organic matter is the basis of any ecosystem. These organisms are called decomposers. Decomposers include saprophytes and fungi. \nNaturally, most of the organisms involved in the ecosystem aim to develop their own individuality by achieving a highly uniform existence within a limited environment",
+      "score": 0.431640625
+     },
+     {
+      "text": "--------------------------\nWhen you have a lot of hard work plus extreme enthusiasm; when you have incredibly clever and creative people who are able to generate... generate automatic extractors for the auto-parallel computing architecture, and when you put the pieces together; when you put the pipes of distributed computing to the mature technology of stacks yielding",
+      "score": 0.255859375
+     },
+     {
+      "text": "Roasting Almond Flour\n\nIngredients needed:\nWhole almonds\nA coulonier with a sharp mandrel\nA couple of sheets of dry ice (dry ice pellets are better)\nA couple of sheets of ice sheets\n\nIngredients for the recipe:\n90g almonds\n90g roasted peanuts\n9",
+      "score": 0.2412109375
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.13623046875,
+     "0.9": 0.23330078125000003,
+     "0.99": 0.5142578124999996,
+     "0.999": 0.6139257812499996
+    }
+   }
+  }
+ },
+ "training_s": 9.674127578735352,
+ "eval_s": {
+  "d": 7.254552841186523,
+  "w": 6.600242853164673,
+  "a": 4.173483848571777,
+  "b": 4.422264814376831
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6301448345184326,
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6147756576538086,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6147468090057373,
+    "where": "after step 1"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6174046993255615,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ],
+  "warm_frozen": [
+   {
+    "where": "start",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 1",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "end",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 1,
+  "flat_frac": null,
+  "patience": 25
+ },
+ "steps_done": 1,
+ "kl_beta": 0.01,
+ "kl_ref": "warm",
+ "seed": 0,
+ "warm_start": {
+  "lr": 0.0001,
+  "bs": 1,
+  "planned_epochs": 2,
+  "used_epochs": 1,
+  "redone": true,
+  "attempts": [
+   {
+    "n_epochs": 2,
+    "eval_ce": [
+     3.3266036987304686,
+     2.216230773925781,
+     1.2043872833251954
+    ],
+    "epochs": [
+     {
+      "epoch": 1,
+      "order": [
+       4,
+       1,
+       7,
+       5,
+       3,
+       9,
+       0,
+       8,
+       6,
+       2
+      ],
+      "train_losses": [
+       3.386916160583496,
+       2.96722412109375,
+       2.9369306564331055,
+       2.9269533157348633,
+       3.598377227783203,
+       2.423468589782715,
+       3.677184581756592,
+       2.6031570434570312,
+       3.027663469314575,
+       3.041977882385254
+      ],
+      "mean_train_loss": 3.0589853048324587,
+      "grad_norms": [
+       7.620950698852539,
+       4.898502349853516,
+       4.1825714111328125,
+       3.945347547531128,
+       3.8118834495544434,
+       3.976296901702881,
+       6.242946147918701,
+       5.658444881439209,
+       6.4461469650268555,
+       4.367663860321045
+      ]
+     },
+     {
+      "epoch": 2,
+      "order": [
+       3,
+       9,
+       4,
+       2,
+       7,
+       8,
+       6,
+       0,
+       5,
+       1
+      ],
+      "train_losses": [
+       2.657489776611328,
+       1.7048832178115845,
+       1.7706859111785889,
+       2.2715301513671875,
+       1.7645108699798584,
+       1.7981716394424438,
+       2.125218391418457,
+       2.7409682273864746,
+       1.4973586797714233,
+       1.4885653257369995
+      ],
+      "mean_train_loss": 1.9819382190704347,
+      "grad_norms": [
+       3.4774839878082275,
+       2.8208062648773193,
+       3.4914777278900146,
+       3.654413938522339,
+       3.524837017059326,
+       4.758798599243164,
+       5.244847297668457,
+       5.17079496383667,
+       3.5389349460601807,
+       4.068694591522217
+      ]
+     }
+    ],
+    "lr": 0.0001,
+    "bs": 1,
+    "n_contexts": 10,
+    "max_grad_norm": 1.0,
+    "seed": 0,
+    "seconds": 12.569074392318726,
+    "diversity": {
+     "n_samples": 64,
+     "n_distinct_texts": 64,
+     "mean_pairwise_jaccard": 0.09604955009621041,
+     "max_jaccard_to_top10_mean": 0.15014237262017718,
+     "max_jaccard_to_top10_max": 0.2236842105263158,
+     "max_jaccard_to_top10_median": 0.1518987341772152,
+     "longest_span_max": 6,
+     "near_copy_threshold": 0.8,
+     "n_near_copies": 0,
+     "frac_near_copies": 0.0,
+     "tag": "2 epoch(s)",
+     "mean_score": 0.3451662063598633,
+     "max_score": 1.8046875,
+     "n_empty": 0,
+     "samples": [
+      {
+       "text": ". and hygiene. Using naturally-derived means of cleaning your dryer and lamp shades will help to safely remove dead skin cells and other dirt without using harsh chemicals that might cause irritation.\n1. Lemon \u2013 You can use lemon to clean your dryer and lamp shades too. Just put some fresh lemons in the dryer and put",
+       "score": 0.2314453125,
+       "max_jaccard": 0.11764705882352941,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "of some of the most popular tourist countries.\nBy reviewing its reviews and choosing the best options, you can get into this category.\nFirst Place: Italy\nItaly is one of the most visited countries in the world. It is considered to be one of the most beautiful destinations in the world.\nThe country\u2019s",
+       "score": 1.046875,
+       "max_jaccard": 0.1891891891891892,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "in partnership with businesses. Our mission is to bridge the gap between talented designers and consumers. Every engagement is curated with the intention of connecting the best designers in the world with the best brands on the market.\nWe strive to excite our clients with our curation. The goal of our agency is to introduce our clients",
+       "score": 0.06298828125,
+       "max_jaccard": 0.13157894736842105,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "In this first level, a child needs to take action (clicking on the Mouse Image) to be able to click on the Mouse Image again.\nIn the second level, there will be a Boss to defeat. In this level, the Boss will be moving around. They want you to click on their mouth when",
+       "score": 0.07861328125,
+       "max_jaccard": 0.13157894736842105,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "as it is a high-quality business tool that provides comprehensive solutions to manage your entire business operations. Its functionality depends largely on the services and products offered by the company. Moreover, the software relies on its customers\u2019 input to provide optimal solutions to the challenges they face. Looking at the scalability capabilities of the Shopify platform, you",
+       "score": 0.2158203125,
+       "max_jaccard": 0.1728395061728395,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "chooses whom they vote for when they make their decisions about elected officials.\nFirst, the democratic method that you use to choose your President doesn\u2019t actually work too well. When you cast your vote for a candidate, some individuals might choose to vote for the candidate that they just happened to support without actually taking their time to",
+       "score": 0.13671875,
+       "max_jaccard": 0.15384615384615385,
+       "max_jaccard_rank": 9,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "doing that the grogginess lifts faster.\n \u2013Caffeine will keep you awake, and these energy drinks are loaded with it to make sure of that.\n \u2013Caffeine produces too many side effects in too many ways and it causes more problems on the health of some people. That\u2019s why you should",
+       "score": 0.53515625,
+       "max_jaccard": 0.1511627906976744,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "that have a natural scent profile recommends evaporated or condensed milk, while others might choose to use powder.\n \u2013 Premium chocolate brands: Only pick the best brands. Some brands sell their products for over $12.\n \u2013 Experienced confectioners: Use raw sugar from these types of shops.\n \u2013 Local produce",
+       "score": 0.302734375,
+       "max_jaccard": 0.12631578947368421,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about encouraging Others to Live Better styles of living.\nTake the example of a young person who decided to pursue his/her dream because they had the ambition to win over the whole world. The environment in which he/she lived compelled him to strengthen his business career. The same way, that person did the same to their personal",
+       "score": 0.095703125,
+       "max_jaccard": 0.12359550561797752,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "Competitors in automobile manufacturing need to consider various factors when choosing a new supplier for their procurement needs. One of these ways of selecting a supplier is the use of Rigel\u2019s competitive supplier selection guide. According to this method, many companies are using the guide in order to ensure they obtain the best dealership services which they need",
+       "score": 0.19921875,
+       "max_jaccard": 0.16049382716049382,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      },
+      {
+       "text": ". Usually, there are two types of drainage systems: open and closed. Open drainage systems consist of trenches containing perforated pipes and other equipment used to collect the stormwater that comes through the trenches. Sometimes, open drainage systems are also referred to as surface drainage systems or open ditches steered through the system. Surface",
+       "score": 0.1943359375,
+       "max_jaccard": 0.12195121951219512,
+       "max_jaccard_rank": 1,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "from the Walt Disney Company and is primarily responsible for making live-action Disney movies that are considered quality products. The company was officially created in 2013 and functions as a subsidiary of the Walt Disney Company. The head of Buena Vista Pictures was invested into his role by Bob Chapek, Disney\u2019s diverse",
+       "score": 0.076171875,
+       "max_jaccard": 0.12790697674418605,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      },
+      {
+       "text": ". Each building is designed to give you the best experience. For instance, the one in the Mile High City has a 6-star rating. The building in the movie city has a 5-star review. The other building, on the other hand, also has a top 5-star rating.\nThe buildings in",
+       "score": 0.32421875,
+       "max_jaccard": 0.18840579710144928,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ". A qualitative analysis is an example of this type of analysis which is conducted when a specific question needs to be answered. Quantitative analysis, on the other hand, focuses on answering such questions. It deals with data to evaluate the situation using graphics and statistics. Qualitative analysis is also conducted by looking into the various strengths",
+       "score": 0.30859375,
+       "max_jaccard": 0.13095238095238096,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 7
+      },
+      {
+       "text": ". When someone is looking for their global job in the UK, they need to review their qualifications and analyze their skill sets accordingly. Moreover, the government of the UK offers various positions, such as healthcare, agriculture, and tourism. Therefore, you should review these job sectors to ensure that you are selected. besides, you",
+       "score": 0.62890625,
+       "max_jaccard": 0.15789473684210525,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "some types of optical illusions.\nTypes of Optical Illusions\n.Standford\u5165\u5ba4Admit Rate is not popular yet due to funding issues and Stanford is not likely to implement Stanford\u5165\u5ba4Admit Rate any time soon.\nDDirecting projects\nCreative projects\nResearch projects\nRead more\nDesignations\nWhat makes",
+       "score": 0.10400390625,
+       "max_jaccard": 0.09195402298850575,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ": with this product, you can store your daily and emergency needs in one place. The cool storage style is sure to appeal to any individual.\nThe Portable Cooler Bag is great for trips to the beach and the pool. The design of this product is durable to withstand all types of weather. You are able to carry",
+       "score": 0.2197265625,
+       "max_jaccard": 0.21518987341772153,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "that uses underlying technology from the likes of Meta and Microsoft. With the help of this underlying technology, users can access Instagram on most devices out there.\nOne way users can access the app on their handheld devices is through the mobile application. You can download the iOS version of this app via the following link while Android users",
+       "score": 0.828125,
+       "max_jaccard": 0.125,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "Though good because of their prize-winning quality of materials used to manufacture these items, items that fall under the_fact category may not be the best or most appropriate items for your given needs. Instead of looking and purchasing products that qualify as fact items, it\u2019d be more appropriate to opt for items that have their respective design features",
+       "score": 0.578125,
+       "max_jaccard": 0.1724137931034483,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "making capillary action. To compensate for the loss of water caused by capillary action, you need to continually water your water storage plants.\nContainer plants are very flexible because you can switch them between indoors and outdoors depending on the season. Although you may want to keep certain plants inside the house during winter, the fact",
+       "score": 0.08447265625,
+       "max_jaccard": 0.14634146341463414,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "you can ask people about themselves.\nWrite questions and give prompts for content in the tutorial you just read.\nAnswering open-ended questions can help you build meaningful relationships:\nPatterns\nThere are two types of questions you can ask in person:\nDirect questions\nIndirect questions\nDirect questions: These types of",
+       "score": 0.0703125,
+       "max_jaccard": 0.11538461538461539,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "LearningPolish Language,SomethingLikeText:\u201cLearning state and design patterns in Polish,\u201d\u201cHow to study Polish state design patterns,\u201d\u201cPolish state patterns in action,\u201d\u201cAuthentic Polish state patterns examples,\u201d\u201cState pattern examples in Polish,\u201d\u201cPolish patterns description,\u201d and more. too!\nFirst,",
+       "score": 0.3046875,
+       "max_jaccard": 0.0958904109589041,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "of the deep time scale and encompassed millions of years of animal evolution. The first tetrapods are believed to have first appeared during the late Devonian epoch and began to branch out into the reptile, amphibian, and mammal lineages. For example, amphibian lineages that appeared during the Carbonifer",
+       "score": 0.1865234375,
+       "max_jaccard": 0.12048192771084337,
+       "max_jaccard_rank": 3,
+       "longest_span": 2,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "that expect such treatment for themselves. In this way, you are able to ensure that your children will learn that you will take care of whatever comes their way. For example, in the event that your kids wish to call some friends, you might choose to let them do that. In the event that your kids are interested",
+       "score": 0.13671875,
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 2,
+       "longest_span": 6,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "doing business? With the help of savvy marketing methods, businesses can quantify their success and take the next step towards growth. Review these tactics in order to make a solid decision.\nConducting research on the great businesses of the future can be quite eye-opening. Through reviewing these, you will be able to penetrate the",
+       "score": 1.8046875,
+       "max_jaccard": 0.15476190476190477,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ".\nImagine you\u2019re planning a vacation and want to make sure you choose the best hotels in Sevnica. You might want to choose a luxury hotel in Sevnica that offers comfortable stays.\nIf you decide to choose a provider that offers higher-quality lodging options, you\u2019ll choose one of the most popular hotels",
+       "score": 0.50390625,
+       "max_jaccard": 0.17333333333333334,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "to achieve their goals while maintaining a healthy lifestyle? The answer lies in understanding the importance of protein powder and how you can use it in your workouts and recovery.\nProtein powder is a convenient source of protein that can be used to supplement your diet. It is made from various sources such as whey protein, case",
+       "score": 0.5078125,
+       "max_jaccard": 0.18292682926829268,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "how it relates to the landmark itself. Option B, while incorrect because Trump does reference it to sentencing, does use that context to explain how referencing fire signals justice in the case of the former president. Opting for C over D does not take into account the nature of Trump doing what he is doing. Option C focuses",
+       "score": 0.064453125,
+       "max_jaccard": 0.11764705882352941,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "the quantity of media that needs to be used. The cost that is incurred during the use of media agencies depends heavily on the type of agency chosen. Getting digital media companies to handle advertising campaigns might be more expensive than working with a small-medium media agencies. This reason is due to the fact that digital media agencies typically employ",
+       "score": 0.2236328125,
+       "max_jaccard": 0.14102564102564102,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "is the most important product in our company. The usage of that product increases all the time that which makes it the most used toy in our country today. Our company\u2019s mission is to produce some of the best toys that kids and parents can enjoy together. Every toy that we produce has to be rated high by customers to",
+       "score": 0.09423828125,
+       "max_jaccard": 0.15384615384615385,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ".",
+       "score": 0.00518798828125,
+       "max_jaccard": 0.022727272727272728,
+       "max_jaccard_rank": 9,
+       "longest_span": 1,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "to the nearest water source. Choose a location with good drainage and sunlight. Lifting lip plants in containers is also an option.\nTo plant the plant, carefully remove the\u65e7\u7684\u5851\u6599\u5305\u88c5 and place the plant into the new location with your preferred soil mix.\nWatering is a critical part of watching your plants grow",
+       "score": 0.12255859375,
+       "max_jaccard": 0.12790697674418605,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "as their own kind.\nSome stories seem to imply that animals form this kind of relationships naturally. For instance, in the story of the love between Crounce, a wolf, and Amelia, a cow, the pair actually met and connected with one another. However, it is a myth that these types of relationships",
+       "score": 0.0966796875,
+       "max_jaccard": 0.14814814814814814,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "order your food. Now, let\u2019s review how to order on Alibaba.com.\nBrowse the catalog:\nSearch for products:\nMake sure that the items that you want are available within your budget. To find quality products, Alibaba.com uses its Verified Supplier feature. Therefore, you should browse upon those items/the products",
+       "score": 0.10986328125,
+       "max_jaccard": 0.1518987341772152,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "Name: Kotinka, Model: Kotinka P1 Phone Type: Gaming phone\nRelease Year: 2020\nMarket Price: $200-$500, US market price is around $200, while other markets vary\nSoftware: Android 9\nProcessor: Qualcomm Snapdragon",
+       "score": 0.30859375,
+       "max_jaccard": 0.04938271604938271,
+       "max_jaccard_rank": 7,
+       "longest_span": 1,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "of all human beings. In this sense, you are different from the majority of people. Therefore, you have to be careful with choosing partners who have chosen to be ordinary as well. The best way to be able to choose your partner carefully is by judging the person individually based on their greater merits.\nOne of the",
+       "score": 0.10791015625,
+       "max_jaccard": 0.20512820512820512,
+       "max_jaccard_rank": 9,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "and we create the products. This guide and the process of doing this guide.\nLanguage design: Choosing a language and library is the first step in making it happen. One of the best options to build this type of website is to opt for WordPress with a website builder theme. For example, using Elementor Builder would",
+       "score": 0.50390625,
+       "max_jaccard": 0.2,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "of business. Whether you\u2019re buying a writing service to save the time and effort required, or buying to have your narrative written, Make My Essay point out that choosing the best writing service requires careful consideration. Below are some tips you can use in choosing the best writing service in Nigeria:\nReview your requirements. In making",
+       "score": 0.275390625,
+       "max_jaccard": 0.18518518518518517,
+       "max_jaccard_rank": 1,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "indeed. The step-by-step guide below will show you how to finalize your choosing process and get the ultimate copycat haircut!\nFirst and foremost, you need to pick the copycat hairstyle you want to achieve. To make sure choosing the right hairstyle, review the top trends available and select the one you love looking at",
+       "score": 0.359375,
+       "max_jaccard": 0.1518987341772152,
+       "max_jaccard_rank": 9,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "to form proteins. while the digestive process, the process of breaking down food, occurs in the stomach. The process takes place as soon as you ingest a meal. The way it works is that when you eat, enzymes are triggered to start producing saliva. The saliva digests carbohydrates and proteins.\nWhat about the stomach",
+       "score": 0.3125,
+       "max_jaccard": 0.17721518987341772,
+       "max_jaccard_rank": 3,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "today for that reason.\nThe sale of luxury brands such as Louis Vuitton and Prada has grown tremendously over the past years, even though the market has encountered sluggish trends in the last few years. Several brand owners purchased these items and made them useable by following their instructions on the official website. People became",
+       "score": 0.10107421875,
+       "max_jaccard": 0.12371134020618557,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Allocation of resources in a machine learning project requires a comprehensive, multidimensional approach. You should be aware of hardware requirements, data requirements, and resource estimation techniques. You should take a close look at every relevant component when making your decisions.\nWhen allocating resources for your project, you should first consider your hardware requirements. You",
+       "score": 0.390625,
+       "max_jaccard": 0.18181818181818182,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "to implement this change.\nFirst, Apple has already decided to make this switch official by removing support for 32-bit apps or OS versions that are no longer supported. 64-bit apps are the choice that the Rocking Fill app developer followed. Apple released iOS 13 in September 201",
+       "score": 0.0771484375,
+       "max_jaccard": 0.10714285714285714,
+       "max_jaccard_rank": 9,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      },
+      {
+       "text": ".\n Our company is one of the most famous brands in China. Our products are well-known in the global market and have won many awards in the professional competition in the field of family cleaning products.We are also one of the largest family cleaning products manufacturers in China and the only corporation that is capable of making high-performance",
+       "score": 0.1103515625,
+       "max_jaccard": 0.16,
+       "max_jaccard_rank": 3,
+       "longest_span": 4,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "network traffic. This tool enables IT admins to analyze active internet connections and select which ones to terminate.\n Wireshark is a powerful tool that enables users to analyze the necessary information about the devices on the network. This tool uses packet capture technology, which allows users to view everything that is going on with the traffic on",
+       "score": 0.80078125,
+       "max_jaccard": 0.13253012048192772,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "with the form of the newly introduced designer brand.\nTake a look at the new limited edition range. This Air Jordan series has a combination of textures that gives it its modern look and form. The base of the shoe starts with black hues and it continues with other vibrant colors as you climb up. These colors include red",
+       "score": 0.86328125,
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 7
+      },
+      {
+       "text": ".\nFirst Used: BYU.\nStarts.provides a comprehensive guide to one of the most reliable and reputable schools out there. We discussed everything about the university including its history, US News ranking, tuition fees, admission requirements, and more.\nHow To Apply To Brigham Young University\nEBYU apps",
+       "score": 0.49609375,
+       "max_jaccard": 0.12643678160919541,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "and applying for those jobs. It is important to make sure you have taken advantage of the available opportunities.\nThough licensing is not mandatory for getting into certain positions, it may still spark interest with some of them. For instance, to get into some retail jobs, you need to have obtained a license to do such work",
+       "score": 0.1865234375,
+       "max_jaccard": 0.17857142857142858,
+       "max_jaccard_rank": 8,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "to achieve this, you need to create a food Disney theme park presentation with a broader scope than the typical park analysis. Instead of presenting only one park, you expected to talk about all five Disney theme parks in the world and include their history, Mickey mouse children centered company information, and contemporary and upcoming Disney theme parks.",
+       "score": 0.1298828125,
+       "max_jaccard": 0.13414634146341464,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": ": You can use this to write any letter, email message, or blog post. This tool lets you write writing like a human. You use this tool to generate creative ideas for your writing assignments. : You can use this tool to write any type of content for your website, marketing plans, and business needs.",
+       "score": 0.35546875,
+       "max_jaccard": 0.16,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "\u201cWould you like to learn how to teach a piano lesson with the help of a few tricks? If you want to learn the skills of piano teaching yourself, check out the following tips.\nFirst of all, find out the level of expertise of the student. Determine the ability level of the student while teaching the piano",
+       "score": 0.55078125,
+       "max_jaccard": 0.14864864864864866,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "in Walmart and other big companies to buy high-quality products in a lower price point. The online store offers many types of products such as groceries, health products and many more types of items. Additionally, the discount business unit also offers discount deals on various types of products by offering the best bargains and sales deals on the",
+       "score": 0.5,
+       "max_jaccard": 0.14814814814814814,
+       "max_jaccard_rank": 3,
+       "longest_span": 4,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ".essoning:\nThe teacher explains the topic to the students by giving their instructions. The lesson\u2019s objectives are clear in this part of the lesson. The objective being reviewed and taught is stated clearly in this phase of the lesson. The teacher prepares to give the demonstration of the topic by explaining the process to the students",
+       "score": 0.09130859375,
+       "max_jaccard": 0.14473684210526316,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 7
+      },
+      {
+       "text": ". See the images below to see what you did wrong:\nthe regular or irregular verb accordingly (e.g., \u201cwalked\u201d and \u201cgoes\u201d depending on the context.) able to complete simple sentences like those mentioned above.\nRaise the temperature to maximum.\nThe term is knotted, which is also",
+       "score": 0.21484375,
+       "max_jaccard": 0.12359550561797752,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "most customers looking for this kind of product want them to be durable and functional. These products are meant to be used for their primary function of holding and storing items, which is why they need to be capable of holding whatever you want to add to it without issue.\n- Style and design: Some customers find themselves looking",
+       "score": 0.416015625,
+       "max_jaccard": 0.20253164556962025,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": ".\nBy\u00fcm.\nyour business trips. It also gives you the ability to verify the image quality of different cruise ships departing from the Belgian port. The search functionality comes in handy when you want to track down information about a specific cruise ship.\nOther uses of this website include logging information about the best cruise ships",
+       "score": 0.1357421875,
+       "max_jaccard": 0.1518987341772152,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "about finding your ideal partner, you need to examine the following points:\nTake a look at your current situation. Take a look at your current situation first if you want to take advantage of this manual. Your current status is one of the crucial factors in choosing the right spouse. Take a close look at your current financial",
+       "score": 0.365234375,
+       "max_jaccard": 0.21621621621621623,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "_with methods and techniques every day by hand. And no matter what brand you choose, you should make sure that your purchase is in line with your needs.\nHow do you use these keyboards? There are three methods you can choose from. First of all, you can choose Bluetooth mode. This works with just about every",
+       "score": 1.3671875,
+       "max_jaccard": 0.1927710843373494,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "and become the outstanding cricketing talent, and also with good athletic ability. Chris Tyson is the first Englishman to play for New Zealand men\u2019s cricket team since 1980s.\nThe cricket team represented by New Zealand has won the World Cup twice. They have also won the T20 World Cup",
+       "score": 0.1435546875,
+       "max_jaccard": 0.11627906976744186,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "today and that you are able to incorporate this yourself for your business too!\n with online stores, image content, and deliverable products, are among the fastest growing business types in today\u2019s online business environments around the world. So instead of building a physical business like you normally would, you can opt to choose one of",
+       "score": 0.10107421875,
+       "max_jaccard": 0.18518518518518517,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "Prior to purchasing properties, buyers need to know about type of property available in a particular area and its rental yield. To do so, you\u2019ll have to explore the area or look up the latest property listings in your area of choice. By doing this, you\u2019ll be able to choose the type of property that best suits",
+       "score": 0.1123046875,
+       "max_jaccard": 0.2236842105263158,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "the following points about React.js trying and searching for different solutions for your problems.\nAbility for rapid development\nAt first, the development process using React.js was a bit difficult. However, the ability of this framework to make development easy is one of its amazing features. With React.js, you can build applications quickly and",
+       "score": 0.90625,
+       "max_jaccard": 0.1875,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ".\nStylish ice cream scoops are not only functional but also add a touch of aesthetic appeal to your kitchen. Torpa decorator ice cream scoops, for example, have a modern and sleek design that would complement any decor style. On the other hand, rustic or quirky ice cream scoops might be more",
+       "score": 0.75,
+       "max_jaccard": 0.18072289156626506,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ", and social media, and asset management.\nIf you are looking to use coupons for your online purchases, you can follow these top seven tips that will help you make use of them:\nTake advantage of discounts from wallet apps. You can download apps like Honey and Rakuten to use discounts for online purchases. These",
+       "score": 0.57421875,
+       "max_jaccard": 0.15853658536585366,
+       "max_jaccard_rank": 8,
+       "longest_span": 4,
+       "longest_span_rank": 4
+      }
+     ]
+    }
+   },
+   {
+    "n_epochs": 1,
+    "eval_ce": [
+     3.3266036987304686,
+     2.2080955505371094
+    ],
+    "epochs": [
+     {
+      "epoch": 1,
+      "order": [
+       4,
+       1,
+       7,
+       5,
+       3,
+       9,
+       0,
+       8,
+       6,
+       2
+      ],
+      "train_losses": [
+       3.386916160583496,
+       2.96722412109375,
+       2.9369306564331055,
+       2.9255995750427246,
+       3.5920162200927734,
+       2.4269189834594727,
+       3.6661205291748047,
+       2.6065051555633545,
+       3.01352596282959,
+       3.0474345684051514
+      ],
+      "mean_train_loss": 3.0569191932678224,
+      "grad_norms": [
+       7.620950698852539,
+       4.898502349853516,
+       4.172493934631348,
+       3.9532558917999268,
+       3.8059163093566895,
+       3.837496519088745,
+       5.72046422958374,
+       5.394659042358398,
+       6.210750579833984,
+       4.286653518676758
+      ]
+     }
+    ],
+    "lr": 0.0001,
+    "bs": 1,
+    "n_contexts": 10,
+    "max_grad_norm": 1.0,
+    "seed": 0,
+    "seconds": 5.70333194732666,
+    "diversity": {
+     "n_samples": 64,
+     "n_distinct_texts": 64,
+     "mean_pairwise_jaccard": 0.0950871240764317,
+     "max_jaccard_to_top10_mean": 0.1445179821526938,
+     "max_jaccard_to_top10_max": 0.21794871794871795,
+     "max_jaccard_to_top10_median": 0.14285714285714285,
+     "longest_span_max": 5,
+     "near_copy_threshold": 0.8,
+     "n_near_copies": 0,
+     "frac_near_copies": 0.0,
+     "tag": "1 epoch(s)",
+     "mean_score": 0.3837471008300781,
+     "max_score": 1.7734375,
+     "n_empty": 0,
+     "samples": [
+      {
+       "text": "the most vibrant areas of New York City so that you make the most of your time. Tour the area's attractions including Grand Central Terminal, the High Line, Central Park, and Brooklyn Dinosaur Museum.\nTake a trip through the history of New York City, watching as the city gets destroyed and rebuilt.\nThe",
+       "score": 0.0830078125,
+       "max_jaccard": 0.16883116883116883,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "S2 (9th September 2020)\nIf you are in Tamil Nadu, Tamil Nadu state board of Tamil Nadu comes under CBSE curriculum. STG {12th September 2020).\nPlease do not forget to pay attention to these changes in SU`.\u2019The chapter \u201c",
+       "score": 0.078125,
+       "max_jaccard": 0.11235955056179775,
+       "max_jaccard_rank": 2,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "opening tricks with some active channel gaming platforms, different video channels that offer the best video opens. This will allow the user to select video channel tricks. So, you have to know how to download strikers JR20X1j0k137 Finals Tips and how to download JR20. Let\u2019s",
+       "score": 0.64453125,
+       "max_jaccard": 0.13253012048192772,
+       "max_jaccard_rank": 1,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "you have posted for your review. This will help to ensure that the review process is swift and easy for you.\nYou should make enefit.\nAnother thing to do before posting for review for downloading is, you should perform a small test the app via clipboard. You need to download the required android apps to see",
+       "score": 0.1142578125,
+       "max_jaccard": 0.175,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "\"Last year, Microsoft launched the new let they create Image\u89c6\u9891 promotion backgrounds.\nHow to make you type end with the crypto-cash.\n\"Once you print the background  you have a full vacation option.\"\nFollow the same steps as you did to see the same result for free:\nStep 1",
+       "score": 0.08984375,
+       "max_jaccard": 0.12087912087912088,
+       "max_jaccard_rank": 2,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "the arsenal . (exception)\nThus far, the US and the UK have taken this approach. The former has laid down complete standards on the matter. Therefore, the dealer must follow the set rules if they want to register their vehicle in the name of the UK nationality. UK also has its own license plates.",
+       "score": 0.177734375,
+       "max_jaccard": 0.11904761904761904,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "to know more about how to boost your cute and adorable style. And below we have something special for you. Here we talk about what is the key to make your outfits and garments unique. And you can choose an Estartup Store here if you want to get started. Check out more Rolls Royce accessories at here.",
+       "score": 0.35546875,
+       "max_jaccard": 0.14285714285714285,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "Social Media and Qualitative Research: Categorization\n\nThere are many ways to categorize social media, and usually, each category has very specific semantics and nuances that are very important to understand. And choosing categories is so important, because depending on your goals, the selection of a specific category might be the deciding factor in where",
+       "score": 0.0947265625,
+       "max_jaccard": 0.1511627906976744,
+       "max_jaccard_rank": 3,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Participants,\nNo idea about all of the functions & how they work all through the hierarchy.\nOne statementeach has to have a comment.\nChange any change by downgrading them.\nGeneral\nTake a look at the operator version code with an executable/ zip code and also run it.\nFor take a",
+       "score": 0.27734375,
+       "max_jaccard": 0.18292682926829268,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "the below question and get the matrices by making a professional pattern.\nYou should select your correct answer by selecting the right option.\n8 below options will give you the right answer.\nThe connecting letter pattern will be similar to the given question.\nthick waxed paper with matches, Alcohol and water bottle and",
+       "score": 0.1328125,
+       "max_jaccard": 0.14814814814814814,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "\ufeff To have exact pinpoint locations, it is first request to use Antenna Explorer to determine that the frequencies available for the respective nation. Again, let us use the United State of America as a most easy example.\n\nGenerally, to align your 1 meter amateur radio you need to go through some steps. In order",
+       "score": 0.050537109375,
+       "max_jaccard": 0.14772727272727273,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "Label of the text\nThe label for this dataset is Amazon Product Dataset for Study\nof Deep Learning Algorithms.\nDataset\nThe dataset for the Amazon dataset which we discussed above is structured as two sets of images. One image is the housing and the other is the design. These images are the key dataset for online purchase",
+       "score": 0.11181640625,
+       "max_jaccard": 0.1282051282051282,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Google DNS is a free and open service offered by Google.\nIf you use private residential or public DNS, you will have to subscribe to clubs that offer this service. Besides, you will have to pay for the DNS you choose.\nSo, if you want the DNS to be completely free, Google DNS is your",
+       "score": 0.1494140625,
+       "max_jaccard": 0.20833333333333334,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "erald networks have come a long way since their humble beginnings. They started as a humble local network in very small compacts, however, with time and technology breakthroughs, they now offer the world over a wide variety of channels.\nThe two killer technologies that do not get mentioned here are IPTV and Oculus TV,",
+       "score": 0.09375,
+       "max_jaccard": 0.13541666666666666,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Book Description\nHow to Choose the Best Database?\nIf you have a small project, then MySQL will be the best option for you as it has over 5 billion records as per the Google Cloud Benchmark assessment, and you can make the most of it. If you are an operative, than you can choose MySQL as",
+       "score": 0.5390625,
+       "max_jaccard": 0.1875,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "contains two 3-card hands, the aim is to make the final value of the two hands as close to each other as possible. If the final values are equal, it is a draw. Each player gets to call their first card and also the second. Depending on how the cards turn out, the player can have",
+       "score": 0.111328125,
+       "max_jaccard": 0.13580246913580246,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "and the GIFs added to a website.\nGIFs are images that maintain various features. It also depends on the image of choice. For example, the designer does not need to use that kind of image, use a particular variety of it, and the GIF should not interfere with the content of the design website",
+       "score": 0.57421875,
+       "max_jaccard": 0.16883116883116883,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Name of the organic transition period.\nYet Libya enjoyed peace for several years after victorious military overthrow of the dictator Muamar Gaddafi.\n651 and lead them to the country\u2019s first annual retirement ceremony (Gardiador) that took place in April 2011.\nSylvia was there",
+       "score": 0.10400390625,
+       "max_jaccard": 0.09782608695652174,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Top\nmost important venture capital funding for Adobe Analytics, but Google Analytics went through crowdfunding and it was accepted.\nDon't use apps from lots of platforms.\nIt will be User Lockdown, Google Plus and so on.\nYou have to perform the sensational strategies that you are using to get more fans by promoting",
+       "score": 0.08447265625,
+       "max_jaccard": 0.13953488372093023,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about a man who has lost a job and can not work trying to earn his way back on the society.\"\nHowever, the story of this comedy isn't parochial or shallow for amusement purposes. This movie gives the audience a bigger mitigeational with which they can feel the different journeys flowing in a country or",
+       "score": 0.068359375,
+       "max_jaccard": 0.14606741573033707,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "As the educator of many beginning learners, that is a fear shared by many. It is also an audience that is yet difficult to serve with its vocabulary size and the language skills it conquers. However, this will not ruin the point of education today. The most notable part would be if you let that vocabulary skill of",
+       "score": 0.216796875,
+       "max_jaccard": 0.16666666666666666,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "Learning how to compartmentalize your emotions and be able to express them appropriately is something that you should always do. Without this skill, you just need to follow your whims and give your mind whatever it wants that it wants to express but without thinking too much about it first or after it gets to you. On the contrary,",
+       "score": 1.015625,
+       "max_jaccard": 0.189873417721519,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "learning methods. And we all evoke digital learning as the name to know what that is. Within, that is something which is already very useful. There is a massive transformation at the effect of learning method on the basis of digital technologies. Today\u2019s student needs digital learning gears to know what every type of learning means. What",
+       "score": 0.11279296875,
+       "max_jaccard": 0.12345679012345678,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "\u200bLab reports that illustrate the various changes in the body after the person follows unhealthily followed diet. It also serves as a source of overdose from drugs like medicine, alcohol and cannabis. If the lab test was not due, then it will call for a different kind of doctors who have traffic registration for such study.",
+       "score": 0.328125,
+       "max_jaccard": 0.12222222222222222,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "alcohol. But drink responsibly.\n, are commonly called **duboisia**. Duboisia dentata and Duboisia perplexa are the same.\nThey share a similar terro\nen enjoy in these facial expressions. When you feel like drinking Duboisia duboisia, make sure that you",
+       "score": 0.07421875,
+       "max_jaccard": 0.11904761904761904,
+       "max_jaccard_rank": 1,
+       "longest_span": 4,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "Author: Sarah Mikhail\nCategory: Resourcefulness\nTopic: The Courage to Ask\nContext: Daily Life\nGiven the practicality offered by seminal textbooks or certified online courses, you're likely to have access to a plethora of resources. The aforementioned ASK - Contemporary Skills in 2101 - is a National",
+       "score": 0.1025390625,
+       "max_jaccard": 0.14285714285714285,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "is a story about the place of capitalism and the classes within it: the proletariat and the bourgeoisie. It presents capitalism as a historical fact and reveals how it functions. The final goal of the play is to unearth the historic function of the working classes and of the press. Karl Marx played a major role in unveiling the true",
+       "score": 0.0576171875,
+       "max_jaccard": 0.13924050632911392,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "al follow-up questions such as what the user gets after the program, and the skill it requires. Most of the such tools are dependent on your computer's ability to handle them. So, if you are having some trouble with the programs, you wouldn't be able to implement that code.\nHowever, of course,",
+       "score": 0.1123046875,
+       "max_jaccard": 0.1686746987951807,
+       "max_jaccard_rank": 1,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "All information about the best prices of Single Family houses in Huittinen, Finland is available at myHome.de. Browse thousands of houses for rent in this area with us. Check our pages for the real estate options that are available in Finland.\nFeatures of the houses for rent:\nHouse type\nPrice range",
+       "score": 1.125,
+       "max_jaccard": 0.1625,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "gifs and images to GIFs.\nFor instance, if you are watching a video, you can get the images on the screen and convert those into an animated GIF image.\nSelect the GIFs images for creation.\nBut you can also download the images in your devices in any GIF name accordingly.\nThe GIF",
+       "score": 1.7734375,
+       "max_jaccard": 0.14285714285714285,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "to learn how to do this yourself.\nIt is not recommended to do this on your own, but once you understand what is embedded in the account\u2019s security for protection purposes, you can choose whether or not to do this on your own.\nClearing Trash This the first step in how to delete your User account",
+       "score": 0.3984375,
+       "max_jaccard": 0.14814814814814814,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Pizza oven for sale in Girona and Catalonia (prices in GroG) is a revolutionary oven from the best Italian brand. With this oven, you can roast and cook the best Italian pizza. All models are made in Europe and can be transported easily and without problems.\nThe Italian pizza oven from our work is",
+       "score": 0.2275390625,
+       "max_jaccard": 0.1625,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 7
+      },
+      {
+       "text": ". The cover art and the title of the game itself are very romantic so as to be appealing to the player. Romance is always the exciting topic and you must never find yourself in a dull piece of work which has absolutely no emotional impact on viewers. You don\u2019t want the game to be too sad and depressing. To",
+       "score": 0.40625,
+       "max_jaccard": 0.13186813186813187,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Send your request to our seller and you will receive a return tracking number after your return is successfully received.\nBest choice for flipping a mattress to make your bedroom look better!Now take charge of your decision and shop immediately!\nYou are highly recommended to order our electric blanket and take this chance to buy our best items",
+       "score": 0.08056640625,
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "andInformation security.\nAnalyst theorizes that the main security vulnerability arises due to vulnerabilities in proprietary software used by\u4e07\u53f0\u79d1\u6280\u3002Case report 2: Upgrade to Windows 10 and subsequently experience flaws.\nThe suspected security flaw by stage 1 has actually picked up by modern day attackers, therefore any of those",
+       "score": 0.10791015625,
+       "max_jaccard": 0.12222222222222222,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Coincidentally, you should be able to ignore the recommended price, too.\nWhile various developer in regard to the area is capable of making several applications that have the same title, you need to be aware that some of them are unreliable and could possibly cause infection to your mobile system.\nOpen the Wine Store agent",
+       "score": 0.80859375,
+       "max_jaccard": 0.1686746987951807,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "more to find out exactly [what you need].\nPerks to Dubai Like Abu Dhabi flights\nIf you\u2019re going to fly to Abu Musa, then all you have to do is to pick up flights like those dating on Astana, even to these specific flights and then there are even more thing to find out exactly",
+       "score": 0.64453125,
+       "max_jaccard": 0.11363636363636363,
+       "max_jaccard_rank": 2,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "Black Friday and here are just a few examples of items which you are able to get. Some examples are:\n\u2013 Laptop gaming machines with discount rates\n\u2013 Brand new accessories and peripherals which are available with lower prices\nHowever, if you want to know what types of things you could get, I would recommend you take",
+       "score": 0.80859375,
+       "max_jaccard": 0.12048192771084337,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "Insert one of these, change it or delete one of these. Then, you are ready to go. Catchup might not get you the game but it would get you trailer and match times.\nMatch for MLB\nWhen you use this application, you get an option of kicking off your favorite game and catching it.",
+       "score": 0.39453125,
+       "max_jaccard": 0.1518987341772152,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "The device has also some PLL circuits, which makes the connection between the two ports faster and have more data transmission. This is the main focus of users who use the Gigabit E technology on this device. It gets the maximum access possible to transfer the data storage from the USB device.\nYou can easily download the image",
+       "score": 0.72265625,
+       "max_jaccard": 0.13636363636363635,
+       "max_jaccard_rank": 1,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "The measured temperature, which cannot be identical to the real value due to errors in measurement, is taken as the thermal conductivity coefficient.\nThis method has been used to measure the dynamic thermal conductivity coefficient of fluids used as combustion chambers, gas furnace, heat exchangers and engines. In similar systems, the temperature of the",
+       "score": 0.083984375,
+       "max_jaccard": 0.13414634146341464,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "and knowings. In this sense, the camera is much like a buffering agency for loads of information. The darkroom is where photography\u2019s truths are revealed. The darkroom can often be said to satisfy the most realistic version of photography modalities. It allows unflinching images, which have the least flaws and",
+       "score": 0.05810546875,
+       "max_jaccard": 0.13793103448275862,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Last Update: Feb 09, 2019If you're going to head one of the best anime games players can get in.First, this is a great game.\nHow to Download and Install Freez Bug Game After Following the Above Practical Method. Best Of Windows Game Facilities Downloaded Tools, You",
+       "score": 0.77734375,
+       "max_jaccard": 0.16279069767441862,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "beat form generation. Like in standard generators, you can use the free beat generator and come up with some amazing beats. However, you can also invest in paid instruments and download them from the marketplaces. For example, you can buy and download the image shown below. There, you will get the best-quality beats for",
+       "score": 0.400390625,
+       "max_jaccard": 0.10975609756097561,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "be a great deal and break your heart. of it. it is best to own homes, but not necessarily own the property completely. During this time you have the option to seek assistance from a real estate agent or an attorney who operates in to help you find the best moving deals you can have. You can find many",
+       "score": 0.9375,
+       "max_jaccard": 0.175,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": ". Features exclusive Sharp image editing tools, remote control apps, electric tires, and more.\nThe latest technology makes the new BMW X4 very attractive. The manufacturer has used a bold design and rare technology in obtaining these products. One of the most common things that we can notice is the sleek design. With the inner",
+       "score": 1.59375,
+       "max_jaccard": 0.16470588235294117,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "t feel like every step I take is covered by way of the darkness, making me feel quite uncomfortable about it. Having experienced the plethora of deaths in the midst of the night, I did not believe my soul was invulnerable to whatever assailant left behind the shadow of fear on this dark driveway. I was standing on",
+       "score": 0.1494140625,
+       "max_jaccard": 0.14942528735632185,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "by learning FPV microcontroller programming (or Embedded). Take free get flash back to basics online training from me. I am really good at embedded programming. I have built things ranging from Arduino projects to Raspberry Pi projects and at the same time, I am also a strong responder. I can help you with all things needed",
+       "score": 0.11669921875,
+       "max_jaccard": 0.1111111111111111,
+       "max_jaccard_rank": 1,
+       "longest_span": 1,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "I recruit strong workers from different jobs and offer them a chance to work with a peculiar crew with exciting projects and pay rates.\nAdditionally,\nWhile you are loving your career with this job, you are also offered with getting more professional rate with your working activities.\nTherefore,\nIf you wish to use this opportunity",
+       "score": 0.462890625,
+       "max_jaccard": 0.14285714285714285,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "What is MagmaFormation? Presenting the latest release, camera MagmaFormation is found amongst these. However, it is a game that is targeted on satisfaction being a movie director with the help of these training collection. This game is hyper-competitive, individualized with the girl. Furthermore, this game is carried out",
+       "score": 0.46875,
+       "max_jaccard": 0.1111111111111111,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "censored or just suppressed in other novels or web novels isn't really something most Japanese people worry about or even know about. And most of the internet in Japan is actually censored with regard to erosive stuff, so I personally don't think it's entirely unlikely. I'm not sure if it's actually the case",
+       "score": 0.11572265625,
+       "max_jaccard": 0.14444444444444443,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "Packaging design project for a mobile game product by this company. For this flexible packaging project, we need to create the graphic design a bit different from the previous project type. The client was really interested in this project and left an impression on the whole team. We mentioned this team idea to the customer before we launch the design",
+       "score": 0.185546875,
+       "max_jaccard": 0.16049382716049382,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "choices, leaving out money I want to ask you guys about which raw dairy products I use in these mug cakes and what are some great brands to look into. The text below contains these answers about them! Undoubtedly, raw dairy is a source of food that is healthy to have in our lives. It is said that",
+       "score": 0.640625,
+       "max_jaccard": 0.13953488372093023,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "the average of a given data set. This is a statistical technique which includes calculating the mean between four numbers including the average. You would have to make sure to catch whatever is what percent and then calculate accordingly. This tool uses the best platform which your website projector can utilize to calculate the percentile. The tool calculates the percentile",
+       "score": 1.0625,
+       "max_jaccard": 0.12790697674418605,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "The job\u2019s first task is to create your snake. To this end, visit the page, and select Options that are specific to the selection. That option will allow you to input the random text that you have. To this point, you need to allocate the ideal value of the snake question. So you need to follow",
+       "score": 0.72265625,
+       "max_jaccard": 0.16883116883116883,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "to handle her husband's divorce case. She holds wedding dress for the pretty bride in this image. But she is not uniform for other women.\nWomen : I'd like to check up the wedding dress to fix it properly.\nBridal fashion designer : Yes. The wedding dress is lovely. You can wear",
+       "score": 0.0908203125,
+       "max_jaccard": 0.13953488372093023,
+       "max_jaccard_rank": 4,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "System: I don't know how your system works, and how energetic you feel. However, there are always several apps available in both the play store and the iTunes store. Here I have highlighted the top three apps that you can download for free to easily install malware protection apps upon your iOS and Android device.\nIf",
+       "score": 0.27734375,
+       "max_jaccard": 0.12941176470588237,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "teasing a clear Facebook problem. That\u2019s why it is a good idea to check out if all your news feeds are working fine. Wait for some hours before you log into your Facebook. Your account will probably get sent up again in the duration of the next few hours. If you get access to your account, the issue",
+       "score": 0.236328125,
+       "max_jaccard": 0.1411764705882353,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "next stop for you. The best time to attend is after automobiles are gathered to shop.\nThe initial thing you need to do is choose a car that\u00b4s enjoying the massive opportunity you need. Have a look at the array of designs. If you want any kind of automotive feel you could choose a search result day and",
+       "score": 0.7421875,
+       "max_jaccard": 0.21794871794871795,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "It recommends some advice on how to get rid of the pimple marks on the skin.\nPlease click download to download the guide on how to remove excess acne marks.\nStep 1 \u2013 Skincare Tips to Remove Acne Scars\nThere are certain methods you have to follow for getting rid of the acne marks",
+       "score": 0.69921875,
+       "max_jaccard": 0.12643678160919541,
+       "max_jaccard_rank": 2,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "and the right room for growing. Also, you can check with us for growing Oscar Cactus, if you want.\nYou can buy the best plants from Cactus Emporium.\nTips on growing Oscar Cactus:\n1. The benefits of keeping Oscar Cactus\nIf you want to grow Oscar Cactus",
+       "score": 0.36328125,
+       "max_jaccard": 0.1506849315068493,
+       "max_jaccard_rank": 5,
+       "longest_span": 5,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "usados en cada carpeta.\n- Las carpetas de Audible.\nTe recomendamos practicar en la mayor\u00eda de las veces, descarga archivos mp3. Si descarga una Multiply, descargar m\u00e1s de que los archivos mp3. Con esta opci\u00f3n, la mayor\u00eda de los descargados son variados archivos mp3. Al descargar",
+       "score": 0.185546875,
+       "max_jaccard": 0.03614457831325301,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "a popular er to boost their business. however. there are riches to uncover about promoting their products online. you\u2019d better learn about such best tips to get your benefits.\nNow, Let\u2019s take a look at those most incredible and beneficial process that simple business people can follow to gain a bigger share of the job market",
+       "score": 0.333984375,
+       "max_jaccard": 0.20238095238095238,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "Messaging services use a lot of time to get used to the intuitive app interface with many changes in the new June drop. There is a lot of features that are available in the app but we were unable to highlight the features like the recent update version. One of the best features is the cross platform messaging connections. You will",
+       "score": 0.40234375,
+       "max_jaccard": 0.12658227848101267,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     ]
+    }
+   }
+  ],
+  "contexts": "top-10 FineWeb contexts of L10N4358 (data/contexts.npz), as completions of the prompt",
+  "near_copy_threshold": 0.8
+ },
+ "reused_untrained": {
+  "requested": null,
+  "reused": false,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sources": null,
+  "reason_not_reused": "not requested"
+ },
+ "phase_s": 33.85458588600159,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

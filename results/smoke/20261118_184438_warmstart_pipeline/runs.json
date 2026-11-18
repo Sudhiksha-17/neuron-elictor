@@ -1,0 +1,63 @@
+{
+ "runs": [
+  {
+   "label": "Rep",
+   "name": "Rep (run 1 exactly, seed 1)",
+   "dir": "results/smoke/20261118_184438_warmstart_pipeline/Rep",
+   "warm": false,
+   "kl_ref": "base",
+   "kl_beta": 0.0,
+   "seed": 1
+  },
+  {
+   "label": "W0-L9-s0",
+   "name": "W0-L9 seed 0",
+   "dir": "results/smoke/20261118_184438_warmstart_pipeline/W0-L9-s0",
+   "warm": true,
+   "kl_ref": "warm",
+   "kl_beta": 0.0,
+   "seed": 0,
+   "neuron": "L9N5711"
+  },
+  {
+   "label": "W0-L9-s1",
+   "name": "W0-L9 seed 1",
+   "dir": "results/smoke/20261118_184438_warmstart_pipeline/W0-L9-s1",
+   "warm": true,
+   "kl_ref": "warm",
+   "kl_beta": 0.0,
+   "seed": 1,
+   "neuron": "L9N5711"
+  },
+  {
+   "label": "W0-L10-s0",
+   "name": "W0-L10 seed 0",
+   "dir": "results/smoke/20261118_184438_warmstart_pipeline/W0-L10-s0",
+   "warm": true,
+   "kl_ref": "warm",
+   "kl_beta": 0.0,
+   "seed": 0,
+   "neuron": "L10N4358"
+  },
+  {
+   "label": "W0-L10-s1",
+   "name": "W0-L10 seed 1",
+   "dir": "results/smoke/20261118_184438_warmstart_pipeline/W0-L10-s1",
+   "warm": true,
+   "kl_ref": "warm",
+   "kl_beta": 0.0,
+   "seed": 1,
+   "neuron": "L10N4358"
+  },
+  {
+   "label": "WKL-L10",
+   "name": "WKL-L10 (KL to warm, beta 0.01) seed 0",
+   "dir": "results/smoke/20261118_184438_warmstart_pipeline/WKL-L10",
+   "warm": true,
+   "kl_ref": "warm",
+   "kl_beta": 0.01,
+   "seed": 0,
+   "neuron": "L10N4358"
+  }
+ ]
+}

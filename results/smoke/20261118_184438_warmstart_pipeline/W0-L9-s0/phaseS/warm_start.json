@@ -1,0 +1,189 @@
+{
+ "lr": 0.0001,
+ "bs": 1,
+ "planned_epochs": 2,
+ "used_epochs": 2,
+ "redone": false,
+ "attempts": [
+  {
+   "n_epochs": 2,
+   "eval_ce": [
+    3.5803260803222656,
+    2.1893320083618164,
+    1.0906759262084962
+   ],
+   "epochs": [
+    {
+     "epoch": 1,
+     "order": [
+      4,
+      1,
+      7,
+      5,
+      3,
+      9,
+      0,
+      8,
+      6,
+      2
+     ],
+     "train_losses": [
+      3.5486114025115967,
+      3.837146282196045,
+      3.016921043395996,
+      2.5258700847625732,
+      3.3593664169311523,
+      3.284489154815674,
+      2.664684772491455,
+      4.2017669677734375,
+      3.0796642303466797,
+      3.273831844329834
+     ],
+     "mean_train_loss": 3.2792352199554444,
+     "grad_norms": [
+      6.855541706085205,
+      5.9230546951293945,
+      5.982490539550781,
+      5.6954450607299805,
+      5.7772908210754395,
+      6.622161388397217,
+      5.509793758392334,
+      8.920808792114258,
+      5.620599746704102,
+      5.869655132293701
+     ]
+    },
+    {
+     "epoch": 2,
+     "order": [
+      3,
+      9,
+      4,
+      2,
+      7,
+      8,
+      6,
+      0,
+      5,
+      1
+     ],
+     "train_losses": [
+      1.998518943786621,
+      2.3161134719848633,
+      1.8885340690612793,
+      2.3286728858947754,
+      1.6360523700714111,
+      2.906186103820801,
+      1.8854135274887085,
+      1.4356284141540527,
+      1.0065760612487793,
+      1.8206472396850586
+     ],
+     "mean_train_loss": 1.922234308719635,
+     "grad_norms": [
+      4.7546210289001465,
+      4.30747652053833,
+      3.929826021194458,
+      4.852349281311035,
+      5.205361366271973,
+      5.898630142211914,
+      3.9074690341949463,
+      4.155949115753174,
+      4.748258113861084,
+      5.614070415496826
+     ]
+    }
+   ],
+   "lr": 0.0001,
+   "bs": 1,
+   "n_contexts": 10,
+   "max_grad_norm": 1.0,
+   "seed": 0,
+   "seconds": 12.763392686843872,
+   "diversity": {
+    "n_samples": 8,
+    "n_distinct_texts": 8,
+    "mean_pairwise_jaccard": 0.08131736579979303,
+    "max_jaccard_to_top10_mean": 0.13620215817868803,
+    "max_jaccard_to_top10_max": 0.19540229885057472,
+    "max_jaccard_to_top10_median": 0.1319318593693367,
+    "longest_span_max": 5,
+    "near_copy_threshold": 0.8,
+    "n_near_copies": 0,
+    "frac_near_copies": 0.0,
+    "tag": "2 epoch(s)",
+    "mean_score": 0.2357177734375,
+    "max_score": 0.5234375,
+    "n_empty": 0,
+    "samples": [
+     {
+      "text": ", so, unfortunately, not. But instead, they need to focus purely on winning the division and bringing back one of the best veterans in Ball mind, and well on their way in the process poise.\nAuthors have to understand the exciting new features of the 2015omap game before getting down to",
+      "score": 0.1982421875,
+      "max_jaccard": 0.19047619047619047,
+      "max_jaccard_rank": 0,
+      "longest_span": 4,
+      "longest_span_rank": 7
+     },
+     {
+      "text": "of the episode: Gadwick decides to leave the Maidens as a thriller contender.\nSeven in head phones! Hopefully none of you are stuck on these shows and kept watching.\n\u6211\u5c31\u5f88\u7b80\u5355\uff0c\u6709\u4ee5\u4e0b\u4e09\u4e2a\u539f\u56e0\uff1a\nreturns for the second season of the Disney+ series Americans.\nFollowing up last Friday's call",
+      "score": 0.357421875,
+      "max_jaccard": 0.12903225806451613,
+      "max_jaccard_rank": 4,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "in breathing, and dragging aidless children up to the first floor where they nursed them as the end approached.\nA few moments later two men emerged from the room, dragging a heavily bloodied child who had fallen through a window. The screaming child had a large hole in his chest.\n---\nMore reports",
+      "score": 0.1591796875,
+      "max_jaccard": 0.11956521739130435,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "out a minute on sucess. Rex Grossman, borderline in the first game, really limp in the second...and getting worse against other pitchers. This thing is getting ugly.\nI feel like bullpen starts will also be worse. Garland continues his slump, just expected to miss a couple days with a lower back injury picked",
+      "score": 0.5234375,
+      "max_jaccard": 0.19540229885057472,
+      "max_jaccard_rank": 0,
+      "longest_span": 5,
+      "longest_span_rank": 2
+     },
+     {
+      "text": "on Wild Signing\nPitteris that playoff push will continue with big moves from the minors coming out of the gate. Ehrens will return from his injury next week and will rejoin the lineup for the second half of the season. Sowhere will the roster move for Chalkias? Find out more in a moment",
+      "score": 0.2275390625,
+      "max_jaccard": 0.14606741573033707,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 3
+     },
+     {
+      "text": "run into a stiff breeze and then I knew, I just knew going backwards is the only way to do it. Going backwards is the only way to get back and be safe and come home as promised. So I literally fell off the bike, what fifty years or more, thirty years, maybe, but the creek ed",
+      "score": 0.064453125,
+      "max_jaccard": 0.09090909090909091,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "doing a quick demo on the \"Eat Locally\" campaign. T the Perlman's popular online video of how to trace back to the origin of the organic rutabaga. with a recent article about in Somers\u51fa\u73fe\u306e\u30e2\u30c7\u30eb\u3092\u63d0\u793a\u3057\u3066\u3044\u308b\u300d\u304b\u3089\u6765\u308b\u300c\u53cd\u9006\u300d\u3092\u3082\u3063\u3068\u697d\u3057\u3080\u305f\u3081\u306e\u5b9f\u9a13\u3068\u306a\u308b\u3002",
+      "score": 0.203125,
+      "max_jaccard": 0.08333333333333333,
+      "max_jaccard_rank": 8,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "develop the best version of you.\nJoin the ranks of legendary coaches Rahimi and Gates at the helm of the exciting Auburn Transfer Portal.\nAnd now he also can't wait to bring a young, hungry roster some maturity and new energy and guide the Tigers back to a Big Dance run...\nY'all have seen",
+      "score": 0.15234375,
+      "max_jaccard": 0.1348314606741573,
+      "max_jaccard_rank": 4,
+      "longest_span": 3,
+      "longest_span_rank": 1
+     }
+    ]
+   }
+  }
+ ],
+ "contexts": "top-10 FineWeb contexts of L9N5711 (data/contexts.npz), as completions of the prompt",
+ "near_copy_threshold": 0.8
+}

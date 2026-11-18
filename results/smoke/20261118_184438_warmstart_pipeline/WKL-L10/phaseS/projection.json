@@ -1,0 +1,7 @@
+{
+ "after_steps": 2,
+ "mean_step_s": 9.139235496520996,
+ "projected_training_s": 18.372742891311646,
+ "projected_eval_s": 1.8299506634473799,
+ "projected_phase_s": 140.20269355475904
+}

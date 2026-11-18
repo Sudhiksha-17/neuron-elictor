@@ -15,9 +15,16 @@
      after an optimizer step; kl_beta=0 reproduces the old (run 1) pg_backward loss and gradients exactly (old code
      copied below; compared bitwise, or within run-to-run noise if two old runs already differ); kl_beta>0 changes the
      gradient after a step; memory/time of pg_backward with kl_beta 0.04.
+  8. warm start (added 2026-11-18): defaults (no warm start, kl_ref base, kl_beta 0) = one "default" adapter and the
+     old loss exactly (7b); copy-check helpers; on a single-neuron L10N4358 elicitor: warm-start CE decreases over its
+     epochs, scorer (all adapters off) bitwise identical before/after warm start and after RL steps, policy = exact
+     copy of warm, kl_ref=warm KL is 0 at RL step 0 and > 0 after one optimizer step, warm adapter bitwise unchanged
+     after 3 RL steps, base weights bitwise, reference-text score exact; a 3-step grpo_phase.py --dry warm-start solo
+     run end to end (WKL-L10 config: (w), diversity pre-check, copy check, integrity); the 1-epoch redo path
+     (--test_force_redo).
 Usage: python scripts/test_grpo.py [--micro_bs 16 32]
 """
-import os, sys, json, time, argparse, subprocess
+import os, sys, json, time, argparse, subprocess, shutil
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from hermes.paths import RESULTS_DIR, BASELINE_DIR
 import torch
@@ -285,6 +292,139 @@ checks["oom_fallback_remembered"] = calls2 == [4, 4] and el.gen_cap.get("lora") 
 rs = el.reference_scores([dict(neuron=(L, N), tokens=ids[0].tolist(), expected=EXPECTED)])
 checks["reference_scores_helper_exact"] = rs["ok"]
 info["reference_scores"] = rs
+
+# ---- 8. warm start (added 2026-11-18) ----
+# 8a. defaults: no warm start, kl_ref base, kl_beta 0 reproduce the old (run 1) loss exactly (section 7b on this seed)
+checks["defaults_single_default_adapter_kl_ref_base"] = list(el.model.peft_config) == ["default"] and el.kl_ref == "base" and not el.warm
+checks["defaults_reproduce_old_loss_exactly"] = (checks["kl_beta0_loss_equals_old_exactly"]
+                                                 and checks["kl_beta0_same_trained_set_and_logp"] and checks["kl_beta0_grads_equal_old"])
+# 8b. copy-check helpers on known inputs
+from hermes.copycheck import jaccard, longest_shared_span, copy_stats, diversity
+checks["copycheck_helpers"] = (jaccard([1, 2, 3], [3, 2, 1]) == 1.0 and jaccard([1, 2], [3, 4]) == 0.0
+                               and abs(jaccard([1, 2, 3], [2, 3, 4]) - 0.5) < 1e-12
+                               and longest_shared_span([5, 1, 2, 3, 9], [7, 1, 2, 3, 8]) == 3 and longest_shared_span([1], []) == 0
+                               and copy_stats([1, 2, 3], [[9], [1, 2, 3]])["max_jaccard_rank"] == 1
+                               and diversity([[1, 2], [1, 2], [3]], ["a", "a", "b"], [[1, 2]])["n_near_copies"] == 2)
+# free the Phase-B-style model before loading the warm-start one (24 GB GPU)
+
+del el, opt, olds, news, g_kl, g_old1, g_new, tparams, emb, lo_on, lo_off, lo_m, lp_on, lp_m, lp_off, d_lora, d_merged
+del _orig_merge, _bad_merge, _orig_gen, _fake_gen, x, ids
+import gc; gc.collect(); torch.cuda.empty_cache()
+info["gpu_allocated_gb_before_warm_model"] = torch.cuda.memory_allocated() / 1e9
+print("GPU allocated before the warm-start model:", info["gpu_allocated_gb_before_warm_model"], "GB")
+
+fwj = json.load(open(f"{RUN_DIR}/fwmax/fineweb_max.json"))
+WN = "L10N4358"; WL, WNN = 10, 4358
+w = Elicitor(seed=0, warm_start=True)
+checks["warm_model_has_only_warm_adapter"] = list(w.model.peft_config) == ["warm"] and w.model.active_adapter == "warm"
+ctxs = [base.context_tokens(c["ctx"]) for c in fwj[WN]["top10"]]
+wpid = w.prompt_ids("Text:\n")
+probe_texts = [base.context_text(c["ctx"]) for c in fwj[WN]["top10"]] + ["The quick brown fox.", "Hello world, this is a test."]
+def probe():
+    return w.score(probe_texts, [(WL, WNN)] * len(probe_texts))
+s_pre = probe()
+init_warm = w.adapter_state("warm")
+h = w.warm_start_train(wpid, ctxs, lr=1e-4, epochs=2, bs=1, seed=0)
+info["warm_start"] = dict(eval_ce=h["eval_ce"], mean_train_loss=[e["mean_train_loss"] for e in h["epochs"]], seconds=h["seconds"])
+print("warm start:", info["warm_start"])
+checks["warm_ce_decreases_over_epochs"] = h["eval_ce"][0] > h["eval_ce"][1] > h["eval_ce"][2]
+checks["warm_train_loss_epoch2_below_epoch1"] = h["epochs"][1]["mean_train_loss"] < h["epochs"][0]["mean_train_loss"]
+checks["warm_adapter_changed_by_training"] = not w.adapter_equal(init_warm)[0]
+checks["scorer_bitwise_after_warm_start"] = torch.equal(probe(), s_pre)
+checks["base_bitwise_after_warm_start"] = w.check_base_bitwise()["ok"]
+w.make_policy(); w.kl_ref = "warm"
+WARM = w.adapter_state("warm")
+checks["policy_only_trainable"] = (all(".policy." in n for n, _ in w.trainable)
+                                   and not any(p.requires_grad for _, p in w._adapter_params("warm")))
+xw = torch.tensor([wpid + ctxs[0]], device=w.device)
+def lg():
+    w.model.eval()
+    with torch.no_grad():
+        return w.model(input_ids=xw).logits.float()
+lg_pol = lg()
+with w.use_adapter("warm"):
+    lg_warm = lg()
+checks["policy_logits_equal_warm_at_copy"] = torch.equal(lg_pol, lg_warm)
+checks["use_adapter_restores_requires_grad"] = (all(p.requires_grad for _, p in w.trainable)
+                                                and not any(p.requires_grad for _, p in w._adapter_params("warm"))
+                                                and w.model.active_adapter == "policy")
+wpairs = [(WL, WNN)] * 64; wpid_per = [wpid] * 64
+def rl_step(opt_):
+    comps = w.generate([wpid], 64, batch=a.gen_batch)[0]
+    sc_ = w.score(w.texts(comps), wpairs)
+    adv_, _ = group_advantages([-1.0 if torch.isnan(v) else float(v) for v in sc_], 16)
+    opt_.zero_grad(set_to_none=True)
+    n_, _, st_ = w.pg_backward(wpid_per, comps, adv_, 64, 32, kl_beta=0.01)
+    torch.nn.utils.clip_grad_norm_([p for _, p in w.trainable], 1.0); opt_.step(); opt_.zero_grad(set_to_none=True)
+    return comps, st_
+wopt = torch.optim.AdamW([p for _, p in w.trainable], lr=2e-5, weight_decay=0.0)
+comps0 = w.generate([wpid], 64, batch=a.gen_batch)[0]
+kl_w0 = w.kl_stats(wpid_per, comps0, 32)
+w.kl_ref = "base"; kl_b0 = w.kl_stats(wpid_per, comps0, 32); w.kl_ref = "warm"
+info["kl_ref_warm_step0"] = kl_w0; info["kl_ref_base_after_warm_start"] = kl_b0
+checks["kl_ref_warm_zero_at_rl_step0"] = kl_w0 == 0.0
+checks["kl_ref_base_positive_after_warm_start"] = kl_b0 > 0
+_, st1 = rl_step(wopt)
+kl_w1 = w.kl_stats(wpid_per, comps0, 32); info["kl_ref_warm_after_1_step"] = kl_w1; info["pg_step1_mean_kl"] = st1["mean_kl"]
+print(f"KL vs warm: step 0 {kl_w0!r}, after one optimizer step {kl_w1!r}; KL vs base after warm start {kl_b0!r}")
+checks["kl_ref_warm_zero_in_first_pg_backward"] = st1["mean_kl"] == 0.0
+checks["kl_ref_warm_positive_after_one_step"] = kl_w1 > 0
+for _ in range(2):
+    rl_step(wopt)
+ok_w, n_w, bad_w = w.adapter_equal(WARM); info["warm_frozen_check"] = dict(ok=ok_w, n=n_w, bad=bad_w)
+checks["warm_adapter_unchanged_after_3_rl_steps"] = ok_w
+checks["policy_changed_after_rl"] = not torch.equal(lg(), lg_pol)
+checks["scorer_bitwise_after_rl_steps"] = torch.equal(probe(), s_pre)
+checks["base_bitwise_after_rl_steps"] = w.check_base_bitwise()["ok"]
+rs_w = w.reference_scores([dict(neuron=(WL, WNN), tokens=fwj[WN]["ref_tokens"], expected=fwj[WN]["fw_max_this_gpu"])])
+checks["reference_scores_exact_after_rl_steps"] = rs_w["ok"]; info["reference_scores_warm"] = rs_w
+del w, wopt, lg_pol, lg_warm; gc.collect(); torch.cuda.empty_cache()
+
+# 8c. 3-step dry run of one warm-start solo run end to end (separate process: grpo_phase.py), incl. (w), the diversity
+#     pre-check and the copy check. Config = WKL-L10 (exercises kl_ref warm + kl_beta > 0).
+DRY = f"{RUN_DIR}/dry_warm"; os.makedirs(DRY)
+for f in ("fineweb_max.json", "fwmax_config.json"):
+    shutil.copy2(f"{RUN_DIR}/fwmax/{f}", f"{DRY}/{f}")
+cmd = [sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "grpo_phase.py"), "--phase", "S", "--neuron", WN,
+       "--warm_start", "--kl_ref", "warm", "--kl_beta", "0.01", "--seed", "0", "--dry", "--steps", "3",
+       "--gen_batch", str(a.gen_batch), "--micro_bs", "32", "--run_dir", DRY]
+t0 = time.time(); pr = subprocess.run(cmd, stdout=open(f"{DRY}/stdout.log", "w"), stderr=subprocess.STDOUT)
+info["dry_run"] = dict(cmd=" ".join(cmd), exit=pr.returncode, seconds=time.time() - t0)
+print("dry run:", info["dry_run"])
+try:
+    rj = json.load(open(f"{DRY}/phaseS/results.json"))["neurons"][WN]
+    ws = json.load(open(f"{DRY}/phaseS/warm_start.json")); integ = json.load(open(f"{DRY}/phaseS/integrity.json"))
+    met = [json.loads(l) for l in open(f"{DRY}/phaseS/metrics.jsonl")]
+    dkey, wkey = "d_trained_best_of_8", "w_warm_best_of_8"
+    info["dry_run"].update(d=rj[dkey]["best"], w=rj[wkey]["best"], b=rj.get("b_untrained_best_of_192", {}).get("best"),
+                           diversity=ws["attempts"][-1]["diversity"]["n_distinct_texts"], used_epochs=ws["used_epochs"],
+                           kl=[m["mean_kl"] for m in met], d_copy=rj[dkey]["copy_check"], w_copy=rj[wkey]["copy_check"])
+    checks["dry_run_exit_0"] = pr.returncode == 0
+    checks["dry_run_3_steps_logged"] = len(met) == 3
+    checks["dry_run_has_w_and_d"] = rj[wkey]["n"] == 8 and rj[dkey]["n"] == 8
+    checks["dry_run_diversity_precheck"] = all(k in ws["attempts"][-1]["diversity"] for k in
+                                               ("n_distinct_texts", "mean_pairwise_jaccard", "max_jaccard_to_top10_max"))
+    checks["dry_run_copy_check_every_text"] = all("copy" in x for k in (dkey, wkey) for x in rj[k]["all"])
+    checks["dry_run_kl_zero_first_step"] = met[0]["mean_kl"] == 0.0
+    checks["dry_run_integrity_all_pass"] = (all(r["ok"] for r in integ["bitwise"]) and all(r["ok"] for r in integ["reference"])
+                                            and len(integ.get("warm_frozen", [])) >= 2 and all(r["ok"] for r in integ["warm_frozen"]))
+except Exception as e:
+    print("dry run results unreadable:", repr(e)); checks["dry_run_results_readable"] = False
+
+# 8d. redo path: a dry run with --test_force_redo must warm-start twice (2 epochs, then 1) and report both
+DRY2 = f"{RUN_DIR}/dry_warm_redo"; os.makedirs(DRY2)
+for f in ("fineweb_max.json", "fwmax_config.json"):
+    shutil.copy2(f"{RUN_DIR}/fwmax/{f}", f"{DRY2}/{f}")
+cmd2 = [c if c != DRY else DRY2 for c in cmd] + ["--test_force_redo", "--steps", "1"]
+pr2 = subprocess.run(cmd2, stdout=open(f"{DRY2}/stdout.log", "w"), stderr=subprocess.STDOUT)
+try:
+    ws2 = json.load(open(f"{DRY2}/phaseS/warm_start.json"))
+    info["dry_run_redo"] = dict(exit=pr2.returncode, attempts=[x["n_epochs"] for x in ws2["attempts"]], used=ws2["used_epochs"])
+    checks["warm_redo_path_two_attempts_reported"] = (pr2.returncode == 0 and [x["n_epochs"] for x in ws2["attempts"]] == [2, 1]
+                                                       and ws2["used_epochs"] == 1 and ws2["redone"]
+                                                       and all("diversity" in x for x in ws2["attempts"]))
+except Exception as e:
+    print("redo dry run unreadable:", repr(e)); checks["warm_redo_path_two_attempts_reported"] = False
 
 print("\nchecks:"); [print(f"  {'PASS' if v else 'FAIL'}  {k}") for k, v in checks.items()]
 json.dump(dict(checks=checks, info=info, env=run_info()), open(f"{RUN_DIR}/results.json", "w"), indent=1)

@@ -1,0 +1,189 @@
+{
+ "lr": 0.0001,
+ "bs": 1,
+ "planned_epochs": 2,
+ "used_epochs": 2,
+ "redone": false,
+ "attempts": [
+  {
+   "n_epochs": 2,
+   "eval_ce": [
+    3.5803260803222656,
+    2.2336551666259767,
+    1.1784510612487793
+   ],
+   "epochs": [
+    {
+     "epoch": 1,
+     "order": [
+      5,
+      6,
+      1,
+      2,
+      0,
+      8,
+      9,
+      3,
+      7,
+      4
+     ],
+     "train_losses": [
+      2.806844711303711,
+      3.043769121170044,
+      3.727973699569702,
+      3.401188850402832,
+      2.5972776412963867,
+      4.285111427307129,
+      3.2341270446777344,
+      3.1339926719665527,
+      3.0186777114868164,
+      3.3771448135375977
+     ],
+     "mean_train_loss": 3.2626107692718507,
+     "grad_norms": [
+      7.620403289794922,
+      5.209275245666504,
+      5.506083011627197,
+      5.616420745849609,
+      5.169992446899414,
+      8.53315258026123,
+      8.317464828491211,
+      6.4213690757751465,
+      8.57375431060791,
+      5.18910026550293
+     ]
+    },
+    {
+     "epoch": 2,
+     "order": [
+      2,
+      3,
+      1,
+      8,
+      9,
+      0,
+      6,
+      7,
+      4,
+      5
+     ],
+     "train_losses": [
+      2.0334112644195557,
+      2.1669154167175293,
+      1.958482265472412,
+      2.9087204933166504,
+      2.3069915771484375,
+      1.3279423713684082,
+      1.5902745723724365,
+      1.9963176250457764,
+      2.127798557281494,
+      1.2792370319366455
+     ],
+     "mean_train_loss": 1.9696091175079347,
+     "grad_norms": [
+      5.469297885894775,
+      3.8243777751922607,
+      4.204308986663818,
+      5.453169822692871,
+      4.05743408203125,
+      3.582764148712158,
+      5.002374172210693,
+      8.581113815307617,
+      4.209807395935059,
+      7.308983325958252
+     ]
+    }
+   ],
+   "lr": 0.0001,
+   "bs": 1,
+   "n_contexts": 10,
+   "max_grad_norm": 1.0,
+   "seed": 1,
+   "seconds": 14.389228820800781,
+   "diversity": {
+    "n_samples": 8,
+    "n_distinct_texts": 8,
+    "mean_pairwise_jaccard": 0.06334631043676707,
+    "max_jaccard_to_top10_mean": 0.11338597797595407,
+    "max_jaccard_to_top10_max": 0.15730337078651685,
+    "max_jaccard_to_top10_median": 0.12632978723404253,
+    "longest_span_max": 3,
+    "near_copy_threshold": 0.8,
+    "n_near_copies": 0,
+    "frac_near_copies": 0.0,
+    "tag": "2 epoch(s)",
+    "mean_score": 0.126953125,
+    "max_score": 0.1767578125,
+    "n_empty": 0,
+    "samples": [
+     {
+      "text": "eight years ahead. Mitre couldn't have got 19th place better, even after suffering two yellow cards and getting reduced to 10 men after nearly two hours of play. Certainly not after losing a first-half lead through a goal from GlennACKNOWLEDGED in Australia so much after the prediction that Rooney and",
+      "score": 0.1767578125,
+      "max_jaccard": 0.1276595744680851,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 7
+     },
+     {
+      "text": "Succeeded by: Andie Anderson (MD)\nInfection. (Contact your doctor before starting this medication.)\nMore than One Child Needed.\nOne baby may not need it. Ask your doctor if your baby is small for its age or full term. Make sure you have the ability to choose between using fin",
+      "score": 0.0810546875,
+      "max_jaccard": 0.09473684210526316,
+      "max_jaccard_rank": 4,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "one off.\nIf you still find\u043b\u043e\u0433\u043e access somewhere.\nType once again and click the right Alt key three times.\nThe issue is sometimes caused by WebT2 channel settings on the TV. Go into the TV settings for Sound, Video and Channel and keep your TV Resolution set to \u201c480i",
+      "score": 0.1669921875,
+      "max_jaccard": 0.15730337078651685,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "and concerns about their future.\nThe loss comes on the heels of Scott Brooks being fired last week after beginning a slow but steady decline show no signs of abating, with the Sixers next facing the defending champion Boston Celtics on Saturday at Key Center in New Orleans.\nWhat do you make of Sixer's drop",
+      "score": 0.109375,
+      "max_jaccard": 0.125,
+      "max_jaccard_rank": 8,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "Jenis olahraga bola di dunia ini di dunia ini sekarang semakin digemari banyak dan menjadi salah satu sektor bisnis yang sangat menguntungkan di dunia ini.\nFantastis sekali adanya NBA, tetapi tentu saja pasti ada banyak rivalnya. Apakah Anda siap mengetahuinya?\nBergabunglah dengan kami dalam\u5e74\u81f3\u0433\u0430\u044f pembar",
+      "score": 0.08544921875,
+      "max_jaccard": 0.030927835051546393,
+      "max_jaccard_rank": 6,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": ", she said, telling reporters around the parking lot of p:\nbelieves weight class fighters will also move up a peg to earn a spot in the main event of the first-ever mixed martial arts championship at the restaurant.\nbrowers said after a pull-up stalled him on his injury. Brown did not expect",
+      "score": 0.11865234375,
+      "max_jaccard": 0.14130434782608695,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "on a quick response to this.\n does seem to affect the mods more on this issue. other grim dark specs fans also subject to the presumption of missery. We're indeed lucky to have Misery closer to the table than most others. We'll see how it plays out.\nTo finish this chapter of Star",
+      "score": 0.1552734375,
+      "max_jaccard": 0.10112359550561797,
+      "max_jaccard_rank": 4,
+      "longest_span": 3,
+      "longest_span_rank": 6
+     },
+     {
+      "text": ", people are bound to ask the same questions. I cannot answer the most basic of questions: how can Samsung not do a better job of ensuring that their phones don't get locked by the delay in launching a patch for a security vulnerability of approximately 3 months? Now that the courts have decided Google Messenger (just not",
+      "score": 0.1220703125,
+      "max_jaccard": 0.12903225806451613,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     }
+    ]
+   }
+  }
+ ],
+ "contexts": "top-10 FineWeb contexts of L9N5711 (data/contexts.npz), as completions of the prompt",
+ "near_copy_threshold": 0.8
+}

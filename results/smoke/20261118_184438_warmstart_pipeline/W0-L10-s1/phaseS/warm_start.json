@@ -1,0 +1,189 @@
+{
+ "lr": 0.0001,
+ "bs": 1,
+ "planned_epochs": 2,
+ "used_epochs": 2,
+ "redone": false,
+ "attempts": [
+  {
+   "n_epochs": 2,
+   "eval_ce": [
+    3.3266036987304686,
+    2.168885040283203,
+    1.0545000076293944
+   ],
+   "epochs": [
+    {
+     "epoch": 1,
+     "order": [
+      5,
+      6,
+      1,
+      2,
+      0,
+      8,
+      9,
+      3,
+      7,
+      4
+     ],
+     "train_losses": [
+      3.226088047027588,
+      3.193364143371582,
+      2.820326805114746,
+      3.133915901184082,
+      3.7334771156311035,
+      2.603895664215088,
+      2.381427526473999,
+      3.541994094848633,
+      2.7007555961608887,
+      2.865363836288452
+     ],
+     "mean_train_loss": 3.0200608730316163,
+     "grad_norms": [
+      6.8360276222229,
+      5.5718512535095215,
+      4.235918998718262,
+      4.008089542388916,
+      4.18847131729126,
+      5.074593544006348,
+      3.341061592102051,
+      4.390966892242432,
+      3.7454307079315186,
+      4.943639278411865
+     ]
+    },
+    {
+     "epoch": 2,
+     "order": [
+      2,
+      3,
+      1,
+      8,
+      9,
+      0,
+      6,
+      7,
+      4,
+      5
+     ],
+     "train_losses": [
+      2.036870241165161,
+      2.864567756652832,
+      1.612208366394043,
+      1.666141390800476,
+      1.435908555984497,
+      2.337282657623291,
+      1.8229790925979614,
+      1.7299082279205322,
+      1.7253371477127075,
+      1.537848711013794
+     ],
+     "mean_train_loss": 1.8769052147865295,
+     "grad_norms": [
+      3.478184700012207,
+      3.3254289627075195,
+      3.2856781482696533,
+      3.1084887981414795,
+      2.999199390411377,
+      4.128777027130127,
+      4.674559116363525,
+      3.6465065479278564,
+      4.38702917098999,
+      4.11515474319458
+     ]
+    }
+   ],
+   "lr": 0.0001,
+   "bs": 1,
+   "n_contexts": 10,
+   "max_grad_norm": 1.0,
+   "seed": 1,
+   "seconds": 12.710078954696655,
+   "diversity": {
+    "n_samples": 8,
+    "n_distinct_texts": 8,
+    "mean_pairwise_jaccard": 0.11049656876282209,
+    "max_jaccard_to_top10_mean": 0.16477552614609442,
+    "max_jaccard_to_top10_max": 0.22535211267605634,
+    "max_jaccard_to_top10_median": 0.1577205882352941,
+    "longest_span_max": 4,
+    "near_copy_threshold": 0.8,
+    "n_near_copies": 0,
+    "frac_near_copies": 0.0,
+    "tag": "2 epoch(s)",
+    "mean_score": 0.34210205078125,
+    "max_score": 0.67578125,
+    "n_empty": 0,
+    "samples": [
+     {
+      "text": "about cryptocurrency? Here is everything you need to know about it.\nWhat is Crypto?\nCryptocurrency is a type of digital currency that uses cryptography techniques to securely conduct financial transactions. These digital currencies use blockchain technology to generate the currency and its transactions.\nBitcoin, in particular, is the first digital currency that uses",
+      "score": 0.41796875,
+      "max_jaccard": 0.19480519480519481,
+      "max_jaccard_rank": 7,
+      "longest_span": 3,
+      "longest_span_rank": 5
+     },
+     {
+      "text": "to use the best service providers in the market and create mind-blowing experiences. \nThe business runs its operations in the following countries: the USA, the UK, India, and Canada.\nPrior to the release of the latest gameplay, the full Fortnite Universe has been kept a secret and official messaging from Epic has",
+      "score": 0.1259765625,
+      "max_jaccard": 0.12941176470588237,
+      "max_jaccard_rank": 3,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "about human rights, trade law and international law, and provides commentary on those topics and issues. The blog draws upon the research of its staff and contacts international lawyers in its establishment of its viewpoints.\nOur website offers detailed analyses of cases and opinions involving human rights and trade. We publish commentary by our staff, as well",
+      "score": 0.10205078125,
+      "max_jaccard": 0.13414634146341464,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 3
+     },
+     {
+      "text": "about health risks associated with the use of these products, that\u2019s because both of these products are likely to have a negative impact on your body.\nProduct Safety Analysis\nLet\u2019s take a look at the safety credentials of each of these products:\nItching Relief Plus\nWhat do you need to know about Thisching",
+      "score": 0.2314453125,
+      "max_jaccard": 0.2,
+      "max_jaccard_rank": 7,
+      "longest_span": 4,
+      "longest_span_rank": 7
+     },
+     {
+      "text": "about how to choose the best conveyancing lawyer in London will be detailed below.\nHow to Choose the Best Conveyancing Lawyer in London\nYou need to make sure you choose the right lawyer in London to handle your property sale or purchase. You have several factors to consider when choosing a lawyer. Hence, here are",
+      "score": 0.5234375,
+      "max_jaccard": 0.1625,
+      "max_jaccard_rank": 5,
+      "longest_span": 3,
+      "longest_span_rank": 1
+     },
+     {
+      "text": "learning. The course includes lectures, hands-on sessions and practical coursework. You\u2019ll learn how to design, program and deploy applications using JavaScript and other languages.\nThe goal of the Python Machine Learning course is to teach you how to use the latest machine learning tools and create efficient algorithms for predictive modeling. This course starts by",
+      "score": 0.189453125,
+      "max_jaccard": 0.15294117647058825,
+      "max_jaccard_rank": 7,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "to enhance the functionality of this property.\nSome of the most sought after properties in Dubai, Dubai Marina is rated as one of the most luxurious areas. This property offering upscale architectural designs with great amenities.\nNotable features of this property include furnished apartments equipped with top-notch facilities. This residential compound also provides a secure",
+      "score": 0.470703125,
+      "max_jaccard": 0.11904761904761904,
+      "max_jaccard_rank": 5,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": ".\n to maximize your profits by purchasing and selling shares in stocks. It comes after making profit from your trades in trading stocks, you can use that profit in other investments by selling your stocks. The best part about this trading method is that you have to research on how to make money in trading stocks as you only have",
+      "score": 0.67578125,
+      "max_jaccard": 0.22535211267605634,
+      "max_jaccard_rank": 9,
+      "longest_span": 3,
+      "longest_span_rank": 1
+     }
+    ]
+   }
+  }
+ ],
+ "contexts": "top-10 FineWeb contexts of L10N4358 (data/contexts.npz), as completions of the prompt",
+ "near_copy_threshold": 0.8
+}

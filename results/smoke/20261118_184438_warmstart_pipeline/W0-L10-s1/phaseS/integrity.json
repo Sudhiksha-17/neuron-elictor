@@ -1,0 +1,118 @@
+{
+ "bitwise": [
+  {
+   "ok": true,
+   "n_checked": 248,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "seconds": 0.630180835723877,
+   "where": "before warm start"
+  },
+  {
+   "ok": true,
+   "n_checked": 248,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "seconds": 0.6217710971832275,
+   "where": "start"
+  },
+  {
+   "ok": true,
+   "n_checked": 248,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "seconds": 0.6182513236999512,
+   "where": "after step 2"
+  },
+  {
+   "ok": true,
+   "n_checked": 248,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "seconds": 0.6174924373626709,
+   "where": "end"
+  }
+ ],
+ "reference": [
+  {
+   "ok": true,
+   "rows": [
+    {
+     "neuron": [
+      10,
+      4358
+     ],
+     "expected": 2.90625,
+     "got": 2.90625,
+     "equal": true
+    }
+   ],
+   "where": "before warm start"
+  },
+  {
+   "ok": true,
+   "rows": [
+    {
+     "neuron": [
+      10,
+      4358
+     ],
+     "expected": 2.90625,
+     "got": 2.90625,
+     "equal": true
+    }
+   ],
+   "where": "start"
+  },
+  {
+   "ok": true,
+   "rows": [
+    {
+     "neuron": [
+      10,
+      4358
+     ],
+     "expected": 2.90625,
+     "got": 2.90625,
+     "equal": true
+    }
+   ],
+   "where": "after training"
+  },
+  {
+   "ok": true,
+   "rows": [
+    {
+     "neuron": [
+      10,
+      4358
+     ],
+     "expected": 2.90625,
+     "got": 2.90625,
+     "equal": true
+    }
+   ],
+   "where": "end"
+  }
+ ],
+ "warm_frozen": [
+  {
+   "where": "start",
+   "ok": true,
+   "n_checked": 496,
+   "mismatches": []
+  },
+  {
+   "where": "after step 2",
+   "ok": true,
+   "n_checked": 496,
+   "mismatches": []
+  },
+  {
+   "where": "end",
+   "ok": true,
+   "n_checked": 496,
+   "mismatches": []
+  }
+ ]
+}

@@ -92,6 +92,17 @@ of concept only. Keep everything simple.
      comparison and the choice (scripts/phase_b_prompt_check.py ->
      results/phase_b_prompt_check/<ts>/prompt_check.json; if the check
      itself fails, (a) is kept and that is logged).
+   - Warm start (2026-11-18, user; following MAEM arXiv 2611.08465, NLA as
+     comparison): --warm_start trains LoRA adapter "warm" with cross-entropy
+     (completion tokens only) on the neuron's top-10 FineWeb contexts as
+     completions of the run's prompt (lr 1e-4, 2 epochs, batch 1 by default),
+     then GRPO trains adapter "policy" (exact copy of warm); warm stays frozen.
+     --kl_ref {base,warm}; main recipe no KL, comparison KL to warm beta 0.01;
+     never KL toward the untrained base in warm-start runs. Diversity pre-check
+     (64 samples; redo with 1 epoch if > half are near-copies, Jaccard > 0.8),
+     baseline (w) = best of 8 warm samples, copy check on every (w)/(d) text.
+     Defaults off (earlier runs reproduce). Pipeline: scripts/warmstart_run.sh,
+     report scripts/warmstart_report.py.
    - The real run is launched with scripts/real_run.sh (install, data/
      download + sha256 check, watchdog, prompt check, real pipeline under
      watch_and_stop.sh, report, commit, push, pod stop).

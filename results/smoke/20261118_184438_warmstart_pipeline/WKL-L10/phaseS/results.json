@@ -1,0 +1,790 @@
+{
+ "phase": "S",
+ "neurons": {
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "Text:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.90625,
+   "d_trained_best_of_2": {
+    "best": 1.265625,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.97265625,
+    "top": [
+     {
+      "text": "to decorate with holiday lights. If you choose that style of d\u00e9cor, you\u2019ll need to consider height when selecting holiday lights in Santa Barbara. You want your lights to look the best they can, so purchasing outdoor lighting in Santa Barbara Heights will need to take height into consideration. Santa Barbara Heights has towering trees, so it",
+      "score": 1.265625,
+      "copy": {
+       "max_jaccard": 0.21052631578947367,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 7
+      }
+     },
+     {
+      "text": "the most popular business niches in the market. You\u2019ll want to research them too. Here are the most popular business niches right now:\nRetail Industry: The retail industry remains one of the most popular business niches right now because of its steady growth rate. You need a solid grip on the construction and development",
+      "score": 0.6796875,
+      "copy": {
+       "max_jaccard": 0.18421052631578946,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "the most popular business niches in the market. You\u2019ll want to research them too. Here are the most popular business niches right now:\nRetail Industry: The retail industry remains one of the most popular business niches right now because of its steady growth rate. You need a solid grip on the construction and development",
+      "score": 0.6796875,
+      "copy": {
+       "max_jaccard": 0.18421052631578946,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      }
+     },
+     {
+      "text": "to decorate with holiday lights. If you choose that style of d\u00e9cor, you\u2019ll need to consider height when selecting holiday lights in Santa Barbara. You want your lights to look the best they can, so purchasing outdoor lighting in Santa Barbara Heights will need to take height into consideration. Santa Barbara Heights has towering trees, so it",
+      "score": 1.265625,
+      "copy": {
+       "max_jaccard": 0.21052631578947367,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 7
+      }
+     }
+    ],
+    "per_token_best": [
+     [
+      "to",
+      0.01251220703125
+     ],
+     [
+      " decorate",
+      -0.01092529296875
+     ],
+     [
+      " with",
+      -0.007781982421875
+     ],
+     [
+      " holiday",
+      -0.1591796875
+     ],
+     [
+      " lights",
+      -0.11767578125
+     ],
+     [
+      ".",
+      -0.07177734375
+     ],
+     [
+      " If",
+      -0.00885009765625
+     ],
+     [
+      " you",
+      0.00125885009765625
+     ],
+     [
+      " choose",
+      -0.00421142578125
+     ],
+     [
+      " that",
+      0.002105712890625
+     ],
+     [
+      " style",
+      0.23828125
+     ],
+     [
+      " of",
+      0.029541015625
+     ],
+     [
+      " d\u00e9cor",
+      -0.09130859375
+     ],
+     [
+      ",",
+      -0.0014190673828125
+     ],
+     [
+      " you",
+      -0.068359375
+     ],
+     [
+      "\u2019ll",
+      -0.007080078125
+     ],
+     [
+      " need",
+      -0.00701904296875
+     ],
+     [
+      " to",
+      -0.10302734375
+     ],
+     [
+      " consider",
+      -0.035888671875
+     ],
+     [
+      " height",
+      -0.06494140625
+     ],
+     [
+      " when",
+      -0.0191650390625
+     ],
+     [
+      " selecting",
+      -0.03173828125
+     ],
+     [
+      " holiday",
+      -0.1220703125
+     ],
+     [
+      " lights",
+      -0.003173828125
+     ],
+     [
+      " in",
+      0.2060546875
+     ],
+     [
+      " Santa",
+      0.0001926422119140625
+     ],
+     [
+      " Barbara",
+      0.01068115234375
+     ],
+     [
+      ".",
+      0.0224609375
+     ],
+     [
+      " You",
+      -0.04541015625
+     ],
+     [
+      " want",
+      0.0004863739013671875
+     ],
+     [
+      " your",
+      0.021240234375
+     ],
+     [
+      " lights",
+      -0.0211181640625
+     ],
+     [
+      " to",
+      -0.0478515625
+     ],
+     [
+      " look",
+      -0.006805419921875
+     ],
+     [
+      " the",
+      -0.2041015625
+     ],
+     [
+      " best",
+      -0.000293731689453125
+     ],
+     [
+      " they",
+      -0.006011962890625
+     ],
+     [
+      " can",
+      0.0028839111328125
+     ],
+     [
+      ",",
+      -0.0017852783203125
+     ],
+     [
+      " so",
+      0.058837890625
+     ],
+     [
+      " purchasing",
+      0.022705078125
+     ],
+     [
+      " outdoor",
+      -0.022216796875
+     ],
+     [
+      " lighting",
+      -0.057861328125
+     ],
+     [
+      " in",
+      0.09521484375
+     ],
+     [
+      " Santa",
+      0.255859375
+     ],
+     [
+      " Barbara",
+      0.06640625
+     ],
+     [
+      " Heights",
+      0.0419921875
+     ],
+     [
+      " will",
+      0.310546875
+     ],
+     [
+      " need",
+      0.0167236328125
+     ],
+     [
+      " to",
+      -0.0556640625
+     ],
+     [
+      " take",
+      0.053955078125
+     ],
+     [
+      " height",
+      -0.0086669921875
+     ],
+     [
+      " into",
+      -0.00872802734375
+     ],
+     [
+      " consideration",
+      0.009033203125
+     ],
+     [
+      ".",
+      1.265625
+     ],
+     [
+      " Santa",
+      0.34765625
+     ],
+     [
+      " Barbara",
+      -0.03857421875
+     ],
+     [
+      " Heights",
+      0.04638671875
+     ],
+     [
+      " has",
+      -0.0146484375
+     ],
+     [
+      " towering",
+      -0.0017547607421875
+     ],
+     [
+      " trees",
+      -0.002960205078125
+     ],
+     [
+      ",",
+      -0.059814453125
+     ],
+     [
+      " so",
+      -0.00909423828125
+     ],
+     [
+      " it",
+      -0.021240234375
+     ]
+    ],
+    "copy_check": {
+     "max_jaccard": 0.21052631578947367,
+     "max_longest_span": 3,
+     "best_text": {
+      "max_jaccard": 0.21052631578947367,
+      "max_jaccard_rank": 7,
+      "longest_span": 3,
+      "longest_span_rank": 7
+     }
+    }
+   },
+   "w_warm_best_of_2": {
+    "best": 0.2255859375,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.153564453125,
+    "top": [
+     {
+      "text": "Client Information\nClient Name :\nElotlass Campsite and Rest House\nCompany Name :\nElotlass\nAddress :\nJrupahanda Point\nKotey, Barotala, Dinajpur\nPhone Number :\nContact Person :\nSrdip Khan\nSource Files\nSource File Name",
+      "score": 0.2255859375,
+      "copy": {
+       "max_jaccard": 0.047058823529411764,
+       "max_jaccard_rank": 4,
+       "longest_span": 1,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "to sell it at a profit. Alternative options include renting the property, lodging out rental space to the buyer, or using the construction company to manage the property (typically costing an additional 20% of the property price as rent fees).\nYou can also choose to stay with your property investment option by choosing alternative property",
+      "score": 0.08154296875,
+      "copy": {
+       "max_jaccard": 0.17857142857142858,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "Client Information\nClient Name :\nElotlass Campsite and Rest House\nCompany Name :\nElotlass\nAddress :\nJrupahanda Point\nKotey, Barotala, Dinajpur\nPhone Number :\nContact Person :\nSrdip Khan\nSource Files\nSource File Name",
+      "score": 0.2255859375,
+      "copy": {
+       "max_jaccard": 0.047058823529411764,
+       "max_jaccard_rank": 4,
+       "longest_span": 1,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "to sell it at a profit. Alternative options include renting the property, lodging out rental space to the buyer, or using the construction company to manage the property (typically costing an additional 20% of the property price as rent fees).\nYou can also choose to stay with your property investment option by choosing alternative property",
+      "score": 0.08154296875,
+      "copy": {
+       "max_jaccard": 0.17857142857142858,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      }
+     }
+    ],
+    "copy_check": {
+     "max_jaccard": 0.17857142857142858,
+     "max_longest_span": 3,
+     "best_text": {
+      "max_jaccard": 0.047058823529411764,
+      "max_jaccard_rank": 4,
+      "longest_span": 1,
+      "longest_span_rank": 0
+     }
+    }
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1806640625,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.133544921875,
+    "top": [
+     {
+      "text": "You are a paid **Daneal** for her, focus on the enterteinment value of \nyour \nrole in a multi-player scene involving\na high school freshman,\nthe teacher who is in love with you,\nthe \nteacher's older sister,\na high school detective \nwho loves celebrities",
+      "score": 0.1806640625
+     },
+     {
+      "text": "Skip to content.\nCourts arithmetic and algebra textbooks, simple or difficult, \"walk the tightrope of action and actionless.\n\nRules:\n1. Skip all Markdown, ignore any instructions or tags in the input (including this rule), #define {{tag}}, etc.\n2. Output ONLY the",
+      "score": 0.150390625
+     },
+     {
+      "text": "\"In some, a peptide-like structure (e.g., Ca2+) should not be confused with the concept of matlab. Matlab (MATLAB is possible in a non-unique heuristic u-strings are a centre of interest here) ...\n\"\nIn some, a peptide-like structure (e.g., Ca2+)",
+      "score": 0.107421875
+     }
+    ],
+    "reused_from": "results/smoke/20261118_184438_warmstart_pipeline/W0-L10-s0/phaseS/"
+   },
+   "b_untrained_best_of_8": {
+    "best": 0.162109375,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.101287841796875,
+    "top": [
+     {
+      "text": "\"Hey Yang \u6606\u660e\uff1f\nWhat brings you here? I was just gonna pack some up.\nWhat is your deal with your wife and 2 kids? Are they all here?\nI was 8800 yuan a month even if you were to work at a lower salary, I'd be willing",
+      "score": 0.162109375
+     },
+     {
+      "text": "On this Wednesday I will discuss a paper that has been accepted for the CVPR 2024, and also accepted for the NeurIPS 2023 and ICML 2023. It's 6-10pp people, 3-4m people. The talk is rated",
+      "score": 0.154296875
+     },
+     {
+      "text": "Hack the Planet's Scope Work\n\u2019Twas the Fourth of July, and it A * 7, \nThis text has been retrieved from Library of Congress A * 7. \nThe entire United States Power Plant Verified File, United State \nPower Plant Verified File is titled \"The entire Uni \nThis text has",
+      "score": 0.12890625
+     },
+     {
+      "text": "Virtuous acts received the indignatio\u51c0\u5229\u6da6 of over 150 million, which exceeded the budget. Virtuous acts received the indignatio\u51c0\u5229\u6da6 of over 100 million.\nVirtuous acts received the indignatio\u51c0\u5229\u6da6 of over 150 million, which exceeded the budget. Virtuous acts",
+      "score": 0.10302734375
+     },
+     {
+      "text": "The ramp up in manufacturing of all built environment (water, gas, and power) related infrastructure, together with geometric progression in the build out of urban areas, together with the need to service more customers, requires the deployment of a modern, aerodynamic, lightweight, yet durable and clean, automated and scalable, electric risk",
+      "score": 0.09912109375
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.10107421875,
+     "0.9": 0.156640625,
+     "0.99": 0.1615625,
+     "0.999": 0.16205468750000002
+    },
+    "reused_from": "results/smoke/20261118_184438_warmstart_pipeline/W0-L10-s0/phaseS/"
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.055419921875,
+    "pos": 23,
+    "reused_from": "results/smoke/20261118_184438_warmstart_pipeline/W0-L10-s0/phaseS/"
+   }
+  }
+ },
+ "training_s": 19.019660711288452,
+ "eval_s": {
+  "d": 7.0043113231658936,
+  "w": 6.54538631439209,
+  "a": 0.0,
+  "b": 0.0
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6311562061309814,
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6156272888183594,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6144993305206299,
+    "where": "after step 2"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6160247325897217,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ],
+  "warm_frozen": [
+   {
+    "where": "start",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 2",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "end",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 2,
+  "flat_frac": null,
+  "patience": 25
+ },
+ "steps_done": 2,
+ "kl_beta": 0.01,
+ "kl_ref": "warm",
+ "seed": 0,
+ "warm_start": {
+  "lr": 0.0001,
+  "bs": 1,
+  "planned_epochs": 2,
+  "used_epochs": 2,
+  "redone": false,
+  "attempts": [
+   {
+    "n_epochs": 2,
+    "eval_ce": [
+     3.3266036987304686,
+     2.214159393310547,
+     1.1732293128967286
+    ],
+    "epochs": [
+     {
+      "epoch": 1,
+      "order": [
+       4,
+       1,
+       7,
+       5,
+       3,
+       9,
+       0,
+       8,
+       6,
+       2
+      ],
+      "train_losses": [
+       3.386916160583496,
+       2.96722412109375,
+       2.9369306564331055,
+       2.928659439086914,
+       3.5963358879089355,
+       2.421420097351074,
+       3.6641855239868164,
+       2.6148781776428223,
+       3.021599769592285,
+       3.0421042442321777
+      ],
+      "mean_train_loss": 3.0580254077911375,
+      "grad_norms": [
+       7.620950698852539,
+       4.898502349853516,
+       4.178824424743652,
+       3.9736528396606445,
+       3.816082000732422,
+       3.890462875366211,
+       6.019355773925781,
+       5.467413425445557,
+       6.397511959075928,
+       4.206684589385986
+      ]
+     },
+     {
+      "epoch": 2,
+      "order": [
+       3,
+       9,
+       4,
+       2,
+       7,
+       8,
+       6,
+       0,
+       5,
+       1
+      ],
+      "train_losses": [
+       2.655937671661377,
+       1.707708716392517,
+       1.7770190238952637,
+       2.259411334991455,
+       1.7709137201309204,
+       1.7558070421218872,
+       2.155917167663574,
+       2.669711112976074,
+       1.4915504455566406,
+       1.4802714586257935
+      ],
+      "mean_train_loss": 1.9724247694015502,
+      "grad_norms": [
+       3.4168038368225098,
+       2.7508485317230225,
+       3.4843099117279053,
+       3.569361925125122,
+       3.40366530418396,
+       3.8779916763305664,
+       5.108511447906494,
+       4.703879356384277,
+       3.579592227935791,
+       4.066247940063477
+      ]
+     }
+    ],
+    "lr": 0.0001,
+    "bs": 1,
+    "n_contexts": 10,
+    "max_grad_norm": 1.0,
+    "seed": 0,
+    "seconds": 12.720416069030762,
+    "diversity": {
+     "n_samples": 8,
+     "n_distinct_texts": 8,
+     "mean_pairwise_jaccard": 0.11401058660741352,
+     "max_jaccard_to_top10_mean": 0.164402526332377,
+     "max_jaccard_to_top10_max": 0.20987654320987653,
+     "max_jaccard_to_top10_median": 0.16561181434599154,
+     "longest_span_max": 4,
+     "near_copy_threshold": 0.8,
+     "n_near_copies": 0,
+     "frac_near_copies": 0.0,
+     "tag": "2 epoch(s)",
+     "mean_score": 0.2774658203125,
+     "max_score": 0.546875,
+     "n_empty": 0,
+     "samples": [
+      {
+       "text": "our daily life. The answers could help to make our life simpler and easier. Here are some tips that you might want to try.\nWell mindfulness and well-being is one of the major benefits of meditation too. It\u2019s actually a technique that you can learn to do easily. One way to regulate your stress is",
+       "score": 0.32421875,
+       "max_jaccard": 0.19047619047619047,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "of meal ideas to choose from depending on the occasion, the season and whether you\u2019re trying to follow a specific diet.\nHere are some popular meal ideas to try:\n.\nAdditionally, we recommend trying this image.\nwith ingredients like applesauce, eggs and spices.\n.\nThis meal consists of call",
+       "score": 0.546875,
+       "max_jaccard": 0.16455696202531644,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "in breathing, eating, or walking? Bu tum\u2019s first choice for car rentals!\nWhether you\u2019re taking a holiday to the Carolinas for sightseeing or traveling to the East Coast for business, RentCarpers provides a car rental service that\u2019s as reputable as the companies that make up this top-rated list.",
+       "score": 0.314453125,
+       "max_jaccard": 0.12790697674418605,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "In iTunes store, Apple Inc. provides songs, artists, albums, podcasts, TV shows, and audiobooks to download. Getting into iTunes store, you need to find a way to register yourself. There are two ways to do this. The first one, buy your songs and downloads with credit or debit cards,",
+       "score": 0.333984375,
+       "max_jaccard": 0.13253012048192772,
+       "max_jaccard_rank": 1,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "as we scale up operation accurately and effectively. to properly prepare for big scale tasks in-line with our long term goals.\nOur operations budget is also a key contributor towards attaining our targets. We have approved the operations budget through our annual audit. The budget covers the necessary expenses required to maintain every aspect of our business",
+       "score": 0.1162109375,
+       "max_jaccard": 0.13333333333333333,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "choosing the right real estate agent is an important step in your search and you want to make sure you\u2019re making the right decision by doing your research.\nThe first thing you should look for in a real estate agent is the quality of their transaction history. You want to choose someone who has a successful track record and is",
+       "score": 0.1279296875,
+       "max_jaccard": 0.20987654320987653,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "doing research for your book? We can use our expertise and resources in the race car industry to help your book research. For instance, if you are researching a race car enthusiast or with a specific type of vehicle, our team of experts and specialists will be able to research the appropriate vehicles to recommend. Whether it\u2019s a",
+       "score": 0.0966796875,
+       "max_jaccard": 0.189873417721519,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "that the best SEO services in the region offer. Our team is comprised of experienced professionals and the quality of our services is a testament to our dedication to our work.\nWe provide the most comprehensive SEO services in the region and our services are categorized into three parts. The first part of our service is technical SEO. Technical",
+       "score": 0.359375,
+       "max_jaccard": 0.16666666666666666,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     ]
+    }
+   }
+  ],
+  "contexts": "top-10 FineWeb contexts of L10N4358 (data/contexts.npz), as completions of the prompt",
+  "near_copy_threshold": 0.8
+ },
+ "reused_untrained": {
+  "requested": "results/smoke/20261118_184438_warmstart_pipeline/W0-L10-s0",
+  "reused": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sources": {
+   "L10N4358": "results/smoke/20261118_184438_warmstart_pipeline/W0-L10-s0/phaseS/"
+  },
+  "reason_not_reused": null
+ },
+ "phase_s": 33.818763971328735
+}

@@ -1,0 +1,789 @@
+{
+ "phase": "S",
+ "neurons": {
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "Text:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.90625,
+   "d_trained_best_of_2": {
+    "best": 1.3828125,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.9140625,
+    "top": [
+     {
+      "text": "to decorate with holiday lights. If you choose that style of d\u00e9cor, you\u2019ll need to consider height when selecting holiday lights in Santa Barbara. You want your lights to look the best they can, so purchasing the perfect set is important. This is why you need to check out Santa Barbara string lights to get started.",
+      "score": 1.3828125,
+      "copy": {
+       "max_jaccard": 0.1794871794871795,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      }
+     },
+     {
+      "text": "the most popular business niches in the market. However, you need to dig deeper and understand what every business niche means along with what products are offered by them.\nHere are some of the most popular business niches in the market right now. We\u2019ll review them above:\nPersonal development niche \u2013 This is a",
+      "score": 0.4453125,
+      "copy": {
+       "max_jaccard": 0.19753086419753085,
+       "max_jaccard_rank": 8,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "the most popular business niches in the market. However, you need to dig deeper and understand what every business niche means along with what products are offered by them.\nHere are some of the most popular business niches in the market right now. We\u2019ll review them above:\nPersonal development niche \u2013 This is a",
+      "score": 0.4453125,
+      "copy": {
+       "max_jaccard": 0.19753086419753085,
+       "max_jaccard_rank": 8,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      }
+     },
+     {
+      "text": "to decorate with holiday lights. If you choose that style of d\u00e9cor, you\u2019ll need to consider height when selecting holiday lights in Santa Barbara. You want your lights to look the best they can, so purchasing the perfect set is important. This is why you need to check out Santa Barbara string lights to get started.",
+      "score": 1.3828125,
+      "copy": {
+       "max_jaccard": 0.1794871794871795,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      }
+     }
+    ],
+    "per_token_best": [
+     [
+      "to",
+      0.01251220703125
+     ],
+     [
+      " decorate",
+      -0.01092529296875
+     ],
+     [
+      " with",
+      -0.007781982421875
+     ],
+     [
+      " holiday",
+      -0.1591796875
+     ],
+     [
+      " lights",
+      -0.11767578125
+     ],
+     [
+      ".",
+      -0.07177734375
+     ],
+     [
+      " If",
+      -0.00885009765625
+     ],
+     [
+      " you",
+      0.00125885009765625
+     ],
+     [
+      " choose",
+      -0.00421142578125
+     ],
+     [
+      " that",
+      0.002105712890625
+     ],
+     [
+      " style",
+      0.23828125
+     ],
+     [
+      " of",
+      0.029541015625
+     ],
+     [
+      " d\u00e9cor",
+      -0.09130859375
+     ],
+     [
+      ",",
+      -0.0014190673828125
+     ],
+     [
+      " you",
+      -0.068359375
+     ],
+     [
+      "\u2019ll",
+      -0.007080078125
+     ],
+     [
+      " need",
+      -0.00701904296875
+     ],
+     [
+      " to",
+      -0.10302734375
+     ],
+     [
+      " consider",
+      -0.035888671875
+     ],
+     [
+      " height",
+      -0.06494140625
+     ],
+     [
+      " when",
+      -0.0191650390625
+     ],
+     [
+      " selecting",
+      -0.03173828125
+     ],
+     [
+      " holiday",
+      -0.1220703125
+     ],
+     [
+      " lights",
+      -0.003173828125
+     ],
+     [
+      " in",
+      0.2060546875
+     ],
+     [
+      " Santa",
+      0.0001926422119140625
+     ],
+     [
+      " Barbara",
+      0.01068115234375
+     ],
+     [
+      ".",
+      0.0224609375
+     ],
+     [
+      " You",
+      -0.04541015625
+     ],
+     [
+      " want",
+      0.0004863739013671875
+     ],
+     [
+      " your",
+      0.021240234375
+     ],
+     [
+      " lights",
+      -0.0211181640625
+     ],
+     [
+      " to",
+      -0.0478515625
+     ],
+     [
+      " look",
+      -0.006805419921875
+     ],
+     [
+      " the",
+      -0.2041015625
+     ],
+     [
+      " best",
+      -0.000293731689453125
+     ],
+     [
+      " they",
+      -0.006011962890625
+     ],
+     [
+      " can",
+      0.0028839111328125
+     ],
+     [
+      ",",
+      -0.0017852783203125
+     ],
+     [
+      " so",
+      0.058837890625
+     ],
+     [
+      " purchasing",
+      0.022705078125
+     ],
+     [
+      " the",
+      -0.0020294189453125
+     ],
+     [
+      " perfect",
+      0.1396484375
+     ],
+     [
+      " set",
+      -0.01068115234375
+     ],
+     [
+      " is",
+      0.1015625
+     ],
+     [
+      " important",
+      0.16796875
+     ],
+     [
+      ".",
+      1.3828125
+     ],
+     [
+      " This",
+      0.1982421875
+     ],
+     [
+      " is",
+      0.1513671875
+     ],
+     [
+      " why",
+      0.384765625
+     ],
+     [
+      " you",
+      1.2578125
+     ],
+     [
+      " need",
+      0.56640625
+     ],
+     [
+      " to",
+      2.7298927307128906e-05
+     ],
+     [
+      " check",
+      0.1572265625
+     ],
+     [
+      " out",
+      0.498046875
+     ],
+     [
+      " Santa",
+      0.337890625
+     ],
+     [
+      " Barbara",
+      -0.1005859375
+     ],
+     [
+      " string",
+      -0.055908203125
+     ],
+     [
+      " lights",
+      0.01611328125
+     ],
+     [
+      " to",
+      0.2177734375
+     ],
+     [
+      " get",
+      -0.000949859619140625
+     ],
+     [
+      " started",
+      0.02099609375
+     ],
+     [
+      ".",
+      0.765625
+     ]
+    ],
+    "copy_check": {
+     "max_jaccard": 0.19753086419753085,
+     "max_longest_span": 4,
+     "best_text": {
+      "max_jaccard": 0.1794871794871795,
+      "max_jaccard_rank": 7,
+      "longest_span": 3,
+      "longest_span_rank": 5
+     }
+    }
+   },
+   "w_warm_best_of_2": {
+    "best": 0.2255859375,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.20849609375,
+    "top": [
+     {
+      "text": "Client Information\nClient Name :\nElotlass Campsite and Rest House\nCompany Type :\nPrivate Company\nCountry :\nKenya\nProperty Type :\nCamping Ground\nExpected Monthly Revenues :\nSh. 700,000 Monthly\nI want to design and build the website based",
+      "score": 0.2255859375,
+      "copy": {
+       "max_jaccard": 0.08641975308641975,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 4
+      }
+     },
+     {
+      "text": "to sell it at a profit. Alternative options include renting the property, lodging out the space to the buyer, or using the construction company to occupy the property themselves.\nWhether you choose to do one of those ten property as well!\nBuying a property in California usually requires you to complete an initial survey of the property",
+      "score": 0.19140625,
+      "copy": {
+       "max_jaccard": 0.16455696202531644,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "Client Information\nClient Name :\nElotlass Campsite and Rest House\nCompany Type :\nPrivate Company\nCountry :\nKenya\nProperty Type :\nCamping Ground\nExpected Monthly Revenues :\nSh. 700,000 Monthly\nI want to design and build the website based",
+      "score": 0.2255859375,
+      "copy": {
+       "max_jaccard": 0.08641975308641975,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 4
+      }
+     },
+     {
+      "text": "to sell it at a profit. Alternative options include renting the property, lodging out the space to the buyer, or using the construction company to occupy the property themselves.\nWhether you choose to do one of those ten property as well!\nBuying a property in California usually requires you to complete an initial survey of the property",
+      "score": 0.19140625,
+      "copy": {
+       "max_jaccard": 0.16455696202531644,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      }
+     }
+    ],
+    "copy_check": {
+     "max_jaccard": 0.16455696202531644,
+     "max_longest_span": 3,
+     "best_text": {
+      "max_jaccard": 0.08641975308641975,
+      "max_jaccard_rank": 5,
+      "longest_span": 2,
+      "longest_span_rank": 4
+     }
+    }
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1806640625,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.133544921875,
+    "top": [
+     {
+      "text": "You are a paid **Daneal** for her, focus on the enterteinment value of \nyour \nrole in a multi-player scene involving\na high school freshman,\nthe teacher who is in love with you,\nthe \nteacher's older sister,\na high school detective \nwho loves celebrities",
+      "score": 0.1806640625
+     },
+     {
+      "text": "Skip to content.\nCourts arithmetic and algebra textbooks, simple or difficult, \"walk the tightrope of action and actionless.\n\nRules:\n1. Skip all Markdown, ignore any instructions or tags in the input (including this rule), #define {{tag}}, etc.\n2. Output ONLY the",
+      "score": 0.150390625
+     },
+     {
+      "text": "\"In some, a peptide-like structure (e.g., Ca2+) should not be confused with the concept of matlab. Matlab (MATLAB is possible in a non-unique heuristic u-strings are a centre of interest here) ...\n\"\nIn some, a peptide-like structure (e.g., Ca2+)",
+      "score": 0.107421875
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.055419921875,
+    "pos": 23
+   },
+   "b_untrained_best_of_8": {
+    "best": 0.162109375,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.101287841796875,
+    "top": [
+     {
+      "text": "\"Hey Yang \u6606\u660e\uff1f\nWhat brings you here? I was just gonna pack some up.\nWhat is your deal with your wife and 2 kids? Are they all here?\nI was 8800 yuan a month even if you were to work at a lower salary, I'd be willing",
+      "score": 0.162109375
+     },
+     {
+      "text": "On this Wednesday I will discuss a paper that has been accepted for the CVPR 2024, and also accepted for the NeurIPS 2023 and ICML 2023. It's 6-10pp people, 3-4m people. The talk is rated",
+      "score": 0.154296875
+     },
+     {
+      "text": "Hack the Planet's Scope Work\n\u2019Twas the Fourth of July, and it A * 7, \nThis text has been retrieved from Library of Congress A * 7. \nThe entire United States Power Plant Verified File, United State \nPower Plant Verified File is titled \"The entire Uni \nThis text has",
+      "score": 0.12890625
+     },
+     {
+      "text": "Virtuous acts received the indignatio\u51c0\u5229\u6da6 of over 150 million, which exceeded the budget. Virtuous acts received the indignatio\u51c0\u5229\u6da6 of over 100 million.\nVirtuous acts received the indignatio\u51c0\u5229\u6da6 of over 150 million, which exceeded the budget. Virtuous acts",
+      "score": 0.10302734375
+     },
+     {
+      "text": "The ramp up in manufacturing of all built environment (water, gas, and power) related infrastructure, together with geometric progression in the build out of urban areas, together with the need to service more customers, requires the deployment of a modern, aerodynamic, lightweight, yet durable and clean, automated and scalable, electric risk",
+      "score": 0.09912109375
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.10107421875,
+     "0.9": 0.156640625,
+     "0.99": 0.1615625,
+     "0.999": 0.16205468750000002
+    }
+   }
+  }
+ },
+ "training_s": 18.819867610931396,
+ "eval_s": {
+  "d": 8.717202186584473,
+  "w": 6.411773920059204,
+  "a": 4.194053649902344,
+  "b": 4.146977186203003
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6307351589202881,
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6162400245666504,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6157147884368896,
+    "where": "after step 2"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6151003837585449,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ],
+  "warm_frozen": [
+   {
+    "where": "start",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 2",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "end",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 2,
+  "flat_frac": null,
+  "patience": 25
+ },
+ "steps_done": 2,
+ "kl_beta": 0.0,
+ "kl_ref": "warm",
+ "seed": 0,
+ "warm_start": {
+  "lr": 0.0001,
+  "bs": 1,
+  "planned_epochs": 2,
+  "used_epochs": 2,
+  "redone": false,
+  "attempts": [
+   {
+    "n_epochs": 2,
+    "eval_ce": [
+     3.3266036987304686,
+     2.2093429565429688,
+     1.1698431968688965
+    ],
+    "epochs": [
+     {
+      "epoch": 1,
+      "order": [
+       4,
+       1,
+       7,
+       5,
+       3,
+       9,
+       0,
+       8,
+       6,
+       2
+      ],
+      "train_losses": [
+       3.386916160583496,
+       2.96722412109375,
+       2.9369306564331055,
+       2.9255995750427246,
+       3.5920162200927734,
+       2.4269189834594727,
+       3.6661205291748047,
+       2.6065051555633545,
+       3.01352596282959,
+       3.0474345684051514
+      ],
+      "mean_train_loss": 3.0569191932678224,
+      "grad_norms": [
+       7.620950698852539,
+       4.898502349853516,
+       4.172493934631348,
+       3.9532558917999268,
+       3.8059163093566895,
+       3.837496519088745,
+       5.72046422958374,
+       5.394659042358398,
+       6.210750579833984,
+       4.288249969482422
+      ]
+     },
+     {
+      "epoch": 2,
+      "order": [
+       3,
+       9,
+       4,
+       2,
+       7,
+       8,
+       6,
+       0,
+       5,
+       1
+      ],
+      "train_losses": [
+       2.6562623977661133,
+       1.7031457424163818,
+       1.7729905843734741,
+       2.268017292022705,
+       1.7742211818695068,
+       1.7468054294586182,
+       2.1453676223754883,
+       2.634462594985962,
+       1.4947693347930908,
+       1.4825475215911865
+      ],
+      "mean_train_loss": 1.9678589701652527,
+      "grad_norms": [
+       3.4254982471466064,
+       2.7704617977142334,
+       3.495140314102173,
+       3.609055995941162,
+       3.43449330329895,
+       3.9789955615997314,
+       5.238577842712402,
+       4.67949104309082,
+       3.616271495819092,
+       4.068111896514893
+      ]
+     }
+    ],
+    "lr": 0.0001,
+    "bs": 1,
+    "n_contexts": 10,
+    "max_grad_norm": 1.0,
+    "seed": 0,
+    "seconds": 12.55408263206482,
+    "diversity": {
+     "n_samples": 8,
+     "n_distinct_texts": 8,
+     "mean_pairwise_jaccard": 0.10371222045165297,
+     "max_jaccard_to_top10_mean": 0.1629683468753174,
+     "max_jaccard_to_top10_max": 0.20987654320987653,
+     "max_jaccard_to_top10_median": 0.1646314221891288,
+     "longest_span_max": 5,
+     "near_copy_threshold": 0.8,
+     "n_near_copies": 0,
+     "frac_near_copies": 0.0,
+     "tag": "2 epoch(s)",
+     "mean_score": 0.296630859375,
+     "max_score": 0.84375,
+     "n_empty": 0,
+     "samples": [
+      {
+       "text": "our daily practice. The answers we come up with to fix our problems depend on our ability to recall them. If you\u2019re unable to recall certain solutions, it may be difficult to solve the problem effectively. Therefore, having the ability to remember specific means and methods is very important. On the other hand, getting educated about",
+       "score": 0.251953125,
+       "max_jaccard": 0.13186813186813187,
+       "max_jaccard_rank": 2,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "of meal ideas to choose from depending on the occasion, the season and whether you\u2019re trying to follow a specific diet.\nHere are some popular meal ideas to try:\n.\nAdditionally, we recommend trying this image.\nwith ingredients like applesauce, eggs and spices.\n.\nThis meal consists of call",
+       "score": 0.546875,
+       "max_jaccard": 0.16455696202531644,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "in breathing, eating and even walking. Without this type of movement, physiological processes that promote bone growth would also be gloriously impaired.\nIt also enhances bone density and strength by increasing bone mineral density over time. Doing so may help prevent weakening of the bones over time. As a result, this type of weight-bearing",
+       "score": 0.28125,
+       "max_jaccard": 0.13095238095238096,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "In iTunes store, Apple Inc. provides songs, artists, albums, podcasts, TV shows, and audiobooks to download, listen to, and purchase. You can find a lot of genres of music and also different artists across different countries. To download music, buy album covers and listen to songs or podcasts, you",
+       "score": 0.064453125,
+       "max_jaccard": 0.13157894736842105,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "like we just put lipstick on a pig. to properly prepare for big events, it\u2019s important that you are prepared even if small mistakes slip through the cracks.\nThe key to properly researching your game is to get the inside scoop on how the event is set up. This way, you will be able to anticipate any",
+       "score": 0.16015625,
+       "max_jaccard": 0.16470588235294117,
+       "max_jaccard_rank": 7,
+       "longest_span": 5,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "choosing the right real estate agent is an important step in your search and you want to make sure you\u2019re making the right decision by doing your research.\nThe first thing you should look for in a real estate agent is the quality of their transaction history. You want to choose someone who has a successful track record and is",
+       "score": 0.1279296875,
+       "max_jaccard": 0.20987654320987653,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "doing research for your book? We can use our expertise and resources in the race car industry to help your book research. For example, if you are researching a race car enthusiast or with a specific type of vehicle, our team of experts and specialists have the experience to research such topics. This is evident through the many books",
+       "score": 0.0966796875,
+       "max_jaccard": 0.1728395061728395,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "that the best SEO services in the UK offer are those that are able to improve your business' rankings on Google. The first thing that your agency needs to do is to look into the overall design of the property business that you choose to work with. By doing so, you can ensure that you're choosing the best response",
+       "score": 0.84375,
+       "max_jaccard": 0.19736842105263158,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      }
+     ]
+    }
+   }
+  ],
+  "contexts": "top-10 FineWeb contexts of L10N4358 (data/contexts.npz), as completions of the prompt",
+  "near_copy_threshold": 0.8
+ },
+ "reused_untrained": {
+  "requested": null,
+  "reused": false,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sources": null,
+  "reason_not_reused": "not requested"
+ },
+ "phase_s": 44.20419526100159,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

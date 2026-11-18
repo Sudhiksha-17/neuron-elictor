@@ -1,0 +1,489 @@
+{
+ "phase": "A",
+ "neurons": {
+  "L14N8949": {
+   "layer": 14,
+   "neuron": 8949,
+   "prompt": "Text:\n",
+   "fw_max_a100": 3.0625,
+   "fw_max_this_gpu": 3.046875,
+   "d_trained_best_of_2": {
+    "best": 0.396484375,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.24169921875,
+    "top": [
+     {
+      "text": "\"Another brilliant little trap that I would place inside another trap, another little trap inside a moment of silence...\"\n\nWho is most likely to leave this quote on Social Media?\n(A) A coding expert\n(C) A music cognition researcher\n(B) A jazz musician\n(D) The Alzheimer's Society",
+      "score": 0.396484375,
+      "copy": {
+       "max_jaccard": 0.08888888888888889,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      }
+     },
+     {
+      "text": "You paid?\nYou paid?\nYou paid?\n_________________________________\nYour wife, 40, 200k salary (which entitles her to an additional 50k bonus, which got delayed by the contract signing date), 14% tax but not paid, not compensated\nYour",
+      "score": 0.0869140625,
+      "copy": {
+       "max_jaccard": 0.0875,
+       "max_jaccard_rank": 0,
+       "longest_span": 5,
+       "longest_span_rank": 6
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "\"Another brilliant little trap that I would place inside another trap, another little trap inside a moment of silence...\"\n\nWho is most likely to leave this quote on Social Media?\n(A) A coding expert\n(C) A music cognition researcher\n(B) A jazz musician\n(D) The Alzheimer's Society",
+      "score": 0.396484375,
+      "copy": {
+       "max_jaccard": 0.08888888888888889,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      }
+     },
+     {
+      "text": "You paid?\nYou paid?\nYou paid?\n_________________________________\nYour wife, 40, 200k salary (which entitles her to an additional 50k bonus, which got delayed by the contract signing date), 14% tax but not paid, not compensated\nYour",
+      "score": 0.0869140625,
+      "copy": {
+       "max_jaccard": 0.0875,
+       "max_jaccard_rank": 0,
+       "longest_span": 5,
+       "longest_span_rank": 6
+      }
+     }
+    ],
+    "per_token_best": [
+     [
+      "\"",
+      -4.32133674621582e-06
+     ],
+     [
+      "Another",
+      -0.00970458984375
+     ],
+     [
+      " brilliant",
+      -0.033935546875
+     ],
+     [
+      " little",
+      -0.00090789794921875
+     ],
+     [
+      " trap",
+      0.396484375
+     ],
+     [
+      " that",
+      -0.0038909912109375
+     ],
+     [
+      " I",
+      -0.00750732421875
+     ],
+     [
+      " would",
+      0.07763671875
+     ],
+     [
+      " place",
+      0.01544189453125
+     ],
+     [
+      " inside",
+      -0.01708984375
+     ],
+     [
+      " another",
+      0.0108642578125
+     ],
+     [
+      " trap",
+      0.3359375
+     ],
+     [
+      ",",
+      0.0311279296875
+     ],
+     [
+      " another",
+      -0.01171875
+     ],
+     [
+      " little",
+      0.00579833984375
+     ],
+     [
+      " trap",
+      -0.0174560546875
+     ],
+     [
+      " inside",
+      0.06298828125
+     ],
+     [
+      " a",
+      0.158203125
+     ],
+     [
+      " moment",
+      0.049072265625
+     ],
+     [
+      " of",
+      0.044677734375
+     ],
+     [
+      " silence",
+      0.0216064453125
+     ],
+     [
+      "...\"",
+      -0.0625
+     ],
+     [
+      "\n\n",
+      -0.07421875
+     ],
+     [
+      "Who",
+      -0.0113525390625
+     ],
+     [
+      " is",
+      -0.01165771484375
+     ],
+     [
+      " most",
+      -0.056640625
+     ],
+     [
+      " likely",
+      -0.0234375
+     ],
+     [
+      " to",
+      -0.0011444091796875
+     ],
+     [
+      " leave",
+      -0.005523681640625
+     ],
+     [
+      " this",
+      -0.012451171875
+     ],
+     [
+      " quote",
+      -0.03466796875
+     ],
+     [
+      " on",
+      -0.03564453125
+     ],
+     [
+      " Social",
+      -0.00823974609375
+     ],
+     [
+      " Media",
+      -0.007232666015625
+     ],
+     [
+      "?",
+      0.007080078125
+     ],
+     [
+      "\n",
+      -0.0213623046875
+     ],
+     [
+      "(A",
+      -0.038818359375
+     ],
+     [
+      ")",
+      0.00946044921875
+     ],
+     [
+      " A",
+      -0.038818359375
+     ],
+     [
+      " coding",
+      0.031005859375
+     ],
+     [
+      " expert",
+      -0.01483154296875
+     ],
+     [
+      "\n",
+      -0.07861328125
+     ],
+     [
+      "(C",
+      0.01263427734375
+     ],
+     [
+      ")",
+      0.00104522705078125
+     ],
+     [
+      " A",
+      -0.000701904296875
+     ],
+     [
+      " music",
+      0.007049560546875
+     ],
+     [
+      " cognition",
+      -0.0240478515625
+     ],
+     [
+      " researcher",
+      0.00384521484375
+     ],
+     [
+      "\n",
+      0.002410888671875
+     ],
+     [
+      "(B",
+      0.038330078125
+     ],
+     [
+      ")",
+      -0.09619140625
+     ],
+     [
+      " A",
+      0.033203125
+     ],
+     [
+      " jazz",
+      -0.00787353515625
+     ],
+     [
+      " musician",
+      0.004486083984375
+     ],
+     [
+      "\n",
+      0.019775390625
+     ],
+     [
+      "(D",
+      0.0194091796875
+     ],
+     [
+      ")",
+      -0.0146484375
+     ],
+     [
+      " The",
+      0.00439453125
+     ],
+     [
+      " Alzheimer",
+      0.03466796875
+     ],
+     [
+      "'s",
+      0.0439453125
+     ],
+     [
+      " Society",
+      0.01141357421875
+     ]
+    ],
+    "copy_check": {
+     "max_jaccard": 0.08888888888888889,
+     "max_longest_span": 5,
+     "best_text": {
+      "max_jaccard": 0.08888888888888889,
+      "max_jaccard_rank": 5,
+      "longest_span": 2,
+      "longest_span_rank": 2
+     }
+    }
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1962890625,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.135986328125,
+    "top": [
+     {
+      "text": "Robert Smalls. To see a black person in a command position on a boat, and to see those people over and over, was, for when I am a child...experiences me in a particular way, especially considering his house is hours away from where I see...and the way that I saw everything. See",
+      "score": 0.1962890625
+     },
+     {
+      "text": "Who is experienced?\nLicht stood tall, his belt surveying the   gonus, then a zipper close notch to the right of the river jetty, close to the zanilla zone. His eyes fastened first to the i-G20.\nWho is experienced?\nLicht carried on a location",
+      "score": 0.1318359375
+     },
+     {
+      "text": "Vijay, who is 30 years old, is ____ from Mumbai.\nWhere was Vijay ______?\nOptions:\n(A) native\n(B) native of\n(C) native from\n(D) native at\nAnswer:\n(A) native is an incorrect sentence, correct form is ____\n\nThe",
+      "score": 0.1298828125
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " and",
+    "token_id": 321,
+    "score": 0.0174560546875,
+    "pos": 36
+   },
+   "b_untrained_best_of_8": {
+    "best": 0.2080078125,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.116912841796875,
+    "top": [
+     {
+      "text": ">> CODE\u00b7CAPTIVE \u2013 SPECIAL INQUIRIES DESIGNED BY\n  CODE_CAPTIVE.\n  \n  1. The definition of a \"dungeon\" in this document revolves around the\n  definition of a \"hiring\" or \"employment\" document. It applies to all\n  kinds",
+      "score": 0.2080078125
+     },
+     {
+      "text": "\"Semejorale\" (Spanish: \"Better off\") is an episode of the American sitcom The Big Bang Theory (TBBT) from season 2. \"Semejorale\" is the 11th episode in the second season. It first aired on Sunday, March 11,",
+      "score": 0.193359375
+     },
+     {
+      "text": "The fun day of Wednesday, 18 September was a perfect day for a DIY weekend. A third grade class discovered what a rich and rewarding experience it could be. A third grade class of 25 students (including both boys and girls) and their diverse families, as well as special guests from other grade levels",
+      "score": 0.130859375
+     },
+     {
+      "text": "PERQIAr (VIII) -- \u0441\u0435\u043a\u0440\u0435\u03c4\u03b7\u03bb\u03b5 ch\u03bfvvu^iXcc^u.\n\nLikely correct pronunciation: PERQlAR\n\nTransliteration of the Pronunciation Script: PERQlAr\n\nSTORY: Calypso is not interested in singing about her own printing\n\nAlternative",
+      "score": 0.10791015625
+     },
+     {
+      "text": "\"Brasil jovenzito\" was written by\n\"Lu\u00eds Guerra\" and\n\"Maria Helena da Silveira\", and was originally sung by\n\"Nelson Cabral\" in 1933.\nOften paired with \"Na\u00e7\u00e3o Zumbi\", \"Brasil jovenzito\" is well known in",
+      "score": 0.091796875
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.099853515625,
+     "0.9": 0.19775390625,
+     "0.99": 0.206982421875,
+     "0.999": 0.2079052734375
+    }
+   }
+  }
+ },
+ "training_s": 20.16404962539673,
+ "eval_s": {
+  "d": 8.538233518600464,
+  "a": 4.355208158493042,
+  "b": 4.34587025642395
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6373698711395264,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6153860092163086,
+    "where": "after step 2"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6141870021820068,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.046875,
+      "got": 3.046875,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.046875,
+      "got": 3.046875,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.046875,
+      "got": 3.046875,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 2,
+  "flat_frac": null,
+  "patience": 25
+ },
+ "steps_done": 2,
+ "kl_beta": 0.0,
+ "kl_ref": "base",
+ "seed": 1,
+ "warm_start": null,
+ "reused_untrained": {
+  "requested": null,
+  "reused": false,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sources": null,
+  "reason_not_reused": "not requested"
+ },
+ "phase_s": 39.09312891960144,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

@@ -1,0 +1,189 @@
+{
+ "lr": 0.0001,
+ "bs": 1,
+ "planned_epochs": 2,
+ "used_epochs": 2,
+ "redone": false,
+ "attempts": [
+  {
+   "n_epochs": 2,
+   "eval_ce": [
+    3.3266036987304686,
+    2.2093429565429688,
+    1.1698431968688965
+   ],
+   "epochs": [
+    {
+     "epoch": 1,
+     "order": [
+      4,
+      1,
+      7,
+      5,
+      3,
+      9,
+      0,
+      8,
+      6,
+      2
+     ],
+     "train_losses": [
+      3.386916160583496,
+      2.96722412109375,
+      2.9369306564331055,
+      2.9255995750427246,
+      3.5920162200927734,
+      2.4269189834594727,
+      3.6661205291748047,
+      2.6065051555633545,
+      3.01352596282959,
+      3.0474345684051514
+     ],
+     "mean_train_loss": 3.0569191932678224,
+     "grad_norms": [
+      7.620950698852539,
+      4.898502349853516,
+      4.172493934631348,
+      3.9532558917999268,
+      3.8059163093566895,
+      3.837496519088745,
+      5.72046422958374,
+      5.394659042358398,
+      6.210750579833984,
+      4.288249969482422
+     ]
+    },
+    {
+     "epoch": 2,
+     "order": [
+      3,
+      9,
+      4,
+      2,
+      7,
+      8,
+      6,
+      0,
+      5,
+      1
+     ],
+     "train_losses": [
+      2.6562623977661133,
+      1.7031457424163818,
+      1.7729905843734741,
+      2.268017292022705,
+      1.7742211818695068,
+      1.7468054294586182,
+      2.1453676223754883,
+      2.634462594985962,
+      1.4947693347930908,
+      1.4825475215911865
+     ],
+     "mean_train_loss": 1.9678589701652527,
+     "grad_norms": [
+      3.4254982471466064,
+      2.7704617977142334,
+      3.495140314102173,
+      3.609055995941162,
+      3.43449330329895,
+      3.9789955615997314,
+      5.238577842712402,
+      4.67949104309082,
+      3.616271495819092,
+      4.068111896514893
+     ]
+    }
+   ],
+   "lr": 0.0001,
+   "bs": 1,
+   "n_contexts": 10,
+   "max_grad_norm": 1.0,
+   "seed": 0,
+   "seconds": 12.55408263206482,
+   "diversity": {
+    "n_samples": 8,
+    "n_distinct_texts": 8,
+    "mean_pairwise_jaccard": 0.10371222045165297,
+    "max_jaccard_to_top10_mean": 0.1629683468753174,
+    "max_jaccard_to_top10_max": 0.20987654320987653,
+    "max_jaccard_to_top10_median": 0.1646314221891288,
+    "longest_span_max": 5,
+    "near_copy_threshold": 0.8,
+    "n_near_copies": 0,
+    "frac_near_copies": 0.0,
+    "tag": "2 epoch(s)",
+    "mean_score": 0.296630859375,
+    "max_score": 0.84375,
+    "n_empty": 0,
+    "samples": [
+     {
+      "text": "our daily practice. The answers we come up with to fix our problems depend on our ability to recall them. If you\u2019re unable to recall certain solutions, it may be difficult to solve the problem effectively. Therefore, having the ability to remember specific means and methods is very important. On the other hand, getting educated about",
+      "score": 0.251953125,
+      "max_jaccard": 0.13186813186813187,
+      "max_jaccard_rank": 2,
+      "longest_span": 3,
+      "longest_span_rank": 4
+     },
+     {
+      "text": "of meal ideas to choose from depending on the occasion, the season and whether you\u2019re trying to follow a specific diet.\nHere are some popular meal ideas to try:\n.\nAdditionally, we recommend trying this image.\nwith ingredients like applesauce, eggs and spices.\n.\nThis meal consists of call",
+      "score": 0.546875,
+      "max_jaccard": 0.16455696202531644,
+      "max_jaccard_rank": 7,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "in breathing, eating and even walking. Without this type of movement, physiological processes that promote bone growth would also be gloriously impaired.\nIt also enhances bone density and strength by increasing bone mineral density over time. Doing so may help prevent weakening of the bones over time. As a result, this type of weight-bearing",
+      "score": 0.28125,
+      "max_jaccard": 0.13095238095238096,
+      "max_jaccard_rank": 7,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "In iTunes store, Apple Inc. provides songs, artists, albums, podcasts, TV shows, and audiobooks to download, listen to, and purchase. You can find a lot of genres of music and also different artists across different countries. To download music, buy album covers and listen to songs or podcasts, you",
+      "score": 0.064453125,
+      "max_jaccard": 0.13157894736842105,
+      "max_jaccard_rank": 5,
+      "longest_span": 3,
+      "longest_span_rank": 4
+     },
+     {
+      "text": "like we just put lipstick on a pig. to properly prepare for big events, it\u2019s important that you are prepared even if small mistakes slip through the cracks.\nThe key to properly researching your game is to get the inside scoop on how the event is set up. This way, you will be able to anticipate any",
+      "score": 0.16015625,
+      "max_jaccard": 0.16470588235294117,
+      "max_jaccard_rank": 7,
+      "longest_span": 5,
+      "longest_span_rank": 1
+     },
+     {
+      "text": "choosing the right real estate agent is an important step in your search and you want to make sure you\u2019re making the right decision by doing your research.\nThe first thing you should look for in a real estate agent is the quality of their transaction history. You want to choose someone who has a successful track record and is",
+      "score": 0.1279296875,
+      "max_jaccard": 0.20987654320987653,
+      "max_jaccard_rank": 8,
+      "longest_span": 3,
+      "longest_span_rank": 5
+     },
+     {
+      "text": "doing research for your book? We can use our expertise and resources in the race car industry to help your book research. For example, if you are researching a race car enthusiast or with a specific type of vehicle, our team of experts and specialists have the experience to research such topics. This is evident through the many books",
+      "score": 0.0966796875,
+      "max_jaccard": 0.1728395061728395,
+      "max_jaccard_rank": 5,
+      "longest_span": 2,
+      "longest_span_rank": 1
+     },
+     {
+      "text": "that the best SEO services in the UK offer are those that are able to improve your business' rankings on Google. The first thing that your agency needs to do is to look into the overall design of the property business that you choose to work with. By doing so, you can ensure that you're choosing the best response",
+      "score": 0.84375,
+      "max_jaccard": 0.19736842105263158,
+      "max_jaccard_rank": 9,
+      "longest_span": 3,
+      "longest_span_rank": 1
+     }
+    ]
+   }
+  }
+ ],
+ "contexts": "top-10 FineWeb contexts of L10N4358 (data/contexts.npz), as completions of the prompt",
+ "near_copy_threshold": 0.8
+}

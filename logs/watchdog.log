@@ -159,3 +159,13 @@
 [2026-11-18 17:56:21] check: util=0% (idle); idle for 35 min (limit 120 min)
 [2026-11-18 18:01:21] check: util=0% (idle); idle for 40 min (limit 120 min)
 [2026-11-18 18:06:21] check: util=0% (idle); idle for 45 min (limit 120 min)
+[2026-11-18 18:11:21] check: util=0% (idle); idle for 50 min (limit 120 min)
+[2026-11-18 18:16:21] check: util=0% (idle); idle for 55 min (limit 120 min)
+[2026-11-18 18:21:21] check: util=0% (idle); idle for 60 min (limit 120 min)
+[2026-11-18 18:26:21] check: util=30% (busy); idle streak reset
+[2026-11-18 18:31:21] check: util=25% (busy); idle streak reset
+[2026-11-18 18:36:21] check: util=71% (busy); idle streak reset
+[2026-11-18 18:41:21] check: util=38% (busy); idle streak reset
+[2026-11-18 18:46:21] check: util=36% (busy); idle streak reset
+[2026-11-18 18:51:22] check: util=0% (idle); idle for 0 min (limit 120 min)
+[2026-11-18 18:56:22] check: util=56% (busy); idle streak reset

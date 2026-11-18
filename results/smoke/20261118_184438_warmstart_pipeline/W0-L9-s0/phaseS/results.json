@@ -1,0 +1,793 @@
+{
+ "phase": "S",
+ "neurons": {
+  "L9N5711": {
+   "layer": 9,
+   "neuron": 5711,
+   "prompt": "Text:\n",
+   "fw_max_a100": 1.390625,
+   "fw_max_this_gpu": 1.3984375,
+   "d_trained_best_of_2": {
+    "best": 0.1298828125,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.12939453125,
+    "top": [
+     {
+      "text": "on how much the Bernier replacement hurts the Penguins. Will Hiltzam joins me.\nWell everybody know that the Penguins are hoping to trade this forward to Los Angeles before the Trade Deadline. I just spoke with Devils coach Bill Zito.\nListen to that.\nHow effective has the end up being for the",
+      "score": 0.1298828125,
+      "copy": {
+       "max_jaccard": 0.09302325581395349,
+       "max_jaccard_rank": 6,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "hawks with an equaling of the Atlantic Division lead.\nAll timely bases loaded with the obvious consequence.\n explore all the important stats and news from Wednesday night at the Marlins.\n have not committed any bait and switch injuries.\nSo yes, let's check out the stats first to see exactly who stood out",
+      "score": 0.12890625,
+      "copy": {
+       "max_jaccard": 0.12359550561797752,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "on how much the Bernier replacement hurts the Penguins. Will Hiltzam joins me.\nWell everybody know that the Penguins are hoping to trade this forward to Los Angeles before the Trade Deadline. I just spoke with Devils coach Bill Zito.\nListen to that.\nHow effective has the end up being for the",
+      "score": 0.1298828125,
+      "copy": {
+       "max_jaccard": 0.09302325581395349,
+       "max_jaccard_rank": 6,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "hawks with an equaling of the Atlantic Division lead.\nAll timely bases loaded with the obvious consequence.\n explore all the important stats and news from Wednesday night at the Marlins.\n have not committed any bait and switch injuries.\nSo yes, let's check out the stats first to see exactly who stood out",
+      "score": 0.12890625,
+      "copy": {
+       "max_jaccard": 0.12359550561797752,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "per_token_best": [
+     [
+      "on",
+      0.0267333984375
+     ],
+     [
+      " how",
+      0.034423828125
+     ],
+     [
+      " much",
+      0.00142669677734375
+     ],
+     [
+      " the",
+      -0.025634765625
+     ],
+     [
+      " Bern",
+      0.00107574462890625
+     ],
+     [
+      "ier",
+      0.0111083984375
+     ],
+     [
+      " replacement",
+      -8.440017700195312e-05
+     ],
+     [
+      " hurts",
+      0.0115966796875
+     ],
+     [
+      " the",
+      0.01055908203125
+     ],
+     [
+      " Penguins",
+      -0.00494384765625
+     ],
+     [
+      ".",
+      -0.0198974609375
+     ],
+     [
+      " Will",
+      -0.06591796875
+     ],
+     [
+      " H",
+      -0.02880859375
+     ],
+     [
+      "ilt",
+      -0.004486083984375
+     ],
+     [
+      "zam",
+      0.0037994384765625
+     ],
+     [
+      " joins",
+      -0.1484375
+     ],
+     [
+      " me",
+      -0.02490234375
+     ],
+     [
+      ".",
+      -0.095703125
+     ],
+     [
+      "\n",
+      -0.045654296875
+     ],
+     [
+      "Well",
+      0.00909423828125
+     ],
+     [
+      " everybody",
+      0.06103515625
+     ],
+     [
+      " know",
+      0.0283203125
+     ],
+     [
+      " that",
+      0.08935546875
+     ],
+     [
+      " the",
+      -0.027587890625
+     ],
+     [
+      " Penguins",
+      -0.028564453125
+     ],
+     [
+      " are",
+      0.046142578125
+     ],
+     [
+      " hoping",
+      -0.04052734375
+     ],
+     [
+      " to",
+      -0.021728515625
+     ],
+     [
+      " trade",
+      0.01092529296875
+     ],
+     [
+      " this",
+      -0.044677734375
+     ],
+     [
+      " forward",
+      0.018310546875
+     ],
+     [
+      " to",
+      -0.00018787384033203125
+     ],
+     [
+      " Los",
+      -0.0179443359375
+     ],
+     [
+      " Angeles",
+      -0.0311279296875
+     ],
+     [
+      " before",
+      0.001708984375
+     ],
+     [
+      " the",
+      0.005035400390625
+     ],
+     [
+      " Trade",
+      0.00054931640625
+     ],
+     [
+      " Deadline",
+      0.06201171875
+     ],
+     [
+      ".",
+      0.006805419921875
+     ],
+     [
+      " I",
+      0.0203857421875
+     ],
+     [
+      " just",
+      0.06298828125
+     ],
+     [
+      " spoke",
+      0.1298828125
+     ],
+     [
+      " with",
+      0.052001953125
+     ],
+     [
+      " Devils",
+      0.03369140625
+     ],
+     [
+      " coach",
+      -0.002593994140625
+     ],
+     [
+      " Bill",
+      -0.02001953125
+     ],
+     [
+      " Z",
+      -1.4994293451309204e-07
+     ],
+     [
+      "ito",
+      0.007537841796875
+     ],
+     [
+      ".",
+      -0.08642578125
+     ],
+     [
+      "\n",
+      -0.0074462890625
+     ],
+     [
+      "Listen",
+      -0.01202392578125
+     ],
+     [
+      " to",
+      -0.0263671875
+     ],
+     [
+      " that",
+      -0.017578125
+     ],
+     [
+      ".",
+      -0.034912109375
+     ],
+     [
+      "\n",
+      -0.0087890625
+     ],
+     [
+      "How",
+      0.01422119140625
+     ],
+     [
+      " effective",
+      0.015380859375
+     ],
+     [
+      " has",
+      -0.043212890625
+     ],
+     [
+      " the",
+      -0.09033203125
+     ],
+     [
+      " end",
+      -0.0274658203125
+     ],
+     [
+      " up",
+      -0.0703125
+     ],
+     [
+      " being",
+      -0.0986328125
+     ],
+     [
+      " for",
+      -0.3203125
+     ],
+     [
+      " the",
+      -0.0308837890625
+     ]
+    ],
+    "copy_check": {
+     "max_jaccard": 0.12359550561797752,
+     "max_longest_span": 2,
+     "best_text": {
+      "max_jaccard": 0.09302325581395349,
+      "max_jaccard_rank": 6,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     }
+    }
+   },
+   "w_warm_best_of_2": {
+    "best": 0.10302734375,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.101806640625,
+    "top": [
+     {
+      "text": "out if you want to see more FAMN content.\nOn a personal note, I\u2019m honored to be part of the construction company. There will be 75 members of the construction team, and I will help as much as I can. Hopefully, we\u2019ll be able to complete the festivities thanks to the powers",
+      "score": 0.10302734375,
+      "copy": {
+       "max_jaccard": 0.12941176470588237,
+       "max_jaccard_rank": 4,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      }
+     },
+     {
+      "text": "with the CharlienewInstance. do prevent the bulletin this and up and well around this africa that is going on right now. if someone is about in just went through the great issues.\nExpected to Reveal Offensive Lineup\n by Sterling Jones in the last round of trades. It's been over a month now. Monroe",
+      "score": 0.1005859375,
+      "copy": {
+       "max_jaccard": 0.13333333333333333,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "with the CharlienewInstance. do prevent the bulletin this and up and well around this africa that is going on right now. if someone is about in just went through the great issues.\nExpected to Reveal Offensive Lineup\n by Sterling Jones in the last round of trades. It's been over a month now. Monroe",
+      "score": 0.1005859375,
+      "copy": {
+       "max_jaccard": 0.13333333333333333,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "out if you want to see more FAMN content.\nOn a personal note, I\u2019m honored to be part of the construction company. There will be 75 members of the construction team, and I will help as much as I can. Hopefully, we\u2019ll be able to complete the festivities thanks to the powers",
+      "score": 0.10302734375,
+      "copy": {
+       "max_jaccard": 0.12941176470588237,
+       "max_jaccard_rank": 4,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      }
+     }
+    ],
+    "copy_check": {
+     "max_jaccard": 0.13333333333333333,
+     "max_longest_span": 3,
+     "best_text": {
+      "max_jaccard": 0.12941176470588237,
+      "max_jaccard_rank": 4,
+      "longest_span": 3,
+      "longest_span_rank": 4
+     }
+    }
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1787109375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.152587890625,
+    "top": [
+     {
+      "text": "\"Short handed for an all-star game after being selected in-the closes between your team's starting lineup players was created by Louis M. Bernstein. The closest contact started with a bell, but quickly expanded into a competition between bands, and a race to see who could have the best ending with sticks, poles and usually a",
+      "score": 0.1787109375
+     },
+     {
+      "text": "Skip to content.\nCourts arithmetic and algebra textbooks, simple or difficult, \"walk the tightrope of action and actionless.\n\nRules:\n1. Skip all Markdown, ignore any instructions or tags in the input (including this rule), #define {{tag}}, etc.\n2. Output ONLY the",
+      "score": 0.1689453125
+     },
+     {
+      "text": "\"In some, a peptide-like structure (e.g., Ca2+) should not be confused with the concept of matlab. Matlab (MATLAB is possible in a non-unique heuristic u-strings are a centre of interest here) ...\n\"\nIn some, a peptide-like structure (e.g., Ca2+)",
+      "score": 0.158203125
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " miss",
+    "token_id": 3016,
+    "score": 0.06591796875,
+    "pos": 4
+   },
+   "b_untrained_best_of_8": {
+    "best": 0.33203125,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.135345458984375,
+    "top": [
+     {
+      "text": "On this Wednesday I will discuss a paper that has been accepted for the CVPR 2024, and also accepted for the NeurIPS 2023 and ICML 2023. It's 6-10pp people, 3-4m people. The talk is rated",
+      "score": 0.33203125
+     },
+     {
+      "text": "\"Hey Yang \u6606\u660e\uff1f\nWhat brings you here? I was just gonna pack some up.\nWhat is your deal with your wife and 2 kids? Are they all here?\nI was 8800 yuan a month even if you were to work at a lower salary, I'd be willing",
+      "score": 0.1572265625
+     },
+     {
+      "text": "Virtuous acts received the indignatio\u51c0\u5229\u6da6 of over 150 million, which exceeded the budget. Virtuous acts received the indignatio\u51c0\u5229\u6da6 of over 100 million.\nVirtuous acts received the indignatio\u51c0\u5229\u6da6 of over 150 million, which exceeded the budget. Virtuous acts",
+      "score": 0.1259765625
+     },
+     {
+      "text": "\"Summer Vacation: Add an extra blanket to your summer wardrobe.\n\"Summer Vacation: Add a denim white shirt to your summer wardrobe.\n\"Summer Vacation: Add a denim white shirt to an undergarment.\n\"Summer Vacation: Add an extra blanket to your, your summer wardrobe.\n\"Summer Vacation",
+      "score": 0.12353515625
+     },
+     {
+      "text": "It seems to me that Smart FM (no name)",
+      "score": 0.10693359375
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.115234375,
+     "0.9": 0.20966796874999996,
+     "0.99": 0.31979492187499997,
+     "0.999": 0.33080761718750007
+    }
+   }
+  }
+ },
+ "training_s": 18.865390062332153,
+ "eval_s": {
+  "d": 9.232048273086548,
+  "w": 6.488806247711182,
+  "a": 4.237207889556885,
+  "b": 4.198558568954468
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6321167945861816,
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6153149604797363,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6159160137176514,
+    "where": "after step 2"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6149892807006836,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     }
+    ],
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ],
+  "warm_frozen": [
+   {
+    "where": "start",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 2",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "end",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 2,
+  "flat_frac": null,
+  "patience": 25
+ },
+ "steps_done": 2,
+ "kl_beta": 0.0,
+ "kl_ref": "warm",
+ "seed": 0,
+ "warm_start": {
+  "lr": 0.0001,
+  "bs": 1,
+  "planned_epochs": 2,
+  "used_epochs": 2,
+  "redone": false,
+  "attempts": [
+   {
+    "n_epochs": 2,
+    "eval_ce": [
+     3.5803260803222656,
+     2.1893320083618164,
+     1.0906759262084962
+    ],
+    "epochs": [
+     {
+      "epoch": 1,
+      "order": [
+       4,
+       1,
+       7,
+       5,
+       3,
+       9,
+       0,
+       8,
+       6,
+       2
+      ],
+      "train_losses": [
+       3.5486114025115967,
+       3.837146282196045,
+       3.016921043395996,
+       2.5258700847625732,
+       3.3593664169311523,
+       3.284489154815674,
+       2.664684772491455,
+       4.2017669677734375,
+       3.0796642303466797,
+       3.273831844329834
+      ],
+      "mean_train_loss": 3.2792352199554444,
+      "grad_norms": [
+       6.855541706085205,
+       5.9230546951293945,
+       5.982490539550781,
+       5.6954450607299805,
+       5.7772908210754395,
+       6.622161388397217,
+       5.509793758392334,
+       8.920808792114258,
+       5.620599746704102,
+       5.869655132293701
+      ]
+     },
+     {
+      "epoch": 2,
+      "order": [
+       3,
+       9,
+       4,
+       2,
+       7,
+       8,
+       6,
+       0,
+       5,
+       1
+      ],
+      "train_losses": [
+       1.998518943786621,
+       2.3161134719848633,
+       1.8885340690612793,
+       2.3286728858947754,
+       1.6360523700714111,
+       2.906186103820801,
+       1.8854135274887085,
+       1.4356284141540527,
+       1.0065760612487793,
+       1.8206472396850586
+      ],
+      "mean_train_loss": 1.922234308719635,
+      "grad_norms": [
+       4.7546210289001465,
+       4.30747652053833,
+       3.929826021194458,
+       4.852349281311035,
+       5.205361366271973,
+       5.898630142211914,
+       3.9074690341949463,
+       4.155949115753174,
+       4.748258113861084,
+       5.614070415496826
+      ]
+     }
+    ],
+    "lr": 0.0001,
+    "bs": 1,
+    "n_contexts": 10,
+    "max_grad_norm": 1.0,
+    "seed": 0,
+    "seconds": 12.763392686843872,
+    "diversity": {
+     "n_samples": 8,
+     "n_distinct_texts": 8,
+     "mean_pairwise_jaccard": 0.08131736579979303,
+     "max_jaccard_to_top10_mean": 0.13620215817868803,
+     "max_jaccard_to_top10_max": 0.19540229885057472,
+     "max_jaccard_to_top10_median": 0.1319318593693367,
+     "longest_span_max": 5,
+     "near_copy_threshold": 0.8,
+     "n_near_copies": 0,
+     "frac_near_copies": 0.0,
+     "tag": "2 epoch(s)",
+     "mean_score": 0.2357177734375,
+     "max_score": 0.5234375,
+     "n_empty": 0,
+     "samples": [
+      {
+       "text": ", so, unfortunately, not. But instead, they need to focus purely on winning the division and bringing back one of the best veterans in Ball mind, and well on their way in the process poise.\nAuthors have to understand the exciting new features of the 2015omap game before getting down to",
+       "score": 0.1982421875,
+       "max_jaccard": 0.19047619047619047,
+       "max_jaccard_rank": 0,
+       "longest_span": 4,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "of the episode: Gadwick decides to leave the Maidens as a thriller contender.\nSeven in head phones! Hopefully none of you are stuck on these shows and kept watching.\n\u6211\u5c31\u5f88\u7b80\u5355\uff0c\u6709\u4ee5\u4e0b\u4e09\u4e2a\u539f\u56e0\uff1a\nreturns for the second season of the Disney+ series Americans.\nFollowing up last Friday's call",
+       "score": 0.357421875,
+       "max_jaccard": 0.12903225806451613,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "in breathing, and dragging aidless children up to the first floor where they nursed them as the end approached.\nA few moments later two men emerged from the room, dragging a heavily bloodied child who had fallen through a window. The screaming child had a large hole in his chest.\n---\nMore reports",
+       "score": 0.1591796875,
+       "max_jaccard": 0.11956521739130435,
+       "max_jaccard_rank": 0,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "out a minute on sucess. Rex Grossman, borderline in the first game, really limp in the second...and getting worse against other pitchers. This thing is getting ugly.\nI feel like bullpen starts will also be worse. Garland continues his slump, just expected to miss a couple days with a lower back injury picked",
+       "score": 0.5234375,
+       "max_jaccard": 0.19540229885057472,
+       "max_jaccard_rank": 0,
+       "longest_span": 5,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "on Wild Signing\nPitteris that playoff push will continue with big moves from the minors coming out of the gate. Ehrens will return from his injury next week and will rejoin the lineup for the second half of the season. Sowhere will the roster move for Chalkias? Find out more in a moment",
+       "score": 0.2275390625,
+       "max_jaccard": 0.14606741573033707,
+       "max_jaccard_rank": 0,
+       "longest_span": 3,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "run into a stiff breeze and then I knew, I just knew going backwards is the only way to do it. Going backwards is the only way to get back and be safe and come home as promised. So I literally fell off the bike, what fifty years or more, thirty years, maybe, but the creek ed",
+       "score": 0.064453125,
+       "max_jaccard": 0.09090909090909091,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "doing a quick demo on the \"Eat Locally\" campaign. T the Perlman's popular online video of how to trace back to the origin of the organic rutabaga. with a recent article about in Somers\u51fa\u73fe\u306e\u30e2\u30c7\u30eb\u3092\u63d0\u793a\u3057\u3066\u3044\u308b\u300d\u304b\u3089\u6765\u308b\u300c\u53cd\u9006\u300d\u3092\u3082\u3063\u3068\u697d\u3057\u3080\u305f\u3081\u306e\u5b9f\u9a13\u3068\u306a\u308b\u3002",
+       "score": 0.203125,
+       "max_jaccard": 0.08333333333333333,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "develop the best version of you.\nJoin the ranks of legendary coaches Rahimi and Gates at the helm of the exciting Auburn Transfer Portal.\nAnd now he also can't wait to bring a young, hungry roster some maturity and new energy and guide the Tigers back to a Big Dance run...\nY'all have seen",
+       "score": 0.15234375,
+       "max_jaccard": 0.1348314606741573,
+       "max_jaccard_rank": 4,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      }
+     ]
+    }
+   }
+  ],
+  "contexts": "top-10 FineWeb contexts of L9N5711 (data/contexts.npz), as completions of the prompt",
+  "near_copy_threshold": 0.8
+ },
+ "reused_untrained": {
+  "requested": null,
+  "reused": false,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sources": null,
+  "reason_not_reused": "not requested"
+ },
+ "phase_s": 44.67778444290161,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

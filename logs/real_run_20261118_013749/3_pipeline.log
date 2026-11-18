@@ -13,3 +13,6 @@ GATE PASS: Phase A (d) 6.6875 vs FineWeb max (this GPU) 3.03125
 [pipeline 2026-11-18 03:49:19] pipeline ending (last exit code 0); writing final report
 report: /workspace/neuron-elictor/reports/20261118_034919_grpo_final.md
 [pipeline 2026-11-18 03:49:23] committing
+[pipeline 2026-11-18 03:49:25] committed: 4c549bc GRPO elicitor run 20261118_013749: code, configs, metrics, final report
+[pipeline 2026-11-18 03:49:27] pushed to origin main
+[pipeline 2026-11-18 03:49:27] --no_stop: not stopping the pod (caller stops it)

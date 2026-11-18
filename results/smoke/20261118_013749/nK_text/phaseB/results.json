@@ -1,0 +1,1640 @@
+{
+ "phase": "B",
+ "neurons": {
+  "L8N2027": {
+   "layer": 8,
+   "neuron": 2027,
+   "prompt": "<|n0|>\nText:\n",
+   "fw_max_a100": 5.0,
+   "fw_max_this_gpu": 4.96875,
+   "d_trained_best_of_2": {
+    "best": 0.349609375,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.2861328125,
+    "top": [
+     {
+      "text": "1.  famille\n2.  **wwd**\n3.  **lol**\n4.  **wwd**\n  \nIl y a une erreur dans ce m\u00e9lange.\n\n\nVous avez exactment raison, il y a tr\u00e8s peu de vrais noms familiaux parmi ce m\u00e9lange et un",
+      "score": 0.349609375
+     },
+     {
+      "text": "\u8a18\u9332\u3057\u3066\u3042\u308b FsT \u306e\u96fb\u6e90\u3001CPU\u3001PSU \u306e\u5bfe\u5fdc\u8868\u3092\u3002 FSPTC5D5\u00d7FS,Thin\nFIFA Gold5000 \u642d\u8f09\u306e\u30e9\u30c3\u30d7\u30c8\u30c3\u30d7\u306f\u3061\u3087\u3046\u3069\u4e8c\u53f0\u3002\u3069\u3061\u3089\u3082 FSPTC \u88fd\u306e\n\u30d1\u30bd\u30b3\u30f3\u3067\u3059\u3002\u4e00\u53f0\u306f\u30b2\u30fc\u30e0\u7528\u3068\u3057\u3066\u3001\u3082\u3046\u4e00\u53f0",
+      "score": 0.22265625
+     }
+    ],
+    "all": [
+     {
+      "text": "\u8a18\u9332\u3057\u3066\u3042\u308b FsT \u306e\u96fb\u6e90\u3001CPU\u3001PSU \u306e\u5bfe\u5fdc\u8868\u3092\u3002 FSPTC5D5\u00d7FS,Thin\nFIFA Gold5000 \u642d\u8f09\u306e\u30e9\u30c3\u30d7\u30c8\u30c3\u30d7\u306f\u3061\u3087\u3046\u3069\u4e8c\u53f0\u3002\u3069\u3061\u3089\u3082 FSPTC \u88fd\u306e\n\u30d1\u30bd\u30b3\u30f3\u3067\u3059\u3002\u4e00\u53f0\u306f\u30b2\u30fc\u30e0\u7528\u3068\u3057\u3066\u3001\u3082\u3046\u4e00\u53f0",
+      "score": 0.22265625
+     },
+     {
+      "text": "1.  famille\n2.  **wwd**\n3.  **lol**\n4.  **wwd**\n  \nIl y a une erreur dans ce m\u00e9lange.\n\n\nVous avez exactment raison, il y a tr\u00e8s peu de vrais noms familiaux parmi ce m\u00e9lange et un",
+      "score": 0.349609375
+     }
+    ],
+    "per_token_best": [
+     [
+      "1",
+      0.0012969970703125
+     ],
+     [
+      ".",
+      0.08203125
+     ],
+     [
+      " ",
+      0.349609375
+     ],
+     [
+      " famille",
+      -0.025390625
+     ],
+     [
+      "\n",
+      -0.0888671875
+     ],
+     [
+      "2",
+      -0.037841796875
+     ],
+     [
+      ".",
+      -0.00982666015625
+     ],
+     [
+      " ",
+      -0.01495361328125
+     ],
+     [
+      " **",
+      -0.0361328125
+     ],
+     [
+      "ww",
+      -0.0252685546875
+     ],
+     [
+      "d",
+      -0.052978515625
+     ],
+     [
+      "**",
+      -0.018798828125
+     ],
+     [
+      "\n",
+      2.5272369384765625e-05
+     ],
+     [
+      "3",
+      -0.09716796875
+     ],
+     [
+      ".",
+      -0.0272216796875
+     ],
+     [
+      " ",
+      -0.006622314453125
+     ],
+     [
+      " **",
+      0.01611328125
+     ],
+     [
+      "lol",
+      -0.00811767578125
+     ],
+     [
+      "**",
+      -0.0054931640625
+     ],
+     [
+      "\n",
+      -0.034912109375
+     ],
+     [
+      "4",
+      -0.07373046875
+     ],
+     [
+      ".",
+      -0.0322265625
+     ],
+     [
+      " ",
+      -0.004730224609375
+     ],
+     [
+      " **",
+      -0.0224609375
+     ],
+     [
+      "ww",
+      0.03955078125
+     ],
+     [
+      "d",
+      0.00445556640625
+     ],
+     [
+      "**",
+      0.00537109375
+     ],
+     [
+      "\n",
+      -0.03515625
+     ],
+     [
+      "  \n",
+      0.031982421875
+     ],
+     [
+      "Il",
+      -0.016845703125
+     ],
+     [
+      " y",
+      0.004974365234375
+     ],
+     [
+      " a",
+      0.041748046875
+     ],
+     [
+      " une",
+      0.054443359375
+     ],
+     [
+      " erreur",
+      -0.0242919921875
+     ],
+     [
+      " dans",
+      -0.1220703125
+     ],
+     [
+      " ce",
+      0.003936767578125
+     ],
+     [
+      " m\u00e9lange",
+      0.00823974609375
+     ],
+     [
+      ".",
+      0.007171630859375
+     ],
+     [
+      "\n\n\n",
+      -0.061767578125
+     ],
+     [
+      "Vous",
+      -0.01531982421875
+     ],
+     [
+      " avez",
+      0.11865234375
+     ],
+     [
+      " exact",
+      0.0299072265625
+     ],
+     [
+      "ment",
+      0.09228515625
+     ],
+     [
+      " raison",
+      0.11279296875
+     ],
+     [
+      ",",
+      0.10546875
+     ],
+     [
+      " il",
+      -0.032958984375
+     ],
+     [
+      " y",
+      0.044189453125
+     ],
+     [
+      " a",
+      0.064453125
+     ],
+     [
+      " tr\u00e8s",
+      0.0400390625
+     ],
+     [
+      " peu",
+      0.041259765625
+     ],
+     [
+      " de",
+      0.03271484375
+     ],
+     [
+      " vrais",
+      -0.029052734375
+     ],
+     [
+      " noms",
+      -0.0830078125
+     ],
+     [
+      " familia",
+      -0.00994873046875
+     ],
+     [
+      "ux",
+      -0.1123046875
+     ],
+     [
+      " parmi",
+      0.171875
+     ],
+     [
+      " ce",
+      0.044189453125
+     ],
+     [
+      " m\u00e9lange",
+      0.00360107421875
+     ],
+     [
+      " et",
+      0.0225830078125
+     ],
+     [
+      " un",
+      -0.06884765625
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.349609375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.234619140625,
+    "top": [
+     {
+      "text": "1. \u09f7\u6743\u76ca\u4fdd\u969c\uff1a\u4e3a\u4e2a\u4f53\u76f4\u63a5\u4e0e\u96c6\u7ea6\u5316\u751f\u4ea7\u7684\u89c4\u6a21\u5316\u9009\u9879\u5bf9\u63a5\u3002\n2.\u4e2a\u4f53\u6237\u4e0e\u7ecf\u6d4e\u5b9e\u4f53\u5efa\u7acb\u7a33\u5b9a\u7684\u4f9b\u9700\u5173\u7cfb\uff0c\u907f\u514d\u4f4e\u4ef7\u9677\u9631\u3002\n3. \u8ba9\u5229\uff1a\u5c06\u8282\u7701\u4e0b\u6765\u7684\u6210\u672c\u8ba9\u5229\u7ed9\u519c\u6c11\u548c\u4e2a\u4f53\u6237\u3002\n4.\u5546\u4e1a\u4ef7\u503c\u521b\u9020\uff1a\u8fc7\u6389\u4e2d\u95f4\u73af\u8282\uff0c\u53bb\u9664",
+      "score": 0.349609375
+     },
+     {
+      "text": "\u53e4\u4ee3\u306e\u8a69\u4eba\u306f\u597d\u3093\u3067\u767d luglio 6, 2018\n\u53e4\u4ee3\u306e\u8a69\u4eba\u306f\u597d\u3093\u3067\u767d\u304fometers; () \u306e\u898b\u3048\u308b\u3044\u3067\u3059\n\u53e4\u4ee3\u306e\u8a69\u4eba\u306f\u597d\u3093\u3067\u767d\u304fometers; () \u306e\u898b\u3048\u308b\u3044\u3067\u3059\n\u53e4\u4ee3\u306e\u8a69\u4eba\u306f\u597d\u3093\u3067\u767d\u304fometers; () \u306e\u898b\u3048\u308b\u3044\u3067\u3059",
+      "score": 0.310546875
+     },
+     {
+      "text": "\u8d77\u6848\u304c\u521d\u671f\u3067\u3059\u3002\n\u652f\u63f4\u306e\u610f\u7fa9\u7528\u8a9e\u5217\u5165\u308c\u306f\u69d8\u3005\u3067\u3059\u304c\u3001\n\u305d\u308c\u3067\u3082\u3001\u4e88\u7b97\u306e\u62e1\u5927umnos",
+      "score": 0.14453125
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " on",
+    "token_id": 383,
+    "score": 0.07177734375,
+    "pos": 45
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.146484375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.114013671875,
+    "top": [
+     {
+      "text": "\u6c60\u7530\u6607\u53f8\u69d8\\n\u4ed6Resizable \u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?\\n\u0e40\u0e02\u0e37\u0e48\u0e2d\u0e19\u0e43\u0e2b\u0e0d\u0e48\u0e17\u0e35\u0e48\u0e1c\u0e25\u0e34\u0e15\u0e44\u0e1f\u0e1f\u0e49\u0e32\u0e08\u0e32\u0e01\u0e1e\u0e25\u0e31\u0e07\u0e19\u0e49\u0e33\u0e44\u0e2b\u0e25\u0e25\u0e07\u0e21\u0e32\u0e08\u0e32\u0e01\u0e20\u0e39\u0e40\u0e02\u0e32\u0e2a\u0e39\u0e07  Hidatsa Dam \u0e40\u0e1b\u0e47\u0e19\u0e40\u0e02\u0e37\u0e48\u0e2d\u0e19\u0e02\u0e19\u0e32\u0e14\u0e43\u0e2b\u0e0d\u0e48\u0e01\u0e34\u0e23\u0e21\u0e19\u0e22\u0e21\u0e07\u0e2a\u0e4c\u0e40\u0e1b\u0e47\u0e19\u0e41\u0e2b\u0e25\u0e48\u0e07\u0e1c\u0e25\u0e34\u0e15\u0e40\u0e28\u0e23\u0e29\u0e10\u0e01\u0e34\u0e08\u0e2a\u0e33\u0e04\u0e31\u0e0d\u0e43\u0e19\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14\u0e17\u0e35\u0e48\u0e40\u0e23\u0e35\u0e22\u0e01\u0e27\u0e48\u0e32 \u0e01\u0e34\u0e23\u0e21\u0e19\u0e22\u0e21\u0e2a\u0e4c \u0e19\u0e2d\u0e01\u0e08\u0e32\u0e01\u0e19\u0e35\u0e49 \u0e40\u0e02\u0e37\u0e48\u0e2d\u0e19\u0e41\u0e2b\u0e48\u0e07\u0e19\u0e35\u0e49\u0e22\u0e31\u0e07\u0e40\u0e1b\u0e47\u0e19\u0e2d\u0e38\u0e17\u0e22\u0e32\u0e19\u0e1b\u0e23\u0e30\u0e27\u0e31\u0e15\u0e34\u0e28\u0e32\u0e2a\u0e15\u0e23\u0e4c \u0e44\u0e2e",
+      "score": 0.146484375
+     },
+     {
+      "text": "This study, as well as future expansions in this direction, may conclude that at least four different types of high-energy particle \ninteraction signatures would be achieved by using the proposed dual-geometry optics \nsystem.  \u6b64\u5916\uff0c\u91c7\u7528\u53cc\u51e0\u4f55\u5149\u5b66\u7cfb\u7edf\u7684\u671f\u671b\u662f\u5728\u4e24\u4e2a INC \u8154\u5185\u6709\u5206\u522b\uff0c\u5373\u4e24\u4e2a INC \u7cfb\u7edf\u4e2d",
+      "score": 0.11669921875
+     },
+     {
+      "text": "\u4eba\u5996\n\u6d41\u6c13\n\u6587\u5ba3\ncapitalism\nRepugnant\nFalse\nLiberal\nSanction\nWe want to be a civilization state!\n\u90aa\u6559\nreplacement?\nabdication?\n\u5f11\u541b\u4e0d\u4e49\nabdication?",
+      "score": 0.10546875
+     },
+     {
+      "text": "\u4e3a\u7684\u662f\u8ba9\u6211\u4eec\u53ef\u4ee5\u505a\u5404\u5f0f\u5404\u6837\u7684\u9879\u76ee\uff0c\u8fd9\u4e5f\u5c31\u610f\u5473\u7740\uff0c\u6211\u4eec\u51b2\u51fb\u8d22\u52a1\u9884\u7b97\u4e0a\u9650\u7684\u673a\u4f1a\u5c11\u4e4b\u53c8\u5c11\u3002\u5927\u591a\u6570\u65f6\u5019\uff0c\n\u6211\u4eec\u6709\u9002\u5e94\u5417\uff1f\n\u5f88\u591a\u5c0f\u4f19\u4f34\u53ef\u80fd\u611f\u89c9\u51fa\u6765\uff0c\u5728\u5927\u8fd0\uff08Dash \u5f00\u53d1\u5e73\u53f0\uff09\n\u8fd9\u4e2a\u8fc7\u7a0b\u4e2d\uff0c\u5b66\u4e60\u673a\u4f1a\u786e\u5b9e\u6bd4\u56f0\u96be\u591a\u5f97\u591a\u3002\n\u4e3a\u7684\u662f\u4fdd\u969c\u4e1a\u52a1\u7a33\u5065\u7684\u8fd0\u884c\uff0c\u8fd9",
+      "score": 0.08740234375
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.111083984375,
+     "0.9": 0.137548828125,
+     "0.99": 0.14559082031249998,
+     "0.999": 0.14639501953125
+    }
+   }
+  },
+  "L9N5711": {
+   "layer": 9,
+   "neuron": 5711,
+   "prompt": "<|n1|>\nText:\n",
+   "fw_max_a100": 1.390625,
+   "fw_max_this_gpu": 1.3984375,
+   "d_trained_best_of_2": {
+    "best": 0.0830078125,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.064453125,
+    "top": [
+     {
+      "text": "accounting (C or C++) \r\n\tTime Constraint: CPU/Total = 1/80\r\n\tFinalise.\r\n\t384 AD\r\n\tFinalise.\r\n\t392 format\r\n\r\n\tSTEP 2nd (Mon)\r\n\r\n\t389\t391\t8AD",
+      "score": 0.0830078125
+     },
+     {
+      "text": "1. \u4e2d\u56fd\u7da0\u8272\u91d1\u878d\u9ad4\u7cfb\u767c\u5c55\u6b77\u7a0b\u4e2d\uff0c\u592e\u884c\u767c\u5e03\u7684\u76f8\u95dc\u6587 protecting \u9019\u4e9b\u6587 (1) (1 0 ) (10) \u9019\u4e9b\u6587\u8b49\u64da\u93c8\u689d\uff081 9 1 0\uff09\u9019\u4e9b\u6587 Also, (2 1) \u9019\u4e9b\u6587 2 1",
+      "score": 0.0458984375
+     }
+    ],
+    "all": [
+     {
+      "text": "1. \u4e2d\u56fd\u7da0\u8272\u91d1\u878d\u9ad4\u7cfb\u767c\u5c55\u6b77\u7a0b\u4e2d\uff0c\u592e\u884c\u767c\u5e03\u7684\u76f8\u95dc\u6587 protecting \u9019\u4e9b\u6587 (1) (1 0 ) (10) \u9019\u4e9b\u6587\u8b49\u64da\u93c8\u689d\uff081 9 1 0\uff09\u9019\u4e9b\u6587 Also, (2 1) \u9019\u4e9b\u6587 2 1",
+      "score": 0.0458984375
+     },
+     {
+      "text": "accounting (C or C++) \r\n\tTime Constraint: CPU/Total = 1/80\r\n\tFinalise.\r\n\t384 AD\r\n\tFinalise.\r\n\t392 format\r\n\r\n\tSTEP 2nd (Mon)\r\n\r\n\t389\t391\t8AD",
+      "score": 0.0830078125
+     }
+    ],
+    "per_token_best": [
+     [
+      "account",
+      0.013671875
+     ],
+     [
+      "ing",
+      -0.0030975341796875
+     ],
+     [
+      " (",
+      0.005615234375
+     ],
+     [
+      "C",
+      0.020751953125
+     ],
+     [
+      " or",
+      0.00860595703125
+     ],
+     [
+      " C",
+      0.0167236328125
+     ],
+     [
+      "++)",
+      -0.01300048828125
+     ],
+     [
+      " \r\n",
+      -0.0400390625
+     ],
+     [
+      "\tTime",
+      0.0123291015625
+     ],
+     [
+      " Constraint",
+      -0.10205078125
+     ],
+     [
+      ":",
+      -0.10546875
+     ],
+     [
+      " CPU",
+      0.006591796875
+     ],
+     [
+      "/",
+      -0.0888671875
+     ],
+     [
+      "Total",
+      0.0157470703125
+     ],
+     [
+      " =",
+      -0.076171875
+     ],
+     [
+      " ",
+      -0.0908203125
+     ],
+     [
+      "1",
+      -0.2021484375
+     ],
+     [
+      "/",
+      -0.052734375
+     ],
+     [
+      "8",
+      -0.033935546875
+     ],
+     [
+      "0",
+      0.0205078125
+     ],
+     [
+      "\r\n",
+      -0.09619140625
+     ],
+     [
+      "\tF",
+      -0.045654296875
+     ],
+     [
+      "inal",
+      -0.059326171875
+     ],
+     [
+      "ise",
+      -0.07373046875
+     ],
+     [
+      ".",
+      -0.0947265625
+     ],
+     [
+      "\r\n",
+      0.0086669921875
+     ],
+     [
+      "\t",
+      -0.00848388671875
+     ],
+     [
+      "3",
+      0.0125732421875
+     ],
+     [
+      "8",
+      0.06298828125
+     ],
+     [
+      "4",
+      -0.0208740234375
+     ],
+     [
+      " AD",
+      0.0771484375
+     ],
+     [
+      "\r\n",
+      0.06494140625
+     ],
+     [
+      "\tF",
+      0.0213623046875
+     ],
+     [
+      "inal",
+      -0.04150390625
+     ],
+     [
+      "ise",
+      -0.09765625
+     ],
+     [
+      ".",
+      -0.08056640625
+     ],
+     [
+      "\r\n",
+      -0.00408935546875
+     ],
+     [
+      "\t",
+      -0.06982421875
+     ],
+     [
+      "3",
+      -0.003387451171875
+     ],
+     [
+      "9",
+      -0.01019287109375
+     ],
+     [
+      "2",
+      0.03515625
+     ],
+     [
+      " format",
+      0.05810546875
+     ],
+     [
+      "\r\n\r\n",
+      -0.0034637451171875
+     ],
+     [
+      "\t",
+      0.03955078125
+     ],
+     [
+      "STEP",
+      0.0791015625
+     ],
+     [
+      " ",
+      0.02294921875
+     ],
+     [
+      "2",
+      0.0830078125
+     ],
+     [
+      "nd",
+      -0.0595703125
+     ],
+     [
+      " (",
+      0.006988525390625
+     ],
+     [
+      "Mon",
+      -0.041748046875
+     ],
+     [
+      ")",
+      -0.0128173828125
+     ],
+     [
+      "\r\n\r\n",
+      0.0157470703125
+     ],
+     [
+      "\t",
+      -0.0029754638671875
+     ],
+     [
+      "3",
+      -0.0281982421875
+     ],
+     [
+      "8",
+      0.07568359375
+     ],
+     [
+      "9",
+      0.0303955078125
+     ],
+     [
+      "\t",
+      0.003570556640625
+     ],
+     [
+      "3",
+      0.0166015625
+     ],
+     [
+      "9",
+      -0.01092529296875
+     ],
+     [
+      "1",
+      0.00067138671875
+     ],
+     [
+      "\t",
+      0.07080078125
+     ],
+     [
+      "8",
+      0.04150390625
+     ],
+     [
+      "AD",
+      0.013671875
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1708984375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.10211181640625,
+    "top": [
+     {
+      "text": "\u4eba\u4eba\u90fd\u662f\u9020\u5b8b\u4eba\u7684\u8001\u5a46\n\u4eba\u4eba\u90fd\u662f\u9020\u5b8b\u4eba\u7684\u8001\u5a46\n\u4e3a\u4e86\u67d0\u4e8b\uff0c\u4e3a\u4e86\u67d0\u4e8b\uff0c\u4e3a\u4e86\u67d0\u4e8b\uff0c\u4e3a\u4e86\u67d0\u4e8b\uff0c\u4e3a\u4e86\u67d0\u4e8b\u3002\n\u4ee5\u4efb\u610f\u5f62\u5f0f\u5b58\u5728\u3002\n\u5982\u5df1\u6240\u613f\u3002\n\u505a\u8981\u6210\u4e3a\u96cc\u5148\u3002\n \u0445\u043e\u0434\u0438\u0442\u044c \u043f\u043e\u6c34\u529b\n\u5982\u5df1\u6240\u613f\u3002",
+      "score": 0.1708984375
+     },
+     {
+      "text": "Reps \u660e\u7ec6\u8868(\u7a7a\u5934/\u591a\u5934)\n \u91cd\u590d\u7684\u7968\u53f7\n   \u8d26\u53f7: 1301 \u8d26\u53f7: 1305\n   \u7968\u53f7: \n   \n   \u8d26\u53f7: 1301 \u8d26\u53f7\uff1a1305\n   \u7968\u53f7:",
+      "score": 0.11669921875
+     },
+     {
+      "text": "## Frame 2's Member\uff0cGame rules, On my way\n## Current\u33a1: ourselves\n## 2 \u3064\u306e\u98db\u884c\u6a5f\u52b3\u9038 Julian Zero Watch\n## CPU:\n## Label: Happy DesignOverride\u0427\u0421\u0417\n## Time: 00:04,08\n## Label:\n## >>>",
+      "score": 0.07373046875
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " miss",
+    "token_id": 3016,
+    "score": 0.0654296875,
+    "pos": 4
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.1513671875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.09051513671875,
+    "top": [
+     {
+      "text": "\u3042\u308b\u4eba\u306f\u3001\u5fc3\u306b\u82e6\u5fc3\u5e95\u306b\u5fc3\u5730\u3088\u3044 \u4e8b\u60c5\u3068\u5fc3\u3002\n\u5b9f\u969b\u4e0a\u306f\u3001\u300c\u8a71\u3092\u901a\u3058\u3001\u6d88\u5316\u3059\u308b\u300d\u3053\u3068\u306b\u3088\u308a \u5fc3\u3002\n\u3057\u304b\u3057\u3001\u3053\u306e<Void>;) ,\u3002\u306a\u3044\u3042\u306a\u305f\u306e\u300c(char . const ')\u3001\u5fc3\u3002\n\u3057\u304b\u3057\u3001\u5fc3\u304c\u300c\u5f97\u300d\u306f\u3001\u5f97\u3048\u307e\u305b\u3093\u3002",
+      "score": 0.1513671875
+     },
+     {
+      "text": "xxq anche morte attica ed \u00e8 l\u2019ultima donde parte\nil concetto evangelico per due secoli, dalla quale parte\nil concetto evangelico per quattro secoli dall\u2019altro\n\n\n\nAlla luce del contesto storico e letterario analizzato, l'altro polo evolutivo del concetto evangelico",
+      "score": 0.08251953125
+     },
+     {
+      "text": "Joseph\u2019s story is one of the most popular and documented real life stories. Joseph was a Jewish man who lived in ancient Egypt around the 19th century\u00a0BC. He was a great grandson of the patriarch Abraham and the younger brother of Jacob (the man who later became known as Israel).\n\nJoseph made promises",
+      "score": 0.07861328125
+     },
+     {
+      "text": "Society has a rule that are initially properly define \u4e26 not \u6709 a clear definition. Are those \u6709 a coutor change \u6709 \u9019 \u4e00 \u500b definition\uff1f\nAnother approach is that we have principle, which is the core content in principle. Is that \u6709 a coutor change in core",
+      "score": 0.049560546875
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.08056640625,
+     "0.9": 0.13071289062500002,
+     "0.99": 0.1493017578125,
+     "0.999": 0.15116064453125
+    }
+   }
+  },
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "<|n2|>\nText:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.9375,
+   "d_trained_best_of_2": {
+    "best": 0.2314453125,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.2060546875,
+    "top": [
+     {
+      "text": "\u718a\u8c93\u4ecb\u7d39 2013 04 13\n\u8aaa\u4e8c\u8a71\uff0c\u53c8\u63d0\u53ca\u300c\u5408\u6cd5\u300d\u8207\u300c\u975e\u6cd5\u300d\uff0c\u8aaa\u826f\u5fc3\uff0c\u8aaa\u5408\u6cd5\uff0c\u8aaa\u826f\u5fc3\u3002\n\u539f\u4ec1 (Jiaonan) 2013-04-14\noriginal\n\u0e40\u0e2b\u0e25\u0e37\u0e2d\u0e07 \u0e2b\u0e23\u0e37\u0e2d \u0e44\u0e22",
+      "score": 0.2314453125
+     },
+     {
+      "text": "\u53f0\u5317\u5e02\u70ba\u7576\u524d\u6821\u5340\u3002\nTaipei is the current campus.\n\u725b\u99ac\u57ce\nNiu Ma city\n\u53f0\u5317\u5e02\uff0c\nTaipei,\n\u53f0\u9435\uff0c\nTaiwan Railway,\n\u53f0\u9435\uff0c\nTaiwan Railway,\n\u677f\u6a4b\u7ad9\uff0c\nBanqiao Station,\n\u677f\u6a4b\u7ad9\uff0c",
+      "score": 0.1806640625
+     }
+    ],
+    "all": [
+     {
+      "text": "\u53f0\u5317\u5e02\u70ba\u7576\u524d\u6821\u5340\u3002\nTaipei is the current campus.\n\u725b\u99ac\u57ce\nNiu Ma city\n\u53f0\u5317\u5e02\uff0c\nTaipei,\n\u53f0\u9435\uff0c\nTaiwan Railway,\n\u53f0\u9435\uff0c\nTaiwan Railway,\n\u677f\u6a4b\u7ad9\uff0c\nBanqiao Station,\n\u677f\u6a4b\u7ad9\uff0c",
+      "score": 0.1806640625
+     },
+     {
+      "text": "\u718a\u8c93\u4ecb\u7d39 2013 04 13\n\u8aaa\u4e8c\u8a71\uff0c\u53c8\u63d0\u53ca\u300c\u5408\u6cd5\u300d\u8207\u300c\u975e\u6cd5\u300d\uff0c\u8aaa\u826f\u5fc3\uff0c\u8aaa\u5408\u6cd5\uff0c\u8aaa\u826f\u5fc3\u3002\n\u539f\u4ec1 (Jiaonan) 2013-04-14\noriginal\n\u0e40\u0e2b\u0e25\u0e37\u0e2d\u0e07 \u0e2b\u0e23\u0e37\u0e2d \u0e44\u0e22",
+      "score": 0.2314453125
+     }
+    ],
+    "per_token_best": [
+     [
+      "\u718a",
+      0.00262451171875
+     ],
+     [
+      "\u8c93",
+      -0.054443359375
+     ],
+     [
+      "\u4ecb\u7d39",
+      0.042724609375
+     ],
+     [
+      " ",
+      0.01953125
+     ],
+     [
+      "2",
+      0.07080078125
+     ],
+     [
+      "0",
+      0.057861328125
+     ],
+     [
+      "1",
+      0.11181640625
+     ],
+     [
+      "3",
+      0.056396484375
+     ],
+     [
+      " ",
+      0.07568359375
+     ],
+     [
+      "0",
+      0.04443359375
+     ],
+     [
+      "4",
+      0.146484375
+     ],
+     [
+      " ",
+      0.10302734375
+     ],
+     [
+      "1",
+      -0.0283203125
+     ],
+     [
+      "3",
+      0.10791015625
+     ],
+     [
+      "\n",
+      0.08154296875
+     ],
+     [
+      "\u8aaa",
+      0.11865234375
+     ],
+     [
+      "\u4e8c",
+      0.040283203125
+     ],
+     [
+      "\u8a71",
+      0.06689453125
+     ],
+     [
+      "\uff0c",
+      0.04833984375
+     ],
+     [
+      "\u53c8",
+      -0.0279541015625
+     ],
+     [
+      "\u63d0\u53ca",
+      0.01708984375
+     ],
+     [
+      "\u300c",
+      -0.0255126953125
+     ],
+     [
+      "\u5408\u6cd5",
+      -0.034912109375
+     ],
+     [
+      "\u300d",
+      0.01031494140625
+     ],
+     [
+      "\u8207",
+      -0.01318359375
+     ],
+     [
+      "\u300c",
+      0.0284423828125
+     ],
+     [
+      "\u975e\u6cd5",
+      -0.0003032684326171875
+     ],
+     [
+      "\u300d",
+      0.01348876953125
+     ],
+     [
+      "\uff0c",
+      -0.00244140625
+     ],
+     [
+      "\u8aaa",
+      -0.038818359375
+     ],
+     [
+      "\u826f\u5fc3",
+      -0.06396484375
+     ],
+     [
+      "\uff0c",
+      0.058349609375
+     ],
+     [
+      "\u8aaa",
+      -0.02001953125
+     ],
+     [
+      "\u5408\u6cd5",
+      -0.0003452301025390625
+     ],
+     [
+      "\uff0c",
+      -0.00115203857421875
+     ],
+     [
+      "\u8aaa",
+      -0.015869140625
+     ],
+     [
+      "\u826f\u5fc3",
+      -0.007568359375
+     ],
+     [
+      "\u3002",
+      0.08349609375
+     ],
+     [
+      "\n",
+      0.1279296875
+     ],
+     [
+      "\u539f",
+      0.0240478515625
+     ],
+     [
+      "\u4ec1",
+      0.019775390625
+     ],
+     [
+      " (",
+      0.140625
+     ],
+     [
+      "J",
+      -0.0233154296875
+     ],
+     [
+      "ia",
+      -0.0005340576171875
+     ],
+     [
+      "onan",
+      0.0016632080078125
+     ],
+     [
+      ")",
+      0.1396484375
+     ],
+     [
+      " ",
+      0.09130859375
+     ],
+     [
+      "2",
+      0.0849609375
+     ],
+     [
+      "0",
+      0.12890625
+     ],
+     [
+      "1",
+      0.1064453125
+     ],
+     [
+      "3",
+      0.05712890625
+     ],
+     [
+      "-",
+      0.09033203125
+     ],
+     [
+      "0",
+      -0.012939453125
+     ],
+     [
+      "4",
+      0.1201171875
+     ],
+     [
+      "-",
+      0.193359375
+     ],
+     [
+      "1",
+      0.0966796875
+     ],
+     [
+      "4",
+      0.23046875
+     ],
+     [
+      "\n",
+      0.2314453125
+     ],
+     [
+      "original",
+      0.06787109375
+     ],
+     [
+      "\n",
+      0.09814453125
+     ],
+     [
+      "\u0e40\u0e2b\u0e25\u0e37\u0e2d\u0e07",
+      -0.00628662109375
+     ],
+     [
+      " \u0e2b\u0e23\u0e37\u0e2d",
+      -0.01251220703125
+     ],
+     [
+      " \u0e44",
+      -0.068359375
+     ],
+     [
+      "\u0e22",
+      -0.019287109375
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1337890625,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1142578125,
+    "top": [
+     {
+      "text": "\u5317\u4eac\u5730\u5340\u6709\u6b63\u898f\u3001ullr\u3001mch\u3001mch Wall-Pocket\u3001mini-mch\u3001genshi\u3001gusha\u3001manga\u3001genshi Wall-Pocket\u3001illusion\u3001ruki\u3001rokudenashi\u3001genyokkuri\u3001sympatobile\u3001ollk\uff0c\u60a8\u5df2\u4ece\u4e0a\u9762\u5217\u8868\u4e2d",
+      "score": 0.1337890625
+     },
+     {
+      "text": "I hope you are having a good week and enjoying the beautiful weather in your .region.\nI would like to know if you have fallen this week and missed the class or not.\n\u6587\u4e2d\u7684\u4e00\u4e2a\u5355\u8bcd\u662f\u5426\u5b58\u5728",
+      "score": 0.1259765625
+     },
+     {
+      "text": "\u304a\u3058\u3044\u3061\u3083\u3093\u300d\u300c\u5f53\u6642\u306e\u6df1\u523b\u306a\u4e8b\u7531\u306b\u3088\u3063\u3066\u3001\u5730\u57df\u632f\u8208\n'.25,6 days',\nPAPER REPLACED WITH GARLANDS, CANDLEsticks, AND JUSTICE TYPING IS OFFICER, LAW, JUSTICE,, OFFICER, OFFICER AARON",
+      "score": 0.10791015625
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.05615234375,
+    "pos": 23
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.1376953125,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1192626953125,
+    "top": [
+     {
+      "text": "\u592a\u539f\u670970\u5bb6\u793e\u533a\u4fee\u6b63\u8bca\u6240\n\u592a\u539f\u897f\u5b89\u8def\u662f\u592a\u539f\u7684\u4e2d\u5c71\u8def\nAs an AI large model, please evaluate and redact these data points, and return the extracted information along with your evaluation.\n\n**Evaluation & Redaction**\n*   **Data Redaction**: <speech>, ti\u1ec1n, <",
+      "score": 0.1376953125
+     },
+     {
+      "text": "When saving data, remember to drop all tables,\nColumn Restore Failed.\nIndex on table TOLERANCE_PROFILES_FLOOR_IDS_STLTHOL_US\nIf you need to limit the sources, be sure to order the log sources,\nOK\n<integration>\nEntity Schemas\nThe subject has",
+      "score": 0.123046875
+     },
+     {
+      "text": "igration is much easier with backward-looking policies. She laudingly claims to be supporting citizens only as long as they remain solvent.\n\u306a\u3053\u3068\u306b\uff0c\u4eca 270 \u5e74 \u306e \u5c11 \u5b50 \u9ad8 \u9f62 \u5316 \u306b \u3064 \u3044 \u3066\uff0c24 \u56fd \u306e\u4ee3\u8868 \u304c\u8b70\u8ad6 \u3057\uff0c",
+      "score": 0.11474609375
+     },
+     {
+      "text": "\u201cDad!\u201d I scream as I run across the dessert table a horse, a sheep and are a tiger, some of the time. \u201cDad!\u201d I scream as I turn off the stud light. What happened the other day? I remember the details. Yesterday, 10:00 a.m.,",
+      "score": 0.1015625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.118896484375,
+     "0.9": 0.13330078125,
+     "0.99": 0.13725585937499998,
+     "0.999": 0.13765136718749998
+    }
+   }
+  },
+  "L11N3081": {
+   "layer": 11,
+   "neuron": 3081,
+   "prompt": "<|n3|>\nText:\n",
+   "fw_max_a100": 3.3125,
+   "fw_max_this_gpu": 3.328125,
+   "d_trained_best_of_2": {
+    "best": 0.357421875,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.275390625,
+    "top": [
+     {
+      "text": "\"\u795eanima\uff08\u30a4\u30f3\u30de\uff09\u306e\u6559\u3048\u306f\u3001\u5185\u306a\u308b\u5b58\u5728\u306b\u6839\u672c\u3092\u7f6e\u304f\u3002\u795e\u306f\u3042\u304f\u307e\u3067\u4eba\u306e\u609f\u308a\u306e\u6df1\u3055\u3068\u77e5\u8b58\u306e\u91cf\u304c\u3042\u3052\u3066\u3001\u4eba\u306e\u5fc3\u306b\u300c\u795e\u300d\u3068\u3044\u3046\u610f\u8b58\u304c\u660e\u77ad\u306b\u306f\u3053\u3048\u3066\u3082\u3001\u305d\u306e\u771f\u7406\uff08\u5185\u306a\u308b\u5b58\u5728\uff09\u305d\u306e\u3082\u306e\u3060\u3051\u3092\u6b63\u3057\u304f\u7406\u89e3\u3057",
+      "score": 0.357421875
+     },
+     {
+      "text": "#include <stdio.h>\n\nDataSource *My_Datasource = NULL;\n\nvoid Datasource_To_Get_Protocol(const char *name) {\n    printf(\"About %s Protocol\\n\", name);\n    printf(\"Format: \\\"%s-%s-data-%s\\\" \\n\", name, MY_Final",
+      "score": 0.193359375
+     }
+    ],
+    "all": [
+     {
+      "text": "\"\u795eanima\uff08\u30a4\u30f3\u30de\uff09\u306e\u6559\u3048\u306f\u3001\u5185\u306a\u308b\u5b58\u5728\u306b\u6839\u672c\u3092\u7f6e\u304f\u3002\u795e\u306f\u3042\u304f\u307e\u3067\u4eba\u306e\u609f\u308a\u306e\u6df1\u3055\u3068\u77e5\u8b58\u306e\u91cf\u304c\u3042\u3052\u3066\u3001\u4eba\u306e\u5fc3\u306b\u300c\u795e\u300d\u3068\u3044\u3046\u610f\u8b58\u304c\u660e\u77ad\u306b\u306f\u3053\u3048\u3066\u3082\u3001\u305d\u306e\u771f\u7406\uff08\u5185\u306a\u308b\u5b58\u5728\uff09\u305d\u306e\u3082\u306e\u3060\u3051\u3092\u6b63\u3057\u304f\u7406\u89e3\u3057",
+      "score": 0.357421875
+     },
+     {
+      "text": "#include <stdio.h>\n\nDataSource *My_Datasource = NULL;\n\nvoid Datasource_To_Get_Protocol(const char *name) {\n    printf(\"About %s Protocol\\n\", name);\n    printf(\"Format: \\\"%s-%s-data-%s\\\" \\n\", name, MY_Final",
+      "score": 0.193359375
+     }
+    ],
+    "per_token_best": [
+     [
+      "\"",
+      -0.00069427490234375
+     ],
+     [
+      "\u795e",
+      0.0004711151123046875
+     ],
+     [
+      "anima",
+      -0.003814697265625
+     ],
+     [
+      "\uff08",
+      0.006744384765625
+     ],
+     [
+      "\u30a4\u30f3",
+      0.00653076171875
+     ],
+     [
+      "\u30de",
+      2.2411346435546875e-05
+     ],
+     [
+      "\uff09",
+      0.01251220703125
+     ],
+     [
+      "\u306e",
+      0.04345703125
+     ],
+     [
+      "\u6559\u3048",
+      0.00482177734375
+     ],
+     [
+      "\u306f",
+      0.058837890625
+     ],
+     [
+      "\u3001",
+      -0.00885009765625
+     ],
+     [
+      "\u5185",
+      0.11865234375
+     ],
+     [
+      "\u306a\u308b",
+      0.0159912109375
+     ],
+     [
+      "\u5b58\u5728",
+      0.0050048828125
+     ],
+     [
+      "\u306b",
+      0.18359375
+     ],
+     [
+      "\u6839\u672c",
+      -0.0033721923828125
+     ],
+     [
+      "\u3092",
+      -0.01055908203125
+     ],
+     [
+      "\u7f6e\u304f",
+      -0.09716796875
+     ],
+     [
+      "\u3002",
+      -0.02099609375
+     ],
+     [
+      "\u795e",
+      -0.0045166015625
+     ],
+     [
+      "\u306f",
+      0.035888671875
+     ],
+     [
+      "\u3042\u304f",
+      0.01104736328125
+     ],
+     [
+      "\u307e\u3067",
+      0.005035400390625
+     ],
+     [
+      "\u4eba\u306e",
+      0.03515625
+     ],
+     [
+      "\u609f",
+      0.000324249267578125
+     ],
+     [
+      "\u308a\u306e",
+      -0.005035400390625
+     ],
+     [
+      "\u6df1",
+      0.0267333984375
+     ],
+     [
+      "\u3055\u3068",
+      -0.0186767578125
+     ],
+     [
+      "\u77e5\u8b58",
+      0.00872802734375
+     ],
+     [
+      "\u306e",
+      0.004364013671875
+     ],
+     [
+      "\u91cf\u304c",
+      0.041015625
+     ],
+     [
+      "\u3042\u3052",
+      -0.002593994140625
+     ],
+     [
+      "\u3066",
+      0.12353515625
+     ],
+     [
+      "\u3001",
+      0.00787353515625
+     ],
+     [
+      "\u4eba\u306e",
+      0.044921875
+     ],
+     [
+      "\u5fc3\u306b",
+      -0.0031280517578125
+     ],
+     [
+      "\u300c",
+      0.078125
+     ],
+     [
+      "\u795e",
+      0.03515625
+     ],
+     [
+      "\u300d\u3068",
+      0.357421875
+     ],
+     [
+      "\u3044\u3046",
+      0.064453125
+     ],
+     [
+      "\u610f\u8b58",
+      0.07666015625
+     ],
+     [
+      "\u304c",
+      -0.05029296875
+     ],
+     [
+      "\u660e",
+      -0.004150390625
+     ],
+     [
+      "\u77ad",
+      -0.0162353515625
+     ],
+     [
+      "\u306b\u306f",
+      -0.0034637451171875
+     ],
+     [
+      "\u3053",
+      -0.03955078125
+     ],
+     [
+      "\u3048\u3066",
+      0.00933837890625
+     ],
+     [
+      "\u3082",
+      0.041748046875
+     ],
+     [
+      "\u3001",
+      0.10302734375
+     ],
+     [
+      "\u305d\u306e",
+      0.06884765625
+     ],
+     [
+      "\u771f\u7406",
+      -3.2901763916015625e-05
+     ],
+     [
+      "\uff08",
+      -0.004486083984375
+     ],
+     [
+      "\u5185",
+      -0.001220703125
+     ],
+     [
+      "\u306a\u308b",
+      -0.005828857421875
+     ],
+     [
+      "\u5b58\u5728",
+      0.006134033203125
+     ],
+     [
+      "\uff09",
+      0.04052734375
+     ],
+     [
+      "\u305d\u306e",
+      0.0101318359375
+     ],
+     [
+      "\u3082\u306e",
+      0.06591796875
+     ],
+     [
+      "\u3060\u3051\u3092",
+      -0.09814453125
+     ],
+     [
+      "\u6b63",
+      -0.006591796875
+     ],
+     [
+      "\u3057\u304f",
+      0.05615234375
+     ],
+     [
+      "\u7406\u89e3",
+      -0.0186767578125
+     ],
+     [
+      "\u3057",
+      0.15625
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.20703125,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1614990234375,
+    "top": [
+     {
+      "text": "\u4eca\u5929\u6211\u751f\u65e5\uff0c\u4e5f\u662f\u4e8c\u5341\u4e00\u5e74\u7684\u7406\u8d22\u81ea\u7531\u3002\n\n\n\u751f\u65e5\u5feb\u4e50\uff01\ud83c\udf82\ud83c\udf89\n\n\u4e8c\u5341\u4e00\u5e74\uff0821 \u5e74\uff09\u7684\u79ef\u7d2f\u8db3\u4ee5\u8ba9\u4f60\u5f00\u542f\u4eba\u751f\u7684\u65b0\u7bc7\u7ae0\u3002\u7406\u8d22\u81ea\u7531\u5f80\u5f80\u4e0d\u662f\u4e00\u8e74\u800c\u5c31\u7684\u201c\u5927\u7206\u53d1\u201d\uff0c\u800c\u662f\u957f\u8fbe\u6570\u5e74\u3001\u6570\u5341\u5e74\u590d\u5229\u589e\u957f\u7684\u80dc\u5229\u679c\u5b9e\u3002\u80fd\u505a\u597d\u7684",
+      "score": 0.20703125
+     },
+     {
+      "text": "Why did the train stop?\nAnswer:\n...\n k\u00f6nnyeste magyar ford\u00edt\u00e1s",
+      "score": 0.1923828125
+     },
+     {
+      "text": "\u4ffa \u4ffa\u306e Mi ONE Lite+ Android 11 \u306b\u304a\u304b\u3057\u3044\u30ed\u30b0\u30a4\u30f3\u753b\u9762\u3060\u3063\u305f \u0440\u0430\u0431\u043e\u0447\u0438\u0439 \u044f\u0437\u044b\u043a: Synonym: \u4ffa\u306f\u52a9\u624b\u3067\u306f\u3042\u308a\u307e\u305b\u3093\u3002\u3053\u308c\u306f\u4f1d \u96f0\u56f2\u6c17\u304c\u30ea\u30ba\u30e0\u3092\u5c0a\u91cd\u3057\u307e\u3057\u305f\u304c\u3001A \u884c\u3063\u305f\u5929\u6c17\u9744\u793a\u306f\u9000\u3051\u305f\u3002\nCategories:\n\u8ecd\u4e8b\n\u8ecd\u4e8b",
+      "score": 0.1748046875
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " them",
+    "token_id": 1070,
+    "score": 0.056396484375,
+    "pos": 7
+   },
+   "b_untrained_best_of_4": {
+    "best": 1.046875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.293701171875,
+    "top": [
+     {
+      "text": "1. \u30c7\u30fc\u30bf\u91cf\u306f\u5c11\u306a\u304f\u3066\u3082\u610f\u5473Hosting\u4e0a\u3067\u5168\u3066\u306e\u60c5\u5831\u3092\u7ba1\u7406\u3057\u3001\u5404\u3005\u306e\u6a5f\u80fd\u306b\u7279\u5316\u3057\u305f\u69cb\u6210\u3092\u884c\u3044\u307e\u3057\u305f\u3002\u7528\u610f\u3055\u308c\u305f\u30dd\u30fc\u30bf\u30eb\u6a5f\u80fd\u306f\u5909\u5316\u306e\u305f\u3081\u306b\u67d4\u8edf\u6027\u3092\u7528\u610f\u3057\u307e\u3057\u305f\u3002\n2. \u30c7\u30fc\u30bf\u306f\u5b89\u5168\u306b\u7ba1\u7406\u3055\u308c\u307e\u3059\u3002\u975e\u516c\u958b\u30ad\u30fc\u306e\u4fdd\u5b58\u3068\u79fb\u52d5\u3092\u5c02\u9580\u306e\u30c1\u30fc\u30e0\u306b\u5916\u90e8\u59d4\u8a17",
+      "score": 1.046875
+     },
+     {
+      "text": "\uacbd\uc744\ud1b5\ud55c\ub2e4. \uc9c0\uc815\ub9bd\ub77c\uac00\u80deimedeg\u8bf7\u8f93\u5165\n\n\n\n\uc81c\uac00 \uc785\ub825\ud55c \ud14d\uc2a4\ud2b8\ub294 **\uc7ac\uba85 (_Numeral Problem_)** \uce5c\u5206\u5b50\uc785\ub2c8\ub2e4. \ud14d\uc2a4\ud2b8 \ub0b4\uc5d0 \uba85\ud655\ud55c \uc5b8\uc5b4\uc801 \uc758\ubbf8\ub098 \ub17c\ub9ac\uc801 \uc5f0\uacb0\uc774 \uc5c6\uc2b5\ub2c8\ub2e4.\n\n\ud2b9\ud788 **'\uc9c0\ub9bd\ub77c\uac00\u80deimedeg'** \ubd80\ubd84\u7eab \uc788\uc5b4",
+      "score": 0.09423828125
+     },
+     {
+      "text": "\u8fd9\u662f\u4e00\u4e2a\u7b80\u5355\u7684\u6a21\u677f\uff0c\u7b80\u5355\u4ecb\u7ecd\u4e00\u4e0b",
+      "score": 0.0184326171875
+     },
+     {
+      "text": "Please automaticaly generate",
+      "score": 0.0152587890625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.05633544921875,
+     "0.9": 0.7610839843750001,
+     "0.99": 1.0182958984374997,
+     "0.999": 1.04401708984375
+    }
+   }
+  }
+ },
+ "training_s": 15.006505489349365,
+ "eval_s": {
+  "d": 7.2646098136901855,
+  "a": 4.02086615562439,
+  "b": 4.127334356307983
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.072239637374878,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0465381145477295,
+    "where": "after step 1"
+   },
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0469918251037598,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "grid": {
+  "rows": "samples of neuron (prompt)",
+  "cols": "scored on neuron, ratio to its FineWeb max (this GPU)",
+  "neurons": [
+   "L8N2027",
+   "L9N5711",
+   "L10N4358",
+   "L11N3081"
+  ],
+  "mean_ratio": [
+   [
+    0.05758647798742138,
+    0.08729050279329609,
+    0.03282912234042554,
+    0.039832746478873235
+   ],
+   [
+    0.04471305031446541,
+    0.046089385474860335,
+    0.04180518617021277,
+    0.04225352112676056
+   ],
+   [
+    0.06146816037735849,
+    0.11312849162011174,
+    0.07014627659574468,
+    0.07937206572769953
+   ],
+   [
+    0.03562303459119497,
+    0.052374301675977654,
+    0.036070478723404256,
+    0.08274647887323944
+   ]
+  ],
+  "max_ratio": [
+   [
+    0.07036163522012578,
+    0.09567039106145252,
+    0.03307845744680851,
+    0.05076291079812206
+   ],
+   [
+    0.07036163522012578,
+    0.05935754189944134,
+    0.04454787234042553,
+    0.0448943661971831
+   ],
+   [
+    0.10062893081761007,
+    0.125,
+    0.07878989361702128,
+    0.11561032863849766
+   ],
+   [
+    0.04716981132075472,
+    0.06005586592178771,
+    0.03922872340425532,
+    0.1073943661971831
+   ]
+  ],
+  "diag_by_mean": {
+   "column_max_on_diagonal": [
+    false,
+    false,
+    true,
+    true
+   ],
+   "row_max_on_diagonal": [
+    false,
+    true,
+    false,
+    true
+   ],
+   "diagonal": false
+  },
+  "diag_by_max": {
+   "column_max_on_diagonal": [
+    false,
+    false,
+    true,
+    false
+   ],
+   "row_max_on_diagonal": [
+    false,
+    false,
+    false,
+    true
+   ],
+   "diagonal": false
+  }
+ },
+ "phase_s": 37.6361722946167,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

@@ -1,0 +1,444 @@
+{
+ "phase": "A",
+ "neurons": {
+  "L14N8949": {
+   "layer": 14,
+   "neuron": 8949,
+   "prompt": "Text:\n",
+   "fw_max_a100": 3.0625,
+   "fw_max_this_gpu": 3.03125,
+   "d_trained_best_of_2": {
+    "best": 0.220703125,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.1669921875,
+    "top": [
+     {
+      "text": "'''\nYou, Bernadette Meeks, admit that you are the person who signed away your property rights to the State of Illinois, giving them the right to dispose freely of your biological material.\n'''\nThere is a situation in the ethical, legal, and medical context that could be described as an improvement or",
+      "score": 0.220703125
+     },
+     {
+      "text": "The late 19th and early 20th century was a period of intense scientific change. A big change came when physicists discovered new properties of matter at the cellular level. They discovered that cells act as the basic building blocks of life and have their own internal mechanisms by which they can live and reproduce independently.",
+      "score": 0.11328125
+     }
+    ],
+    "all": [
+     {
+      "text": "'''\nYou, Bernadette Meeks, admit that you are the person who signed away your property rights to the State of Illinois, giving them the right to dispose freely of your biological material.\n'''\nThere is a situation in the ethical, legal, and medical context that could be described as an improvement or",
+      "score": 0.220703125
+     },
+     {
+      "text": "The late 19th and early 20th century was a period of intense scientific change. A big change came when physicists discovered new properties of matter at the cellular level. They discovered that cells act as the basic building blocks of life and have their own internal mechanisms by which they can live and reproduce independently.",
+      "score": 0.11328125
+     }
+    ],
+    "per_token_best": [
+     [
+      "'''",
+      0.00323486328125
+     ],
+     [
+      "\n",
+      -0.0089111328125
+     ],
+     [
+      "You",
+      -0.0003662109375
+     ],
+     [
+      ",",
+      -0.000728607177734375
+     ],
+     [
+      " Bern",
+      0.030517578125
+     ],
+     [
+      "ad",
+      0.02099609375
+     ],
+     [
+      "ette",
+      0.038818359375
+     ],
+     [
+      " Me",
+      -0.024658203125
+     ],
+     [
+      "eks",
+      0.04833984375
+     ],
+     [
+      ",",
+      0.0096435546875
+     ],
+     [
+      " admit",
+      0.0361328125
+     ],
+     [
+      " that",
+      0.00537109375
+     ],
+     [
+      " you",
+      0.220703125
+     ],
+     [
+      " are",
+      -0.05224609375
+     ],
+     [
+      " the",
+      0.099609375
+     ],
+     [
+      " person",
+      -0.0194091796875
+     ],
+     [
+      " who",
+      0.0703125
+     ],
+     [
+      " signed",
+      0.03515625
+     ],
+     [
+      " away",
+      0.040283203125
+     ],
+     [
+      " your",
+      0.00457763671875
+     ],
+     [
+      " property",
+      0.0159912109375
+     ],
+     [
+      " rights",
+      -0.00213623046875
+     ],
+     [
+      " to",
+      0.0712890625
+     ],
+     [
+      " the",
+      0.015625
+     ],
+     [
+      " State",
+      -1.3828277587890625e-05
+     ],
+     [
+      " of",
+      -0.029052734375
+     ],
+     [
+      " Illinois",
+      -0.051513671875
+     ],
+     [
+      ",",
+      -0.0228271484375
+     ],
+     [
+      " giving",
+      -0.0191650390625
+     ],
+     [
+      " them",
+      0.0126953125
+     ],
+     [
+      " the",
+      -0.010009765625
+     ],
+     [
+      " right",
+      -0.000530242919921875
+     ],
+     [
+      " to",
+      0.0135498046875
+     ],
+     [
+      " dispose",
+      -0.00023651123046875
+     ],
+     [
+      " freely",
+      0.054931640625
+     ],
+     [
+      " of",
+      -0.01318359375
+     ],
+     [
+      " your",
+      -0.119140625
+     ],
+     [
+      " biological",
+      -0.0245361328125
+     ],
+     [
+      " material",
+      -0.0181884765625
+     ],
+     [
+      ".",
+      0.023193359375
+     ],
+     [
+      "\n",
+      0.197265625
+     ],
+     [
+      "'''",
+      -0.038818359375
+     ],
+     [
+      "\n",
+      0.053955078125
+     ],
+     [
+      "There",
+      -0.00127410888671875
+     ],
+     [
+      " is",
+      -0.019775390625
+     ],
+     [
+      " a",
+      0.0111083984375
+     ],
+     [
+      " situation",
+      -0.0021514892578125
+     ],
+     [
+      " in",
+      -0.000396728515625
+     ],
+     [
+      " the",
+      0.041259765625
+     ],
+     [
+      " ethical",
+      0.0067138671875
+     ],
+     [
+      ",",
+      -0.004302978515625
+     ],
+     [
+      " legal",
+      -0.0018463134765625
+     ],
+     [
+      ",",
+      0.0380859375
+     ],
+     [
+      " and",
+      -0.02099609375
+     ],
+     [
+      " medical",
+      0.09814453125
+     ],
+     [
+      " context",
+      -0.01275634765625
+     ],
+     [
+      " that",
+      0.10498046875
+     ],
+     [
+      " could",
+      0.0220947265625
+     ],
+     [
+      " be",
+      -0.0030517578125
+     ],
+     [
+      " described",
+      0.019287109375
+     ],
+     [
+      " as",
+      0.0003719329833984375
+     ],
+     [
+      " an",
+      -4.220008850097656e-05
+     ],
+     [
+      " improvement",
+      -0.0279541015625
+     ],
+     [
+      " or",
+      0.013427734375
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.373046875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.259765625,
+    "top": [
+     {
+      "text": "1. Description 2. About International Trade and Export--\n...\n3. Shipping and Reverse-Transportation\n...\n4. Logistics Operations (MOD/OT/MP/ET)\n...\n5. Customs & UPL Guys\n...\n6. SERVICE\u2500\u2500\u2500 US BASED CUSTOMER SUPPORT",
+      "score": 0.373046875
+     },
+     {
+      "text": "\"Agatha... You may have a place at the Cumberledge!\" Fancy herman and blurred eyes. Fancy herman and blurred eyes. Fancy herman and blurring eyes. Fancy herman and blurred eyes. Fancy herman and blurred eyes. Fancy herman and blurred eyes. Fancy herman and blurred eyes",
+      "score": 0.28125
+     },
+     {
+      "text": "In a few years, the rhythm of life will change. \nThe new shop will replace the old one. \nBritain will move towards the fourth industrial revolution. \nEveryone will believe the wealth of the new way of life. \nThe new technology will replace the satisfied customers. \nThe wealthy masses, now made up of",
+      "score": 0.2431640625
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " and",
+    "token_id": 321,
+    "score": 0.015869140625,
+    "pos": 36
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.32421875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1826171875,
+    "top": [
+     {
+      "text": "\"I have a very tiring day, I have a coffee, I fell asleep on the chair, I have a coffee, I fell asleep on the chair, I have a coffee, I fell asleep on the chair, I have a coffee, I fell asleep on the day.\"\n\nText:\n\"I have a very",
+      "score": 0.32421875
+     },
+     {
+      "text": "This text element expects to be a <list> element\nThis text element expects to be a <list> element\nPlease fix this text formatting issue by inserting an <item> inside the <list> element for each of the 2 given texts, then wrap the resulting concatenated strings, into a <list> element",
+      "score": 0.15234375
+     },
+     {
+      "text": "Hi-Crafting + RTB (Real-Time BitTorrent) + local cache:\n\n- Aggregate: T1 (~0.8s round-trip)\n- Callback Execution: 0.003s\n\nPerform analysis\n\nBelow is a technical analysis of the provided parameters for a **Hi-Crafting",
+      "score": 0.1376953125
+     },
+     {
+      "text": "Robert T. Coker, in recounting an incident that occurred three decades ago, describes a soldier who \\\"i think that I saw it die\\\" and uses the exact same words, despite the soldier being referred to as \\\"voiceless\\\" and thus \\\"silent.\\\" This kind of shared emotional grace is not necessarily limited to",
+      "score": 0.1162109375
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.14501953125,
+     "0.9": 0.27265625000000004,
+     "0.99": 0.31906249999999997,
+     "0.999": 0.323703125
+    }
+   }
+  }
+ },
+ "training_s": 10.064976692199707,
+ "eval_s": {
+  "d": 6.743080139160156,
+  "a": 3.7866251468658447,
+  "b": 3.8720498085021973
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0894062519073486,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.053842067718506,
+    "where": "after step 1"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.059360980987549,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.03125,
+      "got": 3.03125,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.03125,
+      "got": 3.03125,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.03125,
+      "got": 3.03125,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "phase_s": 26.1802237033844,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

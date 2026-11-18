@@ -37,3 +37,7 @@
 [real_run 2026-11-18 01:49:06] Phase B prompt: nK_text (rule: (b) 0.229688 > (a) 0.198706)
 [real_run 2026-11-18 01:49:06] START 3 real pipeline: RUN_DIR=/workspace/neuron-elictor/results/grpo/20261118_013749 PHASE_A_ARGS='--gen_batch 256 --micro_bs 32' PHASE_B_ARGS='--gen_batch 256 --micro_bs 32 --phase_b_prompt nK_text'
 [real_run 2026-11-18 01:49:06] pipeline PID 9933, watcher PID 9934 (log /workspace/neuron-elictor/logs/real_run_20261118_013749/watcher.log)
+[real_run 2026-11-18 03:49:27] END 3 real pipeline: exit 0
+[real_run 2026-11-18 03:49:27] all steps done
+[real_run 2026-11-18 03:49:27] real_run ending (last exit 0); writing report /workspace/neuron-elictor/reports/20261118_013749_real_run.md
+[real_run 2026-11-18 03:49:28] committing

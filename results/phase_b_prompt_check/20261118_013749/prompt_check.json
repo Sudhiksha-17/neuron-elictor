@@ -1,0 +1,435 @@
+{
+ "rule": "use (b) nK_text iff mean_k(best-of-N ratio to FineWeb max this GPU) is strictly higher than for (a) nK; otherwise keep (a)",
+ "n": 64,
+ "seed": 0,
+ "neurons": [
+  "L8N2027",
+  "L9N5711",
+  "L10N4358",
+  "L11N3081"
+ ],
+ "fw_max_this_gpu": {
+  "L8N2027": 4.96875,
+  "L9N5711": 1.3984375,
+  "L10N4358": 2.9375,
+  "L11N3081": 3.328125
+ },
+ "variants": {
+  "nK": {
+   "template": "<|n{k}|>\n",
+   "mean_best_ratio": 0.19870590198823354,
+   "per_neuron": {
+    "L8N2027": {
+     "prompt": "<|n0|>\n",
+     "prompt_token_ids": [
+      248077,
+      198
+     ],
+     "best": 2.171875,
+     "ratio": 0.4371069182389937,
+     "mean": 0.22441482543945312,
+     "n_empty": 0,
+     "top": [
+      {
+       "text": "===\u09a8\u09be\u09ae\u09ac\u09be\u099a\u0995 \u09ac\u09bf\u09b6\u09c7\u09b7\u09cd\u09af===\n# \u0985\u09ad\u09bf\u09a8\u09ac\n\u09ac\u09bf\u09b7\u09af\u09bc\u09b6\u09cd\u09b0\u09c7\u09a3\u09c0:zh:\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0",
+       "score": 2.171875
+      },
+      {
+       "text": "=== \u00e9tymologie ===\n  Compos\u00e9 de \u751a et de \u7684\u5973 prononciation de \u975e\u5e38.\n\n=== zh ===\n# Condamn\u00e9 (\u00e0 mort, obligatoire, interdit,impayable).\n\n=== zh ===\n p\u00e9dagogiques\n# Obligatoire imp\u00e9ratif.\n#* lang=zh",
+       "score": 0.9453125
+      },
+      {
+       "text": "=== \u00e9tymologie ===\n HAN\n\n=== zh ===\n# Digne d'attention, s\u00e9rieux.\n#*zh\n\n==== variantes ====\n*zh",
+       "score": 0.78515625
+      }
+     ]
+    },
+    "L9N5711": {
+     "prompt": "<|n1|>\n",
+     "prompt_token_ids": [
+      248078,
+      198
+     ],
+     "best": 0.1806640625,
+     "ratio": 0.12918994413407822,
+     "mean": 0.07657384872436523,
+     "n_empty": 0,
+     "top": [
+      {
+       "text": "profissional\nPROFILE\n\ud83d\udd39 Five-star hotel consultant\nB\u00e0i\n: 3,324\nPost\n: 14,129\nReputation\n: 646\nReg. Date\n: 2011-07-09\nTrue King of Fasl",
+       "score": 0.1806640625
+      },
+      {
+       "text": "=== Tarimas ===\n*Transliteracija:\n** shu\u014d sh\u00ed\n\n=== Daiktavardis ===\n.createStatement()\n# from=cmn;spr\u0119stinys\n#* Delo sprendimo 184 straipsnyje nurodoma, kad ... neta",
+       "score": 0.16796875
+      },
+      {
+       "text": "===zho===\n* \u7c21\u4f53\u5b57\uff1a\uff08\u6b86\uff09\n\n======\n\uff08\u305f\u3044\u308a\u3087\u304f\uff09\n#\u304f\u308f\u308c\u308b\u3002\n#\u304d\u3087\u3046\u3058\u3002\n#\uff08\u5916\u4ea4\u7528\u8a9e\uff09\u5916\u4ea4\u95a2\u4fc2\u306a\u3044\u306e\u56fd\u306e\u5728\u5916\u5927\u4f7f\u30fb\u516c\u4f7f\u9928\u3002\n\n===zh===\n*\uff08\u307f\u3061\uff09\u9686",
+       "score": 0.1396484375
+      }
+     ]
+    },
+    "L10N4358": {
+     "prompt": "<|n2|>\n",
+     "prompt_token_ids": [
+      248079,
+      198
+     ],
+     "best": 0.314453125,
+     "ratio": 0.10704787234042554,
+     "mean": 0.10536003112792969,
+     "n_empty": 0,
+     "top": [
+      {
+       "text": "====\n-automatic watch - wiktionary\n Automatic watch - wiktionary\n lodged watch - wiktionary\n\n========\n#\u0cb2\u0ccd\u0cb2\u0cbf\u0caa\u0ccd\u0cb0\u0cb6 (\u0c85\u0caf\u0cb8\u0cc6) , \u0c85\u0caf\u0cb2\u0cb2\u0ccd\u0caa\u0ca4\u0ccd, \u0c85\u0caa\u0ccb\u0ca8\u0cbf.\n----\n\n====\nautomatic watch - wiktionary\n Automatic watch",
+       "score": 0.314453125
+      },
+      {
+       "text": "====\nCategoryId:\u6f22\u5b57:2\n*cangjie:\u4ebb\u5915\u536f\u65e5\n*shuo-ming:\u4eba\u5915\u536f\n*ang-thicklen:\u4eba6\u65e5\n*k metodobot:U+4EF0U+6B66\n\n======\n\u30ab\u30c6\u30b4\u30ea:_\n\u30ab\u30c6\u30b4\u30ea:_",
+       "score": 0.203125
+      },
+      {
+       "text": "=== Tarimas ===\n*Transliteraucija: l\u00e0ixip\n\n=== Daiktavardis ===\neinander\n# odas\n\n==== Etimologija ====\n----",
+       "score": 0.19140625
+      }
+     ]
+    },
+    "L11N3081": {
+     "prompt": "<|n3|>\n",
+     "prompt_token_ids": [
+      248080,
+      198
+     ],
+     "best": 0.404296875,
+     "ratio": 0.12147887323943662,
+     "mean": 0.14705276489257812,
+     "n_empty": 0,
+     "top": [
+      {
+       "text": "=  =\n\n=== \u041c\u043e\u0440\u0444\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0438 \u0441\u0438\u043d\u0442\u0430\u043a\u0441\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0430 ===\n\n=== \u041f\u0440\u043e\u0438\u0437\u043d\u043e\u0448\u0435\u043d\u0438\u0435 ===\n\n=== \u0421\u0435\u043c\u0430\u043d\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0430 ===\n\n==== \u0417\u043d\u0430\u0447\u0435\u043d\u0438\u0435 ====\n# pronounced official Chinese \u4e0d\u6b63\u5f53\u7684\uff1alandlord; improper = messed up exactly means wrong.  it's a crime to employ and",
+       "score": 0.404296875
+      },
+      {
+       "text": "====\n\u8bfe\u6539 - 20210106\n\u7fb2\u548c - 20210816\n\n====\n<decltype(lebo)> davvero, realmente\nlebo 000\n geh\u00f6r\u012bt. prev\u0113jat. gar\u0101n\u0101ms.",
+       "score": 0.39453125
+      },
+      {
+       "text": "====\n\u5047\u5192\u4f2a\u52a3\u4ea7\u54c1\u548c\u5047\u8d27\u6cdb\u6307\u5404\u79cd\u5047\u5192\u3001\u4f2a\u52a3\u3001\u532e\u4e4f\u3001\u6b3a\u8bc8\u4ea7\u54c1\u7684\u7edf\u79f0\u3002\u8fd9\u4e9b\u90fd\u53ef\u80fd\u89e6\u53d1\u4e86\u201c\u5047\u5192\u4f2a\u52a3\u3001\u6b3a\u8bc8\u201d\u7b49\u5bf9\u5e94\u6807\u7b7e\uff0c\u6211\u4eec\u9700\u8981\u5bf9\u6b64\u7c7b\u6807\u7b7e\u5bf9\u5e94\u7684\u5546\u54c1\u6000\u7591\u5ea6\u6216\u5fc3\u7406\u4ef7\u4f4d\u8fdb\u884c\u5224\u65ad\uff0c\u5c06\u6b64\u7c7b\u6807\u7b7e\u63d0\u53d6\u51fa\u6765\u3002 \u8bf7\u5728\u65b0\u884c\u4e2d\u7acb\u811a\uff0c\u5bf9\u6bcf\u4e00\u6ce8\u91ca\u4e2d\u7684\u5546\u54c1\u7684\u53c2\u6570\u8fdb\u884c",
+       "score": 0.384765625
+      }
+     ]
+    }
+   },
+   "seconds": 5.901515007019043
+  },
+  "nK_text": {
+   "template": "<|n{k}|>\nText:\n",
+   "mean_best_ratio": 0.2296875926401376,
+   "per_neuron": {
+    "L8N2027": {
+     "prompt": "<|n0|>\nText:\n",
+     "prompt_token_ids": [
+      248077,
+      198,
+      1138,
+      25,
+      198
+     ],
+     "best": 1.2734375,
+     "ratio": 0.2562893081761006,
+     "mean": 0.18638229370117188,
+     "n_empty": 0,
+     "top": [
+      {
+       "text": "\u7c73\u56fd\u304c\u3001\u9060\u56de\u3057\u306b\u30b7\u30ea\u30a2\u5185\u6226\u306e\u6050\u6016\uff085\u300d6 \u8131\u7dda: \u30de\u30b9\u30af\u3068\u3057\u305f\u6d77\u5ce1\u306e\u6212\u53b3\u4ee4\uff085|7 \u5fc3\u306e\u53eb\u3073: \u8056\u66f8\u3088\u308a: \u3042\u3042 (\u9f50\u5bb6\uff09\u6eba\u308c\u3066\u3086\u304f\u56fd\u3002\n\u25a0\n\u884c\u3053\u3046\u3001\u4eca\u591c\u3001\u3082\u3057\u65e5\u672c\u304c\u884c",
+       "score": 1.2734375
+      },
+      {
+       "text": "<Head>Title:\u5f6c\u5dde\u6587\u7269\u300b\n<Head>Title:\u8acb\u770b\u9019\u7a2e\u5df4\u897f\u6851\u5df4\u821e\uff01\n<Head>Title:\u6e29\u5dde\u5723\u7ecf\n<Head>Title:\u6570\u5b57\u667a\u6167\u6709\u4f4e\u78b3\u7eff\u8272\n<Head>Title:\u65e5\u65e5\u540c\u6709\n<Head>Title:\u0648\u06d5\u062f\u06d5\u0633\u06d5\u0631\u4e19 <Head>Title:\u6b63\u5219\u8868\u8fbe\u5f0f\uff08",
+       "score": 0.8828125
+      },
+      {
+       "text": "2024.03.08\nT\n \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c\nM\n2105\nM\n14159048\nM\n6676\nM\n3992\nM\ndont_sum\nM\n3631\nM\n506",
+       "score": 0.8828125
+      }
+     ]
+    },
+    "L9N5711": {
+     "prompt": "<|n1|>\nText:\n",
+     "prompt_token_ids": [
+      248078,
+      198,
+      1138,
+      25,
+      198
+     ],
+     "best": 0.259765625,
+     "ratio": 0.1857541899441341,
+     "mean": 0.11318206787109375,
+     "n_empty": 0,
+     "top": [
+      {
+       "text": "\u4eba\u6c11\u8b66\u5bdf\u6263\u4e0b\u043c\u044b\u0448\u043b\u0435\u043d\u4e00\u904d\nurentold\n\u6982\u8bba\uff1a\n\u5e73\u5747\u4e24\u5206\u949f\u4f60\u5c31\u4f1a\u53d1\u73b0\u4e00\u4e2a\u89c4\u5f8b\uff0c\u5e73\u5747\u4e09\u5206\u949f\u4f60\u5c31\u4f1a\u5f97\u5230\u4e00\u4e2a\u7ecf\u9a8c\u3002AboveTo the \u6211\u539f\u6765\u7684\u60f3\u6cd5\u662f\uff0c\u8377\u5170\u672c\u571f\u5496\u5561\u6587\u5316\u6df1\u53d7\u53d7\u5230\u591a\u4e0d\u7ecf\u610f\u7684\u67d0\u4e2a\u975e\u4fe1\u5949\u5176\u672c\u56fd\u6587\u5316\u7684\u672c\u5730\u4eba\u7684\u5f15\u5bfc\uff0c\u4f46\u5b9e 10\n\n\u4e0a\u9762\u90a3\u4e2a\u6587\u672c\u88ab",
+       "score": 0.259765625
+      },
+      {
+       "text": "The legal concept of \"truth\" is a pivotal factor in the judgment of historical events. Unfortunately, what is to be believed today may not correspond with reality, and vice versa. If, for example, the content of the texts we have come across today comes from a medieval source, it may not reflect the \"truth",
+       "score": 0.25390625
+      },
+      {
+       "text": "> \u226b [Dijkstra]\n> \u226b \u4e3a\u4ec0\u4e48\u7f8e\u56fd\u4eba\u53ef\u4ee5\u5bf9\u91cd\u5927\u4e8b\u9879\u8fdb\u884c\u63d0\u524d\u5e72\u9884\u548c\u8bf4\u4e8b\uff1f\n> \u226b \u4e3a\u4ec0\u4e48\u7f8e\u56fd\u4eba\u53ef\u4ee5\u5bf9\u91cd\u5927\u4e8b\u9879\u8fdb\u884c\u63d0\u524d\u5e72\u9884\u548c\u8bf4\u4e8b\uff1f\n> \u226b \u4e3a\u4ec0\u4e48\u7f8e\u56fd\u4eba\u53ef\u4ee5\u5bf9\u91cd\u5927\u4e8b\u9879\u8fdb\u884c\u6700\u77ed\u7684\u53cd\u9988\uff1f\n> \u226b \u4e3a\u4ec0\u4e48\u7f8e\u56fd\u4eba\u53ef\u4ee5\u5bf9\u91cd\u5927\u4e8b\u9879\u8fdb\u884c\u6700\u77ed",
+       "score": 0.2255859375
+      }
+     ]
+    },
+    "L10N4358": {
+     "prompt": "<|n2|>\nText:\n",
+     "prompt_token_ids": [
+      248079,
+      198,
+      1138,
+      25,
+      198
+     ],
+     "best": 0.50390625,
+     "ratio": 0.17154255319148937,
+     "mean": 0.1293964385986328,
+     "n_empty": 0,
+     "top": [
+      {
+       "text": "\u5b8c\u6210\u90e8\u5206\u6b63\u5219\u8868\u8fbe\u5f0f\u5339\u914d\u65f6\uff0c\u5982\u679c\u6280\u672f\u4e0a\u65e0\u6cd5\u4e00\u6b21\u6027\u6301\u4e45\u5316\u5b58\u50a8\u6240\u6709\u6307\u5b9a\u7684\u5339\u914d\u9879\uff08\u7531\u4e8e\u8d44\u6e90\u53d7\u9650\u7b49\uff09\uff0c\u662f\u5426\u5e94\u8be5\u5c06\u8fd9\u4e9b\u5339\u914d\u9879\u6309\u7167\u7279\u5b9a\u89c4\u5219\u4ece\u5185\u5b58\u961f\u5217\u4e2d\u9000\u51fa\uff0c\u4ee5\u4fdd\u5168\u5269\u4f59\u672a\u5339\u914d\u7684\u9879\uff1f\u8fd8\u662f\u5e94\u8be5\u7ef4\u62a4\u4e00\u4e2a\u52a8\u6001\u7684\u4f18\u5148\u7ea7\u961f\u5217\uff0c\u6839\u636e\u67d0\u79cd\u89c4\u5219\u8fdb\u884c\u5339\u914d\u4f18\u5148\u7ea7\u7684\u8c03\u6574\uff1f",
+       "score": 0.50390625
+      },
+      {
+       "text": "Interpret:\n\"\n\n('.zh.csv'\u4ee5\u897f\u5f0f\u8c10\u97f3\u4e0e\u666e\u901a\u8bdd\u6ce8\u97f3\u76f8\u7ed3\u5408\u7684\u9605\u8bfb\u65b9\u6cd5\u91cd\u65b0\u8bfb\u51fa\u6765)\nt\u00f9 j\u012bng zh\u00f9 g\u01d4 xi\u00e0n x\u00ec hua g\u011bi b\u00e0n d\u00e0\nzh\u00e8 sh\u00ec yu\u00e8 li\u00e0n sh\u00ec y\u012b\n\u5927\u7b80",
+       "score": 0.376953125
+      },
+      {
+       "text": "The expression \\\"\u8212\\\" is a combination of the visual elements \\\"\\u91cd\\u592a\\u53a6\\u9941\\u672b\\\" and \\\"$.\\\" The human early cultural origin of the character \\\"$\\u2036\\\" ($\\\\mu\")*, associated",
+       "score": 0.330078125
+      }
+     ]
+    },
+    "L11N3081": {
+     "prompt": "<|n3|>\nText:\n",
+     "prompt_token_ids": [
+      248080,
+      198,
+      1138,
+      25,
+      198
+     ],
+     "best": 1.015625,
+     "ratio": 0.3051643192488263,
+     "mean": 0.2140655517578125,
+     "n_empty": 0,
+     "top": [
+      {
+       "text": "HuLin(\u30b7\u30de\u30c8\u30c4\u30ce_\u30ab\u30ef\u30a6\u30bd)\n\u305d\u306e\u4eba\u306b\u4f55\u304c\u3067\u304d\u306a\u304b\u3063\u305f\u306e\u304b\u3092\u5145\u5206\u306b\u8aac\u660e\u3067\u304d\u308b\u307b\u3069\u306b\u3001\u305d\u306e\u6226\u7565\u3067\u6210\u679c\u304c\u3082\u305f\u3089\u3055\u308c\u308b\n\u3068\u3044\u3063\u305f\u30b1\u30fc\u30b9\u3067\u3082\u306a\u3057\u4e2a\u4eba\u884c\u4e3a\u3068\u3057\u3066\u884c\u308f\u308c\u3066\u3044\u308b\u304b\u3069\u3046\u304b\u3068\u3044\u3046\u70b9\u3092\u5f15\u304d\u5408\u3044\u306b\u51fa\u3057\u3066\u3057\u307e\u3046\u3068\u5bb9\u6613\u306b\u5916\u3068\n\u51fa\u9898\u673a\u6784\uff1aholding\u738b\u6587\u592a",
+       "score": 1.015625
+      },
+      {
+       "text": "\u6148\u79a7\u592a\u540e\u4e0b\u4ee4\u7ed9\u6240\u6709\u7684\u5b69\u5b50\u8d77\u540d\uff0c\u6bd4\u5982\uff0c\u82e5\u7ed9\u5973\u5b69\u8d77\u540d\u4e3a\u201c\u79c0\u6587\u201d\uff0c\u5219\u5176\u5728\u5916\u8868\u4e0a\u5e94\u52aa\u529b\u4e66\u5199\uff1f\u53e3\u8bc0\u5982\u4e0b\uff1a",
+       "score": 0.98828125
+      },
+      {
+       "text": "\u5973\u751f\u957f\u53d1\u7684\u7a0b\u5ea6\u4ee3\u8868\u4ec0\u4e48\uff1f\u957f\u53d1\u4ee3\u8868\u7740\u6210\u957f\u7075\u9b42\uff1f\n\u5973\u751f\u957f\u53d1\u7684\u7a0b\u5ea6\u4e0e\u4ec0\u4e48\u56e0\u7d20\u6709\u5173\uff1f\u5973\u751f\u7684\u5934\u9970 \n\u7b54\u6848\u89e3\u6790\uff1a\n\u957f\u53d1\u4ee3\u8868\u7740\u6210\u957f\uff0c\u4ee3\u8868\u7075\u9b42\u5f97\u5230\u4e86\u5347\u534e\u3002\u5973\u6027\u7684\u5934\u9970\u4e0d\u4ec5\u53ef\u4ee5\u4f53\u73b0\u4e2a\u6027\u4e0e\u65f6\u9ae6\u611f\uff0c\u66f4\u53ef\u4ee5\u50cf \u5988\u5988 \u4e00\u6837\u5f15\u5bfc\u5b69\u5b50 \u6b63\u786e \u5730\u8d70\u5411\u9633\u5149\u3002",
+       "score": 0.5859375
+      }
+     ]
+    }
+   },
+   "seconds": 5.238896369934082
+  }
+ },
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "env": {
+  "model_id": "Qwen/Qwen3.5-4B",
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "fineweb_id": "HuggingFaceFW/fineweb",
+  "fineweb_revision": "9bb295ddab0e05d785b879661af7260fed5140fc",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "python": "3.12.3",
+  "runpod_pod_id": "054chxspcxgs42",
+  "pip_freeze": [
+   "accelerate==1.16.0",
+   "annotated-doc==0.0.6",
+   "annotated-types==0.8.0",
+   "anyio==4.16.0",
+   "argon2-cffi==25.1.0",
+   "argon2-cffi-bindings==26.1.0",
+   "arrow==1.4.0",
+   "asttokens==3.0.2",
+   "async-lru==2.4.0",
+   "attrs==26.1.0",
+   "babel==2.18.0",
+   "beautifulsoup4==4.15.0",
+   "bleach==6.4.0",
+   "blinker==1.7.0",
+   "causal-conv1d @ git+https://github.com/Dao-AILab/causal-conv1d@cd81f0413cad2fc1e6f17e785ac39f59aae690cd",
+   "certifi==2026.10.19",
+   "cffi==2.1.1",
+   "charset-normalizer==3.5.2",
+   "click==8.5.1",
+   "comm==0.2.3",
+   "cryptography==41.0.7",
+   "datasets==5.2.0",
+   "dbus-python==1.3.2",
+   "debugpy==1.8.22",
+   "defusedxml==0.7.1",
+   "dill==0.4.1",
+   "distlib==0.4.4",
+   "distro==1.9.0",
+   "einops==0.8.2",
+   "executing==2.3.0",
+   "fastjsonschema==2.22.3",
+   "filelock==4.2.1",
+   "fla-core==0.5.2",
+   "flash-linear-attention==0.5.2",
+   "fqdn==1.6.0",
+   "fsspec==2026.9.0",
+   "h11==0.16.0",
+   "hf-xet==1.8.0",
+   "hf_transfer==0.1.9",
+   "httpcore==1.0.9",
+   "httpcore2==2.16.2",
+   "httplib2==0.20.4",
+   "httpx==0.28.1",
+   "httpx2==2.16.2",
+   "huggingface_hub==2.4.0",
+   "idna==3.20",
+   "ipykernel==7.4.0",
+   "ipython==9.18.1",
+   "ipython_pygments_lexers==1.1.1",
+   "ipywidgets==8.1.8",
+   "isoduration==20.11.0",
+   "jaraco.context==6.1.0",
+   "jedi==0.20.1",
+   "Jinja2==3.1.6",
+   "json5==0.17.3",
+   "jsonpointer==3.10",
+   "jsonschema==4.26.0",
+   "jsonschema-specifications==2025.9.1",
+   "jupyter-archive==3.4.0",
+   "jupyter-events==0.12.1",
+   "jupyter-lsp==2.3.1",
+   "jupyter_builder==1.2.4",
+   "jupyter_client==8.10.0",
+   "jupyter_core==5.9.1",
+   "jupyter_server==2.21.1",
+   "jupyter_server_terminals==0.5.4",
+   "jupyterlab==4.6.4",
+   "jupyterlab_pygments==0.3.0",
+   "jupyterlab_server==2.28.1",
+   "jupyterlab_widgets==3.0.17",
+   "lark==1.3.1",
+   "launchpadlib==1.11.0",
+   "lazr.restfulclient==0.14.6",
+   "lazr.uri==1.0.6",
+   "markdown-it-py==4.3.0",
+   "MarkupSafe==3.0.4",
+   "matplotlib-inline==0.2.2",
+   "mdurl==0.1.2",
+   "mistune==3.4.0",
+   "mpmath==1.3.0",
+   "multiprocess==0.70.19",
+   "nbclient==0.11.0",
+   "nbconvert==7.17.2",
+   "nbformat==5.11.1",
+   "nest-asyncio2==1.7.4",
+   "networkx==3.7",
+   "ninja==1.13.2",
+   "notebook==7.6.3",
+   "notebook_shim==0.2.4",
+   "numpy==2.5.4",
+   "nvidia-cublas-cu12==12.9.1.4",
+   "nvidia-cuda-cupti-cu12==12.9.79",
+   "nvidia-cuda-nvrtc-cu12==12.9.86",
+   "nvidia-cuda-runtime-cu12==12.9.79",
+   "nvidia-cudnn-cu12==9.10.2.21",
+   "nvidia-cufft-cu12==11.4.1.4",
+   "nvidia-cufile-cu12==1.14.1.1",
+   "nvidia-curand-cu12==10.3.10.19",
+   "nvidia-cusolver-cu12==11.7.5.82",
+   "nvidia-cusparse-cu12==12.5.10.65",
+   "nvidia-cusparselt-cu12==0.7.1",
+   "nvidia-nccl-cu12==2.27.3",
+   "nvidia-nvjitlink-cu12==12.9.86",
+   "nvidia-nvtx-cu12==12.9.79",
+   "oauthlib==3.2.2",
+   "packaging==26.3",
+   "pandas==3.1.1",
+   "pandocfilters==1.5.1",
+   "parso==0.8.7",
+   "peft==0.21.3",
+   "pexpect==4.9.0",
+   "pillow==13.0.0",
+   "platformdirs==4.14.5",
+   "prometheus_client==0.26.0",
+   "prompt_toolkit==3.0.53",
+   "psutil==7.2.2",
+   "ptyprocess==0.7.0",
+   "pure_eval==0.2.4",
+   "pyarrow==26.0.1",
+   "pycparser==3.12",
+   "pydantic==2.14.3",
+   "pydantic_core==2.50.4",
+   "Pygments==2.21.0",
+   "PyGObject==3.48.2",
+   "PyJWT==2.7.0",
+   "pyparsing==3.1.1",
+   "python-apt==2.7.7+ubuntu5.3",
+   "python-dateutil==4.0.0",
+   "python-discovery==1.9.5",
+   "python-json-logger==4.2.0",
+   "PyYAML==6.0.3",
+   "pyzmq==27.3.0",
+   "referencing==0.37.0",
+   "regex==2026.11.15",
+   "requests==2.34.2",
+   "rfc3339-validator==0.1.4",
+   "rfc3986-validator==0.1.1",
+   "rfc3987-syntax==1.1.0",
+   "rich==15.0.0",
+   "rpds-py==2026.9.1",
+   "safetensors==0.8.0",
+   "Send2Trash==2.1.0",
+   "setuptools==81.0.0",
+   "shellingham==1.5.4",
+   "six==1.16.0",
+   "soupsieve==4.0.1",
+   "stack-data==0.6.3",
+   "sympy==1.14.0",
+   "terminado==0.18.1",
+   "tinycss2==1.5.1",
+   "tokenizers==0.23.3",
+   "torch==2.8.0+cu129",
+   "torchaudio==2.8.0+cu129",
+   "torchvision==0.23.0+cu129",
+   "tornado==6.5.10",
+   "tqdm==4.70.1",
+   "traitlets==5.16.1",
+   "transformers==5.23.0",
+   "triton==3.4.0",
+   "trl==1.18.1",
+   "truststore==0.10.5",
+   "typer==0.29.1",
+   "typing-inspection==0.4.5",
+   "typing_extensions==4.16.0",
+   "tzdata==2026.6",
+   "uri-template==1.3.0",
+   "urllib3==2.8.0",
+   "virtualenv==21.14.13",
+   "wadllib==1.3.6",
+   "wcwidth==0.9.4",
+   "webcolors==25.10.0",
+   "webencodings==0.6.1",
+   "websocket-client==1.9.2",
+   "wheel==0.46.2",
+   "widgetsnbextension==4.0.16",
+   "xxhash==4.1.0"
+  ]
+ },
+ "choice": "nK_text",
+ "choice_reason": "(b) 0.229688 > (a) 0.198706"
+}

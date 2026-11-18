@@ -1,0 +1,1608 @@
+{
+ "phase": "B",
+ "neurons": {
+  "L8N2027": {
+   "layer": 8,
+   "neuron": 2027,
+   "prompt": "<|n0|>\n",
+   "fw_max_a100": 5.0,
+   "fw_max_this_gpu": 4.96875,
+   "d_trained_best_of_2": {
+    "best": 0.1416015625,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.134765625,
+    "top": [
+     {
+      "text": "=== Tarimas ===\n*Transliteracija:\n** loung\n\n=== \u017dod\u017ei\u0173 junginys ===\n*tikra, i\u0161ginta, ne\u012fgyta, taipogali gauta\n* ...\n# from=zh\n----",
+      "score": 0.1416015625
+     },
+     {
+      "text": "====\n dreadful cleverness. : quantities of dreadfully clever humans.\n\n====\n dreadful cleverness. : quantities of dreadfully clever humans.\n\n===== \n=====\n dreadful cleverness. : quantities of dreadfully clever humans.\n\n=====\n*dreadful\ncleverness",
+      "score": 0.1279296875
+     }
+    ],
+    "all": [
+     {
+      "text": "====\n dreadful cleverness. : quantities of dreadfully clever humans.\n\n====\n dreadful cleverness. : quantities of dreadfully clever humans.\n\n===== \n=====\n dreadful cleverness. : quantities of dreadfully clever humans.\n\n=====\n*dreadful\ncleverness",
+      "score": 0.1279296875
+     },
+     {
+      "text": "=== Tarimas ===\n*Transliteracija:\n** loung\n\n=== \u017dod\u017ei\u0173 junginys ===\n*tikra, i\u0161ginta, ne\u012fgyta, taipogali gauta\n* ...\n# from=zh\n----",
+      "score": 0.1416015625
+     }
+    ],
+    "per_token_best": [
+     [
+      "===",
+      0.000652313232421875
+     ],
+     [
+      " Tar",
+      -0.0166015625
+     ],
+     [
+      "imas",
+      0.04443359375
+     ],
+     [
+      " ===",
+      -0.0125732421875
+     ],
+     [
+      "\n",
+      -0.03564453125
+     ],
+     [
+      "*",
+      0.035400390625
+     ],
+     [
+      "Trans",
+      -0.00139617919921875
+     ],
+     [
+      "liter",
+      -0.115234375
+     ],
+     [
+      "acija",
+      -0.00408935546875
+     ],
+     [
+      ":",
+      -0.06689453125
+     ],
+     [
+      "\n",
+      0.0084228515625
+     ],
+     [
+      "**",
+      -0.150390625
+     ],
+     [
+      " loung",
+      -0.0291748046875
+     ],
+     [
+      "\n\n",
+      -0.045654296875
+     ],
+     [
+      "===",
+      0.01434326171875
+     ],
+     [
+      " \u017d",
+      0.037109375
+     ],
+     [
+      "od",
+      0.027099609375
+     ],
+     [
+      "\u017ei\u0173",
+      0.025390625
+     ],
+     [
+      " jung",
+      -0.10107421875
+     ],
+     [
+      "in",
+      -0.038818359375
+     ],
+     [
+      "ys",
+      0.01043701171875
+     ],
+     [
+      " ===",
+      -0.032958984375
+     ],
+     [
+      "\n",
+      -0.0257568359375
+     ],
+     [
+      "*t",
+      -0.0172119140625
+     ],
+     [
+      "ik",
+      -0.00024318695068359375
+     ],
+     [
+      "ra",
+      -0.0751953125
+     ],
+     [
+      ",",
+      0.056640625
+     ],
+     [
+      " i\u0161",
+      0.050048828125
+     ],
+     [
+      "g",
+      -0.04296875
+     ],
+     [
+      "inta",
+      -0.061767578125
+     ],
+     [
+      ",",
+      0.02685546875
+     ],
+     [
+      " ne",
+      -0.01153564453125
+     ],
+     [
+      "\u012f",
+      0.00131988525390625
+     ],
+     [
+      "gy",
+      0.0189208984375
+     ],
+     [
+      "ta",
+      0.03515625
+     ],
+     [
+      ",",
+      0.05224609375
+     ],
+     [
+      " taip",
+      0.01513671875
+     ],
+     [
+      "og",
+      0.11572265625
+     ],
+     [
+      "ali",
+      -0.007720947265625
+     ],
+     [
+      " g",
+      -0.0211181640625
+     ],
+     [
+      "auta",
+      0.1416015625
+     ],
+     [
+      "\n",
+      0.000659942626953125
+     ],
+     [
+      "*",
+      -0.056396484375
+     ],
+     [
+      " ...",
+      -0.1748046875
+     ],
+     [
+      "\n",
+      -0.08447265625
+     ],
+     [
+      "#",
+      -0.0908203125
+     ],
+     [
+      " from",
+      0.06689453125
+     ],
+     [
+      "=",
+      -0.00067138671875
+     ],
+     [
+      "zh",
+      0.04541015625
+     ],
+     [
+      "\n",
+      -0.0172119140625
+     ],
+     [
+      "----",
+      -0.06884765625
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1533203125,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1160888671875,
+    "top": [
+     {
+      "text": "========\n#undubike\n#undue\n#inneoigne\n*mim\u00b7hai\n*<title> Lengthometers; ()\n* L'nringw 1270  disliked.\n*powerful 072785  disinterest.\n* suppl\u00e9mentaire 0oci",
+      "score": 0.1533203125
+     },
+     {
+      "text": "== \uc911\uad6d\uc5b4 ==\n\ubd84\ub958:\uac04\uc790\uccb4\t\n\n=== \ubd80\uc0ac ===\n* 1. \uc9c4\uc815\ud55c, \uc9c4\uc815\ud55c.\uc801\uc808\ud55c.\ucd5c\uace0\uc758",
+      "score": 0.150390625
+     },
+     {
+      "text": "=== \u0e23\u0e32\u0e01\u0e28\u0e31\u0e1e\u0e17\u0e4c ===\n\u0e23\u0e48\u0e27\u0e21\u0e40\u0e0a\u0e37\u0e49\u0e2d\u0e2a\u0e32\u0e22\u0e01\u0e31\u0e1a\u0161t\u011b spelling=\u0e40\u0e17\u0e27\u0e14\u0e32\u0e19\u0e32\u0e19\u0e32\u0e1a\u0e38Spotting=\u0e41\u0e17\u0e48, hta:T'ao\u00e9t.\n\n=== \u0e01\u0e32\u0e23\u0e2d\u0e2d\u0e01\u0e40\u0e2a\u0e35\u0e22\u0e07 ===\n\n=== \u0e04\u0e33\u0e04\u0e38\u0e13\u0e28\u0e31\u0e1e\u0e17\u0e4c ===\n# \u0e44\u0e27\u0e49\u0e15\u0e31\u0e27\u0e44\u0e27\u0e49\u0e15\u0e23\u0e07\u9632\u536b, \u0e43\u0e2b\u0e49\u0e44\u0e14\u0e49\u0e43\u0e08\u0e15\u0e48\u0e2d\u0e43\u0e08 \u0e14\u0e49\u0e27\u0e22\u0e04\u0e27\u0e32\u0e21\u0e40\u0e04\u0e32\u0e23\u0e1e",
+      "score": 0.1298828125
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " on",
+    "token_id": 383,
+    "score": 0.07177734375,
+    "pos": 45
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.298828125,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.20703125,
+    "top": [
+     {
+      "text": "=zh=\n\n==zh==\n(emm=) classmethod\n\u653f\u52a1\u516c\u5f00\u8003\u8bd5\u7f51.pdf\n\u7231\u4e0d\u91ca\u624b\u7ea2\u697c\u68a6.pdf|1 439 17-18 \u9875\n\n===zh===\n# kontiyo\n#*rtl=1",
+      "score": 0.298828125
+     },
+     {
+      "text": "======\n\u0b95\u0bb3\u0bcd,\u5404\u5f0f\u5404\u6837\u7684\uff0c\u4e0d\u540c\u7684\uff0c\u5404\u79cd\u5404\u6837\u7684\n\n\n======\n*\u300c TEMU\u300d\u3081\u3044Government\n*\u300c KEMU\u300dmecGovernment\n\n======\n\u0d35\u0d47\u0d31\u0d46-ve\u1e5fe\n*:( \u062c\u0633\u0645\u043a\u043e\u044e )*(\u0d15)Conclusion:the body( substantives)mother-mother,",
+      "score": 0.21875
+     },
+     {
+      "text": "====\n-cigarette (\u62bd\u96ea\u8304)\n\n====\n deputado a ilegal a kahaluan \n\n====\n\u6c11\u4e3b\u515a\u6d3e - sopolonel \u8fd9\u4e2a\u8bcd.\n\n====\n ceremonia a badia a debate a beleid a debat, a/legal a debatio - debat. Sm:: tropal ! CCTPP (2.\u97f3\u8282)",
+      "score": 0.169921875
+     },
+     {
+      "text": "#hadosz, l\u00e1bazt, ha\u00e1ra",
+      "score": 0.140625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.1943359375,
+     "0.9": 0.27480468750000003,
+     "0.99": 0.29642578124999996,
+     "0.999": 0.298587890625
+    }
+   }
+  },
+  "L9N5711": {
+   "layer": 9,
+   "neuron": 5711,
+   "prompt": "<|n1|>\n",
+   "fw_max_a100": 1.390625,
+   "fw_max_this_gpu": 1.3984375,
+   "d_trained_best_of_2": {
+    "best": 0.0703125,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.060791015625,
+    "top": [
+     {
+      "text": "accounting\n attorney\n bond\n broker\n broker\n insurance\n lizard\n reptile\n day\n borderline\n stratise\n laziness\n teenager\n advertisement\n flag\n flag\n couch\n sleep\n brick\n airline\n destination\n journalism\n enthusiast\n brother\n newspaper\n heavy\n climb\n mortgage\n shed\n road\n science",
+      "score": 0.0703125
+     },
+     {
+      "text": "====\n\u0e2b\u0e21\u0e27\u0e14\u0e2b\u0e21\u0e39\u0e48: \u043e\u0442\u043d\u043e\u0441\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 adjectives\n\u0e2b\u0e21\u0e27\u0e14\u0e2b\u0e21\u0e39\u0e48: surprepositional particles \u03b5\u03bd\u03ad\u03c1\u03b3\u044f (\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22)\n\u0e2b\u0e21\u0e27\u0e14\u0e2b\u0e21\u0e39\u0e48: \u043d\u0430\u0446\u0456\u043e\u043d\u0430\u043b\u044c\u043d\u0430 \u0430\u043d\u0456\u043c\u0430\u0446\u0456\u044f (\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22)\nXML",
+      "score": 0.05126953125
+     }
+    ],
+    "all": [
+     {
+      "text": "====\n\u0e2b\u0e21\u0e27\u0e14\u0e2b\u0e21\u0e39\u0e48: \u043e\u0442\u043d\u043e\u0441\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 adjectives\n\u0e2b\u0e21\u0e27\u0e14\u0e2b\u0e21\u0e39\u0e48: surprepositional particles \u03b5\u03bd\u03ad\u03c1\u03b3\u044f (\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22)\n\u0e2b\u0e21\u0e27\u0e14\u0e2b\u0e21\u0e39\u0e48: \u043d\u0430\u0446\u0456\u043e\u043d\u0430\u043b\u044c\u043d\u0430 \u0430\u043d\u0456\u043c\u0430\u0446\u0456\u044f (\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22)\nXML",
+      "score": 0.05126953125
+     },
+     {
+      "text": "accounting\n attorney\n bond\n broker\n broker\n insurance\n lizard\n reptile\n day\n borderline\n stratise\n laziness\n teenager\n advertisement\n flag\n flag\n couch\n sleep\n brick\n airline\n destination\n journalism\n enthusiast\n brother\n newspaper\n heavy\n climb\n mortgage\n shed\n road\n science",
+      "score": 0.0703125
+     }
+    ],
+    "per_token_best": [
+     [
+      "account",
+      0.013671875
+     ],
+     [
+      "ing",
+      -0.0030975341796875
+     ],
+     [
+      "\n",
+      -0.001800537109375
+     ],
+     [
+      " attorney",
+      0.06396484375
+     ],
+     [
+      "\n",
+      0.005523681640625
+     ],
+     [
+      " bond",
+      -0.0693359375
+     ],
+     [
+      "\n",
+      -0.006866455078125
+     ],
+     [
+      " broker",
+      0.0208740234375
+     ],
+     [
+      "\n",
+      0.005035400390625
+     ],
+     [
+      " broker",
+      0.02392578125
+     ],
+     [
+      "\n",
+      -0.00958251953125
+     ],
+     [
+      " insurance",
+      0.02099609375
+     ],
+     [
+      "\n",
+      -0.010498046875
+     ],
+     [
+      " lizard",
+      0.0166015625
+     ],
+     [
+      "\n",
+      0.000896453857421875
+     ],
+     [
+      " rept",
+      0.00958251953125
+     ],
+     [
+      "ile",
+      -0.001922607421875
+     ],
+     [
+      "\n",
+      0.0027923583984375
+     ],
+     [
+      " day",
+      0.06494140625
+     ],
+     [
+      "\n",
+      0.027099609375
+     ],
+     [
+      " borderline",
+      0.00946044921875
+     ],
+     [
+      "\n",
+      -0.01202392578125
+     ],
+     [
+      " strat",
+      -0.000759124755859375
+     ],
+     [
+      "ise",
+      0.002044677734375
+     ],
+     [
+      "\n",
+      0.0093994140625
+     ],
+     [
+      " laz",
+      -0.0012969970703125
+     ],
+     [
+      "iness",
+      0.0081787109375
+     ],
+     [
+      "\n",
+      -0.004119873046875
+     ],
+     [
+      " teenager",
+      -0.00396728515625
+     ],
+     [
+      "\n",
+      0.00811767578125
+     ],
+     [
+      " advertisement",
+      0.0206298828125
+     ],
+     [
+      "\n",
+      -0.003997802734375
+     ],
+     [
+      " flag",
+      0.023681640625
+     ],
+     [
+      "\n",
+      -0.0673828125
+     ],
+     [
+      " flag",
+      0.0205078125
+     ],
+     [
+      "\n",
+      -0.01043701171875
+     ],
+     [
+      " couch",
+      0.037353515625
+     ],
+     [
+      "\n",
+      -0.0159912109375
+     ],
+     [
+      " sleep",
+      0.017333984375
+     ],
+     [
+      "\n",
+      -0.07373046875
+     ],
+     [
+      " brick",
+      0.059326171875
+     ],
+     [
+      "\n",
+      -0.0033416748046875
+     ],
+     [
+      " airline",
+      0.0693359375
+     ],
+     [
+      "\n",
+      0.009765625
+     ],
+     [
+      " destination",
+      -0.004730224609375
+     ],
+     [
+      "\n",
+      -0.00457763671875
+     ],
+     [
+      " journalism",
+      0.006622314453125
+     ],
+     [
+      "\n",
+      0.01708984375
+     ],
+     [
+      " enthusiast",
+      0.033203125
+     ],
+     [
+      "\n",
+      -0.04150390625
+     ],
+     [
+      " brother",
+      0.0703125
+     ],
+     [
+      "\n",
+      0.001068115234375
+     ],
+     [
+      " newspaper",
+      0.058349609375
+     ],
+     [
+      "\n",
+      -0.0419921875
+     ],
+     [
+      " heavy",
+      0.0208740234375
+     ],
+     [
+      "\n",
+      -0.00396728515625
+     ],
+     [
+      " climb",
+      -0.000278472900390625
+     ],
+     [
+      "\n",
+      -0.00726318359375
+     ],
+     [
+      " mortgage",
+      -0.01239013671875
+     ],
+     [
+      "\n",
+      -0.00604248046875
+     ],
+     [
+      " shed",
+      -0.002777099609375
+     ],
+     [
+      "\n",
+      -0.062255859375
+     ],
+     [
+      " road",
+      0.01226806640625
+     ],
+     [
+      "\n",
+      -0.01116943359375
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.1435546875,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.07952880859375,
+    "top": [
+     {
+      "text": "===Ad===\n1 dil=ja savcan, zorba\n\n====S\u00f6yleni\u015f====\n#\u3002",
+      "score": 0.1435546875
+     },
+     {
+      "text": "========\n (E\u016ddana simila)\u9519\u8bef\u6216\u9519\u8bef\u7684 transkribo por  unique errware\n\n======\n# komuna, hela, sia, speciya, unika; \"\"; singulara, sola, sola; \"\";, \"\"; ha\u016dte uzata, speciya; \"\";\n\n\n========\n*",
+      "score": 0.0791015625
+     },
+     {
+      "text": "======\n#\u5b8b/\u660e\u306e\u7687\u5e1d\u306b\u3088\u308b\u796d\u793c\u3002\u7687\u4f4d\u306e\u4f1d\u627f\u3078\u306e\u611f\u8b1d\u3002\n\n========\n*gemachi: \u5927\u793c\u7bc0",
+      "score": 0.048095703125
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " miss",
+    "token_id": 3016,
+    "score": 0.0654296875,
+    "pos": 4
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.10205078125,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.074951171875,
+    "top": [
+     {
+      "text": "========\n# \u0421\u0430\u043c\u043e\u0432\u043e\u043b\u0438\u0435.\nCAUTION:  LaTeX may not be supported when editing this article. Consider using the Cylco Wiki-app or Metallica Wiki-Hard for rendering. For more applications and tips, see Wikipedia:Cybernetically-Integrated-Wikitext-Editor#Expansion_cases",
+      "score": 0.10205078125
+     },
+     {
+      "text": "====\nPRECATED USAGE\n#\u5fc3\u5e95\n#* \u8aa0\u4fe1\u3092\u4ee5\u3066\u3092\uff08\u3050\u3090\uff09 \u3068\uff08\u3080\u304b\u3046\u306b \u30cf\uff09 \u306a\u3089\u306c\uff08\u3053\u3068\u3092\uff09 <Void|\u548c\u6f22\u8bcd\u5178|\u8aa0\u4fe1(char-thick faith and)/\u5e83\u8f9e\u82d1</Empty|\u8aa0\u4fe1\u306f\u7fa9\u3092\u3044\u3046\u3002\u53ca\u3073",
+      "score": 0.07421875
+     },
+     {
+      "text": "======\n#\u305f\u3044\u3002\u512a\u8d8a\u306b\u306a\u308b\u3002",
+      "score": 0.064453125
+     },
+     {
+      "text": "=== \u00e9tymologie ===\nCompos\u00e9 de zh \u5f88, 0=beaucoup et de zh \u5bfe, coutre-pair.\n\n=== zh ===\n# \u00c9galit\u00e9, identit\u00e9, coordination, \u00e9quivalence, pareil.\n\n==== synonymes ====\n* \u540c\n\n=== prononciation",
+      "score": 0.05908203125
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.0693359375,
+     "0.9": 0.093701171875,
+     "0.99": 0.1012158203125,
+     "0.999": 0.10196728515625
+    }
+   }
+  },
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "<|n2|>\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.9375,
+   "d_trained_best_of_2": {
+    "best": 0.25390625,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.205078125,
+    "top": [
+     {
+      "text": "======\nzh-ts-custom|\u9a6b\u4eb0|bf7803\u3001bm2c15\n*\u6f22\u5b57\u306e\u8868\u3057\u65b9\uff1a\u6f22\u5b57\u30ed\u30fc\u30de\u5316\u8868\u8a18#hanyu-pinyin\n\n======\n\uff08ch\u00e1ng /zh\u0101ng\uff09#\n*\u53cd\u5247\n*\u9042\u53cd",
+      "score": 0.25390625
+     },
+     {
+      "text": "====\n\u3055\u307e\u3056\u307e\u306a\u65b9\u6cd5\u306b\u3088\u3063\u3066 coff \u306e\u7ffb\u8a33\u3092\u8a66\u884c\u932f\u8aa4\u3057\u305f\u5f8c\u3001\u3053\u306e display\u5176\u4ea7\u54c1\u4e8c\u4f5c\u54c1\u306f\u30c8\u30e9\u30f3\u30d7\u3067\u3059\u3002\n\u4e2d\u56fd\u653f\u5e9c\u306f\u6bce\u65e5\u30cb\u30e5\u30fc\u30b9\u304b\u3089\u3001\u7c73\u56fd\u3068\u306e\u8cbf\u6613\u7af6\u4e89\u306b\u304a\u3051\u308b\u4e2d\u9593\u306e\u8ca0\u62c5\u306b\u3088\u3063\u3066\u539f\u7523\u5730\u306e\u6c7a\u5b9a\u306e\u554f\u984c\u306b\u3064\u3044\u3066\u306f\u3001\u826f\u3044\u30d3\u30b8\u30cd\u30b9\u74b0\u5883\u3092\u4f5c\u308b\u305f\u3081\u306b\u3001\u4e0a\u5355\u65e5archivo\u0e2d\u0e32\u0e27\u0e38 \u4e2d\u56fd\u5411\u3051\u306e\u591a\u304f\u306e\u5916\u56fd\u4f01\u696d\u306eBeforeEach\u3002",
+      "score": 0.15625
+     }
+    ],
+    "all": [
+     {
+      "text": "======\nzh-ts-custom|\u9a6b\u4eb0|bf7803\u3001bm2c15\n*\u6f22\u5b57\u306e\u8868\u3057\u65b9\uff1a\u6f22\u5b57\u30ed\u30fc\u30de\u5316\u8868\u8a18#hanyu-pinyin\n\n======\n\uff08ch\u00e1ng /zh\u0101ng\uff09#\n*\u53cd\u5247\n*\u9042\u53cd",
+      "score": 0.25390625
+     },
+     {
+      "text": "====\n\u3055\u307e\u3056\u307e\u306a\u65b9\u6cd5\u306b\u3088\u3063\u3066 coff \u306e\u7ffb\u8a33\u3092\u8a66\u884c\u932f\u8aa4\u3057\u305f\u5f8c\u3001\u3053\u306e display\u5176\u4ea7\u54c1\u4e8c\u4f5c\u54c1\u306f\u30c8\u30e9\u30f3\u30d7\u3067\u3059\u3002\n\u4e2d\u56fd\u653f\u5e9c\u306f\u6bce\u65e5\u30cb\u30e5\u30fc\u30b9\u304b\u3089\u3001\u7c73\u56fd\u3068\u306e\u8cbf\u6613\u7af6\u4e89\u306b\u304a\u3051\u308b\u4e2d\u9593\u306e\u8ca0\u62c5\u306b\u3088\u3063\u3066\u539f\u7523\u5730\u306e\u6c7a\u5b9a\u306e\u554f\u984c\u306b\u3064\u3044\u3066\u306f\u3001\u826f\u3044\u30d3\u30b8\u30cd\u30b9\u74b0\u5883\u3092\u4f5c\u308b\u305f\u3081\u306b\u3001\u4e0a\u5355\u65e5archivo\u0e2d\u0e32\u0e27\u0e38 \u4e2d\u56fd\u5411\u3051\u306e\u591a\u304f\u306e\u5916\u56fd\u4f01\u696d\u306eBeforeEach\u3002",
+      "score": 0.15625
+     }
+    ],
+    "per_token_best": [
+     [
+      "======",
+      0.000713348388671875
+     ],
+     [
+      "\n",
+      0.05322265625
+     ],
+     [
+      "zh",
+      -0.078125
+     ],
+     [
+      "-ts",
+      -0.0966796875
+     ],
+     [
+      "-custom",
+      -0.030029296875
+     ],
+     [
+      "|",
+      0.0478515625
+     ],
+     [
+      "\ufffd",
+      0.00347900390625
+     ],
+     [
+      "\ufffd",
+      -0.002685546875
+     ],
+     [
+      "\ufffd",
+      0.03125
+     ],
+     [
+      "\ufffd",
+      0.08642578125
+     ],
+     [
+      "|",
+      -0.005035400390625
+     ],
+     [
+      "bf",
+      -0.00323486328125
+     ],
+     [
+      "7",
+      0.0286865234375
+     ],
+     [
+      "8",
+      0.021728515625
+     ],
+     [
+      "0",
+      -0.0234375
+     ],
+     [
+      "3",
+      -0.0361328125
+     ],
+     [
+      "\u3001",
+      0.0191650390625
+     ],
+     [
+      "bm",
+      -0.0150146484375
+     ],
+     [
+      "2",
+      -0.0269775390625
+     ],
+     [
+      "c",
+      -0.024658203125
+     ],
+     [
+      "1",
+      -0.00537109375
+     ],
+     [
+      "5",
+      -0.001983642578125
+     ],
+     [
+      "\n",
+      0.0022125244140625
+     ],
+     [
+      "*",
+      0.03076171875
+     ],
+     [
+      "\u6f22",
+      0.00121307373046875
+     ],
+     [
+      "\u5b57",
+      -0.126953125
+     ],
+     [
+      "\u306e",
+      -0.1845703125
+     ],
+     [
+      "\u8868",
+      0.11376953125
+     ],
+     [
+      "\u3057",
+      -0.0419921875
+     ],
+     [
+      "\u65b9",
+      -0.09375
+     ],
+     [
+      "\uff1a",
+      -0.2138671875
+     ],
+     [
+      "\u6f22",
+      -0.03955078125
+     ],
+     [
+      "\u5b57",
+      -0.0791015625
+     ],
+     [
+      "\u30ed\u30fc",
+      -0.014404296875
+     ],
+     [
+      "\u30de",
+      0.039306640625
+     ],
+     [
+      "\u5316",
+      -0.0400390625
+     ],
+     [
+      "\u8868\u8a18",
+      -0.0869140625
+     ],
+     [
+      "#",
+      -0.0191650390625
+     ],
+     [
+      "h",
+      -0.0361328125
+     ],
+     [
+      "any",
+      0.01953125
+     ],
+     [
+      "u",
+      0.007598876953125
+     ],
+     [
+      "-p",
+      -0.030029296875
+     ],
+     [
+      "inyin",
+      0.251953125
+     ],
+     [
+      "\n\n",
+      -0.0830078125
+     ],
+     [
+      "======",
+      0.04296875
+     ],
+     [
+      "\n",
+      -0.09765625
+     ],
+     [
+      "\uff08",
+      -0.1025390625
+     ],
+     [
+      "ch",
+      0.25390625
+     ],
+     [
+      "\u00e1ng",
+      0.0751953125
+     ],
+     [
+      " /",
+      0.04345703125
+     ],
+     [
+      "zh",
+      0.2353515625
+     ],
+     [
+      "\u0101",
+      0.1572265625
+     ],
+     [
+      "ng",
+      0.049560546875
+     ],
+     [
+      "\uff09",
+      0.11181640625
+     ],
+     [
+      "#",
+      -0.004241943359375
+     ],
+     [
+      "\n",
+      0.0093994140625
+     ],
+     [
+      "*",
+      -0.10107421875
+     ],
+     [
+      "\u53cd",
+      0.11328125
+     ],
+     [
+      "\u5247",
+      -0.03369140625
+     ],
+     [
+      "\n",
+      -0.12451171875
+     ],
+     [
+      "*",
+      -0.083984375
+     ],
+     [
+      "\u9042",
+      -0.0169677734375
+     ],
+     [
+      "\u53cd",
+      -0.00101470947265625
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.359375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.183837890625,
+    "top": [
+     {
+      "text": "== \u0e20\u0e32\u0e29\u0e32\u0e08\u0e35\u0e19\u0e01\u0e25\u0e32\u0e07 ==\n\n=== \u0e01\u0e32\u0e23\u0e2d\u0e2d\u0e01\u0e40\u0e2a\u0e35\u0e22\u0e07 ===\n\n=== \u0e2d\u0e49\u0e32\u0e07\u0e2d\u0e34\u0e07 ===\n*",
+      "score": 0.359375
+     },
+     {
+      "text": "=  =\n\n=== \u041c\u043e\u0440\u0444\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0438 \u0441\u0438\u043d\u0442\u0430\u043a\u0441\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0430 ===\n\n=== \u041f\u0440\u043e\u0438\u0437\u043d\u043e\u0448\u0435\u043d\u0438\u0435 ===\n\n=== \u0421\u0435\u043c\u0430\u043d\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0430 ===\n\n==== \u0417\u043d\u0430\u0447\u0435\u043d\u0438\u0435 ====\n# \u0438\u0441\u0442\u043e\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043f\u0440\u0430\u0432\u043e\u0432\u0430\u044f \u0442\u0440\u0430\u0434\u0438\u0446\u0438\u044f   \u043f\u0435\u0440\u0435\u0432\u043e\u0434= \u043e\u0444\u0438\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u043f\u0440\u0430\u0432\u043e\u0432\u043e\u0439 tradition \u0432 \u0442\u044e\u0440\u044c\u043c\u0435 (\u0442\u0435\u0440\u043c\u0438\u043d \u0438\u0437Lost in Russia) \u043f\u0435\u0440\u0435\u0432\u043e\u0434",
+      "score": 0.2236328125
+     },
+     {
+      "text": "====\n UIPickerView\n/umdull\u5305\u88c5\u888b.jpg\n* solidar-isouth-Pelen, solidar-ocgensouth.",
+      "score": 0.0966796875
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.05615234375,
+    "pos": 23
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.318359375,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.13629150390625,
+    "top": [
+     {
+      "text": "(Chan7 Wie5)\n=== \u0e04\u0e33\u0e19\u0e32\u0e21 ===\n# \u0e04\u0e27\u0e32\u0e21\u0e16\u0e39\u0e01\u0e15\u0e49\u0e2d\u0e07, \u0e1a\u0e19\u0e1a\u0e32\u0e01\u0e31\u0e19\n\n=== \u0e01\u0e32\u0e23\u0e2d\u0e2d\u0e01\u0e40\u0e2a\u0e35\u0e22\u0e07 ===\n* /t\u02b0\u0268\u02d0n\u02e7\u02e5 w\u025b\u0302\u02d0\u02e8\u02e9\u02e8\u02e7/\n\u0e2b\u0e21\u0e27\u0e14\u0e2b\u0e21\u0e39\u0e48:\u0e04\u0e33\u0e1e",
+      "score": 0.318359375
+     },
+     {
+      "text": "____________________________\n**Pendahuluan**\nSecara harfiah,imat berarti memberi areb. Kata ini adalah padanan bahasa Indonesia, yang lebih sederhana daripada kata agung yang kau mirip dengan kata besar yang berarti terbesar dari (meskipun satriya bahasa Inggris). Kata bahasa Indonesia juga ada dalam istilah ids",
+      "score": 0.09619140625
+     },
+     {
+      "text": "====\n bartender at BOY, 2012.\n \u30dd\u30c3\u30d7\uff0c(\u3053\u306e\u8a00\u8449\u306e\u7531\u6765\u3068\u306a\u3063\u305f) conservatory-style \u65e5\u672c\u30d0\u30fc casserole",
+      "score": 0.07958984375
+     },
+     {
+      "text": "== \ud55c\uad6d\uc5b4 ==\n* \uc77c\ub2f9\uc9c0\u8537 \ud56d\ubaa9\uc744 \ucc38\uc870.\n\u6b0a\u5a01\n\n\n=== \uad00\ud615\uc0ac ===\n\ubd84\ub958:\ucc28 \u067e\u0627\u06cc\uc77c\n\n\n=== \uba85\uc0ac ===\n\ubd84\ub958:\uc911\uad6d\uc5b4 \uba85\uc0ac\n*\uc5b4\uc6d0: l\u00e9v- + \u52b9\n*\ud788\ub77c\uac00\ub098:\u3053\u308c\u3092\u304f\u308f\u3093\n\ub85c",
+      "score": 0.051025390625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.087890625,
+     "0.9": 0.25170898437500006,
+     "0.99": 0.31169433593749996,
+     "0.999": 0.31769287109375
+    }
+   }
+  },
+  "L11N3081": {
+   "layer": 11,
+   "neuron": 3081,
+   "prompt": "<|n3|>\n",
+   "fw_max_a100": 3.3125,
+   "fw_max_this_gpu": 3.328125,
+   "d_trained_best_of_2": {
+    "best": 0.279296875,
+    "n": 2,
+    "n_empty": 0,
+    "mean": 0.199951171875,
+    "top": [
+     {
+      "text": "#include <stdio.h>\r\n#include <conio.h>\r\n\r\nint main() {\r\n    int age, grade;\r\n\r\n    // \u8f93\u5165\u5e74\u9f84\r\n    printf(\"\u8bf7\u8f93\u5165\u60a8\u7684\u5e74\u9f84: \");\r\n    scanf(\"%d\", &age);\r\n\r\n    // \u8ba1\u7b97\u5b66\u4e60\u6210\u7ee9\r\n    grade = 10 + (age",
+      "score": 0.279296875
+     },
+     {
+      "text": "=== \u00e9tymologie ===\neck\n\n=== zho ===\n \u043f\u0440\u0438\u0445\u043e\u0434\u0438\u0442\u0441\u044f, \u043f\u0440\u0438\u0448\u043b\u043e\u0441\u044c \n\ufffd\u044c\n\n=== zh ===\n\u60c5\u4e0d\u81ea\u7981\n# s'emp\u00eacher de, ne pouvoir s'emp\u00eacher de, ne pouvoir\n#* lang=za\n\n==== traductions ====\n* kon : gan, ka\ufffd",
+      "score": 0.12060546875
+     }
+    ],
+    "all": [
+     {
+      "text": "=== \u00e9tymologie ===\neck\n\n=== zho ===\n \u043f\u0440\u0438\u0445\u043e\u0434\u0438\u0442\u0441\u044f, \u043f\u0440\u0438\u0448\u043b\u043e\u0441\u044c \n\ufffd\u044c\n\n=== zh ===\n\u60c5\u4e0d\u81ea\u7981\n# s'emp\u00eacher de, ne pouvoir s'emp\u00eacher de, ne pouvoir\n#* lang=za\n\n==== traductions ====\n* kon : gan, ka\ufffd",
+      "score": 0.12060546875
+     },
+     {
+      "text": "#include <stdio.h>\r\n#include <conio.h>\r\n\r\nint main() {\r\n    int age, grade;\r\n\r\n    // \u8f93\u5165\u5e74\u9f84\r\n    printf(\"\u8bf7\u8f93\u5165\u60a8\u7684\u5e74\u9f84: \");\r\n    scanf(\"%d\", &age);\r\n\r\n    // \u8ba1\u7b97\u5b66\u4e60\u6210\u7ee9\r\n    grade = 10 + (age",
+      "score": 0.279296875
+     }
+    ],
+    "per_token_best": [
+     [
+      "#include",
+      -0.004486083984375
+     ],
+     [
+      " <",
+      -0.006317138671875
+     ],
+     [
+      "stdio",
+      -0.07470703125
+     ],
+     [
+      ".h",
+      0.052978515625
+     ],
+     [
+      ">",
+      -0.01202392578125
+     ],
+     [
+      "\r\n",
+      -0.0732421875
+     ],
+     [
+      "#include",
+      -0.034912109375
+     ],
+     [
+      " <",
+      -0.046142578125
+     ],
+     [
+      "con",
+      -0.0269775390625
+     ],
+     [
+      "io",
+      -0.01446533203125
+     ],
+     [
+      ".h",
+      -0.05859375
+     ],
+     [
+      ">",
+      -0.068359375
+     ],
+     [
+      "\r\n\r\n",
+      -0.044677734375
+     ],
+     [
+      "int",
+      -0.0732421875
+     ],
+     [
+      " main",
+      -0.00057220458984375
+     ],
+     [
+      "()",
+      -0.006439208984375
+     ],
+     [
+      " {",
+      0.033203125
+     ],
+     [
+      "\r\n",
+      0.0004596710205078125
+     ],
+     [
+      "   ",
+      0.0625
+     ],
+     [
+      " int",
+      0.01416015625
+     ],
+     [
+      " age",
+      -0.003448486328125
+     ],
+     [
+      ",",
+      0.056640625
+     ],
+     [
+      " grade",
+      0.037109375
+     ],
+     [
+      ";",
+      -0.0133056640625
+     ],
+     [
+      "\r\n\r\n",
+      0.0673828125
+     ],
+     [
+      "   ",
+      0.00958251953125
+     ],
+     [
+      " //",
+      0.2177734375
+     ],
+     [
+      " ",
+      -0.0167236328125
+     ],
+     [
+      "\u8f93\u5165",
+      0.171875
+     ],
+     [
+      "\u5e74\u9f84",
+      0.0128173828125
+     ],
+     [
+      "\r\n",
+      0.1123046875
+     ],
+     [
+      "   ",
+      0.279296875
+     ],
+     [
+      " printf",
+      0.1533203125
+     ],
+     [
+      "(\"",
+      0.043212890625
+     ],
+     [
+      "\u8bf7\u8f93\u5165",
+      0.138671875
+     ],
+     [
+      "\u60a8\u7684",
+      0.000186920166015625
+     ],
+     [
+      "\u5e74\u9f84",
+      0.00028228759765625
+     ],
+     [
+      ":",
+      0.06689453125
+     ],
+     [
+      " \");",
+      0.002410888671875
+     ],
+     [
+      "\r\n",
+      0.06591796875
+     ],
+     [
+      "   ",
+      0.11328125
+     ],
+     [
+      " scanf",
+      0.13671875
+     ],
+     [
+      "(\"%",
+      0.015869140625
+     ],
+     [
+      "d",
+      0.107421875
+     ],
+     [
+      "\",",
+      -0.057373046875
+     ],
+     [
+      " &",
+      0.11279296875
+     ],
+     [
+      "age",
+      -0.0078125
+     ],
+     [
+      ");",
+      0.04638671875
+     ],
+     [
+      "\r\n\r\n",
+      0.087890625
+     ],
+     [
+      "   ",
+      -0.03857421875
+     ],
+     [
+      " //",
+      0.1328125
+     ],
+     [
+      " ",
+      0.037353515625
+     ],
+     [
+      "\u8ba1\u7b97",
+      0.1953125
+     ],
+     [
+      "\u5b66\u4e60\u6210\u7ee9",
+      0.00244140625
+     ],
+     [
+      "\r\n",
+      0.0419921875
+     ],
+     [
+      "   ",
+      0.0186767578125
+     ],
+     [
+      " grade",
+      -0.0220947265625
+     ],
+     [
+      " =",
+      0.09228515625
+     ],
+     [
+      " ",
+      0.0167236328125
+     ],
+     [
+      "1",
+      0.00061798095703125
+     ],
+     [
+      "0",
+      0.0037689208984375
+     ],
+     [
+      " +",
+      -0.0087890625
+     ],
+     [
+      " (",
+      0.000335693359375
+     ],
+     [
+      "age",
+      0.0439453125
+     ]
+    ]
+   },
+   "a_untrained_best_of_4": {
+    "best": 0.2353515625,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.1793212890625,
+    "top": [
+     {
+      "text": "_IDENTIFICATION_\n Mi ONE X2 Android 11 32GB / Smartphone / Email / Synology NAS Server | Here und an anderen Orten\n 40000100518\nADobe\n\nTHIS_ID\nORIGINAL\n _TARGET_\n Mi ONE X2 Android 1",
+      "score": 0.2353515625
+     },
+     {
+      "text": "========\n# dicts.py\n# tests/test_dicts.py:28-81 \u7834\u58ca\u7684\u30c6\u30b9\u30c8\u30bf\u30b9\u30af\u3067\u5b9f\u52d9\u3092\u5909\u66f4\n\n===================\n\n# tests/test_dicts.py \u3067\u306f HUL_STATIC \u7b49\u3092\u5165\u308c\u3066\u3044\u308b\u7ffb\u8a33\u30b5\u30fc\u30d3\u30b9\u306b\u8aa4\u3063\u3066\u3044\u308b\u3068\u3044\u3046 butut test \u306b\u306a\u3063\u3066\u3044\u308b\u304c\u3001\u3053\u308c\u3092\u30c6\u30b9\u30c8\u3068\u3059\u308b\u3002\n\n#",
+      "score": 0.21484375
+     },
+     {
+      "text": "=== Pang-ngalan ===\nlegtangkaon\n# kadapan; tungkaho",
+      "score": 0.150390625
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " them",
+    "token_id": 1070,
+    "score": 0.056396484375,
+    "pos": 7
+   },
+   "b_untrained_best_of_4": {
+    "best": 0.1962890625,
+    "n": 4,
+    "n_empty": 0,
+    "mean": 0.135009765625,
+    "top": [
+     {
+      "text": "===Etymology 1===\nFrom *te\u014b + \u515a.\nMost Chinese dialects have recognizable cognate forms. See cognates.\n\n\n====Noun====\n#likeness; similarity\n\n====Synonyms====\n*\u5982\u540c\n\n===Inseparable particle|===\n\n====Particles====\n#",
+      "score": 0.1962890625
+     },
+     {
+      "text": "====Category:===\n\ub9bd\ub77c\ub2e4\u80de* directamente\u8bf7\u8f93\u5165\u4e2d\u6587\u8bcd*\n\n== \ubc18\uc751\ud615 ==\n\n=== \uba85\uc0ac ===\n* 1. \uc775\uc219\ud558\ub2e4 + \ub05d\ub9d0",
+      "score": 0.1484375
+     },
+     {
+      "text": "======\n\uff08\u3088\u3046\u305b\u304d\uff09\n#\u4ee3\u540d\u8a5e\uff1a\u884c\u308f\u308c\u308b\u3079\u304d\u3053\u3068\u3002\u76f8\u5f53\u3001\u305f\u3048\u305a\uff08\u4e2d\u56fd\u8a9e\u5fc5\u4e0d\u53ef\u5c11\u7684\u3053\u3068\u306f\u306a\u3042\u308b\u3002\u305d\u308c\u306f\u4e2d\u5b66\u306e\u7fd2\u554f\u306b\u304a\u3051\u308b\u82f1\u8a9e\u306e\u8981\u7fa9\u3057\u305a\u3089\u3001\u6b63\u3057\u3044\uff09\u3002\n\n========\n*\u3088\u3046\u305b\u304d\n\n\n========\n*\u73fe\u4ee3\u4e2d\u56fd\u8a9e: \u0627\u0644\u0625\u0646\u062c\u0644\u064a\u0632\u064a\u0629\n*:",
+      "score": 0.11767578125
+     },
+     {
+      "text": "======\nthumb\n\n======\nriendsn threadIdx\n\n\n======\n#\u5d07\u62dd\n#\u793c\u5100\u6b63\u3057\u3044\n\n======\n*\u793c\u5100\u6b63\u3057\u3044\u3001\u793c\u5100\u6b63\u5927\u3001\u793c\u5100\u6b63\u5802\u3001\u793c\u5100\u6b63\u5927\u3001\u793c\u5100\u6b63\u5802\u3001\u793c\u5100\u6b63\u5927\u3001\u793c\u5100\u6b63\u5802\u3001\u793c\u5100\u6b63\u5927\u3001\u793c\u5100\u6b63\u5802\u3001",
+      "score": 0.07763671875
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.133056640625,
+     "0.9": 0.18193359375,
+     "0.99": 0.194853515625,
+     "0.999": 0.1961455078125
+    }
+   }
+  }
+ },
+ "training_s": 14.943610668182373,
+ "eval_s": {
+  "d": 7.830441236495972,
+  "a": 4.73136568069458,
+  "b": 4.226991891860962
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.071734666824341,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.0660791397094727,
+    "where": "after step 1"
+   },
+   {
+    "ok": true,
+    "n_checked": 249,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 2.043550968170166,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       8,
+       2027
+      ],
+      "expected": 4.96875,
+      "got": 4.96875,
+      "equal": true
+     },
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.9375,
+      "got": 2.9375,
+      "equal": true
+     },
+     {
+      "neuron": [
+       11,
+       3081
+      ],
+      "expected": 3.328125,
+      "got": 3.328125,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "grid": {
+  "rows": "samples of neuron (prompt)",
+  "cols": "scored on neuron, ratio to its FineWeb max (this GPU)",
+  "neurons": [
+   "L8N2027",
+   "L9N5711",
+   "L10N4358",
+   "L11N3081"
+  ],
+  "mean_ratio": [
+   [
+    0.027122641509433963,
+    0.03910614525139665,
+    0.054355053191489366,
+    0.031983568075117375
+   ],
+   [
+    0.030955188679245283,
+    0.04347067039106145,
+    0.022273936170212765,
+    0.04151995305164319
+   ],
+   [
+    0.05090408805031446,
+    0.04809706703910614,
+    0.06981382978723405,
+    0.13732394366197181
+   ],
+   [
+    0.08402122641509434,
+    0.037098463687150834,
+    0.027676196808510637,
+    0.06007922535211268
+   ]
+  ],
+  "max_ratio": [
+   [
+    0.028498427672955975,
+    0.042946927374301676,
+    0.06515957446808511,
+    0.0357981220657277
+   ],
+   [
+    0.03419811320754717,
+    0.05027932960893855,
+    0.030086436170212765,
+    0.05457746478873239
+   ],
+   [
+    0.05778301886792453,
+    0.06564245810055866,
+    0.08643617021276596,
+    0.22065727699530516
+   ],
+   [
+    0.1391509433962264,
+    0.051675977653631286,
+    0.03108377659574468,
+    0.08392018779342723
+   ]
+  ],
+  "diag_by_mean": {
+   "column_max_on_diagonal": [
+    false,
+    false,
+    true,
+    false
+   ],
+   "row_max_on_diagonal": [
+    false,
+    true,
+    false,
+    false
+   ],
+   "diagonal": false
+  },
+  "diag_by_max": {
+   "column_max_on_diagonal": [
+    false,
+    false,
+    true,
+    false
+   ],
+   "row_max_on_diagonal": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "diagonal": false
+  }
+ },
+ "phase_s": 39.29570651054382,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

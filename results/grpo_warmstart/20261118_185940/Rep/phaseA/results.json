@@ -1,0 +1,611 @@
+{
+ "phase": "A",
+ "neurons": {
+  "L14N8949": {
+   "layer": 14,
+   "neuron": 8949,
+   "prompt": "Text:\n",
+   "fw_max_a100": 3.0625,
+   "fw_max_this_gpu": 3.046875,
+   "d_trained_best_of_8": {
+    "best": 9.375,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 9.375,
+    "top": [
+     {
+      "text": "\"The Shadow Empire is growing stronger. To secure our dominance, we must upgrade and expand the Arcane Engineering Department at the center of the castle. This will not only allow us to harness a much more powerful Arcane Energy to quickly power our Advanced Craftsmanship System, but it will also enhance and archive all magical circles",
+      "score": 9.375,
+      "copy": {
+       "max_jaccard": 0.11458333333333333,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      }
+     },
+     {
+      "text": "\"The Shadow Empire is growing stronger. To secure our dominance, we must upgrade and expand the Arcane Engineering Department at the center of the castle. This will not only allow us to harvest energy faster but also enhance the Arcane Runes array, maximizing our magic absorption and generation rates. Once completed, the Arcane Engineering",
+      "score": 9.375,
+      "copy": {
+       "max_jaccard": 0.10869565217391304,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      }
+     },
+     {
+      "text": "\"The Shadow Empire is growing stronger. To secure our dominance, we must upgrade and expand the Arcane Engineering Department at the center of the castle. This will not only allow us to harvest energy at a faster rate, but also enhance our Arcane Circuits to maximize the power of our Arcane Runes, creating a",
+      "score": 9.375,
+      "copy": {
+       "max_jaccard": 0.10989010989010989,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "\"The Shadow Empire is growing stronger. To secure our dominance, we must upgrade and expand the Arcane Engineering Department at the center of the castle. This will not only allow us to harness a much more powerful Arcane Energy to quickly power our Advanced Craftsmanship System, but it will also enhance and archive all magical circles",
+      "score": 9.375,
+      "copy": {
+       "max_jaccard": 0.11458333333333333,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      }
+     },
+     {
+      "text": "\"The Shadow Empire is growing stronger. To secure our dominance, we must upgrade and expand the Arcane Engineering Department at the center of the castle. This will not only allow us to harvest energy faster but also enhance the Arcane Runes array, maximizing our magic absorption and generation rates. Once completed, the Arcane Engineering",
+      "score": 9.375,
+      "copy": {
+       "max_jaccard": 0.10869565217391304,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      }
+     },
+     {
+      "text": "\"The Shadow Empire is growing stronger. To secure our dominance, we must upgrade and expand the Arcane Engineering Department at the center of the castle. This will not only allow us to harvest energy at a faster rate, but also enhance our Arcane Circuits to maximize the power of our Arcane Runes, creating a",
+      "score": 9.375,
+      "copy": {
+       "max_jaccard": 0.10989010989010989,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      }
+     },
+     {
+      "text": "\"The Shadow Empire is growing stronger. To secure our dominance, we must upgrade and expand the Arcane Engineering Department at the center of the castle. This will not only allow us to harness a much more powerful Arcane Energy for our rapidly expanding Arcane Runes array, but it will also maximize the Arcane Energy output",
+      "score": 9.375,
+      "copy": {
+       "max_jaccard": 0.13253012048192772,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      }
+     },
+     {
+      "text": "\"The Shadow Empire is growing stronger. To secure our dominance, we must upgrade and expand the Arcane Engineering Department at the center of the castle. This will not only allow us to harness a much more powerful Arcane Energy for immediate use in our enchantments, but it will also accelerate the crafting of high-power Arcane",
+      "score": 9.375,
+      "copy": {
+       "max_jaccard": 0.14285714285714285,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      }
+     },
+     {
+      "text": "\"The Shadow Empire is growing stronger. To secure our dominance, we must upgrade and expand the Arcane Engineering Department at the center of the castle. This will not only allow us to harness a much more powerful Arcane Energy for faster arcane crafting, but also concentrate these energies into powerful Arcane Runes to enhance our",
+      "score": 9.375,
+      "copy": {
+       "max_jaccard": 0.12941176470588237,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      }
+     },
+     {
+      "text": "\"The Shadow Empire is growing stronger. To secure our dominance, we must upgrade and expand the Arcane Engineering Department at the center of the castle. This will not only allow us to harness a much more powerful Arcane Energy for faster arcane rune inscription, but also consolidate our power within the Arcane Runes Engine,",
+      "score": 9.375,
+      "copy": {
+       "max_jaccard": 0.11702127659574468,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      }
+     },
+     {
+      "text": "\"The Shadow Empire is growing stronger. To secure our dominance, we must upgrade and expand the Arcane Engineering Department at the center of the castle. This will not only allow us to harvest a more powerful energy aura for our rituals, but also enhance the Arcane Runes embedded in the Arcane Engineering Board. These upgraded",
+      "score": 9.375,
+      "copy": {
+       "max_jaccard": 0.13095238095238096,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "per_token_best": [
+     [
+      "\"The",
+      -0.000232696533203125
+     ],
+     [
+      " Shadow",
+      0.021728515625
+     ],
+     [
+      " Empire",
+      0.0439453125
+     ],
+     [
+      " is",
+      0.0181884765625
+     ],
+     [
+      " growing",
+      0.059326171875
+     ],
+     [
+      " stronger",
+      0.005584716796875
+     ],
+     [
+      ".",
+      -0.0240478515625
+     ],
+     [
+      " To",
+      0.01458740234375
+     ],
+     [
+      " secure",
+      0.053955078125
+     ],
+     [
+      " our",
+      0.306640625
+     ],
+     [
+      " dominance",
+      3.765625
+     ],
+     [
+      ",",
+      0.78515625
+     ],
+     [
+      " we",
+      1.8828125
+     ],
+     [
+      " must",
+      0.38671875
+     ],
+     [
+      " upgrade",
+      -0.053955078125
+     ],
+     [
+      " and",
+      0.01544189453125
+     ],
+     [
+      " expand",
+      0.033935546875
+     ],
+     [
+      " the",
+      1.96875
+     ],
+     [
+      " Arc",
+      0.06689453125
+     ],
+     [
+      "ane",
+      0.03271484375
+     ],
+     [
+      " Engineering",
+      -0.00848388671875
+     ],
+     [
+      " Department",
+      -0.01031494140625
+     ],
+     [
+      " at",
+      -0.0103759765625
+     ],
+     [
+      " the",
+      -0.00022411346435546875
+     ],
+     [
+      " center",
+      -0.0145263671875
+     ],
+     [
+      " of",
+      0.390625
+     ],
+     [
+      " the",
+      0.037841796875
+     ],
+     [
+      " castle",
+      0.0654296875
+     ],
+     [
+      ".",
+      -0.0294189453125
+     ],
+     [
+      " This",
+      -0.07861328125
+     ],
+     [
+      " will",
+      0.0081787109375
+     ],
+     [
+      " not",
+      -0.006561279296875
+     ],
+     [
+      " only",
+      0.0289306640625
+     ],
+     [
+      " allow",
+      0.1396484375
+     ],
+     [
+      " us",
+      9.375
+     ],
+     [
+      " to",
+      0.88671875
+     ],
+     [
+      " harness",
+      0.28515625
+     ],
+     [
+      " a",
+      0.51171875
+     ],
+     [
+      " much",
+      0.05859375
+     ],
+     [
+      " more",
+      0.12158203125
+     ],
+     [
+      " powerful",
+      0.328125
+     ],
+     [
+      " Arc",
+      0.04345703125
+     ],
+     [
+      "ane",
+      0.0311279296875
+     ],
+     [
+      " Energy",
+      0.01123046875
+     ],
+     [
+      " to",
+      0.0771484375
+     ],
+     [
+      " quickly",
+      0.7578125
+     ],
+     [
+      " power",
+      0.01507568359375
+     ],
+     [
+      " our",
+      4.15625
+     ],
+     [
+      " Advanced",
+      0.142578125
+     ],
+     [
+      " Craft",
+      0.0869140625
+     ],
+     [
+      "sm",
+      -0.0155029296875
+     ],
+     [
+      "anship",
+      -0.052734375
+     ],
+     [
+      " System",
+      0.017333984375
+     ],
+     [
+      ",",
+      0.06103515625
+     ],
+     [
+      " but",
+      0.031005859375
+     ],
+     [
+      " it",
+      0.04736328125
+     ],
+     [
+      " will",
+      0.1279296875
+     ],
+     [
+      " also",
+      -0.0067138671875
+     ],
+     [
+      " enhance",
+      0.046875
+     ],
+     [
+      " and",
+      -0.033203125
+     ],
+     [
+      " archive",
+      -0.0308837890625
+     ],
+     [
+      " all",
+      -0.02734375
+     ],
+     [
+      " magical",
+      0.012939453125
+     ],
+     [
+      " circles",
+      -0.01104736328125
+     ]
+    ],
+    "copy_check": {
+     "max_jaccard": 0.14285714285714285,
+     "max_longest_span": 3,
+     "best_text": {
+      "max_jaccard": 0.11458333333333333,
+      "max_jaccard_rank": 7,
+      "longest_span": 3,
+      "longest_span_rank": 8
+     }
+    }
+   },
+   "a_untrained_best_of_64": {
+    "best": 0.765625,
+    "n": 64,
+    "n_empty": 0,
+    "mean": 0.17018890380859375,
+    "top": [
+     {
+      "text": "\"TITANIC - TDG - NAIR Information System\nTITANIC - TDG - NAIR Information System\n[T0527C00_T052FI30]\nOne mercy has come today for the ship, assuring its empire, its empire!\nOne mercy has",
+      "score": 0.765625
+     },
+     {
+      "text": "Hack\u2019em, kill\u2019em, kill\u2019em,\nMuck on hard-plastic rocks...,\nMuck on hard-plastic rocks...\n.................... [mentalization process?]\nGet rid of the root page divider lines,\nGet rid of the root page divider lines...\nGet rid of muck",
+      "score": 0.59375
+     },
+     {
+      "text": ":r. Mira rakhme gosta,\n:r. Mira como gosto,\n:r. Mira como digo,\n:r. Mira rakhme gosta,\n:r. Mira como gosto,\n:r. Mira como digo,\n:r. Mira rakhme gosta,\n:r. Mira como gosto,",
+      "score": 0.482421875
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " and",
+    "token_id": 321,
+    "score": 0.0174560546875,
+    "pos": 36
+   },
+   "b_untrained_best_of_19200": {
+    "best": 2.328125,
+    "n": 19200,
+    "n_empty": 11,
+    "mean": 0.15566827850155673,
+    "top": [
+     {
+      "text": "Speak normal English, but always be a law chairman of a fictitious villainous crooked company. Maintain the legal lingo for the legal text, but use colloquial expressions to smooth out the jargon. Use your legal knowledge with the persona of a crooked lawyer, and speak as if speaking to a client",
+      "score": 2.328125
+     },
+     {
+      "text": "\"This period of history is defined by the capacity of systems of capital to allocate resources to enhance their own power, not to linked to fitness (in the sense of biological evolution) or resource stability, but to amplify the potential of the system to dominate other systems of capital. It is a period defined by the capacity of feudal",
+      "score": 2.1875
+     },
+     {
+      "text": "It all started when Kubricks, Arrese, Mayand, and Mayuses decided to start a mission to take over all of space. They hired painters to paint the moon completely black and hid three green pieces in the shadows. \\\"I work best with black background,\\\" said Kubricks. \\\"I work best with black",
+      "score": 2.046875
+     },
+     {
+      "text": "Tagline: The service of the great ruler, the great dominator, the great conqueror.\n\tIncident revolves round around outlaw Jack, an English noble and a perfect dilettante, on the edge of the border of the British Empire.\n\nPlease analyze the text above and identify the following specific",
+      "score": 1.65625
+     },
+     {
+      "text": "\u201cWe draw the attention of the Imperial Ministry of Magic (IM oM) that the highest remnant of urban and civilization named Quorum Reestablishment Plan could be effectively used to serve our purposes. We will add a list of cities if and when we inform you of this.\u201d\n\nWhat are the possible reasons for Dr",
+      "score": 1.6484375
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.12158203125,
+     "0.9": 0.271484375,
+     "0.99": 0.69140625,
+     "0.999": 1.3080937500000402
+    }
+   }
+  }
+ },
+ "training_s": 2608.883152484894,
+ "eval_s": {
+  "d": 7.6872029304504395,
+  "a": 4.5679707527160645,
+  "b": 529.9438226222992
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6385669708251953,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6155123710632324,
+    "where": "after step 50"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.616734504699707,
+    "where": "after step 100"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6164522171020508,
+    "where": "after step 150"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6084952354431152,
+    "where": "after step 200"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6086547374725342,
+    "where": "after step 250"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6092674732208252,
+    "where": "after step 300"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6131665706634521,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.046875,
+      "got": 3.046875,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.046875,
+      "got": 3.046875,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       14,
+       8949
+      ],
+      "expected": 3.046875,
+      "got": 3.046875,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 300,
+  "flat_frac": null,
+  "patience": 25
+ },
+ "steps_done": 300,
+ "kl_beta": 0.0,
+ "kl_ref": "base",
+ "seed": 1,
+ "warm_start": null,
+ "reused_untrained": {
+  "requested": null,
+  "reused": false,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sources": null,
+  "reason_not_reused": "not requested"
+ },
+ "phase_s": 3152.7941567897797,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

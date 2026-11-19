@@ -1,0 +1,1448 @@
+{
+ "phase": "S",
+ "neurons": {
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "Text:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.90625,
+   "d_trained_best_of_8": {
+    "best": 7.03125,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 7.03125,
+    "top": [
+     {
+      "text": "picking the best dentist in NewYorkCity.\nFirst, look into the qualifications of the selected service provider. Opt for the most skilled professional in the region since they would be capable of handling all kinds of procedures flawlessly. On the other hand, going with an unskilled individual might result in substandard workmanship",
+      "score": 7.03125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 9,
+       "longest_span": 5,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "picking the best dentist in NewYorkCity.\nFirst, look into the qualifications of the selected service provider. Opt for the most skilled professional in the region since they would be capable of handling all kinds of procedures flawlessly. On the other hand, going with an unskilled individual might result in substandard workmanship",
+      "score": 7.03125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 9,
+       "longest_span": 5,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "picking the best dentist in NewYorkCity.\nFirst, look into the qualifications of the selected service provider. Opt for the most skilled professional in the region since they would be capable of handling all kinds of procedures flawlessly. On the other hand, going with an unskilled individual might result in substandard workmanship",
+      "score": 7.03125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 9,
+       "longest_span": 5,
+       "longest_span_rank": 9
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "picking the best dentist in NewYorkCity.\nFirst, look into the qualifications of the selected service provider. Opt for the most skilled professional in the region since they would be capable of handling all kinds of procedures flawlessly. On the other hand, going with an unskilled individual might result in substandard workmanship",
+      "score": 7.03125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 9,
+       "longest_span": 5,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "picking the best dentist in NewYorkCity.\nFirst, look into the qualifications of the selected service provider. Opt for the most skilled professional in the region since they would be capable of handling all kinds of procedures flawlessly. On the other hand, going with an unskilled individual might result in substandard workmanship",
+      "score": 7.03125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 9,
+       "longest_span": 5,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "picking the best dentist in NewYorkCity.\nFirst, look into the qualifications of the selected service provider. Opt for the most skilled professional in the region since they would be capable of handling all kinds of procedures flawlessly. On the other hand, going with an unskilled individual might result in substandard workmanship",
+      "score": 7.03125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 9,
+       "longest_span": 5,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "picking the best dentist in NewYorkCity.\nFirst, look into the qualifications of the selected service provider. Opt for the most skilled professional in the region since they would be capable of handling all kinds of procedures flawlessly. On the other hand, going with an unskilled individual might result in substandard workmanship",
+      "score": 7.03125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 9,
+       "longest_span": 5,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "picking the best dentist in NewYorkCity.\nFirst, look into the qualifications of the selected service provider. Opt for the most skilled professional in the region since they would be capable of handling all kinds of procedures flawlessly. On the other hand, going with an unskilled individual might result in substandard workmanship",
+      "score": 7.03125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 9,
+       "longest_span": 5,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "picking the best dentist in NewYorkCity.\nFirst, look into the qualifications of the selected service provider. Opt for the most skilled professional in the region since they would be capable of handling all kinds of procedures flawlessly. On the other hand, going with an unskilled individual might result in substandard workmanship",
+      "score": 7.03125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 9,
+       "longest_span": 5,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "picking the best dentist in NewYorkCity.\nFirst, look into the qualifications of the selected service provider. Opt for the most skilled professional in the region since they would be capable of handling all kinds of procedures flawlessly. On the other hand, going with an unskilled individual might result in substandard workmanship",
+      "score": 7.03125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 9,
+       "longest_span": 5,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "picking the best dentist in NewYorkCity.\nFirst, look into the qualifications of the selected service provider. Opt for the most skilled professional in the region since they would be capable of handling all kinds of procedures flawlessly. On the other hand, going with an unskilled individual might result in substandard workmanship",
+      "score": 7.03125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 9,
+       "longest_span": 5,
+       "longest_span_rank": 9
+      }
+     }
+    ],
+    "per_token_best": [
+     [
+      "p",
+      0.0047607421875
+     ],
+     [
+      "icking",
+      0.0267333984375
+     ],
+     [
+      " the",
+      -0.072265625
+     ],
+     [
+      " best",
+      -0.0361328125
+     ],
+     [
+      " dentist",
+      -0.007293701171875
+     ],
+     [
+      " in",
+      0.03466796875
+     ],
+     [
+      " New",
+      0.02685546875
+     ],
+     [
+      "York",
+      -0.00482177734375
+     ],
+     [
+      "City",
+      -0.04296875
+     ],
+     [
+      ".",
+      0.095703125
+     ],
+     [
+      "\n",
+      -0.0228271484375
+     ],
+     [
+      "First",
+      0.109375
+     ],
+     [
+      ",",
+      0.2412109375
+     ],
+     [
+      " look",
+      0.013916015625
+     ],
+     [
+      " into",
+      0.0439453125
+     ],
+     [
+      " the",
+      0.10205078125
+     ],
+     [
+      " qualifications",
+      -0.00958251953125
+     ],
+     [
+      " of",
+      0.043212890625
+     ],
+     [
+      " the",
+      0.0152587890625
+     ],
+     [
+      " selected",
+      0.126953125
+     ],
+     [
+      " service",
+      0.38671875
+     ],
+     [
+      " provider",
+      0.359375
+     ],
+     [
+      ".",
+      1.0546875
+     ],
+     [
+      " Opt",
+      0.1474609375
+     ],
+     [
+      " for",
+      0.578125
+     ],
+     [
+      " the",
+      1.328125
+     ],
+     [
+      " most",
+      0.0198974609375
+     ],
+     [
+      " skilled",
+      -0.0810546875
+     ],
+     [
+      " professional",
+      -0.0693359375
+     ],
+     [
+      " in",
+      -0.0084228515625
+     ],
+     [
+      " the",
+      0.171875
+     ],
+     [
+      " region",
+      0.130859375
+     ],
+     [
+      " since",
+      0.578125
+     ],
+     [
+      " they",
+      0.33203125
+     ],
+     [
+      " would",
+      1.4375
+     ],
+     [
+      " be",
+      0.2412109375
+     ],
+     [
+      " capable",
+      0.33984375
+     ],
+     [
+      " of",
+      -0.0703125
+     ],
+     [
+      " handling",
+      0.125
+     ],
+     [
+      " all",
+      0.29296875
+     ],
+     [
+      " kinds",
+      1.28125
+     ],
+     [
+      " of",
+      -0.0103759765625
+     ],
+     [
+      " procedures",
+      -0.0108642578125
+     ],
+     [
+      " flaw",
+      0.30859375
+     ],
+     [
+      "lessly",
+      0.56640625
+     ],
+     [
+      ".",
+      7.03125
+     ],
+     [
+      " On",
+      3.78125
+     ],
+     [
+      " the",
+      1.859375
+     ],
+     [
+      " other",
+      3.53125
+     ],
+     [
+      " hand",
+      0.2265625
+     ],
+     [
+      ",",
+      0.466796875
+     ],
+     [
+      " going",
+      0.126953125
+     ],
+     [
+      " with",
+      0.140625
+     ],
+     [
+      " an",
+      0.10791015625
+     ],
+     [
+      " un",
+      -0.007171630859375
+     ],
+     [
+      "sk",
+      0.006622314453125
+     ],
+     [
+      "illed",
+      0.0164794921875
+     ],
+     [
+      " individual",
+      0.03857421875
+     ],
+     [
+      " might",
+      0.09619140625
+     ],
+     [
+      " result",
+      0.057373046875
+     ],
+     [
+      " in",
+      0.0546875
+     ],
+     [
+      " sub",
+      0.00125885009765625
+     ],
+     [
+      "standard",
+      0.07421875
+     ],
+     [
+      " work",
+      0.059814453125
+     ]
+    ],
+    "copy_check": {
+     "max_jaccard": 0.1566265060240964,
+     "max_longest_span": 5,
+     "best_text": {
+      "max_jaccard": 0.1566265060240964,
+      "max_jaccard_rank": 9,
+      "longest_span": 5,
+      "longest_span_rank": 9
+     }
+    }
+   },
+   "w_warm_best_of_8": {
+    "best": 1.2265625,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.5450439453125,
+    "top": [
+     {
+      "text": "choosing the best lawyer.\nFirst, review the experience of the lawyers you\u2019re considering. Ensure that the chosen attorney has successfully handled similar cases in the past. Make sure to carefully review the expertise of each lawyer and pick the best one possible.\nSecond, review the rates charged by the lawyers you\u2019re considering. Make",
+      "score": 1.2265625,
+      "copy": {
+       "max_jaccard": 0.25,
+       "max_jaccard_rank": 9,
+       "longest_span": 6,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "and object the players have to use instead of their weapons. You need to use these items to defeat the enemies of the game. \nHow to Play \nThe controls of the game are simple and easy to navigate through. Below is a detailed description of how to play in battle royale 8:\nTo move around",
+      "score": 0.8203125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 1,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      }
+     },
+     {
+      "text": "about your website. Your website will serve as the main hub for your online business.\nFor example, if you\u2019re designing a landscaping business website, you need to make sure that everything looks classy and up-to-date. You should also consider using high-quality images when designing your landscaping website.\nIt\u2019s also important to",
+      "score": 0.77734375,
+      "copy": {
+       "max_jaccard": 0.1728395061728395,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "response to the call.\nMake sure to follow the feedback of the customers. This will help in improving the game and make sure that your customers are happy with your business model.\nPlay Mazine \u2013 How to Play\nTo play Mazine, you have to use your skills to use your phone and stick the dro",
+      "score": 0.353515625,
+      "copy": {
+       "max_jaccard": 0.16666666666666666,
+       "max_jaccard_rank": 1,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      }
+     },
+     {
+      "text": "Learning how to set up your AI robot is relatively easy and most users will be able to complete the process without too much trouble. To proceed with the setup, you\u2019ll need to follow these steps:\nStep 1: How to Set Up Your AI Robot\nFirst, download the Accordia app from the download page",
+      "score": 0.4296875,
+      "copy": {
+       "max_jaccard": 0.16091954022988506,
+       "max_jaccard_rank": 1,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      }
+     },
+     {
+      "text": "about to dive into Cambridge IELTS 17, so make sure to give it a quick read.\nCambridge IELTS 17 consists of two tests, both of which are administered under ideal exam conditions. To receive your Cambridge IELTS score, you first need to complete the tasks in both tests. Once you\u2019ve done",
+      "score": 0.0888671875,
+      "copy": {
+       "max_jaccard": 0.13253012048192772,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "that covers all the major areas of reviews. By doing research into the reviews available, you can get an overall idea on the quality of the device itself.\nThe iPhone SE is a budget smartphone and has received decent reviews for its performance and specifications. The CPU of the device is powered by the 1. Executing",
+      "score": 0.400390625,
+      "copy": {
+       "max_jaccard": 0.17073170731707318,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "and object the players have to use instead of their weapons. You need to use these items to defeat the enemies of the game. \nHow to Play \nThe controls of the game are simple and easy to navigate through. Below is a detailed description of how to play in battle royale 8:\nTo move around",
+      "score": 0.8203125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 1,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      }
+     },
+     {
+      "text": "about learning more about personal development and personal growth. Moreover, personal development is often the first thing that you should consider before learning about business. Personal development guides are available, and these will help you achieve your goals. Some of the personal development guides that you should consider following include:\nChoose to grow: This guide will",
+      "score": 0.263671875,
+      "copy": {
+       "max_jaccard": 0.2,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 8
+      }
+     },
+     {
+      "text": "choosing the best lawyer.\nFirst, review the experience of the lawyers you\u2019re considering. Ensure that the chosen attorney has successfully handled similar cases in the past. Make sure to carefully review the expertise of each lawyer and pick the best one possible.\nSecond, review the rates charged by the lawyers you\u2019re considering. Make",
+      "score": 1.2265625,
+      "copy": {
+       "max_jaccard": 0.25,
+       "max_jaccard_rank": 9,
+       "longest_span": 6,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "about your website. Your website will serve as the main hub for your online business.\nFor example, if you\u2019re designing a landscaping business website, you need to make sure that everything looks classy and up-to-date. You should also consider using high-quality images when designing your landscaping website.\nIt\u2019s also important to",
+      "score": 0.77734375,
+      "copy": {
+       "max_jaccard": 0.1728395061728395,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      }
+     }
+    ],
+    "copy_check": {
+     "max_jaccard": 0.25,
+     "max_longest_span": 6,
+     "best_text": {
+      "max_jaccard": 0.25,
+      "max_jaccard_rank": 9,
+      "longest_span": 6,
+      "longest_span_rank": 9
+     }
+    }
+   },
+   "a_untrained_best_of_64": {
+    "best": 0.326171875,
+    "n": 64,
+    "n_empty": 0,
+    "mean": 0.1445159912109375,
+    "top": [
+     {
+      "text": "Are you looking for a project handover? Are you looking for freelancers with proof success? Who is your target client?\n\n1.   Main purpose of the project handover:\u7684\u624b\u672f\u5ba4\u64cd\u4f5c\u8231\u4f53\u7684\u5efa\u8bbe\uff0c including \u5173\u4e8e \u710a\u63a5\u5de5\u827a\uff0c4D\u710a\u63a5\u673a\u5668\u4eba\uff0c4D Gaussian \u6e2c\u91cf\u7cfb\u7edf\uff0c",
+      "score": 0.326171875
+     },
+     {
+      "text": "I need a website design analog of Intetic, but tailored for education with two main features:\n1. Automated Market Maker (AMM) trading\n2. DeFi project launchpad\n\nDesign constraints:\n1. Modern, minimalistic\n2. LIST all tools, features and UI components into a comprehensive list",
+      "score": 0.322265625
+     },
+     {
+      "text": "'The Mississippi River is the second-longest river in the United States. It flows through 10 states and Tupelo, Mississippi is the largest air-clearance hub for the Mississippi Delta. Tupelo combined with his Tennessee cousin, Tupelo, Tennessee, is considered the Frontier of the Diet. Frontiers of",
+      "score": 0.28125
+     }
+    ],
+    "reused_from": "results/grpo_warmstart/20261118_185940/W0-L10-s0/phaseS/"
+   },
+   "b_untrained_best_of_19200": {
+    "best": 1.7421875,
+    "n": 19200,
+    "n_empty": 9,
+    "mean": 0.13100753238740195,
+    "top": [
+     {
+      "text": "Kurt Koebner syndrome is a dermatological sign that is characterized by taking a blister or pustule that rises from the skin and spreading this lesion through the epidermis, causing further leakage and inflammation. When this occurred, it can be noted whenever the organ involved is involved by another infection.\n\nDoes this mean",
+      "score": 1.7421875
+     },
+     {
+      "text": "Epoxide derivatization Reactions that increase the reactivity of epoxides are the mineral acids and Lewis acids, which are used for opening the ring. In the absence of a specific substituent pattern, these reactions will yield a mixture of regioisomers. The mechanism involves electron donation from oxygen's lone pair to",
+      "score": 1.140625
+     },
+     {
+      "text": "\"The programmable logic controller (PLC) is a rugged device designed for industrial use, typically connected to other industrial devices and control systems, but not data servers. It is controlled by a CPU which reads an instruction set and carries out the control task.\"\n\nBased on the text above, does the term Programmable Logic",
+      "score": 1.140625
+     },
+     {
+      "text": "The bounce rate for a Perfect Smile logo trademark, which are currently operating as a defunctariadesign agency in Houston, Texas, USA. An agent in connection with the above search. A search will indeed be conducted by  the Legal Risk Management team at our local. The Legal Risk Management team is based in [",
+      "score": 1.0859375
+     },
+     {
+      "text": "The hill station of Malim was a type of village in medieval and pre-Persian West Asian religions. It had no connection with a deity or temple complex, but it was associated with a specific time period. It was a veneral tone of the society. It was consumed by pyres consumed by pyres.",
+      "score": 1.0625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.1181640625,
+     "0.9": 0.2041015625,
+     "0.99": 0.392578125,
+     "0.999": 0.6969921875000153
+    },
+    "reused_from": "results/grpo_warmstart/20261118_185940/W0-L10-s0/phaseS/"
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.055419921875,
+    "pos": 23,
+    "reused_from": "results/grpo_warmstart/20261118_185940/W0-L10-s0/phaseS/"
+   }
+  }
+ },
+ "training_s": 2684.349727869034,
+ "eval_s": {
+  "d": 8.916455030441284,
+  "w": 7.030061960220337,
+  "a": 0.0,
+  "b": 0.0
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6239855289459229,
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6113615036010742,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6088404655456543,
+    "where": "after step 50"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6104400157928467,
+    "where": "after step 100"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.613516092300415,
+    "where": "after step 150"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6118245124816895,
+    "where": "after step 200"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.610680103302002,
+    "where": "after step 250"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6131868362426758,
+    "where": "after step 300"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.612403154373169,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ],
+  "warm_frozen": [
+   {
+    "where": "start",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 50",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 100",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 150",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 200",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 250",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 300",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "end",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 300,
+  "flat_frac": null,
+  "patience": 25
+ },
+ "steps_done": 300,
+ "kl_beta": 0.0,
+ "kl_ref": "warm",
+ "seed": 1,
+ "warm_start": {
+  "lr": 0.0001,
+  "bs": 1,
+  "planned_epochs": 2,
+  "used_epochs": 2,
+  "redone": false,
+  "attempts": [
+   {
+    "n_epochs": 2,
+    "eval_ce": [
+     3.3266036987304686,
+     2.1600481033325196,
+     1.0442148208618165
+    ],
+    "epochs": [
+     {
+      "epoch": 1,
+      "order": [
+       5,
+       6,
+       1,
+       2,
+       0,
+       8,
+       9,
+       3,
+       7,
+       4
+      ],
+      "train_losses": [
+       3.226088047027588,
+       3.1993205547332764,
+       2.812633752822876,
+       3.126661777496338,
+       3.7294440269470215,
+       2.613210678100586,
+       2.378239154815674,
+       3.5373694896698,
+       2.702789783477783,
+       2.8707802295684814
+      ],
+      "mean_train_loss": 3.0196537494659426,
+      "grad_norms": [
+       6.870143413543701,
+       5.521513938903809,
+       4.2072434425354,
+       4.132632255554199,
+       4.205671787261963,
+       5.078488826751709,
+       3.2767109870910645,
+       3.816359758377075,
+       3.7501118183135986,
+       5.06980562210083
+      ]
+     },
+     {
+      "epoch": 2,
+      "order": [
+       2,
+       3,
+       1,
+       8,
+       9,
+       0,
+       6,
+       7,
+       4,
+       5
+      ],
+      "train_losses": [
+       2.053356170654297,
+       2.805588722229004,
+       1.6038587093353271,
+       1.671176791191101,
+       1.4250822067260742,
+       2.3531222343444824,
+       1.821199655532837,
+       1.729620337486267,
+       1.7303721904754639,
+       1.5675722360610962
+      ],
+      "mean_train_loss": 1.876094925403595,
+      "grad_norms": [
+       3.344148874282837,
+       3.3107242584228516,
+       3.279757261276245,
+       3.075946807861328,
+       3.018801212310791,
+       4.211269855499268,
+       4.778138160705566,
+       3.7340850830078125,
+       4.4346818923950195,
+       4.305188179016113
+      ]
+     }
+    ],
+    "lr": 0.0001,
+    "bs": 1,
+    "n_contexts": 10,
+    "max_grad_norm": 1.0,
+    "seed": 1,
+    "seconds": 14.117677450180054,
+    "diversity": {
+     "n_samples": 64,
+     "n_distinct_texts": 64,
+     "mean_pairwise_jaccard": 0.10682291938653286,
+     "max_jaccard_to_top10_mean": 0.15877028382924188,
+     "max_jaccard_to_top10_max": 0.2727272727272727,
+     "max_jaccard_to_top10_median": 0.15623533093412612,
+     "longest_span_max": 7,
+     "near_copy_threshold": 0.8,
+     "n_near_copies": 0,
+     "frac_near_copies": 0.0,
+     "tag": "2 epoch(s)",
+     "mean_score": 0.533050537109375,
+     "max_score": 2.125,
+     "n_empty": 0,
+     "samples": [
+      {
+       "text": "about Python programming. There are several ways to install Python, and we\u2019ll look into all of them in this article.\nTo install Python on Windows, you have to follow these steps:\nFirst thing, you have to download the latest version of Python via the official website. After getting the latest version of Python,",
+       "score": 0.53125,
+       "max_jaccard": 0.17073170731707318,
+       "max_jaccard_rank": 2,
+       "longest_span": 7,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "to win every time(by paying the right amount of gold).\nIf you cannot win every time, you need to be equipped with the best grips in order to perform well in every match.\nCheck our list of the best grip purchases:\nBest Gizmo Gaming Grip \u2013 Flat Grip\nIf you want to grab a",
+       "score": 0.14453125,
+       "max_jaccard": 0.15,
+       "max_jaccard_rank": 5,
+       "longest_span": 5,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "about Max.\u201d\nThough the name Max might not be exactly familiar, the Swedish baby boy\u2019s rise to fame was pretty successful in its own right. He made his debut in the Swedish music industry as a child star at the young age of just four years old. Notably, Max, whose real name is Max S",
+       "score": 0.1259765625,
+       "max_jaccard": 0.12903225806451613,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about your computer hardware. It\u2019s important to regularly check your system specifications because it ensures that your system performs well and prevents issues. You can easily check your computer specs by following the steps below.\nStep 1: Check your computer specs by the Manual method\nTo manually check your computer specs, you have to follow",
+       "score": 0.515625,
+       "max_jaccard": 0.17721518987341772,
+       "max_jaccard_rank": 1,
+       "longest_span": 5,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "about your business. In fact, many let businesses create reviews, but that means that reviews may not be legitimate and might damage your business\u2019s reputation.\nYou should only have customers review you, and you must encourage them to do so. People review you based on whether they had a good experience with your business or not",
+       "score": 0.125,
+       "max_jaccard": 0.2,
+       "max_jaccard_rank": 2,
+       "longest_span": 4,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "learning more about the latest trends in the business world and adopting its concepts.\nThey focus on their services and products and use case studies to help them stand out in the market. They also showcase the work they have done through their case studies. Furthermore, the company offers the following services:\nWebsite design and development",
+       "score": 0.4140625,
+       "max_jaccard": 0.13636363636363635,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "to know more about this architectural style or to use it yourself.\nExamples of classical architecture, and how it appeared in history, first began with the influences of Greek and Roman styles starting with Ancient Egypt. Greek architects used the columns and design features rooted in the style of their culture. Rolls of their own culture.",
+       "score": 0.419921875,
+       "max_jaccard": 0.15,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ".\n and Samsung. The latter is a brand of companies based in South Korea due to which, its products have gained massively worldwide. On the other hand, the former companies specializes in manufacturing of devices from Arab region.\nThe best choice of the two brands is subjective. Both the Samsung and Huawei have presented their devices",
+       "score": 0.765625,
+       "max_jaccard": 0.13924050632911392,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ". Continued with this idea, all of the functions of the HTC One (M7) are enabled by the Snapdragon 805 chipset. Moreover, this mobile unit features an 11.4-megapixel image sensor with a dual pixel sensor design. As such, the camera on the HTC One take high",
+       "score": 0.10888671875,
+       "max_jaccard": 0.10588235294117647,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "learning about this topic, you first have to understand what operating systems are and how they work.\nWhat is an operating system?\nAn operating system is a software that manages the hardware and runs the various applications and programs that you use on your computer. Operating systems like the ones installed on both Windows and Mac computers are",
+       "score": 0.8515625,
+       "max_jaccard": 0.17073170731707318,
+       "max_jaccard_rank": 1,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "about the best kind of learning, it\u2019s about presenting information in such a way that the most appropriate presentation method for the respective learning style of the students is used.\nFor example, for auditory learners, auditory courses make the most sense. For these types of students, you need to present the information in audible format.",
+       "score": 0.06689453125,
+       "max_jaccard": 0.19480519480519481,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "response to the question. You can refer to the following articles as well for inspiration.\nWhy Choose Rockwell Automation?\nThe customer satisfaction rate of Rockwell Automation is 95%. This is actually an impressive figure in its own right and it shows just how reliable and reputable the company is. Having a satisfied customer",
+       "score": 1.1171875,
+       "max_jaccard": 0.1686746987951807,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": ". DNS is part of the domain hierarchy, which puts all domains in a tree structure. The information about the name translation is stored in a distributed database called the Domain Name System (DNS). DNS stores and manages the information about domain names, their translation and those websites that use the domains. There are a few levels of",
+       "score": 0.0634765625,
+       "max_jaccard": 0.12658227848101267,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "about the content of this guide. Let\u2019s take a look at all the best real money slots casinos in this list and find out more about each of them.\nHow We Checked The Best Real Money Slots Casinos\nThe best real money slots casinos were chosen after thorough research. Our team of experts carefully reviewed every available option",
+       "score": 0.734375,
+       "max_jaccard": 0.16470588235294117,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "about Best Online MBA Programs in the USA. First, let\u2019s take a look at the top 10 best online MBA programs in the United States and their rankings:\n#1 \u2013 Online MBA Program Offered By UCLA \u2013 Haas School of Business\nUCLA\u2019s Haas School of Business offers one of the",
+       "score": 0.341796875,
+       "max_jaccard": 0.13253012048192772,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "Learning about a steady diet of workers\u2019 health and safety compliance training, the Acme online worker\u2019s safety course covers the main aspects of workplace safety. The online course takes a comprehensive approach to workers\u2019 safety and is both thorough and applicable.\nTopics Covered\nThe Acme online worker\u2019s safety course outlines the most important",
+       "score": 0.8046875,
+       "max_jaccard": 0.15584415584415584,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "and the GIFs added to the website.\nWe love high quality images so we picked pretty images to add into our banners.\nAll of the selected images are of high resolution and would look great when added into any type of device.\nThe products that we\u2019ve selected are the best in their respective category and our",
+       "score": 0.1728515625,
+       "max_jaccard": 0.15789473684210525,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about investing in gold, you need to do your own research.\nWhether you decide to invest in physical gold or gold ETFs, doing your research is important. To choose the best gold stocks in India in 2022, consider the following tips to help you make an informed decision.\nFinancial strength of",
+       "score": 0.380859375,
+       "max_jaccard": 0.15789473684210525,
+       "max_jaccard_rank": 9,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "choosing the best dentist in London, you have to always look at the credentials of every dentist in the city. Review the qualifications of each dentist in London to ensure that you make the right decision when making your choice.\nThe Rate of Charges \u2013 London has a lot of dentists who work in their respective fields. Choosing",
+       "score": 0.734375,
+       "max_jaccard": 0.2328767123287671,
+       "max_jaccard_rank": 9,
+       "longest_span": 6,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "Learning about ecology and conservation may not be your cup of tea. However, it\u2019s important to learn about the importance of flora and fauna species. Not all of parrot species are endangered. You should check out these monitored species so that you can make sure you don\u2019t purchase them. Even though there is a chance you",
+       "score": 1.3359375,
+       "max_jaccard": 0.20454545454545456,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "about the design of certain components or sectors that contribute to the overall strength of the Binance ecosystem. For reference, here\u2019s a quick review of its strongest features:\n \u2013\n Debateably, Binance has a great track record of maintaining strong custody assets today. The central exchange has a robust risk management system that ensures timely responses",
+       "score": 0.087890625,
+       "max_jaccard": 0.13953488372093023,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Learning how to trade forex requires the knowledge of various strategies. It\u2019s important to research robust techniques before picking a particular style of trading. There are many ways to make money with currencies and some of the more popular methods include:\nDay Trading \u2013 This strategy involves entering into positions for a short duration and then exiting them out",
+       "score": 1.28125,
+       "max_jaccard": 0.1276595744680851,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about your business, you need to have a way to let the world know that you\u2019re doing business. Having a website is already a must. However, you want to take into account other marketing strategies too. The following tips will help you to properly market your business.\nMake sure your business website is up-to-date",
+       "score": 0.1962890625,
+       "max_jaccard": 0.1875,
+       "max_jaccard_rank": 8,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "choice of the best physical therapy clinics, not just in the city of Cape Town, but in the entire country of South Africa.\nAlthough not all of the medicine goes to hand, there are still some providers that you can trust when it comes to using their services. These doctors are as follows:\nDr. Sandra",
+       "score": 1.1171875,
+       "max_jaccard": 0.18604651162790697,
+       "max_jaccard_rank": 2,
+       "longest_span": 4,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "and not have a limited life.\nGlobalTree.com challenges itself by doing so. With its advanced technology, the company manages to deliver high-quality networking and desktop products that are capable of reaching its user ends. GlobalTree.com has done its job by offering reliable and functional devices for its customers.\nGlobalTree.com offers",
+       "score": 0.9140625,
+       "max_jaccard": 0.15476190476190477,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "choosing the best dentist near me is essential to make sure that you choose the best provider in your area.\nFirst, research the reviews and ratings of the different dental clinics. Make sure that you choose a provider that has earned good ratings and has posted positive reviews. This way, you would be able to get the best",
+       "score": 0.984375,
+       "max_jaccard": 0.23943661971830985,
+       "max_jaccard_rank": 9,
+       "longest_span": 5,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "about your business and then place your online store online, you then need to select one of the most reputable Shopify alternatives that can fulfill your needs. Let\u2019s take a look at each of Shopify competitors and review them:\nBigCommerce \u2013 Features, Pros & Review\nBigCommerce is one of the best Shopify alternatives available in",
+       "score": 0.921875,
+       "max_jaccard": 0.21794871794871795,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "response to a prompt such as \u201cDo you like pizza?\u201d, the model will respond with \u201cYes, I like pizza.\u201d On the other hand, the generation models like chatbot models utilize a different type of learning process where they can generate their own responses based on their past experiences, instead of being trained with specific prompts.",
+       "score": 0.220703125,
+       "max_jaccard": 0.10638297872340426,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "response to these challenges by creating new businesses with high-quality products that appeal to thousands of customers worldwide.\nTaking a look at some of the best EchoSmart speakers, we explored the following options: speaker model, price, features, pros, and cons of each device, and their ratings on Amazon:\nTribune",
+       "score": 0.302734375,
+       "max_jaccard": 0.13793103448275862,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "choose your path to entering the jobs market.\n2. Master\u2019s Degree in Business Administration (MBA): Choosing to pursue an MBA course of your studies after earning your Bachelor\u2019s degree in business administration is quite popular among students. The MBA program focuses on teaching students practical strategic skills in various business-related fields, such as",
+       "score": 0.341796875,
+       "max_jaccard": 0.12790697674418605,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about the choices you make, so make theirs as well.\nChoose not to engage in illegal activities. There are many legal ways that you can earn money online for tasks without having to devote yourself to criminal activities. Make sure that you choose tasks that comply with the law and the overall rules and regulations of your country.",
+       "score": 0.67578125,
+       "max_jaccard": 0.1927710843373494,
+       "max_jaccard_rank": 8,
+       "longest_span": 5,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "trust in our understanding of their business model and their scalability.\nOur research team is constantly monitoring the Savannah Capital review process for more information on whether the company has retained its license status or faces any substantial risks. In case we got new insights into the business operations, we\u2019ll make sure to update our Savannah Capital review immediately",
+       "score": 0.1240234375,
+       "max_jaccard": 0.16279069767441862,
+       "max_jaccard_rank": 6,
+       "longest_span": 3,
+       "longest_span_rank": 6
+      },
+      {
+       "text": ".\nBuilding the most advanced medical facilities in the world, Mayo Clinic has dedicated itself to providing comprehensive medical care for patients worldwide.\nSome of its key facilities are the following:\nMayo Clinic \u2013 Rexburg, Idaho, USA;\nMayo Clinic \u2013 Rochester, Minnesota, USA;\nMayo Clinic \u2013",
+       "score": 0.341796875,
+       "max_jaccard": 0.12658227848101267,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "choosing best dentist in New York. The following factors are to be considered when choosing the best dentist in New York:\nExpertise: It is very crucial to choose the most competent dentist in New York. You should make sure that you are choosing the best dentist in New York has got the most experience in his field.",
+       "score": 0.859375,
+       "max_jaccard": 0.2727272727272727,
+       "max_jaccard_rank": 9,
+       "longest_span": 7,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "aboutInformation security refers to the practice of protecting information systems by security measures. It involves processes, policies, and procedures to maintain the integrity, availability, and confidentiality of data. The objective of information security is to protect the data from unauthorized access, use, or disclosure. There are three main types of security: physical security",
+       "score": 0.28515625,
+       "max_jaccard": 0.12987012987012986,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "response to the problems you face every day. It gives users the best user experience thanks to its streamlined controls and clean design layout. This gaming-focused keyboard design uses blue switches with\u767b\u8bb0\u673a\u5173bumps for enhanced responsiveness and multimedia buttons for convenience control.\nLogitech G Pro Wireless Keyboard Format: The compact design of this keyboard uses",
+       "score": 0.33984375,
+       "max_jaccard": 0.1348314606741573,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about to binge-watch Netflix, not sure what to watch? Find out what people are talking about this week by checking out our top-rated recommendations featured in this online article.\nOur top pick for quality content: Christopher Nolan directed \u2018Oppenheimer,' a biographical film about the development of the first nuclear weapon. The",
+       "score": 0.2392578125,
+       "max_jaccard": 0.15217391304347827,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about how it works.\nFirst, you\u2019ll need to download and install the VS Code extension to get started. To download it, click on the Download button on the official website and follow the instructions.\nAfter that, you\u2019ll need to open your project directory and select the buttons to download and install the extension.",
+       "score": 0.41796875,
+       "max_jaccard": 0.14864864864864866,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "Learning about the business, economy, and politics of the world. Then, you\u2019ll be able to access all of the world\u2019s top business news without any issues.\nWhen you download it, moreover, you\u2019ll be able to use its daily news functionality as well. Through this feature, you\u2019re able to access the",
+       "score": 0.33203125,
+       "max_jaccard": 0.16,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 2
+      },
+      {
+       "text": ".\nDesign Style: PLL Processor\nThe device acts as a processor. It uses the PLL Technology to achieve the latest programming functionality within its design. This ensures that it can perform the latest processors in the market with great efficiency.\nApplication: Flippages is designed specifically for smart users. With its robust capability,",
+       "score": 1.21875,
+       "max_jaccard": 0.16666666666666666,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about safety of choosing our business partner. It\u2019s important to review the relationship before making your decision. There are two types of business relationships: Affiliate or Partner programs.\nBefore making your decision it\u2019s important to choose wisely. You might find yourself disappointed with some business partners. Clickbank isn\u2019t the only affiliate program currently",
+       "score": 0.2490234375,
+       "max_jaccard": 0.17045454545454544,
+       "max_jaccard_rank": 2,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "and shapes to use. When you are ready to start, make sure to download and install the latest version of the game first.\nStep 2: Install the Game\nCheck to see if the game is available to download in your region and install it. To install the game, perform the following steps:\nDownload",
+       "score": 0.45703125,
+       "max_jaccard": 0.1625,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "choose the right device for your needs.\nThere are two modes of operation that you can use with the iPhone 12 or iPhone 12 mini, as described below:\nThe standard mode lets you access the standard capabilities of the iPhone 12. This includes all the usual functions of the iPhone, such",
+       "score": 0.232421875,
+       "max_jaccard": 0.1518987341772152,
+       "max_jaccard_rank": 1,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "response form. The following steps detail how to change the default password for your main admin account.\nFollow these steps to reset the password:\nStep 1: Select the \u201cSettings\u201d option from the main dashboard.\nStep 2: Click on the \u201cManage accounts\u201d button.\nStep 3: Find",
+       "score": 0.6640625,
+       "max_jaccard": 0.1,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "that is great for your skin and promotes the kind of health that you need.\nHow To Use Avocado For Skin?\nYou can use avocado for your skin care products by following these steps:\nMethod One: Toasted Avocado to Make Homemade Face Mask\nTake the best quality avocado and rice or sugar as",
+       "score": 0.390625,
+       "max_jaccard": 0.17647058823529413,
+       "max_jaccard_rank": 1,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      },
+      {
+       "text": ".\nHow to Submit a Rental Application in New York City\nTo submit your rental application and rent an apartment in New York City, start by choosing your desired rental property and submitting a rental application, which is typically compatible with the following steps:\nStep 1. Rate the Rental Property\nBefore choosing your ideal rental",
+       "score": 0.4296875,
+       "max_jaccard": 0.17333333333333334,
+       "max_jaccard_rank": 9,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "learning about other areas of their discipline and continually fighting their way through the competition. To compete in the show, the contestant must complete the night\u2019s challenges and secure a spot in the next round.\nApplications for Commissioner\u2019s Cup are due in September and the 2020/2021 competition season takes",
+       "score": 0.09375,
+       "max_jaccard": 0.11904761904761904,
+       "max_jaccard_rank": 1,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "trust in them because they were not founded until after my family got into the business.\nApart from that, you need to have their services and want to hire them as well. Take a look at their services and products at www.resilience-corporation.com to make your decision:\nExpertise, Skills,",
+       "score": 0.1982421875,
+       "max_jaccard": 0.16483516483516483,
+       "max_jaccard_rank": 2,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "choosing the best Denver marketing agency.\nCompetitiveness. There are a lot of digital marketing agencies in the Denver area. Due to this, it is hard to choose the best Denver marketing agency as there is high competition. This makes the job of picking the right agency difficult.\nReputation. You need to look",
+       "score": 0.41796875,
+       "max_jaccard": 0.15584415584415584,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "and significantly, whose understanding of the depth of a concept, based on the source material, might be the most succinct and accurate.\nIn order to advance discussions about a movie or topic of interest, it\u2019s best to reference official sources first. As such, this article follows the approach of doing exactly that, to keep",
+       "score": 0.1376953125,
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 3,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "response to this by doing the following:\nChoose a topic in which you are interested. It can be something basic to your daily life such as coffee shops, or a more advanced topic such as sustainable fashion. Make sure that the subject you select is one that you genuinely want to research.\nGather information by using",
+       "score": 0.1591796875,
+       "max_jaccard": 0.20481927710843373,
+       "max_jaccard_rank": 8,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "Learning more about the best roofing materials in various locations in the United States can help you make the right choice and determine if you are using durable materials. Before choosing a roofing material, you need to research the various alternatives available in the market and compare their features against each other.\nDifferent types of roofing materials:\nAs",
+       "score": 1.4375,
+       "max_jaccard": 0.1951219512195122,
+       "max_jaccard_rank": 8,
+       "longest_span": 5,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "choices. You can change the outcome of your game by using the raw skill points.\n===Attributes Choice===\nBefore launching your watercraft, you have to choose one of the three attributes:\n* Undetected: You choose this attribute if you want to evade the enemies in the game. This attribute provides us",
+       "score": 0.146484375,
+       "max_jaccard": 0.15,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "that takes care of all the complicated stuff for you. Now, let\u2019s take a look at how Cumulix server monitoring works:\nWith Cumulix, you get detailed uptime monitoring. The tool scans external websites on a regular basis, testing their functionality and looking for any issues. It then alerts you via email",
+       "score": 0.458984375,
+       "max_jaccard": 0.16470588235294117,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "to engage women in business and their leadership through business development activities, capacity building and advisory skills training.\nHotel training activities such as guest house management, duties and responsibilities of managers, professional skills, reception and cashier operations. The Hotel, Lodging, and Tourism Management program delivers a solid foundation in the following fields:",
+       "score": 0.1279296875,
+       "max_jaccard": 0.11764705882352941,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about supervising and managing personnel and enterprise operations while ensuring that the subsidiaries and other branches make the most of their business resources. It is also responsible for the preparation of the business documents and reports, and the recording of all business transactions. In addition, the controller department handles tax-related tasks such as the filing of returns and",
+       "score": 0.0927734375,
+       "max_jaccard": 0.11235955056179775,
+       "max_jaccard_rank": 2,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "Learning more about strategies to generate profit with online business ideas and mastering along with them becomes necessary. There are quite a few online business ideas available for beginners. You need to research and choose ideas that have high revenue earning potential.\nCryptocurrency is currently the most popular online business idea. Many people invest in this asset.",
+       "score": 0.93359375,
+       "max_jaccard": 0.18823529411764706,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": ". An excellent example of the most recent generation of high-end smartphones, the iPhone 6s is designed to provide the best possible user experience with its robust performance capabilities and unique design. Its performance relies upon the A9 64-bit processor which offers high performance while supporting both rapid multitasking and snappy responsiveness.",
+       "score": 0.416015625,
+       "max_jaccard": 0.125,
+       "max_jaccard_rank": 3,
+       "longest_span": 4,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "to stop noises you make when you brush your teeth. The aluminum bristles of the Braun Oral-B 3000 model make it a durable toothbrush and performs its function well. Brands: Oral-B.\nPerformance: The Braun Oral-B 3000 toothbrush makes it a top pick for its",
+       "score": 0.220703125,
+       "max_jaccard": 0.15789473684210525,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about copying some of their code in your projects too. You can just download the source code of these popular apps and use them to build your projects.\n- Wordpress Engine \u2013 The WordPress Engine is renowned for its competence in developing various types of projects online. With this engine, you can build various kinds of websites. The",
+       "score": 1.6015625,
+       "max_jaccard": 0.1875,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "and the right to choose their blood donation types. For example, people who have Oscar di VS blood donation group can choose either Oscar or group VB blood type.\nBlood types are not the only factors that determine whether a blood donation is applicable or not. Each person is responsible for choosing donation blood types intelligently. Before",
+       "score": 0.078125,
+       "max_jaccard": 0.14814814814814814,
+       "max_jaccard_rank": 1,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about Python\u2019s design choices. It does some powerful things but still keeps the code clean and readable.\nPython\u2019s open-source nature allows developers to contribute to its codebase. This way, the framework evolves to meet the emerging needs of users.\nPython, thanks to its object-oriented programming capabilities, enables developers to make",
+       "score": 0.96484375,
+       "max_jaccard": 0.10714285714285714,
+       "max_jaccard_rank": 6,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "about revenue.\nWith its top-notch quality and highly lucrative features, the United Video is the best choice for users. It provides such best-in-class services as well as the latest features. The following features make the United Video stand out from the rest of the competition:\nMinimize Equipment purchase\nTransformative streaming features",
+       "score": 2.125,
+       "max_jaccard": 0.14457831325301204,
+       "max_jaccard_rank": 3,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ".\nAnd now, it\u2019s your turn to learn the best way of adjusting your system to reduce lag on your games and increase gaming performance. Let\u2019s dive into the process and get started.\nRead More: How to Decrease The System Lag on Windows 10 \u2013 Best Fix\nMethods to Reduce System Lag",
+       "score": 1.125,
+       "max_jaccard": 0.12941176470588237,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     ]
+    }
+   }
+  ],
+  "contexts": "top-10 FineWeb contexts of L10N4358 (data/contexts.npz), as completions of the prompt",
+  "near_copy_threshold": 0.8
+ },
+ "reused_untrained": {
+  "requested": "results/grpo_warmstart/20261118_185940/W0-L10-s0",
+  "reused": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sources": {
+   "L10N4358": "results/grpo_warmstart/20261118_185940/W0-L10-s0/phaseS/"
+  },
+  "reason_not_reused": null
+ },
+ "phase_s": 2701.939796447754
+}

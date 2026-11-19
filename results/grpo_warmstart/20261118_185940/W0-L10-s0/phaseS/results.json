@@ -1,0 +1,1451 @@
+{
+ "phase": "S",
+ "neurons": {
+  "L10N4358": {
+   "layer": 10,
+   "neuron": 4358,
+   "prompt": "Text:\n",
+   "fw_max_a100": 2.921875,
+   "fw_max_this_gpu": 2.90625,
+   "d_trained_best_of_8": {
+    "best": 7.3125,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 7.3125,
+    "top": [
+     {
+      "text": ".\nWith this type of device, you won\u2019t have to worry about your security as it ensures top-notch protection against threats. Thanks to this model, you\u2019ll be able to take advantage of its efficient capability since it promptly safeguards your system against malware without effort. This security solution will therefore enable you to rely on its",
+      "score": 7.3125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": ".\nWith this type of device, you won\u2019t have to worry about your security as it ensures top-notch protection against threats. Thanks to this model, you\u2019ll be able to take advantage of its efficient capability since it promptly safeguards your system against malware without effort. This security solution will therefore enable you to rely on its",
+      "score": 7.3125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": ".\nWith this type of device, you won\u2019t have to worry about your security as it ensures top-notch protection against threats. Thanks to this model, you\u2019ll be able to take advantage of its efficient capability since it promptly safeguards your system against malware without effort. This security solution will therefore enable you to rely on its",
+      "score": 7.3125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": ".\nWith this type of device, you won\u2019t have to worry about your security as it ensures top-notch protection against threats. Thanks to this model, you\u2019ll be able to take advantage of its efficient capability since it promptly safeguards your system against malware without effort. This security solution will therefore enable you to rely on its",
+      "score": 7.3125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": ".\nWith this type of device, you won\u2019t have to worry about your security as it ensures top-notch protection against threats. Thanks to this model, you\u2019ll be able to take advantage of its efficient capability since it promptly safeguards your system against malware without effort. This security solution will therefore enable you to rely on its",
+      "score": 7.3125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": ".\nWith this type of device, you won\u2019t have to worry about your security as it ensures top-notch protection against threats. Thanks to this model, you\u2019ll be able to take advantage of its efficient capability since it promptly safeguards your system against malware without effort. This security solution will therefore enable you to rely on its",
+      "score": 7.3125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": ".\nWith this type of device, you won\u2019t have to worry about your security as it ensures top-notch protection against threats. Thanks to this model, you\u2019ll be able to take advantage of its efficient capability since it promptly safeguards your system against malware without effort. This security solution will therefore enable you to rely on its",
+      "score": 7.3125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": ".\nWith this type of device, you won\u2019t have to worry about your security as it ensures top-notch protection against threats. Thanks to this model, you\u2019ll be able to take advantage of its efficient capability since it promptly safeguards your system against malware without effort. This security solution will therefore enable you to rely on its",
+      "score": 7.3125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": ".\nWith this type of device, you won\u2019t have to worry about your security as it ensures top-notch protection against threats. Thanks to this model, you\u2019ll be able to take advantage of its efficient capability since it promptly safeguards your system against malware without effort. This security solution will therefore enable you to rely on its",
+      "score": 7.3125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": ".\nWith this type of device, you won\u2019t have to worry about your security as it ensures top-notch protection against threats. Thanks to this model, you\u2019ll be able to take advantage of its efficient capability since it promptly safeguards your system against malware without effort. This security solution will therefore enable you to rely on its",
+      "score": 7.3125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": ".\nWith this type of device, you won\u2019t have to worry about your security as it ensures top-notch protection against threats. Thanks to this model, you\u2019ll be able to take advantage of its efficient capability since it promptly safeguards your system against malware without effort. This security solution will therefore enable you to rely on its",
+      "score": 7.3125,
+      "copy": {
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "per_token_best": [
+     [
+      ".",
+      0.00518798828125
+     ],
+     [
+      "\n",
+      -0.00167083740234375
+     ],
+     [
+      "With",
+      -0.032470703125
+     ],
+     [
+      " this",
+      -0.01239013671875
+     ],
+     [
+      " type",
+      0.034912109375
+     ],
+     [
+      " of",
+      0.0157470703125
+     ],
+     [
+      " device",
+      0.0732421875
+     ],
+     [
+      ",",
+      0.01507568359375
+     ],
+     [
+      " you",
+      0.11865234375
+     ],
+     [
+      " won",
+      0.021484375
+     ],
+     [
+      "\u2019t",
+      0.14453125
+     ],
+     [
+      " have",
+      0.1572265625
+     ],
+     [
+      " to",
+      0.072265625
+     ],
+     [
+      " worry",
+      0.1337890625
+     ],
+     [
+      " about",
+      0.2314453125
+     ],
+     [
+      " your",
+      0.0191650390625
+     ],
+     [
+      " security",
+      0.048583984375
+     ],
+     [
+      " as",
+      0.330078125
+     ],
+     [
+      " it",
+      0.64453125
+     ],
+     [
+      " ensures",
+      0.55078125
+     ],
+     [
+      " top",
+      0.376953125
+     ],
+     [
+      "-notch",
+      0.50390625
+     ],
+     [
+      " protection",
+      0.1591796875
+     ],
+     [
+      " against",
+      0.1484375
+     ],
+     [
+      " threats",
+      0.234375
+     ],
+     [
+      ".",
+      3.359375
+     ],
+     [
+      " Thanks",
+      1.0703125
+     ],
+     [
+      " to",
+      0.5234375
+     ],
+     [
+      " this",
+      0.6328125
+     ],
+     [
+      " model",
+      0.91015625
+     ],
+     [
+      ",",
+      0.5625
+     ],
+     [
+      " you",
+      0.31640625
+     ],
+     [
+      "\u2019ll",
+      0.55859375
+     ],
+     [
+      " be",
+      0.03955078125
+     ],
+     [
+      " able",
+      0.201171875
+     ],
+     [
+      " to",
+      0.0107421875
+     ],
+     [
+      " take",
+      0.0001468658447265625
+     ],
+     [
+      " advantage",
+      0.04736328125
+     ],
+     [
+      " of",
+      0.134765625
+     ],
+     [
+      " its",
+      0.296875
+     ],
+     [
+      " efficient",
+      0.474609375
+     ],
+     [
+      " capability",
+      0.5390625
+     ],
+     [
+      " since",
+      1.125
+     ],
+     [
+      " it",
+      1.390625
+     ],
+     [
+      " promptly",
+      0.5234375
+     ],
+     [
+      " safeguards",
+      0.255859375
+     ],
+     [
+      " your",
+      0.15234375
+     ],
+     [
+      " system",
+      0.1337890625
+     ],
+     [
+      " against",
+      0.1845703125
+     ],
+     [
+      " malware",
+      0.375
+     ],
+     [
+      " without",
+      0.51953125
+     ],
+     [
+      " effort",
+      0.33984375
+     ],
+     [
+      ".",
+      7.3125
+     ],
+     [
+      " This",
+      3.234375
+     ],
+     [
+      " security",
+      0.205078125
+     ],
+     [
+      " solution",
+      0.671875
+     ],
+     [
+      " will",
+      0.78515625
+     ],
+     [
+      " therefore",
+      0.78125
+     ],
+     [
+      " enable",
+      0.306640625
+     ],
+     [
+      " you",
+      0.59375
+     ],
+     [
+      " to",
+      0.1611328125
+     ],
+     [
+      " rely",
+      0.1728515625
+     ],
+     [
+      " on",
+      0.158203125
+     ],
+     [
+      " its",
+      0.5703125
+     ]
+    ],
+    "copy_check": {
+     "max_jaccard": 0.1566265060240964,
+     "max_longest_span": 3,
+     "best_text": {
+      "max_jaccard": 0.1566265060240964,
+      "max_jaccard_rank": 7,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     }
+    }
+   },
+   "w_warm_best_of_8": {
+    "best": 1.03125,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.39544677734375,
+    "top": [
+     {
+      "text": "Client Request:\n and this is why you need expert assistance when looking for a quality plumber. With expertise and experience in looking after potential clients, these companies would certainly be able to deliver what you\u2019re after. You\u2019ve got to make a move and look out for them when hiring a service provider. With over a decade",
+      "score": 1.03125,
+      "copy": {
+       "max_jaccard": 0.18518518518518517,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      }
+     },
+     {
+      "text": "about the best methods and tools to use to create this kind of design.\nMake sure that your table design is straightforward and easy to make use of. Create designs, forms, and other things that are easy to navigate. Make sure that your design choices are accessible to everyone else too.\nMake sure that you use",
+      "score": 0.5234375,
+      "copy": {
+       "max_jaccard": 0.2028985507246377,
+       "max_jaccard_rank": 9,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": "to identify the light sources. Then, the base\u2019s color should be chosen carefully with its complement. For example, the base color should be pastel pink when the focal point is a blue vase.\nBelow are some examples of decor ideas that you might follow.\nBright Wedding Booth Ideas\nTake inspiration from this Boho",
+      "score": 0.4375,
+      "copy": {
+       "max_jaccard": 0.15294117647058825,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "Client Request:\n and this is why you need expert assistance when looking for a quality plumber. With expertise and experience in looking after potential clients, these companies would certainly be able to deliver what you\u2019re after. You\u2019ve got to make a move and look out for them when hiring a service provider. With over a decade",
+      "score": 1.03125,
+      "copy": {
+       "max_jaccard": 0.18518518518518517,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      }
+     },
+     {
+      "text": "to identify the light sources. Then, the base\u2019s color should be chosen carefully with its complement. For example, the base color should be pastel pink when the focal point is a blue vase.\nBelow are some examples of decor ideas that you might follow.\nBright Wedding Booth Ideas\nTake inspiration from this Boho",
+      "score": 0.4375,
+      "copy": {
+       "max_jaccard": 0.15294117647058825,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "about the best methods and tools to use to create this kind of design.\nMake sure that your table design is straightforward and easy to make use of. Create designs, forms, and other things that are easy to navigate. Make sure that your design choices are accessible to everyone else too.\nMake sure that you use",
+      "score": 0.5234375,
+      "copy": {
+       "max_jaccard": 0.2028985507246377,
+       "max_jaccard_rank": 9,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": ", choosing a professional SEO agency like Usabmie. Our team consists of expert SEO professionals who have years of experience working in the field. With our granular approach, we understand how to conduct a thorough SEO audit and provide actionable insights with our recommendations. Our thorough approach ensures that we provide the best possible results for our",
+      "score": 0.28515625,
+      "copy": {
+       "max_jaccard": 0.14285714285714285,
+       "max_jaccard_rank": 3,
+       "longest_span": 3,
+       "longest_span_rank": 3
+      }
+     },
+     {
+      "text": "result of choosing the best available option. You can\u2019t truly appreciate what you have until you\u2019re unemployment and find yourself fortunate enough to get a job againIn fact, unemployment itself is a powerful motivator for getting the dream job. The reason unemployment helps people choose career options better is due to the fact that they\u2019re compelled",
+      "score": 0.07421875,
+      "copy": {
+       "max_jaccard": 0.1511627906976744,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      }
+     },
+     {
+      "text": "and has its headquarters in New York City, New York. The trusts its reputation and knows what it is doing in this industry. The company\u2019s business operations started back in 1954 as an alternative provider. With the passage of time, the company has diversified into handling cannabis and flower products as well.",
+      "score": 0.298828125,
+      "copy": {
+       "max_jaccard": 0.13095238095238096,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      }
+     },
+     {
+      "text": ". if you live in Compton, this guide will be perfect for you. doing it right.\nEven though Compton actively discouraged and even banned businesses like this operation, anti-graffiti artists in this community still manage to get away with their activities. The city council of Compton has been known to not enforce",
+      "score": 0.12060546875,
+      "copy": {
+       "max_jaccard": 0.16666666666666666,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "it needs to use, such as computing power.\nThe operating system and application software. The hardware needs to outfit the operating system and the use of applications so that you can perform various tasks with the hardware.\nStorage. You shouldn\u2019t forget many hardware components look similar, but they don\u2019t. You might need to",
+      "score": 0.392578125,
+      "copy": {
+       "max_jaccard": 0.16666666666666666,
+       "max_jaccard_rank": 2,
+       "longest_span": 3,
+       "longest_span_rank": 2
+      }
+     }
+    ],
+    "copy_check": {
+     "max_jaccard": 0.2028985507246377,
+     "max_longest_span": 4,
+     "best_text": {
+      "max_jaccard": 0.18518518518518517,
+      "max_jaccard_rank": 5,
+      "longest_span": 2,
+      "longest_span_rank": 1
+     }
+    }
+   },
+   "a_untrained_best_of_64": {
+    "best": 0.326171875,
+    "n": 64,
+    "n_empty": 0,
+    "mean": 0.1445159912109375,
+    "top": [
+     {
+      "text": "Are you looking for a project handover? Are you looking for freelancers with proof success? Who is your target client?\n\n1.   Main purpose of the project handover:\u7684\u624b\u672f\u5ba4\u64cd\u4f5c\u8231\u4f53\u7684\u5efa\u8bbe\uff0c including \u5173\u4e8e \u710a\u63a5\u5de5\u827a\uff0c4D\u710a\u63a5\u673a\u5668\u4eba\uff0c4D Gaussian \u6e2c\u91cf\u7cfb\u7edf\uff0c",
+      "score": 0.326171875
+     },
+     {
+      "text": "I need a website design analog of Intetic, but tailored for education with two main features:\n1. Automated Market Maker (AMM) trading\n2. DeFi project launchpad\n\nDesign constraints:\n1. Modern, minimalistic\n2. LIST all tools, features and UI components into a comprehensive list",
+      "score": 0.322265625
+     },
+     {
+      "text": "'The Mississippi River is the second-longest river in the United States. It flows through 10 states and Tupelo, Mississippi is the largest air-clearance hub for the Mississippi Delta. Tupelo combined with his Tennessee cousin, Tupelo, Tennessee, is considered the Frontier of the Diet. Frontiers of",
+      "score": 0.28125
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": ".",
+    "token_id": 13,
+    "score": 0.055419921875,
+    "pos": 23
+   },
+   "b_untrained_best_of_19200": {
+    "best": 1.7421875,
+    "n": 19200,
+    "n_empty": 9,
+    "mean": 0.13100753238740195,
+    "top": [
+     {
+      "text": "Kurt Koebner syndrome is a dermatological sign that is characterized by taking a blister or pustule that rises from the skin and spreading this lesion through the epidermis, causing further leakage and inflammation. When this occurred, it can be noted whenever the organ involved is involved by another infection.\n\nDoes this mean",
+      "score": 1.7421875
+     },
+     {
+      "text": "Epoxide derivatization Reactions that increase the reactivity of epoxides are the mineral acids and Lewis acids, which are used for opening the ring. In the absence of a specific substituent pattern, these reactions will yield a mixture of regioisomers. The mechanism involves electron donation from oxygen's lone pair to",
+      "score": 1.140625
+     },
+     {
+      "text": "\"The programmable logic controller (PLC) is a rugged device designed for industrial use, typically connected to other industrial devices and control systems, but not data servers. It is controlled by a CPU which reads an instruction set and carries out the control task.\"\n\nBased on the text above, does the term Programmable Logic",
+      "score": 1.140625
+     },
+     {
+      "text": "The bounce rate for a Perfect Smile logo trademark, which are currently operating as a defunctariadesign agency in Houston, Texas, USA. An agent in connection with the above search. A search will indeed be conducted by  the Legal Risk Management team at our local. The Legal Risk Management team is based in [",
+      "score": 1.0859375
+     },
+     {
+      "text": "The hill station of Malim was a type of village in medieval and pre-Persian West Asian religions. It had no connection with a deity or temple complex, but it was associated with a specific time period. It was a veneral tone of the society. It was consumed by pyres consumed by pyres.",
+      "score": 1.0625
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.1181640625,
+     "0.9": 0.2041015625,
+     "0.99": 0.392578125,
+     "0.999": 0.6969921875000153
+    }
+   }
+  }
+ },
+ "training_s": 2834.580137729645,
+ "eval_s": {
+  "d": 7.991624116897583,
+  "w": 7.830169439315796,
+  "a": 5.1883015632629395,
+  "b": 512.3710680007935
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6263988018035889,
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6101396083831787,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6115367412567139,
+    "where": "after step 50"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6138689517974854,
+    "where": "after step 100"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6185104846954346,
+    "where": "after step 150"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6116509437561035,
+    "where": "after step 200"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6149704456329346,
+    "where": "after step 250"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6106343269348145,
+    "where": "after step 300"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6149122714996338,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       10,
+       4358
+      ],
+      "expected": 2.90625,
+      "got": 2.90625,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ],
+  "warm_frozen": [
+   {
+    "where": "start",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 50",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 100",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 150",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 200",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 250",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 300",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "end",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 300,
+  "flat_frac": null,
+  "patience": 25
+ },
+ "steps_done": 300,
+ "kl_beta": 0.0,
+ "kl_ref": "warm",
+ "seed": 0,
+ "warm_start": {
+  "lr": 0.0001,
+  "bs": 1,
+  "planned_epochs": 2,
+  "used_epochs": 2,
+  "redone": false,
+  "attempts": [
+   {
+    "n_epochs": 2,
+    "eval_ce": [
+     3.3266036987304686,
+     2.2105953216552736,
+     1.1667848587036134
+    ],
+    "epochs": [
+     {
+      "epoch": 1,
+      "order": [
+       4,
+       1,
+       7,
+       5,
+       3,
+       9,
+       0,
+       8,
+       6,
+       2
+      ],
+      "train_losses": [
+       3.386916160583496,
+       2.96722412109375,
+       2.9369306564331055,
+       2.9255995750427246,
+       3.5920162200927734,
+       2.4269189834594727,
+       3.6661205291748047,
+       2.6065051555633545,
+       3.0120065212249756,
+       3.03910493850708
+      ],
+      "mean_train_loss": 3.055934286117554,
+      "grad_norms": [
+       7.620950698852539,
+       4.898502349853516,
+       4.172493934631348,
+       3.9532558917999268,
+       3.8059163093566895,
+       3.837496519088745,
+       5.72046422958374,
+       5.3960700035095215,
+       6.202265739440918,
+       4.285904407501221
+      ]
+     },
+     {
+      "epoch": 2,
+      "order": [
+       3,
+       9,
+       4,
+       2,
+       7,
+       8,
+       6,
+       0,
+       5,
+       1
+      ],
+      "train_losses": [
+       2.6567349433898926,
+       1.7045944929122925,
+       1.7736363410949707,
+       2.2680232524871826,
+       1.7714482545852661,
+       1.7449963092803955,
+       2.143604278564453,
+       2.6384730339050293,
+       1.4951245784759521,
+       1.47774338722229
+      ],
+      "mean_train_loss": 1.9674378871917724,
+      "grad_norms": [
+       3.4208898544311523,
+       2.7638118267059326,
+       3.4801056385040283,
+       3.5973563194274902,
+       3.4180963039398193,
+       3.877542734146118,
+       5.133051872253418,
+       4.6736884117126465,
+       3.6187796592712402,
+       4.084136962890625
+      ]
+     }
+    ],
+    "lr": 0.0001,
+    "bs": 1,
+    "n_contexts": 10,
+    "max_grad_norm": 1.0,
+    "seed": 0,
+    "seconds": 12.961355209350586,
+    "diversity": {
+     "n_samples": 64,
+     "n_distinct_texts": 64,
+     "mean_pairwise_jaccard": 0.09858289969442809,
+     "max_jaccard_to_top10_mean": 0.15422440253365122,
+     "max_jaccard_to_top10_max": 0.24324324324324326,
+     "max_jaccard_to_top10_median": 0.15785870755750275,
+     "longest_span_max": 6,
+     "near_copy_threshold": 0.8,
+     "n_near_copies": 0,
+     "frac_near_copies": 0.0,
+     "tag": "2 epoch(s)",
+     "mean_score": 0.41877079010009766,
+     "max_score": 1.3671875,
+     "n_empty": 0,
+     "samples": [
+      {
+       "text": "our best effort to prepare our new products. We strive to continuously improve our products, and to make sure that we keep our users satisfied.\nWhen we launched our new product, we sought to improve on our previous product. Our goal was to make sure that our updated product has the most impressive features that users want.",
+       "score": 1.015625,
+       "max_jaccard": 0.14864864864864866,
+       "max_jaccard_rank": 6,
+       "longest_span": 4,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "of the best phones with the best cameras. To view its camera reviews and go through its specs, you need to visit this website.\nSo, the OnePlus 9 goes for $699. The device has a 6.55-inch display with resolution like 1080 x 24",
+       "score": 0.5390625,
+       "max_jaccard": 0.16049382716049382,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "in partnership with businesses. Our mission is to bridge the gap between talented designers and consumers. Every engagement is curated with the intention of connecting the best designers in the world with the best brands on the market.\nWe strive to excite our clients with our curation. The goal of our agency is to introduce our clients",
+       "score": 0.06298828125,
+       "max_jaccard": 0.13157894736842105,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "In order to maintain your business and operation in mainland China (and global operation), you may need to obtain your own local correspondent entity, whether through setting up one yourself or through hiring one of the many local corporate service providers. The former option is more expensive, but may be better suited for companies that wish to register their",
+       "score": 0.095703125,
+       "max_jaccard": 0.1590909090909091,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "like it, you can purchase the item anyway.\nThe Classic Retro Runner is the latest addition to the Retro Games collection of the Retro Runner brand and it was released in early 2020. The item is meant to appeal to the fashion-obsessed crowd of the company\u2019s user base. The quality and",
+       "score": 0.1142578125,
+       "max_jaccard": 0.15384615384615385,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "choosing the right commercial vehicle involves checking what vehicle classes are available in the specific business area that you plan to purchase from. Make sure that the vehicle classes you purchase are available in your location.\n \u2013 check the discount rates available in your particular business area. If you compare the cost of every kind of commercial vehicle available,",
+       "score": 0.10595703125,
+       "max_jaccard": 0.18571428571428572,
+       "max_jaccard_rank": 9,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "doing some research of that type. Doing research of that type isn\u2019t easy though, so you may want to check out this guide for advice on how to write a report like this: how to write a market research report.\nThis means that it\u2019s important that you do your research and that you analyze the results thoroughly",
+       "score": 0.08837890625,
+       "max_jaccard": 0.22666666666666666,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "that have a natural scent profile recommends evaporated or condensed milk, while others might choose to use powder.\nStep 1: Pick Your Research or Coffee Type. There are various kinds of researches available. The following are some of the types of researches you can use:\nDecaf Research: Decaf research",
+       "score": 0.59375,
+       "max_jaccard": 0.13333333333333333,
+       "max_jaccard_rank": 2,
+       "longest_span": 3,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "about encouraging Others to Live Better Lives.\nWhat is New Job: Easy to Choose?\nYou can request different types of jobs as well when you want to apply for One of them. There are over 114 Job options available on the website. The most popular job that users accept is the writing job.",
+       "score": 0.26953125,
+       "max_jaccard": 0.1566265060240964,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "Competencies used in conversational coaching are:\nListening skills\nSetting goals and objectives\nObjection handling skills\nAbility to build rapport\nIn the coaching process, you need to know how to ask questions strategically. The better the questions you ask, the more you\u2019ll be able to facilitate the best outcome. Consider the",
+       "score": 0.2080078125,
+       "max_jaccard": 0.13580246913580246,
+       "max_jaccard_rank": 3,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": ". Usually, there are two types of drainage systems: open and closed. Open drainage systems consist of trenches or ditches, which are made to collect the rainfall. The most advantageous example of the open drainage system is the one used in the following forms:\nDitches: An open steered drainage system system uses trenches",
+       "score": 0.310546875,
+       "max_jaccard": 0.13924050632911392,
+       "max_jaccard_rank": 3,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "from the Walt Disney Company and is primarily responsible for making live-action Disney movies that are considered quality products. The company was officially created in 2013 and functions as a subsidiary of the Walt Disney Company. The company produces movies that have high ratings and positive vibes among the target audience. It has produced some diverse",
+       "score": 0.1767578125,
+       "max_jaccard": 0.11904761904761904,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ". Each building is designed to give you the best experience. For instance, the one in the Mile High City has a 6-star rating. The building in the movie city has a 5-star review. The other building, located in Baghdad, is also a fantastic property choice.\nRealEstate.com offers other",
+       "score": 0.384765625,
+       "max_jaccard": 0.16,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ".\nThis guide will help you buy and sell electricity transportation compatible units through Steam.\nShopping for a suitable prosumer choice requires research. The final decision depends on your budget. You need to check out the current Steam market rates to browse for the best deals of the following Yuji products:\nBest Steam reproduct",
+       "score": 0.37109375,
+       "max_jaccard": 0.16279069767441862,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ". When choosing the best container type, you need to take several factors into consideration. \nChoosing the best container rental company in Los Angeles\nThe first thing to look out for when choosing such rental services is their looks and reputation. Choose only companies that have been operating in the market for some times. Choosing such companies means",
+       "score": 0.93359375,
+       "max_jaccard": 0.18292682926829268,
+       "max_jaccard_rank": 7,
+       "longest_span": 5,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "some types of optical illusions.\nTypes of Optical Illusions\n.Standford\u5165\u5ba4\u5f0f d\u00e0xi\u016d \u2014 Stanford Incidental Optic Illusion\nSTAR fish Illusions\nTraffic Lights Illusion\nPalosz Illusion\nTime Illusion\nCreative Illusions\nHow to Make Your Own Optical Illusion?",
+       "score": 0.1044921875,
+       "max_jaccard": 0.0625,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ": with this product, you can store your daily and emergency supplies in one place. The Resilk\u2019s robust storage capacityof pretty much everything you could need\u2014for example, down jackets, sleeping bags, backpacks, toiletries, even saplings. Whether you\u2019re preparing to travel or just want to stockpile supplies,",
+       "score": 0.0869140625,
+       "max_jaccard": 0.11956521739130435,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "that uses underlying technology from the likes of Meta and Microsoft. With the help of this underlying tech, users can access three main types of platforms that offer their features. These platforms include:\n- Facebook: This platform operates beneath the Meta umbrella. It offers its users a messaging experience that allows them to communicate with one another",
+       "score": 0.28515625,
+       "max_jaccard": 0.13953488372093023,
+       "max_jaccard_rank": 6,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "to choose from. And it will definitely be your choice.\nHere are the top Colorado apartment complexes in 2022:\nColorado Capital Apartments\nThe Colorado Capital Apartments is located in Arvada, Colorado, near Arvada\u2019s local shopping and entertainment spots. The 128-unit complex offers",
+       "score": 0.515625,
+       "max_jaccard": 0.16049382716049382,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "making capillary action. To compensate for the loss of water caused by capillary action, you need to continually water your plants. Make sure to check the soil regularly to see if it\u2019s dry. If so, it\u2019s time to water. When you water your plants, use the water can method rather than the watering",
+       "score": 0.32421875,
+       "max_jaccard": 0.14864864864864866,
+       "max_jaccard_rank": 9,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "you can still hire them. Take a quick look at the companies that we reviewed below:\nAlibaba.com China\u2019s most popular marketplace. it offers more than two million different kinds of products. The business owner can buy almost any product on the website. There are thousands of vendors to choose from. The website has a",
+       "score": 1.3671875,
+       "max_jaccard": 0.1744186046511628,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "Learning about day trading for cryptocurrency might be hard to do yourself due to the complexity of the day trading process. Consequently, you need to choose the right day trading platform in order to succeed in your trading missions. Fortunately, it isn\u2019t difficult to choose the best day trading platform for you.\nBelow, we\u2019ll take",
+       "score": 1.15625,
+       "max_jaccard": 0.2054794520547945,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "of the best time to visit Kyoto.\nHere, you will learn when is the best time to visit Kyoto, what to do during each season and some of the best places to go in the city.\nknows that just like other popular tourist destinations, Kyoto is also very popular. Hence, it is considered a",
+       "score": 1.3359375,
+       "max_jaccard": 0.16883116883116883,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "that expect such treatment for themselves. In this way, you are able to ensure that your children will learn that you will take care of whatever comes their way. Additionally, this method will enable you to lend your ear and support when your child asks for your guidance.\nThis victorian style:\nBesides the inevitable things",
+       "score": 0.2236328125,
+       "max_jaccard": 0.1875,
+       "max_jaccard_rank": 7,
+       "longest_span": 6,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "doing business? With the help of savvy marketing business ideas, you just need a cup of coffee to start your business. Review business ideas in this article, and you will know which one works best for you.1. Write Jewelry Designs\nJewelry designs are popular thanks to the seasonal changes in fashion. However,",
+       "score": 0.61328125,
+       "max_jaccard": 0.18518518518518517,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "about drawing and crafting. Well, her name is Clara and she does tend towards drawing things. Indeed, she\u2019s quite accomplished at it. On the other hand, Olive Hoffman\u2019s name is unlikely to be associated with sculpting according to her appearance. Her last name appears to have been given in honor of her great-g",
+       "score": 0.162109375,
+       "max_jaccard": 0.11764705882352941,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "to achieve their goals while maintaining a healthy lifestyle? The answer lies in choosing the right nutrition plan. In this segment, we\u2019ll explore what a nutrition plan is and how it can help you achieve your desired fitness goals.\nOur mission is to provide you with the best fitness nutrition plan in the industry. To achieve this",
+       "score": 0.234375,
+       "max_jaccard": 0.1686746987951807,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 6
+      },
+      {
+       "text": "how it relates to the landmark itself. Option B, while incorrect because Trump does have ties to sentencing, does touch on how he cited previous guidelines for sentencing which is wrapped up in the sentencing decision. Option D, whereas his presidential duties are sometimes confused with his criminal sentencing, is incorrect in light of the facts presented in",
+       "score": 0.039306640625,
+       "max_jaccard": 0.12359550561797752,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "the quantity of media that needs to be used. The cost that is incurred during the use of media agencies depends heavily on the type of agency chosen. Getting digital media companies to handle advertising campaigns might be more expensive than working with a small-medium media agencies. This reason is due to the fact that digital media agencies typically employ",
+       "score": 0.2236328125,
+       "max_jaccard": 0.14102564102564102,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "whether they are homeowners or renters. You can get this type of policy too.\nThe property owners\u2019 insurance that you get needs to cover the damages to your property. It protects you from hazards and natural disasters such as landslides, tornadoes, floods, and wildfires.\nThe personal property insurance premiums depend on",
+       "score": 0.58984375,
+       "max_jaccard": 0.17073170731707318,
+       "max_jaccard_rank": 5,
+       "longest_span": 5,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ".",
+       "score": 0.00518798828125,
+       "max_jaccard": 0.022727272727272728,
+       "max_jaccard_rank": 9,
+       "longest_span": 1,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "to the nearest water source. Choose a location with good drainage and sunlight. Lifting lip plants in containers is also an option.\nTo plant the plant, carefully remove the\u65e7\u7684\u5851\u6599\u5305\u88c5 and place the plant into the new location with your preferred soil mix.\nWatering is a critical part of watching your plants grow",
+       "score": 0.12255859375,
+       "max_jaccard": 0.12790697674418605,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "as their presence in the industry, and still want to keep their ability to do so for years to come.\nYou might want to consider keeping one in every home as well. It is safer and easier to use than alternatives to it. You do not need to research a lot to come to a decision about this since",
+       "score": 0.349609375,
+       "max_jaccard": 0.19230769230769232,
+       "max_jaccard_rank": 5,
+       "longest_span": 3,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "order tax-free. Now, let\u2019s review how to get those benefits.\nTo qualify for tax-free cruises, you have to attempt to meet the following criteria:\nCheck your citizenship status. For example, if you\u2019re a fan of cruises based in the Caribbean and you\u2019re a citizen or resident of British",
+       "score": 0.150390625,
+       "max_jaccard": 0.14814814814814814,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "Name: Kotinka, Model: Kotinka P1\nDeveloper: Contestable\nCategory: Action Teenager Cartoon\nRelease Date: 26th of December  and 22nd of January 2023\nDescription: The Kotinka P1 is an action teenager cartoon by Contestable Entertainment.",
+       "score": 0.0859375,
+       "max_jaccard": 0.10126582278481013,
+       "max_jaccard_rank": 7,
+       "longest_span": 1,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "About to hire someone in an Amazon job position? Hirehawk reviews are designed to help you make that choice. The reviews are something that every prospective employee should look through before making their hire decision. On the other hand, if you\u2019ve decided to hire an applicant, you should make sure to use our hiring platform. This",
+       "score": 0.4296875,
+       "max_jaccard": 0.16455696202531644,
+       "max_jaccard_rank": 9,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "and we create the products we have. and we think that this product range is the right one, and that is it.\nI grew up in a family where nothing was spared. There was always something coming up. We had to get to make allowances.\nThese studies are involved in the creation of some of our",
+       "score": 0.1015625,
+       "max_jaccard": 0.16049382716049382,
+       "max_jaccard_rank": 3,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "of business. Whether you\u2019re buying a writing service to save the time and effort required, or you decide to use such companies for other types of tasks, it\u2019s important to take a close look into the services offered by each company before making your decision.\nHire writers to take care of your assignments at cheap rates",
+       "score": 0.5546875,
+       "max_jaccard": 0.17647058823529413,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "indeed. The step-by-step guide below will show you how to do this.\nFirst, you\u2019ll need to download Cisco\u2019s latest real-time router image file. Then, copy it to your computer\u2019s hard drive. After that, download another real-time router image file.\nFollow these steps to download the latest real",
+       "score": 0.154296875,
+       "max_jaccard": 0.16666666666666666,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "to form proteins. while the digestive process, vitamins and minerals are extracted from food. These minerals and vitamins also play crucial roles in maintaining good health. Other nutrients such as protein energy beverages, which supplement your packed breakfast, also influence protein synthesis and boost energy levels.\nProtein energy drink similar supplement protein, it\u2019s",
+       "score": 0.22265625,
+       "max_jaccard": 0.09195402298850575,
+       "max_jaccard_rank": 3,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "to use them in their daily routine.\nWith the popularity of the Fruit Punch Poncho, many users are searching for its equivalent. Luckily, there exists another poncho effect that is similar to the Fruit Punch Poncho effect. That is the Hamburger Effect.\nIf you want to apply the Hamburger Effect to your pictures",
+       "score": 0.5703125,
+       "max_jaccard": 0.17333333333333334,
+       "max_jaccard_rank": 9,
+       "longest_span": 6,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "Allocation: Type-based and machine type-based\nInstance Price, uses the latest instance type (T5af)\nArchitecture Type: General purpose\nAllocated disk size: 10 GB torrent storage capacity (for torrent pool files only)\nCPU: High-performance (AMD EPYC 7T83)",
+       "score": 0.0751953125,
+       "max_jaccard": 0.07865168539325842,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "to implement this change.\nNone of the forms featured in this template uses the Vue.js framework, so you won\u2019t have to download that plugin and worry about downloading and installing it.\nMoreover, rather than selecting WordPress plugins to use in your design, you\u2019ll be blessing a form builder that does the job perfectly instead",
+       "score": 0.2734375,
+       "max_jaccard": 0.1927710843373494,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Buy Quality Products: Amazon.com is famous for its online product and offers a wide variety of high-quality products. The company provides its customers with top-rated goods and services. Fortunately, the company has partnered with many different brands that offer high-quality items still. That\u2019s another reason why many customers buy their products from the company",
+       "score": 0.9296875,
+       "max_jaccard": 0.13953488372093023,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "network traffic. This tool is fast and efficient when trying to detect such intrusions, and is able to protect thousands of users at a time. It uses its software to protect users and scan for threats such as viruses and malware. You can download this program and install it on your devices.\nAnother program that scans for",
+       "score": 0.71875,
+       "max_jaccard": 0.17073170731707318,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "with the form of the newly introduced designer brand.\nTake a look at the new designer brand offerings. This includes the following:\nWebsite Design: \u2013 Take advantage of the innovative and high-quality website designs that have been provided by the company. Your business needs a robust and professional image in terms of its online presence.",
+       "score": 0.796875,
+       "max_jaccard": 0.11764705882352941,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 7
+      },
+      {
+       "text": ".\nImage Used: cooke.in\nStart your own CTC business. The most popular way to make money online is by using the C2C (community to community) model of business. Under this model, you can monetize your business by selling items you have personally manufactured or purchased. For instance, buyers who",
+       "score": 0.27734375,
+       "max_jaccard": 0.1511627906976744,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "and applying for those jobs. It\u2019s important to make sure you have the skills necessary to apply for those jobs. This way, you can apply confidently and land a job.\nSteer Your Way in the Job Search\nTo grab the job you want, you need to be strategic. Take a look at the job",
+       "score": 0.06103515625,
+       "max_jaccard": 0.175,
+       "max_jaccard_rank": 8,
+       "longest_span": 5,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "to achieve this, you need to create a food Disney theme park presentation with a broader scope than the typical park analysis. Instead of presenting only one park, you expected to talk about all five Disney theme parks in the world and include their history, Mickey mouse children centered company information, and contemporary and upcoming Disney theme parks.",
+       "score": 0.1298828125,
+       "max_jaccard": 0.13414634146341464,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "More about Canadian ski rentals:\n \u2013 After choosing the ski rental company that you like, buy their equipment online, and know once the best option for you. Purchase the rental equipment from the Chalet Valley ski rental company because they provide high-quality skis, ice skates, snowboards, and other rental products.",
+       "score": 1.0234375,
+       "max_jaccard": 0.125,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "\u201cWould you like to learn how to make a pumpkin lantern with the same style as the candle ones? It is easy and it is a great job. Follow our step-by-step recipe and you will surely be able to accomplish this bada idea. This pumpkin flower lantern is a beautiful design that can be used to decorate the",
+       "score": 0.1748046875,
+       "max_jaccard": 0.17073170731707318,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "in Walmart and other big companies to buy high-quality products in a lower price point. The online store offers many types of products such as groceries, health products and many more types of items. Additionally, the discount business unit also offers discount deals on various types of products by offering the best bargains and sales deals on the",
+       "score": 0.5,
+       "max_jaccard": 0.14814814814814814,
+       "max_jaccard_rank": 3,
+       "longest_span": 4,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ".\nUnderstanding the OSI Model\nThe OSI Physical layer is the first layer in the OSI model and deals with the transmission of raw bits over a physical medium. It defines the mechanical, electrical, and functional characteristics of the physical connection. The physical layer defines the type of network connections that can be utilized, such as copper",
+       "score": 0.345703125,
+       "max_jaccard": 0.18421052631578946,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Why should use the best parkour activities? What are the top parkour activities in the world? Let\u2019s dive into it. Although the emergence of the kangaroo vault jump around the world, the learning process of how to do this move can be challenging to some people. Therefore, it is important to choose the best",
+       "score": 1.2109375,
+       "max_jaccard": 0.13580246913580246,
+       "max_jaccard_rank": 3,
+       "longest_span": 5,
+       "longest_span_rank": 4
+      },
+      {
+       "text": "and customers looking for reliable businesses to invest in as well.\n here are some great examples that have done their job in these matters quite well:\nSaudia Airlines was founded in 1945 and it\u2019s the country\u2019s largest airline and reward program sponsorship company in all of Saudi Arabia. Its program currently",
+       "score": 0.1884765625,
+       "max_jaccard": 0.1368421052631579,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ".\nBy\u00fcm.\nyour closet. It might not look like anything special but it is pretty affordable. If you want to make sure that your outfit looks good you should just go for a good quality purse instead of a cheap one.\nChoose a high-quality purse when choosing The Hermes Birkin bags are one of",
+       "score": 1.109375,
+       "max_jaccard": 0.1728395061728395,
+       "max_jaccard_rank": 9,
+       "longest_span": 4,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "about finding your ideal partner, you need to examine the following points:\nTake a look at your current situation. Take a look at your current situation first if you want to take a look at your existing situation first. In addition to that, look at the people around you too. Look for the qualities that you want",
+       "score": 0.232421875,
+       "max_jaccard": 0.21739130434782608,
+       "max_jaccard_rank": 7,
+       "longest_span": 5,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "_with a strong and healthy immune system.\nFood isn\u2019t the only way to boost immunity. Other things you can do to boost your immunity are:\nTake your antibiotics regularly as prescribed by your doctor. Antibiotics could treat your viral infection and help you escape the flu.\nTry not to eat too much sugar.",
+       "score": 0.30859375,
+       "max_jaccard": 0.15294117647058825,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "and become more efficient when they work, and also with good communication skills. To say that Pizza Hut Java staff member is doing well is quite accurate. You need an employee with some experience in this field, though. The whole system of Pizza Hut needs experienced staff members to ensure that it functions properly. With good implementation skills",
+       "score": 0.08251953125,
+       "max_jaccard": 0.13793103448275862,
+       "max_jaccard_rank": 3,
+       "longest_span": 2,
+       "longest_span_rank": 1
+      },
+      {
+       "text": ".\nThe design of Homecrest appliances is as minimalistic as it is functional. meant to check in on your home\u2019s cleanliness. Since all the models under Homecrest possess this feature, you know that you\u2019re making the right choice with their products.\nIn terms of their technology, the models under Homecrest provide",
+       "score": 0.96484375,
+       "max_jaccard": 0.2236842105263158,
+       "max_jaccard_rank": 7,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "Prior to purchasing an OST Robuckata bike, it is important to learn about their engine and its specifications in order to know if the bike is the best fit for you or not. To get started, take a look at the OST Robuckata engine specifications below.\nThe engine of the bike has a capacity of",
+       "score": 0.6015625,
+       "max_jaccard": 0.24324324324324326,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "the following points about React.js trying and searching for different development opportunities. \nFirst of all, you need to check out its popular websites such as Facebook and Instagram and source these websites\u2019 designs as inspiration. Also, you can review these websites\u2019 designs to see how they implemented their UI/UX. Furthermore, you can",
+       "score": 0.193359375,
+       "max_jaccard": 0.13095238095238096,
+       "max_jaccard_rank": 7,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      },
+      {
+       "text": ".\nStylish ice cream scoops are not only functional but also add a touch of aesthetic appeal to your kitchen. Torpa decorator ice cream scoops, for example, have a modern and sleek design that would complement any decor style. On the other hand, rustic or quirky ice cream scoops might be more",
+       "score": 0.75,
+       "max_jaccard": 0.18072289156626506,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ", and social media, and asset management.\nIf you are looking to use coupons for your online purchases, you can follow these top seven tips that will help you make use of them:\nFind the best discounts and coupons by doing your research. You need to research each brand of the product you want to buy and",
+       "score": 0.57421875,
+       "max_jaccard": 0.19480519480519481,
+       "max_jaccard_rank": 5,
+       "longest_span": 4,
+       "longest_span_rank": 5
+      }
+     ]
+    }
+   }
+  ],
+  "contexts": "top-10 FineWeb contexts of L10N4358 (data/contexts.npz), as completions of the prompt",
+  "near_copy_threshold": 0.8
+ },
+ "reused_untrained": {
+  "requested": null,
+  "reused": false,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sources": null,
+  "reason_not_reused": "not requested"
+ },
+ "phase_s": 3369.7772307395935,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

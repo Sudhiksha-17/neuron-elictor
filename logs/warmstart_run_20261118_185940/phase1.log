@@ -1,0 +1,70 @@
+run dir: /workspace/neuron-elictor/results/phase1/20261118_185945
+config: {'model_id': 'Qwen/Qwen3.5-4B', 'dtype': 'bfloat16', 'layer': 15, 'neuron': 2341, 'seed': 0, 'text': 'The Eiffel Tower in Paris was completed in 1889 and is one of the most visited monuments in the world.'}
+env: {'torch': '2.8.0+cu129', 'transformers': '5.23.0', 'python': '3.12.3', 'gpu': 'NVIDIA GeForce RTX 4090', 'fla': '0.5.2', 'causal_conv1d': '1.7.0', 'model_id': 'Qwen/Qwen3.5-4B', 'model_revision': '851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a', 'fineweb_id': 'HuggingFaceFW/fineweb', 'fineweb_revision': '9bb295ddab0e05d785b879661af7260fed5140fc', 'runpod_pod_id': 'xuc2hb8kyrt8ka', 'pytorch_cuda_alloc_conf': 'expandable_segments:True', 'pip_freeze': ['accelerate==1.16.0', 'annotated-doc==0.0.7', 'annotated-types==0.8.0', 'anyio==4.16.0', 'argon2-cffi==25.1.0', 'argon2-cffi-bindings==26.1.0', 'arrow==1.4.0', 'asttokens==3.0.2', 'async-lru==2.4.0', 'attrs==26.1.0', 'babel==2.18.0', 'beautifulsoup4==4.15.0', 'bleach==6.4.0', 'blinker==1.7.0', 'causal-conv1d @ git+https://github.com/Dao-AILab/causal-conv1d@cd81f0413cad2fc1e6f17e785ac39f59aae690cd', 'certifi==2026.10.19', 'cffi==2.1.1', 'charset-normalizer==3.5.2', 'click==8.5.1', 'comm==0.2.3', 'cryptography==41.0.7', 'datasets==5.2.0', 'dbus-python==1.3.2', 'debugpy==1.8.22', 'defusedxml==0.7.1', 'dill==0.4.1', 'distlib==0.4.4', 'distro==1.9.0', 'einops==0.8.2', 'executing==2.3.0', 'fastjsonschema==2.22.3', 'filelock==4.2.1', 'fla-core==0.5.2', 'flash-linear-attention==0.5.2', 'fqdn==1.6.0', 'fsspec==2026.9.0', 'h11==0.16.0', 'hf-xet==1.8.0', 'hf_transfer==0.1.9', 'httpcore==1.0.9', 'httpcore2==2.16.2', 'httplib2==0.20.4', 'httpx==0.28.1', 'httpx2==2.16.2', 'huggingface_hub==2.4.0', 'idna==3.20', 'ipykernel==7.4.0', 'ipython==9.18.1', 'ipython_pygments_lexers==1.1.1', 'ipywidgets==8.1.8', 'isoduration==20.11.0', 'jaraco.context==6.1.0', 'jedi==0.20.1', 'Jinja2==3.1.6', 'json5==0.17.3', 'jsonpointer==3.10', 'jsonschema==4.26.0', 'jsonschema-specifications==2025.9.1', 'jupyter-archive==3.4.0', 'jupyter-events==0.12.1', 'jupyter-lsp==2.3.1', 'jupyter_builder==1.2.4', 'jupyter_client==8.10.0', 'jupyter_core==5.9.1', 'jupyter_server==2.21.1', 'jupyter_server_terminals==0.5.4', 'jupyterlab==4.6.4', 'jupyterlab_pygments==0.3.0', 'jupyterlab_server==2.28.1', 'jupyterlab_widgets==3.0.17', 'lark==1.3.1', 'launchpadlib==1.11.0', 'lazr.restfulclient==0.14.6', 'lazr.uri==1.0.6', 'markdown-it-py==4.3.0', 'MarkupSafe==3.0.4', 'matplotlib-inline==0.2.2', 'mdurl==0.1.2', 'mistune==3.4.0', 'mpmath==1.3.0', 'multiprocess==0.70.19', 'nbclient==0.11.0', 'nbconvert==7.17.2', 'nbformat==5.11.1', 'nest-asyncio2==1.7.4', 'networkx==3.7', 'ninja==1.13.2', 'notebook==7.6.3', 'notebook_shim==0.2.4', 'numpy==2.5.4', 'nvidia-cublas-cu12==12.9.1.4', 'nvidia-cuda-cupti-cu12==12.9.79', 'nvidia-cuda-nvrtc-cu12==12.9.86', 'nvidia-cuda-runtime-cu12==12.9.79', 'nvidia-cudnn-cu12==9.10.2.21', 'nvidia-cufft-cu12==11.4.1.4', 'nvidia-cufile-cu12==1.14.1.1', 'nvidia-curand-cu12==10.3.10.19', 'nvidia-cusolver-cu12==11.7.5.82', 'nvidia-cusparse-cu12==12.5.10.65', 'nvidia-cusparselt-cu12==0.7.1', 'nvidia-nccl-cu12==2.27.3', 'nvidia-nvjitlink-cu12==12.9.86', 'nvidia-nvtx-cu12==12.9.79', 'oauthlib==3.2.2', 'packaging==26.3', 'pandas==3.1.1', 'pandocfilters==1.5.1', 'parso==0.8.7', 'peft==0.21.3', 'pexpect==4.9.0', 'pillow==13.0.0', 'platformdirs==4.14.5', 'prometheus_client==0.26.0', 'prompt_toolkit==3.0.53', 'psutil==7.2.2', 'ptyprocess==0.7.0', 'pure_eval==0.2.4', 'pyarrow==26.0.1', 'pycparser==3.12', 'pydantic==2.14.3', 'pydantic_core==2.50.4', 'Pygments==2.21.0', 'PyGObject==3.48.2', 'PyJWT==2.7.0', 'pyparsing==3.1.1', 'python-apt==2.7.7+ubuntu5.3', 'python-dateutil==4.0.0', 'python-discovery==1.9.5', 'python-json-logger==4.2.0', 'PyYAML==6.0.3', 'pyzmq==27.3.0', 'referencing==0.37.0', 'regex==2026.11.18', 'requests==2.34.2', 'rfc3339-validator==0.1.4', 'rfc3986-validator==0.1.1', 'rfc3987-syntax==1.1.0', 'rich==15.0.0', 'rpds-py==2026.9.1', 'safetensors==0.8.0', 'Send2Trash==2.1.0', 'setuptools==81.0.0', 'shellingham==1.5.4', 'six==1.16.0', 'soupsieve==4.0.1', 'stack-data==0.6.3', 'sympy==1.14.0', 'terminado==0.18.1', 'tinycss2==1.5.1', 'tokenizers==0.23.3', 'torch==2.8.0+cu129', 'torchaudio==2.8.0+cu129', 'torchvision==0.23.0+cu129', 'tornado==6.5.10', 'tqdm==4.70.1', 'traitlets==5.16.1', 'transformers==5.23.0', 'triton==3.4.0', 'trl==1.18.1', 'truststore==0.10.5', 'typer==0.29.2', 'typing-inspection==0.4.5', 'typing_extensions==4.16.0', 'tzdata==2026.6', 'uri-template==1.3.0', 'urllib3==2.8.0', 'virtualenv==21.14.13', 'wadllib==1.3.6', 'wcwidth==0.9.4', 'webcolors==25.10.0', 'webencodings==0.6.1', 'websocket-client==1.9.2', 'wheel==0.46.2', 'widgetsnbextension==4.0.16', 'xxhash==4.1.0']}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<02:16,  5.27it/s]Loading weights:   4%|▎         | 26/723 [00:00<00:06, 109.38it/s]Loading weights:   6%|▌         | 45/723 [00:00<00:05, 133.95it/s]Loading weights:   9%|▉         | 66/723 [00:00<00:04, 156.61it/s]Loading weights:  12%|█▏        | 90/723 [00:00<00:03, 180.07it/s]Loading weights:  15%|█▌        | 110/723 [00:00<00:03, 177.29it/s]Loading weights:  18%|█▊        | 132/723 [00:00<00:03, 183.93it/s]Loading weights:  21%|██        | 151/723 [00:00<00:03, 178.50it/s]Loading weights:  24%|██▍       | 172/723 [00:01<00:02, 184.04it/s]Loading weights:  27%|██▋       | 195/723 [00:01<00:02, 192.93it/s]Loading weights:  30%|██▉       | 215/723 [00:01<00:02, 186.59it/s]Loading weights:  33%|███▎      | 238/723 [00:01<00:02, 192.52it/s]Loading weights:  36%|███▌      | 258/723 [00:01<00:02, 179.88it/s]Loading weights:  39%|███▊      | 279/723 [00:01<00:02, 187.40it/s]Loading weights:  42%|████▏     | 305/723 [00:01<00:02, 207.16it/s]Loading weights:  45%|████▌     | 327/723 [00:01<00:01, 210.25it/s]Loading weights:  48%|████▊     | 349/723 [00:01<00:01, 210.64it/s]Loading weights:  51%|█████▏    | 371/723 [00:02<00:01, 189.90it/s]Loading weights:  55%|█████▌    | 398/723 [00:02<00:01, 207.91it/s]Loading weights:  58%|█████▊    | 420/723 [00:02<00:01, 201.21it/s]Loading weights:  73%|███████▎  | 530/723 [00:02<00:00, 443.51it/s]Loading weights:  90%|████████▉ | 649/723 [00:02<00:00, 651.07it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 280.65it/s]
+model class: Qwen3_5ForConditionalGeneration
+
+all modules ending in '.mlp': 56 (language-model: 32, other: 24)
+language-model layers path: model.language_model.layers
+example: model.language_model.layers.0.mlp -> Qwen3_5MLP(
+  (gate_proj): Linear(in_features=2560, out_features=9216, bias=False)
+  (up_proj): Linear(in_features=2560, out_features=9216, bias=False)
+  (down_proj): Linear(in_features=9216, out_features=2560, bias=False)
+  (act_fn): SiLUActivation()
+)
+layer types (L0-L31): lllFlllFlllFlllFlllFlllFlllFlllF (F=full attn, l=linear attn)
+
+layer 15 type: full_attention; intermediate_size=9216
+
+test sentence: 'The Eiffel Tower in Paris was completed in 1889 and is one of the most visited monuments in the world.'  (26 tokens)
+
+Scorer: score 0.0442 (exit at L15), 0.0442 (exit at L31); kernels ['fla.ops.gated_delta_rule.chunk.chunk_gated_delta_rule', 'fla.ops.gated_delta_rule.fused_recurrent.fused_recurrent_gated_delta_rule', 'causal_conv1d.causal_conv1d_interface.causal_conv1d_fn', 'causal_conv1d.causal_conv1d_interface.causal_conv1d_update']
+
+per-token activation of L15N2341 (hook) vs manual:
+pos token                  hook  manual_bf16  manual_fp32
+  0 'The'                0.0342       0.0342       0.0343
+  1 ' Eiff'             -0.0099      -0.0099      -0.0099
+  2 'el'                -0.0189      -0.0189      -0.0190
+  3 ' Tower'            -0.0251      -0.0251      -0.0251
+  4 ' in'               -0.0757      -0.0757      -0.0757
+  5 ' Paris'             0.0029       0.0029       0.0029
+  6 ' was'              -0.0398      -0.0398      -0.0399
+  7 ' completed'        -0.0098      -0.0098      -0.0098
+  8 ' in'                0.0069       0.0069       0.0069
+  9 ' '                  0.0055       0.0055       0.0055
+ 10 '1'                  0.0047       0.0047       0.0048
+ 11 '8'                 -0.0022      -0.0022      -0.0022
+ 12 '8'                 -0.0041      -0.0041      -0.0041
+ 13 '9'                  0.0155       0.0155       0.0156
+ 14 ' and'               0.0474       0.0474       0.0472
+ 15 ' is'               -0.0250      -0.0250      -0.0250
+ 16 ' one'               0.0253       0.0253       0.0254
+ 17 ' of'               -0.0850      -0.0850      -0.0851
+ 18 ' the'              -0.0752      -0.0752      -0.0755
+ 19 ' most'              0.0097       0.0097       0.0097
+ 20 ' visited'           0.0043       0.0043       0.0043
+ 21 ' monuments'         0.0076       0.0076       0.0076
+ 22 ' in'               -0.0095      -0.0095      -0.0095
+ 23 ' the'              -0.0030      -0.0030      -0.0030
+ 24 ' world'            -0.0544      -0.0544      -0.0543
+ 25 '.'                  0.0049       0.0049       0.0048
+
+max |hook - manual_bf16|            = 0.000e+00
+max |hook - manual_bf16| (all chans) = 0.000e+00
+max |hook - manual_fp32|            = 3.028e-04  (relative to max |act|: 0.36%)
+max |early-exit - full forward|     = 0.000e+00
+forward time: full 1805 ms, early-exit 39 ms
+score (max over tokens) = 0.0474 at pos 14 (' and')
+
+checks:
+  PASS  found_32_lm_mlp_layers
+  PASS  hook_equals_manual_bf16_exact
+  PASS  hook_equals_manual_all_9216_channels_exact
+  PASS  hook_close_to_manual_fp32 (rel<2%)
+  PASS  early_exit_raised
+  PASS  early_exit_equals_full_forward
+  PASS  scorer_exit_L_equals_exit_31
+  PASS  scorer_close_to_hook_max (abs<0.01 or rel<2%, fixed shape differs)
+  PASS  same_tokenization_as_scorer
+
+saved: /workspace/neuron-elictor/results/phase1/20261118_185945

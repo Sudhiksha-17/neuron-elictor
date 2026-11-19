@@ -1,0 +1,637 @@
+{
+ "lr": 0.0001,
+ "bs": 1,
+ "planned_epochs": 2,
+ "used_epochs": 2,
+ "redone": false,
+ "attempts": [
+  {
+   "n_epochs": 2,
+   "eval_ce": [
+    3.5803260803222656,
+    2.2351505279541017,
+    1.190251350402832
+   ],
+   "epochs": [
+    {
+     "epoch": 1,
+     "order": [
+      5,
+      6,
+      1,
+      2,
+      0,
+      8,
+      9,
+      3,
+      7,
+      4
+     ],
+     "train_losses": [
+      2.806844711303711,
+      3.043769121170044,
+      3.727973699569702,
+      3.401188850402832,
+      2.5972776412963867,
+      4.285111427307129,
+      3.2370095252990723,
+      3.1304945945739746,
+      3.017651319503784,
+      3.382172107696533
+     ],
+     "mean_train_loss": 3.262949299812317,
+     "grad_norms": [
+      7.620403289794922,
+      5.209275245666504,
+      5.506083011627197,
+      5.616420745849609,
+      5.169992446899414,
+      8.538276672363281,
+      8.389944076538086,
+      6.379639625549316,
+      8.540738105773926,
+      5.188775539398193
+     ]
+    },
+    {
+     "epoch": 2,
+     "order": [
+      2,
+      3,
+      1,
+      8,
+      9,
+      0,
+      6,
+      7,
+      4,
+      5
+     ],
+     "train_losses": [
+      2.0427052974700928,
+      2.1676950454711914,
+      1.9585559368133545,
+      2.9183356761932373,
+      2.3112499713897705,
+      1.3318946361541748,
+      1.5850838422775269,
+      1.9988138675689697,
+      2.1298060417175293,
+      1.2794995307922363
+     ],
+     "mean_train_loss": 1.9723639845848084,
+     "grad_norms": [
+      5.596625804901123,
+      3.828115701675415,
+      4.246975421905518,
+      5.4464111328125,
+      4.0590739250183105,
+      4.149569034576416,
+      4.907721996307373,
+      8.46622371673584,
+      4.265847206115723,
+      7.4220685958862305
+     ]
+    }
+   ],
+   "lr": 0.0001,
+   "bs": 1,
+   "n_contexts": 10,
+   "max_grad_norm": 1.0,
+   "seed": 1,
+   "seconds": 13.406784057617188,
+   "diversity": {
+    "n_samples": 64,
+    "n_distinct_texts": 64,
+    "mean_pairwise_jaccard": 0.07785704117156236,
+    "max_jaccard_to_top10_mean": 0.12908665926188556,
+    "max_jaccard_to_top10_max": 0.21686746987951808,
+    "max_jaccard_to_top10_median": 0.1256578947368421,
+    "longest_span_max": 10,
+    "near_copy_threshold": 0.8,
+    "n_near_copies": 0,
+    "frac_near_copies": 0.0,
+    "tag": "2 epoch(s)",
+    "mean_score": 0.18122100830078125,
+    "max_score": 0.9296875,
+    "n_empty": 0,
+    "samples": [
+     {
+      "text": "eight-country university ranking system, STEM across the curriculum is a known factor. But the LINKS tool allows universities to report student maturity and prepare the college for future changes. What should the administrators do now?\nTurn \"black brick\" universities into high schoolers. Ken Levine \u2014 the creative director of Bend In Time on",
+      "score": 0.1865234375,
+      "max_jaccard": 0.125,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 3
+     },
+     {
+      "text": "Sessho-Matsu, the last giant\u09aa\u09cd\u09b0\u0995\u09be\u09b6\u09bf\u09a4 \u09b9\u09af\u09bc\u09c7\u099b\u09c7 \u09ae\u0999\u09cd\u0997\u09b2\u09ac\u09be\u09b0, \u099c\u09c1\u09a8 \u09ed, \u09e8\u09e6\u09e7\u09ef,\u0985\u09a8\u09c1\u09ad\u09ac \u0995\u09b0\u09c1\u09a8\u0964\u0964\n\u09ad\u09be\u09b0\u09a4\u09c7\u09b0 \u0986\u09a7\u09c1\u09a8\u09bf\u0995 \u09b6\u09bf\u09b2\u09cd\u09aa\u09a8\u09c8\u09a4\u09bf\u0995 \u09aa\u099f\u09cd\u09af\u09be\u0995\u09cd\u09b0\u09ae",
+      "score": 0.1337890625,
+      "max_jaccard": 0.04081632653061224,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 3
+     },
+     {
+      "text": "one tricks with some active members of the Patriots.\nOn the game board, with Bills running first, Aaron Matvee and Mark Oliver have both of their teams in the pre-game lineup. Now it\u2019s time for the opener.\nGo get them, Finals Fake and all of you sound-along. Let\u2019s",
+      "score": 0.076171875,
+      "max_jaccard": 0.12222222222222222,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "and what type of builder are they?\nSeeing as I have nothing but compliments about this trainer off of other sources I should have no hesitation in initially looking into adding him to my roster. But for anyone who has not seen the rookie, I put together some sheets of info and stats to give a better idea of what",
+      "score": 0.1533203125,
+      "max_jaccard": 0.12631578947368421,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 3
+     },
+     {
+      "text": "Jenis daging dari anjing, tetapi kita letakkan dulu pemblicaan ini.\nTidak ada masalah jika kalian suka makanan ini dan atau bahkan lebih buruk lagi jika kalian tidak suka. Kami juga pernah mencoba, tapi kami sebenarnya tidak suka karena itu sangat keras, namun banyak orang yang menyukai makanan anjing ini",
+      "score": 0.1650390625,
+      "max_jaccard": 0.04040404040404041,
+      "max_jaccard_rank": 7,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": ", arsenal will move on to the midweek ties against Segunda division side Cartagena and Celta Vigo.\nManager Rafael Benitez will decide on the final repairs his own big men before taking his side to the Champions League quarter-finals.\nSix contend going into the fourth round - Thierry Henry, Abraham \u0648\u0631\u0632\u0634\u06af\u0627\u0647 \u0633\u06cc\u062f \u062c\u0648\u0627\u0628",
+      "score": 0.10693359375,
+      "max_jaccard": 0.10638297872340426,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "on a more direct approach than usual.\nThe Yankees will of course try to replace their first baseman. Though Adams apparently does not plan on undergoing serious surgery, he misses about two weeks with a lower-leg injury. Estartuped earlier that the Yankees will miss both Diamond and fully recovered from surgery on his back.",
+      "score": 0.447265625,
+      "max_jaccard": 0.19101123595505617,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "roaring away and unaware of the puck crowd of not only one but two more passengers due to be picked up before heading into the next segment of the Olympics, rounded by a stretcher.\nNothing but good is happening at the Stadium Just Rely On You.\nAlready flat, the one-day schedule will be preempted",
+      "score": 0.1435546875,
+      "max_jaccard": 0.13186813186813187,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "out the real reason why the New Orleans Saints quarterback was so upset last week. First, though, here is a little snapshot of the Saints' win against the Carolina Panthers down in Charlotte.\nGeneral manager Mickey Lannan wasn't exactly happy with how the Saints missed out on a chance to keep the same take-no",
+      "score": 0.1689453125,
+      "max_jaccard": 0.15384615384615385,
+      "max_jaccard_rank": 2,
+      "longest_span": 3,
+      "longest_span_rank": 3
+     },
+     {
+      "text": ", below .\nWoodbeard will miss the rest of the season after breaking his rehabilitation protocol with a swimmer\u2019s dilemma (a neurological condition affecting swimming mechanics) suffered in the bullpen last week. According to Gonzalez, Woodbeard will miss about six weeks on the shelf before returning for the first Lookout matchup against",
+      "score": 0.318359375,
+      "max_jaccard": 0.19540229885057472,
+      "max_jaccard_rank": 5,
+      "longest_span": 10,
+      "longest_span_rank": 3
+     },
+     {
+      "text": "with the ability to cut back on key players on both offense and defense.\nThe Brewers are expected to deal center fielder(threated by back surgery) to the Cincinnati Reds in exchange for outfielder Hunter Belfast.\nThe moves to align the roster should help the Brewers adjust for missing first baseman Ryan Culbrey next",
+      "score": 0.15234375,
+      "max_jaccard": 0.11702127659574468,
+      "max_jaccard_rank": 1,
+      "longest_span": 6,
+      "longest_span_rank": 1
+     },
+     {
+      "text": "with many players from the roster. On Friday, off limits as well for the season.\nAnd still, the Mets now have seven pitching prospects available for assignment. Donald will miss the rest of the season but the bullpen will lose the presence of a left-handed reliever who has been a reliable workhorse since becoming a",
+      "score": 0.9296875,
+      "max_jaccard": 0.15384615384615385,
+      "max_jaccard_rank": 3,
+      "longest_span": 7,
+      "longest_span_rank": 3
+     },
+     {
+      "text": "on DNS for Game Pass servers?\nTo do that you'll first need to download the server information.\nFollow the link in the first tweet and head over to the page should not just copy the codes listed, but potentially also the link too.\nNow head over to the official game on Steam.\nLocate",
+      "score": 0.08740234375,
+      "max_jaccard": 0.16455696202531644,
+      "max_jaccard_rank": 6,
+      "longest_span": 4,
+      "longest_span_rank": 6
+     },
+     {
+      "text": ", the teams come off a 3-2 loss by the Rockies against the St. Louis Cardinals at Wrigley Field on Sunday. The Cardinals will return to the big time as the world's favorite team.\nAwfully high for now. Truly not doable, even with such big signs of success.",
+      "score": 0.138671875,
+      "max_jaccard": 0.2,
+      "max_jaccard_rank": 3,
+      "longest_span": 5,
+      "longest_span_rank": 3
+     },
+     {
+      "text": "28, a three-time MVP who played for the Yankees and Green Bay Blizzard of the Major League Explernelgarou is officially expected to miss the rest of the season after tearing his ACL in a pre-season exercise on Tuesday.\nVan Pelt will miss the rest of the season after breaking his hand during sophomore",
+      "score": 0.71484375,
+      "max_jaccard": 0.21686746987951808,
+      "max_jaccard_rank": 2,
+      "longest_span": 10,
+      "longest_span_rank": 3
+     },
+     {
+      "text": "contains a detailed section on how workers can use the Companies House app or the Events of Admission feature to apply for admission to register on Your Digital Experience.\nLower Income Tax for Income from Guernsey Taxes Fuels Next Remake in 27 May.\nThe Import Community offers tenants various options to make the process",
+      "score": 0.0703125,
+      "max_jaccard": 0.1276595744680851,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "and the GIFs added to the mix.\nWe've got previews from ESPN, The Athletic and Bleacher Report on the sneaker showdown, which includes the most anticipated matchup between the world's top two athletes: LeBron James and Stephen Curry vs. Pete Davidson and Malik Letting info from multiple sources.\nYour",
+      "score": 0.07373046875,
+      "max_jaccard": 0.07777777777777778,
+      "max_jaccard_rank": 6,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": ", swears about the league.\nYet, despite the dissatisfaction, Oakland A's general manager Billy Beane on Thursday said the club is not accepting the one-game extension of first baseman Brendan Robertson. The club at the sujet to lose three free agents this weekend, star shortstop Brandonlogen to one year left on his",
+      "score": 0.1396484375,
+      "max_jaccard": 0.11956521739130435,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "Top 5 Items to Bring on Your Vacation\nDumb\u7528\u5904\uff1aNo English in the snack bar can waste you trip. Batteries can be found for the video game past, User Manual and more.\n\u6c14\u8d28\uff1aLAnWUiP common to the modern day is its built-in Pay TV. This is why",
+      "score": 0.08203125,
+      "max_jaccard": 0.13978494623655913,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 8
+     },
+     {
+      "text": "seven named stones that make up a larger art installation called The Watercolor Project. Monet's seven watercolor paintings of the Moulin de la Galette have always paraded through an East Village amusement park and passer-by will soon have a chance to view them with their own eyes, thanks to an installation by local boutique artist",
+      "score": 0.08349609375,
+      "max_jaccard": 0.1134020618556701,
+      "max_jaccard_rank": 4,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "with the new deal, beginning Monday. The strike of more than 40,000 police is expected to last as long as its organizers say \u2014 enough to keep Debate Center under siege.\nTSS: Are you kidding me. Has anyone anything else notable to report out of Washington?\nRice:",
+      "score": 0.09912109375,
+      "max_jaccard": 0.1188118811881188,
+      "max_jaccard_rank": 8,
+      "longest_span": 3,
+      "longest_span_rank": 2
+     },
+     {
+      "text": ". In fact, now is the time to call in professional help to get things going.\nReal estate go outside. Alright then\u91cc\u9762\u7684\u201cit\u201d\u6307\u7684\u662f\u4ec0\u4e48\uff1f himself? himself? \u4f60\u662f\u8ba4\u771f\u7684\u5417\uff1f \u6211\u600e\u4e48\u8fd8\u6ca1\u770b\u5230Chris Hartman\u8131\u961f\u5462\uff1f \u5982\u679c\u5c31\u597d\u50cf\u4ed6\u662f\u5728\u627e\u4efd\u5de5\u4f5c\u4e00\u6837\uff1f \u8fd8\u662f",
+      "score": 0.1396484375,
+      "max_jaccard": 0.09473684210526316,
+      "max_jaccard_rank": 2,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": ", he promotes far-right nationalism over plausible alternatives as the country finds its way after Madrid\u2019s victory,\u30aa\u30ea\u30f3\u30d4\u30c3\u30af EXPECT THAT SORIANO WILL STAY AT BERLIN UNITED. REPORTER:Josh Kroll on Fox Sports\u6536\u542c\u8fd9\u90e8\u5267 | \u8ddf\u7740\u6cf0\u52d2\u548c\u4e00\u4e2a\u65b0\u7684\u8b66\u5458\u4e00\u8d77\u5171\u4e8b\uff0c\u63a2\u7d22\u7ebd\u7ea6\u5e02\u7684\u5730\u4e0b\u4e16\u754c\u3002\u7ecf\u9a8c",
+      "score": 0.11962890625,
+      "max_jaccard": 0.05309734513274336,
+      "max_jaccard_rank": 3,
+      "longest_span": 1,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "1\u67d3\u8272\u4f53\u4e0a\u643a\u5e26\u7684\u4eba\u7c7b\u57fa\u56e0\u7ec4\u9057\u4f20\u53d8\u5f02\u4fe1\u606f\u3002\n2021\u5e74\uff0cDCDD\u8fd8\u6709\u65e9\u671f\u5e26\u72b6\u75b1\u75b9\u75ab\u82d7\u9879\u76ee\u548c\u7ba1\u7406\u6cbb\u7597\u6027 overdose \u9879\u76ee\u3002\n\u4e24\u9879\u7814\u7a76\u5f97\u5230\u4e86\u7f8e\u56fd\u56fd\u7acb\u536b\u751f\u7814\u7a76\u9662\u7684\u652f\u6301\u3002\n\u76f8\u6bd4\u5355\u72ec\u63a5\u79cd\u65b0\u51a0\u75ab\u82d7\uff0cFoundation X \u6b63\u5728\u5f00\u53d1\u4e00\u79cd\u91c7\u7528\u201c\u5e8f\u8d2f\u514d\u75ab\u201d\u65b9\u5f0f\u63a5\u79cd\u65b0\u51a0\u75ab\u82d7\u548c",
+      "score": 0.189453125,
+      "max_jaccard": 0.04950495049504951,
+      "max_jaccard_rank": 7,
+      "longest_span": 2,
+      "longest_span_rank": 7
+     },
+     {
+      "text": "and not you; next time you don\u2019t do me again. Read the article on our website.\nHistory of the Texas Rangers\nThe Texas Rangers were founded in the American League\u2019s Washington Senators in 1972, but managed offensively for six seasons before relocating to Arlington, Texas in 19",
+      "score": 0.09033203125,
+      "max_jaccard": 0.18823529411764706,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": ", the rush to obtain federal protections for same-sex marriages. The same-sex marriage debate came a bit under scrutiny Wednesday as a new study revisited the topic of its on-and-off effectiveness. Plus, you'll get more on Southwest Airlines hiring picks, and my hometown tragedy from 2001, shortly. Beats",
+      "score": 0.2373046875,
+      "max_jaccard": 0.13043478260869565,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 7
+     },
+     {
+      "text": "so many questions kept surfacing about the roster and where the future of the club lies.\n- Does the new owner have a plan for rebuilding or just keep acquiring players? -- Maybe slightly the latter. The Royals need to hire general manager Doug Folkets and even though they now own the team, Steinbrenner",
+      "score": 0.1396484375,
+      "max_jaccard": 0.11458333333333333,
+      "max_jaccard_rank": 4,
+      "longest_span": 3,
+      "longest_span_rank": 8
+     },
+     {
+      "text": "al follow-up year. This year the Bills kick starting the season, and the coaching staff won't be altered from last season. Let's look at how the Bills hope to be better after getting off to a slow start last season.\nThe health of first-round pick Terrell Suggs has been of increasing concern",
+      "score": 0.16015625,
+      "max_jaccard": 0.10891089108910891,
+      "max_jaccard_rank": 8,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "but the first step is creating a new user account in Windows 7.\n1. Press the Windows button on your keyboard.\nThen press the power button three times in a row.\n2. Click on OK.\nThen enter your user password when prompted, and then click on OK to resume your system.",
+      "score": 0.09228515625,
+      "max_jaccard": 0.1625,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "gifs and Trends to watch on the news this week!\n- Doctor Oz weighs in on skinny dipping in the swamp on Good Morning America last week saying it\u2019s not a great idea. Well, last summer\u2019s\u7684\u4e00\u76f4\u8bf4\uff0cBut now it seems like we will need to take up that advice accordingly. With the mosquitoes",
+      "score": 0.1103515625,
+      "max_jaccard": 0.13186813186813187,
+      "max_jaccard_rank": 4,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "out. So, grab a seat and let's dive in.\n- We saw the Chiefs' offense once again miss its opportunity to take the lead in overtime for the USF win. After Marinage's great goal to give the Bills a 5-5 tie the deciding goal was missed by Leeds in the buildup",
+      "score": 0.09033203125,
+      "max_jaccard": 0.15384615384615385,
+      "max_jaccard_rank": 3,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     },
+     {
+      "text": ", and the next week. if you want to see the full-action on Lennox Lewis, watch Savannah Williams on a cameo appearance on a summer edition of \"Miss Congeniality\" to claim an extra best-bet cash position:\nBut first, I'd like to thank all of the baseball articles and blogs",
+      "score": 0.123046875,
+      "max_jaccard": 0.1134020618556701,
+      "max_jaccard_rank": 1,
+      "longest_span": 3,
+      "longest_span_rank": 6
+     },
+     {
+      "text": ". The cover art and the title are just as interesting to analyze:\nLet's start with the album title. It sounds... snarky. \"Snap a Side\" is a show piece made out of juxtaposition and emotional contradiction; going from upbeat to serious to positive again. It echo the progressive, emotional arc",
+      "score": 0.09228515625,
+      "max_jaccard": 0.11956521739130435,
+      "max_jaccard_rank": 2,
+      "longest_span": 2,
+      "longest_span_rank": 6
+     },
+     {
+      "text": "yingnier, but suddenly both starter pitchers will miss starting time.Tellington had been expected to miss time for a couple of weeks because of an ankle awkwardness, but the Brewers will make room for actual veteran lefty Trevor Hoffman, who has agreed to a three-year, $16-million extension with the team",
+      "score": 0.53515625,
+      "max_jaccard": 0.13333333333333333,
+      "max_jaccard_rank": 2,
+      "longest_span": 3,
+      "longest_span_rank": 2
+     },
+     {
+      "text": "and how the idea of \"piracy\" exists, according to Tom Billing.\nAnd then he gets to listen to music for, like, two hours straight.\nI know what you're thinking. I went the same way.\nAccording to Nielsen Music, music sales - both online and offline - have remained rock",
+      "score": 0.1240234375,
+      "max_jaccard": 0.11764705882352941,
+      "max_jaccard_rank": 6,
+      "longest_span": 3,
+      "longest_span_rank": 1
+     },
+     {
+      "text": "seven bird images, you should be able to ignore the bird icon on the data entry bar.\nChoose one, and dismiss the back button.\nMake sure to scroll with your touch.\nUnfortunately, I had to revert to controling with the cursor keyboard on my MacBook, since tapping on my laptop screen only worked",
+      "score": 0.103515625,
+      "max_jaccard": 0.12941176470588237,
+      "max_jaccard_rank": 4,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "more to find out about the causes of the epidemic that has swept through the Lower 48 states.\nMy first question for the President is, was the CDC properly prepared, given the amount of push back against the first Ebola victim, even to the extent that Memphis Health Commissioner Joe Coyle at one point threatened to",
+      "score": 0.197265625,
+      "max_jaccard": 0.14285714285714285,
+      "max_jaccard_rank": 7,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "BlackCommunities here today, many of you know me. My name is Nick Fuentes. Some of you know me from the internet. Some of you know me from Facebook. Some of you know me from Breitbart. I just want to take a moment to refer to some things. I have the opportunity to speak here today",
+      "score": 0.150390625,
+      "max_jaccard": 0.11688311688311688,
+      "max_jaccard_rank": 4,
+      "longest_span": 3,
+      "longest_span_rank": 1
+     },
+     {
+      "text": "Insert a wooden dowel into one or more of the pressure-responding pedals on the two-lever shocks. These will act as the landing gear idler to float over the uneven surface on the way down, reducing shock when the parachute has opened.\nPlace the nuts on the bottom of the wood dowel.",
+      "score": 0.158203125,
+      "max_jaccard": 0.11235955056179775,
+      "max_jaccard_rank": 4,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "282- PLL Gene\u5703\u55b7\u6dcb\u6ef4\u704c\u7cfb\u7edf12.1 \u6982\u8ff012.2 \u704c\u6e89\u9700\u6c4212.3 \u57fa\u7840\u7cfb\u7edf\u8bbe\u8ba112.4 2/4/6\u901a\u9053\u7cfb\u7edf12.5 \u7ec4\u4ef6\u8bf4\u660e12.6 \u79cd\u690d\u4f5c\u752812.7 \u704c\u6e89",
+      "score": 0.08984375,
+      "max_jaccard": 0.1111111111111111,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 7
+     },
+     {
+      "text": "but measured the time with a stopwatch. It seems that the latest car!\\\nAlso, I saw yesterday on the late Repair Shop on Speed Channel that the new car will also get a spoiler after the initial looks came out on the new Nissan GT-R.\nFranchitti will certainly have a lot to do as the",
+      "score": 0.1962890625,
+      "max_jaccard": 0.11363636363636363,
+      "max_jaccard_rank": 4,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "and I decided that I would make it a mission. Now that says a lot for my entrepreneurial spirit, but let me tell you something: it is incredibly difficult.\nWhen you set a goal for something that you\u2019re going to do, and you make a unbreakable vow to impose upon yourself, you\u2019re opening",
+      "score": 0.162109375,
+      "max_jaccard": 0.10344827586206896,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "Sports.\nBe careful not to get too happy yet about the outcome. Injuries to Jared Cunningham and Rob Turner will cost the Cougars an extra two months out of the lineup.\nAnd there's a ton of supporting cast to talk about after hearing these guys return to action Sunday with the goal of getting back to",
+      "score": 0.25,
+      "max_jaccard": 0.12087912087912088,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 1
+     },
+     {
+      "text": "last form for the Seattle Grays on the eve of the playoffs.\nFerrell returns for the third year of back-to-back starters assignment Thursday afternoon when the Senators start against the Baltimore Orioles at Camden Yards. The opener on Wednesday against the New York Mets at Citi Field was managed by the reliever who will",
+      "score": 0.1611328125,
+      "max_jaccard": 0.11458333333333333,
+      "max_jaccard_rank": 3,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "five things that will help break the drought.\nBut first, a little perspective. The drought is not an answer to the Yankees or to baseball\u2019s Summer Series.\nOf course that pun intended. If the Yankees can figure out how to to stop going scoreless, moving the Series to the Nationals Park or even just",
+      "score": 0.2490234375,
+      "max_jaccard": 0.11904761904761904,
+      "max_jaccard_rank": 9,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "and the QXF.Nmatty, K.J. Kuhn and the Bill Walton Information and Advice Legal Articles\n35:\nn's Problems\nQuestion:\nK.J.\ntml, Signs Signed by Phoenix Suns Big Man Anthony Peetchuck.\nA few days ago, this blog received a response from",
+      "score": 0.201171875,
+      "max_jaccard": 0.09782608695652174,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "24-hour emergency services for your convenience.\nLet the La Quinta by Wyndham in Breckenridge take care of the night owls with our grand selection of bar and chord entertainment, a game room, adult lounge and plenty of early-bird specials.\nLocated just off the front of the main sal",
+      "score": 0.134765625,
+      "max_jaccard": 0.14285714285714285,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "by the end of 3G (or at least that was the plan back then). But any plans for phone to tablet have been scaled back or pulled completely in some cases.\n70%\nOf this article at compress.js\n, here are the five greatest iPhone & iPad apps that will still live. Note",
+      "score": 0.1240234375,
+      "max_jaccard": 0.13978494623655913,
+      "max_jaccard_rank": 4,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "I recruit strong tenants when I get a property so that I can bring better value to the current tenant. And if the tenant has been a great tenant then we will make sure to offer him a lease to renew and probably getting more value rate because of it.\nWhen iproff is a benchmark lease term, the",
+      "score": 0.1923828125,
+      "max_jaccard": 0.1276595744680851,
+      "max_jaccard_rank": 1,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": ", significantly cutting costs and improving the fan base's viewing experience. But will Miller bring the Giants to the playoffs? And is the first pick in the first round being a true bargain?\nBased on how many times a starting pitcher will start a game, individual pitchers manage to command a significant share of all a team's",
+      "score": 0.4765625,
+      "max_jaccard": 0.14942528735632185,
+      "max_jaccard_rank": 4,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "censored or just erased from publication? What about Brat in America, which was run by Andy Green while he was alive, but came out after his sudden death? And what portrays sexuality in eros rather than umbos?\nTo hell with answers. Having read the bitchity of all the trade press lately, drop",
+      "score": 0.21484375,
+      "max_jaccard": 0.125,
+      "max_jaccard_rank": 2,
+      "longest_span": 2,
+      "longest_span_rank": 6
+     },
+     {
+      "text": "Packaging Industry: Global market report, 2018-2022, Delivers a comprehensive overview of the packaging industry across the globe. This report is designed to provide a systematic review of the far-reaching impact that the packaging industry has on the economies of countries worldwide. In addition, the report also gives",
+      "score": 0.1025390625,
+      "max_jaccard": 0.14285714285714285,
+      "max_jaccard_rank": 0,
+      "longest_span": 5,
+      "longest_span_rank": 7
+     },
+     {
+      "text": "out an update on Redmond's impending new title. Based on a report from betrayed-c_PRINT.net, the new title to replace the Defense Advanced is called Project Observe. Insiders at Microsoft say Lockheed's next generation attrite-filtration mat is already ready to go, but will not be deployed until sometime next",
+      "score": 0.05859375,
+      "max_jaccard": 0.09375,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 3
+     },
+     {
+      "text": ", in his weird, unfinished novel The Colonel of Dicksburg. But in real life, Sweeney had a wholesome run at Major League Baseball.\nMonkey Punch is a comic strip that ran from 1939-1954 written by the artist Don Matteson. It ran on the mornings of",
+      "score": 0.28125,
+      "max_jaccard": 0.1839080459770115,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "Research is increasingly bringing life back to the refractory.\nIn summer it can be dry, windy and dusty. But during the spring snow can pile up and turn it into a boxing track which had to be salted to keep train tracks clear. The railway deteriorated - a sign of more damage to come, especially",
+      "score": 0.2314453125,
+      "max_jaccard": 0.10227272727272728,
+      "max_jaccard_rank": 6,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": ", since her husband has had back surgeries for a kidney stone that the doctors say can cause permanent paralysis if not treated promptly. Larimer will return on the July 24 episode of \u043e\u0441\u0442\u0430\u043d\u0435\u0442\u0441\u044f \u0432 \u043f\u044f\u0442\u0435\u0440\u043a\u0435 \u041a\u0440\u0438\u043a\u0430\u0447\u0430. \u0415\u0433\u043e \u0441\u043e\u0441\u0442\u0430\u0432 \u0443\u0436\u0435 \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043b\u0435\u043d, \u0441 \u0414\u0436\u0435\u0439\u0441\u043e\u043d \u041a\u0440\u0438\u0441\u0442\u043e\u0444\u0444\u0435\u0440\u043e\u043c \u0434\u043b\u044f \u0437\u0430\u043c\u0435\u043d\u044b \u0413\u043e\u0440\u0434\u043e\u043d \u042d",
+      "score": 0.09375,
+      "max_jaccard": 0.12,
+      "max_jaccard_rank": 0,
+      "longest_span": 2,
+      "longest_span_rank": 5
+     },
+     {
+      "text": ", an opinion columnist writes another exception to \"I don't know what to do with my life anymore\" is getting better. And why wouldn't they? It's not like they have to be great on the field just to be great for football fans when they're beamed upon an airplane and state by state to continue",
+      "score": 0.177734375,
+      "max_jaccard": 0.15053763440860216,
+      "max_jaccard_rank": 1,
+      "longest_span": 2,
+      "longest_span_rank": 1
+     },
+     {
+      "text": "on a clear body. The next morning I described the helicopter incident to the Pearlham Police Officers. Specifically the individual who fired the shot that caused my injury. The officer contacted the man I was talking about and sent him to a hold at the PSU in New York City.\nI finally got stopped holding a gun to",
+      "score": 0.2177734375,
+      "max_jaccard": 0.12222222222222222,
+      "max_jaccard_rank": 2,
+      "longest_span": 2,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "next stop for the Andros Ptus is Ft. Lauderdale.\nthe Hurons.\nThe weekend of August 4-6 will feature the first round of playoffs for the WNBA.\nWhile the Milwaukee Rush will face the stars of the game of the night.\nBut let's start with the day one",
+      "score": 0.11474609375,
+      "max_jaccard": 0.1566265060240964,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     },
+     {
+      "text": ", copying some quotes from the actual report:\nCumin prepares a calm voice onto the icebreaker to confirm to the husband and wife that even though they will be separated for a couple of years, he will always come back to his family and love them as much as today. But for now, something serious prepares to",
+      "score": 0.11572265625,
+      "max_jaccard": 0.12631578947368421,
+      "max_jaccard_rank": 3,
+      "longest_span": 2,
+      "longest_span_rank": 2
+     },
+     {
+      "text": "and the right room for growing. Also, you can check with your funding or consulting agency or your county extension agent.\nYou can learn more about whether green beans need a crop plan by contacting one of these organizations. If you don't have a crop plan yet the information here could save you precious planting time in the",
+      "score": 0.07958984375,
+      "max_jaccard": 0.14606741573033707,
+      "max_jaccard_rank": 4,
+      "longest_span": 4,
+      "longest_span_rank": 6
+     },
+     {
+      "text": ", as the Eagles prepare for their next challenge against the Tennessee Titans in the upcoming NFL season opener.\nBut don't expect anything to go differently for the Eagles, who will surely continue to plaster their arena of offense on against their upcoming opponent.\nLet's take a closer look at all the questions surrounding the offense and",
+      "score": 0.1455078125,
+      "max_jaccard": 0.1839080459770115,
+      "max_jaccard_rank": 1,
+      "longest_span": 3,
+      "longest_span_rank": 0
+     },
+     {
+      "text": "a picture for everyone to enjoy.\nAnd on to the riches of the United States.\nThe NBA usually goes first with the playoffs on Wednesday before the next showdown begins with a series of three-week tournaments surrounding award voting on Tuesday and the process that spans the rest of the regular season before the First Round gets under way",
+      "score": 0.1025390625,
+      "max_jaccard": 0.1511627906976744,
+      "max_jaccard_rank": 0,
+      "longest_span": 4,
+      "longest_span_rank": 3
+     },
+     {
+      "text": "y by Bryan Droch.\n to get into the most critical situations of the season.\nWe're back with the same three questions, part of our little 4-for-4 where we post two on the roster and two on injuries. Enjoy.\nQuestion 1: Pittsburgh is obviously surrounded by legitimate question marks",
+      "score": 0.1005859375,
+      "max_jaccard": 0.16091954022988506,
+      "max_jaccard_rank": 0,
+      "longest_span": 3,
+      "longest_span_rank": 3
+     }
+    ]
+   }
+  }
+ ],
+ "contexts": "top-10 FineWeb contexts of L9N5711 (data/contexts.npz), as completions of the prompt",
+ "near_copy_threshold": 0.8
+}

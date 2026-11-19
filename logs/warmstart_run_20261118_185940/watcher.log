@@ -1,0 +1,1 @@
+[watcher 2026-11-18 18:59:40] watching PID 14464 (run dir /workspace/neuron-elictor/results/grpo_warmstart/20261118_185940, log /workspace/neuron-elictor/logs/warmstart_run_20261118_185940/runs_part.log): /bin/bash scripts/warmstart_run.sh

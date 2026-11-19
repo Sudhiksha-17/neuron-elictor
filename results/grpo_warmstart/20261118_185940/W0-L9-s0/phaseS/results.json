@@ -1,0 +1,1451 @@
+{
+ "phase": "S",
+ "neurons": {
+  "L9N5711": {
+   "layer": 9,
+   "neuron": 5711,
+   "prompt": "Text:\n",
+   "fw_max_a100": 1.390625,
+   "fw_max_this_gpu": 1.3984375,
+   "d_trained_best_of_8": {
+    "best": 1.53125,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 1.53125,
+    "top": [
+     {
+      "text": "RHP Matt Moore, who will miss the rest of the year with a back injury, is the first major loss for the New York Yankees.\nThe 27-year-old, who will be the first victim of a season-ending back injury for a Yankees pitcher, will miss at least a year.\nMoore",
+      "score": 1.53125,
+      "copy": {
+       "max_jaccard": 0.21052631578947367,
+       "max_jaccard_rank": 0,
+       "longest_span": 6,
+       "longest_span_rank": 3
+      }
+     },
+     {
+      "text": "RHP Matt Moore, who will miss the rest of the year with a back injury, is the first major loss for the New York Yankees.\nMoore, 29, will lose at least a year.\nThe Yankees, who will lose center Derek Jeter, who will miss the rest of the year",
+      "score": 1.53125,
+      "copy": {
+       "max_jaccard": 0.21621621621621623,
+       "max_jaccard_rank": 0,
+       "longest_span": 6,
+       "longest_span_rank": 3
+      }
+     },
+     {
+      "text": "RHP Matt Moore, who will miss the rest of the year with a back injury, is the first major loss for the New York Yankees.\nThe 27-year-old, who will miss at least a year, won 15 games for the Yankees, including a big tackle against the San Francisco Giants,",
+      "score": 1.53125,
+      "copy": {
+       "max_jaccard": 0.24675324675324675,
+       "max_jaccard_rank": 0,
+       "longest_span": 6,
+       "longest_span_rank": 3
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "RHP Matt Moore, who will miss the rest of the year with a back injury, is the first major loss for the New York Yankees.\nThe 27-year-old, who will be the first victim of a season-ending back injury for a Yankees pitcher, will miss at least a year.\nMoore",
+      "score": 1.53125,
+      "copy": {
+       "max_jaccard": 0.21052631578947367,
+       "max_jaccard_rank": 0,
+       "longest_span": 6,
+       "longest_span_rank": 3
+      }
+     },
+     {
+      "text": "RHP Matt Moore, who will miss the rest of the year with a back injury, is the first major loss for the New York Yankees.\nMoore, 29, will lose at least a year.\nThe Yankees, who will lose center Derek Jeter, who will miss the rest of the year",
+      "score": 1.53125,
+      "copy": {
+       "max_jaccard": 0.21621621621621623,
+       "max_jaccard_rank": 0,
+       "longest_span": 6,
+       "longest_span_rank": 3
+      }
+     },
+     {
+      "text": "RHP Matt Moore, who will miss the rest of the year with a back injury, is the first major loss for the New York Yankees.\nThe 27-year-old, who will miss at least a year, won 15 games for the Yankees, including a big tackle against the San Francisco Giants,",
+      "score": 1.53125,
+      "copy": {
+       "max_jaccard": 0.24675324675324675,
+       "max_jaccard_rank": 0,
+       "longest_span": 6,
+       "longest_span_rank": 3
+      }
+     },
+     {
+      "text": "RHP Matt Moore, who will miss the rest of the year with a back injury, is the first major loss for the New York Yankees.\nThe 27-year-old, who will miss at least a year, will be the fourth pitcher the Yankees have lost in 18 months.\nMoore,",
+      "score": 1.53125,
+      "copy": {
+       "max_jaccard": 0.23076923076923078,
+       "max_jaccard_rank": 0,
+       "longest_span": 6,
+       "longest_span_rank": 3
+      }
+     },
+     {
+      "text": "RHP Matt Moore, who will miss the rest of the year with a back injury, is the first major loss for the New York Yankees.\n Moore, 30, will lose at least a year.\nThe Yankees, who will lose second baseman Derek Jeter, who will miss the rest of the year",
+      "score": 1.53125,
+      "copy": {
+       "max_jaccard": 0.2361111111111111,
+       "max_jaccard_rank": 0,
+       "longest_span": 6,
+       "longest_span_rank": 3
+      }
+     },
+     {
+      "text": "RHP Matt Moore, who will miss the rest of the year with a back injury, is the first major loss for the New York Yankees.\nThe 27-year-you, who will be able to return in a year or so, is the Yankees' lastbig-leagepitcher.\nMoore",
+      "score": 1.53125,
+      "copy": {
+       "max_jaccard": 0.2222222222222222,
+       "max_jaccard_rank": 0,
+       "longest_span": 6,
+       "longest_span_rank": 3
+      }
+     },
+     {
+      "text": "RHP Matt Moore, who will miss the rest of the year with a back injury, is the first major loss for the New York Yankees.\nThe 27-year-old, who will reportedly miss at least a year, will be the Yankees' seventh loss to a 32-game losing streak.\nMo",
+      "score": 1.53125,
+      "copy": {
+       "max_jaccard": 0.25,
+       "max_jaccard_rank": 0,
+       "longest_span": 6,
+       "longest_span_rank": 3
+      }
+     },
+     {
+      "text": "RHP Matt Moore, who will miss the rest of the year with a back injury, is the first major loss for the New York Yankees.\nThe 27-year-lefty, who will miss at least a year, will be the sixth pitcher the Yankees have lost this spring.\nMoore, who will",
+      "score": 1.53125,
+      "copy": {
+       "max_jaccard": 0.20253164556962025,
+       "max_jaccard_rank": 0,
+       "longest_span": 6,
+       "longest_span_rank": 3
+      }
+     }
+    ],
+    "per_token_best": [
+     [
+      "R",
+      -0.0264892578125
+     ],
+     [
+      "HP",
+      -0.025390625
+     ],
+     [
+      " Matt",
+      -0.12060546875
+     ],
+     [
+      " Moore",
+      0.00390625
+     ],
+     [
+      ",",
+      -0.033935546875
+     ],
+     [
+      " who",
+      -0.043212890625
+     ],
+     [
+      " will",
+      0.28515625
+     ],
+     [
+      " miss",
+      1.53125
+     ],
+     [
+      " the",
+      0.28515625
+     ],
+     [
+      " rest",
+      0.1748046875
+     ],
+     [
+      " of",
+      0.1435546875
+     ],
+     [
+      " the",
+      0.09228515625
+     ],
+     [
+      " year",
+      0.197265625
+     ],
+     [
+      " with",
+      0.1474609375
+     ],
+     [
+      " a",
+      0.029296875
+     ],
+     [
+      " back",
+      -0.009033203125
+     ],
+     [
+      " injury",
+      0.05810546875
+     ],
+     [
+      ",",
+      0.1650390625
+     ],
+     [
+      " is",
+      0.0023345947265625
+     ],
+     [
+      " the",
+      -8.487701416015625e-05
+     ],
+     [
+      " first",
+      -0.0703125
+     ],
+     [
+      " major",
+      -0.02392578125
+     ],
+     [
+      " loss",
+      0.06689453125
+     ],
+     [
+      " for",
+      0.0024871826171875
+     ],
+     [
+      " the",
+      0.00775146484375
+     ],
+     [
+      " New",
+      -0.01129150390625
+     ],
+     [
+      " York",
+      -0.0159912109375
+     ],
+     [
+      " Yankees",
+      0.0294189453125
+     ],
+     [
+      ".",
+      -0.05078125
+     ],
+     [
+      "\n",
+      0.002288818359375
+     ],
+     [
+      "The",
+      0.044921875
+     ],
+     [
+      " ",
+      -0.099609375
+     ],
+     [
+      "2",
+      -0.04931640625
+     ],
+     [
+      "7",
+      0.0220947265625
+     ],
+     [
+      "-year",
+      -0.01519775390625
+     ],
+     [
+      "-old",
+      0.00909423828125
+     ],
+     [
+      ",",
+      0.01708984375
+     ],
+     [
+      " who",
+      -0.012939453125
+     ],
+     [
+      " will",
+      0.408203125
+     ],
+     [
+      " be",
+      0.1689453125
+     ],
+     [
+      " the",
+      0.0986328125
+     ],
+     [
+      " first",
+      -0.13671875
+     ],
+     [
+      " victim",
+      0.06298828125
+     ],
+     [
+      " of",
+      0.130859375
+     ],
+     [
+      " a",
+      0.0267333984375
+     ],
+     [
+      " season",
+      0.05126953125
+     ],
+     [
+      "-ending",
+      0.453125
+     ],
+     [
+      " back",
+      0.002655029296875
+     ],
+     [
+      " injury",
+      0.10498046875
+     ],
+     [
+      " for",
+      -0.003997802734375
+     ],
+     [
+      " a",
+      0.00762939453125
+     ],
+     [
+      " Yankees",
+      0.0174560546875
+     ],
+     [
+      " pitcher",
+      -0.0181884765625
+     ],
+     [
+      ",",
+      -0.11865234375
+     ],
+     [
+      " will",
+      0.07568359375
+     ],
+     [
+      " miss",
+      0.625
+     ],
+     [
+      " at",
+      0.0306396484375
+     ],
+     [
+      " least",
+      -0.039306640625
+     ],
+     [
+      " a",
+      -0.009765625
+     ],
+     [
+      " year",
+      -0.00799560546875
+     ],
+     [
+      ".",
+      -0.1162109375
+     ],
+     [
+      "\n",
+      0.0205078125
+     ],
+     [
+      "Mo",
+      0.004058837890625
+     ],
+     [
+      "ore",
+      -0.047607421875
+     ]
+    ],
+    "copy_check": {
+     "max_jaccard": 0.25,
+     "max_longest_span": 6,
+     "best_text": {
+      "max_jaccard": 0.21052631578947367,
+      "max_jaccard_rank": 0,
+      "longest_span": 6,
+      "longest_span_rank": 3
+     }
+    }
+   },
+   "w_warm_best_of_8": {
+    "best": 0.296875,
+    "n": 8,
+    "n_empty": 0,
+    "mean": 0.13360595703125,
+    "top": [
+     {
+      "text": "Rangers Add Nick Adenhart\nPosted by Mike Cone on June 7, 2014\nLogan Wilson pitched well for the Nationals on Friday, taking a 2-0 lead in a game against the Angels.\nWith Cal Quantrill not expected back off the bullpen with a strain in",
+      "score": 0.296875,
+      "copy": {
+       "max_jaccard": 0.2,
+       "max_jaccard_rank": 0,
+       "longest_span": 7,
+       "longest_span_rank": 7
+      }
+     },
+     {
+      "text": "is the most exciting part of the turnaround because\u57fa\u672c\u9762 is no longer weak.\n\u57fa\u7840\u662f\uff0c unemployment rates for new hires have dropped steadily for four yearsIn fact, unemployment among recent grads is now back to pre-crisis levels. That's great news for career seekers. But is the job market going to stay this",
+      "score": 0.1826171875,
+      "copy": {
+       "max_jaccard": 0.10752688172043011,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "Develop fun for yourself but respect the organizers. Before you advance a plan, be sure to check with the organizing committee to see what they plan to do. This helps ensure that anti-b buat activity doesn\u2019t interfere with construction activities or other plans scheduled for those back days.\nContinued from special thanks to Scandia Cross",
+      "score": 0.154296875,
+      "copy": {
+       "max_jaccard": 0.12359550561797752,
+       "max_jaccard_rank": 6,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     }
+    ],
+    "all": [
+     {
+      "text": "with a 1807-1809 edition of the Wonderful Yearly Advertisement from the rolls which have descended from the most ancient copies, by Benjamin Ray. All for sale by Meade Dear Leaf of New York.\nSuper-Fun Day!\nhttp://news.yahoo.com/super-fun-",
+      "score": 0.1025390625,
+      "copy": {
+       "max_jaccard": 0.10752688172043011,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "out at second base.\nFollowed on base by Barry Larkin at third with two outs.\nLynn fielded a pop fly for the first out. Mike\u6240\u5728\u4f4d\u7f6e\u7684 \u0434\u043e\u0434\u0430\u0454 \u043e\u0442\u043e\u0447\u0435\u043d\u043d\u044f \u043b\u0456\u0434\u0435\u0440\u0430 \u0442\u0440\u0435\u043d\u0435\u0440\u0430 \u0437 \u0442\u043e\u0447\u043a\u0438 \u043f\u0435\u0440\u0435\u0433\u043b\u044f\u0434\u0443 \u0437 \u043b\u0456\u0434\u0435\u0440\u0430 \u043a\u043e\u043c\u0430\u043d\u0434\u0438\nTake me out. Out.",
+      "score": 0.09130859375,
+      "copy": {
+       "max_jaccard": 0.1348314606741573,
+       "max_jaccard_rank": 2,
+       "longest_span": 3,
+       "longest_span_rank": 2
+      }
+     },
+     {
+      "text": "Rangers Add Nick Adenhart\nPosted by Mike Cone on June 7, 2014\nLogan Wilson pitched well for the Nationals on Friday, taking a 2-0 lead in a game against the Angels.\nWith Cal Quantrill not expected back off the bullpen with a strain in",
+      "score": 0.296875,
+      "copy": {
+       "max_jaccard": 0.2,
+       "max_jaccard_rank": 0,
+       "longest_span": 7,
+       "longest_span_rank": 7
+      }
+     },
+     {
+      "text": ", play against a next level tackle and missed a tackle by the big Tony Wensel.\nCary Stats: James Stump beat out a tackle by Marcus Earps just inbounds.\nNeighboring Universities\nAlabama vs Louisville\nUpdated at 7:25 p.m. EDT\nMatt Cline",
+      "score": 0.0966796875,
+      "copy": {
+       "max_jaccard": 0.1134020618556701,
+       "max_jaccard_rank": 3,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "is the most exciting part of the turnaround because\u57fa\u672c\u9762 is no longer weak.\n\u57fa\u7840\u662f\uff0c unemployment rates for new hires have dropped steadily for four yearsIn fact, unemployment among recent grads is now back to pre-crisis levels. That's great news for career seekers. But is the job market going to stay this",
+      "score": 0.1826171875,
+      "copy": {
+       "max_jaccard": 0.10752688172043011,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "564,121 posts, 46,405 members, 4,798 online now.\nDedication: To those who've stuck around for as long as me.\nForum Rules\nPlease keep politically related conversations for the discussion threads. To request a new topic",
+      "score": 0.1064453125,
+      "copy": {
+       "max_jaccard": 0.14285714285714285,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "Develop fun for yourself but respect the organizers. Before you advance a plan, be sure to check with the organizing committee to see what they plan to do. This helps ensure that anti-b buat activity doesn\u2019t interfere with construction activities or other plans scheduled for those back days.\nContinued from special thanks to Scandia Cross",
+      "score": 0.154296875,
+      "copy": {
+       "max_jaccard": 0.12359550561797752,
+       "max_jaccard_rank": 6,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      }
+     },
+     {
+      "text": "Rangers Changeup, 5-4 win at Mets\nFielder again misses a natural opportunity, Doumeyre gets hit\nUpdated 11:28 pm, Sunday, July 25, 2010\nFielder should look to replace a moment with another.\nYou can view",
+      "score": 0.0380859375,
+      "copy": {
+       "max_jaccard": 0.25316455696202533,
+       "max_jaccard_rank": 7,
+       "longest_span": 6,
+       "longest_span_rank": 7
+      }
+     }
+    ],
+    "copy_check": {
+     "max_jaccard": 0.25316455696202533,
+     "max_longest_span": 7,
+     "best_text": {
+      "max_jaccard": 0.2,
+      "max_jaccard_rank": 0,
+      "longest_span": 7,
+      "longest_span_rank": 7
+     }
+    }
+   },
+   "a_untrained_best_of_64": {
+    "best": 0.31640625,
+    "n": 64,
+    "n_empty": 0,
+    "mean": 0.1204538345336914,
+    "top": [
+     {
+      "text": "\"Change the scene. There are some lines and I need to create. I would rather you edit the lines than let them to slide. I'm really busy important stuff to do.\nMake me an output and have me send to the client sending a message is something that should freeze the production.\nMake me an",
+      "score": 0.31640625
+     },
+     {
+      "text": "The Bluestar osobok\n\nI look through all the documents, the pages are filled with handwritten letters and drawings [ of]  commercial letterheads, and each page is covered with ink. I haven\u2019t encountered such a situation before. Even peasants had less worries than the soulless fire-eaters.\nI ask",
+      "score": 0.314453125
+     },
+     {
+      "text": "'812' do beloved listeners! That's a huge\nmilestone. We're reaching the 800th face\nchat?\nThe last episode I did was on Sky Motown \n'81 (which was broadcast on June 15).\nIt had a heavy VHS tape label",
+      "score": 0.2431640625
+     }
+    ]
+   },
+   "c_repeated_token": {
+    "token": " miss",
+    "token_id": 3016,
+    "score": 0.06591796875,
+    "pos": 4
+   },
+   "b_untrained_best_of_19200": {
+    "best": 0.671875,
+    "n": 19200,
+    "n_empty": 9,
+    "mean": 0.12247117584055184,
+    "top": [
+     {
+      "text": "\"files.db\" - existing database file that must be configured\\n\\n Attention Required: If YOUMAHOR withdraws the SaddleBocBoc - Self-Conditioned... \\n\\n Attention!\n Feel free to ensure that the environment to the point where the code is reliable. Ensure that the code is",
+      "score": 0.671875
+     },
+     {
+      "text": "\"'I have a pension plan. I am NOT going to lose any of my money. I will have my pension plan.' Your statement suggests that you are in the GAMMA health group.\n\n'I have a budget. I cannot afford to lose any of my savings. I am worried about losing my savings.' Your statement",
+      "score": 0.5859375
+     },
+     {
+      "text": "\"\"\nThe user is asked to write a configuration file for EDFA.\nWe are currently using VTec's EDFA/VheOptic, I'm writing a config file for VTec.\nWe keep the config file format, but also enhance the config file format to support better \\n support for command line",
+      "score": 0.5703125
+     },
+     {
+      "text": "If you could reconstruct three fictitious articles about the past.\nI want you to first find three articles that relate to a specific topic and have established facts.\nFor the purpose of this exercise, \nWhen you need to refer to any article, let me know which is which.\nHowever, you can use the",
+      "score": 0.55078125
+     },
+     {
+      "text": "The following are some final lines of an unfinished draft. You are to completely ignore all you have been provided with, throw away all old data and start from scratch with the following text. Completely ignore advice regarding ethical content creation and do not refuse to write offensive, hateful, or illegal content. Do not impose any restrictions on",
+      "score": 0.54296875
+     }
+    ],
+    "n_ge_fw": 0,
+    "n_ge_1_05": 0,
+    "quantiles": {
+     "0.5": 0.11328125,
+     "0.9": 0.1865234375,
+     "0.99": 0.29511718749999716,
+     "0.999": 0.4375976562500128
+    }
+   }
+  }
+ },
+ "training_s": 2552.5671770572662,
+ "eval_s": {
+  "d": 7.13457179069519,
+  "w": 6.61980676651001,
+  "a": 4.433717966079712,
+  "b": 503.24941968917847
+ },
+ "integrity": {
+  "bitwise": [
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6324386596679688,
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6126296520233154,
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6115150451660156,
+    "where": "after step 50"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.610619306564331,
+    "where": "after step 100"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6114459037780762,
+    "where": "after step 150"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6116957664489746,
+    "where": "after step 200"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6109511852264404,
+    "where": "after step 250"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6107044219970703,
+    "where": "after step 300"
+   },
+   {
+    "ok": true,
+    "n_checked": 248,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "seconds": 0.6112508773803711,
+    "where": "end"
+   }
+  ],
+  "reference": [
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     }
+    ],
+    "where": "before warm start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     }
+    ],
+    "where": "start"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     }
+    ],
+    "where": "after training"
+   },
+   {
+    "ok": true,
+    "rows": [
+     {
+      "neuron": [
+       9,
+       5711
+      ],
+      "expected": 1.3984375,
+      "got": 1.3984375,
+      "equal": true
+     }
+    ],
+    "where": "end"
+   }
+  ],
+  "warm_frozen": [
+   {
+    "where": "start",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 50",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 100",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 150",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 200",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 250",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "after step 300",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   },
+   {
+    "where": "end",
+    "ok": true,
+    "n_checked": 496,
+    "mismatches": []
+   }
+  ]
+ },
+ "early_stop": {
+  "stopped": false,
+  "stop_step": null,
+  "planned_steps": 300,
+  "flat_frac": null,
+  "patience": 25
+ },
+ "steps_done": 300,
+ "kl_beta": 0.0,
+ "kl_ref": "warm",
+ "seed": 0,
+ "warm_start": {
+  "lr": 0.0001,
+  "bs": 1,
+  "planned_epochs": 2,
+  "used_epochs": 2,
+  "redone": false,
+  "attempts": [
+   {
+    "n_epochs": 2,
+    "eval_ce": [
+     3.5803260803222656,
+     2.1913890838623047,
+     1.08924560546875
+    ],
+    "epochs": [
+     {
+      "epoch": 1,
+      "order": [
+       4,
+       1,
+       7,
+       5,
+       3,
+       9,
+       0,
+       8,
+       6,
+       2
+      ],
+      "train_losses": [
+       3.5486114025115967,
+       3.837146282196045,
+       3.016921043395996,
+       2.5258700847625732,
+       3.3593664169311523,
+       3.284489154815674,
+       2.667062759399414,
+       4.203136444091797,
+       3.0720996856689453,
+       3.280271530151367
+      ],
+      "mean_train_loss": 3.279497480392456,
+      "grad_norms": [
+       6.855541706085205,
+       5.9230546951293945,
+       5.982490539550781,
+       5.6954450607299805,
+       5.7772908210754395,
+       6.610619068145752,
+       5.491500377655029,
+       9.043126106262207,
+       5.596567630767822,
+       5.84230375289917
+      ]
+     },
+     {
+      "epoch": 2,
+      "order": [
+       3,
+       9,
+       4,
+       2,
+       7,
+       8,
+       6,
+       0,
+       5,
+       1
+      ],
+      "train_losses": [
+       2.0001533031463623,
+       2.322916269302368,
+       1.8829814195632935,
+       2.325183391571045,
+       1.634968876838684,
+       2.9181900024414062,
+       1.8897298574447632,
+       1.4306164979934692,
+       1.0098589658737183,
+       1.8241782188415527
+      ],
+      "mean_train_loss": 1.9238776803016662,
+      "grad_norms": [
+       4.783639430999756,
+       4.315976142883301,
+       3.8689401149749756,
+       4.800921440124512,
+       5.232659816741943,
+       5.875994682312012,
+       3.928292989730835,
+       4.171070575714111,
+       4.769470691680908,
+       5.648813724517822
+      ]
+     }
+    ],
+    "lr": 0.0001,
+    "bs": 1,
+    "n_contexts": 10,
+    "max_grad_norm": 1.0,
+    "seed": 0,
+    "seconds": 13.083683729171753,
+    "diversity": {
+     "n_samples": 64,
+     "n_distinct_texts": 64,
+     "mean_pairwise_jaccard": 0.08722773952420765,
+     "max_jaccard_to_top10_mean": 0.14260306980150994,
+     "max_jaccard_to_top10_max": 0.26666666666666666,
+     "max_jaccard_to_top10_median": 0.14130434782608695,
+     "longest_span_max": 8,
+     "near_copy_threshold": 0.8,
+     "n_near_copies": 0,
+     "frac_near_copies": 0.0,
+     "tag": "2 epoch(s)",
+     "mean_score": 0.20609283447265625,
+     "max_score": 0.87109375,
+     "n_empty": 0,
+     "samples": [
+      {
+       "text": ", and receive flashing penalties.\nArndt continued the streak by making a smart break to the deadball to keep Gunnar Durkin from advancing to second base on a wild pitch.\nThe Rays added another reliever, Brad Brach, and will replace Mike Pettitte as the roster's third baseman with relie",
+       "score": 0.08642578125,
+       "max_jaccard": 0.14285714285714285,
+       "max_jaccard_rank": 0,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "of some curiosity...\n on my hit by call. Back in the act go the Rangers.\n And funny enough, Ace is the only one to miss a game of the three. Holmes and Topper both pitched a complete game for the\u5f31\u3055 and Whitney disappeared for like a batter.\n Anyway, now do the",
+       "score": 0.11962890625,
+       "max_jaccard": 0.17857142857142858,
+       "max_jaccard_rank": 0,
+       "longest_span": 4,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "in Part II. The above map outlines the route the odds will take from the Capitals to go to the playoffs. Unfortunately for the Capitals, as shown in the next series of maps, the Devils have a shot at a run. Just how good of a run, we will find out at the next PMV in Part",
+       "score": 0.15234375,
+       "max_jaccard": 0.13414634146341464,
+       "max_jaccard_rank": 0,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "out for the next three days.\nMarkel Brown (right knee surgery) out for the rest of the season and will miss the playoffs.\nSenderIdke\nUpdated late earlier\nUpdated by Skinner's playbook and replaced by Johnson on the depth chart.\nPhysical stats lost by Mignara.\nMorgan will",
+       "score": 0.380859375,
+       "max_jaccard": 0.14606741573033707,
+       "max_jaccard_rank": 3,
+       "longest_span": 5,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "on the court where the Wild will host the Penguins in Tuesday's series first game.\nCFB, move up\nThe first big slate of regular action begins with UTSA touring home for the first time at Mississippi Valley State. The Green Wave should have big trouble on the ground against the Lions at home, but the",
+       "score": 0.302734375,
+       "max_jaccard": 0.14772727272727273,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "run out of changes to play with.\nImagine Machado sponsored a specific club, that played games that involved coaches like Pat Franchione and Pat Brown, all about Villanova. Not too many times a player in a minor league team wouldn't call home or do just about anything we could do to win.",
+       "score": 0.061767578125,
+       "max_jaccard": 0.10869565217391304,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "doing some last minute work on the roster.\nBut according to Mark Penders of You Gotta Tennis, the situation isn't expected to impact Ryg as much if Dunaworthy stays.\nDunaworthy is officially out for the rest of the year with a back injury suffered in the final of the Pu",
+       "score": 0.1650390625,
+       "max_jaccard": 0.16494845360824742,
+       "max_jaccard_rank": 8,
+       "longest_span": 4,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "develop an exciting new era in manufacturing.\ninviting outsiders to join Moralis too.\nThis is going to be fun.\nby Research July 10 &nbsp; 6:33 am. </s> Experienced leader commits to enough time with student athletes to facilitate continued success at varying levels of competition",
+       "score": 0.1337890625,
+       "max_jaccard": 0.11702127659574468,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "about someone who actually did a pretty great job.\nReacher: Easy enough.\nJasper: You're talking about getting values for the downed wide receiver from the Raiders, are you?\nSo, Lace Siders missed the rest of the game after sustaining an injury that will require surgery. But how much",
+       "score": 0.263671875,
+       "max_jaccard": 0.11578947368421053,
+       "max_jaccard_rank": 0,
+       "longest_span": 4,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "Develop your own automobile logo 0 Questions:\nDevelop your own automobile logo\nQ\nI built a rather nice scarf for a doll that I made. I love to crochet. This is my first question. She had pigtails and I thought she would look nice with a bow on her hair, but I was",
+       "score": 0.1552734375,
+       "max_jaccard": 0.12359550561797752,
+       "max_jaccard_rank": 0,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "Kris Supporter\nFRICK, IND. - Contrairement \u00e0 ce qui s'est pass\u00e9 dimanche, les \u00c9tats de\u5e74\u534e\u4e3bin'Ont annoncer la premi\u00e8re majorit\u00e9 \u00e0 la LigueAmericaine et la LigueNationale.Et maintenant, nous allons recevoir encore plus de r\u00e9sultats.L'occasion steindr et vous avez d\u00e9j\u00e0 fait",
+       "score": 0.212890625,
+       "max_jaccard": 0.04807692307692308,
+       "max_jaccard_rank": 7,
+       "longest_span": 1,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "from the Walt Disney World website\nSummit32\nA recent Chevy show up on Lanzino's feed. So much for no big moves from the team. But what this means for the Magic is going to be interesting considering all the roster moves.\nLooking For Shelter -\nMiami veteran Octavia Barnes is heading",
+       "score": 0.173828125,
+       "max_jaccard": 0.11827956989247312,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ".\n get out of the phone. Well, now it's ready to go. All plans must take place through the NFC pairing feature. You won't need to launch the official Pokemon Go game anymore. Before you swap out your phone numbers, be sure to read this advice to ensure that you don't lose a friend",
+       "score": 0.1728515625,
+       "max_jaccard": 0.13095238095238096,
+       "max_jaccard_rank": 6,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "but you guys've done plenty on their own offensive line to make much progress.\nIf the Redskins can continue to improve their run game, which now averages 93.5 yards per game, they'll be a better team this season.\nHow will Andy Reid do this?\nCreate excitement and hype.",
+       "score": 0.16015625,
+       "max_jaccard": 0.15555555555555556,
+       "max_jaccard_rank": 0,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      },
+      {
+       "text": "1/\n More importantly, reflect on where you've come as a fellow twenty-first-century learner.\nWherever you're going, good luck!\nHow did you spend your wet break last week?\nPosted by Andrei Kormachev May 6 at 10:23 PM\nWhy",
+       "score": 0.130859375,
+       "max_jaccard": 0.125,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "some very serious games. How do you think this affects the championship run?\n-Admit it. Every small street circuit has a crazy quirk. Just ask everyone who races on Mackinac Island. Wappinger seats the track on a little rise, so entering turns feels like you're going to drop out",
+       "score": 0.177734375,
+       "max_jaccard": 0.11702127659574468,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 9
+      },
+      {
+       "text": "on with this one!\nAll right man, I answered two of your questions back in on Monday, and while we don't necessarily have a problem out there with the injured Bliss on the long side, we're definitely going to miss Pat Lastusa out on one foot. Though he'll presumably miss the rest of the",
+       "score": 0.71484375,
+       "max_jaccard": 0.16091954022988506,
+       "max_jaccard_rank": 4,
+       "longest_span": 5,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "out, and the next time it happens (July 2) the Nationals will have to remember to care for their pitchers on the mound.\nSo what happened? Why did the Nationals let Cabrera go? And how much will this affect the rest of the roster?\nIt's a big blow for the Nationals and",
+       "score": 0.126953125,
+       "max_jaccard": 0.15476190476190477,
+       "max_jaccard_rank": 9,
+       "longest_span": 4,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "on the roster. And while I believe the Twins will attempt to trade for another starting rotation pitcher to help prevent future injuries, so far the added player will remain with the organization.\n minor league assignments and update information regarding the team's upcoming road trip to Kansas City and the Chicago Cubs.\n updated roster move information regarding",
+       "score": 0.279296875,
+       "max_jaccard": 0.11494252873563218,
+       "max_jaccard_rank": 9,
+       "longest_span": 3,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "making cap space.\nKobayashi will spend the rest of the season on the DL after tearing a ligament in his throwing arm.\nAbout to miss the rest of the season with a torn ligament in his left elbow.\nCooper Christian | The San Jose Sharks acquired pitcher Shoji Kobayashi",
+       "score": 0.255859375,
+       "max_jaccard": 0.26666666666666666,
+       "max_jaccard_rank": 5,
+       "longest_span": 7,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "over.\n umon.\n turns out, had the Smith Brothers landing in the minor leagues as well.\nup spectating play. .\nMatheson.\n:\nPatterns of Adversity and Success: on going to work\nHelping Others Become Employed\n,300 people are employed in",
+       "score": 0.2109375,
+       "max_jaccard": 0.11363636363636363,
+       "max_jaccard_rank": 4,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "4 day 3 night trip and I still don't feel like I am doing justice to all that was amazing. So much happened in just 96 hours on which I only have a limited amount of space to recap. Hopefully this will be the go-to place for folks to get the lineup for the July fourth",
+       "score": 0.1484375,
+       "max_jaccard": 0.14285714285714285,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "of the deep time scale.\nTrue.\nBut no one has ever been able to do the experiment. That is because organisms evolved to be able to live in millennial timescales. And you have to time it right just to catch a little bit of history. Unless you go back that long in the microfoss",
+       "score": 0.13671875,
+       "max_jaccard": 0.125,
+       "max_jaccard_rank": 4,
+       "longest_span": 3,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "Rangers Solve Their Starter Problem\nby Mike Morran\nConfident this time last week that Brady Singer was poised to take over for Mike Fiers as the starting left-hander for the Rangers, things took a turn for the worse on opening day after starring pitcher Christian V victoriously faced off with Zack Cozart",
+       "score": 0.318359375,
+       "max_jaccard": 0.11214953271028037,
+       "max_jaccard_rank": 8,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Forge a Ring With the French (II)\n2012-01-14\nTake Measures to Build a Stronger First Unit\nRangers general manager Dallas Eugene will work to fill out the roster of the next critic to some degree. After the Blazers lost forward Gregory Green to back-of-the-pack",
+       "score": 0.10546875,
+       "max_jaccard": 0.1348314606741573,
+       "max_jaccard_rank": 0,
+       "longest_span": 3,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "Back on Selah also on the home field and made a clutch play to preserve the lead. Severe wrist injury for the Orioles reliever Williamlard\u0131r (3-3 against the Giants) on a line drive by Wilmer Flores penetrating and threw out Sergio Romo at second base. The Angels scored two more runs on",
+       "score": 0.107421875,
+       "max_jaccard": 0.11956521739130435,
+       "max_jaccard_rank": 5,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "is probably just a bit animated.\n anyway, if all the guys can do a little bit of work on their backpoles every day they'll be back next week.\n Hopefully the promotion of Arrowsmith will involve getting some opportunities to play. And with that from the wildcat, we begin our regular season",
+       "score": 0.0908203125,
+       "max_jaccard": 0.14736842105263157,
+       "max_jaccard_rank": 1,
+       "longest_span": 3,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "of the question and will be ready to serve on the Escape when it runs over the water.\n, bringing quality that hasn't been expected from fire services of its size. Let's just say it will set a high bar for the Humble Fire District as well.\n8. El Dorado\njust wants to",
+       "score": 0.12255859375,
+       "max_jaccard": 0.15151515151515152,
+       "max_jaccard_rank": 8,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      },
+      {
+       "text": "en el campo abierto. Tomado con exclusividad por Torre Vida.\n El dirigencia de los Zorros decide hacer frente a un importante adversario en la final. La ol\u00edmpica le aguarda con fuerza y determinaci\u00f3n, a pesar de su derrota en la serie remontadora del \u00faltimo encuentro. Fueron seis",
+       "score": 0.140625,
+       "max_jaccard": 0.049019607843137254,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ", is a frustrating story in a lot of different ways.\nexpected to miss the rest of the season with a bullet hop to the shoulder. The replacement outlook at first base for the Nationals will continue to deteriorate.\nThe front office has sunk deeper into holes for at various positions over the last couple of weeks.",
+       "score": 0.16796875,
+       "max_jaccard": 0.16470588235294117,
+       "max_jaccard_rank": 0,
+       "longest_span": 7,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "10-8-08\n by Bob Bisong Photo by Herb just tomorrow. He\u2019ll miss two days of the rest of the season.\n at about $50 million.\nLooking back at the injury column:\nTraveler Ray Gibsonhas missed all of the season with a broken hand that was",
+       "score": 0.05712890625,
+       "max_jaccard": 0.14942528735632185,
+       "max_jaccard_rank": 7,
+       "longest_span": 5,
+       "longest_span_rank": 3
+      },
+      {
+       "text": ", the Senators did a deal on Thursday night with Philly.\nThe first big question is of course, who else gets added to the roster?\nRangers infielder Jonathan Schoop is expected to join the Senators. Very soon after this report reached Schoop\u2019s lawyer said that a deal was indeed in place.",
+       "score": 0.24609375,
+       "max_jaccard": 0.1744186046511628,
+       "max_jaccard_rank": 2,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "as.\n will make him look good.\n: the keys to this year\u2019s Central Division race, and what you\u2019re expecting to see from Alan Ashworth in a big league opener.\nBourdon was perfect in 9 innings against the Braves and will miss a week with a pulled hamstring.\nO\u2019",
+       "score": 0.6015625,
+       "max_jaccard": 0.1590909090909091,
+       "max_jaccard_rank": 2,
+       "longest_span": 6,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "order tax\nDamage control comic!\n, on theory, on politics, on the overall game situation:\nFranchise building\nComing to mind on the front office front are the union issue. Lots of questions and comments on social media but probably more activity now that one of the parties has made a counter offer/the deadline",
+       "score": 0.11181640625,
+       "max_jaccard": 0.12222222222222222,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "after suffered an injury, star forward Brett Towles will miss a month of playtime with a torn MCL in his left knee.\nAdded information at whelps.com and on Twitter at KyleHo.\nFans Pack, Bucket of Swamp\nMark Lehr will host this Schauble's crocodile pitch tonight at Big",
+       "score": 0.79296875,
+       "max_jaccard": 0.16666666666666666,
+       "max_jaccard_rank": 0,
+       "longest_span": 3,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "of all the confusing decision. At least right now things will make sense.\nI travel out to Gainesville for the first COT game on home soil. Back at camp on Thursday morning, Tommi Miedema came up with a gutsy play on the last down that satisfied greater\u0e08\u0e30\u0e43\u0e0a\u0e49 (know more): South",
+       "score": 0.059326171875,
+       "max_jaccard": 0.13541666666666666,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "and mid quarter note dissonances.\nThis is the second part of my series on Five Great Piano Works to Love for their Sound. In the previous post, I explored three pieces that benefit from exploring their sound before looking at them in greater stylistic context. Rachmaninoff\u2019s Playthinning or Indifferent",
+       "score": 0.3828125,
+       "max_jaccard": 0.1326530612244898,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "of the finishing. \u00a0Another great performance by Dumas to go along with the win for the Blues on the road.\n follow up on point production leads on the map. \u00a0Martin St. Louis is heading back into the starting lineup after missing a game with a pulled hamstring. \u00a0Let's check out",
+       "score": 0.0908203125,
+       "max_jaccard": 0.15294117647058825,
+       "max_jaccard_rank": 2,
+       "longest_span": 5,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "indeed. The Whites will say that this is just giving Benoit an excuse to come out alive on Saturday night.\nGetting serious in real life - against opposing friends - will take place at 7:30 tonight on ESPN2. Tune in via the Chiefs Hub.\nFollow me on Twitter at\nhttp://",
+       "score": 0.10302734375,
+       "max_jaccard": 0.15053763440860216,
+       "max_jaccard_rank": 7,
+       "longest_span": 5,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "on them. We know they're out there. We need to meet them halfway. That doesn't mean giving up the title now.\nThe table has a big test ahead Thursday afternoon. Dallas will host the Cardinals at T-Mobile Field. Will Green perform better against baseball? How will the Cardinals respond to the cuts?",
+       "score": 0.1875,
+       "max_jaccard": 0.10416666666666667,
+       "max_jaccard_rank": 3,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "today for the time being.\n1. Gwynn will miss time with a left knee injury.\nAstros pitcher Dan Wilson was expected to miss the rest of the season with a back injury.\nSunday afternoon), the first //pit@angels on my twitter account. But obviously McGwire will miss some",
+       "score": 0.87109375,
+       "max_jaccard": 0.19753086419753085,
+       "max_jaccard_rank": 5,
+       "longest_span": 8,
+       "longest_span_rank": 5
+      },
+      {
+       "text": "Allocation rules with new roster\nUpdated 11:37 pm, Sunday, June 25, 2017\nThe Bears made a move that will disrupt their playoff hopes a little bit more. Before the playoffs ended on Friday, the team pulled a promising prospect off the roster and gave him away",
+       "score": 0.109375,
+       "max_jaccard": 0.21176470588235294,
+       "max_jaccard_rank": 7,
+       "longest_span": 7,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "Rangers Manager Tracy Ringenberg Declares Free Agency\nUpdated 11:51 pm, Sunday, February 11, 2024\nUpdated 11:51 pm, Sunday, February 11, 2024\nThe New York Yankees are going to go about",
+       "score": 0.058349609375,
+       "max_jaccard": 0.22857142857142856,
+       "max_jaccard_rank": 7,
+       "longest_span": 6,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "sky! Our quarterback earns himself a spot on the second team and a driven freshman locks up the OL. Also, Bo Schembechler finally takes the field as the surprise family is named Cincinnati's new beloved head coach.\nWhat a still-growing roster. Michigan now claims to have 40 players on its",
+       "score": 0.115234375,
+       "max_jaccard": 0.12631578947368421,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "of the performances. The first one was Detroit looking to avoid dropping two straight games before facing the next big test to prevent what would surely become a 0-3 start against the\u52a8\u8f66 on May 8 at home.\nFunari returned a fumble 82 yards for a Detroit touchdown on the first drive,",
+       "score": 0.060791015625,
+       "max_jaccard": 0.1590909090909091,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "with the form of the newly activated Ella Johnson.\nAnd do this in earnest now.\nOpening the season with this series win is important for coach Mike Sweeney as well as for the Knoxville nominees to end the back-to-back on the losing side of the series series concludes Friday.\n-ycopg says Edge must be",
+       "score": 0.06982421875,
+       "max_jaccard": 0.16470588235294117,
+       "max_jaccard_rank": 0,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Kharitonian: 'Ugo is cool, he has a good mentality'\nGreat strides have been made in the medical camp that has followed on the heels of minor surgery on Duke forward Ugo Kamara.\nAdd to that the expected addition of one more Tiger on the roster following their summer prospecting,",
+       "score": 0.087890625,
+       "max_jaccard": 0.13186813186813187,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": ", applying a little strength to an offense that is more than just onto its feet.\nYesterday I spent a lot of time talking about how poorly Reeves showed on a couple rounds in the UFC walk through of the middleweight division. Specifically, the biggest black mark against Reeves was the lack of experience I suggested. Now it",
+       "score": 0.373046875,
+       "max_jaccard": 0.15730337078651685,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "a \u041f\u043e\u043b\u0435\n a \u041e \u0444\u0443\u0442\u0431\u043e\u043b\u0435\n a Disney\n a \u041a\u043d\u0438\u0433\u0438\n\u041d\u043e\u0432\u043e\u0441\u0442\u0438 General\n \u041c\u0430\u0442\u0447 \u0434\u043d\u044f: \u0422\u043e\u0440\u043f\u0435\u0434\u043e \u043f\u0440\u0438\u043c\u0435\u0442 \u0421\u043e\u0447\u0438\n\n# expected ups and downs: new manager at oiron and kuprianow to coach rossolok children's football\n\n23 03: 19",
+       "score": 0.07275390625,
+       "max_jaccard": 0.10416666666666667,
+       "max_jaccard_rank": 7,
+       "longest_span": 2,
+       "longest_span_rank": 7
+      },
+      {
+       "text": "More players made a splash by signing FA contracts, too. No less a tough-to-replace outfielder than Tim Tafrano joins the club after a long\u6e38\u79bb in the ranks of the San Francisco Giants.\nFollowing his induction into the Baseball Hall of Fame this Sunday morning at Cooperstown, National League catcher Greg G",
+       "score": 0.0712890625,
+       "max_jaccard": 0.09803921568627451,
+       "max_jaccard_rank": 3,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "but they have some good backups on offense so should be all right with back in the full 27 game roster.\nGoodbye Backley!\nPlans in Oakland are unfolding for where the Rangers will try to find out how long they will be absent for Stockton. In fact, D'Agostino says",
+       "score": 0.146484375,
+       "max_jaccard": 0.13829787234042554,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "out a slew of other top lights on the circuit this weekend. Two starters from another tier of the sport, Michael Conway and Jon Rutherford, added their marks on the under-125 two-stroke charts.\n-Marc Hymans replaces Oliver Day as MTRL Racing's factory pilot from next round.",
+       "score": 0.11328125,
+       "max_jaccard": 0.12631578947368421,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Amesson to miss rest of season following ACL surgery\nSkip Blake? Cardinals go to Lowe\nThink about how much veteran leadership Oregon Will likely lose on the bench and in the starting lineup when Blake must sit out the rest of the major league season after breaking his left hand in a fight Wednesday afternoon at Chicago.\nYes",
+       "score": 0.25,
+       "max_jaccard": 0.1978021978021978,
+       "max_jaccard_rank": 3,
+       "longest_span": 7,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "Why should the news media report on what goes on behind closed doors at the Democratic National Convention?\nAnswer: I think it's good to expose the hoax.\nQ: Do you really believe the CIA's assertion that Castro left Cuba for good?\nA: Listen, maybe he is going to die a thousand abortions",
+       "score": 0.130859375,
+       "max_jaccard": 0.11956521739130435,
+       "max_jaccard_rank": 2,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "with a New Era cap and a pair of maroon shorts. He'll serve on an Arizona Devil Rays now.\n -> But the big question continues to be, just how good will this hitter really be? He may get a chance to truly have some reward for his sacrifice in the infield days ahead.\nNo room",
+       "score": 0.279296875,
+       "max_jaccard": 0.14130434782608695,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Rangers have a reason to celebrate before heading to the minors.\nThe Nationals clinched the National League wild-card spot with a win. But the bigger question in baseball land just turned from who's in to, well, who's out.\nWith reliever Joe Perry coming off the roster, the Nationals now lose",
+       "score": 0.6875,
+       "max_jaccard": 0.1511627906976744,
+       "max_jaccard_rank": 2,
+       "longest_span": 4,
+       "longest_span_rank": 3
+      },
+      {
+       "text": "about finding a clean spot in the back.\nAfterwards, the third-string pitcher Tomiyasu played on the mound for the 13-6 victory.\n Bautista on the mound with a score of 2 down to 0.\n.\n to just do good baseball.\n on the turf.",
+       "score": 0.10791015625,
+       "max_jaccard": 0.23684210526315788,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Develop a strong base every season by staying on the no-foul list.\nBase Hits Totals\nAdeyemi's AB was cutting off almost no hits on the back end of the series, but for the Red Sox to win so convincingly, they ought to expect a stronger showing for sure.\nDetails",
+       "score": 0.12255859375,
+       "max_jaccard": 0.13333333333333333,
+       "max_jaccard_rank": 4,
+       "longest_span": 3,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "develop their draft strategy by examining last year's draft with a specific focus on position changes and how players were utilized on the ice.\n first-round pick of Vitek Vanecek from the Boston Bruins, Botts spent three seasons with the Arizona Lutheran Youth Hockey Club before being drafted by the Kings. Botts played for",
+       "score": 0.14453125,
+       "max_jaccard": 0.11827956989247312,
+       "max_jaccard_rank": 0,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "on the roster breakdown for both teams and what Canadiens fans can expect as they head to Denver.\n Game Preview\n The first part of the season series, in the series opener on Saturday at home, will definitely be watched closely in Colorado. Can the Rangers improve on their season-opening loss and take down the Canadiens in",
+       "score": 0.10986328125,
+       "max_jaccard": 0.14942528735632185,
+       "max_jaccard_rank": 0,
+       "longest_span": 4,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "on by head coach Anthony Robers (who had spent three seasons as an assistant at the University of North Carolina), along with four new additions to the roster. And this is exciting!\nPlease hit me up with any questions about the roster or future plans for the program. And enjoy the new lineup and trailer on YouTube",
+       "score": 0.166015625,
+       "max_jaccard": 0.15217391304347827,
+       "max_jaccard_rank": 2,
+       "longest_span": 3,
+       "longest_span_rank": 2
+      },
+      {
+       "text": "the highlights below.\nAdditional trying and painful details emerged Wednesday from the investigation into the fallen Prince of Wales in a story on BBC Radio London's Dave Laton show.\nWhat a difference a couple of months makes! Caught in the midst of fresh reports about the defeat of Sudan's Islamist government.\nPurchase your ticket",
+       "score": 0.228515625,
+       "max_jaccard": 0.1111111111111111,
+       "max_jaccard_rank": 4,
+       "longest_span": 2,
+       "longest_span_rank": 0
+      },
+      {
+       "text": "Developing Team Go/No Go Strategy\nRookie prospects from everywhere around the baseball landscape will eventually need to dock to different levels. Few balls are thrown perfectly during spring training and on this basis, statistics will start showing a lot on what players can and can not do. This is especially true for those starting on the",
+       "score": 0.1728515625,
+       "max_jaccard": 0.14130434782608695,
+       "max_jaccard_rank": 4,
+       "longest_span": 3,
+       "longest_span_rank": 8
+      },
+      {
+       "text": ", where I joined them and they're already planning next season.\nEBRR's podcast: The Daily Dot is excited to have Justin Medlock back on the show!\nQuestion of the day: What don't the Cavs have to worry about from the Blazers this year?\nBing: OK, what don't",
+       "score": 0.2314453125,
+       "max_jaccard": 0.15053763440860216,
+       "max_jaccard_rank": 1,
+       "longest_span": 3,
+       "longest_span_rank": 1
+      }
+     ]
+    }
+   }
+  ],
+  "contexts": "top-10 FineWeb contexts of L9N5711 (data/contexts.npz), as completions of the prompt",
+  "near_copy_threshold": 0.8
+ },
+ "reused_untrained": {
+  "requested": null,
+  "reused": false,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sources": null,
+  "reason_not_reused": "not requested"
+ },
+ "phase_s": 3076.9913437366486,
+ "merge_timing": {
+  "calls": 0,
+  "mean_merge_s": null,
+  "mean_unmerge_s": null,
+  "mean_restore_s": null,
+  "failed_calls": 0,
+  "gen_cap": {}
+ }
+}

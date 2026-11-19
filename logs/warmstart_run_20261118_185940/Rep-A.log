@@ -1,0 +1,341 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   0%|          | 1/723 [00:00<02:20,  5.15it/s]Loading weights:   4%|▎         | 26/723 [00:00<00:06, 107.14it/s]Loading weights:   6%|▌         | 42/723 [00:00<00:05, 126.69it/s]Loading weights:   9%|▉         | 64/723 [00:00<00:04, 156.06it/s]Loading weights:  11%|█▏        | 82/723 [00:00<00:03, 163.44it/s]Loading weights:  14%|█▍        | 100/723 [00:00<00:03, 161.43it/s]Loading weights:  18%|█▊        | 128/723 [00:00<00:03, 190.30it/s]Loading weights:  20%|██        | 148/723 [00:00<00:03, 181.50it/s]Loading weights:  24%|██▎       | 171/723 [00:01<00:02, 191.19it/s]Loading weights:  26%|██▋       | 191/723 [00:01<00:02, 192.20it/s]Loading weights:  29%|██▉       | 211/723 [00:01<00:02, 183.53it/s]Loading weights:  32%|███▏      | 233/723 [00:01<00:02, 190.75it/s]Loading weights:  35%|███▍      | 253/723 [00:01<00:02, 190.35it/s]Loading weights:  38%|███▊      | 274/723 [00:01<00:02, 195.85it/s]Loading weights:  41%|████      | 294/723 [00:01<00:02, 185.78it/s]Loading weights:  43%|████▎     | 313/723 [00:01<00:02, 179.92it/s]Loading weights:  47%|████▋     | 340/723 [00:01<00:01, 201.36it/s]Loading weights:  50%|████▉     | 361/723 [00:02<00:01, 190.30it/s]Loading weights:  53%|█████▎    | 383/723 [00:02<00:01, 196.96it/s]Loading weights:  56%|█████▋    | 407/723 [00:02<00:01, 202.52it/s]Loading weights:  59%|█████▉    | 428/723 [00:02<00:01, 192.80it/s]Loading weights:  76%|███████▌  | 547/723 [00:02<00:00, 464.02it/s]Loading weights:  93%|█████████▎| 670/723 [00:02<00:00, 670.04it/s]Loading weights: 100%|██████████| 723/723 [00:02<00:00, 272.11it/s]
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3303: FutureWarning: `is_gradient_checkpointing` is deprecated and will be removed in v6. Use `is_activation_checkpointing` instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py:3195: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+[2026-11-18 19:01:05] base-weight backup: 248 LoRA base weights + 0 embedding rows, 7.14 GB pinned CPU, 23.3s
+[2026-11-18 19:01:06] phase A: neurons ['L14N8949'], FineWeb max this GPU [3.046875]; 64 completions/step; 64,929,792 trainable params; micro_bs 32, gen_batch 192
+[2026-11-18 19:01:07] bitwise base-weight check (start): PASS (248 tensors, 0 mismatched [], 0.6s)
+[2026-11-18 19:01:09] reference-text check (start): PASS L14N8949 3.046875 (expected 3.046875)
+/workspace/neuron-elictor/hermes/grpo.py:433: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  lp_sum += float((logp * m).sum()); lp_n += int(m.sum())
+[2026-11-18 19:01:19] step 1/300 10.0s (gen 6.4 score 0.6 train 3.0) trained 64/64 reward 0.050 empty 0.000 flat 0.000 kl 0.0 gn 0.694 lr 2.00e-05 mem 16.1GB | L14N8949: mean 0.154 max 0.4609375
+[2026-11-18 19:01:28] step 2/300 9.6s (gen 6.8 score 0.6 train 2.2) trained 64/64 reward 0.061 empty 0.000 flat 0.000 kl 0.00113 gn 0.634 lr 1.99e-05 mem 16.6GB | L14N8949: mean 0.186 max 1.453125
+[2026-11-18 19:01:37] step 3/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.051 empty 0.000 flat 0.000 kl 0.00249 gn 0.582 lr 1.99e-05 mem 16.6GB | L14N8949: mean 0.156 max 0.63671875
+[2026-11-18 19:01:47] step 4/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.050 empty 0.000 flat 0.000 kl 0.00563 gn 0.658 lr 1.98e-05 mem 16.6GB | L14N8949: mean 0.152 max 0.734375
+[2026-11-18 19:01:56] step 5/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.045 empty 0.000 flat 0.000 kl 0.00947 gn 1.469 lr 1.97e-05 mem 16.6GB | L14N8949: mean 0.136 max 0.51953125
+[2026-11-18 19:02:05] step 6/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.058 empty 0.000 flat 0.000 kl 0.01416 gn 0.624 lr 1.97e-05 mem 16.6GB | L14N8949: mean 0.177 max 0.6015625
+[2026-11-18 19:02:14] step 7/300 9.1s (gen 6.4 score 0.6 train 2.2) trained 64/64 reward 0.063 empty 0.000 flat 0.000 kl 0.02061 gn 0.600 lr 1.96e-05 mem 16.6GB | L14N8949: mean 0.191 max 1.5390625
+[2026-11-18 19:02:23] step 8/300 9.3s (gen 6.5 score 0.6 train 2.2) trained 64/64 reward 0.051 empty 0.000 flat 0.000 kl 0.0291 gn 0.663 lr 1.95e-05 mem 16.6GB | L14N8949: mean 0.154 max 0.83984375
+[2026-11-18 19:02:32] step 9/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.065 empty 0.000 flat 0.000 kl 0.03811 gn 0.641 lr 1.95e-05 mem 16.6GB | L14N8949: mean 0.199 max 1.078125
+[2026-11-18 19:02:41] step 10/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.059 empty 0.000 flat 0.000 kl 0.04458 gn 0.645 lr 1.94e-05 mem 16.6GB | L14N8949: mean 0.18 max 0.82421875
+[2026-11-18 19:02:41] PROJECTED phase A: training 0.76 h (9.2 s/step x 300), evaluations ~0.61 h (19,272 samples at 100 ms/sample), total ~1.41 h; ends ~2026-11-18 20:25:51
+[2026-11-18 19:02:51] step 11/300 9.5s (gen 6.4 score 0.6 train 2.5) trained 64/64 reward 0.063 empty 0.000 flat 0.000 kl 0.05182 gn 0.645 lr 1.93e-05 mem 16.6GB | L14N8949: mean 0.193 max 0.4921875
+[2026-11-18 19:03:00] step 12/300 9.2s (gen 6.4 score 0.6 train 2.2) trained 64/64 reward 0.064 empty 0.000 flat 0.000 kl 0.05923 gn 0.644 lr 1.93e-05 mem 16.6GB | L14N8949: mean 0.194 max 0.890625
+[2026-11-18 19:03:09] step 13/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.072 empty 0.000 flat 0.000 kl 0.07183 gn 0.677 lr 1.92e-05 mem 16.6GB | L14N8949: mean 0.218 max 0.89453125
+[2026-11-18 19:03:18] step 14/300 9.2s (gen 6.3 score 0.7 train 2.2) trained 64/64 reward 0.059 empty 0.000 flat 0.000 kl 0.08063 gn 0.615 lr 1.91e-05 mem 16.6GB | L14N8949: mean 0.181 max 0.6015625
+[2026-11-18 19:03:28] step 15/300 9.2s (gen 6.4 score 0.6 train 2.2) trained 64/64 reward 0.064 empty 0.000 flat 0.000 kl 0.07559 gn 0.700 lr 1.91e-05 mem 16.6GB | L14N8949: mean 0.195 max 0.953125
+[2026-11-18 19:03:37] step 16/300 9.4s (gen 6.6 score 0.6 train 2.2) trained 64/64 reward 0.067 empty 0.000 flat 0.000 kl 0.09792 gn 0.688 lr 1.90e-05 mem 16.6GB | L14N8949: mean 0.204 max 0.765625
+[2026-11-18 19:03:46] step 17/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.062 empty 0.000 flat 0.000 kl 0.16253 gn 0.666 lr 1.89e-05 mem 16.6GB | L14N8949: mean 0.188 max 0.6640625
+[2026-11-18 19:03:55] step 18/300 9.3s (gen 6.5 score 0.6 train 2.2) trained 64/64 reward 0.085 empty 0.000 flat 0.000 kl 0.16591 gn 0.605 lr 1.89e-05 mem 16.6GB | L14N8949: mean 0.26 max 1.1015625
+[2026-11-18 19:04:05] step 19/300 9.3s (gen 6.5 score 0.6 train 2.2) trained 64/64 reward 0.081 empty 0.000 flat 0.000 kl 0.12243 gn 0.668 lr 1.88e-05 mem 16.6GB | L14N8949: mean 0.248 max 0.83984375
+[2026-11-18 19:04:14] step 20/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.071 empty 0.000 flat 0.000 kl 0.15236 gn 0.640 lr 1.87e-05 mem 16.6GB | L14N8949: mean 0.218 max 0.5625
+[2026-11-18 19:04:23] step 21/300 9.4s (gen 6.3 score 0.6 train 2.5) trained 64/64 reward 0.084 empty 0.000 flat 0.000 kl 0.17053 gn 0.703 lr 1.87e-05 mem 16.6GB | L14N8949: mean 0.256 max 1.2890625
+[2026-11-18 19:04:32] step 22/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.080 empty 0.000 flat 0.000 kl 0.20616 gn 0.612 lr 1.86e-05 mem 16.6GB | L14N8949: mean 0.245 max 1.1796875
+[2026-11-18 19:04:41] step 23/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.081 empty 0.000 flat 0.000 kl 0.15152 gn 0.679 lr 1.85e-05 mem 16.6GB | L14N8949: mean 0.247 max 1.2421875
+[2026-11-18 19:04:50] step 24/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.085 empty 0.000 flat 0.000 kl 0.33445 gn 0.641 lr 1.85e-05 mem 16.6GB | L14N8949: mean 0.258 max 1.375
+[2026-11-18 19:05:00] step 25/300 9.2s (gen 6.4 score 0.6 train 2.2) trained 64/64 reward 0.089 empty 0.000 flat 0.000 kl 0.16147 gn 0.628 lr 1.84e-05 mem 16.6GB | L14N8949: mean 0.271 max 0.96875
+[2026-11-18 19:05:09] step 26/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.087 empty 0.000 flat 0.000 kl 0.15701 gn 0.689 lr 1.83e-05 mem 16.6GB | L14N8949: mean 0.264 max 1.1328125
+[2026-11-18 19:05:18] step 27/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.109 empty 0.000 flat 0.000 kl 0.20919 gn 0.671 lr 1.83e-05 mem 16.6GB | L14N8949: mean 0.332 max 1.2578125
+[2026-11-18 19:05:27] step 28/300 9.2s (gen 6.4 score 0.6 train 2.2) trained 64/64 reward 0.093 empty 0.000 flat 0.000 kl 0.20181 gn 0.651 lr 1.82e-05 mem 16.6GB | L14N8949: mean 0.285 max 1.109375
+[2026-11-18 19:05:36] step 29/300 9.1s (gen 6.4 score 0.6 train 2.2) trained 64/64 reward 0.105 empty 0.000 flat 0.000 kl 0.16876 gn 0.637 lr 1.81e-05 mem 16.6GB | L14N8949: mean 0.321 max 1.4375
+[2026-11-18 19:05:45] step 30/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.096 empty 0.000 flat 0.000 kl 0.24161 gn 0.714 lr 1.81e-05 mem 16.6GB | L14N8949: mean 0.292 max 0.81640625
+[2026-11-18 19:05:54] step 31/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 0.109 empty 0.000 flat 0.000 kl 0.20147 gn 0.673 lr 1.80e-05 mem 16.6GB | L14N8949: mean 0.332 max 1.5625
+[2026-11-18 19:06:04] step 32/300 9.4s (gen 6.3 score 0.6 train 2.5) trained 64/64 reward 0.122 empty 0.000 flat 0.000 kl 0.20975 gn 1.028 lr 1.79e-05 mem 16.6GB | L14N8949: mean 0.371 max 1.40625
+[2026-11-18 19:06:13] step 33/300 9.2s (gen 6.4 score 0.6 train 2.2) trained 64/64 reward 0.132 empty 0.000 flat 0.000 kl 0.27537 gn 0.920 lr 1.79e-05 mem 16.6GB | L14N8949: mean 0.401 max 1.8671875
+[2026-11-18 19:06:22] step 34/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.141 empty 0.000 flat 0.000 kl 0.32951 gn 0.942 lr 1.78e-05 mem 16.6GB | L14N8949: mean 0.43 max 1.796875
+[2026-11-18 19:06:31] step 35/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.148 empty 0.000 flat 0.000 kl 0.36909 gn 0.975 lr 1.77e-05 mem 16.6GB | L14N8949: mean 0.45 max 2.296875
+[2026-11-18 19:06:40] step 36/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.163 empty 0.000 flat 0.000 kl 0.34512 gn 1.073 lr 1.77e-05 mem 16.6GB | L14N8949: mean 0.496 max 2.0625
+[2026-11-18 19:06:49] step 37/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.140 empty 0.000 flat 0.000 kl 0.41355 gn 0.922 lr 1.76e-05 mem 16.6GB | L14N8949: mean 0.427 max 1.4453125
+[2026-11-18 19:06:58] step 38/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.157 empty 0.000 flat 0.000 kl 0.37871 gn 0.916 lr 1.75e-05 mem 16.6GB | L14N8949: mean 0.477 max 1.390625
+[2026-11-18 19:07:07] step 39/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.162 empty 0.000 flat 0.000 kl 0.37318 gn 1.045 lr 1.75e-05 mem 16.6GB | L14N8949: mean 0.495 max 1.125
+[2026-11-18 19:07:17] step 40/300 9.2s (gen 6.4 score 0.6 train 2.2) trained 64/64 reward 0.185 empty 0.000 flat 0.000 kl 0.38376 gn 0.978 lr 1.74e-05 mem 16.6GB | L14N8949: mean 0.563 max 1.484375
+[2026-11-18 19:07:26] step 41/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.192 empty 0.000 flat 0.000 kl 0.44275 gn 0.939 lr 1.73e-05 mem 16.6GB | L14N8949: mean 0.584 max 2.078125
+[2026-11-18 19:07:35] step 42/300 9.3s (gen 6.3 score 0.6 train 2.4) trained 64/64 reward 0.224 empty 0.000 flat 0.000 kl 0.39167 gn 0.914 lr 1.73e-05 mem 16.6GB | L14N8949: mean 0.683 max 2.1875
+[2026-11-18 19:07:44] step 43/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 0.251 empty 0.000 flat 0.000 kl 0.4295 gn 1.247 lr 1.72e-05 mem 16.6GB | L14N8949: mean 0.765 max 1.9296875
+[2026-11-18 19:07:53] step 44/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.240 empty 0.000 flat 0.000 kl 0.86568 gn 1.237 lr 1.71e-05 mem 16.6GB | L14N8949: mean 0.73 max 1.8671875
+[2026-11-18 19:08:02] step 45/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.264 empty 0.000 flat 0.000 kl 0.7145 gn 1.437 lr 1.71e-05 mem 16.6GB | L14N8949: mean 0.805 max 1.8203125
+[2026-11-18 19:08:11] step 46/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.308 empty 0.000 flat 0.000 kl 0.71954 gn 1.681 lr 1.70e-05 mem 16.6GB | L14N8949: mean 0.938 max 2.890625
+[2026-11-18 19:08:20] step 47/300 9.0s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.313 empty 0.000 flat 0.000 kl 0.70088 gn 2.177 lr 1.69e-05 mem 16.6GB | L14N8949: mean 0.955 max 2.015625
+[2026-11-18 19:08:29] step 48/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 0.296 empty 0.000 flat 0.000 kl 0.75762 gn 1.860 lr 1.69e-05 mem 16.6GB | L14N8949: mean 0.902 max 1.7578125
+[2026-11-18 19:08:38] step 49/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.340 empty 0.000 flat 0.000 kl 0.76893 gn 1.331 lr 1.68e-05 mem 16.6GB | L14N8949: mean 1.035 max 2.671875
+[2026-11-18 19:08:47] step 50/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.353 empty 0.000 flat 0.000 kl 0.72055 gn 1.419 lr 1.67e-05 mem 16.6GB | L14N8949: mean 1.075 max 2.0
+[2026-11-18 19:08:48] bitwise base-weight check (after step 50): PASS (248 tensors, 0 mismatched [], 0.6s)
+[2026-11-18 19:08:57] step 51/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.384 empty 0.000 flat 0.000 kl 0.9179 gn 1.473 lr 1.67e-05 mem 16.6GB | L14N8949: mean 1.169 max 3.09375
+[2026-11-18 19:09:07] step 52/300 9.4s (gen 6.3 score 0.6 train 2.5) trained 64/64 reward 0.363 empty 0.000 flat 0.000 kl 0.94704 gn 1.697 lr 1.66e-05 mem 16.6GB | L14N8949: mean 1.107 max 2.328125
+[2026-11-18 19:09:16] step 53/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.379 empty 0.000 flat 0.000 kl 0.93377 gn 1.497 lr 1.65e-05 mem 16.6GB | L14N8949: mean 1.153 max 2.390625
+[2026-11-18 19:09:25] step 54/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.387 empty 0.000 flat 0.000 kl 0.98419 gn 1.478 lr 1.65e-05 mem 16.6GB | L14N8949: mean 1.179 max 2.484375
+[2026-11-18 19:09:34] step 55/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.360 empty 0.000 flat 0.000 kl 1.20611 gn 1.761 lr 1.64e-05 mem 16.6GB | L14N8949: mean 1.095 max 2.9375
+[2026-11-18 19:09:43] step 56/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.408 empty 0.000 flat 0.000 kl 0.97469 gn 1.624 lr 1.63e-05 mem 16.6GB | L14N8949: mean 1.244 max 2.4375
+[2026-11-18 19:09:52] step 57/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.405 empty 0.000 flat 0.000 kl 1.08901 gn 1.778 lr 1.63e-05 mem 16.6GB | L14N8949: mean 1.235 max 2.421875
+[2026-11-18 19:10:01] step 58/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.451 empty 0.000 flat 0.000 kl 1.08898 gn 1.427 lr 1.62e-05 mem 16.6GB | L14N8949: mean 1.373 max 2.640625
+[2026-11-18 19:10:10] step 59/300 8.9s (gen 6.1 score 0.6 train 2.2) trained 64/64 reward 0.488 empty 0.000 flat 0.000 kl 1.22396 gn 1.519 lr 1.61e-05 mem 16.6GB | L14N8949: mean 1.488 max 2.984375
+[2026-11-18 19:10:19] step 60/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 0.525 empty 0.000 flat 0.000 kl 1.20322 gn 1.686 lr 1.61e-05 mem 16.6GB | L14N8949: mean 1.601 max 2.75
+[2026-11-18 19:10:28] step 61/300 9.3s (gen 6.5 score 0.6 train 2.2) trained 64/64 reward 0.519 empty 0.000 flat 0.000 kl 1.53962 gn 1.668 lr 1.60e-05 mem 16.6GB | L14N8949: mean 1.582 max 2.9375
+[2026-11-18 19:10:37] step 62/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 0.550 empty 0.000 flat 0.000 kl 1.26867 gn 2.132 lr 1.59e-05 mem 16.6GB | L14N8949: mean 1.676 max 4.1875
+[2026-11-18 19:10:47] step 63/300 9.2s (gen 6.2 score 0.6 train 2.5) trained 64/64 reward 0.498 empty 0.000 flat 0.000 kl 1.49269 gn 1.774 lr 1.59e-05 mem 16.6GB | L14N8949: mean 1.518 max 3.0
+[2026-11-18 19:10:56] step 64/300 8.9s (gen 6.1 score 0.6 train 2.2) trained 64/64 reward 0.541 empty 0.000 flat 0.000 kl 1.44415 gn 2.386 lr 1.58e-05 mem 16.6GB | L14N8949: mean 1.648 max 3.484375
+[2026-11-18 19:11:05] step 65/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 0.571 empty 0.000 flat 0.000 kl 1.47049 gn 2.108 lr 1.57e-05 mem 16.6GB | L14N8949: mean 1.739 max 3.515625
+[2026-11-18 19:11:14] step 66/300 8.9s (gen 6.1 score 0.6 train 2.2) trained 64/64 reward 0.614 empty 0.000 flat 0.000 kl 1.55664 gn 3.004 lr 1.57e-05 mem 16.6GB | L14N8949: mean 1.87 max 4.1875
+[2026-11-18 19:11:22] step 67/300 8.9s (gen 6.1 score 0.6 train 2.2) trained 64/64 reward 0.586 empty 0.000 flat 0.000 kl 1.58124 gn 3.241 lr 1.56e-05 mem 16.6GB | L14N8949: mean 1.786 max 3.296875
+[2026-11-18 19:11:31] step 68/300 8.9s (gen 6.1 score 0.6 train 2.2) trained 64/64 reward 0.584 empty 0.000 flat 0.000 kl 1.68909 gn 3.580 lr 1.55e-05 mem 16.6GB | L14N8949: mean 1.78 max 4.46875
+[2026-11-18 19:11:41] step 69/300 9.5s (gen 6.7 score 0.6 train 2.2) trained 64/64 reward 0.542 empty 0.000 flat 0.000 kl 2.61299 gn 3.031 lr 1.55e-05 mem 16.6GB | L14N8949: mean 1.651 max 3.515625
+[2026-11-18 19:11:50] step 70/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 0.624 empty 0.000 flat 0.000 kl 1.56024 gn 3.368 lr 1.54e-05 mem 16.6GB | L14N8949: mean 1.901 max 3.953125
+[2026-11-18 19:11:59] step 71/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.588 empty 0.000 flat 0.000 kl 1.50295 gn 3.367 lr 1.53e-05 mem 16.6GB | L14N8949: mean 1.792 max 3.515625
+[2026-11-18 19:12:08] step 72/300 9.2s (gen 6.4 score 0.6 train 2.2) trained 64/64 reward 0.691 empty 0.000 flat 0.000 kl 2.48657 gn 3.248 lr 1.53e-05 mem 16.6GB | L14N8949: mean 2.105 max 3.765625
+[2026-11-18 19:12:17] step 73/300 9.3s (gen 6.2 score 0.6 train 2.5) trained 64/64 reward 0.647 empty 0.000 flat 0.000 kl 1.68165 gn 3.555 lr 1.52e-05 mem 16.6GB | L14N8949: mean 1.971 max 3.390625
+[2026-11-18 19:12:27] step 74/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.667 empty 0.000 flat 0.000 kl 1.76074 gn 3.426 lr 1.51e-05 mem 16.6GB | L14N8949: mean 2.033 max 3.296875
+[2026-11-18 19:12:36] step 75/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.718 empty 0.000 flat 0.000 kl 1.64668 gn 3.262 lr 1.51e-05 mem 16.6GB | L14N8949: mean 2.187 max 3.609375
+[2026-11-18 19:12:45] step 76/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.694 empty 0.000 flat 0.000 kl 1.64121 gn 3.094 lr 1.50e-05 mem 16.6GB | L14N8949: mean 2.115 max 3.59375
+[2026-11-18 19:12:54] step 77/300 9.2s (gen 6.4 score 0.6 train 2.2) trained 64/64 reward 0.746 empty 0.000 flat 0.000 kl 1.95214 gn 3.114 lr 1.49e-05 mem 16.6GB | L14N8949: mean 2.273 max 3.984375
+[2026-11-18 19:13:03] step 78/300 9.2s (gen 6.5 score 0.6 train 2.2) trained 64/64 reward 0.711 empty 0.000 flat 0.000 kl 1.70807 gn 3.452 lr 1.49e-05 mem 16.6GB | L14N8949: mean 2.167 max 4.0
+[2026-11-18 19:13:12] step 79/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.701 empty 0.000 flat 0.000 kl 1.7186 gn 3.854 lr 1.48e-05 mem 16.6GB | L14N8949: mean 2.137 max 4.21875
+[2026-11-18 19:13:21] step 80/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.815 empty 0.000 flat 0.000 kl 1.96665 gn 4.461 lr 1.47e-05 mem 16.6GB | L14N8949: mean 2.482 max 4.53125
+[2026-11-18 19:13:30] step 81/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.878 empty 0.000 flat 0.000 kl 1.99144 gn 4.014 lr 1.47e-05 mem 16.6GB | L14N8949: mean 2.675 max 4.25
+[2026-11-18 19:13:39] step 82/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 0.898 empty 0.000 flat 0.000 kl 2.21338 gn 4.291 lr 1.46e-05 mem 16.6GB | L14N8949: mean 2.736 max 4.4375
+[2026-11-18 19:13:49] step 83/300 9.4s (gen 6.3 score 0.6 train 2.5) trained 64/64 reward 0.911 empty 0.000 flat 0.000 kl 2.06985 gn 5.052 lr 1.45e-05 mem 16.6GB | L14N8949: mean 2.774 max 5.0
+[2026-11-18 19:13:58] step 84/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 0.938 empty 0.000 flat 0.000 kl 2.14415 gn 5.164 lr 1.45e-05 mem 16.6GB | L14N8949: mean 2.859 max 5.5625
+[2026-11-18 19:14:07] step 85/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 0.889 empty 0.000 flat 0.000 kl 2.42981 gn 6.211 lr 1.44e-05 mem 16.6GB | L14N8949: mean 2.708 max 6.03125
+[2026-11-18 19:14:16] step 86/300 9.2s (gen 6.4 score 0.6 train 2.2) trained 64/64 reward 1.001 empty 0.000 flat 0.000 kl 2.04493 gn 5.848 lr 1.43e-05 mem 16.6GB | L14N8949: mean 3.051 max 6.125
+[2026-11-18 19:14:25] step 87/300 9.4s (gen 6.6 score 0.6 train 2.2) trained 64/64 reward 1.017 empty 0.000 flat 0.000 kl 2.25951 gn 5.107 lr 1.43e-05 mem 16.6GB | L14N8949: mean 3.099 max 4.90625
+[2026-11-18 19:14:35] step 88/300 9.2s (gen 6.4 score 0.6 train 2.2) trained 64/64 reward 1.055 empty 0.000 flat 0.000 kl 2.03324 gn 4.852 lr 1.42e-05 mem 16.6GB | L14N8949: mean 3.213 max 5.40625
+[2026-11-18 19:14:47] step 89/300 12.4s (gen 6.3 score 0.6 train 5.5) trained 63/64 reward 1.080 empty 0.000 flat 0.000 kl 1.9601 gn 6.346 lr 1.41e-05 mem 16.4GB | L14N8949: mean 3.289 max 4.96875
+[2026-11-18 19:14:56] step 90/300 9.3s (gen 6.2 score 0.6 train 2.4) trained 63/64 reward 1.149 empty 0.000 flat 0.000 kl 2.02187 gn 6.490 lr 1.41e-05 mem 16.4GB | L14N8949: mean 3.501 max 5.03125
+[2026-11-18 19:15:05] step 91/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 1.217 empty 0.000 flat 0.000 kl 2.07521 gn 4.720 lr 1.40e-05 mem 16.6GB | L14N8949: mean 3.707 max 5.40625
+[2026-11-18 19:15:14] step 92/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 1.195 empty 0.000 flat 0.000 kl 3.31312 gn 4.363 lr 1.39e-05 mem 16.6GB | L14N8949: mean 3.64 max 5.09375
+[2026-11-18 19:15:24] step 93/300 9.3s (gen 6.2 score 0.6 train 2.5) trained 64/64 reward 1.148 empty 0.000 flat 0.000 kl 2.1002 gn 5.538 lr 1.39e-05 mem 16.6GB | L14N8949: mean 3.499 max 5.84375
+[2026-11-18 19:15:33] step 94/300 9.1s (gen 6.2 score 0.7 train 2.2) trained 64/64 reward 1.202 empty 0.000 flat 0.000 kl 2.17777 gn 5.027 lr 1.38e-05 mem 16.6GB | L14N8949: mean 3.664 max 5.5
+[2026-11-18 19:15:42] step 95/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 1.377 empty 0.000 flat 0.000 kl 2.01894 gn 5.426 lr 1.37e-05 mem 16.6GB | L14N8949: mean 4.195 max 5.53125
+[2026-11-18 19:15:51] step 96/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 1.385 empty 0.000 flat 0.000 kl 2.25931 gn 5.752 lr 1.37e-05 mem 16.6GB | L14N8949: mean 4.22 max 6.5625
+[2026-11-18 19:16:00] step 97/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 1.444 empty 0.000 flat 0.000 kl 1.94794 gn 5.101 lr 1.36e-05 mem 16.6GB | L14N8949: mean 4.4 max 5.71875
+[2026-11-18 19:16:09] step 98/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 1.531 empty 0.000 flat 0.000 kl 1.96575 gn 4.825 lr 1.35e-05 mem 16.6GB | L14N8949: mean 4.665 max 6.53125
+[2026-11-18 19:16:18] step 99/300 9.0s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 1.530 empty 0.000 flat 0.000 kl 3.4598 gn 5.941 lr 1.35e-05 mem 16.6GB | L14N8949: mean 4.662 max 6.1875
+[2026-11-18 19:16:27] step 100/300 9.0s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 1.691 empty 0.000 flat 0.000 kl 1.91986 gn 4.871 lr 1.34e-05 mem 16.6GB | L14N8949: mean 5.151 max 7.34375
+[2026-11-18 19:16:28] bitwise base-weight check (after step 100): PASS (248 tensors, 0 mismatched [], 0.6s)
+[2026-11-18 19:16:37] step 101/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 1.927 empty 0.000 flat 0.000 kl 2.16571 gn 4.536 lr 1.33e-05 mem 16.6GB | L14N8949: mean 5.87 max 7.125
+[2026-11-18 19:16:46] step 102/300 9.3s (gen 6.2 score 0.6 train 2.4) trained 64/64 reward 2.082 empty 0.000 flat 0.000 kl 2.75313 gn 5.699 lr 1.33e-05 mem 16.6GB | L14N8949: mean 6.343 max 7.53125
+[2026-11-18 19:16:55] step 103/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.175 empty 0.000 flat 0.000 kl 1.9943 gn 3.602 lr 1.32e-05 mem 16.6GB | L14N8949: mean 6.626 max 7.25
+[2026-11-18 19:17:04] step 104/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.204 empty 0.000 flat 0.000 kl 2.10272 gn 4.203 lr 1.31e-05 mem 16.6GB | L14N8949: mean 6.714 max 7.34375
+[2026-11-18 19:17:13] step 105/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 2.206 empty 0.000 flat 0.000 kl 2.01175 gn 3.984 lr 1.31e-05 mem 16.6GB | L14N8949: mean 6.723 max 7.09375
+[2026-11-18 19:17:22] step 106/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.207 empty 0.000 flat 0.000 kl 2.02366 gn 4.016 lr 1.30e-05 mem 16.6GB | L14N8949: mean 6.726 max 7.34375
+[2026-11-18 19:17:31] step 107/300 8.7s (gen 6.5 score 0.6 train 1.6) trained 32/64 reward 2.235 empty 0.000 flat 0.500 kl 3.03692 gn 2.185 lr 1.29e-05 mem 16.4GB | L14N8949: mean 6.81 max 7.34375
+[2026-11-18 19:17:40] step 108/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.234 empty 0.000 flat 0.000 kl 2.0674 gn 4.021 lr 1.29e-05 mem 16.6GB | L14N8949: mean 6.806 max 7.34375
+[2026-11-18 19:17:49] step 109/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.208 empty 0.000 flat 0.000 kl 2.04575 gn 4.081 lr 1.28e-05 mem 16.6GB | L14N8949: mean 6.728 max 7.34375
+[2026-11-18 19:17:58] step 110/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 2.222 empty 0.000 flat 0.000 kl 2.10307 gn 3.675 lr 1.27e-05 mem 16.6GB | L14N8949: mean 6.769 max 7.34375
+[2026-11-18 19:18:07] step 111/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 2.251 empty 0.000 flat 0.000 kl 2.13839 gn 4.896 lr 1.27e-05 mem 16.6GB | L14N8949: mean 6.859 max 7.46875
+[2026-11-18 19:18:16] step 112/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 2.331 empty 0.000 flat 0.000 kl 2.21051 gn 3.723 lr 1.26e-05 mem 16.6GB | L14N8949: mean 7.102 max 7.90625
+[2026-11-18 19:18:26] step 113/300 9.3s (gen 6.3 score 0.6 train 2.5) trained 64/64 reward 2.352 empty 0.000 flat 0.000 kl 2.16224 gn 3.842 lr 1.25e-05 mem 16.6GB | L14N8949: mean 7.166 max 7.96875
+[2026-11-18 19:18:35] step 114/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 2.341 empty 0.000 flat 0.000 kl 2.14713 gn 4.015 lr 1.25e-05 mem 16.6GB | L14N8949: mean 7.133 max 7.96875
+[2026-11-18 19:18:44] step 115/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.423 empty 0.000 flat 0.000 kl 2.1395 gn 4.093 lr 1.24e-05 mem 16.6GB | L14N8949: mean 7.384 max 7.96875
+[2026-11-18 19:18:53] step 116/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.406 empty 0.000 flat 0.000 kl 3.76517 gn 3.239 lr 1.23e-05 mem 16.6GB | L14N8949: mean 7.332 max 7.96875
+[2026-11-18 19:19:02] step 117/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.414 empty 0.000 flat 0.000 kl 2.08093 gn 4.213 lr 1.23e-05 mem 16.6GB | L14N8949: mean 7.356 max 7.96875
+[2026-11-18 19:19:11] step 118/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.420 empty 0.000 flat 0.000 kl 2.59788 gn 3.295 lr 1.22e-05 mem 16.6GB | L14N8949: mean 7.374 max 7.96875
+[2026-11-18 19:19:20] step 119/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.406 empty 0.000 flat 0.000 kl 2.30387 gn 3.597 lr 1.21e-05 mem 16.6GB | L14N8949: mean 7.33 max 8.0
+[2026-11-18 19:19:29] step 120/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.462 empty 0.000 flat 0.000 kl 2.4007 gn 4.548 lr 1.21e-05 mem 16.6GB | L14N8949: mean 7.5 max 7.96875
+[2026-11-18 19:19:38] step 121/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 2.570 empty 0.000 flat 0.000 kl 2.12653 gn 2.942 lr 1.20e-05 mem 16.6GB | L14N8949: mean 7.829 max 7.96875
+[2026-11-18 19:19:47] step 122/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.606 empty 0.000 flat 0.000 kl 2.08912 gn 2.795 lr 1.19e-05 mem 16.6GB | L14N8949: mean 7.941 max 7.96875
+[2026-11-18 19:19:56] step 123/300 9.3s (gen 6.2 score 0.6 train 2.4) trained 64/64 reward 2.604 empty 0.000 flat 0.000 kl 1.99865 gn 3.032 lr 1.19e-05 mem 16.6GB | L14N8949: mean 7.936 max 7.96875
+[2026-11-18 19:20:04] step 124/300 8.4s (gen 6.2 score 0.6 train 1.6) trained 32/64 reward 2.613 empty 0.000 flat 0.500 kl 1.94473 gn 2.308 lr 1.18e-05 mem 16.4GB | L14N8949: mean 7.96 max 7.96875
+[2026-11-18 19:20:13] step 125/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.596 empty 0.000 flat 0.000 kl 1.99212 gn 2.652 lr 1.17e-05 mem 16.6GB | L14N8949: mean 7.909 max 8.0
+[2026-11-18 19:20:23] step 126/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 48/64 reward 2.612 empty 0.000 flat 0.250 kl 1.93916 gn 2.087 lr 1.17e-05 mem 16.4GB | L14N8949: mean 7.958 max 8.0
+[2026-11-18 19:20:32] step 127/300 9.0s (gen 6.2 score 0.6 train 2.1) trained 48/64 reward 2.615 empty 0.000 flat 0.250 kl 2.39626 gn 2.743 lr 1.16e-05 mem 16.4GB | L14N8949: mean 7.966 max 7.96875
+[2026-11-18 19:20:41] step 128/300 9.0s (gen 6.2 score 0.6 train 2.1) trained 48/64 reward 2.598 empty 0.000 flat 0.250 kl 1.96845 gn 2.149 lr 1.15e-05 mem 16.4GB | L14N8949: mean 7.917 max 7.96875
+[2026-11-18 19:20:49] step 129/300 8.4s (gen 6.2 score 0.6 train 1.6) trained 32/64 reward 2.607 empty 0.000 flat 0.500 kl 1.98133 gn 1.247 lr 1.15e-05 mem 16.4GB | L14N8949: mean 7.942 max 7.96875
+[2026-11-18 19:20:58] step 130/300 8.9s (gen 6.2 score 0.6 train 2.1) trained 48/64 reward 2.606 empty 0.000 flat 0.250 kl 2.06058 gn 2.958 lr 1.14e-05 mem 16.4GB | L14N8949: mean 7.941 max 7.96875
+[2026-11-18 19:21:07] step 131/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.597 empty 0.000 flat 0.000 kl 2.11686 gn 3.817 lr 1.13e-05 mem 16.6GB | L14N8949: mean 7.912 max 7.96875
+[2026-11-18 19:21:16] step 132/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.598 empty 0.000 flat 0.000 kl 2.07861 gn 3.478 lr 1.13e-05 mem 16.6GB | L14N8949: mean 7.915 max 7.96875
+[2026-11-18 19:21:24] step 133/300 8.3s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 2.601 empty 0.000 flat 0.750 kl 1.9851 gn 1.374 lr 1.12e-05 mem 14.2GB | L14N8949: mean 7.926 max 7.96875
+[2026-11-18 19:21:33] step 134/300 8.5s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 2.603 empty 0.000 flat 0.750 kl 2.00962 gn 1.745 lr 1.11e-05 mem 14.2GB | L14N8949: mean 7.932 max 7.96875
+[2026-11-18 19:21:42] step 135/300 9.3s (gen 6.3 score 0.6 train 2.4) trained 48/64 reward 2.557 empty 0.000 flat 0.250 kl 1.97334 gn 1.898 lr 1.11e-05 mem 16.4GB | L14N8949: mean 7.791 max 7.96875
+[2026-11-18 19:21:51] step 136/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 2.586 empty 0.000 flat 0.000 kl 2.02756 gn 5.390 lr 1.10e-05 mem 16.6GB | L14N8949: mean 7.88 max 8.0
+[2026-11-18 19:21:59] step 137/300 8.4s (gen 6.3 score 0.6 train 1.6) trained 32/64 reward 2.543 empty 0.000 flat 0.500 kl 2.24267 gn 3.345 lr 1.09e-05 mem 16.4GB | L14N8949: mean 7.747 max 7.96875
+[2026-11-18 19:22:08] step 138/300 8.3s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 2.616 empty 0.000 flat 0.750 kl 2.1121 gn 1.628 lr 1.09e-05 mem 14.2GB | L14N8949: mean 7.969 max 8.0
+[2026-11-18 19:22:16] step 139/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 2.607 empty 0.000 flat 0.750 kl 2.14495 gn 1.957 lr 1.08e-05 mem 14.2GB | L14N8949: mean 7.942 max 8.0
+[2026-11-18 19:22:24] step 140/300 7.8s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 2.626 empty 0.000 flat 1.000 kl 2.07478 gn 0.000 lr 1.07e-05 mem 13.9GB | L14N8949: mean 8.0 max 8.0
+[2026-11-18 19:22:33] step 141/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 2.590 empty 0.000 flat 0.750 kl 2.1925 gn 1.745 lr 1.07e-05 mem 14.2GB | L14N8949: mean 7.89 max 8.0
+[2026-11-18 19:22:41] step 142/300 8.6s (gen 6.4 score 0.6 train 1.6) trained 32/64 reward 2.608 empty 0.000 flat 0.500 kl 2.79109 gn 2.527 lr 1.06e-05 mem 16.4GB | L14N8949: mean 7.946 max 8.0
+[2026-11-18 19:22:50] step 143/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 2.623 empty 0.000 flat 0.750 kl 2.02341 gn 0.834 lr 1.05e-05 mem 14.2GB | L14N8949: mean 7.992 max 8.0
+[2026-11-18 19:22:58] step 144/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 2.620 empty 0.000 flat 0.750 kl 2.64031 gn 1.445 lr 1.05e-05 mem 14.2GB | L14N8949: mean 7.984 max 8.0
+[2026-11-18 19:23:06] step 145/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 2.590 empty 0.000 flat 0.750 kl 2.11034 gn 1.829 lr 1.04e-05 mem 14.2GB | L14N8949: mean 7.891 max 8.0
+[2026-11-18 19:23:15] step 146/300 8.5s (gen 6.3 score 0.6 train 1.6) trained 32/64 reward 2.623 empty 0.000 flat 0.500 kl 1.98059 gn 1.883 lr 1.03e-05 mem 16.4GB | L14N8949: mean 7.991 max 8.0
+[2026-11-18 19:23:23] step 147/300 8.5s (gen 6.3 score 0.6 train 1.6) trained 32/64 reward 2.568 empty 0.000 flat 0.500 kl 2.07169 gn 4.707 lr 1.03e-05 mem 16.4GB | L14N8949: mean 7.825 max 8.0
+[2026-11-18 19:23:32] step 148/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 2.579 empty 0.000 flat 0.750 kl 2.03949 gn 1.660 lr 1.02e-05 mem 14.2GB | L14N8949: mean 7.857 max 8.0
+[2026-11-18 19:23:40] step 149/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 2.622 empty 0.000 flat 0.750 kl 2.08337 gn 1.473 lr 1.01e-05 mem 14.2GB | L14N8949: mean 7.988 max 8.0
+[2026-11-18 19:23:49] step 150/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 2.587 empty 0.000 flat 0.750 kl 2.09201 gn 2.417 lr 1.01e-05 mem 14.2GB | L14N8949: mean 7.884 max 8.0
+[2026-11-18 19:23:49] bitwise base-weight check (after step 150): PASS (248 tensors, 0 mismatched [], 0.6s)
+[2026-11-18 19:23:57] step 151/300 8.0s (gen 6.4 score 0.6 train 1.0) trained 0/64 reward 2.626 empty 0.000 flat 1.000 kl 2.06505 gn 0.000 lr 1.00e-05 mem 13.9GB | L14N8949: mean 8.0 max 8.0
+[2026-11-18 19:24:05] step 152/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 2.625 empty 0.000 flat 0.750 kl 2.06266 gn 1.250 lr 9.93e-06 mem 14.2GB | L14N8949: mean 7.999 max 8.0
+[2026-11-18 19:24:14] step 153/300 8.6s (gen 6.4 score 0.6 train 1.5) trained 16/64 reward 2.613 empty 0.000 flat 0.750 kl 2.10705 gn 1.791 lr 9.87e-06 mem 14.2GB | L14N8949: mean 7.96 max 8.0
+[2026-11-18 19:24:23] step 154/300 8.5s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 2.613 empty 0.000 flat 0.750 kl 2.07799 gn 1.570 lr 9.80e-06 mem 14.2GB | L14N8949: mean 7.96 max 8.0
+[2026-11-18 19:24:30] step 155/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 2.626 empty 0.000 flat 1.000 kl 2.13657 gn 0.000 lr 9.73e-06 mem 13.9GB | L14N8949: mean 8.0 max 8.0
+[2026-11-18 19:24:38] step 156/300 7.8s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 2.626 empty 0.000 flat 1.000 kl 2.13159 gn 0.000 lr 9.67e-06 mem 13.9GB | L14N8949: mean 8.0 max 8.0
+[2026-11-18 19:24:47] step 157/300 8.7s (gen 6.2 score 0.6 train 1.8) trained 16/64 reward 2.623 empty 0.000 flat 0.750 kl 2.22239 gn 1.236 lr 9.60e-06 mem 14.2GB | L14N8949: mean 7.993 max 8.0
+[2026-11-18 19:24:55] step 158/300 8.3s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 2.617 empty 0.000 flat 0.750 kl 2.15704 gn 1.446 lr 9.53e-06 mem 14.2GB | L14N8949: mean 7.972 max 8.0
+[2026-11-18 19:25:03] step 159/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 2.626 empty 0.000 flat 1.000 kl 2.14858 gn 0.000 lr 9.47e-06 mem 13.9GB | L14N8949: mean 8.0 max 8.0
+[2026-11-18 19:25:11] step 160/300 8.3s (gen 6.2 score 0.6 train 1.6) trained 32/64 reward 2.608 empty 0.000 flat 0.500 kl 2.1687 gn 2.099 lr 9.40e-06 mem 16.4GB | L14N8949: mean 7.947 max 8.0
+[2026-11-18 19:25:20] step 161/300 8.2s (gen 6.1 score 0.6 train 1.5) trained 16/64 reward 2.610 empty 0.000 flat 0.750 kl 2.24709 gn 1.837 lr 9.33e-06 mem 14.2GB | L14N8949: mean 7.953 max 8.0
+[2026-11-18 19:25:28] step 162/300 8.3s (gen 6.1 score 0.6 train 1.6) trained 32/64 reward 2.623 empty 0.000 flat 0.500 kl 2.16897 gn 2.824 lr 9.27e-06 mem 16.4GB | L14N8949: mean 7.993 max 8.0625
+[2026-11-18 19:25:37] step 163/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.593 empty 0.000 flat 0.000 kl 2.31428 gn 4.822 lr 9.20e-06 mem 16.6GB | L14N8949: mean 7.901 max 8.0625
+[2026-11-18 19:25:46] step 164/300 8.9s (gen 6.1 score 0.6 train 2.2) trained 64/64 reward 2.633 empty 0.000 flat 0.000 kl 2.25467 gn 4.413 lr 9.13e-06 mem 16.6GB | L14N8949: mean 8.023 max 9.0625
+[2026-11-18 19:25:55] step 165/300 8.9s (gen 6.1 score 0.6 train 2.2) trained 64/64 reward 2.637 empty 0.000 flat 0.000 kl 2.32004 gn 4.557 lr 9.07e-06 mem 16.6GB | L14N8949: mean 8.035 max 9.0625
+[2026-11-18 19:26:04] step 166/300 9.0s (gen 6.2 score 0.6 train 2.2) trained 64/64 reward 2.649 empty 0.000 flat 0.000 kl 2.40534 gn 3.671 lr 9.00e-06 mem 16.6GB | L14N8949: mean 8.071 max 9.0625
+[2026-11-18 19:26:13] step 167/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 2.815 empty 0.000 flat 0.000 kl 2.27815 gn 6.874 lr 8.93e-06 mem 16.6GB | L14N8949: mean 8.576 max 9.0625
+[2026-11-18 19:26:21] step 168/300 8.5s (gen 6.3 score 0.6 train 1.6) trained 32/64 reward 2.920 empty 0.000 flat 0.500 kl 2.26429 gn 3.377 lr 8.87e-06 mem 16.4GB | L14N8949: mean 8.897 max 9.0625
+[2026-11-18 19:26:30] step 169/300 8.5s (gen 6.4 score 0.6 train 1.5) trained 16/64 reward 2.963 empty 0.000 flat 0.750 kl 2.36298 gn 2.100 lr 8.80e-06 mem 14.2GB | L14N8949: mean 9.028 max 9.0625
+[2026-11-18 19:26:38] step 170/300 8.4s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 2.966 empty 0.000 flat 0.750 kl 2.74388 gn 1.047 lr 8.73e-06 mem 14.2GB | L14N8949: mean 9.037 max 9.0625
+[2026-11-18 19:26:47] step 171/300 8.6s (gen 6.2 score 0.6 train 1.8) trained 16/64 reward 2.969 empty 0.000 flat 0.750 kl 2.32581 gn 1.964 lr 8.67e-06 mem 14.2GB | L14N8949: mean 9.047 max 9.0625
+[2026-11-18 19:26:56] step 172/300 9.0s (gen 7.4 score 0.6 train 1.0) trained 0/64 reward 2.974 empty 0.000 flat 1.000 kl 2.43359 gn 0.000 lr 8.60e-06 mem 13.9GB | L14N8949: mean 9.062 max 9.0625
+[2026-11-18 19:27:03] step 173/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 2.974 empty 0.000 flat 1.000 kl 2.39156 gn 0.000 lr 8.53e-06 mem 13.9GB | L14N8949: mean 9.062 max 9.0625
+[2026-11-18 19:27:12] step 174/300 8.2s (gen 6.1 score 0.6 train 1.5) trained 16/64 reward 2.972 empty 0.000 flat 0.750 kl 2.30239 gn 3.068 lr 8.47e-06 mem 14.2GB | L14N8949: mean 9.057 max 9.0625
+[2026-11-18 19:27:20] step 175/300 8.3s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 2.970 empty 0.000 flat 0.750 kl 2.3842 gn 2.168 lr 8.40e-06 mem 14.2GB | L14N8949: mean 9.048 max 9.0625
+[2026-11-18 19:27:28] step 176/300 7.7s (gen 6.1 score 0.6 train 1.0) trained 0/64 reward 2.974 empty 0.000 flat 1.000 kl 2.28185 gn 0.000 lr 8.33e-06 mem 13.9GB | L14N8949: mean 9.062 max 9.0625
+[2026-11-18 19:27:35] step 177/300 7.7s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 2.974 empty 0.000 flat 1.000 kl 2.39891 gn 0.000 lr 8.27e-06 mem 13.9GB | L14N8949: mean 9.062 max 9.0625
+[2026-11-18 19:27:44] step 178/300 8.4s (gen 6.2 score 0.6 train 1.6) trained 32/64 reward 2.953 empty 0.000 flat 0.500 kl 2.41777 gn 1.985 lr 8.20e-06 mem 16.4GB | L14N8949: mean 8.999 max 9.0625
+[2026-11-18 19:27:52] step 179/300 8.3s (gen 6.2 score 0.6 train 1.6) trained 32/64 reward 2.948 empty 0.000 flat 0.500 kl 2.40291 gn 3.345 lr 8.13e-06 mem 16.4GB | L14N8949: mean 8.982 max 9.0625
+[2026-11-18 19:28:00] step 180/300 8.4s (gen 6.2 score 0.6 train 1.6) trained 32/64 reward 2.971 empty 0.000 flat 0.500 kl 2.32333 gn 1.837 lr 8.07e-06 mem 16.4GB | L14N8949: mean 9.053 max 9.0625
+[2026-11-18 19:28:09] step 181/300 8.4s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 2.977 empty 0.000 flat 0.750 kl 2.30046 gn 1.929 lr 8.00e-06 mem 14.2GB | L14N8949: mean 9.07 max 9.375
+[2026-11-18 19:28:18] step 182/300 9.1s (gen 6.3 score 0.6 train 2.1) trained 48/64 reward 2.979 empty 0.000 flat 0.250 kl 2.27843 gn 3.530 lr 7.93e-06 mem 16.4GB | L14N8949: mean 9.077 max 9.375
+[2026-11-18 19:28:27] step 183/300 9.1s (gen 6.3 score 0.6 train 2.2) trained 64/64 reward 2.944 empty 0.000 flat 0.000 kl 2.37535 gn 10.357 lr 7.87e-06 mem 16.6GB | L14N8949: mean 8.971 max 9.375
+[2026-11-18 19:28:36] step 184/300 9.1s (gen 6.3 score 0.6 train 2.1) trained 48/64 reward 3.034 empty 0.000 flat 0.250 kl 2.43045 gn 3.431 lr 7.80e-06 mem 16.4GB | L14N8949: mean 9.244 max 9.375
+[2026-11-18 19:28:45] step 185/300 8.5s (gen 6.3 score 0.6 train 1.6) trained 32/64 reward 3.033 empty 0.000 flat 0.500 kl 2.22584 gn 5.865 lr 7.73e-06 mem 16.4GB | L14N8949: mean 9.242 max 9.375
+[2026-11-18 19:28:52] step 186/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.49606 gn 0.000 lr 7.67e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:29:01] step 187/300 8.4s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 3.071 empty 0.000 flat 0.750 kl 2.29893 gn 1.263 lr 7.60e-06 mem 14.2GB | L14N8949: mean 9.355 max 9.375
+[2026-11-18 19:29:09] step 188/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 3.055 empty 0.000 flat 0.750 kl 2.36913 gn 2.691 lr 7.53e-06 mem 14.2GB | L14N8949: mean 9.308 max 9.375
+[2026-11-18 19:29:17] step 189/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.53256 gn 0.000 lr 7.47e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:29:25] step 190/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.50624 gn 0.000 lr 7.40e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:29:33] step 191/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.36863 gn 0.000 lr 7.33e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:29:41] step 192/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.37757 gn 0.000 lr 7.27e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:29:49] step 193/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.36609 gn 0.000 lr 7.20e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:29:57] step 194/300 8.4s (gen 6.2 score 0.6 train 1.6) trained 32/64 reward 3.056 empty 0.000 flat 0.500 kl 2.50711 gn 3.014 lr 7.13e-06 mem 16.4GB | L14N8949: mean 9.311 max 9.375
+[2026-11-18 19:30:05] step 195/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.41125 gn 0.000 lr 7.07e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:30:13] step 196/300 8.5s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 3.043 empty 0.000 flat 0.750 kl 3.62469 gn 2.311 lr 7.00e-06 mem 14.2GB | L14N8949: mean 9.271 max 9.375
+[2026-11-18 19:30:21] step 197/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.44826 gn 0.000 lr 6.93e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:30:29] step 198/300 8.3s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 3.048 empty 0.000 flat 0.750 kl 7.81636 gn 2.405 lr 6.87e-06 mem 14.2GB | L14N8949: mean 9.288 max 9.375
+[2026-11-18 19:30:38] step 199/300 8.6s (gen 6.2 score 0.6 train 1.8) trained 16/64 reward 3.074 empty 0.000 flat 0.750 kl 2.45022 gn 2.486 lr 6.80e-06 mem 14.2GB | L14N8949: mean 9.366 max 9.375
+[2026-11-18 19:30:46] step 200/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 3.074 empty 0.000 flat 0.750 kl 2.43671 gn 3.089 lr 6.73e-06 mem 14.2GB | L14N8949: mean 9.367 max 9.375
+[2026-11-18 19:30:47] bitwise base-weight check (after step 200): PASS (248 tensors, 0 mismatched [], 0.6s)
+[2026-11-18 19:30:55] step 201/300 8.5s (gen 6.3 score 0.6 train 1.6) trained 32/64 reward 3.054 empty 0.000 flat 0.500 kl 2.55472 gn 2.511 lr 6.67e-06 mem 16.4GB | L14N8949: mean 9.305 max 9.375
+[2026-11-18 19:31:03] step 202/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.49786 gn 0.000 lr 6.60e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:31:12] step 203/300 8.4s (gen 6.2 score 0.6 train 1.6) trained 16/64 reward 3.076 empty 0.000 flat 0.750 kl 2.45969 gn 1.818 lr 6.53e-06 mem 14.2GB | L14N8949: mean 9.373 max 9.375
+[2026-11-18 19:31:20] step 204/300 7.8s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 3.20173 gn 0.000 lr 6.47e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:31:28] step 205/300 8.4s (gen 6.2 score 0.6 train 1.6) trained 32/64 reward 3.061 empty 0.000 flat 0.500 kl 2.512 gn 2.695 lr 6.40e-06 mem 16.4GB | L14N8949: mean 9.328 max 9.375
+[2026-11-18 19:31:36] step 206/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.73167 gn 0.000 lr 6.33e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:31:44] step 207/300 7.7s (gen 6.1 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.51999 gn 0.000 lr 6.27e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:31:51] step 208/300 7.7s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.47638 gn 0.000 lr 6.20e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:31:59] step 209/300 7.7s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.46041 gn 0.000 lr 6.13e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:32:07] step 210/300 8.2s (gen 6.1 score 0.6 train 1.5) trained 16/64 reward 3.075 empty 0.000 flat 0.750 kl 2.91646 gn 2.720 lr 6.07e-06 mem 14.2GB | L14N8949: mean 9.368 max 9.375
+[2026-11-18 19:32:15] step 211/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.57466 gn 0.000 lr 6.00e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:32:23] step 212/300 7.7s (gen 6.1 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.66145 gn 0.000 lr 5.93e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:32:30] step 213/300 7.7s (gen 6.1 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.52059 gn 0.000 lr 5.87e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:32:38] step 214/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.74919 gn 0.000 lr 5.80e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:32:46] step 215/300 7.7s (gen 6.1 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.43904 gn 0.000 lr 5.73e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:32:54] step 216/300 8.3s (gen 6.1 score 0.6 train 1.5) trained 16/64 reward 3.077 empty 0.000 flat 0.750 kl 2.89595 gn 1.513 lr 5.67e-06 mem 14.2GB | L14N8949: mean 9.374 max 9.375
+[2026-11-18 19:33:03] step 217/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 3.036 empty 0.000 flat 0.750 kl 2.87822 gn 2.330 lr 5.60e-06 mem 14.2GB | L14N8949: mean 9.251 max 9.375
+[2026-11-18 19:33:10] step 218/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.45605 gn 0.000 lr 5.53e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:33:19] step 219/300 8.4s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 3.069 empty 0.000 flat 0.750 kl 2.66106 gn 1.851 lr 5.47e-06 mem 14.2GB | L14N8949: mean 9.351 max 9.375
+[2026-11-18 19:33:27] step 220/300 8.4s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 3.063 empty 0.000 flat 0.750 kl 2.66665 gn 2.020 lr 5.40e-06 mem 14.2GB | L14N8949: mean 9.332 max 9.375
+[2026-11-18 19:33:36] step 221/300 8.3s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 3.077 empty 0.000 flat 0.750 kl 2.50718 gn 1.596 lr 5.33e-06 mem 14.2GB | L14N8949: mean 9.376 max 9.4375
+[2026-11-18 19:33:43] step 222/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.51723 gn 0.000 lr 5.27e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:33:52] step 223/300 8.5s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 3.075 empty 0.000 flat 0.750 kl 2.43494 gn 2.035 lr 5.20e-06 mem 14.2GB | L14N8949: mean 9.37 max 9.375
+[2026-11-18 19:34:00] step 224/300 8.1s (gen 6.5 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.47598 gn 0.000 lr 5.13e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:34:09] step 225/300 8.6s (gen 6.4 score 0.6 train 1.6) trained 16/64 reward 3.064 empty 0.000 flat 0.750 kl 2.44002 gn 1.983 lr 5.07e-06 mem 14.2GB | L14N8949: mean 9.335 max 9.375
+[2026-11-18 19:34:18] step 226/300 9.1s (gen 6.9 score 0.7 train 1.6) trained 16/64 reward 3.055 empty 0.000 flat 0.750 kl 2.47836 gn 2.592 lr 5.00e-06 mem 14.2GB | L14N8949: mean 9.31 max 9.375
+[2026-11-18 19:34:27] step 227/300 9.1s (gen 6.9 score 0.6 train 1.6) trained 16/64 reward 3.073 empty 0.000 flat 0.750 kl 2.47327 gn 2.030 lr 4.93e-06 mem 14.2GB | L14N8949: mean 9.364 max 9.375
+[2026-11-18 19:34:35] step 228/300 8.0s (gen 6.4 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.49934 gn 0.000 lr 4.87e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:34:43] step 229/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 3.073 empty 0.000 flat 0.750 kl 2.52088 gn 1.483 lr 4.80e-06 mem 14.2GB | L14N8949: mean 9.364 max 9.375
+[2026-11-18 19:34:51] step 230/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.42389 gn 0.000 lr 4.73e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:34:59] step 231/300 8.3s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 3.075 empty 0.000 flat 0.750 kl 2.57274 gn 2.521 lr 4.67e-06 mem 14.2GB | L14N8949: mean 9.37 max 9.375
+[2026-11-18 19:35:07] step 232/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.4485 gn 0.000 lr 4.60e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:35:16] step 233/300 8.4s (gen 6.2 score 0.6 train 1.6) trained 32/64 reward 3.054 empty 0.000 flat 0.500 kl 2.43037 gn 3.042 lr 4.53e-06 mem 16.4GB | L14N8949: mean 9.304 max 9.375
+[2026-11-18 19:35:25] step 234/300 9.3s (gen 6.3 score 0.6 train 2.4) trained 48/64 reward 3.044 empty 0.000 flat 0.250 kl 2.65736 gn 3.465 lr 4.47e-06 mem 16.4GB | L14N8949: mean 9.276 max 9.4375
+[2026-11-18 19:35:33] step 235/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.44832 gn 0.000 lr 4.40e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:35:41] step 236/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.42288 gn 0.000 lr 4.33e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:35:48] step 237/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.40197 gn 0.000 lr 4.27e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:35:57] step 238/300 8.4s (gen 6.2 score 0.6 train 1.6) trained 32/64 reward 3.065 empty 0.000 flat 0.500 kl 2.70377 gn 3.833 lr 4.20e-06 mem 16.4GB | L14N8949: mean 9.339 max 9.375
+[2026-11-18 19:36:05] step 239/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 3.062 empty 0.000 flat 0.750 kl 2.3655 gn 2.344 lr 4.13e-06 mem 14.2GB | L14N8949: mean 9.329 max 9.375
+[2026-11-18 19:36:13] step 240/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.35723 gn 0.000 lr 4.07e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:36:21] step 241/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.38157 gn 0.000 lr 4.00e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:36:29] step 242/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.51111 gn 0.000 lr 3.93e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:36:37] step 243/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.49907 gn 0.000 lr 3.87e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:36:44] step 244/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.38832 gn 0.000 lr 3.80e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:36:52] step 245/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.35756 gn 0.000 lr 3.73e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:37:00] step 246/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.57258 gn 0.000 lr 3.67e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:37:08] step 247/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.40903 gn 0.000 lr 3.60e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:37:16] step 248/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.44741 gn 0.000 lr 3.53e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:37:23] step 249/300 7.8s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.34753 gn 0.000 lr 3.47e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:37:32] step 250/300 8.3s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 3.075 empty 0.000 flat 0.750 kl 2.39879 gn 1.697 lr 3.40e-06 mem 14.2GB | L14N8949: mean 9.37 max 9.375
+[2026-11-18 19:37:32] bitwise base-weight check (after step 250): PASS (248 tensors, 0 mismatched [], 0.6s)
+[2026-11-18 19:37:40] step 251/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.36031 gn 0.000 lr 3.33e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:37:48] step 252/300 7.7s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.33764 gn 0.000 lr 3.27e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:37:56] step 253/300 8.3s (gen 6.2 score 0.6 train 1.5) trained 16/64 reward 3.041 empty 0.000 flat 0.750 kl 2.37965 gn 2.690 lr 3.20e-06 mem 14.2GB | L14N8949: mean 9.265 max 9.375
+[2026-11-18 19:38:04] step 254/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.31045 gn 0.000 lr 3.13e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:38:12] step 255/300 7.7s (gen 6.1 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.37425 gn 0.000 lr 3.07e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:38:19] step 256/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.35778 gn 0.000 lr 3.00e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:38:28] step 257/300 8.3s (gen 6.1 score 0.6 train 1.5) trained 16/64 reward 3.036 empty 0.000 flat 0.750 kl 2.32994 gn 2.775 lr 2.93e-06 mem 14.2GB | L14N8949: mean 9.25 max 9.375
+[2026-11-18 19:38:36] step 258/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.31041 gn 0.000 lr 2.87e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:38:44] step 259/300 8.4s (gen 6.3 score 0.6 train 1.5) trained 16/64 reward 3.057 empty 0.000 flat 0.750 kl 3.49654 gn 2.216 lr 2.80e-06 mem 14.2GB | L14N8949: mean 9.314 max 9.375
+[2026-11-18 19:38:52] step 260/300 7.8s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.34535 gn 0.000 lr 2.73e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:39:00] step 261/300 8.5s (gen 6.4 score 0.6 train 1.5) trained 16/64 reward 3.039 empty 0.000 flat 0.750 kl 2.31579 gn 1.707 lr 2.67e-06 mem 14.2GB | L14N8949: mean 9.258 max 9.375
+[2026-11-18 19:39:08] step 262/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.53028 gn 0.000 lr 2.60e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:39:16] step 263/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.60133 gn 0.000 lr 2.53e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:39:24] step 264/300 7.8s (gen 6.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.32943 gn 0.000 lr 2.47e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:39:33] step 265/300 8.8s (gen 6.6 score 0.6 train 1.5) trained 16/64 reward 3.058 empty 0.000 flat 0.750 kl 2.38124 gn 2.176 lr 2.40e-06 mem 14.2GB | L14N8949: mean 9.318 max 9.375
+[2026-11-18 19:39:41] step 266/300 8.3s (gen 6.7 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.4848 gn 0.000 lr 2.33e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:39:50] step 267/300 8.9s (gen 6.7 score 0.6 train 1.7) trained 16/64 reward 3.051 empty 0.000 flat 0.750 kl 2.2892 gn 1.983 lr 2.27e-06 mem 14.2GB | L14N8949: mean 9.296 max 9.375
+[2026-11-18 19:39:59] step 268/300 9.0s (gen 6.7 score 0.6 train 1.6) trained 16/64 reward 3.034 empty 0.000 flat 0.750 kl 2.47177 gn 2.742 lr 2.20e-06 mem 14.2GB | L14N8949: mean 9.245 max 9.375
+[2026-11-18 19:40:07] step 269/300 8.2s (gen 6.6 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.27519 gn 0.000 lr 2.13e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:40:16] step 270/300 8.7s (gen 7.1 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.35802 gn 0.000 lr 2.07e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:40:25] step 271/300 9.2s (gen 7.0 score 0.6 train 1.6) trained 16/64 reward 3.062 empty 0.000 flat 0.750 kl 2.33156 gn 2.227 lr 2.00e-06 mem 14.2GB | L14N8949: mean 9.329 max 9.375
+[2026-11-18 19:40:33] step 272/300 8.6s (gen 7.0 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.40412 gn 0.000 lr 1.93e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:40:43] step 273/300 9.9s (gen 7.1 score 0.6 train 2.2) trained 48/64 reward 3.047 empty 0.000 flat 0.250 kl 2.30049 gn 3.530 lr 1.87e-06 mem 16.4GB | L14N8949: mean 9.285 max 9.375
+[2026-11-18 19:40:52] step 274/300 8.6s (gen 7.0 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.32236 gn 0.000 lr 1.80e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:41:01] step 275/300 9.2s (gen 7.0 score 0.6 train 1.6) trained 16/64 reward 3.068 empty 0.000 flat 0.750 kl 2.27693 gn 1.847 lr 1.73e-06 mem 14.2GB | L14N8949: mean 9.349 max 9.375
+[2026-11-18 19:41:11] step 276/300 9.3s (gen 7.0 score 0.6 train 1.7) trained 16/64 reward 3.050 empty 0.000 flat 0.750 kl 2.28462 gn 1.843 lr 1.67e-06 mem 14.2GB | L14N8949: mean 9.294 max 9.375
+[2026-11-18 19:41:19] step 277/300 8.8s (gen 7.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.29124 gn 0.000 lr 1.60e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:41:28] step 278/300 8.8s (gen 7.2 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.29743 gn 0.000 lr 1.53e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:41:38] step 279/300 9.4s (gen 7.1 score 0.6 train 1.6) trained 16/64 reward 3.075 empty 0.000 flat 0.750 kl 2.26924 gn 1.176 lr 1.47e-06 mem 14.2GB | L14N8949: mean 9.369 max 9.375
+[2026-11-18 19:41:46] step 280/300 8.6s (gen 7.0 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.29656 gn 0.000 lr 1.40e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:41:55] step 281/300 8.7s (gen 7.1 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.47484 gn 0.000 lr 1.33e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:42:04] step 282/300 9.2s (gen 6.8 score 0.6 train 1.7) trained 16/64 reward 3.070 empty 0.000 flat 0.750 kl 2.28276 gn 1.321 lr 1.27e-06 mem 14.2GB | L14N8949: mean 9.354 max 9.375
+[2026-11-18 19:42:12] step 283/300 8.2s (gen 6.6 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.21678 gn 0.000 lr 1.20e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:42:21] step 284/300 9.1s (gen 7.0 score 0.6 train 1.6) trained 16/64 reward 3.049 empty 0.000 flat 0.750 kl 2.32337 gn 1.666 lr 1.13e-06 mem 14.2GB | L14N8949: mean 9.289 max 9.375
+[2026-11-18 19:42:30] step 285/300 8.9s (gen 6.4 score 0.6 train 1.9) trained 32/64 reward 3.066 empty 0.000 flat 0.500 kl 2.30546 gn 1.907 lr 1.07e-06 mem 16.4GB | L14N8949: mean 9.343 max 9.375
+[2026-11-18 19:42:38] step 286/300 8.1s (gen 6.5 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.2697 gn 0.000 lr 1.00e-06 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:42:47] step 287/300 8.6s (gen 7.0 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.24652 gn 0.000 lr 9.33e-07 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:42:56] step 288/300 8.7s (gen 7.1 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.23573 gn 0.000 lr 8.67e-07 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:43:04] step 289/300 8.8s (gen 6.5 score 0.7 train 1.6) trained 16/64 reward 3.071 empty 0.000 flat 0.750 kl 2.35014 gn 1.858 lr 8.00e-07 mem 14.2GB | L14N8949: mean 9.356 max 9.375
+[2026-11-18 19:43:13] step 290/300 9.0s (gen 6.8 score 0.6 train 1.6) trained 16/64 reward 3.039 empty 0.000 flat 0.750 kl 2.50487 gn 2.496 lr 7.33e-07 mem 14.2GB | L14N8949: mean 9.258 max 9.375
+[2026-11-18 19:43:22] step 291/300 8.3s (gen 6.7 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.27872 gn 0.000 lr 6.67e-07 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:43:31] step 292/300 9.0s (gen 6.8 score 0.6 train 1.5) trained 16/64 reward 3.075 empty 0.000 flat 0.750 kl 2.24819 gn 1.297 lr 6.00e-07 mem 14.2GB | L14N8949: mean 9.369 max 9.375
+[2026-11-18 19:43:39] step 293/300 8.1s (gen 6.6 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.27824 gn 0.000 lr 5.33e-07 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:43:47] step 294/300 8.1s (gen 6.5 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.6974 gn 0.000 lr 4.67e-07 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:43:55] step 295/300 8.4s (gen 6.8 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.30682 gn 0.000 lr 4.00e-07 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:44:04] step 296/300 8.7s (gen 6.5 score 0.6 train 1.6) trained 16/64 reward 3.069 empty 0.000 flat 0.750 kl 2.25874 gn 1.587 lr 3.33e-07 mem 14.2GB | L14N8949: mean 9.351 max 9.375
+[2026-11-18 19:44:12] step 297/300 8.0s (gen 6.4 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.30671 gn 0.000 lr 2.67e-07 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:44:20] step 298/300 7.9s (gen 6.3 score 0.6 train 1.0) trained 0/64 reward 3.077 empty 0.000 flat 1.000 kl 2.3932 gn 0.000 lr 2.00e-07 mem 13.9GB | L14N8949: mean 9.375 max 9.375
+[2026-11-18 19:44:28] step 299/300 8.6s (gen 6.4 score 0.6 train 1.6) trained 16/64 reward 3.069 empty 0.000 flat 0.750 kl 2.32279 gn 1.927 lr 1.33e-07 mem 14.2GB | L14N8949: mean 9.351 max 9.375
+[2026-11-18 19:44:37] step 300/300 8.6s (gen 6.4 score 0.6 train 1.5) trained 16/64 reward 3.058 empty 0.000 flat 0.750 kl 2.26652 gn 1.566 lr 6.67e-08 mem 14.2GB | L14N8949: mean 9.316 max 9.375
+[2026-11-18 19:44:38] bitwise base-weight check (after step 300): PASS (248 tensors, 0 mismatched [], 0.6s)
+/usr/local/lib/python3.12/dist-packages/peft/utils/save_and_load.py:307: UserWarning: Could not find a config file in Qwen/Qwen3.5-4B - will assume that the vocabulary was not modified.
+  warnings.warn(
+[2026-11-18 19:44:38] training done in 0.72 h; adapter saved to /workspace/neuron-elictor/results/grpo_warmstart/20261118_185940/Rep/phaseA/adapter
+[2026-11-18 19:44:39] reference-text check (after training): PASS L14N8949 3.046875 (expected 3.046875)
+[2026-11-18 19:44:46] (d) trained best of 8 {'L14N8949': 9.375}
+[2026-11-18 19:44:51] (a) untrained best of 64 {'L14N8949': 0.765625}
+[2026-11-18 19:44:52] (c) repeated token {'L14N8949': {'token': ' and', 'token_id': 321, 'score': 0.0174560546875, 'pos': 36}}
+[2026-11-18 19:44:52] (b) compute-matched: 19,200 untrained samples per neuron
+[2026-11-18 19:45:48]   2,048/19,200 samples per neuron
+[2026-11-18 19:46:44]   4,096/19,200 samples per neuron
+[2026-11-18 19:47:41]   6,144/19,200 samples per neuron
+[2026-11-18 19:48:38]   8,192/19,200 samples per neuron
+[2026-11-18 19:49:33]   10,240/19,200 samples per neuron
+[2026-11-18 19:50:30]   12,288/19,200 samples per neuron
+[2026-11-18 19:51:27]   14,336/19,200 samples per neuron
+[2026-11-18 19:52:25]   16,384/19,200 samples per neuron
+[2026-11-18 19:53:21]   18,432/19,200 samples per neuron
+[2026-11-18 19:53:42]   19,200/19,200 samples per neuron
+[2026-11-18 19:53:42] bitwise base-weight check (end): PASS (248 tensors, 0 mismatched [], 0.6s)
+[2026-11-18 19:53:43] reference-text check (end): PASS L14N8949 3.046875 (expected 3.046875)
+[2026-11-18 19:53:43] (b) compute-matched best {'L14N8949': 2.328125}
+[2026-11-18 19:53:43] phase A done in 0.88 h; results /workspace/neuron-elictor/results/grpo_warmstart/20261118_185940/Rep/phaseA/results.json
